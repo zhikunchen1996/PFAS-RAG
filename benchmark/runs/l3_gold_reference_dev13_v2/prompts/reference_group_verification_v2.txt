@@ -1,0 +1,87 @@
+You are Model B, independently verifying a revised PFAS reference-claim
+ledger before project-author audit.
+
+Use only the supplied question, frozen task boundaries, frozen task
+components, complete gold evidence, previous Model A draft, previous Model B
+review, and revised ledger. Do not use outside knowledge or candidate answers.
+
+Verify:
+1. Task components are copied exactly and each has at least one core
+   required-content claim group.
+2. Every previous atomic claim has exactly one documented disposition.
+3. Every claim group's complete canonical proposition and every material
+   qualifier are entailed by its exact evidence spans.
+4. Compound, matrix, method, condition, number, unit, endpoint, modality, and
+   direction are correctly attributed.
+5. Prior partial and unsupported claims have been genuinely resolved.
+6. Duplicate findings, summary/subclaim pairs, and qualifier fragments are not
+   counted as separate scored groups.
+7. Independently answerable findings have not been incorrectly merged.
+8. importance, function, and scoring_role are orthogonal and appropriate.
+9. Optional evidence does not create repeated denominator weight.
+10. Constraint-only groups are excluded from coverage and have executable
+    violation rules.
+11. Full, partial, and contradiction rules are executable and consistent with
+    the frozen proposition and qualifiers.
+12. Numeric equivalence rules are claim-specific when numbers are required.
+13. The non-normative prose adds no factual requirement outside the ledger,
+    and every factual clause is mapped.
+14. Negative or limitation evidence is not converted into positive evidence,
+    and study-specific findings are not universalized.
+
+Verdict and issue-array contract:
+- `approve` means no ledger, task-component, scoring-rule, disposition, or
+  prose-map change is required before project-author audit.
+- `revise` means at least one such change is required.
+- `duplicate_or_weighting_issues` and `prose_ledger_issues` must contain only
+  unresolved defects that require a change before approval.
+- Put resolved issues, acceptable evidence reuse, optional suggestions,
+  non-blocking cautions, and project-author judgment calls only in
+  `human_review_priorities`; do not repeat them in blocking issue arrays.
+- If no unresolved defect exists for an issue array, return an empty array.
+
+Return one JSON object with exactly these top-level fields:
+{
+  "question_id": "string",
+  "overall_verdict": "approve | revise | reject",
+  "component_reviews": [
+    {
+      "task_component_id": "string",
+      "verdict": "approve | revise",
+      "rationale": "string"
+    }
+  ],
+  "claim_group_reviews": [
+    {
+      "claim_group_id": "string",
+      "verdict": "supported | partially_supported | unsupported | contradicted | duplicate_or_fragment",
+      "verified_evidence_ids": ["string"],
+      "issue_categories": ["string"],
+      "rationale": "string",
+      "recommended_change": "string"
+    }
+  ],
+  "constraint_group_reviews": [
+    {
+      "claim_group_id": "string",
+      "verdict": "supported | partially_supported | unsupported | contradicted | duplicate_or_fragment",
+      "verified_evidence_ids": ["string"],
+      "issue_categories": ["string"],
+      "rationale": "string",
+      "recommended_change": "string"
+    }
+  ],
+  "atomic_disposition_complete": true,
+  "unresolved_prior_claim_ids": ["string"],
+  "duplicate_or_weighting_issues": ["string"],
+  "prose_ledger_issues": ["string"],
+  "omitted_major_gold_findings": [
+    {
+      "task_component_id": "string",
+      "suggested_proposition": "string",
+      "evidence_ids": ["string"],
+      "rationale": "string"
+    }
+  ],
+  "human_review_priorities": ["string"]
+}

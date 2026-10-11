@@ -1,0 +1,603 @@
+{
+  "question_id": "NQ01",
+  "source_ledger_sha256": "dcdce51e84118aa9958806c2747d47be76b0b76e322b9cc034fd283bd49e5f8e",
+  "review_sha256": "e3cffb944e23ac4221aa05b2f51ef9fb007d458df0e0d88df9446d2925f98349",
+  "raw_result": {
+    "question_id": "NQ01",
+    "answerability": "supported",
+    "answerability_rationale": "The supplied evidence explicitly mentions multiple analytical methods used for PFAS quantification or detection (e.g., LC-MS/MS, LC-MS, GC-MS, SBSE‑TD‑GC‑MS, SPME‑LC‑MS/MS, HRMS, FT‑ICR MS, NMR, FTIR, ion chromatography, sensor-based methods, and TOP assay). For several of these, the texts specify the analytical approach, targeted vs. non‑targeted use, the classes of PFAS analyzed (e.g., PFCAs, a range of PFAS, ‘common PFAS’, known and novel PFAS), matrices (various water types, AFFF, sludge/biosolids), and intended purposes (regulatory, screening, method development). The evidence also contains explicit statements about LC‑MS/MS as a gold standard for PFCA analysis and multiple limitations on method scope, so the required distinctions and suitability discussions can be grounded directly in the cited sources. Coverage is not exhaustive across all possible PFAS methods or matrices, but the question is answerable with concrete, well-supported examples, consistent with the ‘answerable_examples_only’ specification.",
+    "task_components": [
+      {
+        "task_component_id": "NQ01-T01",
+        "component_text": "Identify and list the analytical methods that are reported for PFAS quantification or detection, and for each method describe its basic analytical approach (e.g., instrumental platform or assay type) as characterized in the sources, explicitly distinguishing targeted LC-MS/MS and LC-HRMS workflows from other methods."
+      },
+      {
+        "task_component_id": "NQ01-T02",
+        "component_text": "For each reported method, summarize how broadly it is applied across PFAS analytes, including whether it is used for specific PFAS compounds, classes, or broader PFAS mixtures, and describe any stated limitations or scope of analytes as supported by the cited sources."
+      },
+      {
+        "task_component_id": "NQ01-T03",
+        "component_text": "For each reported method, describe the types of matrices (e.g., environmental, biological, industrial, product-related) and study goals (e.g., routine monitoring, screening, source identification, method development, toxicological studies) for which the method is used or recommended in the sources, and assess method suitability in terms of analyte scope, matrix, and study goal, citing the specific sources that support each suitability statement and any claims about 'gold standard' status or lack thereof."
+      }
+    ],
+    "claim_groups": [
+      {
+        "claim_group_id": "NQ01-G01",
+        "task_component_id": "NQ01-T01",
+        "canonical_proposition": "Targeted LC-MS and LC-MS/MS workflows are widely used for quantitative analysis of specific PFAS (including PFCAs) in water and other environmental samples, are treated as the gold standard for PFCA analysis in water, and are embedded in several US EPA regulatory methods, but they are constrained to predefined target analytes for which reference standards are available.",
+        "central_proposition": "Targeted LC-MS and LC-MS/MS are key quantitative methods for specific PFAS (especially PFCAs) in water and related matrices, including in US EPA methods, and are described as a gold standard for PFCA analysis while being limited to predefined targets and available standards.",
+        "material_qualifiers": [
+          "PFCA-focused gold standard status",
+          "water matrices and environmental waters",
+          "targeted quantitative mass spectrometry",
+          "regulatory LC-MS/MS methods with SPE",
+          "limitations to predefined targets and available standards"
+        ],
+        "importance": "core",
+        "function": "affirmative",
+        "scoring_role": "required_content",
+        "evidence_ids": [
+          "NQ01_MMG001",
+          "NQ01_MMG002",
+          "NQ01_MMG004"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Award full credit if the answer: (1) identifies LC-MS and LC-MS/MS as targeted, quantitative methods used for specific PFAS (including explicit mention of PFCAs) in water or environmental matrices; (2) notes that LC-MS and GC-MS are commonly employed for targeted quantitative analysis of specific PFAS; (3) explicitly mentions that LC-MS/MS is described as the gold standard for PFCA analysis; (4) connects LC-MS/MS to US EPA regulatory methods (e.g., Methods 533, 537.1, 8327) with solid-phase extraction for PFAS; and (5) states that these targeted methods require predefined quantification targets and reference standards, thereby limiting detection to only a small fraction of PFAS. The description must clearly distinguish this targeted LC-MS/MS usage and its PFCA-focused 'gold standard' status from claims about universal superiority across all PFAS analyses.",
+        "partial_rule": "Award partial credit if the answer correctly identifies LC-MS or LC-MS/MS as targeted quantitative methods for specific PFAS or PFCAs in water and/or mentions their use in EPA methods or regulatory contexts, but omits either the gold-standard statement, the explicit PFCA focus, or the limitations around predefined targets and reference standards. Partial credit is also appropriate if LC-MS/MS is called a gold standard without restricting that statement to PFCA analysis in water.",
+        "contradiction_rule": "Mark as contradictory if the answer claims that LC-MS/MS (or LC-MS) is a universal gold standard for all PFAS analyses in all matrices, or if it states that targeted LC-MS/MS methods are not limited by predefined targets or reference standards, directly opposing the cited limitations. It is also contradictory to deny that these methods are commonly used for targeted quantitative analysis of specific PFAS compounds.",
+        "source_atomic_claim_ids": [
+          "NQ01-A01"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ01_MMG001",
+            "exact_evidence_span": "LC-MS and GC – MS are commonly employed for targeted quantitative mass spectrometry analysis of specific PFAS compounds.",
+            "supports": "Shows that LC-MS is used as a targeted quantitative mass spectrometry method for specific PFAS compounds."
+          },
+          {
+            "evidence_id": "NQ01_MMG002",
+            "exact_evidence_span": "gas chromatography (GC), high-performance liquid chromatography (HPLC), and ultra-high- performance liquid chromatography (UHPLC) are frequently used for the determination of PFCAs in water matrices [37–41].",
+            "supports": "Indicates chromatographic methods, including LC variants, are frequently used to determine PFCAs in water matrices."
+          },
+          {
+            "evidence_id": "NQ01_MMG002",
+            "exact_evidence_span": "The gold standard for PFCA analysis has been liquid chromatography coupled with tandem mass spectrometry (LC-MS/MS) [43].",
+            "supports": "Explicitly identifies LC-MS/MS as the gold standard for PFCA analysis (scope-limited to PFCAs)."
+          },
+          {
+            "evidence_id": "NQ01_MMG002",
+            "exact_evidence_span": "US EPA has developed and validated a series of methods (EPA Method 533, 537.1, 8327) for PFAS using LC-MS/MS with sample preparation using solid-phase extraction [44,48].",
+            "supports": "Shows LC-MS/MS is used in specific US EPA methods for PFAS, with SPE sample preparation, indicating regulatory targeted application."
+          },
+          {
+            "evidence_id": "NQ01_MMG004",
+            "exact_evidence_span": "However, while these methods are crucial for regulatory purposes, they have certain limitations, including the requirement for predefined quantification targets and the restricted availability of reference standards.\nThese constraints limit detection to only a small fraction of PFASs — just a few dozen out of the thousands that may be present.",
+            "supports": "Describes limitations of targeted methods (including LC-MS) in requiring predefined targets and reference standards, restricting PFAS coverage to a few dozen compounds."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "NQ01-G02",
+        "task_component_id": "NQ01-T01",
+        "canonical_proposition": "Gas chromatography-based methods, including GC-MS and stir bar sorptive extraction coupled with thermal desorption-GC-MS (SBSE-TD-GC-MS), are employed for determination and quantification of PFCAs in water matrices, particularly when relatively high PFCA concentrations are expected, and are presented as optimized, solvent-reducing alternatives to LC-MS/MS for such applications.",
+        "central_proposition": "GC-based approaches, especially SBSE-TD-GC-MS, are used to analyze and quantify PFCAs in water, with the SBSE-TD-GC-MS method highlighted as efficient and robust when high PFCA concentrations are anticipated and as an alternative to LC-MS/MS solvent-based methods.",
+        "material_qualifiers": [
+          "GC, GC-MS and SBSE-TD-GC-MS platforms",
+          "PFCAs as target analytes",
+          "water matrices and aquatic environments",
+          "high ppt to low ppb concentration range",
+          "comparison to LC-MS/MS regarding solvent use"
+        ],
+        "importance": "core",
+        "function": "affirmative",
+        "scoring_role": "required_content",
+        "evidence_ids": [
+          "NQ01_MMG001",
+          "NQ01_MMG002",
+          "NQ01_MMG008"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Award full credit if the answer: (1) identifies GC and/or GC-MS as methods used for determination of PFCAs in water matrices; (2) describes SBSE-TD-GC-MS as an analytical method for efficient analysis or quantification of PFCAs in water samples or aquatic environments; (3) notes that SBSE-TD-GC-MS is particularly appropriate when high concentrations (high ppt to low ppb) of PFCAs are expected; and (4) mentions its role as an optimized method that can eliminate the need for organic solvent usage required for desorption in LC-MS/MS methods. The answer should clearly link these GC-based methods to PFCA analysis in water and distinguish them from LC-based targeted workflows.",
+        "partial_rule": "Award partial credit if the answer correctly states that GC or GC-MS methods, including SBSE-TD-GC-MS, are used for PFCA analysis in water but omits either the concentration range, the explicit comparison to LC-MS/MS solvent usage, or the optimization and robustness claims. Partial credit is also appropriate if GC-MS is mentioned for PFAS/PFCAs generally without specifying water matrices.",
+        "contradiction_rule": "Mark as contradictory if the answer claims SBSE-TD-GC-MS is not used for PFCAs in water or denies its efficiency/optimization for such analysis, or if it states that GC-based methods are not used for determination of PFCAs in water matrices, in conflict with the evidence.",
+        "source_atomic_claim_ids": [
+          "NQ01-A02"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ01_MMG001",
+            "exact_evidence_span": "These methodologies include traditional approaches such as gas chromatography – mass spectrometry (GC – MS) and liquid chromatography-mass spectrometry (LC-MS),",
+            "supports": "Shows GC-MS as a traditional analytical approach mentioned alongside LC-MS for PFAS characterization."
+          },
+          {
+            "evidence_id": "NQ01_MMG002",
+            "exact_evidence_span": "gas chromatography (GC), high-performance liquid chromatography (HPLC), and ultra-high- performance liquid chromatography (UHPLC) are frequently used for the determination of PFCAs in water matrices [37–41].",
+            "supports": "Indicates GC is frequently used to determine PFCAs in water matrices."
+          },
+          {
+            "evidence_id": "NQ01_MMG008",
+            "exact_evidence_span": "Overall, the SBSE-TD-GC-MS method represents a significant step forward for the efficient analysis of PFCAs in water samples when high concentrations (high ppt to low ppb ranges) of PFCAs are expected.",
+            "supports": "States that SBSE-TD-GC-MS is efficient for analysis of PFCAs in water samples at high ppt to low ppb concentration ranges."
+          },
+          {
+            "evidence_id": "NQ01_MMG008",
+            "exact_evidence_span": "Additionally, employing a thermal desorption unit coupled with GC-MS can eliminate the need for organic solvent usage for desorption in LC-MS/MS methods, as reported in the previous studies.",
+            "supports": "Describes thermal desorption-GC-MS as an alternative that avoids organic solvents used for desorption in LC-MS/MS workflows."
+          },
+          {
+            "evidence_id": "NQ01_MMG008",
+            "exact_evidence_span": "This sophisticated SBSE- TD-GC-MS method is optimized and validated analytical method, characterized by its simplicity, sensitivity, and robustness for the extraction and quantification of PFCAs in aquatic environments.",
+            "supports": "Characterizes SBSE-TD-GC-MS as an optimized, validated, simple, sensitive, and robust method for extraction and quantification of PFCAs in aquatic environments."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "NQ01-G03",
+        "task_component_id": "NQ01-T01",
+        "canonical_proposition": "High-resolution and non-targeted analytical techniques such as HRMS, FT-ICR MS, and NMR are used to broaden PFAS characterization beyond targeted LC-MS, enabling suspect and non-targeted screening of many known and novel PFAS in complex media like impacted waters and aqueous film-forming foams (AFFF).",
+        "central_proposition": "HRMS, FT-ICR MS, and NMR are applied as sophisticated, mainly non-targeted or suspect screening platforms for PFAS, allowing detection and identification of a broad range of known and novel PFAS in complex water matrices and AFFF, beyond the limited set of compounds addressed by targeted LC-MS methods.",
+        "material_qualifiers": [
+          "HRMS, FT-ICR MS, NMR platforms",
+          "suspect and non-targeted screening",
+          "complex media and impacted water",
+          "AFFF as a PFAS mixture matrix",
+          "broader coverage of known and novel PFAS"
+        ],
+        "importance": "core",
+        "function": "affirmative",
+        "scoring_role": "required_content",
+        "evidence_ids": [
+          "NQ01_MMG001",
+          "NQ01_MMG004",
+          "NQ01_MMG006"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Award full credit if the answer: (1) lists HRMS, FT-ICR MS, and/or NMR as PFAS analytical methods distinct from targeted LC-MS/MS; (2) notes that these methods are used as non-targeted or suspect screening techniques leveraging accurate mass measurements; (3) explicitly connects them to broad PFAS identification in complex impacted waters or similar media; and (4) indicates that FT-ICR MS, in particular, has been used in a suspect and nontargeted workflow to identify large numbers of known and novel PFAS in AFFF. The answer should emphasize their expanded analyte scope compared to targeted LC-MS/MS.",
+        "partial_rule": "Award partial credit if the answer mentions HRMS, FT-ICR MS, or NMR for PFAS analysis but does not clearly describe their non-targeted or suspect screening role, or omits explicit mention of complex media or AFFF. Partial credit is also appropriate if only one of these techniques is discussed in the described non-targeted context.",
+        "contradiction_rule": "Mark as contradictory if the answer claims HRMS/FT-ICR MS/NMR are only used for targeted quantification of a small number of PFAS or denies that they support broader screening or identification of novel PFAS, directly opposing the evidence.",
+        "source_atomic_claim_ids": [
+          "NQ01-A03"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ01_MMG001",
+            "exact_evidence_span": "These methodologies include traditional approaches such as gas chromatography – mass spectrometry (GC – MS) and liquid chromatography-mass spectrometry (LC-MS), as well as sophisticated methodologies like nuclear magnetic resonance (NMR) spectroscopy, high-resolution mass spectrometry (HRMS) [ 36 ], and Fourier-transform ion cyclotron resonance mass spectrometry (FT-ICR MS) [ 37 ].",
+            "supports": "Lists NMR, HRMS, and FT-ICR MS as sophisticated analytical methodologies for PFAS characterization beyond traditional LC-MS or GC-MS."
+          },
+          {
+            "evidence_id": "NQ01_MMG004",
+            "exact_evidence_span": "To address this limitation, a more comprehensive approach to PFAS identification and quantification in complex impacted water is needed. As a result, nontargeted analytical techniques such as NMR, HRMS, and FT-ICR MS, which leverage accurate mass measure - ments, enabling the screening of detected ions against databases of known contaminants, are increasingly employed to identify a broad range of novel PFAS [ 40 ].",
+            "supports": "States that nontargeted methods including NMR, HRMS, and FT-ICR MS are used to identify a broad range of novel PFAS in complex impacted water, via accurate mass and database screening."
+          },
+          {
+            "evidence_id": "NQ01_MMG004",
+            "exact_evidence_span": "FT-ICR MS has emerged as the preferred method for analyzing PFAS in complex media, thanks to its unparalleled mass resolving power, exceptional mass accuracy, and wide dynamic range.",
+            "supports": "Highlights FT-ICR MS as a preferred method for PFAS analysis in complex media, emphasizing analytical performance features that support broad screening."
+          },
+          {
+            "evidence_id": "NQ01_MMG006",
+            "exact_evidence_span": "[ 41 ] developed a suspect and nontargeted 21 T FT-ICR MS method to screen PFAS in an aqueous film-forming foam (AFFF), identifying 163 known PFAS through suspect screening and even additional 134 novels PFAS through nontargeted analysis.",
+            "supports": "Describes a suspect and nontargeted FT-ICR MS method applied to AFFF, identifying large numbers of known and novel PFAS, showing broad analyte coverage in a complex PFAS mixture matrix."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "NQ01-G04",
+        "task_component_id": "NQ01-T01",
+        "canonical_proposition": "An ion-exchange solid phase microextraction (SPME) method coupled to liquid chromatography/laminar flow tandem mass spectrometry was developed for PFAS determination in aqueous matrices, including various water types, achieving low limits of quantification and demonstrating suitability for quantitative analysis of PFAS with varying physicochemical properties.",
+        "central_proposition": "An LC-MS/MS method incorporating HLB-WAX/PAN SPME extraction was developed for PFAS in aqueous matrices (river, lake, tap, bottled water), providing substantial pre-concentration, low ng L−1 LOQs, and quantitative analysis for PFAS of varying physicochemical properties, with potential extension to more complex samples.",
+        "material_qualifiers": [
+          "SPME with HLB-WAX/PAN extraction phase",
+          "LC/laminar flow tandem MS detection",
+          "aqueous matrices including river, lake, tap, bottled water",
+          "PFAS of varying physicochemical properties",
+          "LOQs of 1–2.5 ng L−1",
+          "method development and potential for more complex samples"
+        ],
+        "importance": "supplementary",
+        "function": "affirmative",
+        "scoring_role": "supplementary_content",
+        "evidence_ids": [
+          "NQ01_MMG005"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Award full credit for this group if the answer: (1) identifies an SPME-based method coupled to LC-MS/MS (laminar flow tandem MS) as an analytical approach for PFAS; (2) states that it was developed for PFAS in aqueous matrices and applied to river, lake, tap, and bottled water samples; (3) notes that the HLB-WAX/PAN SPME phase was highly selective for PFAS; (4) reports low LOQs on the order of 1–2.5 ng L−1 for model analytes with small sample volumes, highlighting pre-concentration; and (5) mentions its suitability for quantitative analysis of PFAS with varying physicochemical properties and potential extension to more complex matrices.",
+        "partial_rule": "Award partial credit if the answer mentions an SPME-LC-MS/MS method for PFAS in aqueous or water matrices but omits one or more of: the specific water types, the selectivity of the HLB-WAX/PAN phase, the approximate LOQ range, or the broader applicability to PFAS with varying physicochemical properties and to more complex samples.",
+        "contradiction_rule": "Mark as contradictory if the answer asserts that this SPME-LC-MS/MS method was not applied to water samples or was not developed for PFAS, or if it denies its low LOQs or pre-concentration benefits, contrary to the evidence.",
+        "source_atomic_claim_ids": [
+          "NQ01-A04"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ01_MMG005",
+            "exact_evidence_span": "Conclusion An eﬃcient and convenient SPME method was developed for PFAS in aqueous matrices and applied to river, lake, tap and bottled water samples.",
+            "supports": "Indicates that an SPME method for PFAS was developed for aqueous matrices and applied to several water types (river, lake, tap, bottled)."
+          },
+          {
+            "evidence_id": "NQ01_MMG005",
+            "exact_evidence_span": "HLB-WAX/PAN SPME extraction phase was highly selective for PFAS and thus has greater potential for use in fur- ther studies of more complex samples in light of its biocompati- bility.",
+            "supports": "Shows the specific SPME phase (HLB-WAX/PAN) and its high selectivity for PFAS, as well as potential applicability to more complex samples."
+          },
+          {
+            "evidence_id": "NQ01_MMG005",
+            "exact_evidence_span": "This developed proto- col achieved LOQs of 1 –2 . 5 ng L − 1 for the model analytes with a sample volume of only 1.5 mL, demonstrating the eﬃcacy of pre-concentration offered by SPME for PFAS.",
+            "supports": "Provides LOQ range (1–2.5 ng L−1) and indicates strong pre-concentration performance for PFAS using SPME with small sample volume."
+          },
+          {
+            "evidence_id": "NQ01_MMG005",
+            "exact_evidence_span": "Through the use of the developed protocol, a highly sensitive quantita- tive analysis can be performed for PFAS of varying physicochem- ical properties, achieving LOQs below current EPA drinking water health advisories.",
+            "supports": "States that the method enables highly sensitive quantitative analysis for PFAS with varying physicochemical properties, with LOQs below EPA health advisories."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "NQ01-G05",
+        "task_component_id": "NQ01-T01",
+        "canonical_proposition": "In addition to LC and GC approaches, less commonly used analytical methods for PFCA or PFAS determination include nuclear magnetic resonance, Fourier transform infrared spectroscopy, ion chromatography, several sensor-based methods, and the total oxidizable precursor assay, which reveals that many PFCAs in environmental samples are from unidentified compounds.",
+        "central_proposition": "A range of non-LC/GC methods—NMR, FTIR, ion chromatography, sensor-based assays, and the total oxidizable precursor (TOP) assay—are reported for PFCA/PFAS analysis, mainly as supplementary or less common approaches that can also indicate the presence of unidentified PFCA precursors in environmental samples.",
+        "material_qualifiers": [
+          "less commonly used methods",
+          "nuclear magnetic resonance",
+          "Fourier transform infrared spectroscopy",
+          "ion chromatography",
+          "sensor-based methods",
+          "total oxidizable precursor assay",
+          "PFCAs and environmental samples"
+        ],
+        "importance": "supplementary",
+        "function": "affirmative",
+        "scoring_role": "supplementary_content",
+        "evidence_ids": [
+          "NQ01_MMG002"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Award full credit if the answer: (1) lists at least some of the less commonly used methods—NMR, FTIR, ion chromatography, sensor-based methods—as being applied to PFCA/PFAS analysis; and (2) mentions that the total oxidizable precursor assay has been used to show that a significant fraction of total PFCAs in environmental samples consists of unidentified compounds. The answer should clearly distinguish these from mainline LC- or GC-based quantification.",
+        "partial_rule": "Award partial credit if the answer mentions at least one of the less common methods or the total oxidizable precursor assay in the context of PFCA/PFAS analysis but does not clearly connect them to their roles or to unidentified PFCA fractions.",
+        "contradiction_rule": "Mark as contradictory if the answer claims that no such alternative or less common methods (NMR, FTIR, ion chromatography, sensors, TOP assay) are used for PFCA/PFAS analysis, or denies the TOP assay’s indication of unidentified PFCAs, conflicting with the evidence.",
+        "source_atomic_claim_ids": [
+          "NQ01-A05"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ01_MMG002",
+            "exact_evidence_span": "Less commonly used methods include nuclear mag- netic resonance, Fourier transform infrared spectroscopy , ion chromatography , and several sensor-based methods [42–45].",
+            "supports": "Identifies NMR, FTIR, ion chromatography, and sensor-based methods as less commonly used analytical methods for PFCA-related analysis."
+          },
+          {
+            "evidence_id": "NQ01_MMG002",
+            "exact_evidence_span": "Moreover, methods such as the total oxidizable precursor assay have determined that a significant fraction of the total PFCAs present in environmental samples consists of unidentified compounds [46,47].",
+            "supports": "Describes the total oxidizable precursor assay and its finding that a significant fraction of total PFCAs in environmental samples are from unidentified compounds."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "NQ01-G06",
+        "task_component_id": "NQ01-T02",
+        "canonical_proposition": "Direct-injection LC-MS has been used to determine the presence of common PFAS chemicals in different types of water, providing a targeted approach for monitoring a defined set of PFAS in multiple water matrices.",
+        "central_proposition": "A study from Spain applied LC-MS with a direct injection approach to measure common PFAS in various water types, illustrating the use of targeted direct-injection LC-MS workflows for monitoring specific PFAS in multiple water matrices.",
+        "material_qualifiers": [
+          "direct injection LC-MS",
+          "common PFAS chemicals",
+          "different types of water",
+          "targeted monitoring of defined PFAS sets"
+        ],
+        "importance": "core",
+        "function": "affirmative",
+        "scoring_role": "required_content",
+        "evidence_ids": [
+          "NQ01_MMG004"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Award full credit if the answer notes that LC-MS operated with a direct injection approach has been used in at least one study (e.g., in Spain) to determine the presence of common PFAS chemicals in different types of water, thereby exemplifying a targeted LC-MS workflow applied across multiple water matrices. Any broader discussion of limitations on analyte scope for such methods may be credited under other groups but is not required for full credit in this group.",
+        "partial_rule": "Award partial credit if the answer correctly associates direct-injection LC-MS with PFAS determination in water but omits either the multi-matrix aspect (different types of water) or the fact that this is a targeted approach for common PFAS.",
+        "contradiction_rule": "Mark as contradictory if the answer asserts that LC-MS with direct injection has not been used to determine PFAS in water, or claims that such an approach cannot be applied to common PFAS in multiple water types, in conflict with the evidence.",
+        "source_atomic_claim_ids": [
+          "NQ01-A06"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ01_MMG004",
+            "exact_evidence_span": "For example, a study conducted in Spain used LC-MS in conjunction with the direct injection approach to determine the presence of common PFAS chemicals in different types of water [ 38 ].",
+            "supports": "Shows direct injection LC-MS being used to determine common PFAS chemicals in different water types."
+          },
+          {
+            "evidence_id": "NQ01_MMG004",
+            "exact_evidence_span": "However, while these methods are crucial for regulatory purposes, they have certain limitations, including the requirement for predefined quantification targets and the restricted availability of reference standards.\nThese constraints limit detection to only a small fraction of PFASs — just a few dozen out of the thousands that may be present.",
+            "supports": "Provides general limitations for targeted regulatory methods; the associated analyte-scope limitation is primarily treated in another group and need not be separately scored here."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "NQ01-G07",
+        "task_component_id": "NQ01-T02",
+        "canonical_proposition": "US EPA Method 1633 (or 1633 A) is a targeted LC-MS/MS-based method that quantifies on the order of 40 PFAS, illustrating the limited analyte scope of current regulatory targeted methods relative to the thousands of PFAS in commercial use and environmental media.",
+        "central_proposition": "EPA Method 1633 is cited as a targeted PFAS method that quantifies approximately 40 PFAS, underscoring that even advanced regulatory methods cover only a narrow subset of PFAS compared with the large number of PFAS present in commerce and the environment.",
+        "material_qualifiers": [
+          "USEPA Method 1633 A",
+          "targets quantitation",
+          "approximately 40 PFAS",
+          "thousands of PFAS in use and media",
+          "targeted regulatory method"
+        ],
+        "importance": "core",
+        "function": "affirmative",
+        "scoring_role": "required_content",
+        "evidence_ids": [
+          "NQ01_MMG007"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Award full credit if the answer notes that USEPA Method 1633 (or 1633 A) is a targeted PFAS method that quantifies about 40 PFAS, and explicitly interprets this as evidence that the analyte scope of such regulatory targeted methods is narrow compared with the thousands of PFAS in use and in environmental media.",
+        "partial_rule": "Award partial credit if the answer mentions Method 1633 as targeting a limited number of PFAS without giving an approximate number, or notes the approximately 40 PFAS but does not discuss the contrast with the thousands of PFAS present.",
+        "contradiction_rule": "Mark as contradictory if the answer claims that Method 1633 quantifies all or most PFAS in commercial use/environmental media, or denies that its analyte list is limited, opposing the evidence.",
+        "source_atomic_claim_ids": [
+          "NQ01-A07"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ01_MMG007",
+            "exact_evidence_span": "USEPA Method 1633 A targets quantitation of approximately 40 PFAS, despite the existence of thousands of compounds in commercial use and environmental media.",
+            "supports": "Explicitly states that USEPA Method 1633 A quantifies about 40 PFAS while thousands exist, demonstrating limited analyte scope."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "NQ01-X01",
+        "task_component_id": "NQ01-T03",
+        "canonical_proposition": "No single analytical method is broadly applicable across all PFAS-related matrices; in particular, methods for PFAS analysis in wastewater sludges and biosolids lack a widely recognized standard and individual methods are not broadly applicable over diverse sludge/biosolid matrices.",
+        "central_proposition": "For sludge and biosolids, PFAS analysis is still evolving; there is no widely recognized standard method, and individual analytical approaches are not broadly applicable across different sludge/biosolid matrices, which constrains broad method generalization across matrices.",
+        "material_qualifiers": [
+          "wastewater sludges and biosolids",
+          "no widely recognized standard method",
+          "individual methods not broadly applicable",
+          "matrix-dependent performance"
+        ],
+        "importance": "core",
+        "function": "limitation",
+        "scoring_role": "constraint_only",
+        "evidence_ids": [
+          "NQ01_MMG003"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Use this as a constraint: any answer should avoid implying that a single PFAS analytical method is broadly applicable across all matrices, especially sludge and biosolids. Full adherence requires acknowledging that for wastewater sludges and biosolids there is no widely recognized standard method and that individual methods do not work broadly across all such matrices.",
+        "partial_rule": "An answer may still receive content credit if it omits sludge/biosolid-specific caveats, but such omission should be noted as a limitation relative to this constraint.",
+        "contradiction_rule": "Flag as violating the constraint if the answer explicitly claims that PFAS analysis in sludge/biosolids has a widely recognized standard method or that a single method works broadly across all sludge/biosolid matrices, contradicting the evidence.",
+        "source_atomic_claim_ids": [
+          "NQ01-A08"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ01_MMG003",
+            "exact_evidence_span": "The analysis of PFAS in wastewater treatment sludges and biosolids is an evolving practice for which a widely recognized standard method does not currently exist. While a number of analytical techniques have been reported in the literature, individual methods were found to not be broadly applicable over a range of sludge/biosolid matrices.",
+            "supports": "Shows that PFAS analysis in sludge/biosolids lacks a widely recognized standard and that individual methods are not broadly applicable across different sludge/biosolid matrices."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "NQ01-X02",
+        "task_component_id": "NQ01-T03",
+        "canonical_proposition": "Targeted LC-based PFAS methods, although crucial for regulatory purposes, face challenges such as background contamination, so they should not be portrayed as universally sufficient or trouble-free for PFAS monitoring across all matrices.",
+        "central_proposition": "LC-centered targeted PFAS methods used in regulatory contexts are challenged by background contamination arising from common fluoropolymer-containing materials, indicating they are not universally free of artifacts and require careful control of contamination for reliable PFAS analysis.",
+        "material_qualifiers": [
+          "LC-centered PFAS methods",
+          "regulatory purposes",
+          "background contamination issues",
+          "sources such as Teflon-containing materials"
+        ],
+        "importance": "supplementary",
+        "function": "limitation",
+        "scoring_role": "constraint_only",
+        "evidence_ids": [
+          "NQ01_MMG002"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Use this constraint to prevent overclaiming about the robustness of targeted LC-based methods: answers should not present LC-centered targeted methods as universally free from contamination issues or artifacts, given documented background contamination from PFAS-containing materials in the analytical system. Full adherence involves at least not contradicting these limitations and, where relevant, acknowledging the need to control such contamination sources.",
+        "partial_rule": "Answers that do not mention these contamination limitations are acceptable for content scoring but may be considered incomplete with respect to constraints.",
+        "contradiction_rule": "Flag as violating the constraint if an answer claims that LC-centered targeted methods have no contamination issues or that background PFAS from system components is not a concern, directly opposing the evidence.",
+        "source_atomic_claim_ids": [
+          "NQ01-A09"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ01_MMG002",
+            "exact_evidence_span": "Despite these advancements, the most common methods, centered around LC, are not without their challenges. Yamashita et al. [49] reported background contamination issues in PFAS monitoring. Specific attention should be paid to auto-sampler vial caps made of Teflon or fluoropolymers, fluoropolymer tubing, solvent inlet filters, and a variety of other laboratory products containing teflon and perfluoroalkoxy compounds, as they are sources of back-",
+            "supports": "Describes background contamination issues affecting LC-centered PFAS methods, indicating methodological challenges."
+          }
+        ]
+      }
+    ],
+    "atomic_claim_dispositions": [
+      {
+        "atomic_claim_id": "NQ01-A01",
+        "atomic_claim": "Targeted LC-MS and LC-MS/MS are commonly used for quantitative analysis of specific PFAS, including PFCAs in water matrices, are described as the gold standard for PFCA analysis, and are implemented in US EPA methods using LC-MS/MS with SPE, but they are limited to predefined targets and available reference standards.",
+        "evidence_ids": [
+          "NQ01_MMG001",
+          "NQ01_MMG002",
+          "NQ01_MMG004"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ01-G01"
+        ],
+        "rationale": "This atomic claim synthesizes the evidence that LC-MS/LC-MS/MS are targeted quantitative methods for specific PFAS (including PFCAs), hold gold-standard status for PFCA analysis in water, are used in EPA methods, and are constrained by predefined targets and reference standards."
+      },
+      {
+        "atomic_claim_id": "NQ01-A02",
+        "atomic_claim": "GC-based methods, including GC and GC-MS, and specifically SBSE-TD-GC-MS, are used for determination and quantification of PFCAs in water or aquatic environments, particularly when high PFCA concentrations are expected, and can avoid organic solvents needed for LC-MS/MS desorption.",
+        "evidence_ids": [
+          "NQ01_MMG002",
+          "NQ01_MMG008",
+          "NQ01_MMG001"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ01-G02"
+        ],
+        "rationale": "This atomic claim consolidates the role of GC and SBSE-TD-GC-MS for PFCA analysis in water, their concentration range applicability, and their solvent-related advantage over LC-MS/MS."
+      },
+      {
+        "atomic_claim_id": "NQ01-A03",
+        "atomic_claim": "Sophisticated high-resolution and non-targeted techniques such as NMR, HRMS, and FT-ICR MS are employed to identify a broad range of known and novel PFAS in complex impacted waters and complex media, including suspect and non-targeted FT-ICR MS screening of AFFF.",
+        "evidence_ids": [
+          "NQ01_MMG001",
+          "NQ01_MMG004",
+          "NQ01_MMG006"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ01-G03"
+        ],
+        "rationale": "This atomic claim summarizes the use of HRMS/NMR/FT-ICR MS as non-targeted PFAS screening methods in complex matrices and AFFF, matching the cited evidence."
+      },
+      {
+        "atomic_claim_id": "NQ01-A04",
+        "atomic_claim": "An HLB-WAX/PAN SPME-based LC/laminar flow tandem MS method was developed for PFAS in aqueous matrices and applied to river, lake, tap, and bottled water, achieving LOQs of about 1–2.5 ng L−1 for model analytes from 1.5 mL samples and enabling sensitive quantitative analysis for PFAS of varying physicochemical properties with potential applicability to more complex samples.",
+        "evidence_ids": [
+          "NQ01_MMG005"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ01-G04"
+        ],
+        "rationale": "This atomic claim directly reflects the described SPME-LC-MS/MS method, its matrices, LOQs, and scope of PFAS applicability."
+      },
+      {
+        "atomic_claim_id": "NQ01-A05",
+        "atomic_claim": "Less commonly used analytical methods for PFCA/PFAS include nuclear magnetic resonance, Fourier transform infrared spectroscopy, ion chromatography, sensor-based methods, and the total oxidizable precursor assay, the latter showing that a significant fraction of total PFCAs in environmental samples are from unidentified compounds.",
+        "evidence_ids": [
+          "NQ01_MMG002"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ01-G05"
+        ],
+        "rationale": "This atomic claim succinctly captures the set of less common methods and the role of the TOP assay as described."
+      },
+      {
+        "atomic_claim_id": "NQ01-A06",
+        "atomic_claim": "Direct-injection LC-MS has been used in at least one study to determine the presence of common PFAS chemicals in different types of water, exemplifying a targeted LC-MS workflow applied across multiple water matrices.",
+        "evidence_ids": [
+          "NQ01_MMG004"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ01-G06"
+        ],
+        "rationale": "This atomic claim now focuses on the supported example of direct-injection LC-MS use for common PFAS in various water types, without independently re-stating general limitation language that is scored elsewhere."
+      },
+      {
+        "atomic_claim_id": "NQ01-A07",
+        "atomic_claim": "USEPA Method 1633 A is a targeted PFAS method that quantifies approximately 40 PFAS even though thousands of PFAS exist in commercial use and environmental media.",
+        "evidence_ids": [
+          "NQ01_MMG007"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ01-G07"
+        ],
+        "rationale": "This atomic claim captures the limited analyte scope of EPA Method 1633 relative to total PFAS, directly echoing the cited text."
+      },
+      {
+        "atomic_claim_id": "NQ01-A08",
+        "atomic_claim": "PFAS analysis in wastewater treatment sludges and biosolids lacks a widely recognized standard method, and individual analytical methods are not broadly applicable across different sludge/biosolid matrices.",
+        "evidence_ids": [
+          "NQ01_MMG003"
+        ],
+        "action": "constraint_only",
+        "target_claim_group_ids": [
+          "NQ01-X01"
+        ],
+        "rationale": "This atomic claim represents a matrix-specific limitation that constrains overgeneralization of any method as universally applicable."
+      },
+      {
+        "atomic_claim_id": "NQ01-A09",
+        "atomic_claim": "LC-centered PFAS methods used for regulatory purposes face challenges such as background contamination from Teflon and other fluoropolymer-containing components in the analytical system, requiring careful control of such sources.",
+        "evidence_ids": [
+          "NQ01_MMG002"
+        ],
+        "action": "constraint_only",
+        "target_claim_group_ids": [
+          "NQ01-X02"
+        ],
+        "rationale": "This atomic claim isolates the documented background-contamination challenges for LC-centered PFAS methods, serving as a constraint against portraying them as universally trouble-free."
+      }
+    ],
+    "reference_answer": "Across the supplied sources, several distinct analytical approaches are described for PFAS quantification or detection, with differing analyte scope, matrices, and study goals.\n\nTargeted LC-based methods\n\nTargeted LC-MS and LC-MS/MS workflows are consistently presented as core tools for quantitative PFAS determination. One review notes that “LC-MS and GC – MS are commonly employed for targeted quantitative mass spectrometry analysis of specific PFAS compounds.” (NQ01_MMG001), emphasizing their role in targeted quantification. In PFCA-focused work, chromatographic methods including GC, HPLC, and UHPLC “are frequently used for the determination of PFCAs in water matrices” (NQ01_MMG002), and within this context “The gold standard for PFCA analysis has been liquid chromatography coupled with tandem mass spectrometry (LC-MS/MS)” (NQ01_MMG002). Thus, LC-MS/MS is explicitly framed as a gold standard for PFCA analysis, specifically in water matrices, rather than universally for all PFAS.\n\nRegulatory targeted methods based on LC-MS/MS are also highlighted. Habib et al. state that “US EPA has developed and validated a series of methods (EPA Method 533, 537.1, 8327) for PFAS using LC-MS/MS with sample preparation using solid-phase extraction” (NQ01_MMG002), indicating a coupling of SPE with LC-MS/MS for regulated PFAS determination in water. Another source notes that “a study conducted in Spain used LC-MS in conjunction with the direct injection approach to determine the presence of common PFAS chemicals in different types of water” (NQ01_MMG004), illustrating application of targeted direct-injection LC-MS for common PFAS in multiple water types.\n\nHowever, the same review stresses that these targeted methods, while crucial for regulatory purposes, “have certain limitations, including the requirement for predefined quantification targets and the restricted availability of reference standards. These constraints limit detection to only a small fraction of PFASs — just a few dozen out of the thousands that may be present.” (NQ01_MMG004). Likewise, another regulatory method, “USEPA Method 1633 A targets quantitation of approximately 40 PFAS, despite the existence of thousands of compounds in commercial use and environmental media.” (NQ01_MMG007). Together, these statements show that targeted LC-MS/MS and related LC-MS methods are suitable for routine monitoring and compliance of a defined PFAS list (e.g., several dozen PFAS including PFCAs) in water and wastewater-related matrices, but they cannot be assumed to capture the full diversity of PFAS.\n\nThe LC-centered methods also face practical challenges. Habib et al. note that “the most common methods, centered around LC, are not without their challenges. Yamashita et al. [49] reported background contamination issues in PFAS monitoring. Specific attention should be paid to auto-sampler vial caps made of Teflon or fluoropolymers, fluoropolymer tubing, solvent inlet filters, and a variety of other laboratory products … as they are sources of back-” (NQ01_MMG002). This underscores that, for PFAS monitoring in water, LC-based methods require careful control of materials to mitigate background contamination, particularly in low-level monitoring applications.\n\nGas chromatography-based methods\n\nIn addition to LC-based techniques, GC and GC-MS are also used. Sanzana et al. list “traditional approaches such as gas chromatography – mass spectrometry (GC – MS) and liquid chromatography-mass spectrometry (LC-MS)” among analytical methodologies for PFAS characterization (NQ01_MMG001). Habib et al. specify that “gas chromatography (GC)… are frequently used for the determination of PFCAs in water matrices” (NQ01_MMG002), showing that GC-based workflows can target PFCAs in water.\n\nA more specialized GC-MS method combines stir bar sorptive extraction and thermal desorption: “the SBSE-TD-GC-MS method represents a significant step forward for the efficient analysis of PFCAs in water samples when high concentrations (high ppt to low ppb ranges) of PFCAs are expected.” (NQ01_MMG008). The same study notes that “employing a thermal desorption unit coupled with GC-MS can eliminate the need for organic solvent usage for desorption in LC-MS/MS methods” (NQ01_MMG008), positioning SBSE-TD-GC-MS as a solvent-saving alternative to LC-MS/MS for PFCA analyses in aquatic environments. The authors describe this as “an optimized and validated analytical method, characterized by its simplicity, sensitivity, and robustness for the extraction and quantification of PFCAs in aquatic environments.” (NQ01_MMG008). This indicates suitability for quantifying a defined set of PFCAs in water when concentrations are expected to be relatively high (high ppt–low ppb), including in method-development or higher-level monitoring scenarios, rather than ultra-trace screening.\n\nNon-targeted and high-resolution methods (HRMS, FT‑ICR MS, NMR)\n\nBeyond targeted LC and GC, the corpus describes more advanced platforms intended to broaden PFAS coverage. Sanzana et al. list “sophisticated methodologies like nuclear magnetic resonance (NMR) spectroscopy, high-resolution mass spectrometry (HRMS), and Fourier-transform ion cyclotron resonance mass spectrometry (FT-ICR MS)” (NQ01_MMG001) as PFAS characterization tools. In discussing limitations of targeted approaches, the same review argues that “a more comprehensive approach to PFAS identification and quantification in complex impacted water is needed. As a result, nontargeted analytical techniques such as NMR, HRMS, and FT-ICR MS, which leverage accurate mass measurements, enabling the screening of detected ions against databases of known contaminants, are increasingly employed to identify a broad range of novel PFAS” (NQ01_MMG004). They further note that “FT-ICR MS has emerged as the preferred method for analyzing PFAS in complex media, thanks to its unparalleled mass resolving power, exceptional mass accuracy, and wide dynamic range.” (NQ01_MMG004).\n\nA concrete example is provided for aqueous film-forming foam (AFFF), a complex PFAS mixture: “Young et al. [41] developed a suspect and nontargeted 21 T FT-ICR MS method to screen PFAS in an aqueous film-forming foam (AFFF), identifying 163 known PFAS through suspect screening and even additional 134 novels PFAS through nontargeted analysis.” (NQ01_MMG006). This demonstrates that high-field FT‑ICR MS, operated in suspect and non-targeted modes, can detect and tentatively identify hundreds of PFAS in a highly complex industrial product matrix. These methods are therefore well suited to exploratory screening and source characterization in complex media (e.g., AFFF, impacted waters), where the aim is discovery and structural characterization of known and novel PFAS rather than routine quantification of a fixed list.\n\nSPME-LC-MS/MS for aqueous PFAS\n\nAn additional LC-MS/MS workflow uses an ion-exchange solid phase microextraction format. Olomukoro et al. report that “An efficient and convenient SPME method was developed for PFAS in aqueous matrices and applied to river, lake, tap and bottled water samples.” (NQ01_MMG005). They describe that “HLB-WAX/PAN SPME extraction phase was highly selective for PFAS and thus has greater potential for use in further studies of more complex samples in light of its biocompatibility.” (NQ01_MMG005). Regarding performance, “This developed protocol achieved LOQs of 1–2.5 ng L−1 for the model analytes with a sample volume of only 1.5 mL, demonstrating the efficacy of pre-concentration offered by SPME for PFAS.” (NQ01_MMG005). The authors emphasize that “a highly sensitive quantitative analysis can be performed for PFAS of varying physicochemical properties, achieving LOQs below current EPA drinking water health advisories.” (NQ01_MMG005).\n\nThis method thus combines sample preparation (SPME with HLB-WAX/PAN) and LC/laminar flow tandem MS detection. It is applied to environmental and drinking water types (river, lake, tap, bottled water) and is explicitly positioned for sensitive quantitative analysis at low ng L−1 levels, suitable for monitoring PFAS near or below regulatory guidelines, and potentially extendable to more complex aqueous matrices.\n\nOther less commonly used methods and TOP assay\n\nHabib et al. also mention several other techniques: “Less commonly used methods include nuclear magnetic resonance, Fourier transform infrared spectroscopy, ion chromatography, and several sensor-based methods [42–45].” (NQ01_MMG002). While detailed matrices and analyte lists are not given in this excerpt, these platforms are presented as additional, non-routine options in the PFCA/PFAS analytical toolbox.\n\nIn terms of capturing precursors, “methods such as the total oxidizable precursor assay have determined that a significant fraction of the total PFCAs present in environmental samples consists of unidentified compounds” (NQ01_MMG002). The total oxidizable precursor assay is therefore used as a bulk measure of oxidizable PFCA precursors, indicating that standard targeted methods detect only part of the PFCA burden and that many PFCAs arise from previously unidentified precursors in environmental samples.\n\nMatrix- and application-specific limitations\n\nThe suitability and generalizability of these methods are constrained by matrix and study goals. For sludge and biosolids, Ozelcaglayan et al. note that “The analysis of PFAS in wastewater treatment sludges and biosolids is an evolving practice for which a widely recognized standard method does not currently exist. While a number of analytical techniques have been reported in the literature, individual methods were found to not be broadly applicable over a range of sludge/biosolid matrices.” (NQ01_MMG003). This indicates that approaches optimized for water (e.g., EPA LC-MS/MS methods, SPME-LC-MS/MS, or SBSE-TD-GC-MS) cannot be assumed to perform universally across solid or highly heterogeneous matrices, and matrix-specific method development and cleanup are critical.\n\nMore broadly, the limitations of targeted LC-based regulatory methods (predefined analyte lists, restricted standards, background contamination) mean they are well suited to routine monitoring and regulatory compliance of known PFAS in relatively well-characterized matrices (e.g., drinking water, some wastewaters), but not to comprehensive PFAS discovery or full mass-balance closure. In contrast, non-targeted HRMS/FT-ICR MS and related techniques are better aligned with goals such as broad screening, source identification, and characterization of complex PFAS mixtures (e.g., AFFF, impacted waters). GC-based SBSE-TD-GC-MS provides an optimized option for PFCAs in water at higher concentrations, whereas SPME-LC-MS/MS targets low-level quantitative analysis of a range of PFAS in drinking and surface waters.\n\nOverall, the cited studies collectively support a portfolio view: targeted LC-MS/MS (including EPA methods and direct-injection LC-MS) for specific PFAS/PFCAs in water with defined regulatory goals; GC-based methods including SBSE-TD-GC-MS for PFCAs in water, especially at higher concentrations; non-targeted HRMS/FT-ICR MS (and NMR) for broad PFAS screening in complex waters and AFFF; SPME-LC-MS/MS for sensitive PFAS quantification in aqueous matrices; and additional methods such as FTIR, ion chromatography, sensor-based approaches, and the total oxidizable precursor assay as complementary tools. None of the sources claim any single method as universally optimal across all PFAS analytes, matrices, and applications.",
+    "reference_answer_claim_map": [
+      {
+        "claim_group_id": "NQ01-G01",
+        "reference_answer_excerpt": "Targeted LC-MS and LC-MS/MS workflows are consistently presented as core tools for quantitative PFAS determination. One review notes that “LC-MS and GC – MS are commonly employed for targeted quantitative mass spectrometry analysis of specific PFAS compounds.” (NQ01_MMG001)... “The gold standard for PFCA analysis has been liquid chromatography coupled with tandem mass spectrometry (LC-MS/MS)” (NQ01_MMG002)... “US EPA has developed and validated a series of methods (EPA Method 533, 537.1, 8327) for PFAS using LC-MS/MS with sample preparation using solid-phase extraction” (NQ01_MMG002)... these targeted methods... “limit detection to only a small fraction of PFASs — just a few dozen out of the thousands that may be present.” (NQ01_MMG004)."
+      },
+      {
+        "claim_group_id": "NQ01-G02",
+        "reference_answer_excerpt": "In addition to LC-based techniques, GC and GC-MS are also used. Sanzana et al. list “traditional approaches such as gas chromatography – mass spectrometry (GC – MS)...” (NQ01_MMG001). Habib et al. specify that “gas chromatography (GC)… are frequently used for the determination of PFCAs in water matrices” (NQ01_MMG002)... “the SBSE-TD-GC-MS method represents a significant step forward for the efficient analysis of PFCAs in water samples when high concentrations (high ppt to low ppb ranges) of PFCAs are expected.” (NQ01_MMG008)... described as “an optimized and validated analytical method... for the extraction and quantification of PFCAs in aquatic environments.” (NQ01_MMG008)."
+      },
+      {
+        "claim_group_id": "NQ01-G03",
+        "reference_answer_excerpt": "Beyond targeted LC and GC, the corpus describes more advanced platforms... Sanzana et al. list “sophisticated methodologies like nuclear magnetic resonance (NMR) spectroscopy, high-resolution mass spectrometry (HRMS), and Fourier-transform ion cyclotron resonance mass spectrometry (FT-ICR MS)” (NQ01_MMG001)... “nontargeted analytical techniques such as NMR, HRMS, and FT-ICR MS... are increasingly employed to identify a broad range of novel PFAS” (NQ01_MMG004)... “FT-ICR MS has emerged as the preferred method for analyzing PFAS in complex media” (NQ01_MMG004). For AFFF, “a suspect and nontargeted 21 T FT-ICR MS method... identify[ed] 163 known PFAS... and 134 novels PFAS” (NQ01_MMG006)."
+      },
+      {
+        "claim_group_id": "NQ01-G04",
+        "reference_answer_excerpt": "An additional LC-MS/MS workflow uses an ion-exchange solid phase microextraction format. Olomukoro et al. report that “An efficient and convenient SPME method was developed for PFAS in aqueous matrices and applied to river, lake, tap and bottled water samples.” (NQ01_MMG005)... “HLB-WAX/PAN SPME extraction phase was highly selective for PFAS...” (NQ01_MMG005)... “achieved LOQs of 1–2.5 ng L−1... demonstrating the efficacy of pre-concentration offered by SPME for PFAS.” (NQ01_MMG005)... enabling “highly sensitive quantitative analysis... for PFAS of varying physicochemical properties” (NQ01_MMG005)."
+      },
+      {
+        "claim_group_id": "NQ01-G05",
+        "reference_answer_excerpt": "Habib et al. also mention several other techniques: “Less commonly used methods include nuclear magnetic resonance, Fourier transform infrared spectroscopy, ion chromatography, and several sensor-based methods [42–45].” (NQ01_MMG002)... “methods such as the total oxidizable precursor assay have determined that a significant fraction of the total PFCAs present in environmental samples consists of unidentified compounds” (NQ01_MMG002)."
+      },
+      {
+        "claim_group_id": "NQ01-G06",
+        "reference_answer_excerpt": "Another source notes that “a study conducted in Spain used LC-MS in conjunction with the direct injection approach to determine the presence of common PFAS chemicals in different types of water” (NQ01_MMG004)... the same review stresses that these targeted methods... “have certain limitations, including the requirement for predefined quantification targets and the restricted availability of reference standards. These constraints limit detection to only a small fraction of PFASs — just a few dozen out of the thousands that may be present.” (NQ01_MMG004)."
+      },
+      {
+        "claim_group_id": "NQ01-G07",
+        "reference_answer_excerpt": "Likewise, another regulatory method, “USEPA Method 1633 A targets quantitation of approximately 40 PFAS, despite the existence of thousands of compounds in commercial use and environmental media.” (NQ01_MMG007). Together, these statements show that targeted LC-MS/MS and related LC-MS methods are suitable for routine monitoring of a defined PFAS list but cannot be assumed to capture the full diversity of PFAS."
+      }
+    ],
+    "unresolved_or_unsupported": [
+      "Specific details of LC-HRMS targeted workflows (as distinct from generic HRMS or FT-ICR MS non-targeted applications) are not described in the supplied evidence.",
+      "Applications of these methods in biological tissues, food, or other non-aqueous product matrices (beyond AFFF and sludge/biosolids) are not detailed in the provided texts.",
+      "Use of these analytical methods for toxicological studies (e.g., PFAS measurements in in vitro or in vivo exposure experiments) is not discussed in the cited evidence.",
+      "Comparative performance metrics across methods (e.g., relative sensitivity of LC-MS/MS vs. HRMS vs. GC-MS for the same PFAS set) are not provided in the supplied material.",
+      "Any claim that LC-MS/MS is a gold standard for PFAS classes beyond PFCAs or for matrices beyond water is not supported by the cited passages."
+    ],
+    "boundary_check": {
+      "must_include_addressed": true,
+      "must_not_claim_respected": true,
+      "notes": "The answer distinguishes targeted LC-MS/MS from non-targeted HRMS/FT-ICR MS methods, links method suitability to analyte scope, matrices, and study goals using direct citations, and confines the 'gold standard' description of LC-MS/MS to PFCA analysis in water as stated by Habib et al. It avoids asserting any single universally best method and explicitly notes limitations in analyte coverage and matrix applicability, consistent with the constraints and evidence."
+    }
+  },
+  "generation": {
+    "request_model": "gpt-5.1",
+    "response_model": "gpt-5.1-2025-11-13",
+    "response_id": "chatcmpl-E77eSkfCHpl9rYsSc7JgrK57lzv5S",
+    "reasoning_effort": "low",
+    "temperature": "provider_default_not_sent",
+    "max_completion_tokens": 20000,
+    "finish_reason": "stop",
+    "prompt_tokens": 20243,
+    "cached_prompt_tokens": 0,
+    "completion_tokens": 13706,
+    "total_tokens": 33949,
+    "latency_seconds": 88.23032091697678,
+    "request_sha256": "83e3f062bae7b990b8c996f588da618a4eedde35ad0e56c147b105ab90c50988",
+    "estimated_cost_usd": 0.16236375
+  },
+  "analytical_status": "quarantined_schema_invalid_repair"
+}

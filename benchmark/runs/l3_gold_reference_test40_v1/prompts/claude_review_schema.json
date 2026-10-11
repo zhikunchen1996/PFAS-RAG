@@ -1,0 +1,69 @@
+{
+  "type": "object",
+  "properties": {
+    "batch_id": {"type": "string"},
+    "reviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question_id": {"type": "string"},
+          "verdict": {
+            "type": "string",
+            "enum": ["clean", "repair_required", "unresolvable"]
+          },
+          "question_level_issues": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "group_reviews": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "claim_group_id": {"type": "string"},
+                "verdict": {
+                  "type": "string",
+                  "enum": [
+                    "supported",
+                    "partially_supported",
+                    "unsupported",
+                    "misattributed",
+                    "duplicate_or_overweighted"
+                  ]
+                },
+                "issues": {"type": "array", "items": {"type": "string"}},
+                "required_repairs": {
+                  "type": "array",
+                  "items": {"type": "string"}
+                }
+              },
+              "required": [
+                "claim_group_id",
+                "verdict",
+                "issues",
+                "required_repairs"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "reference_prose_consistent": {"type": "boolean"},
+          "boundary_respected": {"type": "boolean"},
+          "required_repairs": {"type": "array", "items": {"type": "string"}}
+        },
+        "required": [
+          "question_id",
+          "verdict",
+          "question_level_issues",
+          "group_reviews",
+          "reference_prose_consistent",
+          "boundary_respected",
+          "required_repairs"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["batch_id", "reviews"],
+  "additionalProperties": false
+}

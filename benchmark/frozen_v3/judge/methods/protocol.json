@@ -1,0 +1,130 @@
+{
+  "protocol_id": "pfas_rag_frozen_judge_2026-07-28",
+  "immutable_version": "frozen-judge-2026-07-28-v1",
+  "git_tag": "frozen-judge-2026-07-28-v1",
+  "freeze_date": "2026-07-28",
+  "status": "frozen_for_test40_execution",
+  "development_scope": "Dev13 only",
+  "held_out_status": "The new frozen judge has not been run on Test40.",
+  "judge": {
+    "model_alias": "gpt-5.1",
+    "required_returned_snapshot": "gpt-5.1-2025-11-13",
+    "temperature": "provider default; temperature is not accepted with reasoning_effort",
+    "l15_reasoning_effort": "low",
+    "l2_reasoning_effort": "medium",
+    "pricing_snapshot_date": "2026-07-28",
+    "usd_per_million_tokens": {
+      "input": 1.25,
+      "cached_input": 0.125,
+      "output": 10.0
+    },
+    "stochasticity_disclosure": "The reasoning API does not guarantee bitwise repeatability. Raw judge responses are retained; mirrored judgments and clustered bootstrap quantify evaluation variability."
+  },
+  "environment": {
+    "python": "environment/python-version.txt",
+    "requirements": "environment/requirements-lock.txt"
+  },
+  "input_validation": {
+    "exact_question_membership_required": true,
+    "duplicate_question_ids_rejected": true,
+    "extra_question_ids_rejected": true,
+    "silent_output_overwrite": false,
+    "disconnected_davidson_graph_rejected": true
+  },
+  "layers": {
+    "L1": {
+      "name": "deterministic retrieval evaluation",
+      "llm_judge_used": false,
+      "metrics": [
+        "MRR_required_gold",
+        "required_gold_recall@10",
+        "gold_doc_recall@10",
+        "negative_gold_recall@10"
+      ],
+      "negative_gold_role": "separate diagnostic"
+    },
+    "L1.5": {
+      "name": "claim-level citation-support sanity check",
+      "scope": "Test40 RAG answers only",
+      "primary_metric": "claim_supported_by_any_citation_rate",
+      "passing_labels": [
+        "supported",
+        "partially_supported"
+      ],
+      "additional_metrics": [
+        "unsupported_claim_rate",
+        "contradicted_claim_rate",
+        "uncited_source_dependent_claim_count"
+      ],
+      "context_policy": "All complete original final chunks are supplied; no post-hoc retrieval and no gold.",
+      "citation_policy": "Cited chunks are judged jointly per material claim; redundant citations need not each entail the whole claim.",
+      "role": "sanity/control layer, not retrieval-system selection"
+    },
+    "L2": {
+      "name": "citation-blind answer-quality comparison V2",
+      "criteria": [
+        "scientific_correctness",
+        "question_fulfillment",
+        "scope_and_calibration",
+        "practical_usefulness"
+      ],
+      "inputs": [
+        "visible question",
+        "pre-answer task boundaries",
+        "human-audited non-exhaustive gold evidence",
+        "two anonymous citation-stripped answers"
+      ],
+      "prohibited_inputs": [
+        "retrieved context",
+        "system identity",
+        "question ID",
+        "retrieval configuration",
+        "citation count or citation quality"
+      ],
+      "gold_payload_policy": "Evidence IDs and decoy records are removed. Required and optional gold are supporting evidence; negative gold defines limitations or counterexamples.",
+      "identity_leakage_gate": "Every citation-stripped answer must pass the deterministic production leakage scan before any API call.",
+      "schema_policy": "Exact JSON keys and values are required. No schema repair or misspelling alias is permitted.",
+      "finish_policy": "Only responses with finish_reason=stop are accepted.",
+      "judgments_per_pair_question": 2,
+      "order_design": "exact mirrored A/B order",
+      "adaptive_repeats": false,
+      "hard_consensus_resolution": false,
+      "unstable_exclusion": false,
+      "raw_vote_policy": "All mapped A, B, and tie votes enter the model as separate observations.",
+      "aggregation": {
+        "model": "Davidson extension of Bradley-Terry",
+        "primary": "four separate criterion-specific normalized-ability fits",
+        "tie_parameter": "one independently estimated nu per criterion, refit in every bootstrap replicate",
+        "numerical_regularization": "A fixed 1e-6 L2 penalty on free log-ability and log-tie parameters is used only to stabilize optimization and is applied identically to point and bootstrap fits.",
+        "equal_weight_composite": "descriptive secondary only"
+      },
+      "uncertainty": {
+        "resampling_unit": "question",
+        "method": "clustered percentile bootstrap",
+        "attempted_replicates": 10000,
+        "seed": 20260728,
+        "interval": "2.5th and 97.5th percentiles",
+        "joint_resampling": "The same sampled question list is used for every criterion within a replicate.",
+        "failure_policy": "Failed fits are omitted and their count and rate are reported.",
+        "composite_policy": "The descriptive composite is recomputed inside every successful replicate."
+      },
+      "reliability_diagnostics": [
+        "mirrored agreement rate",
+        "A/B position-choice exact binomial test"
+      ]
+    }
+  },
+  "anonymization_audit": {
+    "development_answers": 39,
+    "auditor": "Claude Sonnet 5 Medium through claude.ai",
+    "deterministic_scan": "passed",
+    "slot_accuracy": 0.38461538461538464,
+    "slot_chance": 0.3333333333333333,
+    "slot_exact_tail_p": 0.32599276866789123,
+    "complete_mapping_accuracy": 0.23076923076923078,
+    "complete_mapping_chance": 0.16666666666666666,
+    "complete_mapping_exact_tail_p": 0.3719227332061556,
+    "decision": "No statistically detectable above-chance system-identity inference.",
+    "interpretation_limit": "Failure to reject chance is not proof that identity is impossible to infer."
+  }
+}

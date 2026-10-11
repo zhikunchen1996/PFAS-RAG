@@ -1,0 +1,338 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PFAS review study evidence table",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id",
+    "source_system",
+    "records",
+    "extraction_notes"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "pattern": "^RT(0[1-9]|10)$"
+    },
+    "source_system": {
+      "type": "string",
+      "enum": [
+        "bge_llm_local_rag",
+        "gpt51_web_search"
+      ]
+    },
+    "records": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "$ref": "#/$defs/evidenceRecord"
+      }
+    },
+    "extraction_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "evidenceRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_id",
+        "source_id",
+        "doi_or_stable_url",
+        "citation",
+        "study_type",
+        "study_scale",
+        "matrix",
+        "pfas_scope",
+        "treatment",
+        "operating_conditions",
+        "endpoints",
+        "quantitative_findings",
+        "limitations",
+        "residuals_byproducts",
+        "comparability"
+      ],
+      "properties": {
+        "record_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "doi_or_stable_url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "citation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "study_type": {
+          "type": "string",
+          "enum": [
+            "primary_experiment",
+            "pilot_or_field_deployment",
+            "modeling_or_life_cycle_study",
+            "other"
+          ]
+        },
+        "study_scale": {
+          "$ref": "#/$defs/evidenceText"
+        },
+        "matrix": {
+          "$ref": "#/$defs/evidenceText"
+        },
+        "pfas_scope": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/evidenceText"
+          }
+        },
+        "treatment": {
+          "$ref": "#/$defs/evidenceText"
+        },
+        "operating_conditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/namedValue"
+          }
+        },
+        "endpoints": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/endpoint"
+          }
+        },
+        "quantitative_findings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/quantitativeValue"
+          }
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceStatement"
+          }
+        },
+        "residuals_byproducts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceStatement"
+          }
+        },
+        "comparability": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "reason",
+            "evidence_locator_ids"
+          ],
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "comparable_with_conditions",
+                "descriptive_only",
+                "not_comparable"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            },
+            "evidence_locator_ids": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "evidenceText": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "evidence_locator_ids"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_locator_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "evidenceStatement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "statement",
+        "basis",
+        "evidence_locator_ids"
+      ],
+      "properties": {
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "basis": {
+          "type": "string",
+          "enum": [
+            "author_reported",
+            "design_inferred"
+          ]
+        },
+        "evidence_locator_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "namedValue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "value",
+        "unit",
+        "qualifiers",
+        "evidence_locator_ids"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "qualifiers": {
+          "type": "string"
+        },
+        "evidence_locator_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "quantitativeValue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "value",
+        "value_form",
+        "unit",
+        "qualifiers",
+        "evidence_locator_ids"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value_form": {
+          "type": "string",
+          "enum": [
+            "exact_numeric",
+            "approximate_numeric",
+            "inequality",
+            "range",
+            "not_detected"
+          ]
+        },
+        "unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "qualifiers": {
+          "type": "string"
+        },
+        "evidence_locator_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "endpoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "endpoint_type",
+        "reported_term",
+        "interpretation",
+        "evidence_locator_ids"
+      ],
+      "properties": {
+        "endpoint_type": {
+          "type": "string",
+          "enum": [
+            "removal",
+            "separation",
+            "sorption",
+            "parent_compound_loss",
+            "transformation",
+            "degradation",
+            "destruction",
+            "defluorination",
+            "mineralization",
+            "total_organofluorine_change",
+            "toxicity_change",
+            "other"
+          ]
+        },
+        "reported_term": {
+          "type": "string"
+        },
+        "interpretation": {
+          "type": "string"
+        },
+        "evidence_locator_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

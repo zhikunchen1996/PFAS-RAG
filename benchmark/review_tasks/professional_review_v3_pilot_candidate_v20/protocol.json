@@ -1,0 +1,336 @@
+{
+  "protocol_id": "professional_pfas_review_v3_pilot_candidate_v20",
+  "status": "rt01_retrospective_calibration_candidate",
+  "date": "2026-08-04",
+  "scope": "Results Section 3.4 literature-derived, extraction-first professional PFAS review generation",
+  "supersedes": "professional_pfas_review_v3_pilot_candidate_v19",
+  "method_precedents": {
+    "water_rag": "review-derived task briefs and exclusion of each defining review from the candidate knowledge base",
+    "project_l3": "candidate-blind component ledgers, anonymous one-answer judging, component-balanced aggregation, and three complete repeats",
+    "v3_extension": "shared-review bottom-up task provenance plus structured primary-study extraction and source-level verification before narrative synthesis"
+  },
+  "task_design": {
+    "origin": "ten focused review questions derived from five full-text anchor reviews; one review may define multiple independent subsection-scale tasks",
+    "unique_anchor_review_count": 5,
+    "anchor_must_be_in_active_corpus": true,
+    "shared_anchor_reviews_across_tasks": true,
+    "allowed_design_evidence": [
+      "review scope and stated purpose",
+      "major comparison axes",
+      "engineering and implementation constraints",
+      "explicit research gaps and future needs"
+    ],
+    "prohibited_visible_prompt_content": [
+      "study-specific numerical results",
+      "named best technology or material",
+      "anchor-review conclusions",
+      "answer-bearing rankings",
+      "phrasing that presupposes a disputed mechanism or outcome"
+    ],
+    "provenance_file": "provenance/task_design_provenance.jsonl",
+    "source_snapshot_directory": "provenance/source_snapshots",
+    "candidate_reviews_visible_during_design": false
+  },
+  "tasks": {
+    "planned_count": 10,
+    "components_per_task": 3,
+    "primary_anchor_reviews_required": true,
+    "unique_primary_anchor_review_count": 5,
+    "supplemental_anchor_reviews_allowed": false,
+    "literature_derived_provenance_required": true,
+    "coverage_pilot_required_before_freeze": true,
+    "coverage_pilot_status": "completed_no_api_all_four_queries_covered_shared_anchor_design",
+    "candidate_reviews_visible_during_task_revision": false,
+    "required_deliverables": [
+      "structured_study_evidence_table",
+      "cross_study_professional_review"
+    ],
+    "deliverable_scope": "retrieval-enabled systems produce both deliverables; the no-retrieval Direct baseline produces the same professional-review response but cannot produce a source-verified evidence table"
+  },
+  "systems": [
+    "bge_llm_local_rag",
+    "gpt51_web_search",
+    "gpt51_direct"
+  ],
+  "anchor_exclusion": {
+    "applies_before_candidate_document_ranking": true,
+    "task_scoped": true,
+    "identifiers": [
+      "normalized_doi",
+      "normalized_stable_url",
+      "exact_corpus_source",
+      "normalized_exact_title"
+    ],
+    "local_rag": "remove the task's defining review and all of its chunks before retrieval results are ranked or expanded",
+    "web_search": "block the anchor DOI and URL during source capture and reject any evidence record or citation that resolves to the anchor",
+    "closed_book_direct": "the defining review is not placed in the prompt and no retrieval or post-hoc evidence acquisition is allowed; model-weight exposure cannot be removed and must never be described as a verified exclusion"
+  },
+  "retrieval_and_extraction": {
+    "query_sources": [
+      "umbrella_review_theme",
+      "required_component_1",
+      "required_component_2",
+      "required_component_3"
+    ],
+    "stage_1_candidate_retrieval": "system-specific chunk retrieval and document aggregation after anchor exclusion",
+    "stage_2_document_selection": "aggregate four 100-chunk dense query results by reciprocal-rank fusion, remove likely reviews, rerank the leading 30 documents with BAAI/bge-reranker-base, screen the leading 20 candidates, and retain every eligible nonduplicate primary study rather than a fixed final count",
+    "stage_3_within_document_expansion": "retrieve or inspect sufficient chunks from each selected document to cover methods, conditions, results, and limitations",
+    "stage_4_structured_extraction": "one schema-constrained evidence record per primary-study experiment or deployment; reviews may aid discovery but cannot supply quantitative study rows",
+    "stage_5_source_verification": "verify every populated source-dependent field against cited complete chunks or frozen inspected web pages; a deterministic required-path audit triggers a narrowly scoped completion call only for omitted mandatory value/unit, endpoint, or comparability paths before synthesis",
+    "stage_6_synthesis": "generate the professional review from every usable verified record, compact field-level eligibility signals, and the complete supporting excerpts for all sources represented by those records",
+    "query_chunk_budget": 100,
+    "reciprocal_rank_fusion_k": 60,
+    "bge_document_rerank_pool": 30,
+    "bge_llm_selector_pool": 20,
+    "local_candidate_screen_budget": 20,
+    "minimum_retained_sources": 6,
+    "fixed_final_source_count": null,
+    "within_document_chunk_budget": 8,
+    "web_search_candidate_screen_budget": 20,
+    "web_search_minimum_retained_sources": 6,
+    "merge_deduplication_rule": "deduplicate by normalized DOI, otherwise normalized inspected URL, otherwise normalized exact title",
+    "bge_llm_document_selection": "GPT-5.1 classifies every BGE top-20 card and retains every primary, task-relevant source with extractable evidence; every excluded source receives a fixed reason and no eligible study may be removed merely as redundant",
+    "within_document_selection": "score every non-reference chunk against the umbrella query and three components, retain one best chunk per query when distinct, then fill to eight by maximum cross-encoder score",
+    "web_search_capture": "Responses API web_search inspects up to 20 eligible candidate primary sources; identifiers and inspected URLs are checked deterministically against the API-returned consulted-source list, and every valid nonduplicate non-anchor source is retained before common extraction, subject only to a six-source minimum-evidence gate",
+    "comparability_budget_rule": "systems share a 20-source candidate-screening ceiling and a six-source minimum-evidence gate; final retained and cited source counts are variable outcomes rather than matched quotas",
+    "common_extractor_across_retrieval_systems": true,
+    "common_synthesis_model_across_systems": true,
+    "direct_condition": "GPT-5.1 receives the same visible review brief, component requirements, scientific task boundaries, and output token ceiling but no retrieved evidence, Web Search, source identifiers, extraction, verification, or post-hoc source-support judgment",
+    "direct_layer_a_policy": "retrieved and verified record/source counts are zero by design; extraction accuracy and source-support rates are not applicable rather than zero",
+    "per_source_strict_schema_constraints": "task_id, source_system, source_id, and every evidence_locator_id are enumerated from the current frozen source packet before each extraction call",
+    "evidence_schema": "field-located evidence objects for study scale, matrix, PFAS scope, treatment, limitations, residuals/byproducts, quantitative findings, endpoints, and comparability",
+    "quantitative_value_rule": "value_form declares exact numeric, approximate numeric, inequality, range, or not-detected syntax; valid thousands separators are accepted, an approximate_numeric bare number is deterministically prefixed with a logged approximation marker, ambiguous mismatches are removed, and unit-only scales are excluded",
+    "endpoint_measurement_rule": "endpoint_type follows the measured basis rather than author terminology; fluorine release or fluorine-balance closure can establish defluorination but mineralization additionally requires direct carbon-fate evidence",
+    "comparability_rule": "comparability is a conservative analyst inference grounded in cited matrix, PFAS scope, scale, conditions, endpoint, unit, and denominator evidence rather than a required source quotation"
+  },
+  "generation": {
+    "extraction_model": "gpt-5.1",
+    "extraction_model_snapshot": "gpt-5.1-2025-11-13",
+    "verification_model": "gpt-5.1",
+    "verification_model_snapshot": "gpt-5.1-2025-11-13",
+    "synthesis_model": "gpt-5.1",
+    "synthesis_model_snapshot": "gpt-5.1-2025-11-13",
+    "document_selector_model_snapshot": "gpt-5.1-2025-11-13",
+    "web_search_model_snapshot": "gpt-5.1-2025-11-13",
+    "temperature": "provider_default_not_sent",
+    "reasoning_effort": "low",
+    "word_limit": null,
+    "synthesis_input_projection": "all verified records plus compact field statuses and reasons only for non-supported fields; supporting excerpts remain complete",
+    "synthesis_internal_ids_visible": false,
+    "synthesis_retrieval_metadata_visible": false,
+    "record_citation_normalization": "inside bracket citations only, convert exact <source>-R## record IDs to their source ID, deduplicate, and log every replacement",
+    "technical_output_token_ceilings": {
+      "document_selection": 6000,
+      "web_source_discovery": 32000,
+      "per_source_extraction": 16000,
+      "per_record_verification": 12000,
+      "required_path_verification_completion": 6000,
+      "review_synthesis": 16000,
+      "source_support_audit": 14000,
+      "review_quality_judge": 20000
+    },
+    "matched_scientific_role_and_visible_review_task": true,
+    "web_search_enabled_only_for_web_search_arm": true,
+    "retrieval_disabled_for_direct_arm": true,
+    "internal_notation_postprocessing": "remove only complete parenthetical task, component, or boundary labels prohibited by the synthesis prompt; preserve the raw response, request hash, removed spans, and raw/final text hashes; fail rather than rewrite a bare internal label"
+  },
+  "extraction_evaluation": {
+    "candidate_source_visible": true,
+    "system_identity_visible": false,
+    "planned_metrics": [
+      "supported_extracted_field_rate",
+      "numeric_transcription_accuracy",
+      "endpoint_classification_accuracy",
+      "verified_primary_study_record_count",
+      "verified_unique_primary_study_count",
+      "comparability_status_accuracy"
+    ],
+    "accuracy_status_rule": "numeric transcription, endpoint classification, and comparability accuracy are computed from exact required field paths with status=supported; error_type is diagnostic attribution and is not a second pass/fail gate",
+    "numeric_metric_scope": "quantitative_findings value and unit fields only; operating-condition value and unit fields remain mandatory verification fields and contribute to overall extracted-field support",
+    "quantity_metrics_are_diagnostics_not_quality_scores": false,
+    "judge_model": "gpt-5.1",
+    "judge_model_snapshot": "gpt-5.1-2025-11-13",
+    "repeat_count": 1,
+    "required_path_completion_policy": "after the initial verification, missing mandatory paths trigger one same-model completion request that must return each missing path exactly once and no others; prior assessments cannot be revised and final record usability is the logical AND of initial and completion eligibility",
+    "human_audit": "deferred until after the automated experiment; the project author will review the prepared blinded packet",
+    "independence_note": "extraction and source verification are separate requests to the same frozen GPT-5.1 snapshot; this is procedural independence, not cross-model independence",
+    "direct_policy": "not applicable because Direct performs no retrieval or structured evidence extraction"
+  },
+  "common_review_judge": {
+    "model": "gpt-5.1",
+    "required_snapshot": "gpt-5.1-2025-11-13",
+    "reasoning_effort": "low",
+    "temperature": "provider_default_not_sent",
+    "repeat_count": 3,
+    "one_anonymous_review_per_request": true,
+    "candidate_source_content_visible": false,
+    "candidate_citation_markers_visible": true,
+    "explicit_system_identity_visible": false,
+    "information_access_condition_may_be_inferred_from_citation_availability": true,
+    "citation_form_or_quantity_scored": "citation integration and traceability are scored; raw citation count is not",
+    "citation_anonymization": "before every Layer B request, deterministically map system-specific S##/WEB## source identifiers to neutral R## identifiers while preserving citation placement, repeated-source relationships, and bibliography content",
+    "anonymization_artifacts": [
+      "layer_b_candidate_review.md",
+      "layer_b_anonymization.json"
+    ],
+    "reference": "candidate-blind review task ledger",
+    "judgment_structure": "three component-fulfillment assessments plus fourteen global atomic review operations",
+    "dimensions": {
+      "critical_synthesis": 0.4,
+      "professional_depth": 0.35,
+      "current_research_outlook": 0.25
+    },
+    "status_values": {
+      "full": 1.0,
+      "partial": 0.5,
+      "absent": 0.0,
+      "contradicted": 0.0
+    },
+    "atomic_operations": {
+      "critical_synthesis": [
+        "comparative_integration",
+        "conditional_explanation",
+        "tension_limitation_resolution",
+        "decision_conclusion"
+      ],
+      "professional_depth": [
+        "mechanism_specificity",
+        "context_boundary_specificity",
+        "empirical_data_use",
+        "endpoint_comparability_discipline",
+        "practitioner_decision_support",
+        "citation_evidence_integration"
+      ],
+      "current_research_outlook": [
+        "current_development_specificity",
+        "specific_gap",
+        "consequence_of_gap",
+        "testable_priority"
+      ]
+    },
+    "claim_calibration_caps": {
+      "consistent": 1.0,
+      "minor_inconsistency": 0.85,
+      "material_inconsistency": 0.5,
+      "not_assessable": 1.0
+    },
+    "coverage_rule": "mean component fulfillment is a cap, not an additional weighted dimension",
+    "boundary_rule": "any material frozen-boundary violation caps the task score at 0.5",
+    "primary_metric": "atomic_component_capped_review_quality",
+    "aggregation": "equal mean across three complete repeat-specific system means",
+    "uncertainty": "sample standard deviation across three repeat-specific system means",
+    "bootstrap": false,
+    "binary_threshold": null
+  },
+  "end_to_end_review_evaluation": {
+    "aggregation": "two co-primary layers; no weighted composite",
+    "layer_a_evidence_acquisition_and_extraction": {
+      "applicable_systems": [
+        "bge_llm_local_rag",
+        "gpt51_web_search"
+      ],
+      "direct_interpretation": "no-retrieval lower-bound condition; verified record and source yield are zero by design, while denominator-based extraction and source-support accuracy metrics are reported as not applicable",
+      "primary_metrics": [
+        "verified_usable_record_count",
+        "verified_unique_source_count",
+        "weighted_extracted_field_support",
+        "endpoint_classification_accuracy_when_task_relevant",
+        "weighted_source_support_rate",
+        "claim_citation_coverage_rate",
+        "unique_cited_sources"
+      ],
+      "diagnostic_metrics": [
+        "verified_unique_source_count",
+        "supported_extracted_field_rate",
+        "numeric_transcription_accuracy",
+        "comparability_status_accuracy",
+        "unsupported_or_contradicted_claim_count",
+        "peer_reviewed_primary_source_fraction_among_cited_sources",
+        "valid_identifier_fraction_among_cited_sources",
+        "raw_citation_marker_count"
+      ],
+      "yield_eligibility_rule": "records count only after common eligibility, anchor exclusion, deterministic deduplication, field-level verification, and final usability checks",
+      "non_exhaustive_boundary": "verified useful evidence yield under the matched protocol; not literature recall"
+    },
+    "layer_b_citation_aware_synthesis": {
+      "primary_metric": "atomic_component_capped_review_quality",
+      "development_status": "retrospectively redesigned after inspecting RT01 V17; requires calibration and a new prospective task before freeze",
+      "component_fulfillment_is_score_cap": true,
+      "global_atomic_operation_count": 14,
+      "source_content_or_retrieval_scores_visible": false,
+      "neutralized_citation_markers_visible": true,
+      "answer_length_scored": false,
+      "raw_citation_quantity_scored": false,
+      "citation_integration_scored": true,
+      "citation_integration_rule": "credit coverage of major source-dependent claims, identifiable citation placement, and nonredundant sources supporting distinct analytical roles; raw marker count alone receives no credit",
+      "direct_structural_floor": "the closed-book Direct prompt prohibits fabricated study-specific evidence and citations; empirical_data_use and citation_evidence_integration are therefore structurally constrained and Direct professional-depth scores are not pure prose-synthesis scores"
+    },
+    "interpretation": {
+      "A_up_B_up": "stronger end-to-end professional-review system",
+      "A_up_B_similar": "better verified evidence acquisition with comparable synthesis",
+      "A_similar_B_up": "better synthesis from comparable verified evidence",
+      "A_up_B_down": "evidence-quality versus synthesis-quality trade-off",
+      "A_similar_B_similar": "no demonstrated end-to-end difference",
+      "non_independence_caveat": "Layer A evidence access supplies the material needed for Layer B empirical-data use and citation integration. A_up_B_up versus Direct is directional evidence of evidence-grounded review capability, not two statistically independent confirmations."
+    }
+  },
+  "separate_source_diagnostics": {
+    "uses_common_compact_evidence_view": true,
+    "systems": [
+      "bge_llm_local_rag",
+      "gpt51_web_search"
+    ],
+    "common_score_effect": "none",
+    "judge_model": "gpt-5.1",
+    "judge_model_snapshot": "gpt-5.1-2025-11-13",
+    "repeat_count": 1,
+    "web_passage_fidelity_note": "the API consulted-source list verifies that a URL was inspected, but a Web Search passage labelled verbatim is not independently refetched and diffed; passage-level human audit is deferred",
+    "planned_metrics": [
+      "supported_source_dependent_claim_rate",
+      "weighted_source_support_rate",
+      "claim_citation_coverage_rate",
+      "unique_cited_sources",
+      "peer_reviewed_primary_source_fraction_among_cited_sources",
+      "valid_identifier_fraction_among_cited_sources",
+      "unverifiable_citation_rate",
+      "anchor_exclusion_violations"
+    ],
+    "citation_parser_rule": "plain source citations and locator-level citations are always unioned; the presence of one form cannot suppress the other"
+  },
+  "resource_diagnostics": {
+    "record_by_stage": [
+      "candidate_retrieval",
+      "document_selection",
+      "within_document_expansion",
+      "structured_extraction",
+      "source_verification",
+      "review_synthesis",
+      "review_judging"
+    ],
+    "fields": [
+      "input_tokens",
+      "cached_input_tokens",
+      "output_tokens",
+      "elapsed_seconds",
+      "dated_api_cost_usd"
+    ]
+  },
+  "execution_safety": {
+    "paid_calls_authorized": true,
+    "authorized_task_ids": [
+      "RT01"
+    ],
+    "authorized_stages": [
+      "source_support",
+      "review_judge",
+      "summary"
+    ],
+    "formal_ten_task_run_authorized": false,
+    "pilot_promotion_rule": "V20 authorizes only retrospective rejudging of the immutable V17 RT01 candidate answers and evidence artifacts. No retrieval, extraction, verification, synthesis, other task, or formal ten-task execution is authorized. The Layer B output ceiling is 20000 after all three BGE-LLM V19 judgments ended at the prior 12000-token ceiling.",
+    "calibration_interpretation": "RT01 was viewed during judge development; its V20 result is retrospective calibration and must not be described as prospective validation.",
+    "automatic_sdk_retries": 0,
+    "resume_requires_exact_request_hash": true,
+    "successful_partial_calls_must_be_persisted": true,
+    "review_results_must_not_change_sections_3_1_to_3_3": true
+  }
+}

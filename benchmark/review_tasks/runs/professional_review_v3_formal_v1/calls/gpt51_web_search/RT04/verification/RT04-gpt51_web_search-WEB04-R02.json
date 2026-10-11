@@ -1,0 +1,296 @@
+{
+  "call_key": "RT04:gpt51_web_search:verify:RT04-gpt51_web_search-WEB04-R02",
+  "created_at": "2026-08-05T04:10:46.519510+00:00",
+  "raw_response_text": "{\"task_id\":\"RT04\",\"record_id\":\"RT04-gpt51_web_search-WEB04-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The DOI in the record (10.1038/s41545-024-00414-6) matches the DOI provided in the source metadata.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The cited text shows PTFE and PVDF membranes evaluated by DCMD under the same feed (10 mg/L PFOA model groundwater) and operating conditions, with directly compared flux declines (15% vs 43%), supporting conditional comparability focused on membrane material effects.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Reason correctly reflects that PTFE and PVDF were tested in DCMD on the same PFOA-contaminated model groundwater with similar conditions and that different flux declines (15% vs 43%) enable comparison of relative fouling/flux performance.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The endpoint is removal; the source states DCMD was used to \\\"concentrate and remove\\\" perfluorooctanoic acid compounds from contaminated groundwater and evaluates long-term PFAS removal, which aligns with a removal endpoint.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The endpoint is categorized as \\\"other\\\" for flux decline/fouling behavior. The cited text reports percentage flux decline over 120 h for PVDF and PTFE, which is not removal but an operational/fouling metric, so classifying it as a non-removal (other) endpoint is appropriate.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The cited locator text supports that NF/RO can experience up to 60% flux decline in challenging matrices and that MD is less fouling sensitive, but it does not state that DCMD results are not directly comparable on an energy basis to NF/RO. The energy-comparability part is only supported in the separate source_limitations list, not in locator WEB04-E04.\"},{\"field_path\":\"matrix.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Locator WEB04-E02 states that model groundwater was prepared with 10 mg/L PFOA in deionized water and in a synthetic groundwater matrix containing NaHCO3, CaCl2, and KCl, matching the described model groundwater matrix.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E01 specifies that direct contact membrane distillation (DCMD) was used, matching the recorded process type.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"No unit is appropriate for a process type descriptor; the null unit is consistent with the qualitative nature of this field.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E01 and WEB04-E05 describe the use of commercially available hydrophobic PTFE and PVDF flat-sheet membranes, supporting the value \\\"PTFE (hydrophobic flat-sheet)\\\" for this PTFE-focused record.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Membrane material is a categorical descriptor; leaving unit as null is appropriate.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E05 notes hydrophobic PTFE and PVDF flat-sheet membranes with an average pore size of 0.20 \u00b5m, matching the recorded value.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The unit \u00b5m is explicitly given in WEB04-E05 for the average pore size.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E02 states that model groundwater was prepared with 10 mg/L PFOA, matching the recorded feed PFAS concentration of 10.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The concentration in WEB04-E02 is given as 10 mg/L, matching the unit mg/L.\"},{\"field_path\":\"operating_conditions[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E03 specifies operation at 60 \u00b0C feed temperature; the recorded value of 60 is correct.\"},{\"field_path\":\"operating_conditions[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source gives feed temperature in \u00b0C, matching the recorded unit.\"},{\"field_path\":\"operating_conditions[5].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E03 states \\\"Over 120 h of DCMD operation,\\\" supporting the recorded operation time of 120.\"},{\"field_path\":\"operating_conditions[5].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The duration is expressed in hours in the source, so the unit h is correct.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E01 refers to perfluorooctanoic acid compounds and WEB04-E02 specifies 10 mg/L PFOA in model groundwater, matching the described PFOA identity and concentration.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E02 clearly states a PFOA concentration of 10 mg/L in model groundwater; the recorded value of 10 matches.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source reports the concentration in mg/L; the recorded unit mg/L is correct.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB04-E03 reports about 15% flux decline for PVDF and 43% for PTFE over 120 h, so 43 is numerically correct for PTFE. However, the source uses an approximate qualifier (\\\"about\\\"), whereas the record uses value_form \\\"exact_numeric\\\" without indicating approximation.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Flux decline is expressed as a percentage in the source; the unit % is correct.\"},{\"field_path\":\"quantitative_findings[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E05 gives an average pore size of 0.20 \u00b5m for the hydrophobic flat-sheet membranes, matching the recorded value.\"},{\"field_path\":\"quantitative_findings[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The pore size is expressed in \u00b5m in the source; the recorded unit \u00b5m is correct.\"},{\"field_path\":\"study_scale.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB04-E01 and WEB04-E05 support DCMD with hydrophobic PTFE flat-sheet membranes, but they do not explicitly state that the setup is bench-scale, even though that is consistent with typical flat-sheet laboratory DCMD cells.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E01 describes DCMD used to concentrate and remove PFOA from contaminated groundwater using PTFE and PVDF membranes, and WEB04-E05 adds that these are hydrophobic flat-sheet membranes with 0.20 \u00b5m average pore size. This supports the treatment description focused on PTFE DCMD for PFOA removal from groundwater.\"}],\"record_usable\":true,\"record_usable_rationale\":\"All core elements\u2014source identity, PFAS identity and concentration, matrix, DCMD treatment with PTFE membrane, operating conditions, and key quantitative findings (feed concentration, flux decline, pore size)\u2014are well supported by the cited locators. Minor issues concern qualifiers (approximate vs exact values and an unlocatored bench-scale descriptor and energy comparability phrasing), but these do not materially misrepresent the study for comparative synthesis.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused, comparative review of how membrane processes should be selected for a specified PFAS composition, water matrix, and treatment objective.\",\"task_id\":\"RT04\",\"title\":\"Selecting a membrane process for a defined PFAS feed water\"}\n\nTask-specific extraction objective:\nExtract membrane type and properties, PFAS identity, feed matrix and concentration, pressure, flux, recovery, rejection or adsorption endpoint, fouling, permeability, energy, scale, and comparison limitations.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envint.2021.106876\",\"10.3929/ethz-b-000506220\"],\"all_blocked_titles\":[\"membrane based technologies for per and poly fluoroalkyl substances pfass removal from water removal mechanisms applications challenges and perspectives\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envint.2021.106876\",\"https://www.research-collection.ethz.ch/items/f9152dfa-5b8e-4ce2-8153-1cbb37911e55\"],\"anchor_id\":\"AR-JIN-2021\",\"corpus_source\":\"2021 - Jin - Membrane-based technologies for per- and poly-fluoroalkyl substances (PFASs) removal from water - Removal mechanisms, applications, challenges and.pdf\",\"doi\":\"10.1016/j.envint.2021.106876\",\"title\":\"Membrane-based technologies for per- and poly-fluoroalkyl substances (PFASs) removal from water: Removal mechanisms, applications, challenges and perspectives\",\"url\":\"https://doi.org/10.1016/j.envint.2021.106876\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Shi CY, Chen G, Dum\\u00e9e LF. Perfluoroalkyl substances concentration from groundwater via direct contact membrane distillation. npj Clean Water. 2024;7:115.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB04-E01\",\n      \"WEB04-E02\",\n      \"WEB04-E03\",\n      \"WEB04-E05\"\n    ],\n    \"reason\": \"PTFE DCMD experiments use the same PFAS (PFOA), 10 mg/L feed concentration in model groundwater, DCMD configuration, and operating temperature as the PVDF experiments, differing mainly in membrane material and exhibiting a larger flux decline (43% vs 15%), which supports direct comparison of relative fouling and flux performance between the two membranes.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1038/s41545-024-00414-6\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E01\",\n        \"WEB04-E05\"\n      ],\n      \"interpretation\": \"DCMD with a hydrophobic PTFE membrane was used alongside PVDF to concentrate and remove PFOA from contaminated model groundwater; detailed rejection factors are not provided in the extracted text.\",\n      \"reported_term\": \"PFAS removal and concentration\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E03\"\n      ],\n      \"interpretation\": \"Over 120 h of DCMD operation at 60 \\u00b0C feed temperature with 10 mg/L PFOA model groundwater, the PTFE membrane exhibited about 43% flux decline, indicating substantially higher fouling propensity than the PVDF membrane under the same conditions.\",\n      \"reported_term\": \"Flux decline / fouling behaviour\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E04\"\n      ],\n      \"statement\": \"As a thermal DCMD process, the PTFE membrane experiments are not directly comparable on an energy basis with pressure-driven NF and RO membranes; the paper notes that NF/RO can experience up to 60% flux decline in high-salinity and high-organic matrices, whereas MD is less sensitive to such fouling.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB04-E02\"\n    ],\n    \"value\": \"Model groundwater spiked with 10 mg/L PFOA, prepared in deionized water and in synthetic groundwater (NaHCO3, CaCl2, KCl) to represent ionic strength and hardness\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E01\"\n      ],\n      \"name\": \"process type\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"Direct contact membrane distillation (DCMD)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E01\",\n        \"WEB04-E05\"\n      ],\n      \"name\": \"membrane material\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"PTFE (hydrophobic flat-sheet)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E05\"\n      ],\n      \"name\": \"average membrane pore size\",\n      \"qualifiers\": \"Commercial hydrophobic PTFE flat-sheet membrane\",\n      \"unit\": \"\\u00b5m\",\n      \"value\": \"0.20\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E02\"\n      ],\n      \"name\": \"feed PFAS concentration\",\n      \"qualifiers\": \"PFOA in deionized water and synthetic groundwater matrices\",\n      \"unit\": \"mg/L\",\n      \"value\": \"10\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E03\"\n      ],\n      \"name\": \"feed temperature\",\n      \"qualifiers\": \"DCMD operation for 120 h with 10 mg/L PFOA-contaminated model groundwater\",\n      \"unit\": \"\\u00b0C\",\n      \"value\": \"60\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E03\"\n      ],\n      \"name\": \"operation time\",\n      \"qualifiers\": \"Continuous DCMD run evaluating PFOA removal and flux decline\",\n      \"unit\": \"h\",\n      \"value\": \"120\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E01\",\n        \"WEB04-E02\"\n      ],\n      \"value\": \"Perfluorooctanoic acid (PFOA) at 10 mg/L in model groundwater\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E02\"\n      ],\n      \"name\": \"PFOA feed concentration\",\n      \"qualifiers\": \"Model groundwater prepared with 10 mg/L PFOA in deionized water and synthetic groundwater containing NaHCO3, CaCl2, and KCl\",\n      \"unit\": \"mg/L\",\n      \"value\": \"10\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E03\"\n      ],\n      \"name\": \"flux decline over 120 h\",\n      \"qualifiers\": \"Approximate flux decline for PTFE DCMD membrane after 120 h operation at 60 \\u00b0C treating 10 mg/L PFOA-contaminated model groundwater\",\n      \"unit\": \"%\",\n      \"value\": \"43\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E05\"\n      ],\n      \"name\": \"membrane pore size\",\n      \"qualifiers\": \"Average pore size of hydrophobic PTFE flat-sheet membrane used for DCMD\",\n      \"unit\": \"\\u00b5m\",\n      \"value\": \"0.20\",\n      \"value_form\": \"exact_numeric\"\n    }\n  ],\n  \"record_id\": \"RT04-gpt51_web_search-WEB04-R02\",\n  \"residuals_byproducts\": [],\n  \"source_id\": \"WEB04\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB04-E01\",\n      \"WEB04-E05\"\n    ],\n    \"value\": \"Bench-scale direct contact membrane distillation (DCMD) cell with hydrophobic PTFE flat-sheet membrane\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB04-E01\",\n      \"WEB04-E05\"\n    ],\n    \"value\": \"Direct contact membrane distillation (DCMD) using a hydrophobic PTFE flat-sheet membrane (average pore size 0.20 \\u00b5m) to concentrate and remove PFOA from contaminated groundwater\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"full_text\",\n  \"capture_source_id\": \"WEB22\",\n  \"citation\": \"Shi CY, Chen G, Dum\\u00e9e LF. Perfluoroalkyl substances concentration from groundwater via direct contact membrane distillation. npj Clean Water. 2024;7:115.\",\n  \"covered_component_ids\": [\n    \"RT04-C1\",\n    \"RT04-C2\",\n    \"RT04-C3\"\n  ],\n  \"doi\": \"10.1038/s41545-024-00414-6\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1038/s41545-024-00414-6\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB04-E01\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"P0, lines 10\\u201313\",\n      \"text\": \"Direct contact membrane distillation (DCMD) was used to concentrate and remove perfluorooctanoic acid compounds from contaminated groundwater for the first time using commercially available PTFE and PVDF membranes.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB04-E02\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"P1, lines 108\\u2013112\",\n      \"text\": \"Model groundwater was prepared with 10 mg/L PFOA in deionized water and in a synthetic groundwater matrix containing NaHCO3, CaCl2, and KCl to represent ionic strength and hardness effects on DCMD performance.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB04-E03\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"P0, lines 15\\u201318\",\n      \"text\": \"Over 120 h of DCMD operation with 10 mg/L PFOA\\u2011contaminated model groundwater at 60 \\u00b0C feed temperature, the PVDF membrane exhibited about 15% flux decline, compared with 43% for the PTFE membrane, indicating lower fouling propensity for PVDF.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB04-E04\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"P0\\u2013P1, lines 51\\u201357 and 69\\u201376\",\n      \"text\": \"The paper emphasizes that pressure\\u2011driven NF and RO membranes, though effective for PFAS removal, can experience up to 60% flux decline in high\\u2011salinity and high\\u2011organic matrices, whereas MD can operate at high salinity and TOC with reduced fouling sensitivity.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB04-E05\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"P1, lines 96\\u2013103 and 106\\u2013113\",\n      \"text\": \"The study evaluates long\\u2011term PFAS removal from groundwater by DCMD with hydrophobic PTFE and PVDF flat\\u2011sheet membranes (average pore size 0.20 \\u00b5m), linking removal and flux decline to membrane surface chemistry, fouling layer morphology, and PFAS\\u2013polymer interactions.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://www.nature.com/articles/s41545-024-00414-6.pdf\",\n  \"source_id\": \"WEB04\",\n  \"source_limitations\": [\n    \"Focuses on DCMD, a thermal membrane process; results are not directly comparable on an energy basis to pressure\\u2011driven NF/RO without additional thermal\\u2011energy accounting.\",\n    \"Experiments use relatively high PFOA concentrations (10 mg/L) compared with typical drinking\\u2011water levels, which may affect fouling and adsorption behavior.\",\n    \"Study considers primarily PFOA; extension to broader PFAS mixtures and shorter\\u2011chain PFAS is not experimentally addressed.\",\n    \"Membrane module scale is bench\\u2011scale flat sheet; scale\\u2011up hydrodynamics and heat\\u2011transfer constraints are not captured.\"\n  ],\n  \"title\": \"Perfluoroalkyl substances concentration from groundwater via direct contact membrane distillation\",\n  \"year\": \"2024\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "85ffc0008a72b1efc03710e1f095d199ccedc2af2538ab71f91f26af1560678c",
+  "response_metadata": {
+    "cached_input_tokens": 1152,
+    "estimated_cost_usd": 0.0349915,
+    "finish_reason": "stop",
+    "input_tokens": 3806,
+    "latency_seconds": 35.479846792062744,
+    "output_tokens": 3153,
+    "reasoning_tokens": 1369,
+    "response_id": "chatcmpl-E9NFDnCh6NZ5E02JxaXJFxRjnJQah",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 6959,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The DOI in the record (10.1038/s41545-024-00414-6) matches the DOI provided in the source metadata.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The cited text shows PTFE and PVDF membranes evaluated by DCMD under the same feed (10 mg/L PFOA model groundwater) and operating conditions, with directly compared flux declines (15% vs 43%), supporting conditional comparability focused on membrane material effects.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "Reason correctly reflects that PTFE and PVDF were tested in DCMD on the same PFOA-contaminated model groundwater with similar conditions and that different flux declines (15% vs 43%) enable comparison of relative fouling/flux performance.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The endpoint is removal; the source states DCMD was used to \"concentrate and remove\" perfluorooctanoic acid compounds from contaminated groundwater and evaluates long-term PFAS removal, which aligns with a removal endpoint.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "The endpoint is categorized as \"other\" for flux decline/fouling behavior. The cited text reports percentage flux decline over 120 h for PVDF and PTFE, which is not removal but an operational/fouling metric, so classifying it as a non-removal (other) endpoint is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "limitations[0].statement",
+        "reason": "The cited locator text supports that NF/RO can experience up to 60% flux decline in challenging matrices and that MD is less fouling sensitive, but it does not state that DCMD results are not directly comparable on an energy basis to NF/RO. The energy-comparability part is only supported in the separate source_limitations list, not in locator WEB04-E04.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix.value",
+        "reason": "Locator WEB04-E02 states that model groundwater was prepared with 10 mg/L PFOA in deionized water and in a synthetic groundwater matrix containing NaHCO3, CaCl2, and KCl, matching the described model groundwater matrix.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "WEB04-E01 specifies that direct contact membrane distillation (DCMD) was used, matching the recorded process type.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "No unit is appropriate for a process type descriptor; the null unit is consistent with the qualitative nature of this field.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "WEB04-E01 and WEB04-E05 describe the use of commercially available hydrophobic PTFE and PVDF flat-sheet membranes, supporting the value \"PTFE (hydrophobic flat-sheet)\" for this PTFE-focused record.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "Membrane material is a categorical descriptor; leaving unit as null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "WEB04-E05 notes hydrophobic PTFE and PVDF flat-sheet membranes with an average pore size of 0.20 \u00b5m, matching the recorded value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "The unit \u00b5m is explicitly given in WEB04-E05 for the average pore size.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "WEB04-E02 states that model groundwater was prepared with 10 mg/L PFOA, matching the recorded feed PFAS concentration of 10.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "The concentration in WEB04-E02 is given as 10 mg/L, matching the unit mg/L.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].value",
+        "reason": "WEB04-E03 specifies operation at 60 \u00b0C feed temperature; the recorded value of 60 is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].unit",
+        "reason": "The source gives feed temperature in \u00b0C, matching the recorded unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[5].value",
+        "reason": "WEB04-E03 states \"Over 120 h of DCMD operation,\" supporting the recorded operation time of 120.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[5].unit",
+        "reason": "The duration is expressed in hours in the source, so the unit h is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "WEB04-E01 refers to perfluorooctanoic acid compounds and WEB04-E02 specifies 10 mg/L PFOA in model groundwater, matching the described PFOA identity and concentration.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "WEB04-E02 clearly states a PFOA concentration of 10 mg/L in model groundwater; the recorded value of 10 matches.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The source reports the concentration in mg/L; the recorded unit mg/L is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "WEB04-E03 reports about 15% flux decline for PVDF and 43% for PTFE over 120 h, so 43 is numerically correct for PTFE. However, the source uses an approximate qualifier (\"about\"), whereas the record uses value_form \"exact_numeric\" without indicating approximation.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "Flux decline is expressed as a percentage in the source; the unit % is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].value",
+        "reason": "WEB04-E05 gives an average pore size of 0.20 \u00b5m for the hydrophobic flat-sheet membranes, matching the recorded value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].unit",
+        "reason": "The pore size is expressed in \u00b5m in the source; the recorded unit \u00b5m is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "study_scale.value",
+        "reason": "WEB04-E01 and WEB04-E05 support DCMD with hydrophobic PTFE flat-sheet membranes, but they do not explicitly state that the setup is bench-scale, even though that is consistent with typical flat-sheet laboratory DCMD cells.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "WEB04-E01 describes DCMD used to concentrate and remove PFOA from contaminated groundwater using PTFE and PVDF membranes, and WEB04-E05 adds that these are hydrophobic flat-sheet membranes with 0.20 \u00b5m average pore size. This supports the treatment description focused on PTFE DCMD for PFOA removal from groundwater.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT04-gpt51_web_search-WEB04-R02",
+    "record_usable": true,
+    "record_usable_rationale": "All core elements\u2014source identity, PFAS identity and concentration, matrix, DCMD treatment with PTFE membrane, operating conditions, and key quantitative findings (feed concentration, flux decline, pore size)\u2014are well supported by the cited locators. Minor issues concern qualifiers (approximate vs exact values and an unlocatored bench-scale descriptor and energy comparability phrasing), but these do not materially misrepresent the study for comparative synthesis.",
+    "task_id": "RT04"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

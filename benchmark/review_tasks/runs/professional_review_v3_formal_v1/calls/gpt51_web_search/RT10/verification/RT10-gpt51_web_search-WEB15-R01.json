@@ -1,0 +1,296 @@
+{
+  "call_key": "RT10:gpt51_web_search:verify:RT10-gpt51_web_search-WEB15-R01",
+  "created_at": "2026-08-05T04:47:44.095191+00:00",
+  "raw_response_text": "{\"task_id\":\"RT10\",\"record_id\":\"RT10-gpt51_web_search-WEB15-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record DOI/URL matches the source DOI_or_stable_url exactly (10.21203/rs.3.rs-2640473/v1).\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source states the framework includes 'batch sorption isotherms... that probe the impact of pH, ionic strength, and natural organic matter on PFOA and PFOS removal,' which supports a sorption endpoint.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"It is supported that batch sorption isotherms were used to probe effects of pH, ionic strength, and NOM on PFOA and PFOS removal. However, the text does not mention separate 'clean laboratory water' controls or explicitly that equilibrium sorption behavior was quantified, so those qualifiers go beyond the cited passage.\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"'Batch sorption isotherms' are explicitly supported. 'PFOA and PFOS removal' is mentioned, but the phrase 'PFOA and PFOS removal' as the term for the sorption endpoint is not clearly distinguished in the source; still, this is a reasonable but slightly extrapolated label.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The passage explicitly refers to 'PFOA and PFOS removal,' supporting a removal endpoint.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The use of decreased aqueous concentration as a measure of removal and probing impact of pH, ionic strength, and NOM is consistent with the text. However, the description of comparison 'relative to clean water' is not mentioned and is an added qualifier.\"},{\"field_path\":\"endpoints[1].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The phrase 'PFOA and PFOS removal' is directly present in the cited passage.\"},{\"field_path\":\"limitations[0]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"It is supported that only two PFAS (PFOA and PFOS) were studied, which can reasonably be inferred to limit extrapolation to broader PFAS classes (design_inferred). However, the statement that matrix effects were 'only probed... using bench-scale batch systems' is incomplete/incorrect because the passage also mentions QCM-D measurements and column tests, not solely batch systems.\"},{\"field_path\":\"limitations[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This limitation is explicitly design_inferred about the provided extract. The cited passage discusses matrix effects but provides no constituent concentrations, PFAS loadings, or quantitative removal values, so noting that such details are not reported in the extract is accurate.\"},{\"field_path\":\"matrix\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The passage supports that experiments probed the impact of pH, ionic strength, and NOM on PFOA and PFOS removal in an aqueous system, but it does not specify 'clean water' or explicitly frame them as 'laboratory solutions.' Thus, the basic matrix description (aqueous with varied pH, ionic strength, NOM) is supported, while the 'clean water' qualifier is not.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The passage notes that experiments probe the impact of pH, implying that pH was varied. Recording the value qualitatively as 'varied' is consistent.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"No numerical pH values are provided in the passage, so leaving the unit null is appropriate and consistent with the source.\"},{\"field_path\":\"operating_conditions[0].qualifiers\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"That pH was varied to probe its impact is supported; however, reference to 'relative to clean water controls' is not mentioned in the passage and is an added qualifier.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The passage indicates that ionic strength (via electrolytes) was probed, which implies it was varied. The qualitative value 'varied' is consistent with this information.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"No numerical ionic strength values or units are given; a null unit is therefore consistent with the source.\"},{\"field_path\":\"operating_conditions[1].qualifiers\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The passage supports that ionic strength was manipulated to probe matrix effects, but it does not explicitly describe 'electrolyte concentration adjusted' or additional details about sorbent performance; these are reasonable but extrapolated design descriptions.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The passage supports that natural organic matter was part of the matrix factors being probed, but it does not specify a binary 'present vs absent' design; that is an inferred but not explicitly supported detail.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"No concentration units or levels of NOM are reported in the passage, so a null unit is consistent with the available text.\"},{\"field_path\":\"operating_conditions[2].qualifiers\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"It is supported that NOM was included to probe its impact. However, the specific mechanisms ('competitive sorption or fouling impacts') are not described in the cited passage and represent added interpretation.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFOA (perfluorooctanoic acid) is explicitly listed in the passage as one of the PFAS whose removal is probed.\"},{\"field_path\":\"pfas_scope[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFOS (perfluorooctanesulfonic acid) is explicitly listed in the passage as one of the PFAS whose removal is probed.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The passage only discusses sorption, QCM-D, and column tests for PFOA and PFOS removal and does not mention transformation products or degradation byproducts. As a design_inferred statement about the available extract, noting that no byproduct information is provided is accurate.\"},{\"field_path\":\"study_scale\",\"status\":\"unsupported\",\"error_type\":\"source_attribution\",\"reason\":\"The passage mentions batch sorption isotherms, QCM-D, and column tests but does not specify that the work is 'bench-scale' or that the sorbents are 'nanoscale.' Those qualifiers come from outside the cited text, so the field as written is not supported by the attached locator.\"},{\"field_path\":\"study_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The passage describes experimental work (batch isotherms, QCM-D, column tests), which supports classification as a primary experiment.\"},{\"field_path\":\"treatment\",\"status\":\"unsupported\",\"error_type\":\"source_attribution\",\"reason\":\"The cited passage does not describe the treatment material as 'ultra-high capacity, multifunctional nanoscale sorbents' or provide any details on the sorbent identity; it only mentions the experimental framework. Thus the treatment description is not supported by the attached locator.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Given that the passage only indicates that pH, ionic strength, and NOM impacts were probed, without any numerical constituent concentrations, PFAS loadings, or quantitative removal values, it is reasonable and fully consistent to classify comparability as 'descriptive_only.'\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reason accurately reflects that matrix variables (pH, ionic strength, NOM) were varied under an experimental framework, while the available extract lacks specific constituent concentrations and quantitative performance values. This follows logically from the cited passage.\"},{\"field_path\":\"citation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The citation in the record matches the title and year of the source and clearly refers to the same preprint described in the source metadata.\"}],\"record_usable\":false,\"record_usable_rationale\":\"Key contextual elements about the treatment are not supported by the cited passage: the description of 'ultra-high capacity, multifunctional nanoscale sorbents' and bench-scale characterization is absent from the provided text. While the PFAS studied, matrix variables (pH, ionic strength, NOM), and general sorption/removal endpoints are supported or partially supported, the unsupported treatment identity is central to interpreting matrix effects and would mislead synthesis if used as-is. Therefore, the record is judged not usable without correction or additional source verification.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of how water-matrix effects should be tested and reported so that PFAS treatment performance can be translated beyond clean laboratory water.\",\"task_id\":\"RT10\",\"title\":\"Designing PFAS treatment studies that remain valid in real water\"}\n\nTask-specific extraction objective:\nExtract matrix constituent and concentration, PFAS identity, treatment, clean-water control, matrix-modified condition, direction and magnitude of effect, endpoint, proposed mechanism, constituent interaction, matched operating conditions, and study scale.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.hazadv.2023.100322\"],\"all_blocked_titles\":[\"effects of water matrix on per and poly fluoroalkyl substances pfas treatment physical separation and degradation processes a review\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.hazadv.2023.100322\"],\"anchor_id\":\"AR-ZEIDABADI-2023\",\"corpus_source\":\"2023 - Zeidabadi - Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment - Physical-separation and degradation processes - A review.pdf\",\"doi\":\"10.1016/j.hazadv.2023.100322\",\"title\":\"Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment: Physical-separation and degradation processes - A review\",\"url\":\"https://doi.org/10.1016/j.hazadv.2023.100322\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Ultra-high capacity, multifunctional nanoscale sorbents for PFOA and PFOS treatment (preprint, 2023)\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB15-E01\"\n    ],\n    \"reason\": \"The experiments systematically varied pH, ionic strength, and NOM under matched batch sorption conditions, but the available extract does not report constituent concentrations, PFAS loadings, or quantitative removal values, so matrix effects can be identified qualitatively but not compared numerically across conditions or to other studies.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.21203/rs.3.rs-2640473/v1\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"sorption\",\n      \"evidence_locator_ids\": [\n        \"WEB15-E01\"\n      ],\n      \"interpretation\": \"Sorption capacity and extent of PFOA and PFOS uptake by nanoscale sorbents were measured in clean laboratory water and in matrices modified with pH, ionic strength, and NOM to quantify matrix effects on equilibrium sorption behavior.\",\n      \"reported_term\": \"batch sorption isotherms; PFOA and PFOS removal\"\n    },\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"WEB15-E01\"\n      ],\n      \"interpretation\": \"Decrease in aqueous PFOA and PFOS concentration in batch tests was used as a measure of removal efficiency under varying matrix conditions relative to clean water.\",\n      \"reported_term\": \"PFOA and PFOS removal\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB15-E01\"\n      ],\n      \"statement\": \"Matrix effects were only probed for two PFAS (PFOA and PFOS) using bench-scale batch systems, which may limit direct extrapolation to broader PFAS classes or full-scale applications.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB15-E01\"\n      ],\n      \"statement\": \"Specific constituent concentrations (exact pH values, ionic strengths, and NOM levels) and quantitative magnitudes of matrix-induced changes in sorption performance are not reported in the available extract, constraining detailed comparison.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB15-E01\"\n    ],\n    \"value\": \"Aqueous laboratory solutions (clean water) with systematically varied pH, ionic strength, and natural organic matter (NOM) to assess PFOA and PFOS sorption and removal\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB15-E01\"\n      ],\n      \"name\": \"pH\",\n      \"qualifiers\": \"Batch sorption isotherms conducted across multiple pH values to probe impact on PFOA and PFOS removal relative to clean water controls\",\n      \"unit\": null,\n      \"value\": \"varied\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB15-E01\"\n      ],\n      \"name\": \"Ionic strength\",\n      \"qualifiers\": \"Electrolyte concentration adjusted to study ionic strength effects on sorbent performance\",\n      \"unit\": null,\n      \"value\": \"varied\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB15-E01\"\n      ],\n      \"name\": \"Natural organic matter (NOM)\",\n      \"qualifiers\": \"NOM added to otherwise clean water to test competitive sorption or fouling impacts on PFOA and PFOS uptake\",\n      \"unit\": null,\n      \"value\": \"present vs absent\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB15-E01\"\n      ],\n      \"value\": \"Perfluorooctanoic acid (PFOA)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB15-E01\"\n      ],\n      \"value\": \"Perfluorooctanesulfonic acid (PFOS)\"\n    }\n  ],\n  \"quantitative_findings\": [],\n  \"record_id\": \"RT10-gpt51_web_search-WEB15-R01\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB15-E01\"\n      ],\n      \"statement\": \"Study focused on sorption and removal of PFOA and PFOS; no information on transformation products or degradation byproducts is provided in the available extract.\"\n    }\n  ],\n  \"source_id\": \"WEB15\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB15-E01\"\n    ],\n    \"value\": \"Bench-scale batch sorption isotherm experiments with nanoscale sorbents\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB15-E01\"\n    ],\n    \"value\": \"Ultra-high capacity, multifunctional nanoscale sorbents evaluated via batch sorption isotherms\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"full_text\",\n  \"capture_source_id\": \"WEB16\",\n  \"citation\": \"Preprint PDF copy linked from Research Square\",\n  \"covered_component_ids\": [\n    \"RT10-C1\",\n    \"RT10-C2\"\n  ],\n  \"doi\": \"10.21203/rs.3.rs-2640473/v1\",\n  \"doi_or_stable_url\": \"https://doi.org/10.21203/rs.3.rs-2640473/v1\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB15-E01\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Main text (preprint PDF)\",\n      \"text\": \"The preprint version contains the same experimental framework as the npj Clean Water article, including batch sorption isotherms, QCM\\u2011D measurements, and column tests that probe the impact of pH, ionic strength, and natural organic matter on PFOA and PFOS removal.\"\n    }\n  ],\n  \"publication_status\": \"preprint\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://assets-eu.researchsquare.com/files/rs-2640473/v1/c1793b96-68f8-4d43-8d9e-31b2ecf320ef.pdf?c=1696000631\",\n  \"source_id\": \"WEB15\",\n  \"source_limitations\": [\n    \"This is an earlier preprint of the peer\\u2011reviewed article already captured as WEB14, so content is largely overlapping.\",\n    \"Using the published npj Clean Water version is preferable for quantitative details; this preprint is retained only as an auxiliary source confirming experimental design and matrix variables.\"\n  ],\n  \"title\": \"Ultra-high capacity, multifunctional nanoscale sorbents for PFOA and PFOS treatment (alternate web copy)\",\n  \"year\": \"2023\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "636e265a59a5f30867a8a824bff06514542128d982d5e1b7e460d93e481474f8",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.0321905,
+    "finish_reason": "stop",
+    "input_tokens": 2818,
+    "latency_seconds": 29.149963791947812,
+    "output_tokens": 2982,
+    "reasoning_tokens": 992,
+    "response_id": "chatcmpl-E9Np53SIxtOUk82kSDqDXZcvfnDtF",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 5800,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The record DOI/URL matches the source DOI_or_stable_url exactly (10.21203/rs.3.rs-2640473/v1).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The source states the framework includes 'batch sorption isotherms... that probe the impact of pH, ionic strength, and natural organic matter on PFOA and PFOS removal,' which supports a sorption endpoint.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "It is supported that batch sorption isotherms were used to probe effects of pH, ionic strength, and NOM on PFOA and PFOS removal. However, the text does not mention separate 'clean laboratory water' controls or explicitly that equilibrium sorption behavior was quantified, so those qualifiers go beyond the cited passage.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "'Batch sorption isotherms' are explicitly supported. 'PFOA and PFOS removal' is mentioned, but the phrase 'PFOA and PFOS removal' as the term for the sorption endpoint is not clearly distinguished in the source; still, this is a reasonable but slightly extrapolated label.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "The passage explicitly refers to 'PFOA and PFOS removal,' supporting a removal endpoint.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "The use of decreased aqueous concentration as a measure of removal and probing impact of pH, ionic strength, and NOM is consistent with the text. However, the description of comparison 'relative to clean water' is not mentioned and is an added qualifier.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].reported_term",
+        "reason": "The phrase 'PFOA and PFOS removal' is directly present in the cited passage.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "limitations[0]",
+        "reason": "It is supported that only two PFAS (PFOA and PFOS) were studied, which can reasonably be inferred to limit extrapolation to broader PFAS classes (design_inferred). However, the statement that matrix effects were 'only probed... using bench-scale batch systems' is incomplete/incorrect because the passage also mentions QCM-D measurements and column tests, not solely batch systems.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1]",
+        "reason": "This limitation is explicitly design_inferred about the provided extract. The cited passage discusses matrix effects but provides no constituent concentrations, PFAS loadings, or quantitative removal values, so noting that such details are not reported in the extract is accurate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "matrix",
+        "reason": "The passage supports that experiments probed the impact of pH, ionic strength, and NOM on PFOA and PFOS removal in an aqueous system, but it does not specify 'clean water' or explicitly frame them as 'laboratory solutions.' Thus, the basic matrix description (aqueous with varied pH, ionic strength, NOM) is supported, while the 'clean water' qualifier is not.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "The passage notes that experiments probe the impact of pH, implying that pH was varied. Recording the value qualitatively as 'varied' is consistent.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "No numerical pH values are provided in the passage, so leaving the unit null is appropriate and consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "operating_conditions[0].qualifiers",
+        "reason": "That pH was varied to probe its impact is supported; however, reference to 'relative to clean water controls' is not mentioned in the passage and is an added qualifier.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "The passage indicates that ionic strength (via electrolytes) was probed, which implies it was varied. The qualitative value 'varied' is consistent with this information.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "No numerical ionic strength values or units are given; a null unit is therefore consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "operating_conditions[1].qualifiers",
+        "reason": "The passage supports that ionic strength was manipulated to probe matrix effects, but it does not explicitly describe 'electrolyte concentration adjusted' or additional details about sorbent performance; these are reasonable but extrapolated design descriptions.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "operating_conditions[2].value",
+        "reason": "The passage supports that natural organic matter was part of the matrix factors being probed, but it does not specify a binary 'present vs absent' design; that is an inferred but not explicitly supported detail.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "No concentration units or levels of NOM are reported in the passage, so a null unit is consistent with the available text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "operating_conditions[2].qualifiers",
+        "reason": "It is supported that NOM was included to probe its impact. However, the specific mechanisms ('competitive sorption or fouling impacts') are not described in the cited passage and represent added interpretation.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "PFOA (perfluorooctanoic acid) is explicitly listed in the passage as one of the PFAS whose removal is probed.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1].value",
+        "reason": "PFOS (perfluorooctanesulfonic acid) is explicitly listed in the passage as one of the PFAS whose removal is probed.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "The passage only discusses sorption, QCM-D, and column tests for PFOA and PFOS removal and does not mention transformation products or degradation byproducts. As a design_inferred statement about the available extract, noting that no byproduct information is provided is accurate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "source_attribution",
+        "field_path": "study_scale",
+        "reason": "The passage mentions batch sorption isotherms, QCM-D, and column tests but does not specify that the work is 'bench-scale' or that the sorbents are 'nanoscale.' Those qualifiers come from outside the cited text, so the field as written is not supported by the attached locator.",
+        "status": "unsupported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_type",
+        "reason": "The passage describes experimental work (batch isotherms, QCM-D, column tests), which supports classification as a primary experiment.",
+        "status": "supported"
+      },
+      {
+        "error_type": "source_attribution",
+        "field_path": "treatment",
+        "reason": "The cited passage does not describe the treatment material as 'ultra-high capacity, multifunctional nanoscale sorbents' or provide any details on the sorbent identity; it only mentions the experimental framework. Thus the treatment description is not supported by the attached locator.",
+        "status": "unsupported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "Given that the passage only indicates that pH, ionic strength, and NOM impacts were probed, without any numerical constituent concentrations, PFAS loadings, or quantitative removal values, it is reasonable and fully consistent to classify comparability as 'descriptive_only.'",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The reason accurately reflects that matrix variables (pH, ionic strength, NOM) were varied under an experimental framework, while the available extract lacks specific constituent concentrations and quantitative performance values. This follows logically from the cited passage.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "citation",
+        "reason": "The citation in the record matches the title and year of the source and clearly refers to the same preprint described in the source metadata.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT10-gpt51_web_search-WEB15-R01",
+    "record_usable": false,
+    "record_usable_rationale": "Key contextual elements about the treatment are not supported by the cited passage: the description of 'ultra-high capacity, multifunctional nanoscale sorbents' and bench-scale characterization is absent from the provided text. While the PFAS studied, matrix variables (pH, ionic strength, NOM), and general sorption/removal endpoints are supported or partially supported, the unsupported treatment identity is central to interpreting matrix effects and would mislead synthesis if used as-is. Therefore, the record is judged not usable without correction or additional source verification.",
+    "task_id": "RT10"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

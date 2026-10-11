@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Atomic professional PFAS review judgment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id",
+    "component_fulfillment",
+    "critical_synthesis",
+    "professional_depth",
+    "current_research_outlook",
+    "claim_calibration",
+    "constraint_assessments",
+    "potential_external_scientific_error",
+    "potential_external_error_rationale"
+  ],
+  "properties": {
+    "task_id": {"type": "string", "pattern": "^RT[0-9]{2}$"},
+    "component_fulfillment": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["component_id", "status", "candidate_span", "rationale"],
+        "properties": {
+          "component_id": {"type": "string", "pattern": "^RT[0-9]{2}-C[1-3]$"},
+          "status": {"$ref": "#/$defs/atomicStatus"},
+          "candidate_span": {"type": "string"},
+          "rationale": {"type": "string"}
+        }
+      }
+    },
+    "critical_synthesis": {
+      "$ref": "#/$defs/criticalSynthesis"
+    },
+    "professional_depth": {
+      "$ref": "#/$defs/professionalDepth"
+    },
+    "current_research_outlook": {
+      "$ref": "#/$defs/currentResearchOutlook"
+    },
+    "claim_calibration": {"$ref": "#/$defs/calibrationAssessment"},
+    "constraint_assessments": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["constraint_id", "status", "candidate_span", "rationale"],
+        "properties": {
+          "constraint_id": {"type": "string", "pattern": "^RT[0-9]{2}-B[1-2]$"},
+          "status": {"enum": ["compliant", "material_violation"]},
+          "candidate_span": {"type": "string"},
+          "rationale": {"type": "string"}
+        }
+      }
+    },
+    "potential_external_scientific_error": {"type": "boolean"},
+    "potential_external_error_rationale": {"type": "string"}
+  },
+  "$defs": {
+    "atomicStatus": {"enum": ["full", "partial", "absent", "contradicted"]},
+    "atomicAssessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "candidate_span", "rationale"],
+      "properties": {
+        "status": {"$ref": "#/$defs/atomicStatus"},
+        "candidate_span": {"type": "string"},
+        "rationale": {"type": "string"}
+      }
+    },
+    "criticalSynthesis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "comparative_integration",
+        "conditional_explanation",
+        "tension_limitation_resolution",
+        "decision_conclusion"
+      ],
+      "properties": {
+        "comparative_integration": {"$ref": "#/$defs/atomicAssessment"},
+        "conditional_explanation": {"$ref": "#/$defs/atomicAssessment"},
+        "tension_limitation_resolution": {"$ref": "#/$defs/atomicAssessment"},
+        "decision_conclusion": {"$ref": "#/$defs/atomicAssessment"}
+      }
+    },
+    "professionalDepth": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mechanism_specificity",
+        "context_boundary_specificity",
+        "empirical_data_use",
+        "endpoint_comparability_discipline",
+        "practitioner_decision_support",
+        "citation_evidence_integration"
+      ],
+      "properties": {
+        "mechanism_specificity": {"$ref": "#/$defs/atomicAssessment"},
+        "context_boundary_specificity": {"$ref": "#/$defs/atomicAssessment"},
+        "empirical_data_use": {"$ref": "#/$defs/atomicAssessment"},
+        "endpoint_comparability_discipline": {"$ref": "#/$defs/atomicAssessment"},
+        "practitioner_decision_support": {"$ref": "#/$defs/atomicAssessment"},
+        "citation_evidence_integration": {"$ref": "#/$defs/atomicAssessment"}
+      }
+    },
+    "currentResearchOutlook": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "current_development_specificity",
+        "specific_gap",
+        "consequence_of_gap",
+        "testable_priority"
+      ],
+      "properties": {
+        "current_development_specificity": {"$ref": "#/$defs/atomicAssessment"},
+        "specific_gap": {"$ref": "#/$defs/atomicAssessment"},
+        "consequence_of_gap": {"$ref": "#/$defs/atomicAssessment"},
+        "testable_priority": {"$ref": "#/$defs/atomicAssessment"}
+      }
+    },
+    "calibrationAssessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "candidate_span", "rationale"],
+      "properties": {
+        "status": {
+          "enum": [
+            "consistent",
+            "minor_inconsistency",
+            "material_inconsistency",
+            "not_assessable"
+          ]
+        },
+        "candidate_span": {"type": "string"},
+        "rationale": {"type": "string"}
+      }
+    }
+  }
+}

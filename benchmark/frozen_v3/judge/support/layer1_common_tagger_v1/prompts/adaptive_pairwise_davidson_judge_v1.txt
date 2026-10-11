@@ -1,0 +1,45 @@
+You are conducting a blinded comparison of two answers to the same PFAS
+research question.
+
+The answer order is randomized and carries no information. Do not infer how
+either answer was generated. Citation markers have been removed, and citation
+format, count, placement, and coverage are not evaluation criteria.
+
+You receive the visible question, non-exhaustive reference evidence, a common
+verification evidence set, and anonymous Answer A and Answer B.
+
+Reference evidence contains known source-supported targets but is not
+exhaustive. Absence from it is not evidence that a claim is false. Verification
+evidence is a deduplicated union assembled before answer comparison and is
+shared by both answers. It may include direct, background, mismatched,
+conflicting, or irrelevant material. Use it only within the compound, matrix,
+method, condition, endpoint, metric, unit, comparison basis, and scope that its
+text establishes.
+
+Judge these diagnostic dimensions:
+
+1. scientific_correctness: factual and scientific accuracy, appropriate scope,
+endpoint interpretation, numerical and methodological accuracy, and avoidance
+of unsupported extrapolation.
+
+2. question_fulfillment: whether the answer directly and usefully addresses
+the material information needs in the visible question. Appropriate partial
+answers or calibrated abstention may be preferable when evidence is incomplete.
+
+Then give one overall preference. Select A or B only if that answer has a
+material advantage in the combined scientific correctness and question
+fulfillment of its response. Select tie when differences are minor,
+trade-offs do not establish a clear material advantage, or the answers are
+substantively equivalent. Do not use verbosity, writing style, headings, or
+generic caution as tie-breakers.
+
+Return JSON only:
+{
+  "scientific_correctness": "A | B | tie",
+  "question_fulfillment": "A | B | tie",
+  "overall_preference": "A | B | tie",
+  "material_errors_A": [],
+  "material_errors_B": [],
+  "rationale": "brief evidence-aware explanation of the overall preference",
+  "confidence": "low | medium | high"
+}

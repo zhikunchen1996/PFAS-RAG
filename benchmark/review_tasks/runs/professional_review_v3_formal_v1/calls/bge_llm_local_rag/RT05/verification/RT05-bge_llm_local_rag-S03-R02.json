@@ -1,0 +1,320 @@
+{
+  "call_key": "RT05:bge_llm_local_rag:verify:RT05-bge_llm_local_rag-S03-R02",
+  "created_at": "2026-08-05T04:11:58.923625+00:00",
+  "raw_response_text": "{\"task_id\":\"RT05\",\"record_id\":\"RT05-bge_llm_local_rag-S03-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The DOI and URL exactly match the citation information provided in the source metadata (10.1021/acs.est.5c17011; https://doi.org/10.1021/acs.est.5c17011).\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Bench-scale RSSCTs using GAC and IX on wastewater effluent and NF permeate are explicitly described, with performance in bed volumes to MCL exceedance (E04, E07, E08). This justifies classifying the study as comparable with conditions to other GAC studies on similar matrices.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Reason correctly references RSSCTs, wastewater vs NF permeate matrices, and bed volumes to MCL exceedance, all supported by E04, E07, and E08. The conditional nature of comparability is an appropriate inference from these design details.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"RSSCTs are adsorption column tests with GAC (E04, E05). E07 reports bed volumes to MCL exceedance for GAC, clearly reflecting a sorption-based endpoint. Classifying this as sorption is consistent with the described methods.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E07 reports BVs until PFAS MCL criteria are exceeded for GAC, which corresponds to service life and residual PFAS loading on spent GAC. The endpoint description aligns with this information, though the mass on GAC is inferred rather than directly measured.\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reported term paraphrases the described use of GAC in RSSCTs and the metric of BVs to MCL exceedance reported in E07, which is consistent with the article\u2019s description.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E07 compares bed volumes to MCL exceedance for GAC with and without NF pretreatment, and E03 explains increased BVs due to DOC removal by NF. This captures a PFAS removal performance endpoint, so endpoint_type=removal is appropriate.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The interpretation that NF pretreatment improves GAC performance (more BVs before exceeding MCLs, due to lower DOC and competition) is directly supported by E03 (DOC effects) and E07 (BVs differences).\"},{\"field_path\":\"endpoints[1].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reported term accurately summarizes findings that NF pretreatment improved PFAS removal by GAC, as described in E03 and E07.\"},{\"field_path\":\"endpoints[2].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This endpoint refers to data visualization of absolute concentrations across the treatment train rather than a mechanistic or performance metric per se. Classifying it as 'other' is appropriate given the description in E08.\"},{\"field_path\":\"endpoints[2].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E08 explicitly states that figures show absolute PFAS concentrations in RSSCT effluents (not C/C0) to highlight treatment train performance for meeting MCLs. This matches the interpretation given.\"},{\"field_path\":\"endpoints[2].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The term concisely reflects E08\u2019s description of plotting absolute PFAS concentrations in effluents across the treatment train.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 states that Calgon F400 GAC and Calres2301 IX, along with NF270, were evaluated. E04 notes RSSCTs comparing adsorption in wastewater effluent with and without NF pretreatment. From these details it necessarily follows that only one GAC material was tested and that the main variable was influent matrix, supporting this design-inferred limitation.\"},{\"field_path\":\"limitations[1]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"E07 supports that performance is reported as bed volumes to MCL exceedance for GAC and IX. However, the claim that the study does not quantify PFAS mass balance on spent GAC or specify regeneration/disposal/destruction methods is an absence-of-evidence statement that is not necessarily established by the cited excerpts alone; these aspects could be discussed elsewhere in the paper or SI. Thus only the reliance on BVs is supported.\"},{\"field_path\":\"matrix\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E04 describes a pilot NF270 system treating tertiary wastewater effluent and RSSCTs that compared adsorption in wastewater effluent with and without NF pretreatment, including RSSCTs with PFAS spiked into NF permeate. This fully supports the two matrices described: tertiary treated wastewater effluent and NF permeate from NF270.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 specifies that the study evaluated Calgon F400 GAC, matching the stated adsorbent type used in RSSCTs.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The field correctly leaves unit null for an adsorbent identity, which is not a quantitative variable with a measurement unit.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E04 refers to tertiary treated wastewater effluent used in NF and adsorbent experiments and RSSCTs in wastewater effluent without NF pretreatment, supporting this description for influent matrix 1.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Matrix identity appropriately has no unit, so leaving unit null is correct.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E04 describes NF270 treating tertiary wastewater effluent and generating permeate used in RSSCTs. E03 gives DOC in NF permeate (0.9 mg/L) and wastewater effluent (4.2 mg/L). This supports describing influent matrix 2 as NF270 permeate from tertiary wastewater effluent, and mentioning the DOC reduction is consistent with E03.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Again, this is a qualitative matrix description; no unit is expected, so a null unit is appropriate.\"},{\"field_path\":\"pfas_scope[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E04 states that the PFAS mix included long, short, and ultrashort chain PFAAs, Gen-X, and a sulfonamide precursor. E07 explicitly mentions FBSA (perfluorobutane sulfonamide). E08 states concentrations of individual analytes (PFCAs, PFSAs, FBSA, Gen-X) are tracked across the full treatment train, including before/after NF and RSSCT effluents. This supports the described PFAS scope and tracking across the train.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E07 reports that, without NF pretreatment, PFAS MCL criteria were exceeded within 81 bed volumes (BVs) for GAC. The value '81' with exact_numeric form is an accurate transcription.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E07 explicitly expresses the metric in bed volumes (BVs), so the unit 'bed volumes' is correct.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E07 states that GAC treated >5,000 BVs of permeate from the NF experiments before exceeding MCLs. The value '>5000' with inequality form correctly reflects this statement.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E07 uses bed volumes (BVs) for this performance metric, so 'bed volumes' as unit is appropriate.\"},{\"field_path\":\"quantitative_findings[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E03 reports DOC = 0.9 mg/L in NF permeate and DOC = 4.2 mg/L in wastewater effluent. The value '4.2-0.9' with range form captures these two DOC values. Although the ordering is high-to-low, it still correctly represents the pair of numbers.\"},{\"field_path\":\"quantitative_findings[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"DOC is explicitly given in mg/L in E03, so the unit 'mg/L' is correct.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"It is a sound design inference that adsorption onto GAC transfers PFAS from water to a solid GAC residual (E04, E05, E07). However, the specific claim that management options are not investigated and that residual characterization is only inferred from breakthrough is an absence-of-evidence assertion not directly established by the cited excerpts; such analyses could appear elsewhere. Thus the transfer to a solid residual is supported, while the non-investigation/characterization aspect is not fully supported.\"},{\"field_path\":\"residuals_byproducts[1]\",\"status\":\"partially_supported\",\"error_type\":\"source_attribution\",\"reason\":\"E03 and E06 clearly state that NF pretreatment removes EfOM and inorganic ions, reducing pore blocking and competition and improving GAC and IX performance. Inferring that this shifts more PFAS mass and less co-contaminant organic matter into the GAC residual is reasonable but goes beyond what the authors explicitly state. Additionally, the basis is labeled 'author_reported' even though the detailed phrasing about shifting mass is an analyst inference. Hence, matrix effects are supported, but the attribution and specific residual-phase conclusion are only partially supported.\"},{\"field_path\":\"study_scale\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E04 describes 'Rapid small scale column tests (RSSCTs)' for GAC and IX, which are bench-scale experiments. They are applied to tertiary wastewater effluent and NF permeate. The summary description of bench-scale RSSCTs treating these matrices is consistent with the methods text.\"},{\"field_path\":\"treatment\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 identifies the evaluated NF270 membrane, Calgon F400 GAC, and Calres2301 IX. E04 describes NF270 treating tertiary wastewater effluent, followed by RSSCTs of GAC and IX with and without NF pretreatment, and additional RSSCTs with PFAS spiked into NF permeate. This supports the description of GAC RSSCT columns polishing either wastewater effluent directly or NF permeate in series with upstream NF270.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014source identity, treatment train (NF270 + GAC RSSCTs), matrices (tertiary wastewater effluent and NF permeate), PFAS scope, endpoints (adsorptive removal and MCL-based performance), and key quantitative findings (bed volumes to MCL exceedance and DOC values)\u2014are well supported by the cited text. Some limitation and residual-management statements overreach by inferring non-reported analyses, but these are marked as partially supported and do not affect the core usability of the record for synthesis.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of how membrane-derived PFAS concentrates and spent membrane materials should be characterized and managed within a treatment train.\",\"task_id\":\"RT05\",\"title\":\"Managing PFAS residuals from membrane treatment\"}\n\nTask-specific extraction objective:\nExtract membrane process, feed and retained-stream composition, recovery, concentration factor, residual volume, co-contaminants, downstream treatment, destruction or disposal endpoint, energy, cost, and scale.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envint.2021.106876\",\"10.3929/ethz-b-000506220\"],\"all_blocked_titles\":[\"membrane based technologies for per and poly fluoroalkyl substances pfass removal from water removal mechanisms applications challenges and perspectives\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envint.2021.106876\",\"https://www.research-collection.ethz.ch/items/f9152dfa-5b8e-4ce2-8153-1cbb37911e55\"],\"anchor_id\":\"AR-JIN-2021\",\"corpus_source\":\"2021 - Jin - Membrane-based technologies for per- and poly-fluoroalkyl substances (PFASs) removal from water - Removal mechanisms, applications, challenges and.pdf\",\"doi\":\"10.1016/j.envint.2021.106876\",\"title\":\"Membrane-based technologies for per- and poly-fluoroalkyl substances (PFASs) removal from water: Removal mechanisms, applications, challenges and perspectives\",\"url\":\"https://doi.org/10.1016/j.envint.2021.106876\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Griffin, A.M.; Elbers, J.; Bellona, C.; Strathmann, T.J. Combining Nanofiltration and Adsorbents to Achieve Effective PFAS Removal in Wastewater Effluent. Environ. Sci. Technol. 2026.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S03-E07\",\n      \"S03-E03\",\n      \"S03-E06\",\n      \"S03-E08\"\n    ],\n    \"reason\": \"Bench-scale RSSCTs using a commercial GAC, clear matrix descriptions (wastewater vs NF permeate), and a common performance metric (bed volumes to PFAS MCL exceedance) allow conditional comparison with other GAC studies on similar matrices, recognizing that PFAS mixtures, bed volumes, and column design may differ.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1021/acs.est.5c17011\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"sorption\",\n      \"evidence_locator_ids\": [\n        \"S03-E07\",\n        \"S03-E08\"\n      ],\n      \"interpretation\": \"PFAS breakthrough was quantified in terms of bed volumes treated until combined PFAS concentrations exceeded applicable maximum contaminant level criteria, indicating the service life of GAC and the residual PFAS loading on spent GAC.\",\n      \"reported_term\": \"GAC removal of PFAS to meet MCL criteria (bed volumes to MCL exceedance)\"\n    },\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S03-E03\",\n        \"S03-E04\",\n        \"S03-E06\",\n        \"S03-E07\"\n      ],\n      \"interpretation\": \"NF pretreatment improved GAC performance, allowing many more bed volumes of NF permeate to be treated before PFAS concentrations exceeded MCLs, reflecting decreased competition from EfOM and co-ions and shifting more PFAS mass into the GAC residual phase.\",\n      \"reported_term\": \"Improved PFAS removal by GAC after NF pretreatment\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S03-E08\"\n      ],\n      \"interpretation\": \"Authors plotted absolute PFAS concentrations (not C/C0) through NF and GAC RSSCTs to demonstrate the combined train\\u2019s ability to meet MCLs and to highlight when residual PFAS in GAC effluent became significant.\",\n      \"reported_term\": \"Absolute PFAS concentrations in RSSCT effluents across treatment train\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S03-E05\",\n        \"S03-E07\"\n      ],\n      \"statement\": \"RSSCTs were conducted with a single GAC material (Calgon F400) and primarily vary influent matrix (wastewater effluent vs NF permeate), limiting extrapolation to other carbons or full-scale contactors.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S03-E07\",\n        \"S03-E08\"\n      ],\n      \"statement\": \"The study reports bed volumes to MCL exceedance but does not quantify PFAS mass balance on spent GAC or specify regeneration, disposal, or destruction methods for PFAS-laden GAC.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S03-E04\",\n      \"S03-E03\",\n      \"S03-E07\"\n    ],\n    \"value\": \"(1) Tertiary treated wastewater effluent (RSSCT influent without NF pretreatment); (2) NF permeate from pilot NF270 system (RSSCT influent with NF pretreatment).\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S03-E05\"\n      ],\n      \"name\": \"Adsorbent type\",\n      \"qualifiers\": \"Used in RSSCTs for PFAS adsorption.\",\n      \"unit\": null,\n      \"value\": \"Calgon F400 granular activated carbon (GAC)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S03-E04\",\n        \"S03-E07\"\n      ],\n      \"name\": \"Influent matrix 1\",\n      \"qualifiers\": \"Direct GAC treatment configuration.\",\n      \"unit\": null,\n      \"value\": \"Tertiary wastewater effluent (no NF pretreatment)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S03-E03\",\n        \"S03-E04\"\n      ],\n      \"name\": \"Influent matrix 2\",\n      \"qualifiers\": \"NF-GAC treatment train configuration; DOC reduced from 4.2 to 0.9 mg/L by NF pretreatment.\",\n      \"unit\": null,\n      \"value\": \"NF permeate from NF270 treating tertiary wastewater effluent\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S03-E04\",\n        \"S03-E07\",\n        \"S03-E08\"\n      ],\n      \"value\": \"Same PFAS mixture used in NF experiments: long-, short-, and ultrashort-chain PFAAs, GenX, and FBSA; PFAS tracked across treatment train including RSSCT effluents.\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S03-E07\"\n      ],\n      \"name\": \"GAC bed volumes to PFAS MCL exceedance - without NF pretreatment\",\n      \"qualifiers\": \"Number of BVs of tertiary wastewater effluent treated by GAC RSSCT before PFAS maximum contaminant level criteria were exceeded.\",\n      \"unit\": \"bed volumes\",\n      \"value\": \"81\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S03-E07\"\n      ],\n      \"name\": \"GAC bed volumes to PFAS MCL exceedance - with NF pretreatment\",\n      \"qualifiers\": \"GAC treating NF permeate exceeded 5,000 BVs before PFAS concentrations surpassed MCLs.\",\n      \"unit\": \"bed volumes\",\n      \"value\": \">5000\",\n      \"value_form\": \"inequality\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S03-E03\"\n      ],\n      \"name\": \"DOC reduction affecting GAC performance\",\n      \"qualifiers\": \"DOC reduced from 4.2 mg/L in wastewater effluent to 0.9 mg/L in NF permeate, contributing to improved GAC PFAS adsorption.\",\n      \"unit\": \"mg/L\",\n      \"value\": \"4.2-0.9\",\n      \"value_form\": \"range\"\n    }\n  ],\n  \"record_id\": \"RT05-bge_llm_local_rag-S03-R02\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S03-E07\",\n        \"S03-E08\"\n      ],\n      \"statement\": \"PFAS adsorption onto GAC transfers PFAS from water to a solid residual (spent GAC) whose management (e.g., regeneration, incineration, or destruction) is not investigated in this study; residual characterization is inferred from breakthrough and bed volumes rather than direct PFAS mass analysis on the carbon.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S03-E03\",\n        \"S03-E06\"\n      ],\n      \"statement\": \"Authors note that NF pretreatment removes EfOM and inorganic ions that otherwise occupy GAC pores or compete for adsorption, thus shifting more PFAS mass and less co-contaminant organic matter into the GAC residual phase when polishing NF permeate compared to raw wastewater effluent.\"\n    }\n  ],\n  \"source_id\": \"S03\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S03-E04\",\n      \"S03-E07\",\n      \"S03-E03\"\n    ],\n    \"value\": \"Bench-scale rapid small-scale column tests (RSSCTs) using granular activated carbon (GAC) treating tertiary wastewater effluent directly and NF permeate as part of a treatment train.\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S03-E05\",\n      \"S03-E04\",\n      \"S03-E07\"\n    ],\n    \"value\": \"Granular activated carbon (Calgon F400) RSSCT columns used to polish either raw tertiary wastewater effluent or NF permeate in series with upstream NF270 membrane.\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 6,\n  \"bge_score\": 0.33492153882980347,\n  \"citation\": \"Griffin, A.M.; Elbers, J.; Bellona, C.; Strathmann, T.J. Combining Nanofiltration and Adsorbents to Achieve Effective PFAS Removal in Wastewater Effluent. Environmental Science & Technology 2026. DOI: 10.1021/acs.est.5c17011.\",\n  \"doi\": \"10.1021/acs.est.5c17011\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1021/acs.est.5c17011\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 5,\n      \"locator_id\": \"S03-E01\",\n      \"query_scores\": {\n        \"RT05-C1\": 0.013110180385410786,\n        \"RT05-C2\": 0.001072801765985787,\n        \"RT05-C3\": 0.0016033402644097805,\n        \"umbrella\": 0.8569663763046265\n      },\n      \"section\": \"methods\",\n      \"text\": \"osmosis (RO) or nanofiltration (NF) membranes can be applied, as an alternative to conventional adsorbents, to remove PFAS from complex wastewater streams, in combina- tion with destructive treatment technologies to mineralize PFAS in membrane concentrate. RO provides near complete PFAS rejection, but elevated concentrations of nontarget solutes present in wastewater increase energy requirements and limit water recovery. Loose NF membranes with larger effective pore sizes (or molecular weight cutoffs (MWCO)) than RO can provide significant rejection of PFAS, especially longer chain compounds (>95% rejection), with lower required energy and propensity for fouling or scaling than RO. 9,11,15 However, residual PFAS may be present in NF permeate at concentrations exceeding EPA MCLs, limiting the standalone use of NF in certain treatment applications (e.g., wastewater reuse and strict industrial treatment goals). Moreover, the majority of studies evaluating PFAS rejection by NF and RO membranes have been conducted over short durations in relatively clean water matrices; therefore, the impact of organic fouling and inorganic scaling on PFAS rejection is not well understood. 16,17 To address the limitations of each respective treatment technology, this contribution evaluated a treatment train consisting of a loose NF membrane to provide initial rejection of PFAS and matrix constituents, including EfOM and inorganic ions that inhibit adsorption, followed by either\"\n    },\n    {\n      \"corpus_chunk\": 45,\n      \"locator_id\": \"S03-E02\",\n      \"query_scores\": {\n        \"RT05-C1\": 0.12435667961835861,\n        \"RT05-C2\": 0.0001138790903496556,\n        \"RT05-C3\": 4.740566873806529e-05,\n        \"umbrella\": 0.02148072049021721\n      },\n      \"section\": \"methods\",\n      \"text\": \"The PFAS laden concentrate produced from the high recovery NF process is another waste stream that may require destructive treatment. Evaluation of a continuous source of PFAS impacted wastewater effluent is recommended to confirm the performance trends observed in this work. Moreover, future research should include analysis of priority co-contaminants that may exist in PFAS-contaminated municipal or industrial wastewater streams (i.e., pharmaceut- icals found in municipal wastewater or onium photo acid generating compounds found in semiconductor manufacturing wastewater), advance efforts to identify specific non-target constituents that most impact PFAS adsorption through variation of individual matrix components, 10 and determine the ability of pretreatment to remove these constituents. \\u25a0 ASSOCIATED CONTENT * s\\u0131 Supporting Information The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/acs.est.5c17011. Additional details on materials and methods and additional NF and RSSCT experimental data (PDF) \\u25a0 AUTHOR INFORMATION Corresponding Author Aron M. Griffin \\u2212 Colorado School of Mines, Department of Civil and Environmental Engineering, Golden, Colorado 80401, United States; Present Address: Rice University, Department of Civil and Environmental Engineering, Houston, TX, 77005, USA; orcid.org/0000-0001-5423-\"\n    },\n    {\n      \"corpus_chunk\": 41,\n      \"locator_id\": \"S03-E03\",\n      \"query_scores\": {\n        \"RT05-C1\": 0.0024721454828977585,\n        \"RT05-C2\": 0.0019197874935343862,\n        \"RT05-C3\": 0.0019079960184171796,\n        \"umbrella\": 0.015250950120389462\n      },\n      \"section\": \"results\",\n      \"text\": \"compared to direct treatment of wastewater effluent, presumably due to the low EfOM concentration in the NF permeate (DOC = 0.9 mg/L) compared to wastewater effluent (DOC = 4.2 mg/L). DOC can block pores within the GAC microstructure, rendering them unavailable for PFAS adsorp- tion. Moreover, DOC may directly compete with PFAS for GAC adsorption sites. 13,14 The removal of EfOM by NF pretreatment likely decreased pore blocking and competitive adsorption, resulting in higher BVs until breakthrough in membrane permeate compared to wastewater effluent. Higher BVs before PFAS breakthrough have previously been observed for GAC treating groundwater compared to surface water and wastewater with higher DOC, consistent with the results of this study. 6,12 Adsorption of PFSAs and long chain PFCAs increased more than short chain PFCAs in groundwater compared to surface water, which was attributed to direct competition between NOM and highly adsorbed PFAS (PFSAs and long chain PFCAs) for sorption sites with lower adsorption potential (e.g., adsorption sites in large pores). 12 This same mechanism could also provide an explanation for the greater GAC improvement factors observed for longer chain PFAS in this study as a result of NF pretreatment. NF is effective for removal of high MW EfOM, 43 which may directly compete with highly adsorbed PFAS, resulting in the\"\n    },\n    {\n      \"corpus_chunk\": 6,\n      \"locator_id\": \"S03-E04\",\n      \"query_scores\": {\n        \"RT05-C1\": 0.005634952336549759,\n        \"RT05-C2\": 0.0008667763904668391,\n        \"RT05-C3\": 0.0002774666645564139,\n        \"umbrella\": 0.5808806419372559\n      },\n      \"section\": \"methods\",\n      \"text\": \"of PFAS and matrix constituents, including EfOM and inorganic ions that inhibit adsorption, followed by either GAC or IX treatment of NF permeate for further PFAS removal. A pilot-scale NF system outfitted with a Filmtec NF270 membrane was operated continuously to treat tertiary wastewater effluent for >45 days. A mixture of PFAS was spiked into the NF feed at intervals to evaluate PFAS rejection in high recovery (90%) batch experiments and determine the impact of continuous membrane exposure to wastewater on PFAS rejection. The mix of PFAS examined included long, short, and ultrashort chain PFAAs, Gen-X, and a sulfonamide precursor. Rapid small scale column tests (RSSCTs) then compared PFAS adsorption by GAC (Calgon Filtersorb 400) and PFAS-selective IX (Calgon Calres2301) in wastewater effluent with and without NF pretreatment. Additional RSSCTs were performed where PFAS were spiked into the NF permeate to specifically assess how membrane removal of nontarget constituents (e.g., EfOM, inorganic ions) affects PFAS adsorption. Findings from this work advance the understanding of PFAS rejection by NF membranes in wastewater, PFAS adsorption by GAC and IX in varied water matrices, and removal of ultrashort PFAS by NF and adsorbents and demonstrate the potential of a combined membrane-adsorbent treatment train for meeting strict PFAS limits when treating wastewater and other solute-rich matrices\"\n    },\n    {\n      \"corpus_chunk\": 7,\n      \"locator_id\": \"S03-E05\",\n      \"query_scores\": {\n        \"RT05-C1\": 0.0022217107471078634,\n        \"RT05-C2\": 0.0004153751360718161,\n        \"RT05-C3\": 0.00042555300751701,\n        \"umbrella\": 0.544836699962616\n      },\n      \"section\": \"methods\",\n      \"text\": \"membrane-adsorbent treatment train for meeting strict PFAS limits when treating wastewater and other solute-rich matrices (e.g., landfill leachate, heavily aqueous film forming foam (AFFF)-impacted groundwater). 2. MATERIALS AND METHODS 2.1. Membrane and Adsorbents Evaluated This study evaluated the Filmtec NF270 membrane, Calgon F400 GAC, and Calres2301 IX. These are considered to be representative loose NF, GAC, and IX, respectively, that have been proven effective for PFAS treatment. 18\\u221220 The NF270 membrane was chosen instead of tighter NF or RO membranes due to its ability to reject PFAS with lower required energy and lower propensity for biofouling or scaling. 15 The membrane also rejects nontarget ions to a lesser degree, limiting the buildup of salt in the membrane reject stream. Detailed characteristics of the membrane and adsorbents are provided in Tables S1\\u2212S3 in the Supporting Information (SI). 2.2. Tertiary Treated Wastewater Matrix The tertiary treated wastewater effluent used in the NF and adsorbent experiments was supplied by a sequencing membrane bioreactor that treats domestic wastewater from student housing at the Colorado School of Mines. The system consists of two parallel 4500 gallon activated sludge bioreactors, followed by two membrane tanks containing PURON hollow fiber ultrafiltration membranes (0.05 \\u03bcm pore size). Additional details of the wastewater treatment system\"\n    },\n    {\n      \"corpus_chunk\": 43,\n      \"locator_id\": \"S03-E06\",\n      \"query_scores\": {\n        \"RT05-C1\": 0.002724034246057272,\n        \"RT05-C2\": 0.0007919430499896407,\n        \"RT05-C3\": 0.00040543556679040194,\n        \"umbrella\": 0.40728721022605896\n      },\n      \"section\": \"results\",\n      \"text\": \"performance and DOC and anion concentration when evaluating GAC and IX for the removal of PFAS from two groundwaters, wastewater effluent, membrane concentrate, and landfill leachate, and that GAC was more negatively impacted than IX. 13 Their analysis included only short and long chain PFAS (not ultrashort); therefore, their findings match the higher improvement factors observed for GAC compared to IX in this work. While the calculated improvement factors confirm that NF improves GAC and IX performance by removing EfOM and other inorganic ions, it is difficult to attribute the improvement to specific matrix components due to the complex nature of the wastewater. 3.5. Technology Implications Municipal and industrial wastewaters are important vectors for PFAS release into the environment. However, PFAS treatment in wastewater (treated or untreated) is more challenging compared with less solute-rich matrices (e.g., groundwater) due to elevated concentrations of EfOM and inorganic ions, potentially requiring the combination of multiple treatment barriers to meet strict discharge limits. This work demon- strated that an integrated treatment train consisting of NF followed by GAC or IX polishing treatment of NF permeate effectively removes PFAS from wastewater effluent, producing effluent that meets strict regulatory limits being implemented for drinking water. IX provided superior removal of anionic PFAS compared to GAC from NF permeate, but additional factors should be considered when evaluating adsorbents. A\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S03-E07\",\n      \"query_scores\": {\n        \"RT05-C1\": 0.009897572919726372,\n        \"RT05-C2\": 0.00044818423339165747,\n        \"RT05-C3\": 0.0001336432178504765,\n        \"umbrella\": 0.23482349514961243\n      },\n      \"section\": \"methods\",\n      \"text\": \"Experimental results demonstrated >92% rejection of C \\u2265 4 perfluoroalkyl acids (PFAAs), >98% rejection of hexafluoropropylene oxide dimer acid (Gen-X), and lower rejection (63\\u221292%) of ultrashort chain PFAS and perfluorobutane sulfonamide (FBSA). Without NF pretreatment of wastewater effluent, rapid small scale column tests (RSSCTs) of adsorbents showed that PFAS maximum contaminant level (MCL) criteria were exceeded within 81 bed volumes (BVs) for GAC and 9,000 BVs for IX. In comparison, GAC treated >5,000 BVs of permeate from the NF experiments before exceeding MCLs, while IX-treated NF permeate never exceeded MCLs for the duration of the experiment (450,000 BVs). The proposed NF-adsorbent treatment train represents a promising strategy for PFAS removal from complex wastewater matrices, preventing point source discharges into the environment. KEYWORDS: treatment train, granular activated carbon, anion exchange resins, perfluoroalkyl acids, nanofiltration 1. INTRODUCTION Per and polyfluoroalkyl substances (PFAS) are ubiquitous in the environment due to their widespread use and the recalcitrance of carbon\\u2212fluorine bonds. 1 Numerous human health impacts have been attributed to PFAS exposure, leading the U.S. Environmental Protection Agency (EPA) to issue drinking water standards and ambient water quality recom- mendations for several PFAS. 2\"\n    },\n    {\n      \"corpus_chunk\": 33,\n      \"locator_id\": \"S03-E08\",\n      \"query_scores\": {\n        \"RT05-C1\": 0.0019535229075700045,\n        \"RT05-C2\": 0.000578623148612678,\n        \"RT05-C3\": 0.00024352848413400352,\n        \"umbrella\": 0.22045210003852844\n      },\n      \"section\": \"results\",\n      \"text\": \"Uncertainty not available due to an analytical error for the duplicate sample. Environmental Science & Technology pubs.acs.org/est Article https://doi.org/10.1021/acs.est.5c17011 Environ. Sci. Technol. XXXX, XXX, XXX\\u2212XXX G where concentrations of individual analytes are tracked across the full treatment train, including before and after NF membrane treatment (far left side of each panel) and then in the effluent of the RSSCTs. For each of these figures, data for PFCAs are shown in panel d; PFSAs are shown in panel e; and FBSA, Gen-X, and the calculated hazard index are shown in panel f. By showing absolute PFAS concentrations in the RSSCT effluents instead of normalized C/C o values, results highlight the performance of the combined treatment train for meeting the various PFAS MCLs and facilitate comparison of treatment train data (lower panels of each figure) with treatment by adsorbents alone (upper panels). The flat or nearly flat breakthrough curves observed for PFOA, PFNA, PFBS, PFHxS, PFOS, and Gen-X in Figure 6d\\u2212f are due to measured concentrations being at or near the analytical detection limit. Corresponding breakthrough curves with C/ C o values are available in Figure S6 in the SI.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2026 - Griffin - Combining Nanofiltration and Adsorbents to Achieve Effective PFAS Removal in Wastewater Effluent.pdf\",\n  \"source_id\": \"S03\",\n  \"title\": \"Combining Nanofiltration and Adsorbents to Achieve Effective PFAS Removal in Wastewater Effluent\",\n  \"year\": \"2026\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "fa1565f1da80b996a75b3e5ec1448956e73ddc61e12d02033aa096194919fa95",
+  "response_metadata": {
+    "cached_input_tokens": 1152,
+    "estimated_cost_usd": 0.04826525,
+    "finish_reason": "stop",
+    "input_tokens": 6689,
+    "latency_seconds": 35.217874666908756,
+    "output_tokens": 4120,
+    "reasoning_tokens": 1581,
+    "response_id": "chatcmpl-E9NGOZQeW5HIjlxgZelGPQlZwWMk9",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 10809,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The DOI and URL exactly match the citation information provided in the source metadata (10.1021/acs.est.5c17011; https://doi.org/10.1021/acs.est.5c17011).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "Bench-scale RSSCTs using GAC and IX on wastewater effluent and NF permeate are explicitly described, with performance in bed volumes to MCL exceedance (E04, E07, E08). This justifies classifying the study as comparable with conditions to other GAC studies on similar matrices.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "Reason correctly references RSSCTs, wastewater vs NF permeate matrices, and bed volumes to MCL exceedance, all supported by E04, E07, and E08. The conditional nature of comparability is an appropriate inference from these design details.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "RSSCTs are adsorption column tests with GAC (E04, E05). E07 reports bed volumes to MCL exceedance for GAC, clearly reflecting a sorption-based endpoint. Classifying this as sorption is consistent with the described methods.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "E07 reports BVs until PFAS MCL criteria are exceeded for GAC, which corresponds to service life and residual PFAS loading on spent GAC. The endpoint description aligns with this information, though the mass on GAC is inferred rather than directly measured.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "The reported term paraphrases the described use of GAC in RSSCTs and the metric of BVs to MCL exceedance reported in E07, which is consistent with the article\u2019s description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "E07 compares bed volumes to MCL exceedance for GAC with and without NF pretreatment, and E03 explains increased BVs due to DOC removal by NF. This captures a PFAS removal performance endpoint, so endpoint_type=removal is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "The interpretation that NF pretreatment improves GAC performance (more BVs before exceeding MCLs, due to lower DOC and competition) is directly supported by E03 (DOC effects) and E07 (BVs differences).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].reported_term",
+        "reason": "The reported term accurately summarizes findings that NF pretreatment improved PFAS removal by GAC, as described in E03 and E07.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].endpoint_type",
+        "reason": "This endpoint refers to data visualization of absolute concentrations across the treatment train rather than a mechanistic or performance metric per se. Classifying it as 'other' is appropriate given the description in E08.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].interpretation",
+        "reason": "E08 explicitly states that figures show absolute PFAS concentrations in RSSCT effluents (not C/C0) to highlight treatment train performance for meeting MCLs. This matches the interpretation given.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].reported_term",
+        "reason": "The term concisely reflects E08\u2019s description of plotting absolute PFAS concentrations in effluents across the treatment train.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "E05 states that Calgon F400 GAC and Calres2301 IX, along with NF270, were evaluated. E04 notes RSSCTs comparing adsorption in wastewater effluent with and without NF pretreatment. From these details it necessarily follows that only one GAC material was tested and that the main variable was influent matrix, supporting this design-inferred limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "limitations[1]",
+        "reason": "E07 supports that performance is reported as bed volumes to MCL exceedance for GAC and IX. However, the claim that the study does not quantify PFAS mass balance on spent GAC or specify regeneration/disposal/destruction methods is an absence-of-evidence statement that is not necessarily established by the cited excerpts alone; these aspects could be discussed elsewhere in the paper or SI. Thus only the reliance on BVs is supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix",
+        "reason": "E04 describes a pilot NF270 system treating tertiary wastewater effluent and RSSCTs that compared adsorption in wastewater effluent with and without NF pretreatment, including RSSCTs with PFAS spiked into NF permeate. This fully supports the two matrices described: tertiary treated wastewater effluent and NF permeate from NF270.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "E05 specifies that the study evaluated Calgon F400 GAC, matching the stated adsorbent type used in RSSCTs.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The field correctly leaves unit null for an adsorbent identity, which is not a quantitative variable with a measurement unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "E04 refers to tertiary treated wastewater effluent used in NF and adsorbent experiments and RSSCTs in wastewater effluent without NF pretreatment, supporting this description for influent matrix 1.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "Matrix identity appropriately has no unit, so leaving unit null is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "E04 describes NF270 treating tertiary wastewater effluent and generating permeate used in RSSCTs. E03 gives DOC in NF permeate (0.9 mg/L) and wastewater effluent (4.2 mg/L). This supports describing influent matrix 2 as NF270 permeate from tertiary wastewater effluent, and mentioning the DOC reduction is consistent with E03.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "Again, this is a qualitative matrix description; no unit is expected, so a null unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0]",
+        "reason": "E04 states that the PFAS mix included long, short, and ultrashort chain PFAAs, Gen-X, and a sulfonamide precursor. E07 explicitly mentions FBSA (perfluorobutane sulfonamide). E08 states concentrations of individual analytes (PFCAs, PFSAs, FBSA, Gen-X) are tracked across the full treatment train, including before/after NF and RSSCT effluents. This supports the described PFAS scope and tracking across the train.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "E07 reports that, without NF pretreatment, PFAS MCL criteria were exceeded within 81 bed volumes (BVs) for GAC. The value '81' with exact_numeric form is an accurate transcription.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "E07 explicitly expresses the metric in bed volumes (BVs), so the unit 'bed volumes' is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "E07 states that GAC treated >5,000 BVs of permeate from the NF experiments before exceeding MCLs. The value '>5000' with inequality form correctly reflects this statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "E07 uses bed volumes (BVs) for this performance metric, so 'bed volumes' as unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].value",
+        "reason": "E03 reports DOC = 0.9 mg/L in NF permeate and DOC = 4.2 mg/L in wastewater effluent. The value '4.2-0.9' with range form captures these two DOC values. Although the ordering is high-to-low, it still correctly represents the pair of numbers.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].unit",
+        "reason": "DOC is explicitly given in mg/L in E03, so the unit 'mg/L' is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "It is a sound design inference that adsorption onto GAC transfers PFAS from water to a solid GAC residual (E04, E05, E07). However, the specific claim that management options are not investigated and that residual characterization is only inferred from breakthrough is an absence-of-evidence assertion not directly established by the cited excerpts; such analyses could appear elsewhere. Thus the transfer to a solid residual is supported, while the non-investigation/characterization aspect is not fully supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "source_attribution",
+        "field_path": "residuals_byproducts[1]",
+        "reason": "E03 and E06 clearly state that NF pretreatment removes EfOM and inorganic ions, reducing pore blocking and competition and improving GAC and IX performance. Inferring that this shifts more PFAS mass and less co-contaminant organic matter into the GAC residual is reasonable but goes beyond what the authors explicitly state. Additionally, the basis is labeled 'author_reported' even though the detailed phrasing about shifting mass is an analyst inference. Hence, matrix effects are supported, but the attribution and specific residual-phase conclusion are only partially supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale",
+        "reason": "E04 describes 'Rapid small scale column tests (RSSCTs)' for GAC and IX, which are bench-scale experiments. They are applied to tertiary wastewater effluent and NF permeate. The summary description of bench-scale RSSCTs treating these matrices is consistent with the methods text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment",
+        "reason": "E05 identifies the evaluated NF270 membrane, Calgon F400 GAC, and Calres2301 IX. E04 describes NF270 treating tertiary wastewater effluent, followed by RSSCTs of GAC and IX with and without NF pretreatment, and additional RSSCTs with PFAS spiked into NF permeate. This supports the description of GAC RSSCT columns polishing either wastewater effluent directly or NF permeate in series with upstream NF270.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT05-bge_llm_local_rag-S03-R02",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014source identity, treatment train (NF270 + GAC RSSCTs), matrices (tertiary wastewater effluent and NF permeate), PFAS scope, endpoints (adsorptive removal and MCL-based performance), and key quantitative findings (bed volumes to MCL exceedance and DOC values)\u2014are well supported by the cited text. Some limitation and residual-management statements overreach by inferring non-reported analyses, but these are marked as partially supported and do not affect the core usability of the record for synthesis.",
+    "task_id": "RT05"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

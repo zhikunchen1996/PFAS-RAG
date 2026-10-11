@@ -1,0 +1,67 @@
+{
+  "model": "separate criterion-specific Davidson fits",
+  "tie_parameter": "one independently estimated tie parameter per criterion",
+  "adaptive_repeats": false,
+  "hard_consensus_resolution": false,
+  "unstable_exclusion": false,
+  "bootstrap": {
+    "method": "question-level clustered percentile bootstrap",
+    "seed": 20260728,
+    "attempted_replicates": 10000,
+    "successful_replicates": 9778,
+    "failed_replicates": 222,
+    "nonconvergence_rate": 0.0222,
+    "criterion_intervals": {
+      "practical_usefulness": {
+        "gpt51_direct": {
+          "lower_95": 0.33333359532532697,
+          "upper_95": 0.8421051302177766
+        },
+        "gpt51_rag": {
+          "lower_95": 0.15789486978222336,
+          "upper_95": 0.666666404674673
+        }
+      },
+      "question_fulfillment": {
+        "gpt51_direct": {
+          "lower_95": 0.17647074978068308,
+          "upper_95": 0.8571425525544675
+        },
+        "gpt51_rag": {
+          "lower_95": 0.14285744744553244,
+          "upper_95": 0.8235292502193169
+        }
+      },
+      "scientific_correctness": {
+        "gpt51_direct": {
+          "lower_95": 1.0927649023869527e-05,
+          "upper_95": 0.7999996292687596
+        },
+        "gpt51_rag": {
+          "lower_95": 0.20000037073124044,
+          "upper_95": 0.999989072350976
+        }
+      },
+      "scope_and_calibration": {
+        "gpt51_direct": {
+          "lower_95": 0.4285715231269106,
+          "upper_95": 0.9999960696094384
+        },
+        "gpt51_rag": {
+          "lower_95": 3.930390561596081e-06,
+          "upper_95": 0.5714284768730893
+        }
+      }
+    },
+    "equal_weight_composite_intervals": {
+      "gpt51_direct": {
+        "lower_95": 0.34794514737277016,
+        "upper_95": 0.820738155843732
+      },
+      "gpt51_rag": {
+        "lower_95": 0.17926184415626786,
+        "upper_95": 0.6520548526272297
+      }
+    }
+  }
+}

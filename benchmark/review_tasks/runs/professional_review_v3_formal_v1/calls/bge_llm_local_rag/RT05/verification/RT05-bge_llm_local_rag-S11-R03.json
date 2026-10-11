@@ -1,0 +1,260 @@
+{
+  "call_key": "RT05:bge_llm_local_rag:verify:RT05-bge_llm_local_rag-S11-R03",
+  "created_at": "2026-08-05T04:15:00.273529+00:00",
+  "raw_response_text": "{\"task_id\":\"RT05\",\"record_id\":\"RT05-bge_llm_local_rag-S11-R03\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The cited figure (Fig. 6) shows life cycle environmental impacts and costs normalized as percent of the largest impactor for specific modeled scenarios (fixed flow and PFAS concentration), which are descriptive scenario-based outputs rather than directly comparable experimental efficiencies; this supports classifying comparability as descriptive_only.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Fig. 6 (S11-E01) reports life cycle environmental impact categories (ozone depletion, global warming, etc.) and cost per m3 as normalized percent of the largest impactor. These are modeled impact metrics, not removal/destruction performance, so endpoint_type=\\\"other\\\" is appropriate and supported.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Fig. 6 (S11-E01) explicitly includes \\\"Cost per m3\\\" alongside environmental impact categories, indicating a modeled economic metric; classifying this as endpoint_type=\\\"other\\\" is consistent and supported.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The limitation is design_inferred: Fig. 6 (S11-E01) shows that LCA results are tied to specific assumptions (38,000 gal/d flow and ~50 \u00b5g/L PFAS), and other text (S11-E04, S11-E05) emphasizes configuration- and disposal-specific impacts. It reasonably follows that results depend on assumed site- and operation-specific conditions and may not generalize.\"},{\"field_path\":\"limitations[1]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S11-E04 notes that potential toxic byproducts (e.g., nitrosamines) from incineration of aminated polymers and their environmental impacts are not fully understood, indicating an uncertainty. However, it does not explicitly state that the LCA omitted these byproducts; the inference that they were not modeled is reasonable but not directly stated.\"},{\"field_path\":\"matrix\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E01 states that the treatment assumes a source zone PFAS concentration of ~50 \u00b5g/L, and S11-E08 describes treatment of PFAS-contaminated/AFFF-impacted groundwater. Together they support the matrix description of PFAS-contaminated groundwater at ~50 \u00b5g/L PFAS.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E01 states \\\"treatment assumes 38,000 Gal/d flow\\\"; this matches the recorded value of 38000.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source reports \\\"38,000 Gal/d\\\" (S11-E01), which corresponds to the unit \\\"gallons per day\\\" used in the record.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E01 gives \\\"a source zone PFAS concentration of ~ 50 \u00b5g/L\\\"; this matches the approximate value \\\"~50\\\" recorded.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The unit in the source is \\\"\u00b5g/L\\\" (S11-E01), matching the recorded unit.\"},{\"field_path\":\"operating_conditions[2]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Fig. 6A (S11-E01) lists the AER treatment schemes: PFAS-Selective AER (Single-Use), Regenerable Resin, PFAS-Selective AER (with Regeneration), PFAS-Selective AER (Regeneration & Dewatering), all with disposal via hazardous waste incineration. This matches the described AER configuration scenarios.\"},{\"field_path\":\"operating_conditions[3]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Fig. 6B (S11-E01) shows disposal options for PFAS-laden residuals from PFAS-selective AER (with Regeneration): Hazardous Waste Incineration, Municipal Incineration, Hazardous Waste Landfill, and Municipal Landfill, matching the described residuals_disposal_options.\"},{\"field_path\":\"pfas_scope[0]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S11-E01 gives a source zone PFAS concentration of ~50 \u00b5g/L and S11-E02/E05 detail that both PFAS-selective and conventional regenerable AERs treating PFAS-contaminated groundwater were evaluated. However, the source does not explicitly say this is \\\"total\\\" PFAS; that qualifier is inferred.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The quantitative finding of 38,000 gal/d matches the explicit statement \\\"38,000 Gal/d flow\\\" in S11-E01, and value_form=exact_numeric is appropriate for this exact number.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The unit \\\"gallons per day\\\" corresponds directly to \\\"Gal/d\\\" in S11-E01.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The approximate value \\\"~50\\\" \u00b5g/L matches the source description of \\\"~ 50 \u00b5g/L\\\" PFAS concentration in S11-E01; value_form=approximate_numeric is appropriate.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The unit \\\"\u00b5g/L\\\" exactly matches the unit used in S11-E01.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S11-E01 shows that hazardous waste incineration, municipal incineration, hazardous waste landfill, and municipal landfill are evaluated disposal options for PFAS-laden residuals from PFAS-selective AER (with Regeneration). However, the claim that hazardous waste incineration was used as the baseline option in several configurations is not explicitly stated in the provided text.\"},{\"field_path\":\"residuals_byproducts[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E04 notes that a recent LCA found that concentration of PFAS wastes reduces costs and decreases environmental impacts by more than 80% in some configurations, and that cosolvent recovery via distillation both improves sustainability and reduces the volume of liquid waste requiring further treatment/disposal. This supports the described statement.\"},{\"field_path\":\"residuals_byproducts[2]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E05 reports that groundwater treatment using PFAS-selective AERs in regenerable mode has lower environmental impacts and costs than systems with conventional regenerable AERs and lower costs than PFAS-selective single-use systems, and explains that higher cosolvent requirements lead to greater regenerant recycling and much lower volumes of residual waste still bottoms needing off-site incineration or disposal, aligning with the recorded statement.\"},{\"field_path\":\"study_scale\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S11-E01 shows LCA-based life cycle environmental impacts and costs for treatment assuming 38,000 Gal/d flow and ~50 \u00b5g/L PFAS, and S11-E05 references life cycle analyses for groundwater treatment using AER systems. This supports that it is an LCA/cost modeling study at that flow, but the description of it as explicitly \\\"full-scale\\\" is not directly stated and is inferred from the large flow rate.\"},{\"field_path\":\"treatment\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E02 and S11-E08 describe regenerable and PFAS-selective AERs treating PFAS-contaminated/AFFF-impacted groundwater; S11-E02 and S11-E04 detail regeneration using brine/organic cosolvent, methanol recovery >90% by distillation with minimal PFAS carryover leaving PFAS-concentrated still bottoms; S11-E01 and E05 show scenarios including single-use and regenerable PFAS-selective AERs and conventional regenerable AERs, along with varied residual disposal options (incineration and landfilling). Together these support the treatment description.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014source identity, matrix (PFAS-contaminated groundwater), treatment with regenerable and PFAS-selective AERs, operating assumptions (38,000 gal/d, ~50 \u00b5g/L), LCA endpoints, and key residuals/disposal narratives\u2014are accurately supported. Minor overstatements (e.g., explicit baseline disposal and modeling of specific byproducts, \\\"full-scale\\\" wording, and \\\"total\\\" PFAS) are limited to qualifiers and do not materially mislead synthesis if treated cautiously.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of how membrane-derived PFAS concentrates and spent membrane materials should be characterized and managed within a treatment train.\",\"task_id\":\"RT05\",\"title\":\"Managing PFAS residuals from membrane treatment\"}\n\nTask-specific extraction objective:\nExtract membrane process, feed and retained-stream composition, recovery, concentration factor, residual volume, co-contaminants, downstream treatment, destruction or disposal endpoint, energy, cost, and scale.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envint.2021.106876\",\"10.3929/ethz-b-000506220\"],\"all_blocked_titles\":[\"membrane based technologies for per and poly fluoroalkyl substances pfass removal from water removal mechanisms applications challenges and perspectives\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envint.2021.106876\",\"https://www.research-collection.ethz.ch/items/f9152dfa-5b8e-4ce2-8153-1cbb37911e55\"],\"anchor_id\":\"AR-JIN-2021\",\"corpus_source\":\"2021 - Jin - Membrane-based technologies for per- and poly-fluoroalkyl substances (PFASs) removal from water - Removal mechanisms, applications, challenges and.pdf\",\"doi\":\"10.1016/j.envint.2021.106876\",\"title\":\"Membrane-based technologies for per- and poly-fluoroalkyl substances (PFASs) removal from water: Removal mechanisms, applications, challenges and perspectives\",\"url\":\"https://doi.org/10.1016/j.envint.2021.106876\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Ellis, A.C.; Boyer, T.H.; Strathmann, T.J. Regeneration of conventional and emerging PFAS-selective anion exchange resins used to treat PFAS-contaminated waters. Sep. Purif. Technol. 2025, 355, 129789.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S11-E01\",\n      \"S11-E04\",\n      \"S11-E05\"\n    ],\n    \"reason\": \"Modeled life cycle impacts and costs are scenario-specific and normalized; they cannot be directly compared quantitatively to experimental removal or destruction efficiencies from other technologies or studies.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.seppur.2024.129789\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S11-E01\",\n        \"S11-E04\"\n      ],\n      \"interpretation\": \"Relative contributions of different AER treatment and disposal schemes to impact categories such as ozone depletion, global warming, smog, acidification, eutrophication, carcinogenics, non-carcinogenics, respiratory effects, ecotoxicity, and fossil fuel depletion, normalized as percent of the largest impactor.\",\n      \"reported_term\": \"Life cycle environmental impacts\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S11-E01\"\n      ],\n      \"interpretation\": \"Modeled treatment cost per cubic meter of groundwater for each AER configuration and residuals disposal option.\",\n      \"reported_term\": \"Treatment cost per m3\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S11-E01\",\n        \"S11-E04\",\n        \"S11-E05\"\n      ],\n      \"statement\": \"Life cycle results depend on assumed groundwater flow, PFAS concentration, resin operations, and disposal practices specific to the modeled scenario, and may not generalize to sites with different conditions.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S11-E04\"\n      ],\n      \"statement\": \"The LCA did not explicitly model formation or fate of potential toxic byproducts from incineration of aminated polymer resins, which the authors highlight as an area of uncertainty.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S11-E01\"\n    ],\n    \"value\": \"PFAS-contaminated groundwater at a source zone with PFAS concentration of ~50 \\u00b5g/L.\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E01\"\n      ],\n      \"name\": \"groundwater_flow_rate\",\n      \"qualifiers\": \"Treatment scenarios assume 38,000 gal/d groundwater flow.\",\n      \"unit\": \"gallons per day\",\n      \"value\": \"38000\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E01\"\n      ],\n      \"name\": \"PFAS_source_zone_concentration\",\n      \"qualifiers\": \"Modeled source zone PFAS concentration of approximately 50 \\u00b5g/L.\",\n      \"unit\": \"\\u00b5g/L\",\n      \"value\": \"~50\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E01\",\n        \"S11-E05\"\n      ],\n      \"name\": \"AER_configuration\",\n      \"qualifiers\": \"Scenarios include PFAS-selective AER operated in single-use mode, PFAS-selective AER with regeneration, and conventional regenerable AERs, all coupled with hazardous waste incineration for residuals in panel A of Fig. 6.\",\n      \"unit\": null,\n      \"value\": \"\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E01\"\n      ],\n      \"name\": \"residuals_disposal_options\",\n      \"qualifiers\": \"Hazardous waste incineration, municipal incineration, hazardous waste landfill, and municipal landfill were evaluated as disposal options for PFAS-laden residuals generated by the PFAS-selective AER with regeneration scenario (panel B of Fig. 6).\",\n      \"unit\": null,\n      \"value\": \"\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E01\",\n        \"S11-E05\"\n      ],\n      \"value\": \"PFAS mixture in groundwater at ~50 \\u00b5g/L total PFAS, treated by PFAS-selective and conventional regenerable AER systems in the LCA scenarios.\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E01\"\n      ],\n      \"name\": \"groundwater_flow_rate\",\n      \"qualifiers\": \"Assumed daily flow treated in the LCA scenarios.\",\n      \"unit\": \"gallons per day\",\n      \"value\": \"38000\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E01\"\n      ],\n      \"name\": \"PFAS_source_zone_concentration\",\n      \"qualifiers\": \"Approximate PFAS concentration used in the modeled source zone groundwater.\",\n      \"unit\": \"\\u00b5g/L\",\n      \"value\": \"~50\",\n      \"value_form\": \"approximate_numeric\"\n    }\n  ],\n  \"record_id\": \"RT05-bge_llm_local_rag-S11-R03\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S11-E01\",\n        \"S11-E04\"\n      ],\n      \"statement\": \"PFAS-laden residuals from AER systems were managed in the LCA scenarios via hazardous waste incineration, municipal incineration, hazardous waste landfilling, or municipal landfilling, with hazardous waste incineration used as the baseline option in several configurations.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S11-E04\",\n        \"S11-E05\"\n      ],\n      \"statement\": \"LCA showed that concentrating PFAS wastes and recovering cosolvent via distillation substantially reduces the volume of residual still bottoms that require off-site hazardous waste disposal, leading to more than 80% reduction in environmental impacts and notable cost savings in some configurations compared to less concentrated waste streams.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S11-E05\"\n      ],\n      \"statement\": \"Operating PFAS-selective AERs in a regenerable mode, despite higher cosolvent requirements, resulted in lower overall environmental impacts and treatment costs than single-use operation, mainly due to large reductions in PFAS residual waste disposal volumes.\"\n    }\n  ],\n  \"source_id\": \"S11\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S11-E01\",\n      \"S11-E04\",\n      \"S11-E05\"\n    ],\n    \"value\": \"Life cycle assessment and cost modeling for full-scale PFAS-contaminated groundwater treatment (38,000 gal/d) using anion exchange resin systems with regeneration, cosolvent recovery, and varied residuals disposal options.\"\n  },\n  \"study_type\": \"modeling_or_life_cycle_study\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S11-E01\",\n      \"S11-E04\",\n      \"S11-E05\"\n    ],\n    \"value\": \"Modeled AER treatment schemes for PFAS-contaminated groundwater using conventional regenerable and PFAS-selective anion exchange resins, operated either in single-use or regenerable modes, with regenerant distillation for cosolvent recovery and PFAS concentration, and disposal of PFAS-laden residuals via hazardous waste incineration, municipal incineration, hazardous waste landfill, or municipal landfill.\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 16,\n  \"bge_score\": 0.08321818709373474,\n  \"citation\": \"Ellis, A.C.; Boyer, T.H.; Strathmann, T.J. Regeneration of conventional and emerging PFAS-selective anion exchange resins used to treat PFAS-contaminated waters. Separation and Purification Technology 2025 355 129789. DOI: 10.1016/j.seppur.2024.129789.\",\n  \"doi\": \"10.1016/j.seppur.2024.129789\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.seppur.2024.129789\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 42,\n      \"locator_id\": \"S11-E01\",\n      \"query_scores\": {\n        \"RT05-C1\": 0.048507027328014374,\n        \"RT05-C2\": 0.0018010014900937676,\n        \"RT05-C3\": 0.0016121030785143375,\n        \"umbrella\": 0.2309182733297348\n      },\n      \"section\": \"methods\",\n      \"text\": \"set to 50 \\u25e6 C, and condensation coils were chilled to 1 \\u25e6 C. A.C. Ellis et al. Separation and Puri\\u03e7cation Technology 355 (2025) 129789 9 Ozone depletion Global warmingSmog AcidificationEutrophicationCarcinogenics Non carcinogenics Respiratory effectsEcotoxicityFossil fuel depletionCost per m3 0% 20% 40% 60% 80% 100%Percent of Largest Impactor (%) PFAS-Selective AER (Single-Use) Regenerable Resin PFAS-Selective AER (with Regeneration) PFAS-Selective AER (Regeneration & Dewatering) A) B) Ozone depletion Global warmingSmog AcidificationEutrophicationCarcinogenics Non carcinogenics Respiratory effectsEcotoxicityFossil fuel depletionCost per m3 0% 20% 40% 60% 80% 100%Percent of Largest Impactor (%) Hazardous Waste Incineration Municipal Incineration Hazardous Waste Landfill Municipal Landfill Fig. 6. Life cycle environmental impacts and costs estimated from using (A) varied AER treatment schemes with disposal of PFAS-laden residuals via hazardous waste incineration, and (B) varied disposal options for PFAS-laden residuals generated when treating with PFAS-selective AER (with Regeneration). For all options shown above, treatment assumes 38,000 Gal/d flow and a source zone PFAS concentration of ~ 50 \\u03bc g/L (full conditions and details described previously in [27] .\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S11-E02\",\n      \"query_scores\": {\n        \"RT05-C1\": 0.14962048828601837,\n        \"RT05-C2\": 0.001811028691008687,\n        \"RT05-C3\": 7.217177335405722e-05,\n        \"umbrella\": 0.08527377247810364\n      },\n      \"section\": \"abstract\",\n      \"text\": \"on the regenerability of both \\u2018regenerable \\u2019 and \\u2018PFAS-selective \\u2019 AERs that were loaded during a pilot treatment study of PFAS-contaminated groundwater. Batch screening of regenerant solution constituents found that both classes of resins may be effectively regenerated using combinations of salt brine and organic cosolvent, with high cosolvent fractions being necessary for PFAS-selective AERs. While neither brine-only nor solvent-only regen - erant solutions led to effective PFAS desorption, the efficacy of regeneration with brine/cosolvent mixtures varied with salt type and cosolvent composition. Chloride salts outperformed sulfate and bicarbonate salts, cosolvent efficacy depended on the volume fraction and type used, and highly non-polar solutions led to optimal PFAS desorption. Continuous-flow regeneration experiments showed near-complete PFAS desorption from regenerable AERs using 10 bed volumes (BVs) of 70 % methanolic brine solutions, whereas PFAS-selective resins required more bed volumes (30) of brines with higher methanol content (90 %) or a more hydrophobic cosolvent (n-propanol); increasing regenerant empty-bed contact time had minimal effect on PFAS desorption. > 90 % methanol recovery from the resulting waste regenerant mixtures was accomplished with negligible PFAS contamination using distillation, leaving a minimal volume of a PFAS-concentrated still bottoms waste that may be further treated for PFAS destruction.\"\n    },\n    {\n      \"corpus_chunk\": 58,\n      \"locator_id\": \"S11-E03\",\n      \"query_scores\": {\n        \"RT05-C1\": 0.018960580229759216,\n        \"RT05-C2\": 0.021697498857975006,\n        \"RT05-C3\": 0.00040859723230823874,\n        \"umbrella\": 0.09206874668598175\n      },\n      \"section\": \"methods\",\n      \"text\": \"Further research is needed to ascertain whether the high brine and residual cosolvent contents of residual still bottoms precludes effective PFAS destruction (as is the case for electrochemical oxidation; [28] , however this concern may be mitigated by emerging methods to recover the salt brine, which would further benefit treatment operations by reducing costs and emissions from salt inputs. By coupling effective and recov - erable concentration technologies like regenerable AERs with resilient destructive technologies, future hybrid remediation trains can eliminate entirely the need for offsite transport and disposal of PFAS wastes. 5. Conclusions This work provides an evaluation of the feasibility of regenerating PFAS-laden anion exchange resins for treatment of AFFF-impacted groundwater using both regenerable resins and PFAS-selective resins intended for single-use operation. Results provide insights into the ef - ficacy of AER regeneration, optimization of regenerant solution mix - tures, potential on-site cosolvent recovery, and the overall sustainability of implementing AER systems with regeneration schemes. The following conclusions can be made: \\u2022 \\u2018PFAS-selective \\u2019 resins intended for single-use operation can be practically regenerated using a mixture of salt brine and organic cosolvent, as is the case for conventionally regenerable resins. \\u2022 Regeneration of PFAS-selective AERs requires higher cosolvent fractions and more BVs than regenerable resins, with 90 % methanol\"\n    },\n    {\n      \"corpus_chunk\": 52,\n      \"locator_id\": \"S11-E04\",\n      \"query_scores\": {\n        \"RT05-C1\": 0.06402292847633362,\n        \"RT05-C2\": 0.003292650915682316,\n        \"RT05-C3\": 0.0017671937821432948,\n        \"umbrella\": 0.07751248776912689\n      },\n      \"section\": \"methods\",\n      \"text\": \"incineration, as the potential generation of toxic byproducts (e.g., ni - trosamines) from direct combustion of aminated polymers and their environmental impacts are not fully understood. Given the costs and hazards associated with replenishing organic cosolvent used in regen - erant solutions, increasing attention has been given to distillation modules that can recover cosolvent for reuse while concentrating PFAS into aqueous still bottoms. A recent life cycle assessment of PFAS remediation technologies found that concentration of PFAS wastes not only reduces costs, but also decreases environmental impacts for the overall system by more than 80 % in certain configurations [27] . The bulk of this minimization stems not from reductions in cosolvent syn - thesis, but in reductions to impacts from hazardous waste disposal; cost A.C. Ellis et al. Separation and Puri\\u03e7cation Technology 355 (2025) 129789 11 savings from disposal reductions were also found to be significant. To maximize system sustainability and cost-efficiency, optimization of cosolvent recovery is critical to reduce volumes of waste residuals requiring further treatment or hazardous waste disposal. Despite the environmental impacts associated with cosolvent pro - duction, optimal AER system sustainability may be achieved when regenerating resins with the highest possible fraction of organic cosol - vent. This counterintuitive finding stems from that fact that cosolvents can be recovered and recycled ( Fig. 4 ) with negligible PFAS carryover,\"\n    },\n    {\n      \"corpus_chunk\": 2,\n      \"locator_id\": \"S11-E05\",\n      \"query_scores\": {\n        \"RT05-C1\": 0.04657462239265442,\n        \"RT05-C2\": 0.01486007310450077,\n        \"RT05-C3\": 0.000721167481970042,\n        \"umbrella\": 0.2222813218832016\n      },\n      \"section\": \"introduction\",\n      \"text\": \"contamination using distillation, leaving a minimal volume of a PFAS-concentrated still bottoms waste that may be further treated for PFAS destruction. Life cycle analyses revealed that groundwater treatment using PFAS- selective AERs operated in a regenerable mode have lower environmental impacts and costs than systems using conventional regenerable AERs, and lower treatment costs than systems operated using PFAS-selective resins in a single-use mode. Although counterintuitive, these findings stem from the fact that higher cosolvent requirements for regeneration of PFAS-selective resins lead to greater internal recycling of regenerant solutions and much lower volumes of residual waste still bottoms that require off-site incineration or disposal. 1. Introduction Per- and polyfluoroalkyl substances (PFAS) have emerged as prom - inent environmental contaminants and a serious public health concern due to their widespread use in industrial and consumer products [1] , documented ubiquity in water resources across the globe [2] , and adverse health effects [3] . While these synthetic surfactants are commonplace in everyday food packaging, clothing, furniture, and cookware, a major source of PFAS contamination is the release of aqueous film-forming foams (AFFF) during firefighting training activ - ities [4] . Decades of AFFF releases at training sites, particularly airports and military instillations, have generated large plumes of PFAS in the\"\n    },\n    {\n      \"corpus_chunk\": 57,\n      \"locator_id\": \"S11-E06\",\n      \"query_scores\": {\n        \"RT05-C1\": 0.025398580357432365,\n        \"RT05-C2\": 0.007709951605647802,\n        \"RT05-C3\": 0.0014300537295639515,\n        \"umbrella\": 0.18440495431423187\n      },\n      \"section\": \"methods\",\n      \"text\": \"dissolved iron and manganese may further influence regenerability, as precipitation of these ions on resins has been found to lead to scaling, which may physically clog resin pores or interfere with ion exchange processes. It follows that site-specific pilot testing is recommended to ensure both optimum treatment and regeneration prior to full-scale implementation. Regeneration of AERs not only benefits operators by enabling sor - bent reuse, thereby minimizing system costs and emissions, but shifting the nature of PFAS concentrate waste streams from solid to liquid form enables coupling of AER treatment with liquid-phase destruction tech - nologies. Emerging technologies for destruction of PFAS in liquid con - centrates include hydrothermal alkaline treatment (HALT; [43] , electrochemical oxidation (ECO; [44] ), plasma treatment [45] , and su - percritical water oxidation (SCWO; [46] . While energy requirements for these technologies are too high (e.g., > 100 kWh/m 3 ) to treat high throughputs of water with dilute PFAS contaminations, concentration of PFAS into a small volume waste stream (e.g., PFAS from > 100,000 BVs of contaminated groundwater treated by AER and concentrated into < 10 BVs of waste still bottoms) is ideal for PFAS destruction. Further research is needed to ascertain whether the high brine and residual\"\n    },\n    {\n      \"corpus_chunk\": 20,\n      \"locator_id\": \"S11-E07\",\n      \"query_scores\": {\n        \"RT05-C1\": 0.01228036917746067,\n        \"RT05-C2\": 0.0003213185991626233,\n        \"RT05-C3\": 0.0001612859923625365,\n        \"umbrella\": 0.08115039020776749\n      },\n      \"section\": \"results\",\n      \"text\": \"1 depicts the regeneration efficiencies (represented by the extent to which C6 and C8 PFCAs and PFSAs desorb) observed for the PFAS-selective resin PFA694E. Results in Fig. 1 A show that brine-only (1 wt% salts) and cosolvent-only solutions (90 % MeOH and 1-PrOH) yielded < 10 % desorption of adsorbed PFCAs and PFSAs. Shorter-chain PFCAs were desorbed to a greater extent than long-chain analogues when using brine-only solutions and solutions with low cosolvent fractions, while PFOS experienced greater desorption when using cosolvent-only solu - tions compared to shorter-chain PFSAs. This phenomenon is likely due to the comparatively larger role of electrostatic attraction in short-chain PFAS adsorption, as longer fluoroalkyl chains experience greater hy - drophobic attraction to the resin that requires disruption. Because an - ions from the salt brine disrupt electrostatic forces while organic cosolvent disrupts the van der Waals forces attracting the fluoroalkyl tail to the resin polymer and functional group [15] , contaminants with comparatively greater hydrophobic character increasingly rely on organic cosolvent to induce desorption. While none of these solutions would ever be used in practice, this finding may be useful in optimiza - tion of regenerant solutions to displace the full suite of PFAS from spent resins. The addition of hydrocarbon surfactants and other PFAS- or resin-\"\n    },\n    {\n      \"corpus_chunk\": 9,\n      \"locator_id\": \"S11-E08\",\n      \"query_scores\": {\n        \"RT05-C1\": 0.07337909936904907,\n        \"RT05-C2\": 0.012278894893825054,\n        \"RT05-C3\": 0.0004985736450180411,\n        \"umbrella\": 0.033344294875860214\n      },\n      \"section\": \"methods\",\n      \"text\": \"of the most common solvents used in regeneration \\u2013 has been docu - mented to be separable from aqueous brines via distillation for regen - erant reuse [28] , but little is still known regarding the efficiency of distillation from varied solution matrices or potential back- contamination of PFAS, some of which can volatilize [29] . This is crit - ical because life cycle assessment (LCA) of AER treatment systems revealed that cosolvent recovery and reuse can reduce environmental impacts by up to 90 % [27] . Not only does cosolvent recovery improve sustainability, but it also further reduces the volume of liquid waste byproduct stream that requires additional treatment, destruction, or off- site disposal (e.g., incineration or landfilling). The present contribution addresses critical knowledge gaps related to regeneration of AERs used for treatment of PFAS-contaminated wa - ters. This is accomplished through a comprehensive evaluation of factors controlling PFAS desorption from both regenerable and PFAS-selective AERs across a range of different salts, solvents, and solution composi - tions. Both batch and continuous-flow regeneration experiments were conducted with four commercially available AERs that were loaded with a mixture of PFAS during an eight-month field pilot study treating AFFF- impacted groundwater [14] . Both regenerable and PFAS-selective AERs\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2025 - Ellis - Regeneration of conventional and emerging PFAS-selective anion exchange resins used to treat PFAS-contaminated waters.pdf\",\n  \"source_id\": \"S11\",\n  \"title\": \"Regeneration of conventional and emerging PFAS-selective anion exchange resins used to treat PFAS-contaminated waters\",\n  \"year\": \"2025\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "b6583e6c6538292eff17aec8d9a153113fe56f20fe9353515e4f4d405c3dc01d",
+  "response_metadata": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.04660125,
+    "finish_reason": "stop",
+    "input_tokens": 6649,
+    "latency_seconds": 40.03322962508537,
+    "output_tokens": 3829,
+    "reasoning_tokens": 1885,
+    "response_id": "chatcmpl-E9NJE4f9hD7MSFAw9HVhPJRe22ISm",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 10478,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The cited figure (Fig. 6) shows life cycle environmental impacts and costs normalized as percent of the largest impactor for specific modeled scenarios (fixed flow and PFAS concentration), which are descriptive scenario-based outputs rather than directly comparable experimental efficiencies; this supports classifying comparability as descriptive_only.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "Fig. 6 (S11-E01) reports life cycle environmental impact categories (ozone depletion, global warming, etc.) and cost per m3 as normalized percent of the largest impactor. These are modeled impact metrics, not removal/destruction performance, so endpoint_type=\"other\" is appropriate and supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "Fig. 6 (S11-E01) explicitly includes \"Cost per m3\" alongside environmental impact categories, indicating a modeled economic metric; classifying this as endpoint_type=\"other\" is consistent and supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "The limitation is design_inferred: Fig. 6 (S11-E01) shows that LCA results are tied to specific assumptions (38,000 gal/d flow and ~50 \u00b5g/L PFAS), and other text (S11-E04, S11-E05) emphasizes configuration- and disposal-specific impacts. It reasonably follows that results depend on assumed site- and operation-specific conditions and may not generalize.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "limitations[1]",
+        "reason": "S11-E04 notes that potential toxic byproducts (e.g., nitrosamines) from incineration of aminated polymers and their environmental impacts are not fully understood, indicating an uncertainty. However, it does not explicitly state that the LCA omitted these byproducts; the inference that they were not modeled is reasonable but not directly stated.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix",
+        "reason": "S11-E01 states that the treatment assumes a source zone PFAS concentration of ~50 \u00b5g/L, and S11-E08 describes treatment of PFAS-contaminated/AFFF-impacted groundwater. Together they support the matrix description of PFAS-contaminated groundwater at ~50 \u00b5g/L PFAS.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "S11-E01 states \"treatment assumes 38,000 Gal/d flow\"; this matches the recorded value of 38000.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The source reports \"38,000 Gal/d\" (S11-E01), which corresponds to the unit \"gallons per day\" used in the record.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "S11-E01 gives \"a source zone PFAS concentration of ~ 50 \u00b5g/L\"; this matches the approximate value \"~50\" recorded.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The unit in the source is \"\u00b5g/L\" (S11-E01), matching the recorded unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2]",
+        "reason": "Fig. 6A (S11-E01) lists the AER treatment schemes: PFAS-Selective AER (Single-Use), Regenerable Resin, PFAS-Selective AER (with Regeneration), PFAS-Selective AER (Regeneration & Dewatering), all with disposal via hazardous waste incineration. This matches the described AER configuration scenarios.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3]",
+        "reason": "Fig. 6B (S11-E01) shows disposal options for PFAS-laden residuals from PFAS-selective AER (with Regeneration): Hazardous Waste Incineration, Municipal Incineration, Hazardous Waste Landfill, and Municipal Landfill, matching the described residuals_disposal_options.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "pfas_scope[0]",
+        "reason": "S11-E01 gives a source zone PFAS concentration of ~50 \u00b5g/L and S11-E02/E05 detail that both PFAS-selective and conventional regenerable AERs treating PFAS-contaminated groundwater were evaluated. However, the source does not explicitly say this is \"total\" PFAS; that qualifier is inferred.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "The quantitative finding of 38,000 gal/d matches the explicit statement \"38,000 Gal/d flow\" in S11-E01, and value_form=exact_numeric is appropriate for this exact number.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The unit \"gallons per day\" corresponds directly to \"Gal/d\" in S11-E01.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "The approximate value \"~50\" \u00b5g/L matches the source description of \"~ 50 \u00b5g/L\" PFAS concentration in S11-E01; value_form=approximate_numeric is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "The unit \"\u00b5g/L\" exactly matches the unit used in S11-E01.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "S11-E01 shows that hazardous waste incineration, municipal incineration, hazardous waste landfill, and municipal landfill are evaluated disposal options for PFAS-laden residuals from PFAS-selective AER (with Regeneration). However, the claim that hazardous waste incineration was used as the baseline option in several configurations is not explicitly stated in the provided text.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[1]",
+        "reason": "S11-E04 notes that a recent LCA found that concentration of PFAS wastes reduces costs and decreases environmental impacts by more than 80% in some configurations, and that cosolvent recovery via distillation both improves sustainability and reduces the volume of liquid waste requiring further treatment/disposal. This supports the described statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[2]",
+        "reason": "S11-E05 reports that groundwater treatment using PFAS-selective AERs in regenerable mode has lower environmental impacts and costs than systems with conventional regenerable AERs and lower costs than PFAS-selective single-use systems, and explains that higher cosolvent requirements lead to greater regenerant recycling and much lower volumes of residual waste still bottoms needing off-site incineration or disposal, aligning with the recorded statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "study_scale",
+        "reason": "S11-E01 shows LCA-based life cycle environmental impacts and costs for treatment assuming 38,000 Gal/d flow and ~50 \u00b5g/L PFAS, and S11-E05 references life cycle analyses for groundwater treatment using AER systems. This supports that it is an LCA/cost modeling study at that flow, but the description of it as explicitly \"full-scale\" is not directly stated and is inferred from the large flow rate.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment",
+        "reason": "S11-E02 and S11-E08 describe regenerable and PFAS-selective AERs treating PFAS-contaminated/AFFF-impacted groundwater; S11-E02 and S11-E04 detail regeneration using brine/organic cosolvent, methanol recovery >90% by distillation with minimal PFAS carryover leaving PFAS-concentrated still bottoms; S11-E01 and E05 show scenarios including single-use and regenerable PFAS-selective AERs and conventional regenerable AERs, along with varied residual disposal options (incineration and landfilling). Together these support the treatment description.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT05-bge_llm_local_rag-S11-R03",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014source identity, matrix (PFAS-contaminated groundwater), treatment with regenerable and PFAS-selective AERs, operating assumptions (38,000 gal/d, ~50 \u00b5g/L), LCA endpoints, and key residuals/disposal narratives\u2014are accurately supported. Minor overstatements (e.g., explicit baseline disposal and modeling of specific byproducts, \"full-scale\" wording, and \"total\" PFAS) are limited to qualifiers and do not materially mislead synthesis if treated cautiously.",
+    "task_id": "RT05"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

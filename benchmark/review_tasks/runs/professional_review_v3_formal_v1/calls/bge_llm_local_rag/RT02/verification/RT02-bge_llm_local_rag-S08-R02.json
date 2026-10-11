@@ -1,0 +1,314 @@
+{
+  "call_key": "RT02:bge_llm_local_rag:verify:RT02-bge_llm_local_rag-S08-R02",
+  "created_at": "2026-08-05T03:55:16.064623+00:00",
+  "raw_response_text": "{\"task_id\":\"RT02\",\"record_id\":\"RT02-bge_llm_local_rag-S08-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The DOI and URL exactly match those given in the cited source metadata (10.1016/j.jhazmat.2023.131481; https://doi.org/10.1016/j.jhazmat.2023.131481).\"},{\"field_path\":\"study_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The article reports original experimental work (RSSCTs, breakthrough modeling, and comparisons across adsorbents and waters), which is consistent with classification as a primary experiment.\"},{\"field_path\":\"study_scale\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E02 and S08-E04 describe the use of rapid small scale column tests (RSSCTs), which are laboratory-scale column experiments, and S08-E07 notes use of GW2 with high \u03bcg/L PFAAs. This supports the description of laboratory RSSCTs using high-PFAA groundwater GW2.\"},{\"field_path\":\"treatment\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S08-E02 states that SMC, GAC, and IX were evaluated via RSSCTs for PFAS removal, and S08-E07 focuses specifically on GW2, supporting adsorption in RSSCT columns using these three adsorbents for GW2. However, the phrase \u201ccontinuous-flow\u201d is not explicitly stated in the cited text, even though it is typical for RSSCTs; thus that qualifier is inferred rather than directly supported.\"},{\"field_path\":\"matrix\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 explicitly states that GW2 is a matrix with high \u03bcg/L measured PFAAs, contains PFAA concentrations multiple orders of magnitude higher than GW1, and has similar background water quality. This matches the matrix description in the record.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S08-E02 and S08-E04 clearly identify the use of rapid small scale column tests (RSSCTs), and S08-E07 discusses breakthrough for multiple PFAA subclasses (all PFAAs) in GW2, supporting RSSCT configuration for breakthrough analysis in GW2. However, the descriptor \u201coperated in continuous flow\u201d is not explicitly stated in the cited excerpts and is inferred from typical RSSCT practice, so that qualifier is only partially supported.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The unit is null for a descriptive configuration field, which is appropriate because RSSCT configuration is not a numeric measurement requiring a unit.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S08-E04 discusses column experiments and the application of RSSCTs as an alternative approach, implying packed-bed columns, but it does not explicitly state \u201cfixed-bed flow-through.\u201d Thus the existence of column-based flow-through treatment is supported, while the specific \u201cfixed-bed\u201d wording is an inferred qualifier.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The field describes contact mode qualitatively; leaving the unit null is appropriate.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 states that GW2 contained PFAA concentrations multiple orders of magnitude higher than GW1 but had similar background water quality, and no detailed parameters are shown in the excerpt. This matches the summarized water quality description.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This is a qualitative water quality summary, so a null unit is appropriate.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 explicitly states that GW2 contained PFAA concentrations multiple orders of magnitude higher than GW1, which directly supports the stated relative influent concentration description.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The field is a qualitative comparison (multiple orders of magnitude higher); no numeric unit is needed, so null is appropriate.\"},{\"field_path\":\"operating_conditions[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E02 and S08-E04 describe rapid small scale column tests (RSSCTs) as an alternative to full column experiments and used to assess multiple adsorbents; S08-E07 applies this to the GW2 matrix. This supports describing the scale as bench-scale RSSCTs used for comparative column performance.\"},{\"field_path\":\"operating_conditions[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Scale is given qualitatively; a null unit is appropriate.\"},{\"field_path\":\"pfas_scope[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 explicitly states: \u201cBV 50 for short chain PFSA was calculated for GAC at approximately 7,500 BVs,\u201d directly supporting the inclusion of short-chain PFSAs in the PFAS scope.\"},{\"field_path\":\"pfas_scope[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 refers to GW2 as a matrix with high \u03bcg/L measured PFAAs and notes that Fig. A2 shows \u201call PFAAs,\u201d indicating consideration of multiple PFAA subclasses beyond short-chain PFSAs. This supports the broader scope of other PFAA subclasses discussed qualitatively.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 discusses PFAA breakthrough, BV50 for short-chain PFSA, and faster breakthrough as indicators of performance. These are standard measures of contaminant removal behavior in adsorption columns, so classifying the endpoint as \u201cremoval\u201d is appropriate and supported.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 states that GW2 breakthrough analysis used BV50 for short-chain PFSA and discusses three times faster breakthrough at higher influent PFAA concentrations. This matches the interpretation that removal performance in GW2 was evaluated via breakthrough curves and BV50, with emphasis on faster breakthrough at higher influent levels.\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 explicitly uses the terms \u201cBV 50,\u201d \u201cbreakthrough,\u201d and discusses \u201cBVs to breakthrough\u201d as the comparison metric, supporting the reported terms of breakthrough, BV50, and adsorbent use rate (the latter tied to the broader study as described in S08-E05).\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 states, \u201cThe multiple orders of magnitude higher influent PFAA concentrations of GW2 are reflected in three times faster PFAA breakthrough by GAC and IX compared to their treatment of GW1.\u201d Recording an exact numeric factor of 3 is consistent with this explicit statement.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reported value is a unitless fold-change factor (\u201cthree times faster\u201d). Leaving the unit null is appropriate.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 states, \u201cBV 50 for short chain PFSA was calculated for GAC at approximately 7,500 BVs,\u201d which matches the approximate value \u201c~7500\u201d with value_form set to approximate_numeric.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 reports BV50 in \u201cBVs\u201d (bed volumes). Using \u201cbed volumes\u201d as the unit accurately reflects the metric.\"},{\"field_path\":\"quantitative_findings[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 says, \u201cbreakthrough for IX and SMC occurred later at approximately 250,000 BVs.\u201d Given that the preceding clause refers to BV50 for short-chain PFSA, it is reasonable to attribute this approximate value (~250000) to breakthrough for the same PFSA subclass. The record notes uncertainty about the exact breakthrough percentage, consistent with the source.\"},{\"field_path\":\"quantitative_findings[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source (S08-E07) gives breakthrough for IX in \u201cBVs,\u201d so the unit \u201cbed volumes\u201d is correctly transcribed.\"},{\"field_path\":\"quantitative_findings[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 reports that \u201cbreakthrough for IX and SMC occurred later at approximately 250,000 BVs,\u201d applying the same approximate value to both IX and SMC. The value \u201c~250000\u201d for SMC breakthrough is therefore directly supported.\"},{\"field_path\":\"quantitative_findings[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The unit \u201cbed volumes\u201d is consistent with S08-E07\u2019s statement that breakthrough occurred at approximately 250,000 BVs.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 highlights that comparisons using BVs to breakthrough become impractical with multiple adsorbents and waters due to compounding system properties, and the provided excerpts do not give specific RSSCT design parameters (e.g., EBCT, bed depth, particle size). Inferring that lack of detailed column design information in the excerpt limits quantitative scale-up is a reasonable design-based limitation.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 compares GW2 to GW1 using the same metric of BVs to breakthrough and notes three times faster breakthrough at higher influent concentrations. S08-E02 and S08-E04 describe standardized RSSCT use across adsorbents and waters. This supports that within-matrix comparisons (same matrix, same RSSCT configuration) are directly comparable and that cross-matrix comparisons are informative but conditioned on different influent concentrations, aligning with \u201ccomparable_with_conditions.\u201d\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The stated reason reflects supported facts: same RSSCT configuration across adsorbents (S08-E02, S08-E04) and the GW1 vs GW2 comparison via BVs to breakthrough and differing influent concentrations (S08-E07). This is a conservative inference from the cited text.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core study identifiers (source, DOI), matrix (GW2 groundwater), treatment configuration (RSSCT adsorption using GAC, SMC, IX), endpoint definition (breakthrough/BV50 as removal performance), and all quantitative findings (threefold faster breakthrough and BV/BV50 values) are directly supported by the cited excerpts. Some descriptors (e.g., \u201ccontinuous-flow,\u201d \u201cfixed-bed\u201d) are inferred but do not affect the core quantitative or endpoint information. Thus the record is suitable for synthesis with minor attention to inferred qualifiers.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of when batch adsorption results do and do not predict column, pilot, or full-scale PFAS treatment performance.\",\"task_id\":\"RT02\",\"title\":\"Translating PFAS adsorption results from batch tests to continuous treatment\"}\n\nTask-specific extraction objective:\nExtract study scale, adsorbent, PFAS and matrix, batch or flow configuration, contact time, flow and bed properties, capacity definition, breakthrough criterion, bed volumes, media lifetime, and uncertainty or scale-up limitation.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Murray, C.C.; Safulko, A.; Vatankhah, H.; Liu, C.J.; Tajdini, B.; Marshall, R.E.; Bellona, C. PFAS adsorbent selection - The role of adsorbent use rate, water quality, and cost. Journal of Hazardous Materials. 2023;454:131481.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S08-E02\",\n      \"S08-E04\",\n      \"S08-E07\"\n    ],\n    \"reason\": \"This record compares GAC, SMC, and IX under the same GW2 matrix and RSSCT configuration, and also relates GW2 results back to GW1 using the shared metric of bed volumes to breakthrough. Within-matrix comparisons are directly comparable; cross-matrix comparison (GW1 vs GW2) is informative but conditioned on differing influent PFAS concentrations.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.jhazmat.2023.131481\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S08-E07\"\n      ],\n      \"interpretation\": \"PFAS removal performance for GW2 was evaluated via breakthrough curves and bed volumes to 50% breakthrough (BV50) for specific subclasses (e.g., short-chain PFSA); faster breakthrough at higher influent concentrations was emphasized.\",\n      \"reported_term\": \"breakthrough, BV50, and adsorbent use rate\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S08-E04\",\n        \"S08-E07\"\n      ],\n      \"statement\": \"The comparison between GW2 and GW1 highlights sensitivity of breakthrough to influent concentration, but column design details (e.g., EBCT, bed depth, particle size) for the RSSCTs are not provided in the excerpt, which limits quantitative translation to full-scale design.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S08-E07\"\n    ],\n    \"value\": \"groundwater GW2 with perfluoroalkyl acids (PFAAs) at concentrations multiple orders of magnitude higher than GW1 but similar background water quality\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E02\",\n        \"S08-E04\",\n        \"S08-E07\"\n      ],\n      \"name\": \"configuration\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"rapid small-scale column tests (RSSCTs) operated in continuous flow for breakthrough analysis of multiple PFAS subclasses in GW2\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E04\"\n      ],\n      \"name\": \"contact mode\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"fixed-bed flow-through columns (empty-bed contact time not specified in provided text)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E07\"\n      ],\n      \"name\": \"water quality summary\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"GW2 groundwater; described as having PFAA concentrations multiple orders of magnitude higher than GW1 but similar background water quality; detailed background parameters not provided in quoted text.\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E07\"\n      ],\n      \"name\": \"relative influent PFAS concentration\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"PFAA concentrations in GW2 were multiple orders of magnitude higher than in GW1.\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E04\",\n        \"S08-E07\"\n      ],\n      \"name\": \"scale\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"bench-scale RSSCTs used to compare column performance across adsorbents and to GW1 results.\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E07\"\n      ],\n      \"value\": \"short-chain perfluoroalkyl sulfonic acids (short-chain PFSAs)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E07\"\n      ],\n      \"value\": \"other PFAA subclasses (all PFAAs, including short- and long-chain compounds) discussed qualitatively for breakthrough behavior\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E07\"\n      ],\n      \"name\": \"Effect of higher influent PFAA concentration on breakthrough (GAC and IX, GW2 vs GW1)\",\n      \"qualifiers\": \"PFAA breakthrough by GAC and IX in GW2 occurred approximately three times faster than in GW1 due to multiple orders of magnitude higher influent PFAA concentrations; numeric BVs for GW1 are not restated here, but the fold change is given qualitatively as threefold faster breakthrough.\",\n      \"unit\": null,\n      \"value\": \"3\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E07\"\n      ],\n      \"name\": \"GAC \\u2013 BV50 for short-chain PFSA in GW2\",\n      \"qualifiers\": \"For treatment of GW2, BV50 for short-chain PFSA was calculated for GAC at approximately 7,500 bed volumes.\",\n      \"unit\": \"bed volumes\",\n      \"value\": \"~7500\",\n      \"value_form\": \"approximate_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E07\"\n      ],\n      \"name\": \"IX \\u2013 breakthrough for short-chain PFSA in GW2\",\n      \"qualifiers\": \"For treatment of GW2, breakthrough for IX for short-chain PFSA occurred later at approximately 250,000 BVs; text implies this refers to BV50, but the exact breakthrough percentage is not explicitly stated in the provided excerpt.\",\n      \"unit\": \"bed volumes\",\n      \"value\": \"~250000\",\n      \"value_form\": \"approximate_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E07\"\n      ],\n      \"name\": \"SMC \\u2013 breakthrough for short-chain PFSA in GW2\",\n      \"qualifiers\": \"For treatment of GW2, breakthrough for SMC for short-chain PFSA occurred later at approximately 250,000 BVs; text implies this refers to BV50, but the exact breakthrough percentage is not explicitly stated in the provided excerpt.\",\n      \"unit\": \"bed volumes\",\n      \"value\": \"~250000\",\n      \"value_form\": \"approximate_numeric\"\n    }\n  ],\n  \"record_id\": \"RT02-bge_llm_local_rag-S08-R02\",\n  \"residuals_byproducts\": [],\n  \"source_id\": \"S08\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S08-E02\",\n      \"S08-E04\",\n      \"S08-E07\"\n    ],\n    \"value\": \"laboratory rapid small-scale column tests (RSSCTs) using high-PFAA groundwater (GW2)\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S08-E02\",\n      \"S08-E04\",\n      \"S08-E07\"\n    ],\n    \"value\": \"adsorption in continuous-flow RSSCT columns using GAC, SMC, and IX for GW2\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 9,\n  \"bge_score\": 0.3923671245574951,\n  \"citation\": \"Murray, C.C.; Safulko, A.; Vatankhah, H.; Liu, C.J.; Tajdini, B.; Marshall, R.E.; Bellona, C. PFAS adsorbent selection - The role of adsorbent use rate, water quality, and cost. Journal of Hazardous Materials 2023 454 131481. DOI: 10.1016/j.jhazmat.2023.131481.\",\n  \"doi\": \"10.1016/j.jhazmat.2023.131481\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.jhazmat.2023.131481\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 18,\n      \"locator_id\": \"S08-E01\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.00025800077128224075,\n        \"RT02-C2\": 0.011103169992566109,\n        \"RT02-C3\": 3.7954563595121726e-05,\n        \"umbrella\": 0.5574997663497925\n      },\n      \"section\": \"introduction\",\n      \"text\": \"PFAAs was observed in less than 50,000 BVs processed. Liu et al. [30] reported similar performance for a pilot scale evaluation employing the same GAC product (Filtrasorb 400) treating a groundwater with com - parable water quality and PFAA concentrations. SMC outperformed GAC by a factor of five in the treatment of short chain PFSAs and long chain PFAAs with BV 50 for long chain PFAAs at approximately 250,000 BVs. IX was the best performing adsorbent in treatment of short and long chain PFAAs from GW1 with lower breakthrough observed relative to SMC and GAC. Although short chain PFCAs reached BV 50 at 100,000 BVs, IX suppressed short and long chain PFSA breakthrough to less than 50% for at least 550,000 BVs. IX achieved similar BVs to breakthrough in the treatment of GW1 as was previously found by Zeng et al. [18] in the treatment of Arizona groundwaters. Breakthrough results for GW1 Table 1 Background Water Quality Parameters. GW1 GW2 WW MC LL pH 6.5 \\u00b1 0.1 7.3 \\u00b1 0.7 6.6 \\u00b1 0.2 5.8 \\u00b1 0.09 6.5 \\u00b1 0.1 Conductivity ( \\u00b5 S/cm) 580 \\u00b1 200 260 \\u00b1 7 1300 \\u00b1 20 2800 \\u00b1 50 77,000 \\u00b1 400\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S08-E02\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.01930135302245617,\n        \"RT02-C2\": 0.04929468780755997,\n        \"RT02-C3\": 3.982941052527167e-05,\n        \"umbrella\": 0.2042778879404068\n      },\n      \"section\": \"abstract\",\n      \"text\": \"adsorbents with elevated capacity, selectivity, and cost effectiveness. A novel surface modified organoclay (SMC) adsorbent was evaluated for PFAS removal performance in parallel with granular activated carbon (GAC) and ion exchange resin (IX) for the treatment of five distinct PFAS impaired waters including groundwater, landfill leachate, membrane concentrate and wastewater effluent. Rapid small scale column tests (RSSCTs) and break - through modeling were coupled to provide insight on adsorbent performance and cost for multiple PFAS and Abbreviations: PFAS, Per- and polyfluoroalkyl substance; PFAA, Perfluoroalkyl acid; PFSA, Perfluoroalkyl sulfonic acid; PFCA, Perfluoroalkyl carboxylic acid; PFPeA, Perfluoropentanoate; PFHxA, Perfluorohextanoate; PFHpA, Perfluoroheptanoate; PFOA, Perfluorooctanoate; PFPrS, Perfluoropropane sulfonate; PFBS, Perfluorobutane sulfonate; PFPeS, Perfluoropentane sulfonate; PFHxS, Perfluorohexane sulfonate; PFHpS, Perfluoroheptane sulfonate; PFOS, Perfluorooctane sul - fonate; BV, Bed volume; DOC, Dissolved organic carbon; EBCT, Empty bed contact time; GAC, Granular activated carbon; GW, Groundwater; IX, Ion exchange resin; LL, Landfill leachate; MC, Membrane concentrate; RSSCT, Rapid small scale column test; SMC, Surface modified organoclay; WW, Wastewater effluent. * Corresponding author. E-mail address: cbellona@mines.edu (C. Bellona). Contents lists available at ScienceDirect\"\n    },\n    {\n      \"corpus_chunk\": 30,\n      \"locator_id\": \"S08-E03\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0005841394304297864,\n        \"RT02-C2\": 0.010424046777188778,\n        \"RT02-C3\": 4.473603257793002e-05,\n        \"umbrella\": 0.04863820597529411\n      },\n      \"section\": \"results\",\n      \"text\": \"concentrations of DOC and anions such as WW, LL, and MC. PFAA adsorption inhibition of SMC and IX due to DOC and anions was observed to a lesser extent relative to GAC. SMC and IX were suspected to have outperformed GAC due to electrostatic and hydrophobic adsorption mechanisms working synergistically to facilitate PFAA removal [23,47,77] . Despite less pronounced DOC and anion inhibited PFAA adsorption relative to GAC, higher adsorbent use rates for IX and SMC in the treatment of WW compared to GW1 and GW2 suggested that selective adsorbents (IX and SMC) are still negatively impacted by DOC and anion concentrations. In the treatment of WW with IX and SMC, faster breakthrough times ( Fig. A2 ) and higher adsorbent use rates were observed for all PFAA subclasses except long chain PFSAs relative to GW treatment. With higher concentrations of DOC and anions present, adsorption treatment feasibility of PFAAs in WW requires additional changeouts and thus higher cost. As discussed in Section 3.2 comparing breakthrough for the treat - ment of GW1 and GW2, Fig. 2 generally indicates that adsorbent use rates also increase with higher influent PFAA concentration. This may be due to a higher concentration gradient driving PFAA mass transfer as well as the tendency for long chain PFAA molecules to aggregate at the adsorbent surface in the form of hemimicelles, admicelles, and micelles\"\n    },\n    {\n      \"corpus_chunk\": 4,\n      \"locator_id\": \"S08-E04\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0018968558870255947,\n        \"RT02-C2\": 0.015311917290091515,\n        \"RT02-C3\": 3.743042179848999e-05,\n        \"umbrella\": 0.28780844807624817\n      },\n      \"section\": \"results\",\n      \"text\": \"microcrystals, and surface modified organoclays have been developed to achieve higher PFAA selectivity and capacity, and greater cost effec - tiveness [19 \\u2013 21] . While several novel adsorbents have shown promising results in lab-scale tests (e.g., batch equilibrium experiments), there is a lack of testing in continuous flow configurations with real water matrices along with a shortage of parallel performance comparisons between novel adsorbents and commercially mature adsorbents [19] . Surface modified bentonite organoclay (SMC), a promising novel adsorbent that is commercially available, was selected for further investigation based on its availability at a competitive unit adsorbent price and high PFAA capacity as was demonstrated in previous studies [20,22,23] . The resource intensiveness (e.g., water demands, length of opera - tion) of column experiments has led to the application of rapid small- scale column tests (RSSCTs) as an alternative approach for a realistic assessment of multiple adsorbents [16,24 \\u2013 27] . Recently, RSSCTs have been employed to evaluate PFAA removal by various adsorbents pri - marily from impaired groundwater resources [18,24,26] . Investigated RSSCT studies include assessing and comparing commercially estab - lished GAC and IX products for treatment of PFAAs contaminated groundwater [18] , validating the use of RSSCTs to evaluate IX for PFAA\"\n    },\n    {\n      \"corpus_chunk\": 42,\n      \"locator_id\": \"S08-E05\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.00032734451815485954,\n        \"RT02-C2\": 0.004282866604626179,\n        \"RT02-C3\": 3.734777055797167e-05,\n        \"umbrella\": 0.1849575787782669\n      },\n      \"section\": \"results\",\n      \"text\": \"adsorption performance for current and novel adsorbents in the treat - ment of PFAA impaired groundwaters and more challenging waters with elevated concentrations of PFAAs and inhibitory adsorbates (DOC, an - ions). Investigation of PFAA adsorption performance by SMC, an amine functionalized adsorbent, as well as GAC and IX found that SMC generally outperformed GAC and underperformed IX in PFAA removal in five PFAA impaired waters. Continued work in the exploration of other amine functionalized adsorbents through RSSCTs and pilot scale studies are suggested to further validate the commercial viability of these technologies. Expansion of the modeling and correlation analysis to include more impaired waters with diverse background water quality characteristics could be used to project adsorption performance as a function of DOC and anion concentrations. Although this study intended to provide a normalized comparision of PFAS adsorption inhibition across multiple matrices, further analysis of adsorbent surface charac - teristics following adsorption would help inform potential mechanisms of PFAS adsorption inhibition. Prediction of adsorbent use rates for multiple adsorbents and PFAAs via the Thomas model is critical in the calculation of treatment costs for rapidly evolving suite of contaminated C.C. Murray et al. Journal of Hazardous Materials 454 (2023) 131481 11 water resources. The addition of levelized media cost as an adsorbent selection criterion was also explored using the PFOA adsorbent use rate at 50% breakthrough for each adsorbent and water type. This cost\"\n    },\n    {\n      \"corpus_chunk\": 35,\n      \"locator_id\": \"S08-E06\",\n      \"query_scores\": {\n        \"RT02-C1\": 5.0742561143124476e-05,\n        \"RT02-C2\": 0.003563358448445797,\n        \"RT02-C3\": 3.730107346200384e-05,\n        \"umbrella\": 0.174123615026474\n      },\n      \"section\": \"results\",\n      \"text\": \"IX SC C MC 1.00E- 04 4.31E + 02 0.318 IX SC S MC 5.40E- 05 8.12E + 02 0.169 IX LC C MC 8.50E- 05 3.45E + 02 0.247 IX LC S MC 4.00E- 06 1.95E + 04 0.102 FS SC C GW 2 1.00E- 04 2.00E + 02 0.230 FS SC S GW 2 4.00E- 04 9.00E + 01 0.049 FS LC C GW 2 4.00E- 05 1.11E + 03 0.038 FS LC S GW 2 5.79E- 06 1.44E + 04 0.038 GAC SC C GW 2 7.00E- 04 3.10E + 00 0.262 GAC SC S GW 2 2.58E- 02 3.37E + 00 0.167 GAC LC C GW 2 1.36E- 03 4.22E + 01 0.229 GAC LC S GW 2 1.34E- 04 4.67E + 02 0.269 IX SC C GW 2 4.27E- 04 4.08E + 02 0.176 IX SC S GW 2 4.22E- 04 1.24E + 02 0.062\"\n    },\n    {\n      \"corpus_chunk\": 23,\n      \"locator_id\": \"S08-E07\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0005498008104041219,\n        \"RT02-C2\": 0.01036407146602869,\n        \"RT02-C3\": 3.730580283445306e-05,\n        \"umbrella\": 0.17307747900485992\n      },\n      \"section\": \"results\",\n      \"text\": \"matrix (high \\u03bc g/L measured PFAAs) was performed with GW2 which contained PFAA concentrations multiple orders of magnitude higher than GW1 but had similar background water quality (results shown in the Appendix). The multiple orders of magnitude higher influent PFAA concentrations of GW2 are reflected in three times faster PFAA break - through by GAC and IX compared to their treatment of GW1. For treatment of GW2 (shown in Fig. A2 (all PFAAs)), BV 50 for short chain PFSA was calculated for GAC at approximately 7,500 BVs while break - through for IX and SMC occurred later at approximately 250,000 BVs. As previously noted, use of BVs to breakthrough for comparison of adsorbent performance as shown above is standard in treatment litera - ture [66 \\u2013 69] . However, this metric depreciates with larger datasets of multiple adsorbents and water types. Despite the convenience of breakthrough curves, back and forth comparison of BVs to breakthrough for treatment effectiveness of each adsorbent, PFAA subclass, and water type was impractical. Difficulty in comparison stems from the com - pounding adsorbent, adsorbate, and system properties (adsorbent sur - face chemistry and pore structure, PFAA hydrophobicity, DOC and ion speciation, BV size, operating conditions) that influence adsorption performance. 3.3. Use of the Thomas model for PFAA breakthrough analysis\"\n    },\n    {\n      \"corpus_chunk\": 5,\n      \"locator_id\": \"S08-E08\",\n      \"query_scores\": {\n        \"RT02-C1\": 8.581837028032169e-05,\n        \"RT02-C2\": 0.008370481431484222,\n        \"RT02-C3\": 3.729306627064943e-05,\n        \"umbrella\": 0.171693354845047\n      },\n      \"section\": \"results\",\n      \"text\": \"lished GAC and IX products for treatment of PFAAs contaminated groundwater [18] , validating the use of RSSCTs to evaluate IX for PFAA removal [24] and assessing the impact of operating conditions, adsor - bent features, and PFAA properties that affect adsorption performance [26,28] . To date, application of adsorbents (e.g., GAC, IX) has been primarily focused on remediation of PFAS contaminated groundwater matrices [18,29 \\u2013 31] . Discovery of additional PFAS impacted waters (and sources of PFAS discharges to the environment) including municipal and in - dustrial wastewater (WW) effluent, landfill leachate (LL), and mem - brane concentrate (MC) has accelerated the search for adsorbents that demonstrate treatment effectiveness of more complex water matrices (e. g., elevated organic matter and ions). Treatment of these impacted matrices is challenging with high concentrations of non-PFAS adsor - bates such as dissolved organic carbon (DOC) and inorganic ions capable of competing for, restricting access to, or completely blocking adsorp - tion sites [32 \\u2013 35] . Despite the accumulation of literature aimed to identify effective adsorbents for PFAA removal from impaired source waters [19 \\u2013 21,36, 37] , comparing PFAA adsorption performance of adsorbents treating several source waters under different conditions remains challenging.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2023 - Murray - PFAS adsorbent selection - The role of adsorbent use rate, water quality, and cost.pdf\",\n  \"source_id\": \"S08\",\n  \"title\": \"PFAS adsorbent selection - The role of adsorbent use rate, water quality, and cost\",\n  \"year\": \"2023\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "f0246a81c6397f0decb5e76468ee5063403f0a12c7dcb92e390b2ff5b59b09c3",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.0452255,
+    "finish_reason": "stop",
+    "input_tokens": 6718,
+    "latency_seconds": 25.700077790999785,
+    "output_tokens": 3798,
+    "reasoning_tokens": 1394,
+    "response_id": "chatcmpl-E9N0MkszEtDL4LmUMSfGmhkg6GVFI",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 10516,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The DOI and URL exactly match those given in the cited source metadata (10.1016/j.jhazmat.2023.131481; https://doi.org/10.1016/j.jhazmat.2023.131481).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_type",
+        "reason": "The article reports original experimental work (RSSCTs, breakthrough modeling, and comparisons across adsorbents and waters), which is consistent with classification as a primary experiment.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale",
+        "reason": "S08-E02 and S08-E04 describe the use of rapid small scale column tests (RSSCTs), which are laboratory-scale column experiments, and S08-E07 notes use of GW2 with high \u03bcg/L PFAAs. This supports the description of laboratory RSSCTs using high-PFAA groundwater GW2.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "treatment",
+        "reason": "S08-E02 states that SMC, GAC, and IX were evaluated via RSSCTs for PFAS removal, and S08-E07 focuses specifically on GW2, supporting adsorption in RSSCT columns using these three adsorbents for GW2. However, the phrase \u201ccontinuous-flow\u201d is not explicitly stated in the cited text, even though it is typical for RSSCTs; thus that qualifier is inferred rather than directly supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix",
+        "reason": "S08-E07 explicitly states that GW2 is a matrix with high \u03bcg/L measured PFAAs, contains PFAA concentrations multiple orders of magnitude higher than GW1, and has similar background water quality. This matches the matrix description in the record.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "operating_conditions[0].value",
+        "reason": "S08-E02 and S08-E04 clearly identify the use of rapid small scale column tests (RSSCTs), and S08-E07 discusses breakthrough for multiple PFAA subclasses (all PFAAs) in GW2, supporting RSSCT configuration for breakthrough analysis in GW2. However, the descriptor \u201coperated in continuous flow\u201d is not explicitly stated in the cited excerpts and is inferred from typical RSSCT practice, so that qualifier is only partially supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The unit is null for a descriptive configuration field, which is appropriate because RSSCT configuration is not a numeric measurement requiring a unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "operating_conditions[1].value",
+        "reason": "S08-E04 discusses column experiments and the application of RSSCTs as an alternative approach, implying packed-bed columns, but it does not explicitly state \u201cfixed-bed flow-through.\u201d Thus the existence of column-based flow-through treatment is supported, while the specific \u201cfixed-bed\u201d wording is an inferred qualifier.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The field describes contact mode qualitatively; leaving the unit null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "S08-E07 states that GW2 contained PFAA concentrations multiple orders of magnitude higher than GW1 but had similar background water quality, and no detailed parameters are shown in the excerpt. This matches the summarized water quality description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "This is a qualitative water quality summary, so a null unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "S08-E07 explicitly states that GW2 contained PFAA concentrations multiple orders of magnitude higher than GW1, which directly supports the stated relative influent concentration description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "The field is a qualitative comparison (multiple orders of magnitude higher); no numeric unit is needed, so null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].value",
+        "reason": "S08-E02 and S08-E04 describe rapid small scale column tests (RSSCTs) as an alternative to full column experiments and used to assess multiple adsorbents; S08-E07 applies this to the GW2 matrix. This supports describing the scale as bench-scale RSSCTs used for comparative column performance.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].unit",
+        "reason": "Scale is given qualitatively; a null unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0]",
+        "reason": "S08-E07 explicitly states: \u201cBV 50 for short chain PFSA was calculated for GAC at approximately 7,500 BVs,\u201d directly supporting the inclusion of short-chain PFSAs in the PFAS scope.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1]",
+        "reason": "S08-E07 refers to GW2 as a matrix with high \u03bcg/L measured PFAAs and notes that Fig. A2 shows \u201call PFAAs,\u201d indicating consideration of multiple PFAA subclasses beyond short-chain PFSAs. This supports the broader scope of other PFAA subclasses discussed qualitatively.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "S08-E07 discusses PFAA breakthrough, BV50 for short-chain PFSA, and faster breakthrough as indicators of performance. These are standard measures of contaminant removal behavior in adsorption columns, so classifying the endpoint as \u201cremoval\u201d is appropriate and supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "S08-E07 states that GW2 breakthrough analysis used BV50 for short-chain PFSA and discusses three times faster breakthrough at higher influent PFAA concentrations. This matches the interpretation that removal performance in GW2 was evaluated via breakthrough curves and BV50, with emphasis on faster breakthrough at higher influent levels.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "S08-E07 explicitly uses the terms \u201cBV 50,\u201d \u201cbreakthrough,\u201d and discusses \u201cBVs to breakthrough\u201d as the comparison metric, supporting the reported terms of breakthrough, BV50, and adsorbent use rate (the latter tied to the broader study as described in S08-E05).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "S08-E07 states, \u201cThe multiple orders of magnitude higher influent PFAA concentrations of GW2 are reflected in three times faster PFAA breakthrough by GAC and IX compared to their treatment of GW1.\u201d Recording an exact numeric factor of 3 is consistent with this explicit statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The reported value is a unitless fold-change factor (\u201cthree times faster\u201d). Leaving the unit null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "S08-E07 states, \u201cBV 50 for short chain PFSA was calculated for GAC at approximately 7,500 BVs,\u201d which matches the approximate value \u201c~7500\u201d with value_form set to approximate_numeric.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "S08-E07 reports BV50 in \u201cBVs\u201d (bed volumes). Using \u201cbed volumes\u201d as the unit accurately reflects the metric.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].value",
+        "reason": "S08-E07 says, \u201cbreakthrough for IX and SMC occurred later at approximately 250,000 BVs.\u201d Given that the preceding clause refers to BV50 for short-chain PFSA, it is reasonable to attribute this approximate value (~250000) to breakthrough for the same PFSA subclass. The record notes uncertainty about the exact breakthrough percentage, consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].unit",
+        "reason": "The source (S08-E07) gives breakthrough for IX in \u201cBVs,\u201d so the unit \u201cbed volumes\u201d is correctly transcribed.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].value",
+        "reason": "S08-E07 reports that \u201cbreakthrough for IX and SMC occurred later at approximately 250,000 BVs,\u201d applying the same approximate value to both IX and SMC. The value \u201c~250000\u201d for SMC breakthrough is therefore directly supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].unit",
+        "reason": "The unit \u201cbed volumes\u201d is consistent with S08-E07\u2019s statement that breakthrough occurred at approximately 250,000 BVs.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "S08-E07 highlights that comparisons using BVs to breakthrough become impractical with multiple adsorbents and waters due to compounding system properties, and the provided excerpts do not give specific RSSCT design parameters (e.g., EBCT, bed depth, particle size). Inferring that lack of detailed column design information in the excerpt limits quantitative scale-up is a reasonable design-based limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "S08-E07 compares GW2 to GW1 using the same metric of BVs to breakthrough and notes three times faster breakthrough at higher influent concentrations. S08-E02 and S08-E04 describe standardized RSSCT use across adsorbents and waters. This supports that within-matrix comparisons (same matrix, same RSSCT configuration) are directly comparable and that cross-matrix comparisons are informative but conditioned on different influent concentrations, aligning with \u201ccomparable_with_conditions.\u201d",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The stated reason reflects supported facts: same RSSCT configuration across adsorbents (S08-E02, S08-E04) and the GW1 vs GW2 comparison via BVs to breakthrough and differing influent concentrations (S08-E07). This is a conservative inference from the cited text.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT02-bge_llm_local_rag-S08-R02",
+    "record_usable": true,
+    "record_usable_rationale": "Core study identifiers (source, DOI), matrix (GW2 groundwater), treatment configuration (RSSCT adsorption using GAC, SMC, IX), endpoint definition (breakthrough/BV50 as removal performance), and all quantitative findings (threefold faster breakthrough and BV/BV50 values) are directly supported by the cited excerpts. Some descriptors (e.g., \u201ccontinuous-flow,\u201d \u201cfixed-bed\u201d) are inferred but do not affect the core quantitative or endpoint information. Thus the record is suitable for synthesis with minor attention to inferred qualifiers.",
+    "task_id": "RT02"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

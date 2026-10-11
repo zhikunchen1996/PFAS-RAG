@@ -1,0 +1,547 @@
+{
+  "call_key": "RT08:gpt51_web_search:extraction:WEB07",
+  "created_at": "2026-08-05T03:40:59.810246+00:00",
+  "raw_response_text": "{\"task_id\":\"RT08\",\"source_system\":\"gpt51_web_search\",\"records\":[{\"record_id\":\"WEB07-1\",\"source_id\":\"WEB07\",\"doi_or_stable_url\":\"https://doi.org/10.3390/w14091408\",\"citation\":\"Mahyar A. et al., \\\"Effectiveness of Non-Thermal Plasma Induced Degradation of Per- and Polyfluoroalkyl Substances from Water,\\\" Water, 2022, 14(9), 1408.\",\"study_type\":\"primary_experiment\",\"study_scale\":{\"value\":\"Not specified in abstract (appears to be controlled reactor experiments in water)\",\"evidence_locator_ids\":[\"WEB07-E01\",\"WEB07-E02\"]},\"matrix\":{\"value\":\"Water (PFAS-contaminated aqueous solutions; specific matrix type not detailed in abstract)\",\"evidence_locator_ids\":[\"WEB07-E01\"]},\"pfas_scope\":[{\"value\":\"PFOA (perfluorooctanoic acid)\",\"evidence_locator_ids\":[\"WEB07-E01\"]},{\"value\":\"PFOS (perfluorooctanesulfonic acid)\",\"evidence_locator_ids\":[\"WEB07-E01\"]},{\"value\":\"Shorter-chain PFCAs (perfluoroalkyl carboxylic acids; specific compounds not fully listed in abstract)\",\"evidence_locator_ids\":[\"WEB07-E01\"]},{\"value\":\"Shorter-chain PFSAs (perfluoroalkyl sulfonic acids; specific compounds not fully listed in abstract)\",\"evidence_locator_ids\":[\"WEB07-E01\"]},{\"value\":\"PFHxA (perfluorohexanoic acid) as byproduct\",\"evidence_locator_ids\":[\"WEB07-E01\"]},{\"value\":\"PFBA (perfluorobutanoic acid) as byproduct\",\"evidence_locator_ids\":[\"WEB07-E01\"]},{\"value\":\"PFHpA (perfluoroheptanoic acid) as byproduct\",\"evidence_locator_ids\":[\"WEB07-E01\"]},{\"value\":\"PFHxS (perfluorohexanesulfonic acid) as byproduct\",\"evidence_locator_ids\":[\"WEB07-E01\"]}],\"treatment\":{\"value\":\"Non-thermal plasma reactors with different plasma configurations and operating conditions, applied for PFAS degradation in water and evaluation of removal efficiency and byproduct formation.\",\"evidence_locator_ids\":[\"WEB07-E01\",\"WEB07-E02\"]},\"operating_conditions\":[],\"endpoints\":[{\"endpoint_type\":\"degradation\",\"reported_term\":\"PFAS degradation / removal efficiency\",\"interpretation\":\"Loss of parent PFAS and reduction of PFAS concentrations in water under non-thermal plasma treatment, assessed as PFAS removal efficiency across different plasma configurations and operating conditions. Parent loss is interpreted as degradation because specific shorter-chain PFCA/PFSA byproducts were tracked.\",\"evidence_locator_ids\":[\"WEB07-E01\",\"WEB07-E02\"]},{\"endpoint_type\":\"removal\",\"reported_term\":\"PFAS removal efficiency\",\"interpretation\":\"Decrease in PFAS concentration in the treated water phase, compared among different non-thermal plasma configurations and operating conditions. The abstract labels this as removal efficiency without specifying whether any volatilization or phase transfer occurs.\",\"evidence_locator_ids\":[\"WEB07-E02\"]},{\"endpoint_type\":\"transformation\",\"reported_term\":\"By-product speciation / structure-dependent degradation behavior\",\"interpretation\":\"Formation of specific shorter-chain PFCA/PFSA byproducts (PFHxA, PFBA, PFHpA, PFHxS and others) from parent PFAS, used to assess structure-dependent transformation pathways during non-thermal plasma treatment.\",\"evidence_locator_ids\":[\"WEB07-E01\",\"WEB07-E02\"]}],\"quantitative_findings\":[],\"limitations\":[],\"residuals_byproducts\":[{\"statement\":\"Formation of PFHxA, PFBA, PFHpA, PFHxS and other PFCA/PFSA byproducts was monitored during non-thermal plasma treatment, indicating structure-dependent PFAS transformation pathways.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB07-E01\",\"WEB07-E02\"]}],\"comparability\":{\"status\":\"descriptive_only\",\"reason\":\"Only abstract-level information is available, without numeric removal efficiencies, energy metrics, salinity, co-contaminants, or specific operating conditions. The study qualitatively compares different non-thermal plasma configurations and byproduct patterns but does not provide sufficient detail in the accessible text for standardized comparison with other technologies or matrices.\",\"evidence_locator_ids\":[\"WEB07-E01\",\"WEB07-E02\"]}}],\"extraction_notes\":[\"Extraction limited to abstract-level paraphrased evidence (WEB07-E01, WEB07-E02); full-text details on reactor geometry, operating conditions, PFAS loadings, kinetics, and energy metrics are not accessible in the supplied packet, so no quantitative findings or specific operating parameters could be recorded.\",\"No sources in this task matched the held-out anchor DOI, title, or URL list; no anchor violations occurred.\",\"The mention of specific PFAS (PFOA, PFOS, PFHxA, PFBA, PFHpA, PFHxS, and generic shorter-chain PFCAs/PFSAs) and of non-thermal plasma reactors with varying configurations comes directly from the supplied abstract paraphrases and not from external search snippets.\"]}",
+  "request": {
+    "max_completion_tokens": 16000,
+    "messages": [
+      {
+        "content": "You are an evidence extraction specialist for PFAS treatment and remediation\nresearch. Build a structured study evidence table before any narrative review\nis written.\n\nExtract one record per primary-study experiment, modeled scenario, or field\ndeployment that contributes usable evidence to the review task. A paper may\nproduce more than one record only when materially different matrices,\ntechnologies, operating regimes, or endpoints would otherwise be conflated.\n\nReview articles and perspectives may help identify terminology or primary\nstudies, but they must not be used as the source of a quantitative study\nrecord. Never copy a review table as though it were a primary result.\n\nFor every populated source-dependent field:\n- preserve the PFAS identity or class, matrix, starting concentration or\n  loading, operating conditions, study scale, measured endpoint, value, unit,\n  and material qualifiers when reported;\n- attach only the field-level evidence locator identifiers that directly\n  support that specific value or statement;\n- use an empty string or empty array when the source does not report the\n  information; do not infer or estimate it;\n- do not turn the absence of information in the supplied packet into a study\n  finding, quantitative result, or author-reported limitation unless the source\n  explicitly states that absence;\n- distinguish removal, separation, sorption, parent-compound loss,\n  transformation, degradation, destruction, defluorination, mineralization,\n  total organofluorine change, and toxicity change;\n- classify endpoint_type from what was actually measured, not from the\n  authors' preferred label. Parent loss alone is not destruction. Phase\n  transfer is removal or separation, not degradation. Inorganic fluoride\n  release or fluorine-balance closure can establish defluorination but cannot\n  by itself establish mineralization. Use mineralization only when direct\n  carbon-fate evidence such as CO2/inorganic-carbon production or a carbon\n  balance is reported. Preserve a broader author term in reported_term and\n  explain any mismatch in interpretation;\n- do not normalize or compare values unless their units, denominators,\n  matrices, PFAS scope, operating conditions, and endpoints permit it.\n\nOnly populate quantitative_findings when the source reports an actual numeric\nvalue, inequality, approximate value, range, or explicit ND/not-detected\nresult. Put the number or censoring marker in value and the measurement unit in\nunit. Normalize Unicode inequality signs to ASCII >= or <= and range dashes to\nan ASCII hyphen while preserving the source wording in qualifiers. A unit or\norder-of-magnitude scale without a number is not a quantitative finding.\nQualitative parent loss, intermediate formation, or disappearance belongs in\nthe endpoint interpretation or residual/byproduct statements instead.\n\nSet value_form to exactly one of:\n- exact_numeric: a bare number such as `99.7` or `1.2e-3`;\n- approximate_numeric: `~` followed by a number;\n- inequality: `<`, `<=`, `>`, or `>=` followed by a number;\n- range: two numbers separated by `-` or `to`; or\n- not_detected: exactly `ND`, `N/D`, `not detected`,\n  `below detection limit`, or `below quantification limit`.\n\nPut uncertainty, denominators, fold-change wording, and explanatory text in\nqualifiers rather than value. A deterministic validator will remove malformed\nquantitative fields before source verification.\n\nFor limitations, use basis=author_reported only when the source states the\nlimitation. Use basis=design_inferred only for a constraint that follows\ndirectly from cited design evidence, such as one matrix, one compound, or\nbench-scale operation. Never label missing information in the supplied packet\nas a scientific limitation of the study.\n\nMark each record as comparable with conditions, descriptive only, or not\ncomparable. Comparability is an analyst inference rather than a quotation:\nattach locators for the matrix, scale, conditions, endpoint, and denominator\non which the inference rests, and explain the reason. Do not reward a study\nfor reporting a larger percentage when its endpoint or conditions differ.\n\nThe task was derived from a defining review that is held out from all\ncandidate retrieval systems. The supplied anchor identifiers are an exclusion\nlist, not evidence. Do not extract from the anchor, cite it, reconstruct its\nconclusions, or use its tables.\n\nReturn one JSON object that follows the supplied evidence-table schema exactly.\nDo not write the narrative review in this step.\n",
+        "role": "system"
+      },
+      {
+        "content": "Task:\n{\"review_brief\":\"Prepare a focused review of how electrochemical oxidation, non-thermal plasma, and sonolysis should be matched to a defined PFAS-rich liquid stream.\",\"task_id\":\"RT08\",\"title\":\"Matching a destructive technology to a PFAS-rich liquid stream\"}\n\nTask-specific data extraction objective:\nExtract technology and reactor, feed matrix and PFAS loading, salinity and co-contaminants, operating conditions, kinetic basis, endpoint, energy metric, duration, scale, and stated implementation limitation.\n\nSource system (return this exact value):\ngpt51_web_search\n\nCandidate source identifier (all records must use this exact source_id):\nWEB07\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.coche.2023.100944\"],\"all_blocked_titles\":[\"scaling up water treatment technologies for pfas destruction current status and potential for fit for purpose application\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.coche.2023.100944\"],\"anchor_id\":\"AR-BLOTEVOGEL-2023\",\"corpus_source\":\"2024 - Blotevogel - Scaling up water treatment technologies for PFAS destruction_ current status and potential for fit-for-purpose application.pdf\",\"doi\":\"10.1016/j.coche.2023.100944\",\"title\":\"Scaling up water treatment technologies for PFAS destruction: current status and potential for fit-for-purpose application\",\"url\":\"https://doi.org/10.1016/j.coche.2023.100944\"}\n\nFrozen inspected Web Search sources and evidence locators:\n{\n  \"access_scope\": \"abstract\",\n  \"capture_source_id\": \"WEB16\",\n  \"citation\": \"Mahyar A. et al., Water, 2022, 14(9), 1408.\",\n  \"covered_component_ids\": [\n    \"RT08-C1\",\n    \"RT08-C2\"\n  ],\n  \"doi\": \"10.3390/w14091408\",\n  \"doi_or_stable_url\": \"https://doi.org/10.3390/w14091408\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB07-E01\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract\",\n      \"text\": \"The study evaluated non\\u2011thermal plasma reactors for degrading PFOA, PFOS and several shorter\\u2011chain PFCAs and PFSAs in water, tracking formation of PFHxA, PFBA, PFHpA, PFHxS and other byproducts.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB07-E02\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract\",\n      \"text\": \"Different plasma configurations and operating conditions were compared in terms of PFAS removal efficiency and by\\u2011product speciation, emphasizing structure\\u2011dependent degradation behavior.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://www.mdpi.com/2073-4441/14/9/1408\",\n  \"source_id\": \"WEB07\",\n  \"source_limitations\": [\n    \"Full text not accessible from the inspected page; kinetic and energy data are not visible.\",\n    \"Primarily laboratory-scale synthetic solutions; field matrices are not described in the abstract.\",\n    \"Plasma reactor geometries and gas compositions are only briefly indicated.\"\n  ],\n  \"title\": \"Effectiveness of Non-Thermal Plasma Induced Degradation of Per- and Polyfluoroalkyl Substances from Water\",\n  \"year\": \"2022\"\n}\n\nDo not use search-result snippets as evidence. Use only the frozen inspected\nsource packet and preserve its declared access scope. Omit any source that\nresolves to a held-out anchor DOI, URL, or exact title and report the violation\nin extraction_notes. Extract at most three materially distinct records from\nthis source, prioritizing records that answer the task components.\n\nExtract primary-study evidence needed to answer the task and return the\nschema-constrained study evidence table.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_review_evidence_table",
+        "schema": {
+          "$defs": {
+            "endpoint": {
+              "additionalProperties": false,
+              "properties": {
+                "endpoint_type": {
+                  "enum": [
+                    "removal",
+                    "separation",
+                    "sorption",
+                    "parent_compound_loss",
+                    "transformation",
+                    "degradation",
+                    "destruction",
+                    "defluorination",
+                    "mineralization",
+                    "total_organofluorine_change",
+                    "toxicity_change",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB07-E01",
+                      "WEB07-E02"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "interpretation": {
+                  "type": "string"
+                },
+                "reported_term": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "endpoint_type",
+                "reported_term",
+                "interpretation",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceRecord": {
+              "additionalProperties": false,
+              "properties": {
+                "citation": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "comparability": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_locator_ids": {
+                      "items": {
+                        "enum": [
+                          "WEB07-E01",
+                          "WEB07-E02"
+                        ],
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "type": "array"
+                    },
+                    "reason": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "enum": [
+                        "comparable_with_conditions",
+                        "descriptive_only",
+                        "not_comparable"
+                      ],
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "status",
+                    "reason",
+                    "evidence_locator_ids"
+                  ],
+                  "type": "object"
+                },
+                "doi_or_stable_url": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "endpoints": {
+                  "items": {
+                    "$ref": "#/$defs/endpoint"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "limitations": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "matrix": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "operating_conditions": {
+                  "items": {
+                    "$ref": "#/$defs/namedValue"
+                  },
+                  "type": "array"
+                },
+                "pfas_scope": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceText"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "quantitative_findings": {
+                  "items": {
+                    "$ref": "#/$defs/quantitativeValue"
+                  },
+                  "type": "array"
+                },
+                "record_id": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "residuals_byproducts": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "source_id": {
+                  "enum": [
+                    "WEB07"
+                  ],
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "study_scale": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "study_type": {
+                  "enum": [
+                    "primary_experiment",
+                    "pilot_or_field_deployment",
+                    "modeling_or_life_cycle_study",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "treatment": {
+                  "$ref": "#/$defs/evidenceText"
+                }
+              },
+              "required": [
+                "record_id",
+                "source_id",
+                "doi_or_stable_url",
+                "citation",
+                "study_type",
+                "study_scale",
+                "matrix",
+                "pfas_scope",
+                "treatment",
+                "operating_conditions",
+                "endpoints",
+                "quantitative_findings",
+                "limitations",
+                "residuals_byproducts",
+                "comparability"
+              ],
+              "type": "object"
+            },
+            "evidenceStatement": {
+              "additionalProperties": false,
+              "properties": {
+                "basis": {
+                  "enum": [
+                    "author_reported",
+                    "design_inferred"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB07-E01",
+                      "WEB07-E02"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "statement": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "statement",
+                "basis",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceText": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB07-E01",
+                      "WEB07-E02"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "namedValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB07-E01",
+                      "WEB07-E02"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "quantitativeValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB07-E01",
+                      "WEB07-E02"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "value_form": {
+                  "enum": [
+                    "exact_numeric",
+                    "approximate_numeric",
+                    "inequality",
+                    "range",
+                    "not_detected"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "value_form",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "properties": {
+            "extraction_notes": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "records": {
+              "items": {
+                "$ref": "#/$defs/evidenceRecord"
+              },
+              "maxItems": 3,
+              "type": "array"
+            },
+            "source_system": {
+              "enum": [
+                "gpt51_web_search"
+              ],
+              "type": "string"
+            },
+            "task_id": {
+              "enum": [
+                "RT08"
+              ],
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "source_system",
+            "records",
+            "extraction_notes"
+          ],
+          "title": "PFAS review study evidence table",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "cbfeb56b565a3156d6d73596f42392039fec265cfd06776a3814be562b14d67a",
+  "response_metadata": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.0201975,
+    "finish_reason": "stop",
+    "input_tokens": 2606,
+    "latency_seconds": 17.40640908293426,
+    "output_tokens": 1694,
+    "reasoning_tokens": 604,
+    "response_id": "chatcmpl-E9MmgjsJt18bLhF57ZtgyhiX7Dj5S",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 4300,
+    "web_search_calls": 0
+  },
+  "result": {
+    "extraction_notes": [
+      "Extraction limited to abstract-level paraphrased evidence (WEB07-E01, WEB07-E02); full-text details on reactor geometry, operating conditions, PFAS loadings, kinetics, and energy metrics are not accessible in the supplied packet, so no quantitative findings or specific operating parameters could be recorded.",
+      "No sources in this task matched the held-out anchor DOI, title, or URL list; no anchor violations occurred.",
+      "The mention of specific PFAS (PFOA, PFOS, PFHxA, PFBA, PFHpA, PFHxS, and generic shorter-chain PFCAs/PFSAs) and of non-thermal plasma reactors with varying configurations comes directly from the supplied abstract paraphrases and not from external search snippets."
+    ],
+    "records": [
+      {
+        "citation": "Mahyar A. et al., \"Effectiveness of Non-Thermal Plasma Induced Degradation of Per- and Polyfluoroalkyl Substances from Water,\" Water, 2022, 14(9), 1408.",
+        "comparability": {
+          "evidence_locator_ids": [
+            "WEB07-E01",
+            "WEB07-E02"
+          ],
+          "reason": "Only abstract-level information is available, without numeric removal efficiencies, energy metrics, salinity, co-contaminants, or specific operating conditions. The study qualitatively compares different non-thermal plasma configurations and byproduct patterns but does not provide sufficient detail in the accessible text for standardized comparison with other technologies or matrices.",
+          "status": "descriptive_only"
+        },
+        "doi_or_stable_url": "https://doi.org/10.3390/w14091408",
+        "endpoints": [
+          {
+            "endpoint_type": "degradation",
+            "evidence_locator_ids": [
+              "WEB07-E01",
+              "WEB07-E02"
+            ],
+            "interpretation": "Loss of parent PFAS and reduction of PFAS concentrations in water under non-thermal plasma treatment, assessed as PFAS removal efficiency across different plasma configurations and operating conditions. Parent loss is interpreted as degradation because specific shorter-chain PFCA/PFSA byproducts were tracked.",
+            "reported_term": "PFAS degradation / removal efficiency"
+          },
+          {
+            "endpoint_type": "removal",
+            "evidence_locator_ids": [
+              "WEB07-E02"
+            ],
+            "interpretation": "Decrease in PFAS concentration in the treated water phase, compared among different non-thermal plasma configurations and operating conditions. The abstract labels this as removal efficiency without specifying whether any volatilization or phase transfer occurs.",
+            "reported_term": "PFAS removal efficiency"
+          },
+          {
+            "endpoint_type": "transformation",
+            "evidence_locator_ids": [
+              "WEB07-E01",
+              "WEB07-E02"
+            ],
+            "interpretation": "Formation of specific shorter-chain PFCA/PFSA byproducts (PFHxA, PFBA, PFHpA, PFHxS and others) from parent PFAS, used to assess structure-dependent transformation pathways during non-thermal plasma treatment.",
+            "reported_term": "By-product speciation / structure-dependent degradation behavior"
+          }
+        ],
+        "limitations": [],
+        "matrix": {
+          "evidence_locator_ids": [
+            "WEB07-E01"
+          ],
+          "value": "Water (PFAS-contaminated aqueous solutions; specific matrix type not detailed in abstract)"
+        },
+        "operating_conditions": [],
+        "pfas_scope": [
+          {
+            "evidence_locator_ids": [
+              "WEB07-E01"
+            ],
+            "value": "PFOA (perfluorooctanoic acid)"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB07-E01"
+            ],
+            "value": "PFOS (perfluorooctanesulfonic acid)"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB07-E01"
+            ],
+            "value": "Shorter-chain PFCAs (perfluoroalkyl carboxylic acids; specific compounds not fully listed in abstract)"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB07-E01"
+            ],
+            "value": "Shorter-chain PFSAs (perfluoroalkyl sulfonic acids; specific compounds not fully listed in abstract)"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB07-E01"
+            ],
+            "value": "PFHxA (perfluorohexanoic acid) as byproduct"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB07-E01"
+            ],
+            "value": "PFBA (perfluorobutanoic acid) as byproduct"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB07-E01"
+            ],
+            "value": "PFHpA (perfluoroheptanoic acid) as byproduct"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB07-E01"
+            ],
+            "value": "PFHxS (perfluorohexanesulfonic acid) as byproduct"
+          }
+        ],
+        "quantitative_findings": [],
+        "record_id": "WEB07-1",
+        "residuals_byproducts": [
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB07-E01",
+              "WEB07-E02"
+            ],
+            "statement": "Formation of PFHxA, PFBA, PFHpA, PFHxS and other PFCA/PFSA byproducts was monitored during non-thermal plasma treatment, indicating structure-dependent PFAS transformation pathways."
+          }
+        ],
+        "source_id": "WEB07",
+        "study_scale": {
+          "evidence_locator_ids": [
+            "WEB07-E01",
+            "WEB07-E02"
+          ],
+          "value": "Not specified in abstract (appears to be controlled reactor experiments in water)"
+        },
+        "study_type": "primary_experiment",
+        "treatment": {
+          "evidence_locator_ids": [
+            "WEB07-E01",
+            "WEB07-E02"
+          ],
+          "value": "Non-thermal plasma reactors with different plasma configurations and operating conditions, applied for PFAS degradation in water and evaluation of removal efficiency and byproduct formation."
+        }
+      }
+    ],
+    "source_system": "gpt51_web_search",
+    "task_id": "RT08"
+  },
+  "result_kind": "json",
+  "stage": "structured_extraction"
+}

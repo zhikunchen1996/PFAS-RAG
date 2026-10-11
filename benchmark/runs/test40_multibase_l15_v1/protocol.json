@@ -1,0 +1,36 @@
+{
+  "protocol_id": "test40_multibase_l15_v1",
+  "date": "2026-08-07",
+  "status": "complete",
+  "scope": "Supplementary frozen L1.5 comparison of three base-model RAG answers",
+  "question_count": 40,
+  "systems": [
+    "gpt51_rag",
+    "gemini31_pro_rag",
+    "claude_sonnet5_rag"
+  ],
+  "source_package": "benchmark/runs/test40_multibase_direct_rag_v1",
+  "answer_regeneration": false,
+  "direct_applicable": false,
+  "judge": {
+    "model": "gpt-5.1",
+    "required_snapshot": "gpt-5.1-2025-11-13",
+    "reasoning_effort": "low",
+    "temperature": "provider_default_not_sent",
+    "prompt": "benchmark/frozen_v3/judge/prompts/l15_claim_citation_support_v2.txt",
+    "repeat_count": 1
+  },
+  "inputs_per_judgment": [
+    "visible question",
+    "existing answer with citation markers",
+    "ten complete original final chunks"
+  ],
+  "excluded_inputs": [
+    "gold evidence",
+    "reference claim ledger",
+    "system identity",
+    "outside retrieval"
+  ],
+  "planned_paid_calls": 120,
+  "analysis_role": "supplementary base-model citation-grounding comparison; not a primary answer-quality metric"
+}

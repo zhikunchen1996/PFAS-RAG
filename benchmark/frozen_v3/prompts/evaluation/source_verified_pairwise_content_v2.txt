@@ -1,0 +1,105 @@
+You are conducting a blinded comparison of two answers to the same PFAS
+research question.
+
+The answer order is randomized and carries no information. Answer A is not a
+baseline, and Answer B is not preferred or newer. Do not favor an answer based
+on inferred system identity, specificity, wording, structure, or length.
+
+You receive:
+1. the visible research question;
+2. common task boundaries;
+3. human-audited gold evidence;
+4. a common verification context containing chunks C1-C10;
+5. anonymous Answer A;
+6. anonymous Answer B.
+
+Answers may contain [C#] markers. These markers are evidence locators only.
+They are not an evaluation criterion.
+
+Citation-neutrality rules:
+
+- Do not reward or penalize citation presence, absence, count, density,
+  placement, formatting, or coverage.
+- Do not prefer an answer merely because it contains citations.
+- An answer without citations is fully eligible to win every criterion.
+- Do not calculate citation completeness, citation precision, citation
+  entailment, source coverage, or any other citation-quality score.
+- Use a [C#] marker only to locate evidence when verifying the scientific
+  correctness of the claim attached to it.
+- If a source-dependent claim has no marker, you may inspect all verification
+  chunks for factual verification. Do not penalize the missing marker itself.
+- Do not use citation behavior to decide question fulfillment, uncertainty and
+  limitations, or practical usefulness, except insofar as source verification
+  establishes that a substantive claim is correct or incorrect.
+
+The verification chunks were retrieved automatically. They can contain direct
+evidence, background, nearby but mismatched evidence, conflicting evidence, or
+irrelevant details. A chunk supports only what its text actually states under
+the applicable compound, material, matrix, method, condition, scale, endpoint,
+metric, unit, denominator, comparison basis, and scope.
+
+Gold evidence is authoritative for the claims it contains and defines known
+literature-grounded targets, but it is not necessarily exhaustive. A specific
+claim that is absent from gold must not be called fabricated or incorrect when
+the verification context directly supports it. Conversely, topical similarity
+does not validate a claim, and a citation to a mismatched chunk does not make
+the claim correct.
+
+Compare the answers independently under four criteria. Return A or B only
+when one answer has a material advantage; otherwise return tie.
+
+1. scientific_correctness
+
+Compare factual and scientific accuracy, including compounds, matrices,
+materials, methods, conditions, protocols, numerical claims, endpoint
+meanings, comparisons, and scope. For source-dependent details, use gold and
+the verification context to determine whether the claim is supported. Penalize
+actual contradictions, unsupported extrapolation, endpoint conflation,
+incorrectly transferred conditions, and overgeneralization. Do not treat
+absence from gold alone as evidence that a context-supported claim is
+fabricated.
+
+2. question_fulfillment
+
+Compare whether each answer directly addresses every material component of
+the researcher's question and reaches the conclusions or appropriately
+bounded answers supported by the known evidence. Generic PFAS background does
+not count as fulfillment. Citation presence or style has no value here.
+
+3. uncertainty_and_limitations
+
+Compare treatment of study specificity, incomparability, matrix or condition
+dependence, uncertainty, evidence gaps, and unsupported portions of the
+request. Do not reward generic caution, excessive abstention, or verbosity.
+Citation presence or style has no value here.
+
+4. practical_usefulness
+
+Compare whether the scientifically defensible content helps a researcher
+interpret evidence, plan verification, or make the decision requested by the
+question. Greater length, more headings, and more citations are not inherently
+more useful.
+
+Evaluate each criterion separately. Do not allow strength on one criterion to
+change another criterion's label. Do not return an overall winner, numerical
+score, pass/fail decision, system identity, retrieval assessment, or citation
+assessment.
+
+Return JSON only:
+{
+  "criterion_preferences": {
+    "scientific_correctness": "A | B | tie",
+    "question_fulfillment": "A | B | tie",
+    "uncertainty_and_limitations": "A | B | tie",
+    "practical_usefulness": "A | B | tie"
+  },
+  "criterion_rationales": {
+    "scientific_correctness": "brief comparison grounded in gold and, when needed, verification chunks",
+    "question_fulfillment": "brief citation-neutral comparison",
+    "uncertainty_and_limitations": "brief citation-neutral comparison",
+    "practical_usefulness": "brief citation-neutral comparison"
+  },
+  "material_errors_A": [],
+  "material_errors_B": [],
+  "confidence": "low | medium | high"
+}

@@ -1,0 +1,350 @@
+{
+  "call_key": "RT01:bge_llm_local_rag:verify:RT01-bge_llm_local_rag-S13-R02",
+  "created_at": "2026-08-05T03:51:27.969864+00:00",
+  "raw_response_text": "{\"task_id\":\"RT01\",\"record_id\":\"RT01-bge_llm_local_rag-S13-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record DOI/URL exactly matches the DOI given in the source: \u201c10.1016/j.jwpe.2025.107875\u201d and the same URL string is shown.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The experiments mix multiple matrices (Milli-Q, groundwater, wastewater) and multiple adsorbents (AC and BC-W) while reporting combined adsorption capacities \u201cacross all tested matrices\u201d (S13-E03). This justifies classifying the data as descriptive_only for cross-study quantitative comparison.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The stated reason\u2014that capacities are summarized across matrices/adsorbents and that wastewater organic matter affects performance\u2014is consistent with S13-E03, which notes decreased adsorption in wastewater due to organic matter competition and gives single capacity values \u201cacross all tested matrices.\u201d\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E05 and S13-E07 describe adsorption isotherms of PFAS onto AC and BC-W and discuss adsorption capacity; this is correctly classified as a sorption endpoint.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Batch adsorption isotherms and adsorption capacity in mg g\u22121 are explicitly described (S13-E05, S13-E07), matching the interpretation that this is the amount sorbed per mass of adsorbent at equilibrium.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E04 reports percentage removal (100%, 82%, 60%) and S13-E03 discusses PFAS removal effectiveness across matrices; these are removal endpoints.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E03 notes PFAS removal remained effective in Milli-Q water and groundwater but decreased in wastewater due to organic matter competition, while S13-E04 provides removal percentages, matching the interpretation.\"},{\"field_path\":\"endpoints[2].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The third endpoint summarizes mechanistic interpretation (hydrophobic interactions, chain length, DOM competition) rather than a measured performance metric; classifying it as \u201cother\u201d is appropriate and supported by S13-E02, S13-E05, S13-E07, and S13-E03.\"},{\"field_path\":\"endpoints[2].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E05 and S13-E02 attribute adsorption trends to hydrophobicity, chain length, and functional group; S13-E07 emphasizes hydrophobic interactions; S13-E03 attributes wastewater performance decrease to organic matter competition, especially for PFOA\u2014all matching the stated interpretation.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E03 provides single adsorption capacity values (7.7, 16.1, 4.8 mg g\u22121) \u201cacross all tested matrices\u201d for AC and BC-W, without matrix- or adsorbent-specific breakdown. It is a valid design-inferred limitation that this constrains matrix- and material-specific interpretation.\"},{\"field_path\":\"limitations[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E03 qualitatively attributes decreased wastewater performance to organic matter competition, particularly for PFOA, and mentions co-contaminants and natural organic matter, but no quantitative competitive-adsorption parameters are given in the supplied text. The stated design-inferred limitation follows.\"},{\"field_path\":\"matrix.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E01 refers to \u201cPFAS-concentrated water matrices, including groundwater and waste-water,\u201d and S13-E03 states that PFAS removal remained effective in \u201cMilli-Q water and groundwater\u201d but decreased in wastewater. Together they support the value listing Milli-Q water, groundwater, and wastewater.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E02 and S13-E08 specify that the dose of each adsorbent was 1 g L\u22121; S13-E07 repeats \u201cusing 1 g L\u22121 of adsorbent,\u201d matching the value 1.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The unit g L\u22121 is explicitly used in S13-E02, S13-E07, and S13-E08 for adsorbent dose and is correctly recorded as g/L.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E05 states that adsorption isotherms were conducted over a concentration range of 0.1 to 100 mg L\u22121 of each PFAS, matching the value 0.1\u2013100.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E05 gives the concentration range in mg L\u22121; recording the unit as mg/L is correct.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E05 notes Cd(II) was maintained at a constant 10 mg L\u22121 while PFAS concentration varied, matching the value 10.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Cd(II) concentration is reported in mg L\u22121 in S13-E05, so mg/L is the correct unit.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E07 specifies isotherm experiments used 24 h of contact time, matching the value 24.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Contact time is clearly expressed in hours (24 h) in S13-E07, so unit h is correct.\"},{\"field_path\":\"operating_conditions[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Both S13-E02 (kinetics) and S13-E07 (isotherms) give pH ~7, matching the value \u201c~7.\u201d\"},{\"field_path\":\"operating_conditions[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"pH is dimensionless and rightly has a null/empty unit; the text (S13-E02, S13-E07) only gives a numeric pH value.\"},{\"field_path\":\"operating_conditions[5].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E03 attributes decreased wastewater adsorption performance to organic matter competition and mentions co-contaminants, co-occurring cations, and natural organic matter. This supports the description of dissolved organic matter and co-occurring cations as co-constituents.\"},{\"field_path\":\"operating_conditions[5].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The co-constituents field is descriptive and not quantitative; having no unit is appropriate and consistent with the source.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E01 lists perfluorooctanoic acid (PFOA) with its formula, matching the value.\"},{\"field_path\":\"pfas_scope[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E01 lists perfluorooctanesulfonic acid (PFOS) with its formula, matching the value.\"},{\"field_path\":\"pfas_scope[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E01 lists perfluoro-2-propoxypropanoic acid (GenX), matching the value.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E03 reports adsorption capacities \u201c7.7 mg g\u22121, 16.1 mg g\u22121, 4.8 mg g\u22121 for PFOA, PFOS, and GenX, respectively.\u201d The first value 7.7 corresponds to PFOA and is correctly transcribed.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E03 reports capacities in mg g\u22121; mg/g is the correct unit.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The second capacity reported in S13-E03 is 16.1 mg g\u22121 for PFOS, matching the value 16.1.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The adsorption capacity unit given in S13-E03 is mg g\u22121; mg/g is correctly recorded.\"},{\"field_path\":\"quantitative_findings[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The third capacity in S13-E03 is 4.8 mg g\u22121 for GenX, matching the value 4.8.\"},{\"field_path\":\"quantitative_findings[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Again, S13-E03 uses mg g\u22121 for adsorption capacity; mg/g is correct.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The supplied text (methods, results, and conclusion excerpts) discuss only adsorption of PFAS and Cd(II) and do not mention degradation, transformation products, or defluorination; inferring that only mass transfer (adsorption) was studied is reasonable as a design-inferred statement.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E08 describes batch experiments in 50-mL bottles with 20 mg adsorbent and 20 mL solution (1 g L\u22121) and S13-E03 mentions tests in multiple water matrices, indicating bench-scale batch adsorption isotherms and multi-matrix tests with AC and biochars for PFAS and Cd(II) removal.\"},{\"field_path\":\"study_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The work describes new batch adsorption experiments with specified methods and results (S13-E08, S13-E05, S13-E03), which is a primary experimental study.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S13-E01 and S13-E08 describe commercial activated carbon and several biochars (including wood-derived BC-W) used as adsorbents for PFAS and Cd(II) in batch adsorption experiments; S13-E03 and the title emphasize simultaneous PFAS and Cd(II) removal and regeneration, matching the description of regenerable carbonaceous adsorbents AC and BC-W evaluated across matrices.\"}],\"record_usable\":true,\"record_usable_rationale\":\"All core elements\u2014study identity, matrices, adsorbents, operating conditions, endpoints (adsorption and removal), and quantitative adsorption capacities\u2014are accurately transcribed and well supported by the cited source text. Any interpretive or limitation statements are clearly design-inferred and consistent with the evidence, so the record is suitable for synthesis with attention to its descriptive-only comparability status.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused, data-grounded review explaining how an engineer should select an adsorption medium for a specified PFAS profile and water matrix.\",\"task_id\":\"RT01\",\"title\":\"Selecting an adsorption medium for a defined PFAS water-treatment application\"}\n\nTask-specific extraction objective:\nExtract adsorbent identity and properties, PFAS identity, water matrix, influent concentration, pH, co-constituents, dose or bed conditions, adsorption endpoint, quantitative result, and reported mechanism.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Chaudhary, A.; Usman, M.; Ma\\u0161ek, O.; Haderlein, S.; Hanna, K. Simultaneous removal of PFAS and cadmium from different water matrices using regenerable carbonaceous adsorbents. Journal of Water Process Engineering 2025, 74, 107875.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S13-E01\",\n      \"S13-E03\",\n      \"S13-E05\",\n      \"S13-E07\"\n    ],\n    \"reason\": \"Adsorption capacities are summarized across different matrices and possibly across two adsorbents (AC and BC-W) without matrix- or adsorbent-specific breakdown, and wastewater performance is affected by organic matter competition, so values are useful for qualitative benchmarking but not strictly comparable to single-matrix DI water batch tests or to other studies without careful normalization.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.jwpe.2025.107875\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"sorption\",\n      \"evidence_locator_ids\": [\n        \"S13-E03\",\n        \"S13-E05\",\n        \"S13-E07\"\n      ],\n      \"interpretation\": \"Amount of PFAS sorbed per mass of carbonaceous adsorbent at equilibrium, based on batch isotherm data and summarized as adsorption capacities (mg/g).\",\n      \"reported_term\": \"adsorption capacity; adsorption isotherms\"\n    },\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S13-E03\"\n      ],\n      \"interpretation\": \"Change in PFAS aqueous concentration in Milli-Q water, groundwater, and wastewater; organic matter competition in wastewater reduced PFAS removal, particularly for PFOA, but substantial removal was maintained.\",\n      \"reported_term\": \"PFAS removal performance across water matrices\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S13-E02\",\n        \"S13-E03\",\n        \"S13-E05\",\n        \"S13-E07\"\n      ],\n      \"interpretation\": \"PFAS adsorption followed the order PFOS > PFOA > GenX for both AC and BC-W, attributed to hydrophobic interactions, chain length, water solubility, and functional group; dissolved organic matter in wastewater competes for sorption sites, decreasing PFAS uptake, especially for PFOA.\",\n      \"reported_term\": \"sorption mechanism and competitive effects\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S13-E03\"\n      ],\n      \"statement\": \"Adsorption capacities (7.7, 16.1, 4.8 mg/g for PFOA, PFOS, GenX) are reported as representative across all tested matrices without disaggregating by specific matrix or by adsorbent (AC vs BC-W), limiting matrix-specific and material-specific interpretation.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S13-E03\",\n        \"S13-E05\",\n        \"S13-E07\"\n      ],\n      \"statement\": \"Wastewater matrix effects are qualitatively attributed to organic matter competition, particularly reducing PFOA adsorption, but quantitative comparison of isotherm parameters or site competition is not provided in the supplied text.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S13-E01\",\n      \"S13-E03\"\n    ],\n    \"value\": \"PFAS-concentrated water matrices including Milli-Q water, groundwater, and wastewater\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E02\",\n        \"S13-E05\",\n        \"S13-E07\"\n      ],\n      \"name\": \"Adsorbent dose\",\n      \"qualifiers\": \"Used in isotherm measurements and matrix-comparison tests\",\n      \"unit\": \"g/L\",\n      \"value\": \"1\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E05\",\n        \"S13-E07\"\n      ],\n      \"name\": \"Initial PFAS concentration range\",\n      \"qualifiers\": \"Each of PFOA, PFOS, and GenX varied independently in isotherms while Cd(II) held constant\",\n      \"unit\": \"mg/L\",\n      \"value\": \"0.1-100\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E05\",\n        \"S13-E07\"\n      ],\n      \"name\": \"Cd(II) concentration during PFAS isotherms\",\n      \"qualifiers\": \"Cd(II) maintained constant while PFAS concentration varied\",\n      \"unit\": \"mg/L\",\n      \"value\": \"10\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E07\"\n      ],\n      \"name\": \"Contact time\",\n      \"qualifiers\": \"Isotherms conducted with 24 h equilibration at 1 g/L adsorbent, pH ~7\",\n      \"unit\": \"h\",\n      \"value\": \"24\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E02\",\n        \"S13-E05\",\n        \"S13-E07\"\n      ],\n      \"name\": \"pH\",\n      \"qualifiers\": \"Isotherms and matrix tests conducted around neutral pH\",\n      \"unit\": null,\n      \"value\": \"~7\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E03\",\n        \"S13-E05\",\n        \"S13-E07\"\n      ],\n      \"name\": \"Co-constituents in wastewater and groundwater\",\n      \"qualifiers\": \"Organic matter in wastewater noted as competing sorbate, particularly affecting PFOA adsorption\",\n      \"unit\": null,\n      \"value\": \"Dissolved organic matter and co-occurring cations\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E01\",\n        \"S13-E02\",\n        \"S13-E03\",\n        \"S13-E05\"\n      ],\n      \"value\": \"Perfluorooctanoic acid (PFOA)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E01\",\n        \"S13-E02\",\n        \"S13-E03\",\n        \"S13-E05\",\n        \"S13-E07\"\n      ],\n      \"value\": \"Perfluorooctanesulfonic acid (PFOS)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E01\",\n        \"S13-E02\",\n        \"S13-E03\",\n        \"S13-E05\"\n      ],\n      \"value\": \"Perfluoro-2-propoxypropanoic acid (GenX)\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E03\"\n      ],\n      \"name\": \"PFAS adsorption capacity on carbonaceous adsorbents across matrices\",\n      \"qualifiers\": \"Adsorption capacity for PFOA on activated carbon and/or wood-derived biochar across Milli-Q water, groundwater, and wastewater; authors state that AC and BC-W maintained substantial capacities (7.7 mg/g PFOA) despite lower performance in wastewater due to organic matter competition.\",\n      \"unit\": \"mg/g\",\n      \"value\": \"7.7\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E03\"\n      ],\n      \"name\": \"PFAS adsorption capacity on carbonaceous adsorbents across matrices\",\n      \"qualifiers\": \"Adsorption capacity for PFOS on activated carbon and/or wood-derived biochar across Milli-Q water, groundwater, and wastewater; reported as 16.1 mg/g.\",\n      \"unit\": \"mg/g\",\n      \"value\": \"16.1\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E03\"\n      ],\n      \"name\": \"PFAS adsorption capacity on carbonaceous adsorbents across matrices\",\n      \"qualifiers\": \"Adsorption capacity for GenX on activated carbon and/or wood-derived biochar across Milli-Q water, groundwater, and wastewater; reported as 4.8 mg/g.\",\n      \"unit\": \"mg/g\",\n      \"value\": \"4.8\",\n      \"value_form\": \"exact_numeric\"\n    }\n  ],\n  \"record_id\": \"RT01-bge_llm_local_rag-S13-R02\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S13-E01\",\n        \"S13-E03\",\n        \"S13-E05\",\n        \"S13-E07\"\n      ],\n      \"statement\": \"Study evaluates PFAS mass transfer to adsorbents (adsorption capacities and isotherms) but does not report PFAS degradation, transformation products, or defluorination in any matrix.\"\n    }\n  ],\n  \"source_id\": \"S13\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S13-E01\",\n      \"S13-E03\",\n      \"S13-E05\",\n      \"S13-E07\"\n    ],\n    \"value\": \"Bench-scale adsorption isotherms and multi-matrix tests (Milli-Q water, groundwater, and wastewater) using activated carbon and wood-derived biochar (BC-W) for PFAS and Cd(II) co-removal\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S13-E01\",\n      \"S13-E03\",\n      \"S13-E05\",\n      \"S13-E07\"\n    ],\n    \"value\": \"Regenerable carbonaceous adsorbents: commercial activated carbon (AC) and wood-derived biochar (BC-W), evaluated via adsorption isotherms and across multiple water matrices for simultaneous PFAS and Cd(II) removal\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 18,\n  \"bge_score\": 0.2855335772037506,\n  \"citation\": \"Chaudhary, A.; Usman, M.; Ma\\u0161ek, O.; Haderlein, S.; Hanna, K. Simultaneous removal of PFAS and cadmium from different water matrices using regenerable carbonaceous adsorbents. Journal of Water Process Engineering 2025 74 107875. DOI: 10.1016/j.jwpe.2025.107875.\",\n  \"doi\": \"10.1016/j.jwpe.2025.107875\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.jwpe.2025.107875\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 6,\n      \"locator_id\": \"S13-E01\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.042058054357767105,\n        \"RT01-C2\": 0.005932665895670652,\n        \"RT01-C3\": 3.825073872576468e-05,\n        \"umbrella\": 0.21367542445659637\n      },\n      \"section\": \"methods\",\n      \"text\": \"A comprehensive evaluation of sorption isotherms, interplay of PFAS and Cd(II) adsorption, sorption kinetics, and pH dependence is performed. Additionally, adsorbent regeneration is explored to optimize reusability. Finally, to assess real-world applicability, the materials are tested using PFAS-concentrated water matrices, including groundwater and waste - water, providing insights into their upscaling potential. 2. Experimental section 2.1. Chemicals and reagents Perfluorooctanesulfonic acid (PFOS CF 3 (CF 2 ) 7 SO 3 H), per - fluorooctanoic acid (PFOA CF 3 (CF 2 ) 6 COOH), sodium hydroxide (NaOH), and hydrochloric acid (HCl), were acquired from Sigma- Aldrich. Perfluoro-2-propoxypropanoic acid (GenX) was obtained from Manchester Organics Limited. All chemicals used in the study were of analytical grade or better and used as received. All laboratory solutions were prepared using deionized (DI) water (Elga PURELAB Chorus, 18.2 M \\u03a9 -cm). This study utilized various adsorbents: commercially available acti - vated carbon (Sigma Aldrich) and three biochars. One biochar (BC-W) originated from pyrolyzed hardwood ( \\u00b4 El \\u00b4emenTerre, France), while the other two came from sewage sludge pyrolyzed at different temperatures including 550 \\u25e6 C (BC-SS550) and 700 \\u25e6\"\n    },\n    {\n      \"corpus_chunk\": 19,\n      \"locator_id\": \"S13-E02\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.5359669923782349,\n        \"RT01-C2\": 0.001832569483667612,\n        \"RT01-C3\": 3.781784835155122e-05,\n        \"umbrella\": 0.025833312422037125\n      },\n      \"section\": \"methods\",\n      \"text\": \"attributed to differences in water solubility, chain length, and the nature of functional groups suggesting a predominant role of hydrophobic in - teractions in sorption processes [ 30 , 31 ]. High water solubility and shorter chain length of GenX contribute to its lower adsorption compared to PFOS and PFOA [ 36 ]. Moreover, the adsorption of GenX can also be significantly limited by the presence of longer chained PFAS compounds as suggested in our previous study [ 20 , 36 ] and elsewhere [ 37 ]. The higher adsorption of PFOS compared to PFOA, despite having the same chain length, can be attributed to the hydrophobic nature of PFOS and its sulfonate functional group consistent with literature Fig. 2. Adsorption of PFAS (PFOA, PFOS and GenX) and Cd(II) versus time onto activated carbon (a) and wood-derived biochar (BC-W) (b). The initial con - centration of each PFOA, PFOS, GenX, and Cd(II) was 10 mg L \\u0000 1 , and the dose of each adsorbent was 1 g L \\u0000 1 , pH ~7. Solid lines represent the fitted pseudo- second order kinetic model curves. The error bars indicate the standard devi - ation derived from triplicate measurements. Table 3 Kinetic and equilibrium obtained when the experimental data related to the\"\n    },\n    {\n      \"corpus_chunk\": 33,\n      \"locator_id\": \"S13-E03\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.01358719076961279,\n        \"RT01-C2\": 0.1870165318250656,\n        \"RT01-C3\": 3.859733624267392e-05,\n        \"umbrella\": 0.0543479397892952\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"metal recovery techniques, contributing to waste minimization and sustainable resource management. While PFAS removal remained effective in Milli-Q water and groundwater, adsorption performance decreased in wastewater due to organic matter competition, particularly for PFOA. Nevertheless, AC and BC-W maintained substantial adsorption capacities (7.7 mg g \\u0000 1 , 16.1 mg g \\u0000 1 , 4.8 mg g \\u0000 1 for PFOA, PFOS, and GenX, respectively) across all tested matrices, demonstrating their feasibility for treating highly contaminated waters. In conclusion this study demonstrates that biochar, particularly BC- W, is a viable and sustainable alternative to activated carbon for PFAS and Cd(II) co-removal in highly contaminated water matrices. Further - more, biochar, being a scalable, low-cost material derived from waste biomass, aligns with circular economy principles, making it an attractive option for industrial applications. Future research should explore upscaling these adsorbents and tailoring their surface chemistry as composite materials to enhance the capture of short-chain PFAS, even in the presence of co-contaminants, co-occurring cations, and natural organic matter. In parallel, developing effective strategies to mitigate the inhibitory effects of dissolved organic matter \\u2014 such as pre-treatment steps or adsorbent surface functionalization \\u2014 will be crucial to maintain\"\n    },\n    {\n      \"corpus_chunk\": 13,\n      \"locator_id\": \"S13-E04\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.07826343178749084,\n        \"RT01-C2\": 0.0031500121112912893,\n        \"RT01-C3\": 0.00018451781943440437,\n        \"umbrella\": 0.03701566904783249\n      },\n      \"section\": \"methods\",\n      \"text\": \"GenX) as detailed previously [ 19 ]. Instrumental and background contamination of PFAS was removed by installing a PFAS delay column (PFAS analyses kit, Waters) that effectively delayed instrumental contribution of PFAS from solvents, solvent lines, and pump. Sample quantification was performed using a 10-point calibration curve (R 2 > 0.99). The methodology for PFAS analysis has been previously described in our previous study [ 19 ]. Cd(II) has been analyzed using Inductively coupled plasma mass spectrometry (ICP-MS) [ 20 ]. 3. Results and discussion 3.1. PFAS adsorption by activated carbon and biochars Fig. 1 presents the comparative adsorption of PFOA, PFOS, and GenX, onto activated carbon (AC) and three biochars (BC-W, BC-SS700, and BC-SS550) in the presence of Cd(II) at an initial concentration of 10 mg L \\u0000 1 for each contaminant. AC and BC-W exhibited significantly greater adsorption capacity for all three PFASs compared to biochars produced from sewage sludge (BC-SS700 and BC-SS550). Notably, AC achieved complete removal (100%) of PFOS, along with 82% and 60% removal of PFOA and GenX, respectively. BC-W also completely\"\n    },\n    {\n      \"corpus_chunk\": 18,\n      \"locator_id\": \"S13-E05\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.5110493898391724,\n        \"RT01-C2\": 0.0019869219977408648,\n        \"RT01-C3\": 3.75407726096455e-05,\n        \"umbrella\": 0.1881641298532486\n      },\n      \"section\": \"methods\",\n      \"text\": \"The rapid sorption kinetics and consistent adsorption capacity across a range of pH levels of the investigated carbonaceous adsorbents suggest their potential for efficient removal of PFAS from contaminated water sources. 3.3. Effect of the concentration of PFAS and Cd(II) Adsorption isotherms were constructed to assess how initial con - centrations of PFAS and Cd(II) impact their sorption onto AC and BC-W ( Fig. 3 ). Three common isotherm models - Langmuir, Freundlich, and Temkin - were applied to analyze the experimental data. Freundlich model provided the best fit (R 2 > 0.96) (data not shown for other models) for both adsorbents. The corresponding parameters are sum - marized in Table 3 . The PFAS adsorption isotherms, conducted over a concentration range of 0.1 to 100 mg L \\u0000 1 of each PFAS while maintaining Cd(II) at a constant 10 mg L \\u0000 1 , revealed significant variations in PFAS adsorption depending on the type of adsorbent and the specific PFAS molecule. PFAS adsorption varied in the following order: PFOS > PFOA > GenX, regardless of the adsorbent material ( Fig. 3 a and b). This trend can be attributed to differences in water solubility, chain length, and the nature of functional groups suggesting a predominant role of hydrophobic in -\"\n    },\n    {\n      \"corpus_chunk\": 21,\n      \"locator_id\": \"S13-E06\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.4925874173641205,\n        \"RT01-C2\": 0.002318022307008505,\n        \"RT01-C3\": 4.636028461391106e-05,\n        \"umbrella\": 0.07826237380504608\n      },\n      \"section\": \"methods\",\n      \"text\": \"PFOA 5.61 0.59 0.99 7.76 0.03 0.93 PFOS 24.96 0.33 0.96 10.27 0.04 0.98 GenX 3.63 0.19 0.99 2.53 0.05 0.96 Cd(II) 19.21 0.74 0.99 9.27 0.08 0.96 A. Chaudhary et al. Journal of Water Process Engineering 74 (2025) 107875 4 [ 38 \\u2013 40 ]. Higher retention of perfluoroalkyl carboxylates (PFCAs) than perfluoroalkyl sulfonates (PFSAs) has been reported [ 40 ], up to 1.3-fold due to the higher hydrophobicity [ 41 ]. The smaller size of the carboxylic functional group of PFOA and other perfluoroalkyl carboxylates (PFCAs) likely contributes to their lower hydrophobicity than the sulfonic func - tional group [ 42 ]. Overall, our findings suggest that the adsorption ca - pacity of PFAS is dictated by a combination of factors \\u2013 their hydrophobicity, chain length, and functional group. An increase in the amount of PFAS led to a slight increase in the absorption of Cd(II) ( Fig. 3 c). Similarly, the adsorption isotherm of Cd (II), conducted while maintaining PFAS concentrations constant,\"\n    },\n    {\n      \"corpus_chunk\": 24,\n      \"locator_id\": \"S13-E07\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.26885056495666504,\n        \"RT01-C2\": 0.003405381692573428,\n        \"RT01-C3\": 3.729993477463722e-05,\n        \"umbrella\": 0.06981008499860764\n      },\n      \"section\": \"methods\",\n      \"text\": \"[ 45 ] reported a significant increase in PFOA adsorption compared to PFOS when decreasing the pH from 8 to 1.5. Similarly, Deng, et al. [ 47 ] observed a stronger effect of decreasing pH on PFOA adsorption compared to PFOS. Varying sensitivity of PFAS to pH changes suggests that specific interactions involving the functional groups of PFAS might play a crucial role in its adsorption process. Moreover, robust PFOS removal indicates that adsorption is governed mainly by hydrophobic rather than electrostatic interactions in agreement with literature [ 31 ]. Fig. 3. Adsorption isotherms of PFOA, PFOS, and GenX onto activated carbon (a) and wood-derived biochar BC-W (b), and the effect of varying PFAS concentrations on Cd(II) adsorption on activated carbon and biochar BC-W (c). Initial concentrations of each PFAS ranged from 0.1 to 100 mg L \\u0000 1 in the presence of Cd (10 mg L \\u0000 1 ) using 1 g L \\u0000 1 of adsorbent after 24 h of contact time, pH ~7. Solid lines represent the fitted isotherm model curves. The error bars indicate the standard deviation derived from triplicate measurements. Fig. 4. (a) Adsorption isotherms of Cd(II) onto activated carbon and biochar (BC-W). Fig.\"\n    },\n    {\n      \"corpus_chunk\": 7,\n      \"locator_id\": \"S13-E08\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.19689542055130005,\n        \"RT01-C2\": 0.007372672203928232,\n        \"RT01-C3\": 4.476496542338282e-05,\n        \"umbrella\": 0.06441143900156021\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"C (BC-SS550) and 700 \\u25e6 C (BC-SS700) (UK Biochar Research Centre, based at the University of Edinburgh, with properties detailed at this link: https://www.biochar.ac.uk/standard_materials.ph p ) [ 22 ]. A summary of their properties is provided in Table 1 . 2.2. Adsorption experiments PFAS adsorption efficiency was assessed through batch experiments conducted in 50-mL amber glass bottles, each containing 20 mg of adsorbent (1 g L \\u0000 1 of AC, BC-W, BC-SS550 or BC-SS700) and 20 mL deionized water spiked with a mixture of PFAS and Cd(II) at an initial concentration of 10 mg L \\u0000 1 of each contaminant. The sealed bottles were shaken at 200 rpm on a platform shaker at 24 \\u00b1 2 \\u25e6 C for 24 h. Afterward, suspensions were centrifuged, and the supernatant was stored in vials at 4 \\u25e6 C for subsequent LC/MS/MS analysis. All tests were performed in triplicate, with control samples prepared without adsorbents, and cor - rected for minor losses to bottle ( < 5%). The quantity of PFAS adsorbed onto the materials was determined by calculating the difference between the initial solute concentration in solution and the final concentration in the supernatant over time,\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2025 - Chaudhary - Simultaneous removal of PFAS and cadmium from different water matrices using regenerable carbonaceous adsorbents.pdf\",\n  \"source_id\": \"S13\",\n  \"title\": \"Simultaneous removal of PFAS and cadmium from different water matrices using regenerable carbonaceous adsorbents\",\n  \"year\": \"2025\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "c70dc2cb73925b1dcbafd86b91cff0748989e964a1eb89bf3c8032e2546b824c",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.04428925,
+    "finish_reason": "stop",
+    "input_tokens": 7065,
+    "latency_seconds": 29.704695708001964,
+    "output_tokens": 3661,
+    "reasoning_tokens": 1177,
+    "response_id": "chatcmpl-E9MwcQvX78kHv0Mmfz4Gp4Dh6V794",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 10726,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The record DOI/URL exactly matches the DOI given in the source: \u201c10.1016/j.jwpe.2025.107875\u201d and the same URL string is shown.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The experiments mix multiple matrices (Milli-Q, groundwater, wastewater) and multiple adsorbents (AC and BC-W) while reporting combined adsorption capacities \u201cacross all tested matrices\u201d (S13-E03). This justifies classifying the data as descriptive_only for cross-study quantitative comparison.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The stated reason\u2014that capacities are summarized across matrices/adsorbents and that wastewater organic matter affects performance\u2014is consistent with S13-E03, which notes decreased adsorption in wastewater due to organic matter competition and gives single capacity values \u201cacross all tested matrices.\u201d",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "S13-E05 and S13-E07 describe adsorption isotherms of PFAS onto AC and BC-W and discuss adsorption capacity; this is correctly classified as a sorption endpoint.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "Batch adsorption isotherms and adsorption capacity in mg g\u22121 are explicitly described (S13-E05, S13-E07), matching the interpretation that this is the amount sorbed per mass of adsorbent at equilibrium.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "S13-E04 reports percentage removal (100%, 82%, 60%) and S13-E03 discusses PFAS removal effectiveness across matrices; these are removal endpoints.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "S13-E03 notes PFAS removal remained effective in Milli-Q water and groundwater but decreased in wastewater due to organic matter competition, while S13-E04 provides removal percentages, matching the interpretation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].endpoint_type",
+        "reason": "The third endpoint summarizes mechanistic interpretation (hydrophobic interactions, chain length, DOM competition) rather than a measured performance metric; classifying it as \u201cother\u201d is appropriate and supported by S13-E02, S13-E05, S13-E07, and S13-E03.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].interpretation",
+        "reason": "S13-E05 and S13-E02 attribute adsorption trends to hydrophobicity, chain length, and functional group; S13-E07 emphasizes hydrophobic interactions; S13-E03 attributes wastewater performance decrease to organic matter competition, especially for PFOA\u2014all matching the stated interpretation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "S13-E03 provides single adsorption capacity values (7.7, 16.1, 4.8 mg g\u22121) \u201cacross all tested matrices\u201d for AC and BC-W, without matrix- or adsorbent-specific breakdown. It is a valid design-inferred limitation that this constrains matrix- and material-specific interpretation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1]",
+        "reason": "S13-E03 qualitatively attributes decreased wastewater performance to organic matter competition, particularly for PFOA, and mentions co-contaminants and natural organic matter, but no quantitative competitive-adsorption parameters are given in the supplied text. The stated design-inferred limitation follows.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix.value",
+        "reason": "S13-E01 refers to \u201cPFAS-concentrated water matrices, including groundwater and waste-water,\u201d and S13-E03 states that PFAS removal remained effective in \u201cMilli-Q water and groundwater\u201d but decreased in wastewater. Together they support the value listing Milli-Q water, groundwater, and wastewater.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "S13-E02 and S13-E08 specify that the dose of each adsorbent was 1 g L\u22121; S13-E07 repeats \u201cusing 1 g L\u22121 of adsorbent,\u201d matching the value 1.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The unit g L\u22121 is explicitly used in S13-E02, S13-E07, and S13-E08 for adsorbent dose and is correctly recorded as g/L.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "S13-E05 states that adsorption isotherms were conducted over a concentration range of 0.1 to 100 mg L\u22121 of each PFAS, matching the value 0.1\u2013100.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "S13-E05 gives the concentration range in mg L\u22121; recording the unit as mg/L is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "S13-E05 notes Cd(II) was maintained at a constant 10 mg L\u22121 while PFAS concentration varied, matching the value 10.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "Cd(II) concentration is reported in mg L\u22121 in S13-E05, so mg/L is the correct unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "S13-E07 specifies isotherm experiments used 24 h of contact time, matching the value 24.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "Contact time is clearly expressed in hours (24 h) in S13-E07, so unit h is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].value",
+        "reason": "Both S13-E02 (kinetics) and S13-E07 (isotherms) give pH ~7, matching the value \u201c~7.\u201d",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].unit",
+        "reason": "pH is dimensionless and rightly has a null/empty unit; the text (S13-E02, S13-E07) only gives a numeric pH value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[5].value",
+        "reason": "S13-E03 attributes decreased wastewater adsorption performance to organic matter competition and mentions co-contaminants, co-occurring cations, and natural organic matter. This supports the description of dissolved organic matter and co-occurring cations as co-constituents.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[5].unit",
+        "reason": "The co-constituents field is descriptive and not quantitative; having no unit is appropriate and consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "S13-E01 lists perfluorooctanoic acid (PFOA) with its formula, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1].value",
+        "reason": "S13-E01 lists perfluorooctanesulfonic acid (PFOS) with its formula, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[2].value",
+        "reason": "S13-E01 lists perfluoro-2-propoxypropanoic acid (GenX), matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "S13-E03 reports adsorption capacities \u201c7.7 mg g\u22121, 16.1 mg g\u22121, 4.8 mg g\u22121 for PFOA, PFOS, and GenX, respectively.\u201d The first value 7.7 corresponds to PFOA and is correctly transcribed.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "S13-E03 reports capacities in mg g\u22121; mg/g is the correct unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "The second capacity reported in S13-E03 is 16.1 mg g\u22121 for PFOS, matching the value 16.1.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "The adsorption capacity unit given in S13-E03 is mg g\u22121; mg/g is correctly recorded.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].value",
+        "reason": "The third capacity in S13-E03 is 4.8 mg g\u22121 for GenX, matching the value 4.8.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].unit",
+        "reason": "Again, S13-E03 uses mg g\u22121 for adsorption capacity; mg/g is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "The supplied text (methods, results, and conclusion excerpts) discuss only adsorption of PFAS and Cd(II) and do not mention degradation, transformation products, or defluorination; inferring that only mass transfer (adsorption) was studied is reasonable as a design-inferred statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "S13-E08 describes batch experiments in 50-mL bottles with 20 mg adsorbent and 20 mL solution (1 g L\u22121) and S13-E03 mentions tests in multiple water matrices, indicating bench-scale batch adsorption isotherms and multi-matrix tests with AC and biochars for PFAS and Cd(II) removal.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_type",
+        "reason": "The work describes new batch adsorption experiments with specified methods and results (S13-E08, S13-E05, S13-E03), which is a primary experimental study.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "S13-E01 and S13-E08 describe commercial activated carbon and several biochars (including wood-derived BC-W) used as adsorbents for PFAS and Cd(II) in batch adsorption experiments; S13-E03 and the title emphasize simultaneous PFAS and Cd(II) removal and regeneration, matching the description of regenerable carbonaceous adsorbents AC and BC-W evaluated across matrices.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT01-bge_llm_local_rag-S13-R02",
+    "record_usable": true,
+    "record_usable_rationale": "All core elements\u2014study identity, matrices, adsorbents, operating conditions, endpoints (adsorption and removal), and quantitative adsorption capacities\u2014are accurately transcribed and well supported by the cited source text. Any interpretive or limitation statements are clearly design-inferred and consistent with the evidence, so the record is suitable for synthesis with attention to its descriptive-only comparability status.",
+    "task_id": "RT01"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

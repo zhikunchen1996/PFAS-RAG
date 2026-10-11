@@ -1,0 +1,386 @@
+{
+  "call_key": "RT02:bge_llm_local_rag:verify:RT02-bge_llm_local_rag-S07-R02",
+  "created_at": "2026-08-05T03:55:05.152725+00:00",
+  "raw_response_text": "{\"task_id\":\"RT02\",\"record_id\":\"RT02-bge_llm_local_rag-S07-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The study uses batch-derived equilibrium and kinetic parameters to calibrate a transport model and then performs forward predictions for a full-scale GAC system, explicitly noting that results are qualitative and recommending pilot-scale verification (E02, E05, E08). It is reasonable to classify comparability as conditional on similar operating and fouling conditions.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 and E05 describe batch calibration of a diffusion-limited transport model and forward prediction for a full-scale GAC system. E01 and E08 emphasize that competition with DOC and other PFASs and DOC fouling can cause differences between model predictions and actual systems, and that the modeling provides qualitative insight and should be verified with pilot columns. The recorded reason accurately reflects these points.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 describes full-scale system simulations for PFAS breakthrough (bed volumes to breakthrough), which directly relates to removal/breakthrough performance. Classifying this as a removal endpoint is consistent with the modeled metric (breakthrough/bed volumes).\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 describes using equilibrium and kinetic batch data to calibrate a transport model. E02 states that forward predictions were carried out to simulate a full-scale GAC system and to confirm that predicted bed volumes to breakthrough were on the same order as previously observed values. This matches the interpretation that batch-calibrated parameters were used to predict full-scale breakthrough and BV_BT and compared to prior column observations.\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 explicitly mentions \\\"bed volumes to breakthrough (BV_BT)\\\" and simulations of a GAC adsorption system for PFAS breakthrough. The reported term paraphrases these concepts accurately.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 explains that equilibrium and kinetic batch data (sorption to GAC) were used to determine partition coefficients (Kd) and calibrate a diffusion-limited sorption model. E01 then relates relative sorptive affinity to breakthrough order. This is appropriately classified as a sorption endpoint.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 states that both diffusion-limited and equilibrium models predicted similar breakthrough orders despite kinetic limitations and that relative affinity for GAC may adequately indicate breakthrough order when kinetic or column tests are not possible. This supports the interpretation that batch-derived Kd values can qualitatively indicate sorptive affinity and breakthrough sequence.\"},{\"field_path\":\"endpoints[1].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 discusses relative affinity of PFASs for GAC and breakthrough order. The reported term \\\"relative affinity; breakthrough order\\\" is directly grounded in this language.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E08 states that \\\"while the forward-modeling approach used here provides useful qualitative insight, pilot-scale column verification experiments should be conducted if sufficient water quantities are available.\\\" This closely matches the recorded limitation statement.\"},{\"field_path\":\"limitations[1].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 notes that competition for sorption sites (between PFASs and between PFASs and DOC) may affect breakthrough behavior differently in actual systems than predicted by the model and discusses continuous DOC loading and fouling. The recorded limitation is a faithful restatement of this author-reported caveat.\"},{\"field_path\":\"limitations[2].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 reports that a previous study using the same model found that batch calibration experiments at higher DOC levels gave better predictions for column verification experiments, suggesting that continuous DOC loading may lead to greater fouling not captured by the model. The limitation text accurately reflects this author discussion.\"},{\"field_path\":\"limitations[3].statement\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"E02 explains that an apparent tortuosity was fitted (adjusted to minimize SSR) and used to account for observed differences among PFASs. However, the specific claim that this limits the mechanistic interpretability and transferability of the parameters is an analyst inference, not explicitly stated by the authors. The core fact (tortuosity as an adjustable parameter) is supported, but the limitation framing is not explicitly author-reported.\"},{\"field_path\":\"matrix.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract (E06) mentions an AFFF-impacted drinking water, and E05 refers to an AFFF-impacted groundwater. E02 describes simulations of a GAC system treating AFFF-impacted water. The value \\\"AFFF-impacted groundwater/drinking water treated in a modeled full-scale GAC system\\\" accurately captures this combined description.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 states that the simulated system consisted of a pair of 28.5 m3 vessels operating in series at 1.5 m3/min, each containing 2.7 m of GAC, and that the model was calibrated for F300. This matches the described system configuration.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This field is descriptive (system configuration) and appropriately has no unit; the source text in E02 is consistent with a unitless descriptive value.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 states \\\"a pair of 28.5 m3 vessels\\\"; the value 28.5 for each vessel volume is correct.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 reports vessel volume in m3; the unit m3 is correct.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 notes that each vessel contained 2.7 m of GAC. The value 2.7 is correctly recorded as the bed depth.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 expresses this depth in meters; unit m is correct.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 reports the system operating \\\"at 1.5 m3/min\\\"; the recorded flow rate value 1.5 matches.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The flow rate in E02 is given in m3/min; the unit m3/min is correct.\"},{\"field_path\":\"operating_conditions[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 describes a transport model based on intraparticle diffusion-limited sorption kinetics calibrated with batch data, and E02 refers to forward simulations with that calibrated model. The value \\\"intraparticle diffusion-limited sorption model\\\" accurately reflects this.\"},{\"field_path\":\"operating_conditions[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The transport_model field is categorical/descriptive and correctly has no unit.\"},{\"field_path\":\"operating_conditions[5].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 explains an apparent tortuosity parameter was adjusted to minimize SSR and used to account for differences among PFASs, which is consistent with describing apparent tortuosity as \\\"fitted.\\\"\"},{\"field_path\":\"operating_conditions[5].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The apparent_tortuosity_calibration field is descriptive and correctly unitless.\"},{\"field_path\":\"operating_conditions[6].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 reports the Peclet numbers as 3.5 and 7.6 for 7K-PFOS and 6:2 FHxSO2PA-MePS, respectively. The value 3.5 for 7K-PFOS matches the source.\"},{\"field_path\":\"operating_conditions[6].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Peclet number is dimensionless, so leaving the unit null is appropriate.\"},{\"field_path\":\"operating_conditions[7].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 states the Peclet number for 6:2 FHxSO2PA-MePS is 7.6. The recorded value 7.6 is correct.\"},{\"field_path\":\"operating_conditions[7].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Peclet number is dimensionless, so a null unit is appropriate.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract (E06) notes 30 PFASs including recently discovered PFASs; E05 mentions treating a broader suite of PFASs, including polyfluorinated precursors and PFOS-like PFASs; E03 describes various PFAS classes and PFOS-like PFASs in AFFF-impacted groundwater. The recorded scope summarizing PFOA, PFOS, PFCAs, PFSAs, polyfluorinated precursors, and PFOS-like PFASs is consistent with these descriptions.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 specifies \\\"a pair of 28.5 m3 vessels\\\". The quantitative finding of 28.5 for vessel volume is correct.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 reports vessel volume in m3; the unit m3 is correctly captured.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 reports the system operating \\\"at 1.5 m3/min\\\". The quantitative finding value 1.5 is correct.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The flow rate in E02 is given in m3/min; the unit m3/min is correctly recorded.\"},{\"field_path\":\"quantitative_findings[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 indicates each vessel contains 2.7 m of GAC. The value 2.7 is accurately captured.\"},{\"field_path\":\"quantitative_findings[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The bed depth is given in meters in E02; unit m is correct.\"},{\"field_path\":\"quantitative_findings[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 reports the Peclet number for 7K-PFOS as 3.5; this matches the recorded value.\"},{\"field_path\":\"quantitative_findings[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Peclet number is dimensionless; a null unit is appropriate.\"},{\"field_path\":\"quantitative_findings[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 reports the Peclet number for 6:2 FHxSO2PA-MePS as 7.6; the recorded value is correct.\"},{\"field_path\":\"quantitative_findings[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Peclet number is dimensionless; a null unit is appropriate.\"},{\"field_path\":\"residuals_byproducts[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01/E08 indicate that smaller compounds may initially appear more strongly retained because they reach portions of virgin carbon before DOC or larger PFASs, making them susceptible to remobilization over time. The recorded statement accurately reflects this discussion.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 notes that limited water availability led to a combination of batch experiments and modeling, and that forward simulations were evaluated for a full-scale GAC adsorption system. E02 details the pair of 28.5 m3 vessels in series. The description as a modeling study simulating a full-scale system, calibrated with bench-scale batch data, is accurate.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 describes use of granular activated carbon (GAC) and calibration of an intraparticle diffusion-limited sorption model using batch data, followed by forward simulations of a full-scale GAC system. E02 notes that the model was calibrated for F300. The treatment description accurately summarizes modeled GAC F300 adsorption with diffusion-limited transport calibrated from batch experiments.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements for synthesis\u2014source identity, PFAS matrix, GAC treatment and configuration, endpoint types, and key quantitative operating conditions and Peclet numbers\u2014are all directly supported by the cited text. The only partial issue is interpretive language around one author-reported limitation on apparent tortuosity, which does not affect the core data. Thus, the record is usable with minor caution about that specific limitation being partly analyst-inferred.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of when batch adsorption results do and do not predict column, pilot, or full-scale PFAS treatment performance.\",\"task_id\":\"RT02\",\"title\":\"Translating PFAS adsorption results from batch tests to continuous treatment\"}\n\nTask-specific extraction objective:\nExtract study scale, adsorbent, PFAS and matrix, batch or flow configuration, contact time, flow and bed properties, capacity definition, breakthrough criterion, bed volumes, media lifetime, and uncertainty or scale-up limitation.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Xiao, X.; Ulrich, B.A.; Chen, B.; Higgins, C.P. Sorption of Poly- and Perfluoroalkyl Substances (PFASs) Relevant to Aqueous Film-Forming Foam (AFFF)-Impacted Groundwater by Biochars and Activated Carbon. Environ. Sci. Technol. 2017, 51, 6342\\u20136351.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S07-E01\",\n      \"S07-E02\",\n      \"S07-E05\",\n      \"S07-E08\"\n    ],\n    \"reason\": \"The model explicitly links batch-derived sorption and kinetic parameters to predicted full-scale GAC breakthrough for multiple PFASs in AFFF-impacted water, with defined vessel volume, bed depth, and flow rate. However, predictions are qualitative and contingent on assumptions about intraparticle diffusion, DOC fouling, and competitive sorption; thus, comparisons to actual column or plant performance are valid only when these conditions are similar.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1021/acs.est.7b00970\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S07-E01\",\n        \"S07-E02\",\n        \"S07-E08\"\n      ],\n      \"interpretation\": \"The model used batch-calibrated sorption and diffusion parameters to predict PFAS breakthrough in a full-scale GAC system, reporting bed volumes to breakthrough and comparing predicted breakthrough order across PFASs to previous column observations.\",\n      \"reported_term\": \"PFAS breakthrough behavior; bed volumes to breakthrough (BV_BT)\"\n    },\n    {\n      \"endpoint_type\": \"sorption\",\n      \"evidence_locator_ids\": [\n        \"S07-E01\",\n        \"S07-E02\",\n        \"S07-E08\"\n      ],\n      \"interpretation\": \"Relative PFAS sorptive affinity derived from batch Kd values was used to predict relative breakthrough order in columns; both equilibrium and diffusion-limited models produced similar breakthrough orders for most PFASs, suggesting that batch-derived affinity may qualitatively indicate breakthrough sequence when column tests are not feasible.\",\n      \"reported_term\": \"relative affinity; breakthrough order\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S07-E08\"\n      ],\n      \"statement\": \"The forward-modeling approach provides useful qualitative insight into PFAS breakthrough behavior, but the authors recommend that pilot-scale column verification experiments be conducted when sufficient water quantities are available.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S07-E01\"\n      ],\n      \"statement\": \"Competition for sorption sites (between PFASs and between PFASs and dissolved organic carbon) may affect breakthrough behavior differently in actual systems than predicted by the model, particularly under continuous DOC loading and potential GAC fouling.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S07-E01\"\n      ],\n      \"statement\": \"A previous application of the same model indicated that batch calibration experiments at higher DOC levels improved prediction of column breakthrough, suggesting that the present model may underrepresent DOC fouling effects when extrapolating from batch data.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S07-E02\"\n      ],\n      \"statement\": \"Apparent tortuosity was treated as an adjustable parameter to fit PFAS-specific kinetic behavior, rather than being independently measured, which may limit the mechanistic interpretability and transferability of the calibrated model parameters.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S07-E02\",\n      \"S07-E05\",\n      \"S07-E06\"\n    ],\n    \"value\": \"AFFF-impacted groundwater/drinking water treated in a modeled full-scale GAC system\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E02\"\n      ],\n      \"name\": \"system_configuration\",\n      \"qualifiers\": \"Modeled system identical in size and operation to a previously monitored full-scale system; model calibrated for GAC F300\",\n      \"unit\": null,\n      \"value\": \"Two 28.5 m3 GAC vessels in series, each containing 2.7 m of GAC bed depth\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E02\"\n      ],\n      \"name\": \"vessel_volume\",\n      \"qualifiers\": \"Each simulated vessel volume\",\n      \"unit\": \"m3\",\n      \"value\": \"28.5\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E02\"\n      ],\n      \"name\": \"GAC_bed_depth\",\n      \"qualifiers\": \"Bed depth per vessel in the simulated system\",\n      \"unit\": \"m\",\n      \"value\": \"2.7\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E02\"\n      ],\n      \"name\": \"flow_rate\",\n      \"qualifiers\": \"Flow rate through the pair of vessels in series\",\n      \"unit\": \"m3/min\",\n      \"value\": \"1.5\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E02\"\n      ],\n      \"name\": \"transport_model\",\n      \"qualifiers\": \"Model parameters (including apparent tortuosity) calibrated using batch equilibrium and kinetic data for multiple PFASs on F300 GAC\",\n      \"unit\": null,\n      \"value\": \"intraparticle diffusion-limited sorption model\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E02\"\n      ],\n      \"name\": \"apparent_tortuosity_calibration\",\n      \"qualifiers\": \"Apparent tortuosity treated as an adjustable parameter to minimize SSR, accounting for observed PFAS-specific differences\",\n      \"unit\": null,\n      \"value\": \"fitted\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E01\"\n      ],\n      \"name\": \"Peclet_number_7K-PFOS\",\n      \"qualifiers\": \"For PFAS 7K-PFOS under simulated conditions; only compound-specific Peclet number reported as >1 aside from 6:2 FHxSO2PA-MePS\",\n      \"unit\": null,\n      \"value\": \"3.5\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E01\"\n      ],\n      \"name\": \"Peclet_number_6:2_FHxSO2PA-MePS\",\n      \"qualifiers\": \"For PFAS 6:2 FHxSO2PA-MePS under simulated conditions; Peclet number above 1, indicating less significant diffusion limitations\",\n      \"unit\": null,\n      \"value\": \"7.6\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E01\",\n        \"S07-E03\",\n        \"S07-E06\"\n      ],\n      \"value\": \"Suite of AFFF-derived PFASs (including PFOA, PFOS, PFCAs, PFSAs, polyfluorinated precursors, and PFOS-like PFASs) whose sorption to GAC was characterized in batch tests and then used for modeling breakthrough in full-scale GAC vessels\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E02\"\n      ],\n      \"name\": \"vessel_volume\",\n      \"qualifiers\": \"Volume of each GAC vessel in the simulated full-scale system\",\n      \"unit\": \"m3\",\n      \"value\": \"28.5\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E02\"\n      ],\n      \"name\": \"flow_rate\",\n      \"qualifiers\": \"System flow rate used in full-scale GAC simulations\",\n      \"unit\": \"m3/min\",\n      \"value\": \"1.5\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E02\"\n      ],\n      \"name\": \"GAC_bed_depth\",\n      \"qualifiers\": \"GAC bed depth per vessel in the simulated system\",\n      \"unit\": \"m\",\n      \"value\": \"2.7\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E01\"\n      ],\n      \"name\": \"Peclet_number_7K-PFOS\",\n      \"qualifiers\": \"Dimensionless Peclet number for 7K-PFOS under simulated operating conditions; indicates relatively less diffusion limitation compared to PFASs with Peclet <1\",\n      \"unit\": null,\n      \"value\": \"3.5\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E01\"\n      ],\n      \"name\": \"Peclet_number_6:2_FHxSO2PA-MePS\",\n      \"qualifiers\": \"Dimensionless Peclet number for 6:2 FHxSO2PA-MePS under simulated operating conditions; indicates diffusion limitations are less significant for this PFAS\",\n      \"unit\": null,\n      \"value\": \"7.6\",\n      \"value_form\": \"exact_numeric\"\n    }\n  ],\n  \"record_id\": \"RT02-bge_llm_local_rag-S07-R02\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S07-E01\"\n      ],\n      \"statement\": \"The authors note that smaller PFAS compounds may initially appear more strongly retained in GAC because they reach portions of virgin carbon before DOC or larger PFASs, making them susceptible to remobilization over time as fouling progresses, which is not fully captured by the model.\"\n    }\n  ],\n  \"source_id\": \"S07\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S07-E02\",\n      \"S07-E05\",\n      \"S07-E06\"\n    ],\n    \"value\": \"Modeling study simulating a full-scale GAC adsorption system (pair of 28.5 m3 vessels in series) treating AFFF-impacted water, calibrated with bench-scale batch data\"\n  },\n  \"study_type\": \"modeling_or_life_cycle_study\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S07-E02\",\n      \"S07-E05\",\n      \"S07-E06\"\n    ],\n    \"value\": \"Modeled granular activated carbon (GAC, F300) adsorption in full-scale contactors operated in series, with intraparticle diffusion-limited transport and sorption kinetics calibrated from batch experiments\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 8,\n  \"bge_score\": 0.4028475880622864,\n  \"citation\": \"Xiao, X.; Ulrich, B.A.; Chen, B.; Higgins, C.P. Sorption of Poly- and Perfluoroalkyl Substances (PFASs) Relevant to Aqueous Film-Forming Foam (AFFF)-Impacted Groundwater by Biochars and Activated Carbon. Environmental Science & Technology 2017 51 6342-6351. DOI: 10.1021/acs.est.7b00970.\",\n  \"doi\": \"10.1021/acs.est.7b00970\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1021/acs.est.7b00970\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 28,\n      \"locator_id\": \"S07-E01\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0026470732409507036,\n        \"RT02-C2\": 0.02432437241077423,\n        \"RT02-C3\": 3.733541598194279e-05,\n        \"umbrella\": 0.38039538264274597\n      },\n      \"section\": \"results\",\n      \"text\": \"7K-PFOS and 6:2 FHxSO 2PA\\u2212MePS were exceptions, as the di \\ufb00usion- limited model predicted these compounds to be later in the breakthrough order than the equilibrium model. This is likely because di \\ufb00usion limitations were less signi \\ufb01cant for these PFASs for the simulated operating conditions, as they were the only compounds with Peclet numbers above 1 (3.5 and 7.6 for 7K-PFOS and 6:2 FHxSO 2PA\\u2212MePS, respectively; Table S6 ). As both models predicted similar breakthrough orders despite strong kinetic limitations, the relative a \\ufb03 nity of the various PFASs for GAC may adequately indicate breakthrough order when kinetic tests or column tests are not possible. It is important to note that competition for sorption sites (between PFASs, as well as PFASs and DOC) may a \\ufb00ect breakthrough behavior di \\ufb00erently in actual systems than is predicted by the model. For example, a previous study using the same model found that batch calibration experiments at higher DOC levels provided better predictions for observed break- through behavior in column veri \\ufb01cation experiments, 1 suggest- ing that continuous loading with DOC may lead to greater fouling e \\ufb00ects that are not described in the model. Furthermore, smaller compounds may initially appear to be more strongly retained because they reach portions of virgin carbon before DOC or larger PFASs, making them susceptible\"\n    },\n    {\n      \"corpus_chunk\": 16,\n      \"locator_id\": \"S07-E02\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.02949037030339241,\n        \"RT02-C2\": 0.010043209418654442,\n        \"RT02-C3\": 3.7322133721318096e-05,\n        \"umbrella\": 0.033039748668670654\n      },\n      \"section\": \"methods\",\n      \"text\": \"tortuosity\\u201d to minimize the sum of squared residuals (SSR). While the actual tortuosity is a physical property of the sorbent (describing its pore-interconnectivity), this apparent tortuosity was used to account for observed di \\ufb00erences among PFASs (discussed later). For PFASs that did not appear to approach equilibrium in the kinetic experiments, an equilibrium K d was estimated with the linearized pseudo second-order kinetic model (normalized to \\ufb01t peak area data; eq S4 ) 47\\u221249 to avoid ambiguity from \\ufb01tting multiple parameters simultaneously. It is important to note that this linearized model is known to underestimate equilibrium K d, particularly for systems that are far from equilibrium; 50 thus, results should be interpreted with this potential bias in mind. Full-Scale System Simulations. Forward predictions were carried out to simulate a GAC adsorption system treating AFFF-impacted water identical in size and operation to a system that was monitored for PFAS breakthrough in a previous study 30 to con \\ufb01rm that the predicted bed volumes to breakthrough (BV BT) were on the same order of magnitude as previously observed values. The simulated system consisted of a pair of 28.5 m 3 vessels operating in series at 1.5 m 3/min, each containing 2.7 m of GAC (the model was calibrated for F300,\"\n    },\n    {\n      \"corpus_chunk\": 20,\n      \"locator_id\": \"S07-E03\",\n      \"query_scores\": {\n        \"RT02-C1\": 6.296901119640097e-05,\n        \"RT02-C2\": 0.08694592863321304,\n        \"RT02-C3\": 3.732181721716188e-05,\n        \"umbrella\": 0.051315680146217346\n      },\n      \"section\": \"results\",\n      \"text\": \"niopropyl per \\ufb02uoroalkanesulfonamides ( N-SPAmP\\u2212FASAs) and the N-sulfohydroxypropyl dimethylammoniopropyl per- \\ufb02uoroalkanesulfonamides ( N-SHOPAmP\\u2212FASAs) are more strongly sorbed than their shorter-chained counterparts, whereas an increase in per \\ufb02uoroalkyl chain length for the homologues among the N-sulfopropyl per \\ufb02uoroalkanesulfona- mides ( N-SP\\u2212FASAs) did not lead to increased sorption (Figures 2 and S2). Somewhat surprisingly, if PFASs with a per\\ufb02uorohexyl moiety are compared, 6:2 FtS demonstrated the highest 20 day log K d value, despite the fact that many of the other C6-based PFASs have much larger head groups. The calculated K d values for these poly \\ufb02uorinated compounds suggests that for a given per \\ufb02uoroalkyl tail length, there is not a high degree of variability among the PFASs examined here with respect to their sorptive a \\ufb03 nity for F300, at least over 20 days. This is likely a result of the competing e \\ufb00ects of higher MW head groups that also contain polar or charged functional groups. A pair of PFOS-like PFASs were also observed in the AFFF- impacted groundwater and were removed, to some extent, by F300. Both unsaturated PFOS (U-PFOS) and a ketone derivative (7K-PFOS; structures shown in Table 1 ) have been detected in AFFF or AFFF-impacted groundwater,\"\n    },\n    {\n      \"corpus_chunk\": 50,\n      \"locator_id\": \"S07-E04\",\n      \"query_scores\": {\n        \"RT02-C1\": 3.737121369340457e-05,\n        \"RT02-C2\": 0.005873178597539663,\n        \"RT02-C3\": 3.743534398381598e-05,\n        \"umbrella\": 0.014037137851119041\n      },\n      \"section\": \"methods\",\n      \"text\": \"Environ. Sci. Technol. 2017, 51 (5), 2508 \\u22122518. Environmental Science & Technology Article DOI: 10.1021/acs.est.7b00970 Environ. Sci. Technol. 2017, 51, 6342 \\u22126351 6351\"\n    },\n    {\n      \"corpus_chunk\": 6,\n      \"locator_id\": \"S07-E05\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.003272063098847866,\n        \"RT02-C2\": 0.008631996810436249,\n        \"RT02-C3\": 3.733330959221348e-05,\n        \"umbrella\": 0.20369906723499298\n      },\n      \"section\": \"methods\",\n      \"text\": \"40,41 may impact GAC e \\ufb03 cacy for PFOA and PFOS removal. The objective of this study was to evaluate the potential for carbonaceous sorbents to remove a suite of PFASs, including newly discovered PFASs, from an AFFF-impacted groundwater. Due to the limited quantities of contaminated water available for shipping to the laboratory ( \\u223c10 L), this was achieved primarily through batch experiments and modeling. First, the sorptive removal of PFASs was compared for several types of carbonaceous sorbents (i.e., two biochars and GAC). Then, equilibrium and kinetic batch data were used to calibrate a transport model based on intraparticle di \\ufb00usion-limited sorption kinetics to describe sorption of a broad suite of AFFF-derived PFASs to GAC. Forward simulations were then evaluated for a full-scale GAC adsorption system to assess the treatability of the other PFASs relative to the more commonly monitored PFCAs and PFSAs. Finally, a simple approach for predicting the breakthrough behavior of AFFF-derived PFASs in GAC adsorption systems was evaluated by relating predicted breakthrough times to chromatography retention times. Our results bring to light the importance of considering a broader suite of PFASs (including poly \\ufb02uorinated precursors and PFOS-like PFASs) during GAC treatment of AFFF-impacted drinking water. \\u25a0 MATERIALS AND METHODS Sorbents and Groundwater. The initially screened\"\n    },\n    {\n      \"corpus_chunk\": 0,\n      \"locator_id\": \"S07-E06\",\n      \"query_scores\": {\n        \"RT02-C1\": 4.413671194924973e-05,\n        \"RT02-C2\": 0.040489308536052704,\n        \"RT02-C3\": 3.7288835301296785e-05,\n        \"umbrella\": 0.16006331145763397\n      },\n      \"section\": \"abstract\",\n      \"text\": \"Sorption of Poly- and Per \\ufb02uoroalkyl Substances (PFASs) Relevant to Aqueous Film-Forming Foam (AFFF)-Impacted Groundwater by Biochars and Activated Carbon Xin Xiao, \\u2020,\\u2021,\\u00a7 Bridget A. Ulrich, \\u2021 Baoliang Chen, \\u2020,\\u00a7 and Christopher P. Higgins *,\\u2021 \\u2020Department of Environmental Science, Zhejiang University, Hangzhou 310058, China \\u2021Department of Civil and Environmental Engineering, Colorado School of Mines, Golden, Colorado 80401, United States \\u00a7Zhejiang Provincial Key Laboratory of Organic Pollution Process and Control, Hangzhou 310058, China *S Supporting Information ABSTRACT: Despite growing concerns about human ex- posure to per \\ufb02uorooctanoate (PFOA) and per \\ufb02uorooctanesul- fonate (PFOS), other poly- and per \\ufb02uoroalkyl substances (PFASs) derived from aqueous \\ufb01lm-forming foams (AFFFs) have garnered little attention. While these other PFASs may also be present in AFFF-impacted drinking water, their removal by conventional drinking-water treatment is poorly understood. This study compared the removal of 30 PFASs, including 13 recently discovered PFASs, from an AFFF- impacted drinking water using carbonaceous sorbents (i.e., granular activated carbon, GAC). The approach combined laboratory batch experiments and modeling: batch sorption data were used to determine partition coe \\ufb03 cients ( K d) and\"\n    },\n    {\n      \"corpus_chunk\": 9,\n      \"locator_id\": \"S07-E07\",\n      \"query_scores\": {\n        \"RT02-C1\": 8.106096356641501e-05,\n        \"RT02-C2\": 0.053291499614715576,\n        \"RT02-C3\": 3.730327443918213e-05,\n        \"umbrella\": 0.14659613370895386\n      },\n      \"section\": \"methods\",\n      \"text\": \"of-\\ufb02ight MS (LC \\u2212QToF-MS; ABSciex 5600+). Sample preparation methods, MS/MS transitions, and calibration standards employed were similar to those described by McKenzie et al., 43 with stable-isotope surrogate standards used whenever possible. For sample preparation, 1.3 mL of sample was transferred to a m icrocentrifuge tube and centrifuged at 16 000 RCF for 15 min. A subsample (0.26 mL) was then transferred to 2 mL autosampler vials containing 0.039 mL of basic water (0.01% NH 4OH) and 0.13 mL of surrogate (in 70% methanol), resulting in a \\ufb01nal volume of 1.3 mL (containing 20% (V/V) methanol, and 230 ng/L surrogates). If necessary, samples were diluted with Milli-Q water when transferred to autosampler vials. For the LC \\u2212MS/ MS analysis, 1 mL samples were directly injected onto a Gemini 50 \\u00d7 4.6 mm C18 column 1with 3 \\u03bcm particle size and 100 \\u00c5 pore size (Phenomenex). All PFASs were measured by electrospray ionization (ESI) operated in negative mode. The \\ufb01ve PFCAs and four PFSAs quanti \\ufb01ed by LC \\u2212MS/MS and their corresponding surrogates are listed in Table S3 : all other\"\n    },\n    {\n      \"corpus_chunk\": 29,\n      \"locator_id\": \"S07-E08\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.00012399908155202866,\n        \"RT02-C2\": 0.004311919212341309,\n        \"RT02-C3\": 3.7290261388989165e-05,\n        \"umbrella\": 0.12255354970693588\n      },\n      \"section\": \"methods\",\n      \"text\": \"more strongly retained because they reach portions of virgin carbon before DOC or larger PFASs, making them susceptible to remobilization over time. Therefore, while the forward- modeling approach used here provides useful qualitative insight, pilot-scale column veri \\ufb01cation experiments should be conducted if su \\ufb03 cient water quantities are available. Predicting Removal for Newly Discovered PFASs. While the results discussed above indicate that some poly\\ufb02uorinated compounds and PFOS-like PFASs may be removed less e \\ufb00ectively than PFOS and PFOA during GAC adsorption, e \\ufb00orts to characterize their removal are (currently) limited. This is largely due to the absence of commercial standards, although the detection and identi \\ufb01cation of these compounds requires sophisticated instrumentation that is not (yet) widely available. For these reasons, it would be useful to relate predicted PFAS removal to more readily observable properties, particularly as it appears that MW is not a good indicator of breakthrough behavior. Thus, in an e \\ufb00ort to enable simpli\\ufb01ed predictions for removal of all PFASs present, we examined the ability of retention time on our analytical C18 column (RT C18) to predict a compound \\u2019s breakthrough behavior (similar to using relative chromatographic retention Environmental Science & Technology Article DOI: 10.1021/acs.est.7b00970 Environ. Sci. Technol. 2017, 51, 6342 \\u22126351 6348\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2017 - Xiao - Sorption of Poly- and Perfluoroalkyl Substances (PFASs) Relevant to Aqueous Film-Forming Foam (AFFF)-Impacted Groundwater by Biochars and Activated.pdf\",\n  \"source_id\": \"S07\",\n  \"title\": \"Sorption of Poly- and Perfluoroalkyl Substances (PFASs) Relevant to Aqueous Film-Forming Foam (AFFF)-Impacted Groundwater by Biochars and Activated Carbon\",\n  \"year\": \"2017\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "85e6c7e5c39c11b4ebf03d6722d9e8b2b451638818a17fd73f23a1069441b87f",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.052088,
+    "finish_reason": "stop",
+    "input_tokens": 7288,
+    "latency_seconds": 29.325843750033528,
+    "output_tokens": 4413,
+    "reasoning_tokens": 1520,
+    "response_id": "chatcmpl-E9N08IOBBVF9zjWEZnjkDSTk7hRPD",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 11701,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The study uses batch-derived equilibrium and kinetic parameters to calibrate a transport model and then performs forward predictions for a full-scale GAC system, explicitly noting that results are qualitative and recommending pilot-scale verification (E02, E05, E08). It is reasonable to classify comparability as conditional on similar operating and fouling conditions.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "E02 and E05 describe batch calibration of a diffusion-limited transport model and forward prediction for a full-scale GAC system. E01 and E08 emphasize that competition with DOC and other PFASs and DOC fouling can cause differences between model predictions and actual systems, and that the modeling provides qualitative insight and should be verified with pilot columns. The recorded reason accurately reflects these points.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "E02 describes full-scale system simulations for PFAS breakthrough (bed volumes to breakthrough), which directly relates to removal/breakthrough performance. Classifying this as a removal endpoint is consistent with the modeled metric (breakthrough/bed volumes).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "E05 describes using equilibrium and kinetic batch data to calibrate a transport model. E02 states that forward predictions were carried out to simulate a full-scale GAC system and to confirm that predicted bed volumes to breakthrough were on the same order as previously observed values. This matches the interpretation that batch-calibrated parameters were used to predict full-scale breakthrough and BV_BT and compared to prior column observations.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "E02 explicitly mentions \"bed volumes to breakthrough (BV_BT)\" and simulations of a GAC adsorption system for PFAS breakthrough. The reported term paraphrases these concepts accurately.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "E05 explains that equilibrium and kinetic batch data (sorption to GAC) were used to determine partition coefficients (Kd) and calibrate a diffusion-limited sorption model. E01 then relates relative sorptive affinity to breakthrough order. This is appropriately classified as a sorption endpoint.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "E01 states that both diffusion-limited and equilibrium models predicted similar breakthrough orders despite kinetic limitations and that relative affinity for GAC may adequately indicate breakthrough order when kinetic or column tests are not possible. This supports the interpretation that batch-derived Kd values can qualitatively indicate sorptive affinity and breakthrough sequence.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].reported_term",
+        "reason": "E01 discusses relative affinity of PFASs for GAC and breakthrough order. The reported term \"relative affinity; breakthrough order\" is directly grounded in this language.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].statement",
+        "reason": "E08 states that \"while the forward-modeling approach used here provides useful qualitative insight, pilot-scale column verification experiments should be conducted if sufficient water quantities are available.\" This closely matches the recorded limitation statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1].statement",
+        "reason": "E01 notes that competition for sorption sites (between PFASs and between PFASs and DOC) may affect breakthrough behavior differently in actual systems than predicted by the model and discusses continuous DOC loading and fouling. The recorded limitation is a faithful restatement of this author-reported caveat.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[2].statement",
+        "reason": "E01 reports that a previous study using the same model found that batch calibration experiments at higher DOC levels gave better predictions for column verification experiments, suggesting that continuous DOC loading may lead to greater fouling not captured by the model. The limitation text accurately reflects this author discussion.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "limitations[3].statement",
+        "reason": "E02 explains that an apparent tortuosity was fitted (adjusted to minimize SSR) and used to account for observed differences among PFASs. However, the specific claim that this limits the mechanistic interpretability and transferability of the parameters is an analyst inference, not explicitly stated by the authors. The core fact (tortuosity as an adjustable parameter) is supported, but the limitation framing is not explicitly author-reported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix.value",
+        "reason": "The abstract (E06) mentions an AFFF-impacted drinking water, and E05 refers to an AFFF-impacted groundwater. E02 describes simulations of a GAC system treating AFFF-impacted water. The value \"AFFF-impacted groundwater/drinking water treated in a modeled full-scale GAC system\" accurately captures this combined description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "E02 states that the simulated system consisted of a pair of 28.5 m3 vessels operating in series at 1.5 m3/min, each containing 2.7 m of GAC, and that the model was calibrated for F300. This matches the described system configuration.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "This field is descriptive (system configuration) and appropriately has no unit; the source text in E02 is consistent with a unitless descriptive value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "E02 states \"a pair of 28.5 m3 vessels\"; the value 28.5 for each vessel volume is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "E02 reports vessel volume in m3; the unit m3 is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "E02 notes that each vessel contained 2.7 m of GAC. The value 2.7 is correctly recorded as the bed depth.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "E02 expresses this depth in meters; unit m is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "E02 reports the system operating \"at 1.5 m3/min\"; the recorded flow rate value 1.5 matches.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "The flow rate in E02 is given in m3/min; the unit m3/min is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].value",
+        "reason": "E05 describes a transport model based on intraparticle diffusion-limited sorption kinetics calibrated with batch data, and E02 refers to forward simulations with that calibrated model. The value \"intraparticle diffusion-limited sorption model\" accurately reflects this.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].unit",
+        "reason": "The transport_model field is categorical/descriptive and correctly has no unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[5].value",
+        "reason": "E02 explains an apparent tortuosity parameter was adjusted to minimize SSR and used to account for differences among PFASs, which is consistent with describing apparent tortuosity as \"fitted.\"",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[5].unit",
+        "reason": "The apparent_tortuosity_calibration field is descriptive and correctly unitless.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[6].value",
+        "reason": "E01 reports the Peclet numbers as 3.5 and 7.6 for 7K-PFOS and 6:2 FHxSO2PA-MePS, respectively. The value 3.5 for 7K-PFOS matches the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[6].unit",
+        "reason": "Peclet number is dimensionless, so leaving the unit null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[7].value",
+        "reason": "E01 states the Peclet number for 6:2 FHxSO2PA-MePS is 7.6. The recorded value 7.6 is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[7].unit",
+        "reason": "Peclet number is dimensionless, so a null unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "The abstract (E06) notes 30 PFASs including recently discovered PFASs; E05 mentions treating a broader suite of PFASs, including polyfluorinated precursors and PFOS-like PFASs; E03 describes various PFAS classes and PFOS-like PFASs in AFFF-impacted groundwater. The recorded scope summarizing PFOA, PFOS, PFCAs, PFSAs, polyfluorinated precursors, and PFOS-like PFASs is consistent with these descriptions.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "E02 specifies \"a pair of 28.5 m3 vessels\". The quantitative finding of 28.5 for vessel volume is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "E02 reports vessel volume in m3; the unit m3 is correctly captured.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "E02 reports the system operating \"at 1.5 m3/min\". The quantitative finding value 1.5 is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "The flow rate in E02 is given in m3/min; the unit m3/min is correctly recorded.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].value",
+        "reason": "E02 indicates each vessel contains 2.7 m of GAC. The value 2.7 is accurately captured.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].unit",
+        "reason": "The bed depth is given in meters in E02; unit m is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].value",
+        "reason": "E01 reports the Peclet number for 7K-PFOS as 3.5; this matches the recorded value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].unit",
+        "reason": "Peclet number is dimensionless; a null unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].value",
+        "reason": "E01 reports the Peclet number for 6:2 FHxSO2PA-MePS as 7.6; the recorded value is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].unit",
+        "reason": "Peclet number is dimensionless; a null unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0].statement",
+        "reason": "E01/E08 indicate that smaller compounds may initially appear more strongly retained because they reach portions of virgin carbon before DOC or larger PFASs, making them susceptible to remobilization over time. The recorded statement accurately reflects this discussion.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "E05 notes that limited water availability led to a combination of batch experiments and modeling, and that forward simulations were evaluated for a full-scale GAC adsorption system. E02 details the pair of 28.5 m3 vessels in series. The description as a modeling study simulating a full-scale system, calibrated with bench-scale batch data, is accurate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "E05 describes use of granular activated carbon (GAC) and calibration of an intraparticle diffusion-limited sorption model using batch data, followed by forward simulations of a full-scale GAC system. E02 notes that the model was calibrated for F300. The treatment description accurately summarizes modeled GAC F300 adsorption with diffusion-limited transport calibrated from batch experiments.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT02-bge_llm_local_rag-S07-R02",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements for synthesis\u2014source identity, PFAS matrix, GAC treatment and configuration, endpoint types, and key quantitative operating conditions and Peclet numbers\u2014are all directly supported by the cited text. The only partial issue is interpretive language around one author-reported limitation on apparent tortuosity, which does not affect the core data. Thus, the record is usable with minor caution about that specific limitation being partly analyst-inferred.",
+    "task_id": "RT02"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

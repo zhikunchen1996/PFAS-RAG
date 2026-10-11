@@ -1,0 +1,374 @@
+{
+  "call_key": "RT04:bge_llm_local_rag:verify:RT04-bge_llm_local_rag-S04-R01",
+  "created_at": "2026-08-05T04:06:41.542357+00:00",
+  "raw_response_text": "{\"task_id\":\"RT04\",\"record_id\":\"RT04-bge_llm_local_rag-S04-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record DOI/URL exactly matches the DOI given in the source (10.1021/acsestwater.2c00043, https://doi.org/10.1021/acsestwater.2c00043).\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFOA is explicitly named in multiple excerpts as a target PFAS (e.g., S04-E01: 'PFOA and GenX' and S04-E05: 'perfluorooctanoic acid (PFOA)').\"},{\"field_path\":\"pfas_scope[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"HFPO-DA (GenX) is explicitly named in S04-E05 ('Heptafluoropropylene oxide dimer acid (HFPO-DA) fluoride (GenX)') and S04-E01 ('GenX').\"},{\"field_path\":\"pfas_scope[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFBA is explicitly named in S04-E05 ('heptafluorobutyric acid (PFBA)') and in S04-E01 ('PFBA'). The record uses the same naming as in the source.\"},{\"field_path\":\"matrix.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S04-E05 specifies the convective-flow PFAS tests used '70 ppb of each PFAS, and 2 mM CaCl2 as feed concentration' at pH ~5.7, but does not state 'type I water'. S04-E02 mentions 'type I water' for a different (diffusive) PFAS experiment. Thus CaCl2 and pH are supported, while attributing 'type I water' specifically to the cross-flow experiments is inferred from a different setup.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E01: 'feed solution containing 70 \u03bcg/L of each compound' and S04-E05: '70 ppb of each PFAS' support a value of 70 for the PFAS feed concentration.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E01 explicitly states '70 \u03bcg/L of each compound'; using '\u03bcg/L each PFAS' as the unit is consistent with the source.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E05 states '2 mM CaCl2 as feed concentration', supporting a value of 2.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E05 explicitly reports '2 mM CaCl2'; the unit mM is correct.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E05 gives 'T =3 6 \u00b0C', supporting a temperature value of 36.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Temperature is expressed in '\u00b0C' in S04-E05; the recorded unit '\u00b0C' is correct.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E05 states 'pH ~5.7', supporting the recorded value '~5.7'.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"pH is dimensionless and is shown without a unit in the source. Leaving the unit null is acceptable and consistent.\"},{\"field_path\":\"operating_conditions[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E05 indicates '\u2248100 L/m2-h at 7 bar permeate flux'; the 7 bar operating pressure is clearly supported.\"},{\"field_path\":\"operating_conditions[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Pressure is reported as '7 bar' in S04-E05, so 'bar' is the correct unit.\"},{\"field_path\":\"operating_conditions[5].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E03 reports 'a high water flux of 100 L/m2-h at 7 bar' and S04-E05 reports '\u2248100 L/m2-h at 7 bar permeate flux', supporting a value of 100 for permeate flux.\"},{\"field_path\":\"operating_conditions[5].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Flux is explicitly given as 'L/m2-h' in S04-E03 and S04-E05; the unit is correctly recorded.\"},{\"field_path\":\"operating_conditions[6].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E08: 'The permeability was measured over a pressure range of ... 2.0\u20139.6 bar for the NF-PNIPAm-PVDF membrane.' This supports the value '2.0-9.6' for the hydraulic testing pressure range.\"},{\"field_path\":\"operating_conditions[6].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The pressure range in S04-E08 is explicitly in 'bar'; the recorded unit 'bar' is correct.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E01 reports 'steady-state rejection of PFAS by NF-PNIPAm-PVDF membranes in a cross flow system', which is a separation performance metric. Classifying the endpoint as 'separation' is consistent with the measured rejection.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E05 describes 'Retention of PFAS in a convective flow ... over time' in cross-flow cells. Retention is a separation metric, so 'separation' is an appropriate endpoint_type.\"},{\"field_path\":\"endpoints[2].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E08 reports the 'Water permeability coefficient (A) or also called water permeance' of various membranes. This reflects membrane transport/separation performance, so classifying as 'separation' is appropriate within the task context.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E01: 'steady-state rejection ... was ~70% for PFOA and GenX and ~50% for PFBA.' The value '~70' for PFOA with approximate_numeric form matches this statement.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Rejection is expressed as a percentage in S04-E01 ('~70%'); the unit '%' is correct.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E01 states '~70% for PFOA and GenX'; assigning value '~70' for HFPO-DA (GenX) with approximate_numeric form is directly supported.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Rejection of GenX is expressed as a percentage in S04-E01; '%' is the correct unit.\"},{\"field_path\":\"quantitative_findings[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E01: '... and ~50% for PFBA.' The value '~50' with approximate_numeric form is correctly taken from the source.\"},{\"field_path\":\"quantitative_findings[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Rejection of PFBA is given as '~50%' in S04-E01, so '%' is the correct unit.\"},{\"field_path\":\"quantitative_findings[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E03: 'a high water flux of 100 L/m2-h at 7 bar' and S04-E05: '\u2248100 L/m2-h at 7 bar permeate flux' support the permeate flux value of 100. The text does not use an approximation sign in S04-E03, so treating 100 as exact is reasonable.\"},{\"field_path\":\"quantitative_findings[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Flux units are explicitly 'L/m2-h' in S04-E03 and S04-E05; the unit is correctly recorded.\"},{\"field_path\":\"quantitative_findings[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E05 indicates '\u2248100 L/m2-h at 7 bar permeate flux'; this supports an operating pressure value of 7 bar during PFAS separation.\"},{\"field_path\":\"quantitative_findings[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Pressure is given in bar ('7 bar') in S04-E05; the unit 'bar' is correct.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E05 mentions PFAS retention tests in 'two cells on a crossflow membrane unit,' indicating a laboratory cross-flow setup. S04-E01 refers to membranes 'in a cross flow system.' Describing this as bench-scale cross-flow nanofiltration tests in lab cells is a reasonable, design-based summary.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E04 explains the focus on 'the synthesis of polyamide thin film on top of a temperature-responsive and an open porous support' to combine NF exclusion with adsorption, which matches a polyamide thin-film nanofiltration layer on a PNIPAm-functionalized PVDF support. S04-E02 and E05 reference NF-PNIPAm-PVDF and NF270 for comparison, supporting the treatment description.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S04-E01 and S04-E05 support that NF-PNIPAm-PVDF membranes achieved steady-state PFAS rejection of ~70% for PFOA and GenX and ~50% for PFBA at 70 \u03bcg/L of each PFAS, 2 mM CaCl2, pH ~5.7, T \u224836 \u00b0C, in a cross-flow at ~100 L/m2-h and 7 bar. The additional phrase that this 'reflects combined size/charge exclusion and adsorption-driven separation' is mechanistic inference; S04-E02 and S04-E08 discuss exclusion and adsorption mechanisms generally, but they do not explicitly attribute the observed steady-state rejection in this specific test to that combined mechanism. Thus, the numeric and conditional content is supported, while the mechanistic explanation is partially inferred.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E05 caption clearly describes 'Retention of PFAS in a convective flow ... over time' in a cross-flow unit using polymeric membranes. The interpretation that retention of HFPO-DA (GenX), PFOA, and PFBA over time was monitored to assess separation performance of NF membranes, including NF-PNIPAm-PVDF, is consistent with the text.\"},{\"field_path\":\"endpoints[2].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E08 presents the water permeability coefficient (A), also called water permeance, for PVDF400, PNIPAm-PVDF, NF-PNIPAm-PVDF, and NF270, measured over specified pressure ranges in cross-flow systems. S04-E03 notes PFAS separation at 100 L/m2-h and 7 bar. The interpretation that adding the NF layer and PNIPAm functionality alters water permeance while enabling high flux (~100 L/m2-h at 7 bar during PFAS tests) is supported by these excerpts.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E05 specifies cross-flow convective PFAS retention tests for HFPO-DA, PFOA, and PFBA at 70 ppb each, 2 mM CaCl2, T = 36 \u00b0C, pH ~5.7 in a membrane unit. S04-E02 notes type I water use in PFAS tests. Together these show model PFAS at low \u03bcg/L levels in relatively simple aqueous matrices and bench-scale conditions. The limitation about applicability to complex natural waters or wastewater is a reasonable design-based inference from these conditions.\"},{\"field_path\":\"limitations[1].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E07 states that '\u201cLoose\u201d polyamide thin-film composites also offer a less energy-intensive process relative to RO,' which is a qualitative energy comparison without quantitative metrics. S04-E05 and other excerpts do not provide explicit energy consumption values. Thus, the limitation that energy performance is discussed only qualitatively without explicit metrics is supported.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The cited excerpts show that PFAS rejection and retention were measured for the same NF-PNIPAm-PVDF membrane type under well-defined, consistent bench-scale cross-flow conditions (same PFAS set, similar feed composition, flux, and pressure). Concluding that the data are 'comparable_with_conditions' within this internal context is a reasonable inference from the reported design and conditions.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reason explains that internal comparisons are valid because of shared membrane type (NF-PNIPAm-PVDF), PFAS suite, and operating conditions, while comparisons to other membranes like NF270 or other studies require caution due to structural and chemistry differences. These points follow from S04-E01, E05, and E08, which specify the membrane types and test conditions.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements (source identity, PFAS identity, membrane/treatment description, matrix, operating conditions, and quantitative separation metrics) are well supported by the cited excerpts with no major numeric or unit errors. Minor issues involve some mechanistic interpretation and inferring 'type I water' for the cross-flow tests, but these do not compromise the quantitative findings for synthesis use.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused, comparative review of how membrane processes should be selected for a specified PFAS composition, water matrix, and treatment objective.\",\"task_id\":\"RT04\",\"title\":\"Selecting a membrane process for a defined PFAS feed water\"}\n\nTask-specific extraction objective:\nExtract membrane type and properties, PFAS identity, feed matrix and concentration, pressure, flux, recovery, rejection or adsorption endpoint, fouling, permeability, energy, scale, and comparison limitations.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envint.2021.106876\",\"10.3929/ethz-b-000506220\"],\"all_blocked_titles\":[\"membrane based technologies for per and poly fluoroalkyl substances pfass removal from water removal mechanisms applications challenges and perspectives\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envint.2021.106876\",\"https://www.research-collection.ethz.ch/items/f9152dfa-5b8e-4ce2-8153-1cbb37911e55\"],\"anchor_id\":\"AR-JIN-2021\",\"corpus_source\":\"2021 - Jin - Membrane-based technologies for per- and poly-fluoroalkyl substances (PFASs) removal from water - Removal mechanisms, applications, challenges and.pdf\",\"doi\":\"10.1016/j.envint.2021.106876\",\"title\":\"Membrane-based technologies for per- and poly-fluoroalkyl substances (PFASs) removal from water: Removal mechanisms, applications, challenges and perspectives\",\"url\":\"https://doi.org/10.1016/j.envint.2021.106876\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"L\\u00e9niz-Pizarro, F.; Vogler, R. J.; Sandman, P.; Harris, N.; Ormsbee, L. E.; Liu, C.; Bhattacharyya, D. Dual-Functional Nanofiltration and Adsorptive Membranes for PFAS and Organics Separation from Water. ACS ES&T Water 2022, 2, 863\\u2013872. https://doi.org/10.1021/acsestwater.2c00043.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S04-E01\",\n      \"S04-E05\",\n      \"S04-E08\"\n    ],\n    \"reason\": \"Bench-scale cross-flow NF tests on the same membrane type (NF-PNIPAm-PVDF) and PFAS suite in a defined synthetic matrix at specified flux and pressure provide conditionally comparable rejection data for PFOA, HFPO-DA (GenX), and PFBA. However, comparisons to other membranes (e.g., NF270) or to other studies require caution due to differences in membrane structure and feed chemistry not fully detailed in the excerpts.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1021/acsestwater.2c00043\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"separation\",\n      \"evidence_locator_ids\": [\n        \"S04-E01\",\n        \"S04-E05\"\n      ],\n      \"interpretation\": \"NF-PNIPAm-PVDF membranes showed steady-state rejections of ~70% for PFOA and GenX and ~50% for PFBA at 70 \\u00b5g/L each PFAS, 2 mM CaCl2, pH ~5.7, T \\u224836 \\u00b0C, 7 bar, and 100 L/m2-h permeate flux in cross-flow; this reflects combined size/charge exclusion and adsorption-driven separation.\",\n      \"reported_term\": \"steady-state PFAS rejection and retention under convective flow\"\n    },\n    {\n      \"endpoint_type\": \"separation\",\n      \"evidence_locator_ids\": [\n        \"S04-E05\"\n      ],\n      \"interpretation\": \"Retention of HFPO-DA (GenX), PFOA, and PFBA over time was monitored in cross-flow cells to assess PFAS separation performance of polymeric NF membranes including NF-PNIPAm-PVDF.\",\n      \"reported_term\": \"PFAS retention under convective flow\"\n    },\n    {\n      \"endpoint_type\": \"separation\",\n      \"evidence_locator_ids\": [\n        \"S04-E08\",\n        \"S04-E03\"\n      ],\n      \"interpretation\": \"Water permeability (A) of PVDF400, PNIPAm-PVDF, NF-PNIPAm-PVDF, and commercial NF270 membranes was characterized as a function of pressure in cross-flow, showing that adding the NF layer and PNIPAm functionality changes water permeance while still enabling high flux (~100 L/m2-h at 7 bar during PFAS tests).\",\n      \"reported_term\": \"water permeability coefficient (A) / water permeance\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S04-E02\",\n        \"S04-E05\"\n      ],\n      \"statement\": \"Results are limited to model PFAS (PFOA, HFPO-DA, PFBA) at low \\u00b5g/L concentrations in relatively simple aqueous matrices (type I water with added CaCl2) under bench-scale cross-flow conditions; applicability to complex natural waters or wastewater is not addressed in the reported experiments.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S04-E07\",\n        \"S04-E05\"\n      ],\n      \"statement\": \"Energy performance is discussed qualitatively (\\\"less energy-intensive\\\" than RO) but no explicit energy consumption metrics are reported for the NF-PNIPAm-PVDF system in the provided excerpts.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S04-E02\",\n      \"S04-E05\"\n    ],\n    \"value\": \"Aqueous PFAS solution in type I water with 2 mM CaCl2, pH ~5.7\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E01\",\n        \"S04-E05\"\n      ],\n      \"name\": \"PFAS feed concentration\",\n      \"qualifiers\": \"Cross-flow convective separation tests with HFPO-DA (GenX), PFOA, and PFBA\",\n      \"unit\": \"\\u00b5g/L each PFAS\",\n      \"value\": \"70\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E05\"\n      ],\n      \"name\": \"Calcium chloride concentration\",\n      \"qualifiers\": \"Added to PFAS feed solution\",\n      \"unit\": \"mM\",\n      \"value\": \"2\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E05\"\n      ],\n      \"name\": \"Temperature\",\n      \"qualifiers\": \"Cross-flow PFAS retention experiments; text states T = 36 \\u00b0C (or 3 6 \\u00b0C with spacing)\",\n      \"unit\": \"\\u00b0C\",\n      \"value\": \"36\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E05\"\n      ],\n      \"name\": \"pH\",\n      \"qualifiers\": \"Measured feed pH for cross-flow PFAS retention tests\",\n      \"unit\": null,\n      \"value\": \"~5.7\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E05\"\n      ],\n      \"name\": \"Transmembrane pressure\",\n      \"qualifiers\": \"Applied pressure for convective PFAS separation tests\",\n      \"unit\": \"bar\",\n      \"value\": \"7\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E03\",\n        \"S04-E05\"\n      ],\n      \"name\": \"Permeate flux\",\n      \"qualifiers\": \"Water flux during PFAS separation in cross-flow at 7 bar\",\n      \"unit\": \"L/m2-h\",\n      \"value\": \"100\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E08\"\n      ],\n      \"name\": \"Hydraulic testing pressure range (NF-PNIPAm-PVDF)\",\n      \"qualifiers\": \"Range used to determine water permeability coefficient A in cross-flow\",\n      \"unit\": \"bar\",\n      \"value\": \"2.0-9.6\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E01\",\n        \"S04-E05\"\n      ],\n      \"value\": \"Perfluorooctanoic acid (PFOA)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E01\",\n        \"S04-E05\"\n      ],\n      \"value\": \"Heptafluoropropylene oxide dimer acid (HFPO-DA, GenX)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E01\",\n        \"S04-E05\"\n      ],\n      \"value\": \"Heptafluorobutyric acid (PFBA)\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E01\",\n        \"S04-E05\"\n      ],\n      \"name\": \"Steady-state rejection of PFOA\",\n      \"qualifiers\": \"NF-PNIPAm-PVDF membrane in cross-flow; feed 70 \\u00b5g/L PFOA (with 70 \\u00b5g/L each PFAS), 2 mM CaCl2, pH ~5.7, T \\u224836 \\u00b0C, 7 bar, flux ~100 L/m2-h; described as ~70% rejection\",\n      \"unit\": \"%\",\n      \"value\": \"~70\",\n      \"value_form\": \"approximate_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E01\",\n        \"S04-E05\"\n      ],\n      \"name\": \"Steady-state rejection of HFPO-DA (GenX)\",\n      \"qualifiers\": \"NF-PNIPAm-PVDF membrane in cross-flow; feed 70 \\u00b5g/L HFPO-DA (with 70 \\u00b5g/L each PFAS), 2 mM CaCl2, pH ~5.7, T \\u224836 \\u00b0C, 7 bar, flux ~100 L/m2-h; described as ~70% rejection\",\n      \"unit\": \"%\",\n      \"value\": \"~70\",\n      \"value_form\": \"approximate_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E01\",\n        \"S04-E05\"\n      ],\n      \"name\": \"Steady-state rejection of PFBA\",\n      \"qualifiers\": \"NF-PNIPAm-PVDF membrane in cross-flow; feed 70 \\u00b5g/L PFBA (with 70 \\u00b5g/L each PFAS), 2 mM CaCl2, pH ~5.7, T \\u224836 \\u00b0C, 7 bar, flux ~100 L/m2-h; described as ~50% rejection\",\n      \"unit\": \"%\",\n      \"value\": \"~50\",\n      \"value_form\": \"approximate_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E03\",\n        \"S04-E05\"\n      ],\n      \"name\": \"Permeate flux during PFAS separation\",\n      \"qualifiers\": \"Cross-flow convective separation for PFOA and heptafluorobutyric acid from 70 \\u00b5g/L solutions at 7 bar; same flux conditions reported for PFAS mixture tests\",\n      \"unit\": \"L/m2-h\",\n      \"value\": \"100\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E05\"\n      ],\n      \"name\": \"Operating pressure during PFAS separation\",\n      \"qualifiers\": \"Cross-flow convective separation of PFAS with NF-PNIPAm-PVDF membrane at ~100 L/m2-h flux\",\n      \"unit\": \"bar\",\n      \"value\": \"7\",\n      \"value_form\": \"exact_numeric\"\n    }\n  ],\n  \"record_id\": \"RT04-bge_llm_local_rag-S04-R01\",\n  \"residuals_byproducts\": [],\n  \"source_id\": \"S04\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S04-E05\",\n      \"S04-E01\"\n    ],\n    \"value\": \"Bench-scale cross-flow nanofiltration tests in laboratory membrane cells\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S04-E04\",\n      \"S04-E05\",\n      \"S04-E02\"\n    ],\n    \"value\": \"Polyamide thin-film nanofiltration layer on PNIPAm-functionalized PVDF microfiltration support (NF-PNIPAm-PVDF) operated in cross-flow; comparison with commercial NF270 in some tests\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 6,\n  \"bge_score\": 0.8756616115570068,\n  \"citation\": \"L\\u00e9niz-Pizarro, F.; Vogler, R.J.; Sandman, P.; Harris, N.; Ormsbee, L.E.; Liu, C.; Bhattacharyya, D. Dual-Functional Nanofiltration and Adsorptive Membranes for PFAS and Organics Separation from Water. ACS ES&T Water 2022 2 863-872. DOI: 10.1021/acsestwater.2c00043.\",\n  \"doi\": \"10.1021/acsestwater.2c00043\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1021/acsestwater.2c00043\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 33,\n      \"locator_id\": \"S04-E01\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.04606741666793823,\n        \"RT04-C2\": 0.011709911748766899,\n        \"RT04-C3\": 0.0011879841331392527,\n        \"umbrella\": 0.617855966091156\n      },\n      \"section\": \"results\",\n      \"text\": \"Also, PNIPAm allowed for selective adsorption of other model compounds such as methylene blue. The steady-state rejection of PFAS by NF-PNIPAm-PVDF membranes in a cross \\ufb02ow system for a feed solution containing 70 \\u03bcg/L of each compound was \\u223c70% for PFOA and GenX and \\u223c50% for PFBA. The promising results obtained, combined with the synthesis of denser NF layers and tailored functionalization for adsorption, may lead to a more sustainable water treatment process for PFAS separation. \\u25a0 ASSOCIATED CONTENT *s\\u0131 Supporting Information The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/acsestwater.2c00043. More details about the materials, the description of the methods used for characterization, analytical, and performance measurements; calculation of parameters, data processing, more ionogenic organics separation results; description and calculation for the models used; complementary material characterization ( PDF) \\u25a0 AUTHOR INFORMATION Corresponding Author Dibakar Bhattacharyya \\u2212 Department of Chemical and Materials Engineering, University of Kentucky, Lexington, Kentucky 40506, United States; orcid.org/0000-0001- 9948-9085; Phone: 859-312-7790; Email: db@uky.edu Authors Francisco L\\u00e9niz-Pizarro \\u2212 Department of Chemical and Materials Engineering, University of Kentucky, Lexington,\"\n    },\n    {\n      \"corpus_chunk\": 31,\n      \"locator_id\": \"S04-E02\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.7434050440788269,\n        \"RT04-C2\": 0.011506657116115093,\n        \"RT04-C3\": 0.019788969308137894,\n        \"umbrella\": 0.5197630524635315\n      },\n      \"section\": \"methods\",\n      \"text\": \"PFAS, and 2 mM CaCl 2 as feed concentration. (b.2) Comparison of the rejection of PFOA and Na 2SO4 between NF-PNIPAm-PVDF and NF270. (c) Permeability coe \\ufb03 cients of PFOA and Na 2SO4 as an inorganic salt control, through NF membranes modeled as denser reverse osmosis membranes using the solution-di \\ufb00usion equation for solute transport. The experiment was run in a constant driving force in-line di \\ufb00usion system, at 37 \\u00b0C, \\u223c10 ppm concentration of each PFAS for starting feed concentrations in type I water over 12 h. (c.2) PFAS di \\ufb00usive permeability coe \\ufb03 cients through the NF-PNIPAm- PVDF membranes. ACS ES&T Water pubs.acs.org/estwater Article https://doi.org/10.1021/acsestwater.2c00043 ACS EST Water 2022, 2, 863 \\u2212872 869 than the modeled values. Even though the e \\ufb00ects of Donnan exclusion and counterion transport were proven to partially a\\ufb00ect the rejection of PFAS, other main contributions that are not covered in this study were responsible for maintaining high PFAS rejection rates. The synthesis of an NF layer on top of a PNIPAm pore- functionalized support structure combined the exclusion and adsorption mechanisms. Images from a scanning electron\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S04-E03\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.08930487185716629,\n        \"RT04-C2\": 0.40847375988960266,\n        \"RT04-C3\": 0.0006063628825359046,\n        \"umbrella\": 0.4359033703804016\n      },\n      \"section\": \"introduction\",\n      \"text\": \"permeance variation) adsorption/desorption properties allows for enhanced separations of PFAS. This was possible by successfully synthesizing an NF layer on top of a poly-N-isopropylacrylamide (PNIPAm) pore-functionalized micro \\ufb01ltration support structure. The support layer adsorbs organics (178 mg PFOA adsorbed/m 2 membrane at an equilibrium concentration of 70 mg/L), and the simultaneous exclusion from the NF layer allows separations of PFOA and the smaller sized hepta \\ufb02uorobutyric acid from solutions containing 70 \\u03bcg/L of these compounds at a high water \\ufb02ux of 100 L/m 2-h at 7 bar. KEYWORDS: PFAS, organic anions, water treatment, responsive materials 1. INTRODUCTION Per- and poly \\ufb02uoroalkyl substances (PFASs) have been a major focus of interest since these compounds are ubiquitous1\\u22124 and have concerning health e \\ufb00ects.5\\u22127 Some of the most commonly studied PFAS compounds are per\\ufb02uorooctanoic acid (PFOA) and per \\ufb02uorooctane sulfonic acid (PFOS) 8 and more recently hexa \\ufb02uoropropylene oxide dimer acid (HFPO-DA, also referred to as GenX, DuPont \\u2019s substitution for PFOA). 9 These compounds di \\ufb00er from some nontoxic compounds mainly because \\ufb02uorine is included in their chemical structure instead of hydrogen. The electro- negativity of the \\ufb02uoroalkyl results in interesting intermolec- ular and intramolecular properties,\"\n    },\n    {\n      \"corpus_chunk\": 5,\n      \"locator_id\": \"S04-E04\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.04774189740419388,\n        \"RT04-C2\": 0.07754214107990265,\n        \"RT04-C3\": 7.600478420499712e-05,\n        \"umbrella\": 0.4577871561050415\n      },\n      \"section\": \"introduction\",\n      \"text\": \"To the best of our knowledge, this has not been achieved yet because the synthesis of a polyamide layer on top of an open structure remains a challenge. Interfacial polymerization reactions 38,39 are further restricted by hydro- phobic interactions in MF membranes such as poly(vinylidene \\ufb02uoride) (PVDF), which reduces the liquid entry pressure of the organic phase. This study focuses on (1) understanding the separation of environmentally relevant ionogenic organics, such as PFASs, by the exclusion mechanisms associated with NF membranes by using commercially available NF270 membranes, (2) the synthesis of polyamide thin \\ufb01lm on top of a temperature- responsive and an open porous support that combines the bene\\ufb01ts of the exclusion mechanism of NF membranes with adsorption, and (3) the application of such composite membranes to the study of PFAS separation leading to a more sustainable water treatment solution. 2. MATERIALS AND METHODS 2.1. Materials and Chemicals. The details of the chemicals used and some of their properties are listed in Tables S1 and S2 . 2.2. Pore Functionalization and Synthesis of Poly- amide Films. To achieve the synthesis of a polyamide thin- \\ufb01lm membrane on top of an open polymeric structure, a two- step process was implemented, as described in Figure 1. First, a commercial MF membrane PVDF400 was used as a porous\"\n    },\n    {\n      \"corpus_chunk\": 30,\n      \"locator_id\": \"S04-E05\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.22420139610767365,\n        \"RT04-C2\": 0.05393795296549797,\n        \"RT04-C3\": 0.002969450782984495,\n        \"umbrella\": 0.4309774935245514\n      },\n      \"section\": \"methods\",\n      \"text\": \"of the organics. The experimental rejection of PFOA and PFOS, however, presented higher experimental rejection rates Figure 5. PFAS separation under a di \\ufb00usive and a convective \\ufb02ow. (a) PFOA adsorption over time in a batch mode. Membranes were set up in a 50 mL centrifuge tube, agitated in a shaking platform at 150 rpm, and the temperature was kept at 38 \\u00b0C. Forty-eight milliliters of the initial volume of a solution with 130 ppb was initially fed. Membranes had a 14.6 cm 2 area, with approximate weights of 0.2 g. The NF- PNIPAm-PVDF membrane contained \\u223c10% PNIPAm. Error bars represent the analytical error from measurements. (b) Retention of PFAS in a convective \\ufb02ow. Hepta \\ufb02uoropropylene oxide dimer acid (HFPO-DA) \\ufb02uoride (GenX), per \\ufb02uorooctanoic acid (PFOA), and hepta\\ufb02uorobutyric acid (PFBA) over time. Polymeric membranes were tested using two cells on a cross \\ufb02ow membrane unit and error bars represent the standard deviation between the two cells. T =3 6 \\u00b0C, pH \\u223c5.7, and \\u223c100 L/m2-h at 7 bar permeate \\ufb02ux, 70 ppb of each PFAS, and 2 mM CaCl 2 as feed concentration. (b.2) Comparison of\"\n    },\n    {\n      \"corpus_chunk\": 15,\n      \"locator_id\": \"S04-E06\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.42401647567749023,\n        \"RT04-C2\": 0.02045512944459915,\n        \"RT04-C3\": 0.0021258278284221888,\n        \"umbrella\": 0.09236781299114227\n      },\n      \"section\": \"methods\",\n      \"text\": \"When octanoate was fully deprotonated, octanoate rejection increased to 30% (corrobo- rated in Figure S4). To prove that higher rejection of octanoate can be expected at higher pH (which is associated with a higher negatively charged surface 52), the separation of octanoate was tested at pH 10, which resulted in a rejection rate of around 75% ( Figure S4). The fact that the rejection of octanoate goes as low as 0% at lower pH, while the rejection of analogous anionic PFASs ( Figure 2 b) stays high, regardless of the chain length, 29,53,54 suggests that the shortest axis of the compound\\u2019s structure contributes the most to the rejection, although the rejection can be shape-in \\ufb02uenced. Figure 2 d compares the largest distance of the narrowest axis of the molecules/ions tested, referred to in this study as the e \\ufb00ective chemical structure diameter. Details in the calculation are shown in the Supporting Information and summarized in Table S5. For the linear molecules, the circumscribed circle to the triangular base of the tetrahedral geometry was used. Values for bare (nonhydrated) structures were at least 33% smaller than the pore size of the membrane. To isolate the separation mechanisms involved in the process, the DSPM-DE was used and the charge and dielectric\"\n    },\n    {\n      \"corpus_chunk\": 4,\n      \"locator_id\": \"S04-E07\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.05153311789035797,\n        \"RT04-C2\": 0.06113320216536522,\n        \"RT04-C3\": 0.004062652587890625,\n        \"umbrella\": 0.36710599064826965\n      },\n      \"section\": \"introduction\",\n      \"text\": \"partially exclude PFAS regardless of their chain lengths and let water pass through, with the consequent formation of a more concentrated solution and a clean permeate stream. \\u201cLoose\\u201d polyamide thin- \\ufb01lm composites also o \\ufb00er a less energy-intensive process relative to RO. 27 The generation of concentrated and easy-to-handle aqueous solutions of PFAS can provide new opportunities to move toward a zero-waste discharge alternative by potentially coupling the technology with PFAS destruction techniques. 8,28\\u221231 Polymeric micro \\ufb01ltration (MF) membranes have the capability of holding materials within their pores, supporting additional functionalities and providing an increased surface area for interactions. These characteristics allow for the introduction of metals and charged molecules, 32,33 grafted molecules,34 and sca \\ufb00olds for physical immobilization 32,35,36 for applications such as catalysis, adsorption, and the development of responsive m aterials. The separation of PFAS and other pollutants from contaminated water sources has also been studied. 35,37 Successful coupling of a polyamide thin-\\ufb01lm layer on top of a functionalized open support presents some intriguing opportunities to create a single-step process, which concentrates and further puri \\ufb01es PFASs from an aqueous solution with a minimum decrease of the membrane water permeance. To the best of our knowledge, this has not been achieved yet because the synthesis of a polyamide layer\"\n    },\n    {\n      \"corpus_chunk\": 25,\n      \"locator_id\": \"S04-E08\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.3601081073284149,\n        \"RT04-C2\": 0.026541229337453842,\n        \"RT04-C3\": 0.002275569597259164,\n        \"umbrella\": 0.23326772451400757\n      },\n      \"section\": \"results\",\n      \"text\": \"toward certain model hydrophobic compounds, 60 as was the case for methylene blue ( Figure S20 ). At an equilibrium concentration ( Ce)o f7 0m g / LP F O A ,t h e1 7 8m g / m 2 membrane was adsorbed ( qe) by the NF-PNIPAm-PVDF membrane, and 26% of the adsorption capacity was regenerated using water at T(22 \\u00b0C) < LCST ( Figure S21 ). Figure 4. (a) Diagram illustrating the developed material and its separation mechanisms (exclusion and adsorption) toward PFAS separation. (b) Water permeability coe \\ufb03 cient ( A) or also called water permeance (thickness-dependent) of the commercial PVDF400, PNIPAm-PVDF (weight gain 14.8%), and NF-PNIPAm-PVDF membranes (PNIPAm weight gain 10.0 \\u221211.7%) was calculated from the equation Jw = A\\u00b7(\\u0394P). Data for NF270 was included for comparison. The permeability was measured over a pressure range of 1.4 \\u22124.0 bar for the PVDF400 membrane, 1.9 \\u22129.2 bar for the PNIPAm-PVDF and NF270 membranes, and 2.0 \\u22129.6 bar for the NF-PNIPAm-PVDF membrane. Cross \\ufb02ow systems were used for these measurements.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2022 - L\\u00e9niz-Pizarro - Dual-Functional Nanofiltration and Adsorptive Membranes for PFAS and Organics Separation from Water.pdf\",\n  \"source_id\": \"S04\",\n  \"title\": \"Dual-Functional Nanofiltration and Adsorptive Membranes for PFAS and Organics Separation from Water\",\n  \"year\": \"2022\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "cb8ad385e6d1f56450c23f57d1513594194f73b16f6b8eb5d4a2fbf5409c6a82",
+  "response_metadata": {
+    "cached_input_tokens": 1152,
+    "estimated_cost_usd": 0.0526865,
+    "finish_reason": "stop",
+    "input_tokens": 7634,
+    "latency_seconds": 44.152060583001,
+    "output_tokens": 4444,
+    "reasoning_tokens": 1308,
+    "response_id": "chatcmpl-E9NB7wE0FsgXkWNME63rvMprdCeKJ",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 12078,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The record DOI/URL exactly matches the DOI given in the source (10.1021/acsestwater.2c00043, https://doi.org/10.1021/acsestwater.2c00043).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "PFOA is explicitly named in multiple excerpts as a target PFAS (e.g., S04-E01: 'PFOA and GenX' and S04-E05: 'perfluorooctanoic acid (PFOA)').",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1].value",
+        "reason": "HFPO-DA (GenX) is explicitly named in S04-E05 ('Heptafluoropropylene oxide dimer acid (HFPO-DA) fluoride (GenX)') and S04-E01 ('GenX').",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[2].value",
+        "reason": "PFBA is explicitly named in S04-E05 ('heptafluorobutyric acid (PFBA)') and in S04-E01 ('PFBA'). The record uses the same naming as in the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "matrix.value",
+        "reason": "S04-E05 specifies the convective-flow PFAS tests used '70 ppb of each PFAS, and 2 mM CaCl2 as feed concentration' at pH ~5.7, but does not state 'type I water'. S04-E02 mentions 'type I water' for a different (diffusive) PFAS experiment. Thus CaCl2 and pH are supported, while attributing 'type I water' specifically to the cross-flow experiments is inferred from a different setup.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "S04-E01: 'feed solution containing 70 \u03bcg/L of each compound' and S04-E05: '70 ppb of each PFAS' support a value of 70 for the PFAS feed concentration.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "S04-E01 explicitly states '70 \u03bcg/L of each compound'; using '\u03bcg/L each PFAS' as the unit is consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "S04-E05 states '2 mM CaCl2 as feed concentration', supporting a value of 2.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "S04-E05 explicitly reports '2 mM CaCl2'; the unit mM is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "S04-E05 gives 'T =3 6 \u00b0C', supporting a temperature value of 36.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "Temperature is expressed in '\u00b0C' in S04-E05; the recorded unit '\u00b0C' is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "S04-E05 states 'pH ~5.7', supporting the recorded value '~5.7'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "pH is dimensionless and is shown without a unit in the source. Leaving the unit null is acceptable and consistent.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].value",
+        "reason": "S04-E05 indicates '\u2248100 L/m2-h at 7 bar permeate flux'; the 7 bar operating pressure is clearly supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].unit",
+        "reason": "Pressure is reported as '7 bar' in S04-E05, so 'bar' is the correct unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[5].value",
+        "reason": "S04-E03 reports 'a high water flux of 100 L/m2-h at 7 bar' and S04-E05 reports '\u2248100 L/m2-h at 7 bar permeate flux', supporting a value of 100 for permeate flux.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[5].unit",
+        "reason": "Flux is explicitly given as 'L/m2-h' in S04-E03 and S04-E05; the unit is correctly recorded.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[6].value",
+        "reason": "S04-E08: 'The permeability was measured over a pressure range of ... 2.0\u20139.6 bar for the NF-PNIPAm-PVDF membrane.' This supports the value '2.0-9.6' for the hydraulic testing pressure range.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[6].unit",
+        "reason": "The pressure range in S04-E08 is explicitly in 'bar'; the recorded unit 'bar' is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "S04-E01 reports 'steady-state rejection of PFAS by NF-PNIPAm-PVDF membranes in a cross flow system', which is a separation performance metric. Classifying the endpoint as 'separation' is consistent with the measured rejection.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "S04-E05 describes 'Retention of PFAS in a convective flow ... over time' in cross-flow cells. Retention is a separation metric, so 'separation' is an appropriate endpoint_type.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].endpoint_type",
+        "reason": "S04-E08 reports the 'Water permeability coefficient (A) or also called water permeance' of various membranes. This reflects membrane transport/separation performance, so classifying as 'separation' is appropriate within the task context.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "S04-E01: 'steady-state rejection ... was ~70% for PFOA and GenX and ~50% for PFBA.' The value '~70' for PFOA with approximate_numeric form matches this statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "Rejection is expressed as a percentage in S04-E01 ('~70%'); the unit '%' is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "S04-E01 states '~70% for PFOA and GenX'; assigning value '~70' for HFPO-DA (GenX) with approximate_numeric form is directly supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "Rejection of GenX is expressed as a percentage in S04-E01; '%' is the correct unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].value",
+        "reason": "S04-E01: '... and ~50% for PFBA.' The value '~50' with approximate_numeric form is correctly taken from the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].unit",
+        "reason": "Rejection of PFBA is given as '~50%' in S04-E01, so '%' is the correct unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].value",
+        "reason": "S04-E03: 'a high water flux of 100 L/m2-h at 7 bar' and S04-E05: '\u2248100 L/m2-h at 7 bar permeate flux' support the permeate flux value of 100. The text does not use an approximation sign in S04-E03, so treating 100 as exact is reasonable.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].unit",
+        "reason": "Flux units are explicitly 'L/m2-h' in S04-E03 and S04-E05; the unit is correctly recorded.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].value",
+        "reason": "S04-E05 indicates '\u2248100 L/m2-h at 7 bar permeate flux'; this supports an operating pressure value of 7 bar during PFAS separation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].unit",
+        "reason": "Pressure is given in bar ('7 bar') in S04-E05; the unit 'bar' is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "S04-E05 mentions PFAS retention tests in 'two cells on a crossflow membrane unit,' indicating a laboratory cross-flow setup. S04-E01 refers to membranes 'in a cross flow system.' Describing this as bench-scale cross-flow nanofiltration tests in lab cells is a reasonable, design-based summary.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "S04-E04 explains the focus on 'the synthesis of polyamide thin film on top of a temperature-responsive and an open porous support' to combine NF exclusion with adsorption, which matches a polyamide thin-film nanofiltration layer on a PNIPAm-functionalized PVDF support. S04-E02 and E05 reference NF-PNIPAm-PVDF and NF270 for comparison, supporting the treatment description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "S04-E01 and S04-E05 support that NF-PNIPAm-PVDF membranes achieved steady-state PFAS rejection of ~70% for PFOA and GenX and ~50% for PFBA at 70 \u03bcg/L of each PFAS, 2 mM CaCl2, pH ~5.7, T \u224836 \u00b0C, in a cross-flow at ~100 L/m2-h and 7 bar. The additional phrase that this 'reflects combined size/charge exclusion and adsorption-driven separation' is mechanistic inference; S04-E02 and S04-E08 discuss exclusion and adsorption mechanisms generally, but they do not explicitly attribute the observed steady-state rejection in this specific test to that combined mechanism. Thus, the numeric and conditional content is supported, while the mechanistic explanation is partially inferred.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "S04-E05 caption clearly describes 'Retention of PFAS in a convective flow ... over time' in a cross-flow unit using polymeric membranes. The interpretation that retention of HFPO-DA (GenX), PFOA, and PFBA over time was monitored to assess separation performance of NF membranes, including NF-PNIPAm-PVDF, is consistent with the text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].interpretation",
+        "reason": "S04-E08 presents the water permeability coefficient (A), also called water permeance, for PVDF400, PNIPAm-PVDF, NF-PNIPAm-PVDF, and NF270, measured over specified pressure ranges in cross-flow systems. S04-E03 notes PFAS separation at 100 L/m2-h and 7 bar. The interpretation that adding the NF layer and PNIPAm functionality alters water permeance while enabling high flux (~100 L/m2-h at 7 bar during PFAS tests) is supported by these excerpts.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].statement",
+        "reason": "S04-E05 specifies cross-flow convective PFAS retention tests for HFPO-DA, PFOA, and PFBA at 70 ppb each, 2 mM CaCl2, T = 36 \u00b0C, pH ~5.7 in a membrane unit. S04-E02 notes type I water use in PFAS tests. Together these show model PFAS at low \u03bcg/L levels in relatively simple aqueous matrices and bench-scale conditions. The limitation about applicability to complex natural waters or wastewater is a reasonable design-based inference from these conditions.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1].statement",
+        "reason": "S04-E07 states that '\u201cLoose\u201d polyamide thin-film composites also offer a less energy-intensive process relative to RO,' which is a qualitative energy comparison without quantitative metrics. S04-E05 and other excerpts do not provide explicit energy consumption values. Thus, the limitation that energy performance is discussed only qualitatively without explicit metrics is supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The cited excerpts show that PFAS rejection and retention were measured for the same NF-PNIPAm-PVDF membrane type under well-defined, consistent bench-scale cross-flow conditions (same PFAS set, similar feed composition, flux, and pressure). Concluding that the data are 'comparable_with_conditions' within this internal context is a reasonable inference from the reported design and conditions.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The reason explains that internal comparisons are valid because of shared membrane type (NF-PNIPAm-PVDF), PFAS suite, and operating conditions, while comparisons to other membranes like NF270 or other studies require caution due to structural and chemistry differences. These points follow from S04-E01, E05, and E08, which specify the membrane types and test conditions.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT04-bge_llm_local_rag-S04-R01",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements (source identity, PFAS identity, membrane/treatment description, matrix, operating conditions, and quantitative separation metrics) are well supported by the cited excerpts with no major numeric or unit errors. Minor issues involve some mechanistic interpretation and inferring 'type I water' for the cross-flow tests, but these do not compromise the quantitative findings for synthesis use.",
+    "task_id": "RT04"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

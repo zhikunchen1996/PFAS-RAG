@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PFAS professional review source-support audit",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id",
+    "claim_assessments",
+    "unknown_source_ids",
+    "anchor_exclusion_violation",
+    "anchor_violation_rationale"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "pattern": "^RT(0[1-9]|10)$"
+    },
+    "claim_assessments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim_text",
+          "cited_source_ids",
+          "status",
+          "rationale"
+        ],
+        "properties": {
+          "claim_text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "cited_source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "supported",
+              "partially_supported",
+              "unsupported",
+              "contradicted"
+            ]
+          },
+          "rationale": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "unknown_source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "anchor_exclusion_violation": {
+      "type": "boolean"
+    },
+    "anchor_violation_rationale": {
+      "type": "string"
+    }
+  }
+}

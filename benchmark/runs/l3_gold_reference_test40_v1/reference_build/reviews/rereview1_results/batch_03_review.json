@@ -1,0 +1,211 @@
+{
+  "batch_id": "test40-rereview1-batch-03",
+  "batch_sha256": "a4188a8a8301e8fb7df87a9894aa12125a4b56e35cf34c0b106708187be52c11",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-rereview1-batch-03",
+    "reviews": [
+      {
+        "question_id": "NQ27",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Both of the previously flagged repairs (expanding NQ27_MMG001/NQ27_MMG008 registration and correcting NQ27_MMG010 exact_spans in G01/G02) were resolved, but a materially identical unregistered-span-reliance problem persists for NQ27_MMG005: G01 cites NQ27_MMG005 with a 'supports' description ('Supports the importance of replacing or regenerating GAC in PFAS treatment systems') that draws on the chunk sentence 'These findings highlight the importance of carbon replacement and/or regeneration for ensuring the removal of PFAS by GAC,' which is present in full_chunk_text but is not included in the registered exact_evidence_span or unit_exact_spans for NQ27_MMG005.",
+          "The reference_answer directly quotes this same unregistered sentence ('for ensuring the removal of PFAS by GAC' [NQ27_MMG005]), so the exact-span validity issue also propagates into the prose, not just the ledger's exact_spans metadata."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ27-G01",
+            "verdict": "partially_supported",
+            "issues": [
+              "The NQ27_MMG005 exact_spans entry's 'supports' text ('importance of replacing or regenerating GAC') describes content from an unregistered continuation sentence in the chunk, not the registered exact_evidence_span/unit span (which only covers the 'has not been replaced ... chemical leaching' clause)."
+            ],
+            "required_repairs": [
+              "Add the sentence 'These findings highlight the importance of carbon replacement and/or regeneration for ensuring the removal of PFAS by GAC' to NQ27_MMG005's registered exact_evidence_span/unit_exact_spans, or revise the G01 'supports' text to describe only the leaching-related content actually present in the registered span."
+            ]
+          },
+          {
+            "claim_group_id": "NQ27-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ27-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ27-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ27-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Expand NQ27_MMG005's registered exact_evidence_span/unit_exact_spans to include the 'importance of carbon replacement and/or regeneration for ensuring the removal of PFAS by GAC' sentence that is directly quoted in the reference_answer and relied upon by NQ27-G01, or remove/rewrite that reliance so all cited content stays within the registered span."
+        ]
+      },
+      {
+        "question_id": "NQ28",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "The single previously flagged issue (NQ28_MMG003's title-based inference in G01) was resolved by dropping that citation, but a broader, previously-unflagged pattern of the same underlying defect (exact_spans 'supports' descriptions relying on unregistered sentences elsewhere in the full_chunk_text rather than the quoted/registered span) is pervasive across NQ28-G01, NQ28-G02, and partially NQ28-G03.",
+          "The reference_answer directly quotes several sentences that are not present in any registered exact_evidence_span/unit_exact_span, including 'hydrated electron-based advanced reduction processes are considered to be among the several most effective techniques for degrading PFAS' (attributed to NQ28_MMG001), 'eaq− (hydrated electron) is more effective in eliminating PFAS ... than hydroxyl radical ... or sulfate radical' and 'nonselectively convert long- and short-chain PFAS to nonfluorinated' (attributed to NQ28_MMG002), and 'performed better than Fenton-based processes ...' (attributed to NQ28_MMG003)."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ28-G01",
+            "verdict": "partially_supported",
+            "issues": [
+              "Both NQ28_MMG002 exact_spans entries quote the same registered span ('oxidation treatments are generally slow and inefficient ... against reduction processes'), but their 'supports' text describes two different, unregistered sentences elsewhere in the chunk ('AOPs and ARPs have shown promise ...' and 'eaq− is more effective ... than hydroxyl radical ... or sulfate radical')."
+            ],
+            "required_repairs": [
+              "Register a unit_exact_span for NQ28_MMG002 covering 'Advanced oxidation processes (AOPs) and advanced reduction processes (ARPs) have shown promise in degrading PFAS in the aqueous environment' and cite that span for the AOP/ARP-distinction claim.",
+              "Register a unit_exact_span for NQ28_MMG002 covering 'eaq− (hydrated electron) is more effective in eliminating PFAS chemicals in the water than hydroxyl radical (•OH) or sulfate radical (SO4•−)' and cite that span for the reactive-species contrast claim, rather than reusing the 'oxidation treatments are generally slow' span for both."
+            ]
+          },
+          {
+            "claim_group_id": "NQ28-G02",
+            "verdict": "partially_supported",
+            "issues": [
+              "The NQ28_MMG001 exact_spans entry attributes 'hydrated electron-based advanced reduction processes are considered to be among the several most effective techniques for degrading PFAS' to the registered span beginning '47-51 Here, a systematic comparison ...', but that sentence is not part of the registered exact_evidence_span/unit_exact_spans for NQ28_MMG001.",
+              "All three NQ28_MMG002 exact_spans entries in this group reuse the single registered 'oxidation treatments are generally slow' span while their 'supports' text actually describes three distinct, unregistered sentences (hydrated-electron effectiveness, nonselective conversion to nonfluorinated products, and UV-ARP low-energy/sensitizer characterization)."
+            ],
+            "required_repairs": [
+              "Register a unit_exact_span for NQ28_MMG001 covering 'Hydrated electron-based advanced reduction processes are considered to be among the several most effective techniques for degrading PFAS' and cite that span for atomic claim NQ28-A03.",
+              "Register separate unit_exact_spans in NQ28_MMG002 for the 'eaq− is more effective ...' sentence, the 'UV-ARPs generate reductive species that nonselectively convert ... to nonfluorinated' sentence, and the 'UV-ARPs ... hydrated electron sensitizers with UV lamps' sentence, and cite each for its corresponding claim instead of reusing the 'oxidation treatments are generally slow' span for all three."
+            ]
+          },
+          {
+            "claim_group_id": "NQ28-G03",
+            "verdict": "partially_supported",
+            "issues": [
+              "The second NQ28_MMG002 exact_spans entry (about AOPs raising PFAS above drinking-water standards) reuses the registered 'oxidation treatments are generally slow' span rather than the actual (unregistered) sentence making that claim.",
+              "Both NQ28_MMG003 exact_spans entries (electrochemical oxidation outperforming other AOPs; successful elimination with industrial-scale restrictions) reuse the registered 'effectiveness of PFAS abatement ... differ across multiple reaction variables' span, but the supporting content is found in different, unregistered sentences later in the chunk."
+            ],
+            "required_repairs": [
+              "Register a unit_exact_span for NQ28_MMG002 covering 'AOPs can sometimes be ineffective in treating PFAS as their levels can rise above drinking water standards after treatment' and cite that span for the corresponding claim.",
+              "Register unit_exact_spans for NQ28_MMG003 covering 'electrochemical oxidation performed better than Fenton-based processes ... for PFAS removal on the basis of initial PFAS concentration and reduction extent' and 'Experimental scale investigations have demonstrated that PFCA, PFAS, and polyfluorinated compounds can be successfully eliminated by electrochemical oxidation, even though ... restricted because of energy consumption, the expense of producing efficient electrodes, and harmful by-products,' and cite these spans instead of the 'effectiveness ... differ across multiple reaction variables' span."
+            ]
+          },
+          {
+            "claim_group_id": "NQ28-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-G06",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Expand approved_source_evidence registered spans for NQ28_MMG001, NQ28_MMG002, and NQ28_MMG003 to cover every sentence that is directly quoted in the reference_answer or relied upon by an exact_spans 'supports' description, and re-pair each claim-group exact_spans entry with the specific registered span that actually contains the supporting content, rather than repeatedly reusing one registered span per document for multiple unrelated claims."
+        ]
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 154527,
+    "num_turns": 6,
+    "stop_reason": "tool_use",
+    "session_id": "8cbdcb2a-246d-4ab8-be39-0088b24be735",
+    "total_cost_usd": 0.54577905,
+    "usage": {
+      "input_tokens": 8,
+      "cache_creation_input_tokens": 68677,
+      "cache_read_input_tokens": 124521,
+      "output_tokens": 16668,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 68677
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 15343,
+          "cache_read_input_tokens": 62095,
+          "cache_creation_input_tokens": 17653,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 17653,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 750,
+        "outputTokens": 18,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.00084,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 8,
+        "outputTokens": 16668,
+        "cacheReadInputTokens": 124521,
+        "cacheCreationInputTokens": 68677,
+        "webSearchRequests": 0,
+        "costUSD": 0.54493905,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 5893,
+    "ttft_stream_ms": 772,
+    "time_to_request_ms": 38,
+    "type": "result",
+    "duration_ms": 154061,
+    "uuid": "770c2816-f6a2-4927-a04e-e4d834f65aad"
+  },
+  "candidate_test40_inputs_used": false
+}

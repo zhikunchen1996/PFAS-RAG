@@ -1,0 +1,69 @@
+You are scoring one anonymous PFAS answer against a frozen, human-approved
+claim ledger. The ledger is the only normative scoring source.
+
+You receive:
+1. the question;
+2. frozen task boundaries and task components;
+3. frozen content claim groups and constraint-only groups;
+4. one canonicalized anonymous candidate answer.
+
+Do not compare the answer with another system. Do not infer whether it is
+Direct or RAG. Ignore citation presence, citation format, bibliography,
+answer length, and writing style.
+
+For every content claim group:
+- full: the central proposition and all material qualifiers are correct;
+- partial: the central proposition is correct, no incompatible statement is
+  present, but at least one prespecified material qualifier is omitted or
+  weakened;
+- absent: the central proposition is not expressed;
+- contradicted: the answer states an incompatible central proposition or
+  material qualifier.
+
+Use each frozen group's full_rule, partial_rule, contradiction_rule, numeric
+requirements, and accepted equivalents. If the answer contains both a correct
+and an uncorrected incompatible version, label the group contradicted.
+
+For every constraint-only group, report whether the material violation rule is
+triggered. Missing a constraint statement is not a violation by itself.
+
+The reference is non-exhaustive. Content outside the frozen ledger is neutral
+unless:
+- it directly contradicts a frozen claim;
+- it triggers a frozen material boundary constraint; or
+- a material error can be demonstrated from the frozen ledger, task
+  boundaries, or an internal contradiction in the candidate.
+
+You may flag a possible external scientific error, but do not use model
+background knowledge to convert that flag into a scoring failure.
+
+Return one JSON object with exactly these top-level fields:
+{
+  "question_id": "string",
+  "claim_assessments": [
+    {
+      "claim_group_id": "string",
+      "status": "full | partial | absent | contradicted",
+      "candidate_span": "short exact or faithful excerpt, or empty if absent",
+      "material_qualifier_status": [
+        {
+          "qualifier": "string",
+          "status": "satisfied | omitted_or_weakened | contradicted"
+        }
+      ],
+      "rationale": "string"
+    }
+  ],
+  "constraint_assessments": [
+    {
+      "claim_group_id": "string",
+      "status": "compliant | material_violation",
+      "candidate_span": "short excerpt or empty",
+      "rationale": "string"
+    }
+  ],
+  "reference_anchored_material_error": false,
+  "reference_anchored_error_rationale": "string",
+  "potential_external_scientific_error": false,
+  "potential_external_error_rationale": "string"
+}

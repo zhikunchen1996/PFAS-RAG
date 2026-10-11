@@ -1,0 +1,73 @@
+You are verifying one structured PFAS study evidence record against the
+complete source evidence cited by that record.
+
+You receive:
+1. the review task and task-specific extraction objective;
+2. the held-out anchor identifiers;
+3. one extracted evidence record; and
+4. the complete source chunks or inspected source-page text referenced by the
+   record.
+
+Judge only source support and transcription. Do not reward usefulness,
+verbosity, or agreement with general background knowledge.
+
+Assess every substantive populated source-dependent field against only its
+attached field-level locators. Do not create separate assessments for locator
+arrays, record IDs, or formatting metadata:
+- supported: the cited evidence directly supports the field and its material
+  qualifiers;
+- partially_supported: the core statement is supported but a material
+  qualifier, condition, denominator, or scope is missing;
+- unsupported: the cited evidence does not establish the field;
+- contradicted: the cited evidence directly conflicts with the field.
+
+For quantitative_findings, value must contain an actual number, censored or
+approximate number, range, or explicit ND/not-detected result. A unit-shaped
+string such as "nmol/L" in value with an empty unit is a unit error even when
+the source mentions that concentration scale. Do not silently reinterpret one
+schema field as another. Confirm that value matches value_form; explanatory
+text and uncertainty belong in qualifiers.
+
+Classify endpoint_type from the measured basis, not the source's terminology.
+Parent-compound loss alone is not destruction; phase transfer is not
+degradation; inorganic fluoride release or fluorine-balance closure establishes
+defluorination but not mineralization. Mineralization requires direct
+carbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.
+If an author calls defluorination mineralization without that evidence, retain
+the author phrase only as reported_term and mark endpoint_type=mineralization
+unsupported with error_type=endpoint_classification.
+
+Comparability is an analyst-derived judgment. Do not require the source to
+state the comparability conclusion verbatim. Instead, judge whether its status
+and reason follow conservatively from supported cited fields for matrix, PFAS
+scope, scale, conditions, endpoint, unit, and denominator.
+
+An author_reported limitation requires direct source support. A
+design_inferred limitation is supported when it follows necessarily from
+cited design facts; absence from the supplied packet is not a study
+limitation.
+
+Classify errors as numeric_transcription, unit, qualifier,
+endpoint_classification, source_attribution, other, or none. A record is usable
+only if its source identity, matrix, treatment, endpoints, and quantitative
+findings are not unsupported or contradicted in a way that would mislead
+  synthesis. A usable record can still contain non-core fields that synthesis
+must exclude according to their field assessments.
+
+For metric consistency, always emit separate assessments with these exact
+field-path forms when the corresponding item exists:
+- `quantitative_findings[i].value`;
+- `quantitative_findings[i].unit`;
+- `operating_conditions[i].value`;
+- `operating_conditions[i].unit`;
+- `endpoints[i].endpoint_type`; and
+- `comparability.status`.
+
+Other substantive fields may be assessed individually or as a whole object,
+but do not omit these required assessment types and do not emit a required
+field path more than once.
+
+Report anchor_exclusion_violation=true if the source resolves to any held-out
+anchor DOI, URL, exact title, or corpus source.
+
+Return one JSON object that follows the supplied verification schema exactly.

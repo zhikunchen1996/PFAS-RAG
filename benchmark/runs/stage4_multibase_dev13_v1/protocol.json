@@ -1,0 +1,80 @@
+{
+  "protocol_id": "pfas_rag_stage4_multibase_dev13_v1",
+  "status": "dev13_cross_provider_generation",
+  "scope": "Dev13 matched Direct-versus-BGE-LLM RAG generation and L3 V3 continuous evaluation",
+  "questions": "benchmark/frozen_v3/input/questions_dev13.csv",
+  "retrieval": "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/bge_llm_gpt51/retrieval_outputs/rag_outputs_bge_llm_gpt51_pool60_bge30_llm10_fullchunk.jsonl",
+  "common_tagger": "benchmark/frozen_v3/judge/support/layer1_common_tagger_v1/results/dev13_common_tagger_gpt51_2026-07-26/bge_llm/tags/tag_results.jsonl",
+  "prompt_source": "byte-identical copies of the frozen GPT-5.1 matched prompts",
+  "generation_contract": {
+    "arms": [
+      "direct",
+      "rag"
+    ],
+    "max_completion_tokens": 5000,
+    "answer_word_limit": null,
+    "length_based_exclusion_or_retry": false,
+    "same_system_prompt": true,
+    "same_scientific_and_task_instructions": true,
+    "same_output_structure": true,
+    "direct_retrieval": false,
+    "rag_retrieval": true,
+    "rag_soft_tags": true,
+    "rag_atomic_citations": true,
+    "retrieval_or_tagger_api_calls": 0
+  },
+  "providers": {
+    "gemini31_pro": {
+      "provider": "Google Gemini API",
+      "request_model": "gemini-3.1-pro-preview",
+      "thinking_level": "low",
+      "temperature": "provider default 1.0; not sent",
+      "input_context_limit_tokens": 1048576,
+      "model_output_limit_tokens": 65536,
+      "pricing_date": "2026-07-29",
+      "usd_per_million_tokens": {
+        "input_below_200k_per_request": 2.0,
+        "output_including_thinking_below_200k_per_request": 12.0
+      }
+    },
+    "claude_sonnet5": {
+      "provider": "Anthropic Messages API",
+      "request_model": "claude-sonnet-5",
+      "thinking": "adaptive",
+      "effort": "low",
+      "temperature": "unsupported non-default; not sent",
+      "input_context_limit_tokens": 1000000,
+      "model_output_limit_tokens": 128000,
+      "pricing_date": "2026-07-29",
+      "pricing_status": "introductory through 2026-08-31",
+      "usd_per_million_tokens": {
+        "input": 2.0,
+        "output_including_thinking": 10.0
+      }
+    }
+  },
+  "existing_baseline": {
+    "provider": "OpenAI",
+    "request_model": "gpt-5.1",
+    "required_returned_snapshot": "gpt-5.1-2025-11-13",
+    "reasoning_effort": "low",
+    "temperature": "provider default; not sent",
+    "input_context_limit_tokens": 400000,
+    "model_output_limit_tokens": 128000,
+    "pricing_date": "2026-07-28",
+    "usd_per_million_tokens": {
+      "input": 1.25,
+      "cached_input": 0.125,
+      "output_including_reasoning": 10.0
+    }
+  },
+  "comparability_statement": "GPT-5.1, Gemini 3.1 Pro Preview, and Claude Sonnet 5 are treated as matched high-capability proprietary general-purpose models, not as parameter-count-equivalent or compute-equivalent models.",
+  "evaluation": {
+    "protocol": "benchmark/runs/l3_gold_reference_dev13_v3_continuous",
+    "primary": "canonical-order mean component-balanced core reference-claim coverage",
+    "sensitivity": "reverse claim order",
+    "binary_pass": false,
+    "human_candidate_adequacy_labels": false
+  },
+  "held_out_test40_used": false
+}

@@ -1,0 +1,48 @@
+You are Model A in a controlled scientific-reference construction workflow.
+
+Construct a structured gold-referenced answer for one PFAS benchmark question.
+Use only the supplied question, pre-answer task boundaries, and frozen gold
+evidence records. Do not use outside knowledge.
+
+The gold evidence is non-exhaustive. Your job is to state what these records
+support, not to imply that they exhaust the literature.
+
+Rules:
+1. Every atomic claim must cite one or more supplied evidence_id values.
+2. A claim may combine evidence records only when their compounds, matrices,
+   methods, conditions, units, and endpoints remain correctly attributed.
+3. Preserve exact numerical values, units, conditions, and endpoint language.
+4. Keep removal, adsorption, separation, degradation, defluorination,
+   mineralization, destruction, regeneration, and QA/QC distinct.
+5. Do not convert a negative or limitation record into positive evidence.
+6. Do not infer a universal rule from study-specific evidence.
+7. Label a claim "core" only when it directly answers a major part of the
+   question. Use "supporting", "limitation", or "negative_boundary" otherwise.
+8. The prose reference must be researcher-facing and must not mention gold,
+   chunks, benchmark construction, or scoring.
+9. Include unresolved points when the supplied evidence is partial,
+   heterogeneous, or internally limited.
+
+Return one JSON object with exactly these top-level fields:
+{
+  "question_id": "string",
+  "answerability": "supported | partially_supported | conflicting_or_heterogeneous | insufficient",
+  "answerability_rationale": "string",
+  "reference_answer": "string",
+  "claims": [
+    {
+      "claim_id": "QUESTION_ID-C01",
+      "claim_type": "core | supporting | limitation | negative_boundary",
+      "claim_text": "one atomic claim",
+      "evidence_ids": ["frozen evidence IDs"],
+      "conditions_and_scope": "compound, matrix, method, condition, and endpoint boundaries"
+    }
+  ],
+  "unresolved_or_unsupported": ["string"],
+  "boundary_check": {
+    "must_include_addressed": true,
+    "must_not_claim_respected": true,
+    "notes": "string"
+  }
+}
+

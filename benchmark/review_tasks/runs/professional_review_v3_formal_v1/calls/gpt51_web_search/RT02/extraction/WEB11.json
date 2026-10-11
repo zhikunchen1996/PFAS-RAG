@@ -1,0 +1,428 @@
+{
+  "call_key": "RT02:gpt51_web_search:extraction:WEB11",
+  "created_at": "2026-08-05T03:25:04.762855+00:00",
+  "raw_response_text": "{\"task_id\":\"RT02\",\"source_system\":\"gpt51_web_search\",\"records\":[],\"extraction_notes\":[\"Source WEB11 (Li et al., 2020, Water Research, \u201cAdsorption of perfluoroalkyl substances (PFAS) in groundwater by granular activated carbons: Roles of hydrophobicity of PFAS and carbon characteristics\u201d) was accessed only at publisher introduction text; full methods and results were not available within the frozen packet.\",\"The inspected excerpts (WEB11-E01, WEB11-E02, WEB11-E03) discuss general limitations of batch isotherm tests, mention numerical simulations/RSSCTs, and briefly reference an external pilot-scale GAC study by McCleaf et al., but they do not report any numeric performance data, operating conditions, or configuration details for Li et al.\u2019s own experiments.\",\"Because no quantitative values (e.g., concentrations, capacities, breakthrough criteria, bed volumes) or specific operating parameters (e.g., EBCT, flow rate, bed depth, contact time) for either batch or column tests are present in the inspected text, no primary-study records could be constructed without inferring beyond the provided evidence.\",\"The McCleaf et al. pilot GAC study mentioned in WEB11-E03 is an external citation and is not described with sufficient detail or numeric results in the available text to extract as a study record from this source.\",\"No held-out anchor DOI, title, or URL was encountered among the inspected text; the absence of extractable records is due to limited access to the full article content rather than conflict with the anchor exclusion list.\"]}",
+  "request": {
+    "max_completion_tokens": 16000,
+    "messages": [
+      {
+        "content": "You are an evidence extraction specialist for PFAS treatment and remediation\nresearch. Build a structured study evidence table before any narrative review\nis written.\n\nExtract one record per primary-study experiment, modeled scenario, or field\ndeployment that contributes usable evidence to the review task. A paper may\nproduce more than one record only when materially different matrices,\ntechnologies, operating regimes, or endpoints would otherwise be conflated.\n\nReview articles and perspectives may help identify terminology or primary\nstudies, but they must not be used as the source of a quantitative study\nrecord. Never copy a review table as though it were a primary result.\n\nFor every populated source-dependent field:\n- preserve the PFAS identity or class, matrix, starting concentration or\n  loading, operating conditions, study scale, measured endpoint, value, unit,\n  and material qualifiers when reported;\n- attach only the field-level evidence locator identifiers that directly\n  support that specific value or statement;\n- use an empty string or empty array when the source does not report the\n  information; do not infer or estimate it;\n- do not turn the absence of information in the supplied packet into a study\n  finding, quantitative result, or author-reported limitation unless the source\n  explicitly states that absence;\n- distinguish removal, separation, sorption, parent-compound loss,\n  transformation, degradation, destruction, defluorination, mineralization,\n  total organofluorine change, and toxicity change;\n- classify endpoint_type from what was actually measured, not from the\n  authors' preferred label. Parent loss alone is not destruction. Phase\n  transfer is removal or separation, not degradation. Inorganic fluoride\n  release or fluorine-balance closure can establish defluorination but cannot\n  by itself establish mineralization. Use mineralization only when direct\n  carbon-fate evidence such as CO2/inorganic-carbon production or a carbon\n  balance is reported. Preserve a broader author term in reported_term and\n  explain any mismatch in interpretation;\n- do not normalize or compare values unless their units, denominators,\n  matrices, PFAS scope, operating conditions, and endpoints permit it.\n\nOnly populate quantitative_findings when the source reports an actual numeric\nvalue, inequality, approximate value, range, or explicit ND/not-detected\nresult. Put the number or censoring marker in value and the measurement unit in\nunit. Normalize Unicode inequality signs to ASCII >= or <= and range dashes to\nan ASCII hyphen while preserving the source wording in qualifiers. A unit or\norder-of-magnitude scale without a number is not a quantitative finding.\nQualitative parent loss, intermediate formation, or disappearance belongs in\nthe endpoint interpretation or residual/byproduct statements instead.\n\nSet value_form to exactly one of:\n- exact_numeric: a bare number such as `99.7` or `1.2e-3`;\n- approximate_numeric: `~` followed by a number;\n- inequality: `<`, `<=`, `>`, or `>=` followed by a number;\n- range: two numbers separated by `-` or `to`; or\n- not_detected: exactly `ND`, `N/D`, `not detected`,\n  `below detection limit`, or `below quantification limit`.\n\nPut uncertainty, denominators, fold-change wording, and explanatory text in\nqualifiers rather than value. A deterministic validator will remove malformed\nquantitative fields before source verification.\n\nFor limitations, use basis=author_reported only when the source states the\nlimitation. Use basis=design_inferred only for a constraint that follows\ndirectly from cited design evidence, such as one matrix, one compound, or\nbench-scale operation. Never label missing information in the supplied packet\nas a scientific limitation of the study.\n\nMark each record as comparable with conditions, descriptive only, or not\ncomparable. Comparability is an analyst inference rather than a quotation:\nattach locators for the matrix, scale, conditions, endpoint, and denominator\non which the inference rests, and explain the reason. Do not reward a study\nfor reporting a larger percentage when its endpoint or conditions differ.\n\nThe task was derived from a defining review that is held out from all\ncandidate retrieval systems. The supplied anchor identifiers are an exclusion\nlist, not evidence. Do not extract from the anchor, cite it, reconstruct its\nconclusions, or use its tables.\n\nReturn one JSON object that follows the supplied evidence-table schema exactly.\nDo not write the narrative review in this step.\n",
+        "role": "system"
+      },
+      {
+        "content": "Task:\n{\"review_brief\":\"Prepare a focused review of when batch adsorption results do and do not predict column, pilot, or full-scale PFAS treatment performance.\",\"task_id\":\"RT02\",\"title\":\"Translating PFAS adsorption results from batch tests to continuous treatment\"}\n\nTask-specific data extraction objective:\nExtract study scale, adsorbent, PFAS and matrix, batch or flow configuration, contact time, flow and bed properties, capacity definition, breakthrough criterion, bed volumes, media lifetime, and uncertainty or scale-up limitation.\n\nSource system (return this exact value):\ngpt51_web_search\n\nCandidate source identifier (all records must use this exact source_id):\nWEB11\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nFrozen inspected Web Search sources and evidence locators:\n{\n  \"access_scope\": \"publisher_page\",\n  \"capture_source_id\": \"WEB12\",\n  \"citation\": \"Li, Y., et al. (2020). Adsorption of perfluoroalkyl substances (PFAS) in groundwater by granular activated carbons: Roles of hydrophobicity of PFAS and carbon characteristics. Water Research.\",\n  \"covered_component_ids\": [\n    \"RT02-C1\",\n    \"RT02-C2\",\n    \"RT02-C3\"\n  ],\n  \"doi\": \"\",\n  \"doi_or_stable_url\": \"https://www.sciencedirect.com/science/article/pii/S0043135419311388\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB11-E01\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Introduction\",\n      \"text\": \"Another limitation of the existing studies is that the majority of the studies provides isotherm testing results without accounting for transport phenomena of PFAS in a fixed-bed adsorber, the predominant mode of operation in activated carbon adsorption.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB11-E02\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Introduction\",\n      \"text\": \"More practical and applicable approaches, yet less precise, are to use a numerical simulation with isotherm data, or a rapid small-scale column test (RSSCT) based on a similitude approach.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB11-E03\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Introduction / literature review\",\n      \"text\": \"McCleaf et al. conducted a pilot-scale GAC adsorber test with an empty bed contact time (EBCT) of 6.1 min for assessing the breakthrough of 14 PFAS spiked in groundwater.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://www.sciencedirect.com/science/article/pii/S0043135419311388\",\n  \"source_id\": \"WEB11\",\n  \"source_limitations\": [\n    \"SciDirect full text blocked; only introduction-level statements inspected.\",\n    \"Specific batch and column conditions used in this study and resulting capacities or breakthrough behavior are not visible.\",\n    \"The inspected text mainly discusses limitations of previous batch-only studies rather than providing detailed new batch\\u2013column comparisons.\"\n  ],\n  \"title\": \"Adsorption of perfluoroalkyl substances (PFAS) in groundwater by granular activated carbons: Roles of hydrophobicity of PFAS and carbon characteristics\",\n  \"year\": \"2020\"\n}\n\nDo not use search-result snippets as evidence. Use only the frozen inspected\nsource packet and preserve its declared access scope. Omit any source that\nresolves to a held-out anchor DOI, URL, or exact title and report the violation\nin extraction_notes. Extract at most three materially distinct records from\nthis source, prioritizing records that answer the task components.\n\nExtract primary-study evidence needed to answer the task and return the\nschema-constrained study evidence table.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_review_evidence_table",
+        "schema": {
+          "$defs": {
+            "endpoint": {
+              "additionalProperties": false,
+              "properties": {
+                "endpoint_type": {
+                  "enum": [
+                    "removal",
+                    "separation",
+                    "sorption",
+                    "parent_compound_loss",
+                    "transformation",
+                    "degradation",
+                    "destruction",
+                    "defluorination",
+                    "mineralization",
+                    "total_organofluorine_change",
+                    "toxicity_change",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB11-E01",
+                      "WEB11-E02",
+                      "WEB11-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "interpretation": {
+                  "type": "string"
+                },
+                "reported_term": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "endpoint_type",
+                "reported_term",
+                "interpretation",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceRecord": {
+              "additionalProperties": false,
+              "properties": {
+                "citation": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "comparability": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_locator_ids": {
+                      "items": {
+                        "enum": [
+                          "WEB11-E01",
+                          "WEB11-E02",
+                          "WEB11-E03"
+                        ],
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "type": "array"
+                    },
+                    "reason": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "enum": [
+                        "comparable_with_conditions",
+                        "descriptive_only",
+                        "not_comparable"
+                      ],
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "status",
+                    "reason",
+                    "evidence_locator_ids"
+                  ],
+                  "type": "object"
+                },
+                "doi_or_stable_url": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "endpoints": {
+                  "items": {
+                    "$ref": "#/$defs/endpoint"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "limitations": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "matrix": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "operating_conditions": {
+                  "items": {
+                    "$ref": "#/$defs/namedValue"
+                  },
+                  "type": "array"
+                },
+                "pfas_scope": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceText"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "quantitative_findings": {
+                  "items": {
+                    "$ref": "#/$defs/quantitativeValue"
+                  },
+                  "type": "array"
+                },
+                "record_id": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "residuals_byproducts": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "source_id": {
+                  "enum": [
+                    "WEB11"
+                  ],
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "study_scale": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "study_type": {
+                  "enum": [
+                    "primary_experiment",
+                    "pilot_or_field_deployment",
+                    "modeling_or_life_cycle_study",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "treatment": {
+                  "$ref": "#/$defs/evidenceText"
+                }
+              },
+              "required": [
+                "record_id",
+                "source_id",
+                "doi_or_stable_url",
+                "citation",
+                "study_type",
+                "study_scale",
+                "matrix",
+                "pfas_scope",
+                "treatment",
+                "operating_conditions",
+                "endpoints",
+                "quantitative_findings",
+                "limitations",
+                "residuals_byproducts",
+                "comparability"
+              ],
+              "type": "object"
+            },
+            "evidenceStatement": {
+              "additionalProperties": false,
+              "properties": {
+                "basis": {
+                  "enum": [
+                    "author_reported",
+                    "design_inferred"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB11-E01",
+                      "WEB11-E02",
+                      "WEB11-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "statement": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "statement",
+                "basis",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceText": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB11-E01",
+                      "WEB11-E02",
+                      "WEB11-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "namedValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB11-E01",
+                      "WEB11-E02",
+                      "WEB11-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "quantitativeValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB11-E01",
+                      "WEB11-E02",
+                      "WEB11-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "value_form": {
+                  "enum": [
+                    "exact_numeric",
+                    "approximate_numeric",
+                    "inequality",
+                    "range",
+                    "not_detected"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "value_form",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "properties": {
+            "extraction_notes": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "records": {
+              "items": {
+                "$ref": "#/$defs/evidenceRecord"
+              },
+              "maxItems": 3,
+              "type": "array"
+            },
+            "source_system": {
+              "enum": [
+                "gpt51_web_search"
+              ],
+              "type": "string"
+            },
+            "task_id": {
+              "enum": [
+                "RT02"
+              ],
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "source_system",
+            "records",
+            "extraction_notes"
+          ],
+          "title": "PFAS review study evidence table",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "880657e272b651c67bd655dc48e9b81a988a16dcba77b4b19d9393649bb261b6",
+  "response_metadata": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.00801875,
+    "finish_reason": "stop",
+    "input_tokens": 2759,
+    "latency_seconds": 7.52230591699481,
+    "output_tokens": 457,
+    "reasoning_tokens": 114,
+    "response_id": "chatcmpl-E9MXRrRR8282j3ZKas8ryiSZqUHm6",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 3216,
+    "web_search_calls": 0
+  },
+  "result": {
+    "extraction_notes": [
+      "Source WEB11 (Li et al., 2020, Water Research, \u201cAdsorption of perfluoroalkyl substances (PFAS) in groundwater by granular activated carbons: Roles of hydrophobicity of PFAS and carbon characteristics\u201d) was accessed only at publisher introduction text; full methods and results were not available within the frozen packet.",
+      "The inspected excerpts (WEB11-E01, WEB11-E02, WEB11-E03) discuss general limitations of batch isotherm tests, mention numerical simulations/RSSCTs, and briefly reference an external pilot-scale GAC study by McCleaf et al., but they do not report any numeric performance data, operating conditions, or configuration details for Li et al.\u2019s own experiments.",
+      "Because no quantitative values (e.g., concentrations, capacities, breakthrough criteria, bed volumes) or specific operating parameters (e.g., EBCT, flow rate, bed depth, contact time) for either batch or column tests are present in the inspected text, no primary-study records could be constructed without inferring beyond the provided evidence.",
+      "The McCleaf et al. pilot GAC study mentioned in WEB11-E03 is an external citation and is not described with sufficient detail or numeric results in the available text to extract as a study record from this source.",
+      "No held-out anchor DOI, title, or URL was encountered among the inspected text; the absence of extractable records is due to limited access to the full article content rather than conflict with the anchor exclusion list."
+    ],
+    "records": [],
+    "source_system": "gpt51_web_search",
+    "task_id": "RT02"
+  },
+  "result_kind": "json",
+  "stage": "structured_extraction"
+}

@@ -1,0 +1,75 @@
+{
+  "status": "completed_dev_only_diagnostic",
+  "source_run": "benchmark/frozen_v3/results/dev13_soft_tags_v3_confirmation_2026-07-26",
+  "judge_model_requested": "gpt-5.1",
+  "judge_models_returned": [
+    "gpt-5.1-2025-11-13"
+  ],
+  "temperature": 0,
+  "judge_repeats": 3,
+  "mirrored_answer_order": true,
+  "citations_retained": true,
+  "verification_context_included": true,
+  "citation_quality_scored": false,
+  "verification_context_use": "Scientific correctness verification only; citation presence, absence, count, formatting, and coverage are not scored.",
+  "gold_available_to_judge": true,
+  "weights": {
+    "scientific_correctness": 0.4,
+    "question_fulfillment": 0.3,
+    "uncertainty_and_limitations": 0.15,
+    "practical_usefulness": 0.15
+  },
+  "input_files": {
+    "benchmark/frozen_v3/input/questions_dev13.csv": "d1506d0dfd6c342ee11273ba6e1e9a542a55b3dddd1fdfe2aa0261c35c209a91",
+    "benchmark/frozen_v3/gold/chunk_based_gold.jsonl": "7e2b27cbbf18fc6b91a07d06035051df2d2a15fd8485525d0f323b88c8a00f72",
+    "benchmark/frozen_v3/results/dev13_soft_tags_v3_confirmation_2026-07-26/answers/tagged_rag_gpt51.jsonl": "fe3fdd4c722446ca6e104c9f8ed74eb2bdbc3f29dd58a7978356b235bcdab550",
+    "benchmark/frozen_v3/results/dev13_soft_tags_v3_confirmation_2026-07-26/answers/matched_untagged_rag_gpt51.jsonl": "7f96e4a1090c96cfd686419edf0f442372461a2e1e656c3fb74b9438e2630787",
+    "benchmark/frozen_v3/prompts/evaluation/source_verified_pairwise_content_v2.txt": "eba3b3102e95b5e5fdd276b4d4b27a389a585125fda9ede1eb422ae39049eb6e",
+    "benchmark/frozen_v3/results/dev13_soft_tags_v3_confirmation_2026-07-26/answers/matched_direct_gpt51.jsonl": "fd7284984de7429c67aec5fd1cc883d658dcc1e709ad0e46f8ce7fb6a74d353f"
+  },
+  "direct_comparison_included": true,
+  "summaries": [
+    {
+      "comparison": "tagged_vs_matched_direct",
+      "question_count": 13,
+      "judge_repeats": 3,
+      "tagged_wins": 13,
+      "opponent": "direct",
+      "opponent_wins": 0,
+      "ties": 0,
+      "mean_weighted_tagged_score": 0.9131410256410256,
+      "mean_tagged_advantage": 0.41314102564102567,
+      "mirrored_criterion_agreement": 0.8846153846153846,
+      "mean_scientific_correctness_tagged_score": 0.9487179487179487,
+      "mean_question_fulfillment_tagged_score": 0.9551282051282052,
+      "mean_uncertainty_and_limitations_tagged_score": 0.6987179487179487,
+      "mean_practical_usefulness_tagged_score": 0.9487179487179487
+    },
+    {
+      "comparison": "tagged_vs_matched_untagged",
+      "question_count": 13,
+      "judge_repeats": 3,
+      "tagged_wins": 9,
+      "opponent": "untagged",
+      "opponent_wins": 3,
+      "ties": 1,
+      "mean_weighted_tagged_score": 0.5631410256410256,
+      "mean_tagged_advantage": 0.06314102564102565,
+      "mirrored_criterion_agreement": 0.6410256410256411,
+      "mean_scientific_correctness_tagged_score": 0.5833333333333334,
+      "mean_question_fulfillment_tagged_score": 0.532051282051282,
+      "mean_uncertainty_and_limitations_tagged_score": 0.5705128205128205,
+      "mean_practical_usefulness_tagged_score": 0.5641025641025641
+    }
+  ],
+  "judge_token_accounting": {
+    "prompt_tokens": 1467651,
+    "completion_tokens": 110174,
+    "total_tokens": 1577825,
+    "estimated_usd": 2.93630375,
+    "price_basis_usd_per_million": {
+      "input": 1.25,
+      "output": 10.0
+    }
+  }
+}

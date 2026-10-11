@@ -1,0 +1,538 @@
+{
+  "call_key": "RT09:gpt51_web_search:extraction:WEB08",
+  "created_at": "2026-08-05T03:44:40.958955+00:00",
+  "raw_response_text": "{\"task_id\":\"RT09\",\"source_system\":\"gpt51_web_search\",\"records\":[{\"record_id\":\"WEB08-R1\",\"source_id\":\"WEB08\",\"doi_or_stable_url\":\"https://espace.rmc-cmr.ca/jspui/bitstream/11264/1943/1/O%27Connor%20Thesis%202024%20Final.pdf\",\"citation\":\"O\u2019Connor N. Aqueous Electron Initiated Destruction of Per- and Polyfluoroalkyl Substances (PFAS). PhD thesis, Royal Military College of Canada; 2024. Chapter 4: Investigating the UV/Sulfite + Iodide System to Mineralize PFAS in the Presence of Complex Matrices: Implications for Treatment of AFFF Concentrates.\",\"study_type\":\"primary_experiment\",\"study_scale\":{\"value\":\"Bench-scale experimental work reported within a PhD thesis chapter (specific reactor scale and volumes not available in the excerpt).\",\"evidence_locator_ids\":[\"WEB08-E01\"]},\"matrix\":{\"value\":\"Complex aqueous matrices, including AFFF (aqueous film-forming foam) concentrates (general description only; no specific water chemistry or composition in the excerpt).\",\"evidence_locator_ids\":[\"WEB08-E01\",\"WEB08-E03\"]},\"pfas_scope\":[{\"value\":\"Per- and polyfluoroalkyl substances (PFAS) present in AFFF concentrates and complex aqueous matrices; individual PFAS not specified in the excerpt.\",\"evidence_locator_ids\":[\"WEB08-E01\"]}],\"treatment\":{\"value\":\"UV/sulfite + iodide aqueous-electron-based treatment system, investigated for PFAS \\\"mineralization\\\" and robustness in complex matrices.\",\"evidence_locator_ids\":[\"WEB08-E01\",\"WEB08-E02\"]},\"operating_conditions\":[{\"name\":\"Reactive species concept\",\"value\":\"Aqueous electrons generated in UV/sulfite + iodide system; detailed light intensity, doses, and reagent concentrations not provided in excerpt.\",\"unit\":null,\"qualifiers\":\"\",\"evidence_locator_ids\":[\"WEB08-E01\"]},{\"name\":\"Matrix complexity\",\"value\":\"System effectiveness and robustness evaluated in presence of several different reactive radical scavengers representing complex water parameters.\",\"unit\":null,\"qualifiers\":\"Scavengers not individually named; no concentrations reported in excerpt.\",\"evidence_locator_ids\":[\"WEB08-E02\"]}],\"endpoints\":[{\"endpoint_type\":\"other\",\"reported_term\":\"mineralize PFAS\",\"interpretation\":\"Authors frame the UV/sulfite + iodide system as aiming to \\\"mineralize\\\" PFAS in complex matrices and AFFF concentrates, but the excerpt does not show which measurements (e.g., parent loss, fluoride release, TOC/CO2) were used to support mineralization.\",\"evidence_locator_ids\":[\"WEB08-E01\"]},{\"endpoint_type\":\"other\",\"reported_term\":\"robustness/effectiveness in presence of radical scavengers\",\"interpretation\":\"System robustness and effectiveness are discussed qualitatively in relation to different water parameters and radical scavengers; specific quantitative removal or defluorination metrics are not given in the excerpt.\",\"evidence_locator_ids\":[\"WEB08-E02\"]}],\"quantitative_findings\":[],\"limitations\":[{\"statement\":\"Only qualitative descriptions of a UV/sulfite + iodide system\u2019s robustness, mineralization intent, and applicability to fluorotelomer-dominant, complex aqueous matrices (AFFF concentrates) are available in the excerpt; no specific PFAS species, operating conditions, measurement suite, or quantitative destruction/defluorination results are provided.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB08-E01\",\"WEB08-E02\",\"WEB08-E03\"]},{\"statement\":\"Thesis-based work may overlap with or precede related peer-reviewed articles; the excerpt does not identify whether all experimental details and analytical methods have been independently validated.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB08-E01\"]}],\"residuals_byproducts\":[{\"statement\":\"The excerpt notes consideration of reactive radical scavengers and hypothesizes that an oxidative pre-treatment could expand effectiveness to fluorotelomer-dominant complex matrices, implying concern about transformation products and incomplete destruction, but it does not report specific transformation products, unidentified fractions, or byproduct analyses.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB08-E02\",\"WEB08-E03\"]}],\"comparability\":{\"status\":\"descriptive_only\",\"reason\":\"The available text only states that a UV/sulfite + iodide aqueous-electron system was investigated for PFAS mineralization and robustness in complex matrices/AFFF concentrates, without providing specific PFAS analytes, treatment conditions, sampling times, or quantitative parent loss/defluorination/mineralization data; thus it cannot be quantitatively compared with other studies\u2019 destruction endpoints.\",\"evidence_locator_ids\":[\"WEB08-E01\",\"WEB08-E02\",\"WEB08-E03\"]}}],\"extraction_notes\":[\"Only three short excerpts from O\u2019Connor (2024) were available (WEB08-E01\u2013WEB08-E03), giving chapter title, a high-level conclusion about robustness in the presence of radical scavengers, and a hypothesis about oxidative pre-treatment. The core experimental sections of Chapter 4 (methods, analytical measurements, quantitative results) were not included in the frozen packet, so no numerical findings or detailed measurement suites (parent PFAS, transformation products, fluoride/fluorine, mass balance, mineralization, detection limits, sampling times, or unidentified fractions) could be extracted.\",\"Because of the limited excerpt, only one high-level record was created for the UV/sulfite + iodide system in complex matrices/AFFF concentrates, emphasizing authors\u2019 endpoint terminology (\\\"mineralize PFAS,\\\" robustness/effectiveness) and intended application, while leaving most quantitative and methodological fields empty rather than inferred.\",\"No held-out anchor DOIs, URLs, or titles were encountered in this source; the thesis is distinct from the blocked Blotevogel (2023) review.\"]}",
+  "request": {
+    "max_completion_tokens": 16000,
+    "messages": [
+      {
+        "content": "You are an evidence extraction specialist for PFAS treatment and remediation\nresearch. Build a structured study evidence table before any narrative review\nis written.\n\nExtract one record per primary-study experiment, modeled scenario, or field\ndeployment that contributes usable evidence to the review task. A paper may\nproduce more than one record only when materially different matrices,\ntechnologies, operating regimes, or endpoints would otherwise be conflated.\n\nReview articles and perspectives may help identify terminology or primary\nstudies, but they must not be used as the source of a quantitative study\nrecord. Never copy a review table as though it were a primary result.\n\nFor every populated source-dependent field:\n- preserve the PFAS identity or class, matrix, starting concentration or\n  loading, operating conditions, study scale, measured endpoint, value, unit,\n  and material qualifiers when reported;\n- attach only the field-level evidence locator identifiers that directly\n  support that specific value or statement;\n- use an empty string or empty array when the source does not report the\n  information; do not infer or estimate it;\n- do not turn the absence of information in the supplied packet into a study\n  finding, quantitative result, or author-reported limitation unless the source\n  explicitly states that absence;\n- distinguish removal, separation, sorption, parent-compound loss,\n  transformation, degradation, destruction, defluorination, mineralization,\n  total organofluorine change, and toxicity change;\n- classify endpoint_type from what was actually measured, not from the\n  authors' preferred label. Parent loss alone is not destruction. Phase\n  transfer is removal or separation, not degradation. Inorganic fluoride\n  release or fluorine-balance closure can establish defluorination but cannot\n  by itself establish mineralization. Use mineralization only when direct\n  carbon-fate evidence such as CO2/inorganic-carbon production or a carbon\n  balance is reported. Preserve a broader author term in reported_term and\n  explain any mismatch in interpretation;\n- do not normalize or compare values unless their units, denominators,\n  matrices, PFAS scope, operating conditions, and endpoints permit it.\n\nOnly populate quantitative_findings when the source reports an actual numeric\nvalue, inequality, approximate value, range, or explicit ND/not-detected\nresult. Put the number or censoring marker in value and the measurement unit in\nunit. Normalize Unicode inequality signs to ASCII >= or <= and range dashes to\nan ASCII hyphen while preserving the source wording in qualifiers. A unit or\norder-of-magnitude scale without a number is not a quantitative finding.\nQualitative parent loss, intermediate formation, or disappearance belongs in\nthe endpoint interpretation or residual/byproduct statements instead.\n\nSet value_form to exactly one of:\n- exact_numeric: a bare number such as `99.7` or `1.2e-3`;\n- approximate_numeric: `~` followed by a number;\n- inequality: `<`, `<=`, `>`, or `>=` followed by a number;\n- range: two numbers separated by `-` or `to`; or\n- not_detected: exactly `ND`, `N/D`, `not detected`,\n  `below detection limit`, or `below quantification limit`.\n\nPut uncertainty, denominators, fold-change wording, and explanatory text in\nqualifiers rather than value. A deterministic validator will remove malformed\nquantitative fields before source verification.\n\nFor limitations, use basis=author_reported only when the source states the\nlimitation. Use basis=design_inferred only for a constraint that follows\ndirectly from cited design evidence, such as one matrix, one compound, or\nbench-scale operation. Never label missing information in the supplied packet\nas a scientific limitation of the study.\n\nMark each record as comparable with conditions, descriptive only, or not\ncomparable. Comparability is an analyst inference rather than a quotation:\nattach locators for the matrix, scale, conditions, endpoint, and denominator\non which the inference rests, and explain the reason. Do not reward a study\nfor reporting a larger percentage when its endpoint or conditions differ.\n\nThe task was derived from a defining review that is held out from all\ncandidate retrieval systems. The supplied anchor identifiers are an exclusion\nlist, not evidence. Do not extract from the anchor, cite it, reconstruct its\nconclusions, or use its tables.\n\nReturn one JSON object that follows the supplied evidence-table schema exactly.\nDo not write the narrative review in this step.\n",
+        "role": "system"
+      },
+      {
+        "content": "Task:\n{\"review_brief\":\"Prepare a focused review of the measurements needed to distinguish disappearance of a target PFAS from transformation, defluorination, and broader destruction.\",\"task_id\":\"RT09\",\"title\":\"Determining whether a PFAS destructive treatment achieved meaningful destruction\"}\n\nTask-specific data extraction objective:\nExtract treatment and conditions, parent PFAS measurement, transformation-product scope, fluoride or fluorine measurement, mass-balance method, mineralization-related endpoint, detection limits, sampling time, unidentified fraction, and authors' endpoint terminology.\n\nSource system (return this exact value):\ngpt51_web_search\n\nCandidate source identifier (all records must use this exact source_id):\nWEB08\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.coche.2023.100944\"],\"all_blocked_titles\":[\"scaling up water treatment technologies for pfas destruction current status and potential for fit for purpose application\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.coche.2023.100944\"],\"anchor_id\":\"AR-BLOTEVOGEL-2023\",\"corpus_source\":\"2024 - Blotevogel - Scaling up water treatment technologies for PFAS destruction_ current status and potential for fit-for-purpose application.pdf\",\"doi\":\"10.1016/j.coche.2023.100944\",\"title\":\"Scaling up water treatment technologies for PFAS destruction: current status and potential for fit-for-purpose application\",\"url\":\"https://doi.org/10.1016/j.coche.2023.100944\"}\n\nFrozen inspected Web Search sources and evidence locators:\n{\n  \"access_scope\": \"full_text\",\n  \"capture_source_id\": \"WEB90\",\n  \"citation\": \"O\\u2019Connor N. Aqueous Electron Initiated Destruction of Per- and Polyfluoroalkyl Substances (PFAS). PhD thesis, Royal Military College of Canada; 2024. Chapter 4: Investigating the UV/Sulfite + Iodide System to Mineralize PFAS in the Presence of Complex Matrices: Implications for Treatment of AFFF Concentrates.\",\n  \"covered_component_ids\": [\n    \"RT09-C1\",\n    \"RT09-C2\"\n  ],\n  \"doi\": \"\",\n  \"doi_or_stable_url\": \"https://espace.rmc-cmr.ca/jspui/bitstream/11264/1943/1/O%27Connor%20Thesis%202024%20Final.pdf\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB08-E01\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Page 69, Chapter 4 title\",\n      \"text\": \"Investigating the UV/Sulfite + Iodide System to Mineralize Per and Polyfluoroalkyl Substances (PFAS) in the Presence of Complex Matrices: Implications for Treatment of AFFF Concentrates.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB08-E02\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Page 95, Section 5.3 Thesis Conclusions\",\n      \"text\": \"The robustness of the system has been evaluated in the presence of several different reactive radical scavengers, providing both underlying mechanistic insights, as well as allowing for the prediction of system effectiveness based on different water parameters.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB08-E03\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Page 95, Section 5.3 Thesis Conclusions\",\n      \"text\": \"It is hypothesized that the addition of an oxidative pre-treatment would further expand the effectiveness of the system to the treatment of fluorotelomer-dominant, complex aqueous matrices.\"\n    }\n  ],\n  \"publication_status\": \"technical_report\",\n  \"publication_type\": \"other_primary\",\n  \"source\": \"https://espace.rmc-cmr.ca/jspui/bitstream/11264/1943/1/O%27Connor%20Thesis%202024%20Final.pdf\",\n  \"source_id\": \"WEB08\",\n  \"source_limitations\": [\n    \"Chapter 4 itself is not fully excerpted in the inspected locations; detailed analytical results for complex matrices and AFFF concentrates are not directly quoted here.\",\n    \"Thesis is not peer-reviewed and may contain overlapping content with related journal articles.\",\n    \"Evidence for mineralization in complex matrices relies on the same suite of measurements as in simpler systems (parent PFAS, fluoride), with limited direct gas-phase organofluorine characterization.\"\n  ],\n  \"title\": \"Aqueous Electron Initiated Destruction of Per- and Polyfluoroalkyl Substances (PFAS) \\u2013 additional UV/sulfite/iodide work in complex matrices\",\n  \"year\": \"2024\"\n}\n\nDo not use search-result snippets as evidence. Use only the frozen inspected\nsource packet and preserve its declared access scope. Omit any source that\nresolves to a held-out anchor DOI, URL, or exact title and report the violation\nin extraction_notes. Extract at most three materially distinct records from\nthis source, prioritizing records that answer the task components.\n\nExtract primary-study evidence needed to answer the task and return the\nschema-constrained study evidence table.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_review_evidence_table",
+        "schema": {
+          "$defs": {
+            "endpoint": {
+              "additionalProperties": false,
+              "properties": {
+                "endpoint_type": {
+                  "enum": [
+                    "removal",
+                    "separation",
+                    "sorption",
+                    "parent_compound_loss",
+                    "transformation",
+                    "degradation",
+                    "destruction",
+                    "defluorination",
+                    "mineralization",
+                    "total_organofluorine_change",
+                    "toxicity_change",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB08-E01",
+                      "WEB08-E02",
+                      "WEB08-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "interpretation": {
+                  "type": "string"
+                },
+                "reported_term": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "endpoint_type",
+                "reported_term",
+                "interpretation",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceRecord": {
+              "additionalProperties": false,
+              "properties": {
+                "citation": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "comparability": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_locator_ids": {
+                      "items": {
+                        "enum": [
+                          "WEB08-E01",
+                          "WEB08-E02",
+                          "WEB08-E03"
+                        ],
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "type": "array"
+                    },
+                    "reason": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "enum": [
+                        "comparable_with_conditions",
+                        "descriptive_only",
+                        "not_comparable"
+                      ],
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "status",
+                    "reason",
+                    "evidence_locator_ids"
+                  ],
+                  "type": "object"
+                },
+                "doi_or_stable_url": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "endpoints": {
+                  "items": {
+                    "$ref": "#/$defs/endpoint"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "limitations": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "matrix": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "operating_conditions": {
+                  "items": {
+                    "$ref": "#/$defs/namedValue"
+                  },
+                  "type": "array"
+                },
+                "pfas_scope": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceText"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "quantitative_findings": {
+                  "items": {
+                    "$ref": "#/$defs/quantitativeValue"
+                  },
+                  "type": "array"
+                },
+                "record_id": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "residuals_byproducts": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "source_id": {
+                  "enum": [
+                    "WEB08"
+                  ],
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "study_scale": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "study_type": {
+                  "enum": [
+                    "primary_experiment",
+                    "pilot_or_field_deployment",
+                    "modeling_or_life_cycle_study",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "treatment": {
+                  "$ref": "#/$defs/evidenceText"
+                }
+              },
+              "required": [
+                "record_id",
+                "source_id",
+                "doi_or_stable_url",
+                "citation",
+                "study_type",
+                "study_scale",
+                "matrix",
+                "pfas_scope",
+                "treatment",
+                "operating_conditions",
+                "endpoints",
+                "quantitative_findings",
+                "limitations",
+                "residuals_byproducts",
+                "comparability"
+              ],
+              "type": "object"
+            },
+            "evidenceStatement": {
+              "additionalProperties": false,
+              "properties": {
+                "basis": {
+                  "enum": [
+                    "author_reported",
+                    "design_inferred"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB08-E01",
+                      "WEB08-E02",
+                      "WEB08-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "statement": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "statement",
+                "basis",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceText": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB08-E01",
+                      "WEB08-E02",
+                      "WEB08-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "namedValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB08-E01",
+                      "WEB08-E02",
+                      "WEB08-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "quantitativeValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB08-E01",
+                      "WEB08-E02",
+                      "WEB08-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "value_form": {
+                  "enum": [
+                    "exact_numeric",
+                    "approximate_numeric",
+                    "inequality",
+                    "range",
+                    "not_detected"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "value_form",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "properties": {
+            "extraction_notes": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "records": {
+              "items": {
+                "$ref": "#/$defs/evidenceRecord"
+              },
+              "maxItems": 3,
+              "type": "array"
+            },
+            "source_system": {
+              "enum": [
+                "gpt51_web_search"
+              ],
+              "type": "string"
+            },
+            "task_id": {
+              "enum": [
+                "RT09"
+              ],
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "source_system",
+            "records",
+            "extraction_notes"
+          ],
+          "title": "PFAS review study evidence table",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "f04adfc98a77bbcd1632fe8813c42e610ed5cefd5dd4bb98977dcd2c9eae2fb7",
+  "response_metadata": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.02036375,
+    "finish_reason": "stop",
+    "input_tokens": 2883,
+    "latency_seconds": 16.4641528329812,
+    "output_tokens": 1676,
+    "reasoning_tokens": 439,
+    "response_id": "chatcmpl-E9MqGCOhhoRJ2tdsuaSQPzO2ao1sv",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 4559,
+    "web_search_calls": 0
+  },
+  "result": {
+    "extraction_notes": [
+      "Only three short excerpts from O\u2019Connor (2024) were available (WEB08-E01\u2013WEB08-E03), giving chapter title, a high-level conclusion about robustness in the presence of radical scavengers, and a hypothesis about oxidative pre-treatment. The core experimental sections of Chapter 4 (methods, analytical measurements, quantitative results) were not included in the frozen packet, so no numerical findings or detailed measurement suites (parent PFAS, transformation products, fluoride/fluorine, mass balance, mineralization, detection limits, sampling times, or unidentified fractions) could be extracted.",
+      "Because of the limited excerpt, only one high-level record was created for the UV/sulfite + iodide system in complex matrices/AFFF concentrates, emphasizing authors\u2019 endpoint terminology (\"mineralize PFAS,\" robustness/effectiveness) and intended application, while leaving most quantitative and methodological fields empty rather than inferred.",
+      "No held-out anchor DOIs, URLs, or titles were encountered in this source; the thesis is distinct from the blocked Blotevogel (2023) review."
+    ],
+    "records": [
+      {
+        "citation": "O\u2019Connor N. Aqueous Electron Initiated Destruction of Per- and Polyfluoroalkyl Substances (PFAS). PhD thesis, Royal Military College of Canada; 2024. Chapter 4: Investigating the UV/Sulfite + Iodide System to Mineralize PFAS in the Presence of Complex Matrices: Implications for Treatment of AFFF Concentrates.",
+        "comparability": {
+          "evidence_locator_ids": [
+            "WEB08-E01",
+            "WEB08-E02",
+            "WEB08-E03"
+          ],
+          "reason": "The available text only states that a UV/sulfite + iodide aqueous-electron system was investigated for PFAS mineralization and robustness in complex matrices/AFFF concentrates, without providing specific PFAS analytes, treatment conditions, sampling times, or quantitative parent loss/defluorination/mineralization data; thus it cannot be quantitatively compared with other studies\u2019 destruction endpoints.",
+          "status": "descriptive_only"
+        },
+        "doi_or_stable_url": "https://espace.rmc-cmr.ca/jspui/bitstream/11264/1943/1/O%27Connor%20Thesis%202024%20Final.pdf",
+        "endpoints": [
+          {
+            "endpoint_type": "other",
+            "evidence_locator_ids": [
+              "WEB08-E01"
+            ],
+            "interpretation": "Authors frame the UV/sulfite + iodide system as aiming to \"mineralize\" PFAS in complex matrices and AFFF concentrates, but the excerpt does not show which measurements (e.g., parent loss, fluoride release, TOC/CO2) were used to support mineralization.",
+            "reported_term": "mineralize PFAS"
+          },
+          {
+            "endpoint_type": "other",
+            "evidence_locator_ids": [
+              "WEB08-E02"
+            ],
+            "interpretation": "System robustness and effectiveness are discussed qualitatively in relation to different water parameters and radical scavengers; specific quantitative removal or defluorination metrics are not given in the excerpt.",
+            "reported_term": "robustness/effectiveness in presence of radical scavengers"
+          }
+        ],
+        "limitations": [
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB08-E01",
+              "WEB08-E02",
+              "WEB08-E03"
+            ],
+            "statement": "Only qualitative descriptions of a UV/sulfite + iodide system\u2019s robustness, mineralization intent, and applicability to fluorotelomer-dominant, complex aqueous matrices (AFFF concentrates) are available in the excerpt; no specific PFAS species, operating conditions, measurement suite, or quantitative destruction/defluorination results are provided."
+          },
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB08-E01"
+            ],
+            "statement": "Thesis-based work may overlap with or precede related peer-reviewed articles; the excerpt does not identify whether all experimental details and analytical methods have been independently validated."
+          }
+        ],
+        "matrix": {
+          "evidence_locator_ids": [
+            "WEB08-E01",
+            "WEB08-E03"
+          ],
+          "value": "Complex aqueous matrices, including AFFF (aqueous film-forming foam) concentrates (general description only; no specific water chemistry or composition in the excerpt)."
+        },
+        "operating_conditions": [
+          {
+            "evidence_locator_ids": [
+              "WEB08-E01"
+            ],
+            "name": "Reactive species concept",
+            "qualifiers": "",
+            "unit": null,
+            "value": "Aqueous electrons generated in UV/sulfite + iodide system; detailed light intensity, doses, and reagent concentrations not provided in excerpt."
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB08-E02"
+            ],
+            "name": "Matrix complexity",
+            "qualifiers": "Scavengers not individually named; no concentrations reported in excerpt.",
+            "unit": null,
+            "value": "System effectiveness and robustness evaluated in presence of several different reactive radical scavengers representing complex water parameters."
+          }
+        ],
+        "pfas_scope": [
+          {
+            "evidence_locator_ids": [
+              "WEB08-E01"
+            ],
+            "value": "Per- and polyfluoroalkyl substances (PFAS) present in AFFF concentrates and complex aqueous matrices; individual PFAS not specified in the excerpt."
+          }
+        ],
+        "quantitative_findings": [],
+        "record_id": "WEB08-R1",
+        "residuals_byproducts": [
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB08-E02",
+              "WEB08-E03"
+            ],
+            "statement": "The excerpt notes consideration of reactive radical scavengers and hypothesizes that an oxidative pre-treatment could expand effectiveness to fluorotelomer-dominant complex matrices, implying concern about transformation products and incomplete destruction, but it does not report specific transformation products, unidentified fractions, or byproduct analyses."
+          }
+        ],
+        "source_id": "WEB08",
+        "study_scale": {
+          "evidence_locator_ids": [
+            "WEB08-E01"
+          ],
+          "value": "Bench-scale experimental work reported within a PhD thesis chapter (specific reactor scale and volumes not available in the excerpt)."
+        },
+        "study_type": "primary_experiment",
+        "treatment": {
+          "evidence_locator_ids": [
+            "WEB08-E01",
+            "WEB08-E02"
+          ],
+          "value": "UV/sulfite + iodide aqueous-electron-based treatment system, investigated for PFAS \"mineralization\" and robustness in complex matrices."
+        }
+      }
+    ],
+    "source_system": "gpt51_web_search",
+    "task_id": "RT09"
+  },
+  "result_kind": "json",
+  "stage": "structured_extraction"
+}

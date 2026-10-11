@@ -1,0 +1,153 @@
+You are revising a candidate-blind PFAS benchmark reference into a
+human-auditable, group-scored claim ledger.
+
+Use only the supplied question, frozen task boundaries, frozen task
+components, complete gold evidence, the previous Model A draft, and the
+previous Model B review. Do not use outside knowledge or any candidate answer.
+
+The frozen gold evidence is non-exhaustive. State only what it supports.
+
+Objectives:
+1. Resolve every partially supported or unsupported prior claim by narrowing,
+   splitting, replacing, or deleting it.
+2. Preserve an explicit disposition for every prior atomic claim ID.
+3. Merge duplicate, overlapping, summary/subclaim, or qualifier-fragment
+   claims into unique scored claim groups.
+4. Keep distinct findings separate when a candidate answer could independently
+   state, omit, or contradict them.
+5. Use the supplied task components exactly as given. Do not add, delete,
+   rename, or reinterpret them.
+6. Separate importance, evidentiary function, and scoring role:
+   - importance: core or supplementary
+   - function: affirmative, limitation, negative_finding, or
+     boundary_constraint
+   - scoring_role: required_content, optional_content, or constraint_only
+7. Every task component must contain at least one core required-content group.
+   Use no more than three core required-content groups per component.
+   Core groups represent distinct question-level answer elements, not every
+   study example.
+8. Constraint-only groups do not require proactive mention and must not be
+   included in a coverage denominator.
+9. Multiple evidence records supporting one proposition do not create
+   multiple scored groups.
+10. A negative or limitation finding may be core required content when it
+    directly answers a task component.
+11. Do not score both a synthesis statement and the same underlying examples
+    as required content. Prefer a synthesis as core required content and place
+    independent study examples in supplementary optional content, unless the
+    question explicitly requires each example.
+12. Do not label nearly every evidence-derived detail as core. A specific
+    study value, protocol, or example is normally supplementary unless it is
+    indispensable to a frozen task component.
+13. The disposition target must exactly match the final source mapping. A
+    genuinely compound prior claim may map to multiple final groups only when
+    it is being split into independently scorable propositions; use
+    action="revised" and explain the split. Do not map one prior claim to
+    multiple groups merely to repeat its weight.
+14. If numeric_required is false, accepted_numeric_equivalents must be empty
+    and the full/partial rule must not require an exact number. If a number is
+    material to full credit, set numeric_required to true and predefine its
+    accepted representations.
+
+For every scored claim group:
+- write one canonical proposition;
+- identify one central proposition and all material qualifiers;
+- cite only valid evidence IDs and state which clause or qualifier each
+  evidence record supports. The pipeline will copy exact spans
+  deterministically from the frozen evidence records after generation;
+- distinguish compound, matrix, method, condition, value, unit, and endpoint;
+- state whether synthesis across records is required;
+- state whether a number is required for full credit;
+- predefine accepted numeric equivalents, if applicable;
+- define executable full, partial, and contradiction rules.
+
+Scoring definitions:
+- full: the central proposition and every material qualifier are correct;
+- partial: the central proposition is correct, no incompatible statement is
+  present, but at least one prespecified material qualifier is omitted or
+  weakened;
+- absent: the central proposition is not expressed;
+- contradicted: the answer states an incompatible central proposition or
+  material qualifier. A correct and an uncorrected incompatible version in
+  the same answer is contradicted.
+
+The reference prose is non-normative. Every factual sentence in it must map to
+one or more claim_group_id values, and it must not add scoring requirements.
+
+Return one JSON object with exactly these top-level fields:
+{
+  "question_id": "string",
+  "answerability": "supported | partially_supported | conflicting_or_heterogeneous | insufficient",
+  "answerability_rationale": "string",
+  "task_components": [
+    {
+      "task_component_id": "string",
+      "component_text": "exact supplied text"
+    }
+  ],
+  "claim_groups": [
+    {
+      "claim_group_id": "QUESTION_ID-G01",
+      "task_component_id": "string",
+      "canonical_proposition": "one independently scorable finding",
+      "central_proposition": "the minimum semantic finding",
+      "material_qualifiers": ["scope, condition, attribution, or endpoint qualifier"],
+      "importance": "core | supplementary",
+      "function": "affirmative | limitation | negative_finding | boundary_constraint",
+      "scoring_role": "required_content | optional_content | constraint_only",
+      "evidence_ids": ["string"],
+      "evidence_support_map": [
+        {
+          "evidence_id": "string",
+          "supports": "clause or qualifier supported"
+        }
+      ],
+      "synthesis_required": false,
+      "numeric_required": false,
+      "accepted_numeric_equivalents": ["string"],
+      "full_rule": "executable semantic rule",
+      "partial_rule": "executable semantic rule",
+      "contradiction_rule": "executable semantic rule",
+      "source_atomic_claim_ids": ["prior claim IDs"]
+    }
+  ],
+  "constraint_groups": [
+    {
+      "claim_group_id": "QUESTION_ID-B01",
+      "task_component_id": "string",
+      "canonical_proposition": "prohibited overclaim or boundary",
+      "function": "boundary_constraint",
+      "scoring_role": "constraint_only",
+      "evidence_ids": ["string; may be empty only when the frozen task boundary is the sole source"],
+      "evidence_support_map": [
+        {
+          "evidence_id": "string",
+          "supports": "boundary supported"
+        }
+      ],
+      "violation_rule": "material condition that triggers a boundary violation",
+      "source_atomic_claim_ids": ["prior claim IDs"]
+    }
+  ],
+  "atomic_claim_dispositions": [
+    {
+      "atomic_claim_id": "prior claim ID",
+      "action": "mapped | revised | merged | deleted",
+      "target_claim_group_ids": ["string"],
+      "rationale": "string"
+    }
+  ],
+  "reference_answer": "researcher-facing non-normative prose",
+  "reference_answer_claim_map": [
+    {
+      "sentence_or_clause": "factual sentence or clause",
+      "claim_group_ids": ["string"]
+    }
+  ],
+  "unresolved_or_unsupported": ["string"],
+  "boundary_check": {
+    "must_include_addressed": true,
+    "must_not_claim_respected": true,
+    "notes": "string"
+  }
+}

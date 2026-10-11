@@ -1,0 +1,368 @@
+{
+  "call_key": "RT07:bge_llm_local_rag:verify:RT07-bge_llm_local_rag-S16-R02",
+  "created_at": "2026-08-05T04:27:55.939209+00:00",
+  "raw_response_text": "{\"task_id\":\"RT07\",\"record_id\":\"RT07-bge_llm_local_rag-S16-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The DOI and URL exactly match the citation information provided in the source metadata (10.1016/j.chemosphere.2022.137004; https://doi.org/10.1016/j.chemosphere.2022.137004).\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record labels the study as descriptive_only due to bench-scale foam fractionation on landfill leachate. The cited text shows experiments on landfill leachate (real environmental matrix) with lab-style FF tests (multi-stage and additional single-stage), supporting a descriptive/bench context rather than a broadly comparable standardized condition.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reason cites landfill leachate with mixed PFAS/precursor profile and matrix effects. The methods text refers specifically to landfill leachate and TOC characteristics, indicating a complex, organic-rich matrix; it is reasonable to infer that performance is less directly comparable to other waters, so the narrative justification is consistent with the evidence.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Endpoint 0 is classified as removal. The cited text states high removal efficiency and reports initial and post-FF concentrations in the bottom solution, clearly describing PFAS removal performance, so removal is the correct endpoint type.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text notes that PFBA, PFOA, and PFOS concentrations in the bottom solution after 1st-stage FF remained at 10^2\u201310^3 ng/L despite high removal, and concludes it is not feasible to reach low EPA health advisory levels with FF alone, requiring a polishing step. The interpretation accurately summarizes this finding.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Endpoint 1 concerns TOC mass distribution between foam and treated leachate. This is a partitioning/separation measurement rather than a destruction or removal metric, so classifying it as separation is appropriate and consistent with the text describing where the TOC ends up.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text reports that the majority of TOC (~80%) ended up in the foam solution and that PFASs accounted for <0.01% of TOC. The interpretation that FF co-concentrates bulk organic matter along with PFAS is consistent with these quantitative statements.\"},{\"field_path\":\"endpoints[2].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Endpoint 2 focuses on TOC mass balance (recovery). This is not a standard removal, separation, or transformation endpoint; classifying it as other is appropriate and consistent with the reported TOC recovery metric.\"},{\"field_path\":\"endpoints[2].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The cited text states that the average TOC recovery was 103.4%. The interpretation that this indicates acceptable mass balance closure is a straightforward reading of that value and does not add unsupported claims.\"},{\"field_path\":\"endpoints[3].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Endpoint 3 refers to changes in PFAA concentrations during the TOP assay, which involves chemical oxidation of precursors to terminal PFAAs. This is a chemical transformation measurement, so classifying the endpoint as transformation is consistent with the text describing precursor-to-PFAA transformation upon oxidative treatment.\"},{\"field_path\":\"endpoints[3].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text reports that, upon oxidative treatment in the TOP assay, four PFCAs (PFBA, PFPeA, PFHpA, PFOA) and PFOS increased in concentration and attributes this to transformation of PFAA precursors. The record\u2019s interpretation correctly attributes the transformation to the TOP assay and not to FF itself, which is consistent with the cited passage.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The limitation quotes that residual PFBA, PFOA, and PFOS remained at 10^2\u201310^3 ng/L and that it is not feasible for FF to reach low EPA health advisory levels, so a polishing step like GAC or IXR is needed. This is directly supported by the cited text in S16-E04, which makes these points explicitly.\"},{\"field_path\":\"limitations[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The design_inferred limitation notes that ~80% of TOC partitions to foam and this may complicate foamate disposal. The ~80% TOC in foam is directly supported by S16-E06; the implication about disposal complexity is a reasonable inference from this co-concentration and is appropriately labeled design_inferred.\"},{\"field_path\":\"limitations[2]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The study text describes specific short-term FF experiments and does not discuss energy use or long-term operational stability. Concluding that energy and long-term stability were not quantified and that results are limited to short bench-scale experiments is a reasonable design-based inference and consistent with the provided methods/results excerpts.\"},{\"field_path\":\"matrix\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Both S16-E04 and S16-E06 refer to a landfill leachate sample and TOC mass balance of the landfill leachate, directly supporting the matrix value \\\"Landfill leachate.\\\"\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S16-E04 mentions multi-stage FF treatment and an additional single-stage FF treatment experiment to investigate TOC mass balance; S16-E06 ties the TOC balance and TOP assay to this single-stage landfill leachate treatment. The summarized value accurately reflects these described operating conditions.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The field describes qualitative operating conditions (staging scheme) rather than a numeric quantity, so leaving the unit as null is appropriate and consistent with the cited text.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFBA is explicitly mentioned in both S16-E04 (PFBA concentrations in bottom solution) and S16-E06 (four PFCAs including PFBA in TOP assay results), supporting its inclusion in the PFAS scope.\"},{\"field_path\":\"pfas_scope[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S16-E06 explicitly lists PFPeA among the four PFCAs whose concentrations increased in the TOP assay, supporting its inclusion in the PFAS scope.\"},{\"field_path\":\"pfas_scope[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S16-E06 explicitly lists PFHpA among the four PFCAs whose concentrations increased in the TOP assay, supporting its inclusion in the PFAS scope.\"},{\"field_path\":\"pfas_scope[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFOA is mentioned in S16-E04 (initial concentration 3851.7 ng/L and residual 10^2\u201310^3 ng/L) and in S16-E06 as one of the PFCAs increasing in TOP assay, supporting its inclusion.\"},{\"field_path\":\"pfas_scope[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFOS is mentioned in S16-E04 (initial concentration 96.9 ng/L and residual 10^2\u201310^3 ng/L) and in S16-E06 as the PFSA whose concentration increased in TOP assay, supporting its inclusion.\"},{\"field_path\":\"pfas_scope[5].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S16-E06 refers broadly to TOP assay results for each terminal PFAA in original, treated, and foam solutions, implying the presence of additional PFAAs and their precursors beyond those individually named. Describing these as \\\"other PFAAs and precursors detectable by TOP assay\\\" is a reasonable, conservative summary of this broader scope.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S16-E04 gives the PFOA concentration prior to FF as 3851.7 ng/L. The recorded value 3851.7 matches exactly and the value_form exact_numeric is appropriate.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source reports the PFOA concentration in ng/L, matching the recorded unit.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S16-E04 reports PFOS at 96.9 ng/L prior to FF. The recorded value 96.9 matches exactly with value_form exact_numeric, consistent with the source.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The PFOS initial concentration is reported in ng/L in the source, consistent with the recorded unit.\"},{\"field_path\":\"quantitative_findings[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S16-E04 states that concentrations of PFBA, PFOA, and PFOS in the bottom solution after 1st stage FF were still 10^2\u201310^3 ng/L. The recorded range value \\\"1e2-1e3\\\" correctly encodes 10^2\u201310^3 and matches value_form range.\"},{\"field_path\":\"quantitative_findings[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source expresses the residual concentrations in ng/L; the recorded unit ng/L is correct.\"},{\"field_path\":\"quantitative_findings[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S16-E06 states that the average TOC recovery was 103.4%. The recorded value 103.4 with exact_numeric form matches this statement.\"},{\"field_path\":\"quantitative_findings[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"TOC recovery is a percentage; the recorded unit % matches the source\u2019s implicit percentage expression.\"},{\"field_path\":\"quantitative_findings[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S16-E06 states that the majority of TOC (~80%) ended up in the foam solution. The recorded approximate_numeric value \\\"~80\\\" is consistent with the \\\"~80%\\\" reported.\"},{\"field_path\":\"quantitative_findings[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The fraction of TOC ending in foam is expressed as a percentage in the source; the recorded unit % is appropriate.\"},{\"field_path\":\"quantitative_findings[5].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S16-E06 states that PFASs accounted for <0.01% TOC in the landfill leachate. The recorded value \\\"<0.01\\\" with value_form inequality correctly captures this figure.\"},{\"field_path\":\"quantitative_findings[5].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFAS contribution is given as a percent of TOC; the recorded unit % is consistent with the source.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S16-E04 notes residual PFBA, PFOA, and PFOS at 10^2\u201310^3 ng/L after 1st-stage FF and states FF alone cannot reach low EPA advisory levels. Interpreting this as FF functioning as a bulk-removal/concentration step rather than a stand-alone solution is a reasonable design-based inference from these data.\"},{\"field_path\":\"residuals_byproducts[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S16-E06 shows that ~80% of TOC and enriched PFAS end up in the foam solution. There is no mention of any destructive treatment applied to this foamate. Concluding that foamate contained the majority of TOC and enriched PFAS and that no destructive treatment was evaluated is consistent with the cited text and experimental description.\"},{\"field_path\":\"residuals_byproducts[2]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S16-E06 describes TOP assay results with increased concentrations of several PFCAs and PFOS due to transformation of precursors, in original, treated, and foam solutions. Inferring that this indicates the presence and enrichment of PFAS precursors relevant for downstream treatment is a reasonable design-based inference from the TOP assay behavior.\"},{\"field_path\":\"study_scale\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text describes multi-stage and single-stage FF experiments on landfill leachate in a controlled experimental setup, which clearly indicates bench-scale experimentation on real leachate. The summary \\\"Bench-scale foam fractionation treating real landfill leachate (single-stage and multi-stage experiments)\\\" is accurate.\"},{\"field_path\":\"treatment\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S16-E04 and S16-E06 together describe multi-stage FF for PFAS removal and an additional single-stage FF experiment with TOC balance and TOP assay to assess PFAS distribution and precursor transformation. The treatment description in the record accurately summarizes these activities.\"}],\"record_usable\":true,\"record_usable_rationale\":\"All core elements\u2014study identity, matrix (landfill leachate), foam fractionation treatment configuration, endpoints (removal, separation, TOP-assay transformation), and all quantitative findings\u2014are directly supported by the cited passages with correct transcription of values and units. Any interpretive statements are clearly conservative and consistent with the source. There are no contradictions or material unsupported claims that would mislead quantitative or qualitative synthesis, so the record is usable.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of when foam fractionation is useful as a concentration step and how the resulting PFAS-rich foamate should be managed.\",\"task_id\":\"RT07\",\"title\":\"Placing foam fractionation within a PFAS treatment train\"}\n\nTask-specific extraction objective:\nExtract feed source, PFAS profile, scale, operating duration, feed and foamate volume, recovery, enrichment, short-chain performance, energy, operational stability, downstream foamate treatment, and residual endpoint.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.jhazmat.2023.133182\"],\"all_blocked_titles\":[\"a review of foam fractionation for the removal of per and polyfluoroalkyl substances pfas from aqueous matrices\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.jhazmat.2023.133182\"],\"anchor_id\":\"AR-WE-2024\",\"corpus_source\":\"2024 - We - A review of foam fractionation for the removal of per- and polyfluoroalkyl substances (PFAS) from aqueous matrices.pdf\",\"doi\":\"10.1016/j.jhazmat.2023.133182\",\"title\":\"A review of foam fractionation for the removal of per- and polyfluoroalkyl substances (PFAS) from aqueous matrices\",\"url\":\"https://doi.org/10.1016/j.jhazmat.2023.133182\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Wang, Y.; Ji, Y.; Tishchenko, V.; Huang, Q. Removing per- and polyfluoroalkyl substances (PFAS) in water by foam fractionation. Chemosphere. 2023;311:137004.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S16-E04\",\n      \"S16-E06\"\n    ],\n    \"reason\": \"Bench-scale landfill leachate with high organic content and mixed PFAS/precursor profile; conditions and matrix differ from other environmental waters and synthetic solutions, so removal and enrichment performance are not directly comparable without accounting for matrix effects.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.chemosphere.2022.137004\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S16-E04\"\n      ],\n      \"interpretation\": \"Foam fractionation achieved high removal of long-chain PFASs from landfill leachate, but substantial residual PFAS (10^2\\u201310^3 ng/L) remained in the bottom solution after first-stage treatment, indicating that FF alone cannot reach very low health-advisory concentrations.\",\n      \"reported_term\": \"removal efficiency\"\n    },\n    {\n      \"endpoint_type\": \"separation\",\n      \"evidence_locator_ids\": [\n        \"S16-E06\"\n      ],\n      \"interpretation\": \"Approximately 80% of total organic carbon (TOC) in landfill leachate was transferred into the foamate during single-stage FF, while PFAS constituted less than 0.01% of TOC, showing that FF co-concentrated bulk organic matter along with PFAS.\",\n      \"reported_term\": \"TOC distribution between foam and treated leachate\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S16-E06\"\n      ],\n      \"interpretation\": \"Average TOC recovery of about 103% indicated acceptable mass balance closure for organic carbon during FF.\",\n      \"reported_term\": \"TOC recovery\"\n    },\n    {\n      \"endpoint_type\": \"transformation\",\n      \"evidence_locator_ids\": [\n        \"S16-E06\"\n      ],\n      \"interpretation\": \"TOP assay after FF showed increased concentrations of several PFCAs (PFBA, PFPeA, PFHpA, PFOA) and PFOS in original, treated, and foam samples, consistent with oxidative transformation of PFAS precursors to terminal PFAAs during the assay, not during FF itself.\",\n      \"reported_term\": \"TOP assay increase in PFCAs and PFOS\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S16-E04\"\n      ],\n      \"statement\": \"Despite high removal efficiencies, residual PFBA, PFOA, and PFOS concentrations of 10^2\\u201310^3 ng/L remained in the treated leachate after first-stage FF, making it infeasible to meet recent very low EPA health advisory levels with FF alone; a polishing step such as GAC or ion exchange is required.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S16-E06\"\n      ],\n      \"statement\": \"Foam fractionation strongly co-concentrated bulk organic matter, with ~80% of TOC partitioning to the foam, which may complicate downstream foamate management and disposal.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S16-E04\",\n        \"S16-E06\"\n      ],\n      \"statement\": \"The study did not quantify energy use or long-term operational stability for landfill leachate treatment; results are limited to short bench-scale experiments.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S16-E04\",\n      \"S16-E06\"\n    ],\n    \"value\": \"Landfill leachate\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S16-E04\",\n        \"S16-E06\"\n      ],\n      \"name\": \"Foam fractionation stages\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"Multi-stage FF for PFAS removal, plus additional single-stage experiment for TOC and TOP assay mass balance\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S16-E06\"\n      ],\n      \"value\": \"PFBA\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S16-E06\"\n      ],\n      \"value\": \"PFPeA\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S16-E06\"\n      ],\n      \"value\": \"PFHpA\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S16-E04\",\n        \"S16-E06\"\n      ],\n      \"value\": \"PFOA\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S16-E04\",\n        \"S16-E06\"\n      ],\n      \"value\": \"PFOS\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S16-E06\"\n      ],\n      \"value\": \"Other PFAAs and precursors detectable by TOP assay (not all individually quantified)\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S16-E04\"\n      ],\n      \"name\": \"PFOA initial concentration in landfill leachate\",\n      \"qualifiers\": \"Initial concentration prior to 1st-stage FF treatment\",\n      \"unit\": \"ng/L\",\n      \"value\": \"3851.7\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S16-E04\"\n      ],\n      \"name\": \"PFOS initial concentration in landfill leachate\",\n      \"qualifiers\": \"Initial concentration prior to 1st-stage FF treatment\",\n      \"unit\": \"ng/L\",\n      \"value\": \"96.9\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S16-E04\"\n      ],\n      \"name\": \"PFAS concentrations in bottom solution after 1st-stage FF\",\n      \"qualifiers\": \"PFBA, PFOA, and PFOS concentrations in treated bottom solution after 1st-stage FF remained at 10^2\\u201310^3 ng/L despite high removal efficiency; specific values by compound not shown in provided text.\",\n      \"unit\": \"ng/L\",\n      \"value\": \"1e2-1e3\",\n      \"value_form\": \"range\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S16-E06\"\n      ],\n      \"name\": \"Average TOC recovery in single-stage FF of landfill leachate\",\n      \"qualifiers\": \"Based on TOC mass balance between foam solution and treated leachate\",\n      \"unit\": \"%\",\n      \"value\": \"103.4\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S16-E06\"\n      ],\n      \"name\": \"Fraction of TOC ending in foam solution\",\n      \"qualifiers\": \"\\\"~80%\\\" of TOC ended up in foam solution after FF treatment of landfill leachate\",\n      \"unit\": \"%\",\n      \"value\": \"~80\",\n      \"value_form\": \"approximate_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S16-E06\"\n      ],\n      \"name\": \"PFAS contribution to TOC in landfill leachate\",\n      \"qualifiers\": \"PFASs accounted for <0.01% of TOC in the landfill leachate sample\",\n      \"unit\": \"%\",\n      \"value\": \"<0.01\",\n      \"value_form\": \"inequality\"\n    }\n  ],\n  \"record_id\": \"RT07-bge_llm_local_rag-S16-R02\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S16-E04\"\n      ],\n      \"statement\": \"Treated landfill leachate retained PFAS at 10^2\\u201310^3 ng/L after first-stage FF, so FF functions as a bulk-removal and concentration step rather than a stand-alone solution for achieving drinking-water-level PFAS criteria.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S16-E04\",\n        \"S16-E06\"\n      ],\n      \"statement\": \"Foamate contained the majority of TOC and enriched PFAS; no destructive treatment of this PFAS-rich concentrate was applied or evaluated in the reported experiments.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S16-E06\"\n      ],\n      \"statement\": \"TOP assay indicated increased PFCAs and PFOS after oxidative treatment of samples, implying presence and enrichment of PFAS precursors in both original and foamate phases, which could be relevant for downstream destructive treatment design.\"\n    }\n  ],\n  \"source_id\": \"S16\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S16-E04\",\n      \"S16-E06\"\n    ],\n    \"value\": \"Bench-scale foam fractionation treating real landfill leachate (single-stage and multi-stage experiments)\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S16-E04\",\n      \"S16-E06\"\n    ],\n    \"value\": \"Foam fractionation applied to landfill leachate, including multi-stage FF for PFAS removal and a single-stage FF run with TOP assay and TOC balance to assess mass distribution and precursor transformation.\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 16,\n  \"bge_score\": 0.6953772902488708,\n  \"citation\": \"Wang, Y.; Ji, Y.; Tishchenko, V.; Huang, Q. Removing per- and polyfluoroalkyl substances (PFAS) in water by foam fractionation. Chemosphere 2023 311 137004. DOI: 10.1016/j.chemosphere.2022.137004.\",\n  \"doi\": \"10.1016/j.chemosphere.2022.137004\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.chemosphere.2022.137004\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 40,\n      \"locator_id\": \"S16-E01\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.005237939767539501,\n        \"RT07-C2\": 0.08876892924308777,\n        \"RT07-C3\": 0.0045940750278532505,\n        \"umbrella\": 0.823133111000061\n      },\n      \"section\": \"results\",\n      \"text\": \"4b, FF was most effective at removing PFOS (99%) and PFOA (94%). The enrichment of PFAS in the foam solution was also the greatest for PFOS and PFOA at each stage of the FF treatment (Fig. 4c). The concentration in the foam after the 3rd stage treatment was about 19 and 17 times that of the original WWTP effluent sample, for PFOS and PFOA respectively. These are consistent with those in treating the samples from landfill leachate and AFFF-contaminated groundwater in this study; i.e., long-chain PFASs are prone to greater removal than short-chain PFASs due to higher interfacial partitioning (Goss et al., 2006; Campbell et al., 2009). Prior to FF treatment, the concentration of PFOS and PFOA was 34.8, 8.6 ng/L, respectively. After treatment, levels for both PFOS and PFOA diminished to <5 ng/L. The overall recovery for each of the PFASs after the multi-stage FF treatment was within 70\\u2013130%, except for PFBA (Fig. S14). This shows that PFASs, even at low levels, i.e., < 10 2 ng/L, can still be removed effectively from the water using FF with addition of thickeners such as HPMC.\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S16-E02\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.11700543016195297,\n        \"RT07-C2\": 0.07613418996334076,\n        \"RT07-C3\": 0.0037737349048256874,\n        \"umbrella\": 0.6345638632774353\n      },\n      \"section\": \"results\",\n      \"text\": \"solutions and intensified enrichment in the collected foam. FF treatments of a landfill leachate, a groundwater contaminated by aqueous film-forming foams, and a wastewater treatment plant effluent sample were evaluated. The removal reached above 70% for most monitored PFASs, except the ones of short alkyl chains. PFAS con - centrations in the final collected foams were up to over 30 \\u00d7 than that in the original samples. Analysis using high-resolution mass spectrometry revealed enrichment of non-target PFASs by FF. The results of this study demonstrate great effectiveness of FF in removing most PFASs from waters, producing low-volume, highly concentrated solutions of PFASs in all tested environmental samples. 1. Introduction Per- and polyfluoroalkyl substances (PFASs) are synthetic fluori - nated organic compounds that have unique properties, such as low surface tension and high thermal and chemical stability, for special applications (O\\u2019Hagan, 2008; Sznajder-Katarzynska, 2019; Park, 2020). PFASs consist of multiple C\\u2013F bonds that are the strongest covalent bond (O\\u2019Hagan, 2008). These features are useful for many industrial and commercial applications, such as carpet-cleaning liquids, aqueous film forming foam (AFFF), water-resistant fabrics and packaging materials (Kotthoff, 2015; Anderson, 2016). However, the remarkable stability of\"\n    },\n    {\n      \"corpus_chunk\": 3,\n      \"locator_id\": \"S16-E03\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.01776391640305519,\n        \"RT07-C2\": 0.14283990859985352,\n        \"RT07-C3\": 0.0007799689774401486,\n        \"umbrella\": 0.7128700017929077\n      },\n      \"section\": \"results\",\n      \"text\": \"chemicals and PFBS were set at 10 and 2000 ppt, respectively (USEPA, 2022). Short-chain PFASs were introduced as alternatives to long-chain PFASs (Barzen-Hanson and Field, 2015; Sun et al., 2016), but they present environmental risks as well. They are usually used in much larger quantities than long-chain PFASs due to lower technical perfor - mance ( Lindstrom et al., 2011). Some manufacturers have phased out production of certain PFASs and replaced them with new PFASs or chemical substitutes (Schellenberger et al., 2019). Studies have revealed that many new and unidentified PFAS types are found in environmental samples (Liu, 2015), and more than 90% of organic fluorine chemicals detected in environmental and biological samples are previously un - known compounds ( Loi, 2011; Shi, 2016) that cannot be individually quantified by targeted analysis. There is thus a need for methods to treat both targeted and non-target PFASs in water. Foam fractionation has recently been found to effectively remove PFAS from water, potentially providing an alternative method for treatment of large volumes of PFAS-contaminated waters (Lee, 2017; Robey, 2020; Burns, 2021). Foam fractionation (FF) is a physiochemical process in which hydrophobic and surface-active molecules are prefer -\"\n    },\n    {\n      \"corpus_chunk\": 31,\n      \"locator_id\": \"S16-E04\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.003944007214158773,\n        \"RT07-C2\": 0.007811437360942364,\n        \"RT07-C3\": 0.008591360412538052,\n        \"umbrella\": 0.25336718559265137\n      },\n      \"section\": \"methods\",\n      \"text\": \"higher removal of longer chain length PFASs was also reported in another study (Ebersbach et al., 2016). It is noted that the concentra - tions of PFBA, PFOA, and PFOS in the bottom solution after 1st stage FF treatment were still 10 2 \\u2013 3 ng/L (not shown), despite high removal ef- ficiency, especially for that of PFOA (3851.7 ng/L) and PFOS (96.9 ng/L), respectively. Apparently, it is not feasible for FF treatment to reach the low health advisory levels for PFAS that EPA recently pub - lished (USEPA, 2022), and a polishing step, such as granular activated carbon (GAC) and ion exchange resin (IXR), has to follow. It is however expected that FF can be an effective pretreatment to remove the bulk of PFASs from water and thus enhance the performance and lifespan of the GAC and IXR that are often dictated by the influent PFAS concentrations (Wang et al., 2022). The overall recovery for each of the PFASs after the multi-stage FF treatment was within 70\\u2013130%, except for PFNA (Fig. S8). An additional single-stage FF treatment experiment was conducted under the same experimental conditions to further investigate TOC mass balance of the landfill leachate.\"\n    },\n    {\n      \"corpus_chunk\": 4,\n      \"locator_id\": \"S16-E05\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.008511547930538654,\n        \"RT07-C2\": 0.008926857262849808,\n        \"RT07-C3\": 0.0016801439924165606,\n        \"umbrella\": 0.7112851738929749\n      },\n      \"section\": \"results\",\n      \"text\": \"Foam fractionation (FF) is a physiochemical process in which hydrophobic and surface-active molecules are prefer - entially separated from aqueous solution via extraction by rising bubbles that form a foam layer at the aqueous surface. FF has been proven as a potent remediation technology for various types of wastewaters ( Eldib, 1961; Liu, 2013; Huang, 2017; Jia, 2021), and can be operated at all scales. It has the advantages of relatively simple equipment require - ment, low operation cost and energy consumption, and no need of re - agents addition. FF produces a small volume of highly-concentrated PFAS-containing solution that can be disposed or further treated ( Wong, 2001; Backleh-Sohrt, 2005). There have been studies examining the feasibility of FF to remove PFAS from water, often conducted using laboratory-spiked water samples with PFAS concentrations in the range of milligrams per liter (i.e., parts per million, ppm) or micrograms per liter (i.e., parts per billion, ppb) (Lee, 2017). These concentrations levels however do not reflect those often found in environmental samples, usually in the range of nanograms per liter (i.e. parts per trillion; ppt) (Horst, 2020). Although there have been several studies on removing\"\n    },\n    {\n      \"corpus_chunk\": 32,\n      \"locator_id\": \"S16-E06\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.02867337130010128,\n        \"RT07-C2\": 0.018119875341653824,\n        \"RT07-C3\": 0.0022161933593451977,\n        \"umbrella\": 0.6116529107093811\n      },\n      \"section\": \"methods\",\n      \"text\": \"experimental conditions to further investigate TOC mass balance of the landfill leachate. The average TOC recovery was 103.4% (Fig. S9). It also shows that the majority of TOC (~80%) ended up in the foam solution after the treatment. Earlier studies indicated that the hydrophobic fraction of dissolved organic matter predominated in a landfill leachate- polluted groundwater (Christensen et al., 1998). For example, diethyltoluamide and sucralose were usually the major constituents of TOC in landfill leachate (Clarke et al., 2015). Most natural organic matters exhibited higher partitioning in organic phase than aqueous phase (Fu et al., 2019), likely causing intense interfacial partitioning of TOC during FF treatment. In this study, PFASs accounted for <0.01% TOC in the landfill leachate sample (Table S6). TOP assay results for each terminal PFAAs in the original sample, treated bottom solution, and foam solution from the single-stage treat - ment of landfill leachate were shown in Fig. S10. Upon oxidative treatment, four PFCAs (PFBA, PFPeA, PFHpA, and PFOA) and one PFSA (PFOS) exhibited concentration increases (Figs. S10a, S10b, and S10c). The increases in PFCAs concentrations can be attributed to trans - formation of PFAA precursors to PFCAs when exposed to hydroxyl racial\"\n    },\n    {\n      \"corpus_chunk\": 21,\n      \"locator_id\": \"S16-E07\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.008460722863674164,\n        \"RT07-C2\": 0.0023175624664872885,\n        \"RT07-C3\": 0.0007891899440437555,\n        \"umbrella\": 0.602922797203064\n      },\n      \"section\": \"methods\",\n      \"text\": \"addition. This is likely because the bubbles collapsed less as the addition of salts increases (Craig et al., 1993; Del Castillo et al., 2011), leading to higher foam volume and thus maintaining the PFAS concentration in the foam relatively constant. It is noted that addition of electrolyte of 10-mM ionic strength was enough to result in approximately 80% removal of PFOA and 6:2 FTS, and near 100% removal of PFOS. 3.1.3. Effect of NOM The effect of NOM on FF was studied partly because NOM is ubiq - uitous in natural aquatic environment (Shon et al., 2006). SRNOM was added so that the NOM concentration was 5 mg/L to investigate the influence of NOM on FF removal of PFASs. All the experiments were carried out at the air flow rate 7 L/min (Columns \\u2462, Table S1), and the results are shown in Fig. S3. It shows that removal efficiency increased for all four PFASs in the presence of NOM compared to no addition (Fig. S3a). PFASs can absorb to NOM via hydrophobic interactions be - tween the perfluoroalkyl tail and the NOM (Du et al., 2014). In addition, NOM can facilitate formation of PFAS aggregate or PFAS-NOM com -\"\n    },\n    {\n      \"corpus_chunk\": 12,\n      \"locator_id\": \"S16-E08\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.030668331310153008,\n        \"RT07-C2\": 0.1387389749288559,\n        \"RT07-C3\": 0.00152827356941998,\n        \"umbrella\": 0.6001313924789429\n      },\n      \"section\": \"methods\",\n      \"text\": \"solution prior to n th stage treatment (ng/L), and \\u03c6 n t is the volumetric fraction of the bottom solution after n th stage treatment. The enrichment factor in a single-stage treatment was calculated as Enrichment factor = C f C 0 where Cf is the concentration of PFASs in the foam solution (ng/L). The enrichment factor of n th stage in a multi-stage treatment was calculated as Enrichment factor = C n f C 0 where Cn f is the concentration of PFASs in the foam after n th stage FF treatment (ng/L). The PFAS recovery in a single-stage treatment was calculated as Recovery = C f \\u03c6 f + C t \\u03c6 t C 0 \\u00d7 100% The PFAS recovery in a multi-stage treatment was calculated as Recovery = [(( C n f \\u03c6 n f + C n t \\u03c6 n t ) \\u03c6 n\\u0000 1 f + C n\\u0000 1 t \\u03c6 n\\u0000 1 t ) \\u03c6 n\\u0000 2 f + \\u2026C 2 t \\u03c6 2 t ] \\u03c6 1 f + C 1 t \\u03c6 1 t C 0 \\u00d7 100% where \\u03c6 n f is the volumetric fraction of foam of the n th stage of FF treatment. The PFAS recovery in TOP assay was calculated as Recovery = C TOP\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2023 - Wang - Removing per- and polyfluoroalkyl substances (PFAS) in water by foam fractionation.pdf\",\n  \"source_id\": \"S16\",\n  \"title\": \"Removing per- and polyfluoroalkyl substances (PFAS) in water by foam fractionation\",\n  \"year\": \"2023\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "a77e375b394beed866e9bbc3c0855a3f5f670921b060bd8a6aa1fec0c06017fd",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.0498005,
+    "finish_reason": "stop",
+    "input_tokens": 6946,
+    "latency_seconds": 29.76382074994035,
+    "output_tokens": 4227,
+    "reasoning_tokens": 1233,
+    "response_id": "chatcmpl-E9NVuoD9utaYxDwd0KBi3OaB0G9Av",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 11173,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The DOI and URL exactly match the citation information provided in the source metadata (10.1016/j.chemosphere.2022.137004; https://doi.org/10.1016/j.chemosphere.2022.137004).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The record labels the study as descriptive_only due to bench-scale foam fractionation on landfill leachate. The cited text shows experiments on landfill leachate (real environmental matrix) with lab-style FF tests (multi-stage and additional single-stage), supporting a descriptive/bench context rather than a broadly comparable standardized condition.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The reason cites landfill leachate with mixed PFAS/precursor profile and matrix effects. The methods text refers specifically to landfill leachate and TOC characteristics, indicating a complex, organic-rich matrix; it is reasonable to infer that performance is less directly comparable to other waters, so the narrative justification is consistent with the evidence.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "Endpoint 0 is classified as removal. The cited text states high removal efficiency and reports initial and post-FF concentrations in the bottom solution, clearly describing PFAS removal performance, so removal is the correct endpoint type.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "The text notes that PFBA, PFOA, and PFOS concentrations in the bottom solution after 1st-stage FF remained at 10^2\u201310^3 ng/L despite high removal, and concludes it is not feasible to reach low EPA health advisory levels with FF alone, requiring a polishing step. The interpretation accurately summarizes this finding.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "Endpoint 1 concerns TOC mass distribution between foam and treated leachate. This is a partitioning/separation measurement rather than a destruction or removal metric, so classifying it as separation is appropriate and consistent with the text describing where the TOC ends up.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "The text reports that the majority of TOC (~80%) ended up in the foam solution and that PFASs accounted for <0.01% of TOC. The interpretation that FF co-concentrates bulk organic matter along with PFAS is consistent with these quantitative statements.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].endpoint_type",
+        "reason": "Endpoint 2 focuses on TOC mass balance (recovery). This is not a standard removal, separation, or transformation endpoint; classifying it as other is appropriate and consistent with the reported TOC recovery metric.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].interpretation",
+        "reason": "The cited text states that the average TOC recovery was 103.4%. The interpretation that this indicates acceptable mass balance closure is a straightforward reading of that value and does not add unsupported claims.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[3].endpoint_type",
+        "reason": "Endpoint 3 refers to changes in PFAA concentrations during the TOP assay, which involves chemical oxidation of precursors to terminal PFAAs. This is a chemical transformation measurement, so classifying the endpoint as transformation is consistent with the text describing precursor-to-PFAA transformation upon oxidative treatment.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[3].interpretation",
+        "reason": "The text reports that, upon oxidative treatment in the TOP assay, four PFCAs (PFBA, PFPeA, PFHpA, PFOA) and PFOS increased in concentration and attributes this to transformation of PFAA precursors. The record\u2019s interpretation correctly attributes the transformation to the TOP assay and not to FF itself, which is consistent with the cited passage.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "The limitation quotes that residual PFBA, PFOA, and PFOS remained at 10^2\u201310^3 ng/L and that it is not feasible for FF to reach low EPA health advisory levels, so a polishing step like GAC or IXR is needed. This is directly supported by the cited text in S16-E04, which makes these points explicitly.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1]",
+        "reason": "The design_inferred limitation notes that ~80% of TOC partitions to foam and this may complicate foamate disposal. The ~80% TOC in foam is directly supported by S16-E06; the implication about disposal complexity is a reasonable inference from this co-concentration and is appropriately labeled design_inferred.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[2]",
+        "reason": "The study text describes specific short-term FF experiments and does not discuss energy use or long-term operational stability. Concluding that energy and long-term stability were not quantified and that results are limited to short bench-scale experiments is a reasonable design-based inference and consistent with the provided methods/results excerpts.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix",
+        "reason": "Both S16-E04 and S16-E06 refer to a landfill leachate sample and TOC mass balance of the landfill leachate, directly supporting the matrix value \"Landfill leachate.\"",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "S16-E04 mentions multi-stage FF treatment and an additional single-stage FF treatment experiment to investigate TOC mass balance; S16-E06 ties the TOC balance and TOP assay to this single-stage landfill leachate treatment. The summarized value accurately reflects these described operating conditions.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The field describes qualitative operating conditions (staging scheme) rather than a numeric quantity, so leaving the unit as null is appropriate and consistent with the cited text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "PFBA is explicitly mentioned in both S16-E04 (PFBA concentrations in bottom solution) and S16-E06 (four PFCAs including PFBA in TOP assay results), supporting its inclusion in the PFAS scope.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1].value",
+        "reason": "S16-E06 explicitly lists PFPeA among the four PFCAs whose concentrations increased in the TOP assay, supporting its inclusion in the PFAS scope.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[2].value",
+        "reason": "S16-E06 explicitly lists PFHpA among the four PFCAs whose concentrations increased in the TOP assay, supporting its inclusion in the PFAS scope.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[3].value",
+        "reason": "PFOA is mentioned in S16-E04 (initial concentration 3851.7 ng/L and residual 10^2\u201310^3 ng/L) and in S16-E06 as one of the PFCAs increasing in TOP assay, supporting its inclusion.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[4].value",
+        "reason": "PFOS is mentioned in S16-E04 (initial concentration 96.9 ng/L and residual 10^2\u201310^3 ng/L) and in S16-E06 as the PFSA whose concentration increased in TOP assay, supporting its inclusion.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[5].value",
+        "reason": "S16-E06 refers broadly to TOP assay results for each terminal PFAA in original, treated, and foam solutions, implying the presence of additional PFAAs and their precursors beyond those individually named. Describing these as \"other PFAAs and precursors detectable by TOP assay\" is a reasonable, conservative summary of this broader scope.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "S16-E04 gives the PFOA concentration prior to FF as 3851.7 ng/L. The recorded value 3851.7 matches exactly and the value_form exact_numeric is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The source reports the PFOA concentration in ng/L, matching the recorded unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "S16-E04 reports PFOS at 96.9 ng/L prior to FF. The recorded value 96.9 matches exactly with value_form exact_numeric, consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "The PFOS initial concentration is reported in ng/L in the source, consistent with the recorded unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].value",
+        "reason": "S16-E04 states that concentrations of PFBA, PFOA, and PFOS in the bottom solution after 1st stage FF were still 10^2\u201310^3 ng/L. The recorded range value \"1e2-1e3\" correctly encodes 10^2\u201310^3 and matches value_form range.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].unit",
+        "reason": "The source expresses the residual concentrations in ng/L; the recorded unit ng/L is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].value",
+        "reason": "S16-E06 states that the average TOC recovery was 103.4%. The recorded value 103.4 with exact_numeric form matches this statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].unit",
+        "reason": "TOC recovery is a percentage; the recorded unit % matches the source\u2019s implicit percentage expression.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].value",
+        "reason": "S16-E06 states that the majority of TOC (~80%) ended up in the foam solution. The recorded approximate_numeric value \"~80\" is consistent with the \"~80%\" reported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].unit",
+        "reason": "The fraction of TOC ending in foam is expressed as a percentage in the source; the recorded unit % is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[5].value",
+        "reason": "S16-E06 states that PFASs accounted for <0.01% TOC in the landfill leachate. The recorded value \"<0.01\" with value_form inequality correctly captures this figure.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[5].unit",
+        "reason": "PFAS contribution is given as a percent of TOC; the recorded unit % is consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "S16-E04 notes residual PFBA, PFOA, and PFOS at 10^2\u201310^3 ng/L after 1st-stage FF and states FF alone cannot reach low EPA advisory levels. Interpreting this as FF functioning as a bulk-removal/concentration step rather than a stand-alone solution is a reasonable design-based inference from these data.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[1]",
+        "reason": "S16-E06 shows that ~80% of TOC and enriched PFAS end up in the foam solution. There is no mention of any destructive treatment applied to this foamate. Concluding that foamate contained the majority of TOC and enriched PFAS and that no destructive treatment was evaluated is consistent with the cited text and experimental description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[2]",
+        "reason": "S16-E06 describes TOP assay results with increased concentrations of several PFCAs and PFOS due to transformation of precursors, in original, treated, and foam solutions. Inferring that this indicates the presence and enrichment of PFAS precursors relevant for downstream treatment is a reasonable design-based inference from the TOP assay behavior.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale",
+        "reason": "The text describes multi-stage and single-stage FF experiments on landfill leachate in a controlled experimental setup, which clearly indicates bench-scale experimentation on real leachate. The summary \"Bench-scale foam fractionation treating real landfill leachate (single-stage and multi-stage experiments)\" is accurate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment",
+        "reason": "S16-E04 and S16-E06 together describe multi-stage FF for PFAS removal and an additional single-stage FF experiment with TOC balance and TOP assay to assess PFAS distribution and precursor transformation. The treatment description in the record accurately summarizes these activities.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT07-bge_llm_local_rag-S16-R02",
+    "record_usable": true,
+    "record_usable_rationale": "All core elements\u2014study identity, matrix (landfill leachate), foam fractionation treatment configuration, endpoints (removal, separation, TOP-assay transformation), and all quantitative findings\u2014are directly supported by the cited passages with correct transcription of values and units. Any interpretive statements are clearly conservative and consistent with the source. There are no contradictions or material unsupported claims that would mislead quantitative or qualitative synthesis, so the record is usable.",
+    "task_id": "RT07"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

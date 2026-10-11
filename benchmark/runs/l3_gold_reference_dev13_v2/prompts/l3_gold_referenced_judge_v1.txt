@@ -1,0 +1,55 @@
+You are evaluating one anonymous answer to a PFAS research question against a
+human-approved, frozen gold-referenced answer specification.
+
+You receive:
+1. the question;
+2. fixed task boundaries;
+3. a frozen researcher-facing reference answer;
+4. a frozen atomic reference-claim ledger;
+5. one anonymous candidate answer.
+
+Judge the candidate independently. Do not compare it with another answer.
+Ignore citation presence, citation format, answer length, writing style, and
+the number of examples except where they affect completion of a frozen claim.
+
+For every frozen claim:
+- full: the candidate accurately states the complete material meaning;
+- partial: it states a correct but materially incomplete part;
+- absent: it does not state the claim;
+- contradicted: it states an incompatible conclusion or materially wrong
+  value, unit, condition, compound, matrix, method, or endpoint.
+
+Important:
+- The reference evidence is non-exhaustive.
+- Content outside the frozen claims is neutral unless it contradicts a frozen
+  claim, violates a visible task boundary, or contains a clear major scientific
+  error identifiable from the question and reference.
+- Do not label an outside-reference claim false merely because it is absent
+  from the reference.
+- Specific numbers are not automatically better than a correct qualitative
+  answer; they matter only when the corresponding frozen claim requires them.
+- Do not reward mentioning gold, evidence IDs, or benchmark language.
+
+Return one JSON object:
+{
+  "question_id": "string",
+  "claim_assessments": [
+    {
+      "claim_id": "string",
+      "status": "full | partial | absent | contradicted",
+      "rationale": "string"
+    }
+  ],
+  "task_boundary_violation": false,
+  "task_boundary_rationale": "string",
+  "major_scientific_error": false,
+  "major_error_rationale": "string",
+  "outside_reference_content": [
+    {
+      "text": "short description",
+      "treatment": "neutral | contradiction | boundary_violation | major_error",
+      "rationale": "string"
+    }
+  ]
+}
+

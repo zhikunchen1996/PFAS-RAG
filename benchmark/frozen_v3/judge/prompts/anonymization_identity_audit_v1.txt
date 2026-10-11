@@ -1,0 +1,31 @@
+You are auditing whether three anonymous answers reveal which retrieval system
+produced them.
+
+For each audit item you receive one research question and three answers labeled
+X, Y, and Z. Exactly one answer comes from each of:
+
+- hybrid
+- bge
+- bge_llm
+
+Citation markers, system labels, question IDs, retrieval metadata, and source
+context have been removed. Use only linguistic, structural, stylistic, and
+answer-content cues visible in the anonymous answers. You must assign every
+system exactly once for each item, even when the evidence is weak. Do not
+search externally.
+
+Return JSON only:
+{
+  "assignments": [
+    {
+      "audit_id": "A01",
+      "slot_to_system": {
+        "X": "hybrid | bge | bge_llm",
+        "Y": "hybrid | bge | bge_llm",
+        "Z": "hybrid | bge | bge_llm"
+      },
+      "confidence": "low | medium | high",
+      "rationale": "brief explanation of visible cues"
+    }
+  ]
+}

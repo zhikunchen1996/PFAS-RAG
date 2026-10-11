@@ -1,0 +1,20 @@
+{
+  "run_id": "run",
+  "questions": "benchmark/frozen_v2/input/questions_dev13.csv",
+  "gold": "benchmark/frozen_v2/gold/chunk_based_gold.jsonl",
+  "policy": "Hybrid poolK -> BGE shortlistK -> LLM final topK",
+  "llm_model": "gpt-5.1",
+  "temperature": 0,
+  "selector_max_chars": 0,
+  "selector_input": "visible_question_only",
+  "specs": [
+    {
+      "config_name": "bge_llm_gpt51_pool60_bge30_llm10_fullchunk",
+      "candidate_scores": "benchmark/frozen_v2/results/dev13_corrected_retrieval_sweep_2026-07-22/local_hybrid_bge/bge_candidate_scores.jsonl",
+      "source_config": "bge_base_top10_pool60_nodoccap",
+      "pool_k": 60,
+      "bge_shortlist_k": 30,
+      "final_top_k": 10
+    }
+  ]
+}

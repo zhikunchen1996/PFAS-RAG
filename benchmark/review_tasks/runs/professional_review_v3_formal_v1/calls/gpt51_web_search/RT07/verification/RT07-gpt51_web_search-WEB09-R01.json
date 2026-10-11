@@ -1,0 +1,230 @@
+{
+  "call_key": "RT07:gpt51_web_search:verify:RT07-gpt51_web_search-WEB09-R01",
+  "created_at": "2026-08-05T04:29:01.374717+00:00",
+  "raw_response_text": "{\"task_id\":\"RT07\",\"record_id\":\"RT07-gpt51_web_search-WEB09-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The cited text only provides qualitative description of the treatment train and bench-scale setup without any quantitative removal, enrichment, or energy data, so classifying comparability as 'descriptive_only' is consistent with the available evidence.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The explanation that the description lacks quantitative removal, enrichment, or energy data matches the nature of the abstract/snippet evidence, which is qualitative only.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Locator WEB09-E01 states foam fractionation was used to generate PFAS-enriched foamate, which is a phase-transfer/enrichment process and correctly classified as a separation endpoint.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB09-E01 describes foam fractionation generating PFAS-enriched foamate from contaminated water; interpreting this as a concentration/phase-transfer step rather than degradation accurately reflects the text.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB09-E01 reports that electrochemical oxidation via boron-doped diamond electrodes was used to remove PFAS from the foamate, which is appropriately classified as a degradation endpoint.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text notes electrochemical oxidation of foamate using BDD electrodes to remove PFAS; describing this as degradation of PFOA and noting that the snippet lacks quantitative values is consistent with the cited abstract content.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB09-E01 specifies stirred batch conditions with ~200 mL volume, implying bench-scale, small reactors. Inferring that this limits extrapolation to pilot/full scale is a reasonable design-inferred limitation based on those conditions.\"},{\"field_path\":\"limitations[1]\",\"status\":\"unsupported\",\"error_type\":\"source_attribution\",\"reason\":\"The locator texts (WEB09-E01, WEB09-E02) describe the treatment configuration but do not explicitly state that quantitative recovery, enrichment, or energy data are absent; this is an assertion about missing information rather than a necessary inference from the described design.\"},{\"field_path\":\"matrix.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB09-E02 states that 14C-PFOA was spiked into both distilled and field-collected water. The field text mentions only distilled water with 14C-PFOA, which is correct but omits the field-collected water matrix, making the matrix description incomplete in scope.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB09-E01 explicitly notes that electrochemical oxidation was performed under stirred batch conditions, matching the value 'Stirred batch'.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The condition is categorical (reactor mode), so leaving the unit null is appropriate and consistent with the text, which does not provide a numeric measure.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB09-E01 reports stirred batch conditions of approximately 200 mL, which aligns with the value '~200' as the approximate batch volume for the electrochemical treatment of foamate.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The batch volume is reported as approximately 200 mL in WEB09-E01; using 'mL' as the unit is correct.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB09-E02 specifies radiolabeled PFOA (14C-PFOA) as the PFAS used, which matches the recorded PFAS scope 'PFOA (14C-labeled)'.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB09-E02 supports that 14C-PFOA was used to follow distribution and fate between bulk water, foam, and during electrochemical treatment. However, the additional claim that no specific residual species or inorganic fluoride release are described is not stated in the locator and reflects absence-of-evidence from the snippet rather than explicit source content.\"},{\"field_path\":\"study_scale.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB09-E01 and WEB09-E02 support that experiments were small-volume (~200 mL) batch tests using distilled (and also field-collected) water, with foam fractionation followed by BDD electrochemical oxidation, consistent with bench-scale laboratory work. However, the value text restricts the matrix to distilled water and refers to '~200 mL foamate' rather than more generally to '~200 mL batch', and it omits the field-collected water mentioned in WEB09-E02, so the scope is slightly incomplete.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB09-E01 and WEB09-E02 together describe a two-step process: foam fractionation producing PFAS-enriched foamate, followed by electrochemical oxidation of the foamate using boron-doped diamond electrodes under stirred batch conditions. This matches the treatment description.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014source identity, treatment configuration (foam fractionation followed by BDD electrochemical oxidation), matrix type, PFAS scope, endpoints, and basic operating mode/volume\u2014are supported by the cited text. Some limitations and scale/matrix fields incompletely describe all reported matrices or make claims about missing quantitative data, but these do not misrepresent the experimental design or endpoints and can be excluded or qualified in synthesis.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of when foam fractionation is useful as a concentration step and how the resulting PFAS-rich foamate should be managed.\",\"task_id\":\"RT07\",\"title\":\"Placing foam fractionation within a PFAS treatment train\"}\n\nTask-specific extraction objective:\nExtract feed source, PFAS profile, scale, operating duration, feed and foamate volume, recovery, enrichment, short-chain performance, energy, operational stability, downstream foamate treatment, and residual endpoint.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.jhazmat.2023.133182\"],\"all_blocked_titles\":[\"a review of foam fractionation for the removal of per and polyfluoroalkyl substances pfas from aqueous matrices\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.jhazmat.2023.133182\"],\"anchor_id\":\"AR-WE-2024\",\"corpus_source\":\"2024 - We - A review of foam fractionation for the removal of per- and polyfluoroalkyl substances (PFAS) from aqueous matrices.pdf\",\"doi\":\"10.1016/j.jhazmat.2023.133182\",\"title\":\"A review of foam fractionation for the removal of per- and polyfluoroalkyl substances (PFAS) from aqueous matrices\",\"url\":\"https://doi.org/10.1016/j.jhazmat.2023.133182\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Comfort SD, et al. Remediating Per- and Polyfluoroalkyl Substances (PFAS)-Contaminated Water by Foam Fractionation and Electrochemical Oxidation. Environments. 2023;12(6):185.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB09-E01\",\n      \"WEB09-E02\"\n    ],\n    \"reason\": \"The source description establishes the treatment train (foam fractionation plus electrochemical oxidation) and general bench-scale conditions but does not provide quantitative removal, enrichment, or energy data that can be normalized or compared across studies.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.3390/environments12060185\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"separation\",\n      \"evidence_locator_ids\": [\n        \"WEB09-E01\",\n        \"WEB09-E02\"\n      ],\n      \"interpretation\": \"Foam fractionation was used as a concentration step to transfer PFOA from bulk distilled water into a PFAS-enriched foamate fraction prior to electrochemical oxidation. The endpoint as described is phase transfer/enrichment rather than degradation.\",\n      \"reported_term\": \"foam fractionation removal / enrichment\"\n    },\n    {\n      \"endpoint_type\": \"degradation\",\n      \"evidence_locator_ids\": [\n        \"WEB09-E01\",\n        \"WEB09-E02\"\n      ],\n      \"interpretation\": \"Electrochemical oxidation with BDD electrodes was applied to the PFAS-enriched foamate to degrade PFOA; the study tracked fate using 14C labeling, but the snippet does not report quantitative removal or defluorination values.\",\n      \"reported_term\": \"electrochemical oxidation removal / degradation\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB09-E01\"\n      ],\n      \"statement\": \"Experiments were conducted at bench scale in small (~200 mL) stirred batch reactors, which may limit direct extrapolation to pilot or full-scale systems.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB09-E01\",\n        \"WEB09-E02\"\n      ],\n      \"statement\": \"The available description does not report quantitative foam fractionation recovery, enrichment factors, or electrochemical energy consumption for this configuration.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB09-E02\"\n    ],\n    \"value\": \"Distilled water spiked with radiolabeled PFOA (14C-PFOA).\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB09-E01\"\n      ],\n      \"name\": \"Electrochemical reactor mode\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"Stirred batch\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB09-E01\"\n      ],\n      \"name\": \"Foamate volume\",\n      \"qualifiers\": \"Approximate batch volume for electrochemical oxidation step.\",\n      \"unit\": \"mL\",\n      \"value\": \"~200\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB09-E02\"\n      ],\n      \"value\": \"PFOA (14C-labeled).\"\n    }\n  ],\n  \"quantitative_findings\": [],\n  \"record_id\": \"RT07-gpt51_web_search-WEB09-R01\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB09-E02\"\n      ],\n      \"statement\": \"Use of 14C-PFOA allowed tracking of radiolabel distribution between bulk water, foamate, and treated foamate, indicating attention to fate and potential residuals, but specific residual species or inorganic fluoride release are not described in the available text.\"\n    }\n  ],\n  \"source_id\": \"WEB09\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB09-E01\",\n      \"WEB09-E02\"\n    ],\n    \"value\": \"Bench-scale batch experiments (~200 mL foamate) with distilled water spiked with radiolabeled PFOA, treated by foam fractionation followed by electrochemical oxidation using boron-doped diamond electrodes.\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB09-E01\",\n      \"WEB09-E02\"\n    ],\n    \"value\": \"Two-step treatment: (1) foam fractionation to generate PFAS-enriched foamate, followed by (2) electrochemical oxidation of the foamate using boron-doped diamond (BDD) electrodes under stirred batch conditions.\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"other_inspected_page\",\n  \"capture_source_id\": \"WEB90\",\n  \"citation\": \"Comfort SD, et al. Environments (MDPI). 2023;12(6):185.\",\n  \"covered_component_ids\": [\n    \"RT07-C1\",\n    \"RT07-C2\",\n    \"RT07-C3\"\n  ],\n  \"doi\": \"10.3390/environments12060185\",\n  \"doi_or_stable_url\": \"https://doi.org/10.3390/environments12060185\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB09-E01\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract (from search result description)\",\n      \"text\": \"The paper reports on the use of foam fractionation to generate PFAS-enriched foamate and then evaluates electrochemical oxidation via boron-doped diamond electrodes to remove PFAS from the foamate under stirred batch conditions (~200 mL).\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB09-E02\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract / Methods (from search snippet)\",\n      \"text\": \"The authors conducted experiments with radiolabeled PFOA (14C\\u2011PFOA) spiked into distilled and field\\u2011collected water to follow the distribution and fate of PFAS between bulk water, foam, and during electrochemical treatment.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB09-E03\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Conclusions (from search snippet and cited review)\",\n      \"text\": \"The study demonstrates proof\\u2011of\\u2011concept that foam fractionation followed by electrochemical oxidation can be used in tandem to treat PFAS\\u2011contaminated water, with long\\u2011chain PFAS degraded more efficiently than short\\u2011chain PFAS.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://www.mdpi.com/2076-3298/12/6/185\",\n  \"source_id\": \"WEB09\",\n  \"source_limitations\": [\n    \"Full HTML/PDF content could not be accessed directly due to rate limiting; evidence relies on the abstract text visible in the inspected search representation and secondary review citations.\",\n    \"Quantitative removal percentages, enrichment factors, and energy consumption of the combined FF\\u2013EO treatment are not explicitly available.\",\n    \"Experiments are bench\\u2011scale in small volumes; transferability to pilot or full\\u2011scale systems is uncertain.\"\n  ],\n  \"title\": \"Remediating Per- and Polyfluoroalkyl Substances (PFAS)-Contaminated Water by Foam Fractionation and Electrochemical Oxidation\",\n  \"year\": \"2023\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "bdd4cbc9406c9898c9bfe3ecbb82990e92a7a40c9ed21fed89dba2872638be57",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.025178,
+    "finish_reason": "stop",
+    "input_tokens": 2952,
+    "latency_seconds": 15.563032166915946,
+    "output_tokens": 2264,
+    "reasoning_tokens": 962,
+    "response_id": "chatcmpl-E9NXCfE9LoXhh2MWUGiBCMXuIzId5",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 5216,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The cited text only provides qualitative description of the treatment train and bench-scale setup without any quantitative removal, enrichment, or energy data, so classifying comparability as 'descriptive_only' is consistent with the available evidence.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The explanation that the description lacks quantitative removal, enrichment, or energy data matches the nature of the abstract/snippet evidence, which is qualitative only.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "Locator WEB09-E01 states foam fractionation was used to generate PFAS-enriched foamate, which is a phase-transfer/enrichment process and correctly classified as a separation endpoint.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "WEB09-E01 describes foam fractionation generating PFAS-enriched foamate from contaminated water; interpreting this as a concentration/phase-transfer step rather than degradation accurately reflects the text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "WEB09-E01 reports that electrochemical oxidation via boron-doped diamond electrodes was used to remove PFAS from the foamate, which is appropriately classified as a degradation endpoint.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "The text notes electrochemical oxidation of foamate using BDD electrodes to remove PFAS; describing this as degradation of PFOA and noting that the snippet lacks quantitative values is consistent with the cited abstract content.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "WEB09-E01 specifies stirred batch conditions with ~200 mL volume, implying bench-scale, small reactors. Inferring that this limits extrapolation to pilot/full scale is a reasonable design-inferred limitation based on those conditions.",
+        "status": "supported"
+      },
+      {
+        "error_type": "source_attribution",
+        "field_path": "limitations[1]",
+        "reason": "The locator texts (WEB09-E01, WEB09-E02) describe the treatment configuration but do not explicitly state that quantitative recovery, enrichment, or energy data are absent; this is an assertion about missing information rather than a necessary inference from the described design.",
+        "status": "unsupported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "matrix.value",
+        "reason": "WEB09-E02 states that 14C-PFOA was spiked into both distilled and field-collected water. The field text mentions only distilled water with 14C-PFOA, which is correct but omits the field-collected water matrix, making the matrix description incomplete in scope.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "WEB09-E01 explicitly notes that electrochemical oxidation was performed under stirred batch conditions, matching the value 'Stirred batch'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The condition is categorical (reactor mode), so leaving the unit null is appropriate and consistent with the text, which does not provide a numeric measure.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "WEB09-E01 reports stirred batch conditions of approximately 200 mL, which aligns with the value '~200' as the approximate batch volume for the electrochemical treatment of foamate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The batch volume is reported as approximately 200 mL in WEB09-E01; using 'mL' as the unit is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "WEB09-E02 specifies radiolabeled PFOA (14C-PFOA) as the PFAS used, which matches the recorded PFAS scope 'PFOA (14C-labeled)'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "WEB09-E02 supports that 14C-PFOA was used to follow distribution and fate between bulk water, foam, and during electrochemical treatment. However, the additional claim that no specific residual species or inorganic fluoride release are described is not stated in the locator and reflects absence-of-evidence from the snippet rather than explicit source content.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "study_scale.value",
+        "reason": "WEB09-E01 and WEB09-E02 support that experiments were small-volume (~200 mL) batch tests using distilled (and also field-collected) water, with foam fractionation followed by BDD electrochemical oxidation, consistent with bench-scale laboratory work. However, the value text restricts the matrix to distilled water and refers to '~200 mL foamate' rather than more generally to '~200 mL batch', and it omits the field-collected water mentioned in WEB09-E02, so the scope is slightly incomplete.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "WEB09-E01 and WEB09-E02 together describe a two-step process: foam fractionation producing PFAS-enriched foamate, followed by electrochemical oxidation of the foamate using boron-doped diamond electrodes under stirred batch conditions. This matches the treatment description.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT07-gpt51_web_search-WEB09-R01",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014source identity, treatment configuration (foam fractionation followed by BDD electrochemical oxidation), matrix type, PFAS scope, endpoints, and basic operating mode/volume\u2014are supported by the cited text. Some limitations and scale/matrix fields incompletely describe all reported matrices or make claims about missing quantitative data, but these do not misrepresent the experimental design or endpoints and can be excluded or qualified in synthesis.",
+    "task_id": "RT07"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

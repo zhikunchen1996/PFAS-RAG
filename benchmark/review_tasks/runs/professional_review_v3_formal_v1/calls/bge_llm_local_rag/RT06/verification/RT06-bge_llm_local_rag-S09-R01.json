@@ -1,0 +1,332 @@
+{
+  "call_key": "RT06:bge_llm_local_rag:verify:RT06-bge_llm_local_rag-S09-R01",
+  "created_at": "2026-08-05T04:20:19.218555+00:00",
+  "raw_response_text": "{\"task_id\":\"RT06\",\"record_id\":\"RT06-bge_llm_local_rag-S09-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"citation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Citation text matches the article title, authors, journal, year, and DOI given in the source metadata.\"},{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The DOI URL exactly matches the DOI provided in the source metadata (10.1016/j.seppur.2022.120508).\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The study clearly presents specific experimental conditions (simulated PFAS wastewater with no added salts, fixed SDS dose, defined airflow) and qualitative removal trends (e.g., chain-length dependence) but the provided excerpts do not contain full quantitative removal efficiencies or mass balances. Describing the study as descriptive_only is a reasonable inference from E02 and E04.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Reason correctly notes that results are presented as PFAS removal trends (e.g., Fig. 2 showing C/C0 vs. time under fixed SDS dose and no salts) without detailed reactor geometry or mass-balance closure in the supplied text (E02, E04).\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 refers to \u201cPFAS removal from simulated PFAS wastewater (no added salts)\u201d and defines C/C0 as reduction compared to the initial concentration; E05 notes removal to below detection limit in groundwater. This clearly corresponds to a removal endpoint (decrease in bulk PFAS concentration).\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 notes greater removal for PFOS, PFOA, PFHxS with barely discernible removal of PFBA, expressed as C/C0 reduction for a fixed SDS dose and no added salts. This matches the narrative description of concentration reduction and chain-length dependence.\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 explicitly uses the phrase \u201cPFAS removal from simulated PFAS wastewater (no added salts).\u201d\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The process is foam fractionation, which separates PFAS by partitioning to foam. E01 discusses separation and partitioning of PFAS between foam and leachate; E02 discusses adsorption at the air\u2013water interface and chain-length-dependent partitioning. Classifying this as a separation endpoint is consistent with the described measurements.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 and E02 together support interpretation that more surface-active, longer-chain PFAS partition preferentially to the foam phase compared to short-chain PFBA due to differences in air\u2013water interfacial adsorption driven by hydrophobicity.\"},{\"field_path\":\"endpoints[1].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 discusses \u201cseparation of PFAS \u2026 using foam separation\u201d and \u201cdegree of separation,\u201d which aligns with the reported term of PFAS separation via foam fractionation.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 specifies \u201cPFAS removal from simulated PFAS wastewater (no added salts).\u201d E07 discusses how hardness and salt content are expected to significantly affect foam fractionation effectiveness. Together they support the design-inferred limitation that no-salt simulated wastewater does not represent groundwater cation effects.\"},{\"field_path\":\"limitations[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 lists PFHxS, PFOS, PFOA, and PFBA as the PFAS tested. Inferring that only this subset of chain lengths/functional groups limits generalization across PFAS is a reasonable design-inferred limitation.\"},{\"field_path\":\"matrix.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 refers directly to \u201cPFAS removal from simulated PFAS wastewater (no added salts),\u201d matching the matrix description.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 (Fig. 2 caption) states \u201cfixed SDS dosing rate (3.5 mg/min),\u201d matching the value 3.5.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The caption in E02 gives \u201c3.5 mg/min,\u201d so the unit mg/min is correct.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E04 states \u201ctotal airflow rate (G = 5.2 slpm) introduced into the system,\u201d matching the value 5.2.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E04 explicitly reports airflow as 5.2 slpm, so the unit slpm is correct.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E04 states that S_b was calculated from airflow G and \u201cthe bubble size (r32) measured in the first layer of foam in the column\u201d; describing the metric as \u201cr32 (Sauter mean radius) measured in first foam layer\u201d matches this.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record treats this as a descriptive metric without a numeric value; no unit is provided in the excerpt, so leaving unit null is appropriate.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E03 explains that gas flow rate is linked with liquid recirculation in the venturi system and that changing the venturi design or throttling recirculation affects bubble size and foam mechanical structure. This matches the description of internal hydrodynamics via a venturi-linked gas\u2013liquid recirculation system.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This is a qualitative description of hydrodynamics, not a numeric operating condition, so leaving unit null is consistent with the source.\"},{\"field_path\":\"operating_conditions[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 refers to \u201csimulated PFAS wastewater (no added salts),\u201d matching the description of salinity as no added salts.\"},{\"field_path\":\"operating_conditions[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Salinity is qualitatively described as \u2018no added salts\u2019; no numeric units are given or required, so null is appropriate.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 lists PFHxS among the PFAS used, and it is correctly expanded as perfluorohexane sulfonic acid.\"},{\"field_path\":\"pfas_scope[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 lists PFOS among the PFAS used; describing it as perfluorooctane sulfonic acid is correct.\"},{\"field_path\":\"pfas_scope[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 lists PFOA among the PFAS used; describing it as perfluorooctanoic acid is correct.\"},{\"field_path\":\"pfas_scope[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 lists PFBA among the PFAS used and notes inclusion of short-chain PFAS; PFBA as perfluorobutanoic acid is correct and PFBA is also mentioned indirectly in E02 when discussing its low surface activity.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 clearly reports a fixed SDS dosing rate of 3.5 mg/min; the numeric value 3.5 is accurately transcribed as an exact value.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The dosing rate is given as 3.5 mg/min in E02, so the unit mg/min is correct and value_form=exact_numeric is appropriate.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E04 states an airflow rate G = 5.2 slpm; the value 5.2 is correctly captured as an exact numeric.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The airflow is explicitly reported in slpm in E04, so the unit slpm is correct and consistent with value_form=exact_numeric.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 and E04 describe foam fractionation as a separation process based on adsorption at the air\u2013water interface and bubble transport; there is no indication of PFAS transformation or byproduct formation in the provided text. Inferring that no transformation/byproducts are discussed and that the process is physical separation is reasonable.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 discusses PFAS removal over time in what is clearly a batch experiment (fixed dose, 60 min window is mentioned elsewhere), and E04 describes operation of a foam fractionation column with defined flows. Combined with \u201csimulated PFAS wastewater (no added salts)\u201d (E02), this supports the description of batch foam fractionation in a column system with simulated wastewater.\"},{\"field_path\":\"treatment.value\",\"status\":\"partially_supported\",\"error_type\":\"source_attribution\",\"reason\":\"E02 and E04 support foam fractionation in a column with air introduction and foam extraction, and E02 shows SDS dosing (supporting SDS use). E03 (not cited for this field) mentions the venturi system linking gas flow with liquid recirculation, and E05 (not cited) identifies SDS as a co-foaming agent. With only E02 and E04 as locators, the parts about SDS specifically as a co-foaming agent and a venturi-based gas\u2013liquid recirculation system are not directly supported by the cited excerpts, although they are supported elsewhere in the paper. Hence the field is only partially supported by its specified locators.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014study identity, matrix (simulated PFAS wastewater, no salts), PFAS tested, key operating conditions (SDS dosing, airflow, bubble size metric, hydrodynamics), and endpoints (removal and separation)\u2014are well supported by the cited text. Quantitative values and units are accurately transcribed. The only issue is a minor overreach in the treatment description relative to the specified locators, which does not materially affect use of the record for synthesis of foam fractionation operating conditions.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of how PFAS properties, water chemistry, and reactor operation control foam-fractionation performance.\",\"task_id\":\"RT06\",\"title\":\"Identifying the operating conditions that control PFAS foam fractionation\"}\n\nTask-specific extraction objective:\nExtract PFAS and matrix composition, co-surfactants, reactor geometry, gas and flow conditions, bubble size, residence time, recycle, feed and foamate volumes, removal, recovery, enrichment, and mass-balance data.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.jhazmat.2023.133182\"],\"all_blocked_titles\":[\"a review of foam fractionation for the removal of per and polyfluoroalkyl substances pfas from aqueous matrices\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.jhazmat.2023.133182\"],\"anchor_id\":\"AR-WE-2024\",\"corpus_source\":\"2024 - We - A review of foam fractionation for the removal of per- and polyfluoroalkyl substances (PFAS) from aqueous matrices.pdf\",\"doi\":\"10.1016/j.jhazmat.2023.133182\",\"title\":\"A review of foam fractionation for the removal of per- and polyfluoroalkyl substances (PFAS) from aqueous matrices\",\"url\":\"https://doi.org/10.1016/j.jhazmat.2023.133182\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Buckley, T.; Karanam, K.; Xu, X.; Shukla, P.; Firouzi, M.; Rudolph, V. Effect of mono- and di-valent cations on PFAS removal from water using foam fractionation - A modelling and experimental study. Sep. Purif. Technol. 2022, 286, 120508.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S09-E02\",\n      \"S09-E04\"\n    ],\n    \"reason\": \"The study reports qualitative trends in PFAS removal versus chain length under a specific SDS dose and air flow in salt-free simulated wastewater, but does not provide full quantitative removal efficiencies, mass balances, or detailed reactor geometry required for direct comparison with other systems.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.seppur.2022.120508\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S09-E02\",\n        \"S09-E05\"\n      ],\n      \"interpretation\": \"PFAS concentration reduction in the bulk liquid of the foam fractionation column over time, comparing C/C0 for different PFAS at fixed SDS dose and no added salts; longer-chain PFAS (e.g., PFOS, PFOA, PFHxS) show higher removal than short-chain PFBA, which exhibits barely discernible removal.\",\n      \"reported_term\": \"PFAS removal from simulated PFAS wastewater\"\n    },\n    {\n      \"endpoint_type\": \"separation\",\n      \"evidence_locator_ids\": [\n        \"S09-E01\",\n        \"S09-E02\"\n      ],\n      \"interpretation\": \"Performance interpreted in terms of preferential partitioning of more surface-active, longer-chain PFAS to the foam phase relative to short-chain PFBA under salt-free conditions, driven by differences in air\\u2013water surface activity and hydrophobicity.\",\n      \"reported_term\": \"PFAS separation via foam fractionation\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S09-E02\",\n        \"S09-E07\"\n      ],\n      \"statement\": \"Simulated wastewater experiments were conducted without added salts, so the role of background groundwater cations and hardness on PFAS foam fractionation performance is not represented in this matrix.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S09-E05\"\n      ],\n      \"statement\": \"Only a subset of PFAS chain lengths and functional groups (PFOS, PFOA, PFHxS, PFBA) were evaluated, limiting generalization across the broader PFAS class.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S09-E02\"\n    ],\n    \"value\": \"simulated PFAS wastewater (no added salts)\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E02\"\n      ],\n      \"name\": \"SDS dosing rate\",\n      \"qualifiers\": \"fixed SDS dosing rate during PFAS removal experiments in simulated PFAS wastewater (no added salts)\",\n      \"unit\": \"mg/min\",\n      \"value\": \"3.5\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E04\"\n      ],\n      \"name\": \"Air flow rate\",\n      \"qualifiers\": \"total airflow rate introduced into the foam fractionation column for bubble generation and surface area calculation\",\n      \"unit\": \"slpm\",\n      \"value\": \"5.2\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E04\"\n      ],\n      \"name\": \"Bubble size metric\",\n      \"qualifiers\": \"r32 used to calculate total bubble surface area S_b; numerical values not reported in provided text\",\n      \"unit\": null,\n      \"value\": \"r32 (Sauter mean radius) measured in first foam layer\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E03\"\n      ],\n      \"name\": \"Internal hydrodynamics\",\n      \"qualifiers\": \"changes in venturi design or throttling recirculation noted to affect bubble size and foam mechanical structure\",\n      \"unit\": null,\n      \"value\": \"venturi system linking gas flow rate with liquid recirculation rate\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E02\"\n      ],\n      \"name\": \"Salinity\",\n      \"qualifiers\": \"experiments specifically noted as simulated PFAS wastewater with no added salts\",\n      \"unit\": null,\n      \"value\": \"no added salts (simulated wastewater)\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E05\"\n      ],\n      \"value\": \"PFHxS (perfluorohexane sulfonic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E05\"\n      ],\n      \"value\": \"PFOS (perfluorooctane sulfonic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E05\"\n      ],\n      \"value\": \"PFOA (perfluorooctanoic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E02\",\n        \"S09-E05\"\n      ],\n      \"value\": \"PFBA (perfluorobutanoic acid)\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E02\"\n      ],\n      \"name\": \"SDS dosing rate\",\n      \"qualifiers\": \"fixed SDS dosing rate during PFAS removal tests in simulated PFAS wastewater without added salts\",\n      \"unit\": \"mg/min\",\n      \"value\": \"3.5\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E04\"\n      ],\n      \"name\": \"Air flow rate\",\n      \"qualifiers\": \"total airflow rate (G) introduced into the foam fractionation system and used to compute bubble surface area S_b\",\n      \"unit\": \"slpm\",\n      \"value\": \"5.2\",\n      \"value_form\": \"exact_numeric\"\n    }\n  ],\n  \"record_id\": \"RT06-bge_llm_local_rag-S09-R01\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S09-E01\",\n        \"S09-E04\"\n      ],\n      \"statement\": \"No transformation or byproduct formation of PFAS was discussed; foam fractionation was used purely as a physical separation process based on surface activity.\"\n    }\n  ],\n  \"source_id\": \"S09\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S09-E02\",\n      \"S09-E04\"\n    ],\n    \"value\": \"batch foam-fractionation experiments in a column system using simulated PFAS wastewater without added salts\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S09-E02\",\n      \"S09-E04\"\n    ],\n    \"value\": \"Foam fractionation in a column with air sparging and foam extraction; sodium dodecyl sulfate (SDS) used as a hydrocarbon co-foaming surfactant; venturi-based gas\\u2013liquid recirculation system controlling gas flow and bubble generation\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 10,\n  \"bge_score\": 0.5126887559890747,\n  \"citation\": \"Buckley, T.; Karanam, K.; Xu, X.; Shukla, P.; Firouzi, M.; Rudolph, V. Effect of mono- and di-valent cations on PFAS removal from water using foam fractionation - A modelling and experimental study. Separation and Purification Technology 2022 286 120508. DOI: 10.1016/j.seppur.2022.120508.\",\n  \"doi\": \"10.1016/j.seppur.2022.120508\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.seppur.2022.120508\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 5,\n      \"locator_id\": \"S09-E01\",\n      \"query_scores\": {\n        \"RT06-C1\": 0.5695478320121765,\n        \"RT06-C2\": 0.003894672729074955,\n        \"RT06-C3\": 0.0004590257885865867,\n        \"umbrella\": 0.7551581859588623\n      },\n      \"section\": \"results\",\n      \"text\": \"Also, the shorter chain PFAS such as perfluorobutane sulphonic acid (PFBS) and perfluorohexane sulphonic acid (PFHxS) exhibited lower removal rates, likely due to their weaker surface-active properties. Robey et al. [20] investigated the separation of PFAS in a municipal solid waste landfill leachate using foam separation. In particular, the partitioning (and partitioning rate) of different PFAS species between the foam and leachate was investigated. The effectiveness of the foam fractionation technology depends on the formation of a stable air \\u2013 water interface. Batch and continuous foam fractionation of landfill leachate has been carried out by McCleaf et al. [21] and was successful in removing PFOS, perfluorooctanoic acid (PFOA) and PFHxS by > 90%. The addition of iron chloride coagulant, increased air flow and increased electrical conductivity were factors that helped to further improve the degree of separation. It is well established in the literature that the hardness of the water, and the composition of cations present as a co-contaminant, can have a significant effect on the adsorption of hydrocarbon and fluorocarbon surfactants at the air \\u2013 water interface [22 \\u2013 33] . Inorganic salts have been shown to inhibit bubble coalescence and retard the drainage of liquid films, separating bubbles in a foam network, at and above a concen -\"\n    },\n    {\n      \"corpus_chunk\": 16,\n      \"locator_id\": \"S09-E02\",\n      \"query_scores\": {\n        \"RT06-C1\": 0.8347310423851013,\n        \"RT06-C2\": 0.0005062762647867203,\n        \"RT06-C3\": 0.000394027738366276,\n        \"umbrella\": 0.16382764279842377\n      },\n      \"section\": \"methods\",\n      \"text\": \"and PFHxS, with barely discernible removal of PFBA. Since the air \\u2013 - water surface activity of PFAS depends on the number of carbon - \\u2013 fluorine moieties as highlighted in Table 1 , the observation is consistent with the hydrophobicity of the species, which is the driving force for the adsorption of the surface-active species to the air \\u2013 liquid interface. Independent investigations into the effect of PFAS chain length on the affinity for the air \\u2013 water interface, inferred by the mea - surement of surface tension are in agreeance that there is a significant correlation between the fluorocarbon chain length and the adsorption of Fig. 2. PFAS removal from simulated PFAS wastewater (no added salts) for a fixed SDS dosing rate (3.5 mg/min). C/Co refers to the reduction compared to the initial concentration. T. Buckley et al. Separation and Purification Technology 286 (2022) 120508 5 PFAS at the interface [45 \\u2013 49] . For instance, data from Tamaki et al. [49] showed that 1000 ppm solutions of PFOA and perfluorohexanoic acid (PFHxA) had equilibrium surface tension values of approximately 55.8 mN/m and 68.8 mN/m respectively, while even higher concentrations of PFBA showed no discernible effect on the surface tension compared to pure water.\"\n    },\n    {\n      \"corpus_chunk\": 31,\n      \"locator_id\": \"S09-E03\",\n      \"query_scores\": {\n        \"RT06-C1\": 0.012567409314215183,\n        \"RT06-C2\": 0.06707153469324112,\n        \"RT06-C3\": 0.00032282527536153793,\n        \"umbrella\": 0.13503561913967133\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"However, the practical challenges due to the foam gen - eration method in the current setup hinders the process. The gas flow - rate is linked with the liquid recirculation rate in the venturi system. Changing the venturi design or throttling the recirculation will have a hydrodynamic effect that consequently affects the bubble size, another key parameter in these equations. Therefore, Eqs. (6) and (7) were solved simultaneously to derive values for m and n applicable for the two different systems in sodium chloride concentrations of 10 mM and 100 mM. We believe that our attempt to use a set of different salinity levels to estimate the parameters does not affect the overall conclusion of this paper and the values can still be used for comparative purposes. The volumetric liquid fraction in the foam ( \\u03b5 ) was calculated by dividing the total average flowrate of liquid collected from the top of the column ( W F0 ) by the total flow of liquid and gas through the column ( G + W F0 ). The drainage parameters calculated for each system are shown in Table 3 where W D0 is the rate of liquid drainage in the foam due to gravity and equivalent to the last term in Eq. (7) . From Table 3 it can be inferred that there is a significant difference in the mechanical structure of the foam in each system. The liquid fraction\"\n    },\n    {\n      \"corpus_chunk\": 26,\n      \"locator_id\": \"S09-E04\",\n      \"query_scores\": {\n        \"RT06-C1\": 0.04102382808923721,\n        \"RT06-C2\": 0.029006611555814743,\n        \"RT06-C3\": 0.0025067694950848818,\n        \"umbrella\": 0.29995572566986084\n      },\n      \"section\": \"methods\",\n      \"text\": \"sparged into the liquid pool (m 2 /min), \\u0413 is the amount of PFAS adsorbed on the surface of bubbles per unit area (mg/m 2 ) and W F0 is the net flow rate of liquid being removed from the system by the foam extraction system (m 3 /min). Eq. (2) is derived from a mass balance around the liquid pool where the total rate of change of surfactant is equal to the surfactant leaving the liquid pool in the interstitial liquid and on the surface of bubbles [53 \\u2013 55] . The 1st term on the right-hand side is the PFAS loss due to PFAS adsorbed on the bubble surface, while the 2nd term is the PFAS loss from the interstitial liquid being dragged along with the foam. The PFAS concentration in the interstitial liquid is the same as that in the bulk liquid of the column assuming no enrichment due to internal reflux. S b was calculated from the total airflow rate (G = 5.2 slpm) intro - duced into the system and the bubble size (r 32 ) measured in the first layer of foam in the column using Eq. (3) . S b = 3 G r 32 (3) where r 32 is the Sauter mean radius, calculated from a distribution of\"\n    },\n    {\n      \"corpus_chunk\": 7,\n      \"locator_id\": \"S09-E05\",\n      \"query_scores\": {\n        \"RT06-C1\": 0.7792616486549377,\n        \"RT06-C2\": 0.001826366176828742,\n        \"RT06-C3\": 0.00022271956549957395,\n        \"umbrella\": 0.30202364921569824\n      },\n      \"section\": \"results\",\n      \"text\": \"(~200 ppm) by foam fractionation. Since groundwater and surface water has a wide range of cationic species, there is a need for a study to investigate the effect of various cations/salts on the removal of PFAS via foam fractionation, particularly at low PFAS concentrations which are encountered often in commercial applications. This paper investigates the effect of different cations on the removal of a variety of PFAS with different chain length and functional groups by foam fractionation. The tests were conducted using simulated as well as real groundwater samples. A hydrocarbon surfactant (SDS) was used as a co-foaming agent to assist with foam generation as the PFAS concentrations used here (and generally as present in waste and surface waters) are not high enough to cause foaming by themselves ( < 50 ppb). This study also includes the removal of long and short-chain PFAS in sulphonic and carboxylic acid forms. 2. Materials and method 2.1. Chemicals PFHxS ( > 97% purity) was purchased from BOC Sciences. PFOS ( > 40% purity), PFOA ( > 95% purity), and PFBA ( > 97% purity) in acid form were purchased from Merck. The chemical structure for these different PFAS are summarised below in Table 1 . Sodium dodecyl sulphate (SDS), sodium chloride (NaCl), magnesium\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S09-E06\",\n      \"query_scores\": {\n        \"RT06-C1\": 0.601841926574707,\n        \"RT06-C2\": 0.001737656188197434,\n        \"RT06-C3\": 0.00017411894805263728,\n        \"umbrella\": 0.6330881714820862\n      },\n      \"section\": \"results\",\n      \"text\": \"adsorption to the surface of air bubbles. In this study, the effect of mono- and di-valent cations on the perfor - mance of a PFAS foam fractionation process where sodium dodecyl sulphate (SDS) is used as a co-foaming agent has been evaluated. The results indicated that the separation of PFAS was improved in an order that followed the charge density of the salts with Mg 2 + > Na + > K + . It was also observed that at salt concentrations above 100 mM for Na + , above 10 mM for K + and Mg 2 + but between 0.1 and 10 mM for Ca 2 + in the presence of greater than 4 ppm of SDS, the cations can complex with the SDS in the system and suppress foam formation due to the sur - factant precipitation. Foam fractionation was able to remove perfluorohexane sulphonic acid (PFHxS), per - fluorooctanoic acid (PFOA) and perfluorooctane sulphonic acid (PFOS) from a sample of Australian groundwater to below the analytical detection limit of 0.1 ppb within 60 min with SDS being used as the co-foaming agent, but was unable to remove the short chain perfluorobutanoic acid (PFBA). 1. Introduction Per- and poly-fluoroalkyl substances (PFAS) are synthetic chemicals consisting of a completely or partially fluorinated alkyl chain [1] . The\"\n    },\n    {\n      \"corpus_chunk\": 6,\n      \"locator_id\": \"S09-E07\",\n      \"query_scores\": {\n        \"RT06-C1\": 0.23836682736873627,\n        \"RT06-C2\": 0.0023426408879458904,\n        \"RT06-C3\": 0.0005900202668271959,\n        \"umbrella\": 0.6216714382171631\n      },\n      \"section\": \"results\",\n      \"text\": \"shown to inhibit bubble coalescence and retard the drainage of liquid films, separating bubbles in a foam network, at and above a concen - tration called the salt transition concentration by impacting the inter - facial rheology, surface tension, colloidal forces and gas solubility of the solution [34 \\u2013 36] . In the presence of surfactants, particularly ionic sur - factants, salts impact the foam stability through screening the electro - static repulsions between the surfactant headgroups and forcing out the polar headgroups of the surfactant molecules from water to the interface (salting out effect). These result in enhanced surfactant adsorption to the air \\u2013 liquid interface and thereby reducing the interfacial tension and surfactants \\u2019 critical micelle concentration (CMC) [30,37 \\u2013 39] . For a detailed review of the effect of salts on surfactant-free and surfactant- laden films/foams and their underlying mechanisms see [40] and [41,42] respectively. Therefore, the hardness and salt content of the contaminated water is expected to have a significant effect on the effectiveness of foam frac - tionation as a PFAS water treatment technology. Meng et al. [19] found that increasing the sodium ion concentration up to 5 mM had a positive effect on the removal of PFOS from a highly concentrated solution (~200 ppm) by foam fractionation. Since groundwater and surface\"\n    },\n    {\n      \"corpus_chunk\": 34,\n      \"locator_id\": \"S09-E08\",\n      \"query_scores\": {\n        \"RT06-C1\": 0.048098769038915634,\n        \"RT06-C2\": 0.0006304074777290225,\n        \"RT06-C3\": 0.0002283193898620084,\n        \"umbrella\": 0.5983304977416992\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"4. Conclusion The effect of different cations on the performance of a PFAS foam fractionation process has been investigated, for the four cations most commonly found in groundwater, namely sodium, potassium, calcium and magnesium ions. The major findings from the investigation were: \\u2022 The addition of individual cations to the solution significantly increased the performance of the foam fractionation process by increasing the surfactant adsorption at the air \\u2013 water interface. \\u2022 The order of effectiveness for the different cations appeared to follow the same order as their charge density, following the order Mg 2 + > Na + > K + . \\u2022 At relatively high salt concentration (depending on the cations and SDS concentration), cations can complex with SDS and suppress formation of foam, inhibiting the effectiveness of the process. This concentration is above 100 mM for Na + , above 10 mM for K + and Mg 2 + but between 0.1 and 10 mM for Ca 2 + in the presence of greater than 4 ppm of SDS. \\u2022 Removal of PFAS by directly exploiting surface-active properties was possible for PFAS with a fluorocarbon tail length of 6 or greater, within the batch experiment time of 60 min. \\u2022 The removal of PFBA was not possible through foam fractionation process using SDS as the co-foaming agent. This may be ascribed to\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2022 - Buckley - Effect of mono- and di-valent cations on PFAS removal from water using foam fractionation - A modelling and experimental study.pdf\",\n  \"source_id\": \"S09\",\n  \"title\": \"Effect of mono- and di-valent cations on PFAS removal from water using foam fractionation - A modelling and experimental study\",\n  \"year\": \"2022\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "102bcb59d9e0970e245887663f669f954657aa7f5ba67d2136ef54af374caf0c",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.04342925,
+    "finish_reason": "stop",
+    "input_tokens": 6481,
+    "latency_seconds": 27.832921583089046,
+    "output_tokens": 3648,
+    "reasoning_tokens": 1282,
+    "response_id": "chatcmpl-E9NOZaLkbSPjgHXsVlK7lduLJh1sr",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 10129,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "citation",
+        "reason": "Citation text matches the article title, authors, journal, year, and DOI given in the source metadata.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The DOI URL exactly matches the DOI provided in the source metadata (10.1016/j.seppur.2022.120508).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The study clearly presents specific experimental conditions (simulated PFAS wastewater with no added salts, fixed SDS dose, defined airflow) and qualitative removal trends (e.g., chain-length dependence) but the provided excerpts do not contain full quantitative removal efficiencies or mass balances. Describing the study as descriptive_only is a reasonable inference from E02 and E04.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "Reason correctly notes that results are presented as PFAS removal trends (e.g., Fig. 2 showing C/C0 vs. time under fixed SDS dose and no salts) without detailed reactor geometry or mass-balance closure in the supplied text (E02, E04).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "E02 refers to \u201cPFAS removal from simulated PFAS wastewater (no added salts)\u201d and defines C/C0 as reduction compared to the initial concentration; E05 notes removal to below detection limit in groundwater. This clearly corresponds to a removal endpoint (decrease in bulk PFAS concentration).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "E02 notes greater removal for PFOS, PFOA, PFHxS with barely discernible removal of PFBA, expressed as C/C0 reduction for a fixed SDS dose and no added salts. This matches the narrative description of concentration reduction and chain-length dependence.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "E02 explicitly uses the phrase \u201cPFAS removal from simulated PFAS wastewater (no added salts).\u201d",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "The process is foam fractionation, which separates PFAS by partitioning to foam. E01 discusses separation and partitioning of PFAS between foam and leachate; E02 discusses adsorption at the air\u2013water interface and chain-length-dependent partitioning. Classifying this as a separation endpoint is consistent with the described measurements.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "E01 and E02 together support interpretation that more surface-active, longer-chain PFAS partition preferentially to the foam phase compared to short-chain PFBA due to differences in air\u2013water interfacial adsorption driven by hydrophobicity.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].reported_term",
+        "reason": "E01 discusses \u201cseparation of PFAS \u2026 using foam separation\u201d and \u201cdegree of separation,\u201d which aligns with the reported term of PFAS separation via foam fractionation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "E02 specifies \u201cPFAS removal from simulated PFAS wastewater (no added salts).\u201d E07 discusses how hardness and salt content are expected to significantly affect foam fractionation effectiveness. Together they support the design-inferred limitation that no-salt simulated wastewater does not represent groundwater cation effects.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1]",
+        "reason": "E05 lists PFHxS, PFOS, PFOA, and PFBA as the PFAS tested. Inferring that only this subset of chain lengths/functional groups limits generalization across PFAS is a reasonable design-inferred limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix.value",
+        "reason": "E02 refers directly to \u201cPFAS removal from simulated PFAS wastewater (no added salts),\u201d matching the matrix description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "E02 (Fig. 2 caption) states \u201cfixed SDS dosing rate (3.5 mg/min),\u201d matching the value 3.5.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The caption in E02 gives \u201c3.5 mg/min,\u201d so the unit mg/min is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "E04 states \u201ctotal airflow rate (G = 5.2 slpm) introduced into the system,\u201d matching the value 5.2.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "E04 explicitly reports airflow as 5.2 slpm, so the unit slpm is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "E04 states that S_b was calculated from airflow G and \u201cthe bubble size (r32) measured in the first layer of foam in the column\u201d; describing the metric as \u201cr32 (Sauter mean radius) measured in first foam layer\u201d matches this.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "The record treats this as a descriptive metric without a numeric value; no unit is provided in the excerpt, so leaving unit null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "E03 explains that gas flow rate is linked with liquid recirculation in the venturi system and that changing the venturi design or throttling recirculation affects bubble size and foam mechanical structure. This matches the description of internal hydrodynamics via a venturi-linked gas\u2013liquid recirculation system.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "This is a qualitative description of hydrodynamics, not a numeric operating condition, so leaving unit null is consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].value",
+        "reason": "E02 refers to \u201csimulated PFAS wastewater (no added salts),\u201d matching the description of salinity as no added salts.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].unit",
+        "reason": "Salinity is qualitatively described as \u2018no added salts\u2019; no numeric units are given or required, so null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "E05 lists PFHxS among the PFAS used, and it is correctly expanded as perfluorohexane sulfonic acid.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1].value",
+        "reason": "E05 lists PFOS among the PFAS used; describing it as perfluorooctane sulfonic acid is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[2].value",
+        "reason": "E05 lists PFOA among the PFAS used; describing it as perfluorooctanoic acid is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[3].value",
+        "reason": "E05 lists PFBA among the PFAS used and notes inclusion of short-chain PFAS; PFBA as perfluorobutanoic acid is correct and PFBA is also mentioned indirectly in E02 when discussing its low surface activity.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "E02 clearly reports a fixed SDS dosing rate of 3.5 mg/min; the numeric value 3.5 is accurately transcribed as an exact value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The dosing rate is given as 3.5 mg/min in E02, so the unit mg/min is correct and value_form=exact_numeric is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "E04 states an airflow rate G = 5.2 slpm; the value 5.2 is correctly captured as an exact numeric.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "The airflow is explicitly reported in slpm in E04, so the unit slpm is correct and consistent with value_form=exact_numeric.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "E01 and E04 describe foam fractionation as a separation process based on adsorption at the air\u2013water interface and bubble transport; there is no indication of PFAS transformation or byproduct formation in the provided text. Inferring that no transformation/byproducts are discussed and that the process is physical separation is reasonable.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "E02 discusses PFAS removal over time in what is clearly a batch experiment (fixed dose, 60 min window is mentioned elsewhere), and E04 describes operation of a foam fractionation column with defined flows. Combined with \u201csimulated PFAS wastewater (no added salts)\u201d (E02), this supports the description of batch foam fractionation in a column system with simulated wastewater.",
+        "status": "supported"
+      },
+      {
+        "error_type": "source_attribution",
+        "field_path": "treatment.value",
+        "reason": "E02 and E04 support foam fractionation in a column with air introduction and foam extraction, and E02 shows SDS dosing (supporting SDS use). E03 (not cited for this field) mentions the venturi system linking gas flow with liquid recirculation, and E05 (not cited) identifies SDS as a co-foaming agent. With only E02 and E04 as locators, the parts about SDS specifically as a co-foaming agent and a venturi-based gas\u2013liquid recirculation system are not directly supported by the cited excerpts, although they are supported elsewhere in the paper. Hence the field is only partially supported by its specified locators.",
+        "status": "partially_supported"
+      }
+    ],
+    "record_id": "RT06-bge_llm_local_rag-S09-R01",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014study identity, matrix (simulated PFAS wastewater, no salts), PFAS tested, key operating conditions (SDS dosing, airflow, bubble size metric, hydrodynamics), and endpoints (removal and separation)\u2014are well supported by the cited text. Quantitative values and units are accurately transcribed. The only issue is a minor overreach in the treatment description relative to the specified locators, which does not materially affect use of the record for synthesis of foam fractionation operating conditions.",
+    "task_id": "RT06"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

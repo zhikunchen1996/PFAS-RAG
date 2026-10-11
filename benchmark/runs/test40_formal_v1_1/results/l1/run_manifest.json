@@ -1,0 +1,33 @@
+{
+  "protocol_id": "test40_formal_v1_l1",
+  "status": "complete",
+  "question_count": 40,
+  "systems": [
+    "hybrid",
+    "bge",
+    "bge_llm"
+  ],
+  "llm_judge_used": false,
+  "metrics": [
+    "MRR_required_gold",
+    "required_gold_recall@10",
+    "gold_doc_recall@10",
+    "negative_gold_recall@10"
+  ],
+  "questions_sha256": "983d4bb40d615d80257776402e43f01bbc52626a43dfbd15480206f0764e92d4",
+  "gold_sha256": "7e2b27cbbf18fc6b91a07d06035051df2d2a15fd8485525d0f323b88c8a00f72",
+  "retrieval_inputs": {
+    "hybrid": {
+      "path": "benchmark/runs/test40_formal_v1_1/results/retrieval/retrieval_outputs/rag_outputs_hybrid_top10_pool60_win0.jsonl",
+      "sha256": "35288d01a63e4a72f45017fb7e23e145a67d396ff31cab1d18b6050706123088"
+    },
+    "bge": {
+      "path": "benchmark/runs/test40_formal_v1_1/results/retrieval/retrieval_outputs/rag_outputs_bge_base_top10_pool60_nodoccap.jsonl",
+      "sha256": "971c350d701af6491c7f82efe5eb28f330bf00e22e8a359fc5b6cccb1d12add8"
+    },
+    "bge_llm": {
+      "path": "benchmark/runs/test40_formal_v1_1/results/selector/retrieval_outputs/rag_outputs_bge_llm_gpt51_pool60_bge30_llm10_fullchunk.jsonl",
+      "sha256": "5ac91d284f2cb19b98635f16f65daf1b25406025823a5c33027d49f9c645666d"
+    }
+  }
+}

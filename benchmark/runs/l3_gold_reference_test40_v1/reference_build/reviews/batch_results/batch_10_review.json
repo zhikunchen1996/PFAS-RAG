@@ -1,0 +1,298 @@
+{
+  "batch_id": "test40-review-batch-10",
+  "batch_sha256": "08b187e874650d50fff290270a1341f8832f2c2c539a8faf0f4d86ed5006cad4",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-review-batch-10",
+    "reviews": [
+      {
+        "question_id": "WF10_016",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_016-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_016-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_016-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_016-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "WF10_023",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "G01 links a removal result reported next to 'Figure S4' (chunk 34, MMG001) to experimental conditions reported next to 'Figure 3' (chunk 31, MMG003) as if they describe the same experimental run, but the evidence never explicitly states that the elevated-pressure removal figure (S4) and the conditions listed for the pressure-rejection figure (Figure 3) correspond to the same dataset."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_023-G01",
+            "verdict": "partially_supported",
+            "issues": [
+              "The full_rule requires the answer to tie the >99.98% removal / 13.79-55.16 bar result (Fig. S4, MMG001) to the specific conditions of 10,000 ppb initial concentration, 30 mL/min flow, room temperature, 24 h filtration (Fig. 3 caption, MMG003), but the source text does not explicitly confirm these two figures describe the same experiment."
+            ],
+            "required_repairs": [
+              "Either cite additional evidence confirming Fig. S4 and Fig. 3 refer to the same pressure-sweep experiment, or soften the canonical/central proposition and full_rule to avoid asserting the 10,000 ppb/flow-rate/temperature/time conditions are definitively the conditions underlying the >99.98% removal figure."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_023-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_023-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Clarify or soften the experimental-condition attribution in WF10_023-G01 as described above."
+        ]
+      },
+      {
+        "question_id": "WF10_026",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Two claim groups contain duplicated exact_spans entries (same evidence_id and identical exact_evidence_span text listed twice with only the 'supports' narrative differing), which the review prompt explicitly calls out to check for deduplication of overlapping evidence."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_026-G01",
+            "verdict": "duplicate_or_overweighted",
+            "issues": [
+              "WF10_026_MMG002 exact_evidence_span appears twice in the exact_spans list (identical text, two different 'supports' descriptions).",
+              "WF10_026_MMG005 exact_evidence_span also appears twice in the exact_spans list (identical text, two different 'supports' descriptions)."
+            ],
+            "required_repairs": [
+              "Merge the two WF10_026_MMG002 entries into a single exact_spans entry with one consolidated 'supports' description.",
+              "Merge the two WF10_026_MMG005 entries into a single exact_spans entry with one consolidated 'supports' description."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_026-G02",
+            "verdict": "duplicate_or_overweighted",
+            "issues": [
+              "WF10_026_MMG001 exact_evidence_span appears twice in the exact_spans list (identical text, two different 'supports' descriptions)."
+            ],
+            "required_repairs": [
+              "Merge the two WF10_026_MMG001 entries into a single exact_spans entry with one consolidated 'supports' description."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_026-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Deduplicate repeated exact_spans entries in WF10_026-G01 and WF10_026-G02 as described above."
+        ]
+      },
+      {
+        "question_id": "WF10_027",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_027-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_027-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_027-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_027-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_027-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "WF10_028",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Task component WF10_028-T01 is worded to cover PFAS 'specifically PFOA' rejection, but two of the core/supplementary claim groups assigned to T01 (G02: total PFAS in the MOF membrane series; G03: PFOS in the MXene-TFN membrane series) describe compounds other than PFOA. The task-component wording should be broadened to match the compound scope of its assigned groups, or the groups should be reassigned/annotated to reflect that they extend beyond the component's stated PFOA-specific focus."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_028-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_028-G02",
+            "verdict": "partially_supported",
+            "issues": [
+              "Content is well supported by evidence, but it is assigned to task component WF10_028-T01, whose text is scoped specifically to PFOA rejection, while this group concerns total PFAS rejection (not PFOA specifically)."
+            ],
+            "required_repairs": [
+              "Broaden WF10_028-T01's component_text to explicitly include total PFAS rejection, or note the scope extension in the group's rationale."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_028-G03",
+            "verdict": "partially_supported",
+            "issues": [
+              "Content is well supported by evidence, but it is assigned to task component WF10_028-T01, whose text is scoped specifically to PFOA rejection, while this group concerns PFOS rejection in a MXene membrane, not PFOA."
+            ],
+            "required_repairs": [
+              "Broaden WF10_028-T01's component_text to explicitly include PFOS rejection, or note the scope extension in the group's rationale."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_028-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_028-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_028-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Revise WF10_028-T01 component_text to match the actual PFAS scope (PFOA, PFOS, and total PFAS) of the claim groups assigned to it."
+        ]
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 125071,
+    "num_turns": 8,
+    "stop_reason": "tool_use",
+    "session_id": "198e0b84-481d-4977-9cb2-6e2cba0c142e",
+    "total_cost_usd": 0.5471889,
+    "usage": {
+      "input_tokens": 12,
+      "cache_creation_input_tokens": 79282,
+      "cache_read_input_tokens": 225458,
+      "output_tokens": 12099,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 79282
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 10310,
+          "cache_read_input_tokens": 73193,
+          "cache_creation_input_tokens": 17160,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 17160,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 628,
+        "outputTokens": 19,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000723,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 12,
+        "outputTokens": 12099,
+        "cacheReadInputTokens": 225458,
+        "cacheCreationInputTokens": 79282,
+        "webSearchRequests": 0,
+        "costUSD": 0.5464659,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 10037,
+    "ttft_stream_ms": 922,
+    "time_to_request_ms": 48,
+    "type": "result",
+    "duration_ms": 125068,
+    "uuid": "7ece5c01-3192-402e-a501-15692161990a"
+  },
+  "candidate_test40_inputs_used": false
+}

@@ -1,0 +1,278 @@
+{
+  "call_key": "RT10:bge_llm_local_rag:verify:RT10-bge_llm_local_rag-S13-R02",
+  "created_at": "2026-08-05T04:44:57.114821+00:00",
+  "raw_response_text": "{\"task_id\":\"RT10\",\"record_id\":\"RT10-bge_llm_local_rag-S13-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The same GAC (Filtrasorb 400) and standardized buffered Type 1 water were used while varying matrix characteristics (pH, ionic strength, Ca2+/SO4\u00b2\u207b, NOM) as described in the abstract and conclusion, so results across these conditions are directly comparable under shared operating conditions.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract explicitly discusses adsorption, effective solid phase capacities (qe), and adsorption isotherms for PFAS on GAC, which are sorption endpoints.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"unsupported\",\"error_type\":\"endpoint_classification\",\"reason\":\"The measured endpoint is effective solid phase capacity (qe) from adsorption isotherms, i.e., sorption to GAC. The study does not report a direct water-phase concentration or percent removal metric; characterizing this as a distinct 'removal' endpoint misclassifies a sorption measurement.\"},{\"field_path\":\"endpoints[2].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract reports percent changes in qe under different matrix conditions (pH, ionic strength, divalent ions, NOM), which can reasonably be summarized as an 'other' endpoint describing matrix-modified adsorption performance.\"},{\"field_path\":\"matrix.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The use of buffered Type 1 water with resistivity \u226518.2 M\u03a9\u00b7cm is supported (conclusion), and controlled amendments of pH, ionic strength, and divalent ions are described (abstract, conclusion). However, the statement that this is \\\"in the absence of NOM\\\" is not generally true for the study, which explicitly includes NOM conditions; it only applies to a subset of conditions, so the blanket NOM exclusion is overstated.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract specifies Filtrasorb 400 granular activated carbon, and the methods/limitations text notes that isotherm parameters were obtained with ground GAC, matching the description of \\\"Filtrasorb 400 granular activated carbon (ground for isotherms).\\\"\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This operating condition describes GAC type and not a numeric quantity, so leaving the unit null is appropriate and consistent with the source.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract states that pH 9 qes were compared to pH 7.7\u20138.1, supporting the baseline pH range of 7.7\u20138.1 as given.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"pH is dimensionless; leaving the unit null is appropriate.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract explicitly reports a pH 9 condition, supporting the value \\\"9\\\" as the elevated pH used to test matrix effects.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"pH is dimensionless; leaving the unit null is appropriate.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract states that decreasing ionic strength from 10 to 2 mM substantially increased PFAS qes, which supports a range of 2\u201310 mM as the studied ionic strength range.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract explicitly gives ionic strength in mM, so the unit mM is correct.\"},{\"field_path\":\"operating_conditions[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract refers to \\\"divalent ion (calcium and sulfate) presence\\\" and other sections mention CaSO\u2084, supporting the description that Ca\u00b2\u207a and SO\u2084\u00b2\u207b were added as calcium sulfate.\"},{\"field_path\":\"operating_conditions[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This entry describes the chemical identity and form of divalent ions, not a numeric magnitude, so a null unit is appropriate.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract notes that water characteristic impacts on adsorption of nine PFAS were studied, and the conclusion specifies \\\"nine drinking water relevant PFAS,\\\" matching the description. Individual PFAS names are not present in the provided text, consistent with the qualifier used.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract states: \\\"Decreasing ionic strength (10 to 2 mM) substantially (79%\u2013146%) increased PFAS qes,\\\" which matches the recorded range of 79\u2013146 and its use as a range value.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The change is expressed in the abstract as percentages (79%\u2013146%), so the unit \\\"%\\\" is correct.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract reports: \\\"Divalent ion (calcium and sulfate) presence without changing ionic strength increased qes (43%\u2013140%),\\\" which matches the recorded value range of 43\u2013140 and the range value_form.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The change is reported in the abstract as percentages (43%\u2013140%), so the unit \\\"%\\\" is correct.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The methods/limitations text states that the study examined NOM and major ions, and that future work could expand the matrix impact evaluation to additional inorganic ions and other synthetic organic compounds. This supports that the matrix-impact evaluation for inorganic chemistry focused on pH, ionic strength, and major ions (Ca\u00b2\u207a, SO\u2084\u00b2\u207b) and did not extend to other inorganic species.\"},{\"field_path\":\"limitations[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The conclusion describes use of buffered Type 1 water with controlled amendments and notes challenges in translating isotherm findings to full- or pilot-scale systems. From these design details, it is reasonable to infer that batch isotherms in standardized water lack the complexity and temporal variability of real source waters, justifying the design-inferred limitation.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract and conclusions indicate adsorption isotherms (batch tests) using Filtrasorb 400 GAC with controlled variations in pH, ionic strength, and ion/NOM presence in buffered Type 1 water, which is consistent with a bench-scale batch adsorption isotherm study under controlled conditions.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract and conclusion clearly describe PFAS adsorption onto Filtrasorb 400 GAC with systematic variation of water characteristics (pH, ionic strength, calcium, sulfate, NOM) to evaluate their effects on adsorption capacity, matching the treatment description.\"},{\"field_path\":\"study_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The paper reports original experimental work (adsorption isotherms under various matrix conditions), so classifying it as a primary experiment is consistent with the source.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements needed for synthesis\u2014source identity, matrix description, treatment, study scale, sorption endpoint and qe-based quantitative findings, and comparability status\u2014are well supported by the cited text. The only substantive issue is misclassification of a qe-based sorption metric as a separate 'removal' endpoint, which does not affect the quantitative findings or core interpretability and can be excluded at synthesis.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of how water-matrix effects should be tested and reported so that PFAS treatment performance can be translated beyond clean laboratory water.\",\"task_id\":\"RT10\",\"title\":\"Designing PFAS treatment studies that remain valid in real water\"}\n\nTask-specific extraction objective:\nExtract matrix constituent and concentration, PFAS identity, treatment, clean-water control, matrix-modified condition, direction and magnitude of effect, endpoint, proposed mechanism, constituent interaction, matched operating conditions, and study scale.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.hazadv.2023.100322\"],\"all_blocked_titles\":[\"effects of water matrix on per and poly fluoroalkyl substances pfas treatment physical separation and degradation processes a review\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.hazadv.2023.100322\"],\"anchor_id\":\"AR-ZEIDABADI-2023\",\"corpus_source\":\"2023 - Zeidabadi - Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment - Physical-separation and degradation processes - A review.pdf\",\"doi\":\"10.1016/j.hazadv.2023.100322\",\"title\":\"Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment: Physical-separation and degradation processes - A review\",\"url\":\"https://doi.org/10.1016/j.hazadv.2023.100322\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Abulikemu, G.; Pressman, J.G.; Wahman, D.G.; Sorial, G.A.; Sanan, T.T.; Stebel, E.K.; Gray, B.N.; Hughes, E.W.; Kleiner, E.J.; Pedigo, S.G.; et al. Perfluoroalkyl Chemical Adsorption by Granular Activated Carbon: Impacts of Source Water Characteristics. AWWA Water Science. 2025;7. doi:10.1002/aws2.70027.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S13-E01\",\n      \"S13-E07\"\n    ],\n    \"reason\": \"Matrix conditions were varied one factor at a time (pH, ionic strength, divalent ion presence) in the same standardized water and with the same GAC and batch-equilibrium protocol, providing directly comparable qe changes as a function of each matrix parameter.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1002/aws2.70027\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"sorption\",\n      \"evidence_locator_ids\": [\n        \"S13-E07\"\n      ],\n      \"interpretation\": \"PFAS adsorption capacity (qe) on GAC was quantified under different pH, ionic strength, and divalent ion conditions relative to a standardized matrix baseline.\",\n      \"reported_term\": \"effective solid phase capacity (qe) from adsorption isotherms\"\n    },\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S13-E07\"\n      ],\n      \"interpretation\": \"Changes in qe with matrix conditions indicate how pH, ionic strength, and divalent ions affect PFAS removal potential per unit GAC at equilibrium.\",\n      \"reported_term\": \"PFAS removal via adsorption\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S13-E07\"\n      ],\n      \"interpretation\": \"The study reports percent changes in qe as a function of pH, ionic strength, and Ca2+/SO4 2\\u2212 presence, characterizing matrix-modified adsorption performance.\",\n      \"reported_term\": \"matrix effect direction and magnitude\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S13-E01\",\n        \"S13-E08\"\n      ],\n      \"statement\": \"The matrix-impact evaluation for inorganic chemistry in this study focused on pH, ionic strength, and major divalent ions (Ca2+ and SO4 2\\u2212) and did not extend to other potentially relevant inorganic species.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S13-E01\",\n        \"S13-E07\"\n      ],\n      \"statement\": \"Batch isotherms in buffered Type 1 water lack the complexity of real source waters, so site-specific constituents and temporal variability may cause additional, untested matrix effects.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S13-E01\",\n      \"S13-E07\"\n    ],\n    \"value\": \"Buffered organic-free Type 1 water (resistivity \\u226518.2 M\\u03a9\\u00b7cm) with controlled amendments for pH, ionic strength (10\\u20132 mM), and divalent ions (Ca2+ and SO4 2\\u2212), in the absence of NOM.\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E07\",\n        \"S13-E08\"\n      ],\n      \"name\": \"GAC type\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"Filtrasorb 400 granular activated carbon (ground for isotherms)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E07\"\n      ],\n      \"name\": \"Initial pH (reference condition)\",\n      \"qualifiers\": \"Baseline pH range compared to pH 9 condition for qe changes.\",\n      \"unit\": null,\n      \"value\": \"7.7-8.1\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E07\"\n      ],\n      \"name\": \"Elevated pH\",\n      \"qualifiers\": \"pH adjustment in standardized water to evaluate impact on PFAS qe.\",\n      \"unit\": null,\n      \"value\": \"9\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E07\"\n      ],\n      \"name\": \"Ionic strength range\",\n      \"qualifiers\": \"Decreasing ionic strength from 10 to 2 mM was evaluated for effects on qe.\",\n      \"unit\": \"mM\",\n      \"value\": \"2-10\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E07\"\n      ],\n      \"name\": \"Divalent ions\",\n      \"qualifiers\": \"Divalent ion presence evaluated without changing overall ionic strength relative to baseline.\",\n      \"unit\": null,\n      \"value\": \"Ca2+ and SO4 2\\u2212 added as calcium sulfate\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E01\",\n        \"S13-E07\"\n      ],\n      \"value\": \"Nine drinking-water-relevant PFAS evaluated for adsorption onto GAC; individual names not fully listed in the provided text.\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E07\"\n      ],\n      \"name\": \"Effect of decreasing ionic strength on qe\",\n      \"qualifiers\": \"Decreasing ionic strength from 10 to 2 mM substantially increased PFAS qe by 79% to 146% relative to the higher ionic strength condition.\",\n      \"unit\": \"%\",\n      \"value\": \"79-146\",\n      \"value_form\": \"range\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S13-E07\"\n      ],\n      \"name\": \"Effect of divalent ion (Ca2+ and SO4 2\\u2212) presence (at constant ionic strength) on qe\",\n      \"qualifiers\": \"Presence of divalent ions (calcium and sulfate) without changing ionic strength increased PFAS qe by 43% to 140% relative to the no-divalent-ion condition.\",\n      \"unit\": \"%\",\n      \"value\": \"43-140\",\n      \"value_form\": \"range\"\n    }\n  ],\n  \"record_id\": \"RT10-bge_llm_local_rag-S13-R02\",\n  \"residuals_byproducts\": [],\n  \"source_id\": \"S13\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S13-E01\",\n      \"S13-E07\"\n    ],\n    \"value\": \"Bench-scale batch adsorption isotherms with ground Filtrasorb 400 GAC in buffered Type 1 water, systematically varying pH, ionic strength, and divalent ion composition (Ca2+ and SO4 2\\u2212) under controlled conditions.\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S13-E01\",\n      \"S13-E07\"\n    ],\n    \"value\": \"Adsorption of PFAS onto Filtrasorb 400 GAC in batch equilibrium isotherms while varying bulk water chemistry (pH, ionic strength, divalent ion presence) to assess matrix effects on adsorption capacity.\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 19,\n  \"bge_score\": 0.042776111513376236,\n  \"citation\": \"Abulikemu, G.; Pressman, J.G.; Wahman, D.G.; Sorial, G.A.; Sanan, T.T.; Stebel, E.K.; Gray, B.N.; Hughes, E.W.; Kleiner, E.J.; Pedigo, S.G.; et al. Perfluoroalkyl Chemical Adsorption by Granular Activated Carbon: Impacts of Source Water Characteristics. AWWA Water Science 2025 7. DOI: 10.1002/aws2.70027.\",\n  \"doi\": \"10.1002/aws2.70027\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1002/aws2.70027\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 7,\n      \"locator_id\": \"S13-E01\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.0011548238107934594,\n        \"RT10-C2\": 0.012059367261826992,\n        \"RT10-C3\": 0.0005110169877298176,\n        \"umbrella\": 0.779453456401825\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"This highlights the challenges of working with real source waters. Therefore, to investigate the effect of a specific source water characteristic, careful control of matrix conditions is necessary to minimize confounding variables. Previous research (Abulikemu et\\u00a0al. 2025) established standard- ized water adsorption isotherms for three commonly used bitu- minous coal- based GACs and nine drinking water relevant PFAS through a series of single- solute isotherms (SSI) in buffered Type 1 water (resistivity \\u2265 18.2 M\\u03a9- cm). The objective of the current study was to evaluate the effect of source water characteristics on the standardized water adsorption isotherms for drinking water relevant concentrations, here using a single GAC. Specifically: (1) to investigate competitive adsorption among coexisting PFAS and its prediction by IAST, and (2) evaluate the effect of background matrix characteristics, including (a) pH and ionic strength, (b) divalent inorganic ions calcium (Ca 2+) and sulfate (SO4 2\\u2212), and (c) NOM with and without Ca2+ and SO4 2\\u2212 present. These results can help improve how the impact of water matrices on PFAS adsorption is considered in drinking water treatment and provide more context for how these components impact the ability to model such processes. 2 | Materials and Methods 2.1 | Materials\"\n    },\n    {\n      \"corpus_chunk\": 4,\n      \"locator_id\": \"S13-E02\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.03985636308789253,\n        \"RT10-C2\": 0.023688577115535736,\n        \"RT10-C3\": 3.747792652575299e-05,\n        \"umbrella\": 0.027836238965392113\n      },\n      \"section\": \"introduction\",\n      \"text\": \"lished isotherm studies only included two of the six regulated PFAS (i.e., perfluorooctanoic acid (PFOA) and perfluorooctane sulfonic acid (PFOS)), and were conducted with specific source waters and sometimes commercially unavailable GACs, limiting isotherm parameter general applicability for various treatment conditions and goals (Yu et\\u00a0al. 2009, 2012; Hansen et\\u00a0al. 2010; Yao et\\u00a0al. 2014; Du et\\u00a0al. 2015; Zhi and Liu\\u00a0 2015, 2016; Zhang et\\u00a0al. 2016; Inyang and Dickenson\\u00a0 2017). Therefore, a compar - ison between isotherms developed in a standardized water (buffered, organic free water) and with controlled amendments of major co- occurring chemicals or parameters is key to under - standing water quality impacts on isotherm parameters and more direct inclusion into models. Source water characteristics (e.g., pH, ionic strength, and back - ground organic and inorganic chemicals) are known to affect contaminant adsorption (Randtke and Jepsen\\u00a0 1982; Kilduff, Karanfil, Chin, et\\u00a0al. 1996; Kilduff, Karanfil, and Weber\\u00a0 1996; Du et\\u00a0al. 2014; Hakimabadi et\\u00a0al. 2023). One of the most stud - ied constituents is natural organic matter (NOM), and NOM has previously been shown to reduce GAC efficacy towards various trace organic contaminants due to direct competi -\"\n    },\n    {\n      \"corpus_chunk\": 37,\n      \"locator_id\": \"S13-E03\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.00043799690320156515,\n        \"RT10-C2\": 0.04564600810408592,\n        \"RT10-C3\": 3.7458306906046346e-05,\n        \"umbrella\": 0.01810406893491745\n      },\n      \"section\": \"results\",\n      \"text\": \"PFHxS showed the most negative impact, followed by PFOS and PFNA. It is possible that some organic molecules contained in NOM have similar properties or target the same adsorption sites as PFAS. To further investigate the NOM impact mechanisms, Figure\\u00a0 4I presents the impact of NOM in the presence of CaSO 4 when NOM is preloaded onto GAC. For all PFAS, the percent qe difference shifted more negative compared to NOM co- loading with CaSO 4 presence (Figure\\u00a0 4H). The increased negative im - pact on all PFAS with NOM preloading can be attributed to NOM pore blockage, preventing the access of PFAS molecules (such as PFHxA, PFBS, and GenX) to otherwise available ad - sorption sites. Coexistence of both direct competition and pore- blockage mechanisms has been previously reported (Corwin and Summers\\u00a0 2010; Yu et\\u00a0al. 2012) and is not surprising, consid- ering the wide range of molecular size and properties of organic compounds in the NOM mixture. Therefore, when evaluating the NOM impacts on PFAS treatment efficacy, it is important to consider the properties of the target PFAS and the source water NOM as well as other source water quality conditions. The NOM isotherms in Figure\\u00a05 further investigate NOM interac- tions with GAC, PFAS, and CaSO4. PFAS co- adsorption and NOM\"\n    },\n    {\n      \"corpus_chunk\": 22,\n      \"locator_id\": \"S13-E04\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.00021206685050856322,\n        \"RT10-C2\": 6.32787196082063e-05,\n        \"RT10-C3\": 0.0007165481219999492,\n        \"umbrella\": 0.0022875487338751554\n      },\n      \"section\": \"results\",\n      \"text\": \"SSI data obtained from previous research (Li, Snoeyink, Mari\\u00f1as, et\\u00a0al. 2003 ). 25778161, 2025, 4, Downloaded from https://awwa.onlinelibrary.wiley.com/doi/10.1002/aws2.70027 by Queen's University, Wiley Online Library on [17/04/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License 6 of 15 AWW A Water Science, 2025 number of compounds. Improvement of multicomponent ad - sorption models was beyond the scope of the current study, but it is clear from these results that IAST as implemented fails to address the complexity of these mixtures and addi - tional parameters or formulations are needed to improve the performance of such models. 3.2 | Effect of Background Matrix Characteristics The study evaluated the effect of background matrix charac - teristics by comparing the adsorption isotherms obtained with nine controlled variations of matrix conditions to the MSBI. Compared to the MSBI experiment, significant deviation from the expected c 0 was seen for PFBA, again likely due to a com - bination of low concentration and matrix interferences ampli - fying analytical uncertainty (see S1.4 ). Table\\u00a0 S2 summarizes\"\n    },\n    {\n      \"corpus_chunk\": 2,\n      \"locator_id\": \"S13-E05\",\n      \"query_scores\": {\n        \"RT10-C1\": 7.753522368147969e-05,\n        \"RT10-C2\": 0.02763981558382511,\n        \"RT10-C3\": 3.732184995897114e-05,\n        \"umbrella\": 0.2155032753944397\n      },\n      \"section\": \"introduction\",\n      \"text\": \"adsorptive surface to help optimize PFAS treatment efficacy and minimize operational costs. 1 | Introduction With the United States Environmental Protection Agency final - izing a regulation that includes enforceable maximum contam - inant levels or hazard indexes for six per- and polyfluoroalkyl substances (PFAS) (USEPA\\u00a0 2024), the demand for effective PFAS water treatment technologies has never been more press - ing. Granular activated carbon (GAC) adsorption is being con - sidered for PFAS treatment because it has been widely used in the water industry, has a demonstrated ability to remove multi - ple PFAS and various co- contaminants, and could be retrofitted in existing conventional filters (AWWA\\u00a0 2020). However, source water characteristics can significantly impact GAC treatment efficacy, which can vary widely in practice. Understanding the impact of this variability is important for developing effective and cost- efficient GAC treatment systems, but it can still require case study and optimization for each site. Optimization based on these source water characteristics could be improved by inclu - sion of their effects in mechanistic models, which are currently not available. Multiple factors affect GAC, including GAC and target adsor - bate properties, source water quality, and GAC treatment system operating conditions (Chowdhury et\\u00a0al. 2013). Therefore, GAC adsorber design requires conducting adsorption tests under conditions that represent treatment site conditions. Pilot- scale\"\n    },\n    {\n      \"corpus_chunk\": 3,\n      \"locator_id\": \"S13-E06\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.0002204356133006513,\n        \"RT10-C2\": 0.007023544050753117,\n        \"RT10-C3\": 3.7300967960618436e-05,\n        \"umbrella\": 0.18041515350341797\n      },\n      \"section\": \"introduction\",\n      \"text\": \"conditions that represent treatment site conditions. Pilot- scale Published 2025. This article is a U.S. Government work and is in the public domain in the USA. 2 of 15 AWW A Water Science, 2025 column tests conducted with a system's source water provide the most dependable evaluation, but pilot- scale study time and resource requirements are usually cost- prohibitive for many utilities. Given PFAS analysis expense, even rapid small- scale column tests (RSSCTs)\\u2014a normally affordable alternatives to pilot testing\\u2014are potentially too expensive for many small sys - tems (Cordner et\\u00a0al. 2021). Consequently, modeling tools such as Adsorption Design Software (AdDesignS) that can simulate adsorption breakthrough are becoming increasingly desir - able (Hokanson et\\u00a0al. 1994\\u20132005). Modeling tools can stream- line RSSCTs or pilot- scale column test design by simulating GAC system performance under various design conditions but require isotherm and kinetic parameters, which can be ob - tained from batch studies (Sontheimer et\\u00a0 al. 1988; Hokanson et\\u00a0al. 1994\\u20132005). Although isotherm tests are common in adsorption studies, sys - tematic evaluations for many PFAS remain limited. Most pub - lished isotherm studies only included two of the six regulated PFAS (i.e., perfluorooctanoic acid (PFOA) and perfluorooctane\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S13-E07\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.0024216831661760807,\n        \"RT10-C2\": 0.019515560939908028,\n        \"RT10-C3\": 3.9592043322045356e-05,\n        \"umbrella\": 0.17857973277568817\n      },\n      \"section\": \"abstract\",\n      \"text\": \"Received: 6 May 2025 | Revised: 2 July 2025 | Accepted: 3 July 2025 Deputy Editor: Vanessa L. Speight | Associate Editor: Christopher Bellona Keywords: adsorption\\u00a0| calcium sulfate\\u00a0| GAC\\u00a0| ionic strength\\u00a0| NOM\\u00a0| PFAS\\u00a0| pH ABSTRACT Water characteristic impacts on granular activated carbon (Filtrasorb 400) adsorption of nine per- and polyfluoroalkyl substances (PFAS) were studied. Multispecies competitive isotherms had lower effective solid phase capacities ( qe) than single species iso - therms. pH 9 q es were somewhat reduced (max 19%) compared to pH 7.7\\u20138.1. Decreasing ionic strength (10 to 2 mM) substan - tially (79%\\u2013146%) increased PFAS q es. Divalent ion (calcium and sulfate) presence without changing ionic strength increased qes (43%\\u2013140%). Natural organic matter (NOM) presence reduced PFAS q es with the reduction somewhat offset by calcium and sulfate presence. This reduced capacity suggested both direct competition with NOM and pore- blockage hindered PFAS adsorp- tion. Ideal adsorbed solution theory poorly predicted the competition, likely due to nonideal behaviors of adsorbed species and GAC surface heterogeneity. Findings provide insights into the complex interactions between different water constituents and the adsorptive surface to help optimize PFAS treatment efficacy and minimize operational costs. 1 | Introduction\"\n    },\n    {\n      \"corpus_chunk\": 45,\n      \"locator_id\": \"S13-E08\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.013224842958152294,\n        \"RT10-C2\": 0.0066914367489516735,\n        \"RT10-C3\": 0.00011627991625573486,\n        \"umbrella\": 0.1125454232096672\n      },\n      \"section\": \"methods\",\n      \"text\": \"PFOS). The larger q e decrease with preloading NOM com - pared to co- loading NOM suggested both direct competition and pore blockage were impacts from NOM that hindered PFAS adsorption. \\u2022 Multiple source water quality parameters need to be con - sidered when attempting to identify the dominant factor that may potentially determine the overall impact on PFAS adsorption. Although gaining valuable insights into how different water components affect adsorption capacity towards PFAS, it is im - portant to consider certain challenges when implementing the isotherm findings in full- or pilot- scale GAC treatment systems: \\u2022 Isotherms do not directly evaluate adsorption breakthrough; therefore, modeling efforts with tools (e.g., AdDesignS) are required to correlate isotherm parameters and the adsorp - tion breakthrough in full- or pilot- scale GAC treatment sys- tems. Additionally, the isotherm parameters obtained with ground GAC may need to be adjusted to account for the ef - fect of particle size reduction on PFAS adsorption, which is discussed in detail elsewhere (Abulikemu et\\u00a0al. 2025 ). \\u2022 The study examined NOM and major ions, but it did not in- vestigate competition with non- PFAS adsorbable synthetic organic compounds due to time and resource limitations. Future work could expand the matrix impact evaluation to additional inorganic ions and other synthetic organic compounds. \\u2022 Future research can investigate impacts of source water\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2025 - Abulikemu - Perfluoroalkyl Chemical Adsorption by Granular Activated Carbon Impacts of Source.pdf\",\n  \"source_id\": \"S13\",\n  \"title\": \"Perfluoroalkyl Chemical Adsorption by Granular Activated Carbon: Impacts of Source Water Characteristics\",\n  \"year\": \"2025\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "30afcccf6ed2c187ba960740bca42986f9108bccdd8a063a7d81464487760560",
+  "response_metadata": {
+    "cached_input_tokens": 1152,
+    "estimated_cost_usd": 0.0404065,
+    "finish_reason": "stop",
+    "input_tokens": 6658,
+    "latency_seconds": 23.45833433291409,
+    "output_tokens": 3338,
+    "reasoning_tokens": 1567,
+    "response_id": "chatcmpl-E9NmUJmCi5n2KVY5Sze7OPLu3IguD",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 9996,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The same GAC (Filtrasorb 400) and standardized buffered Type 1 water were used while varying matrix characteristics (pH, ionic strength, Ca2+/SO4\u00b2\u207b, NOM) as described in the abstract and conclusion, so results across these conditions are directly comparable under shared operating conditions.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The abstract explicitly discusses adsorption, effective solid phase capacities (qe), and adsorption isotherms for PFAS on GAC, which are sorption endpoints.",
+        "status": "supported"
+      },
+      {
+        "error_type": "endpoint_classification",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "The measured endpoint is effective solid phase capacity (qe) from adsorption isotherms, i.e., sorption to GAC. The study does not report a direct water-phase concentration or percent removal metric; characterizing this as a distinct 'removal' endpoint misclassifies a sorption measurement.",
+        "status": "unsupported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].endpoint_type",
+        "reason": "The abstract reports percent changes in qe under different matrix conditions (pH, ionic strength, divalent ions, NOM), which can reasonably be summarized as an 'other' endpoint describing matrix-modified adsorption performance.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "matrix.value",
+        "reason": "The use of buffered Type 1 water with resistivity \u226518.2 M\u03a9\u00b7cm is supported (conclusion), and controlled amendments of pH, ionic strength, and divalent ions are described (abstract, conclusion). However, the statement that this is \"in the absence of NOM\" is not generally true for the study, which explicitly includes NOM conditions; it only applies to a subset of conditions, so the blanket NOM exclusion is overstated.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "The abstract specifies Filtrasorb 400 granular activated carbon, and the methods/limitations text notes that isotherm parameters were obtained with ground GAC, matching the description of \"Filtrasorb 400 granular activated carbon (ground for isotherms).\"",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "This operating condition describes GAC type and not a numeric quantity, so leaving the unit null is appropriate and consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "The abstract states that pH 9 qes were compared to pH 7.7\u20138.1, supporting the baseline pH range of 7.7\u20138.1 as given.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "pH is dimensionless; leaving the unit null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "The abstract explicitly reports a pH 9 condition, supporting the value \"9\" as the elevated pH used to test matrix effects.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "pH is dimensionless; leaving the unit null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "The abstract states that decreasing ionic strength from 10 to 2 mM substantially increased PFAS qes, which supports a range of 2\u201310 mM as the studied ionic strength range.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "The abstract explicitly gives ionic strength in mM, so the unit mM is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].value",
+        "reason": "The abstract refers to \"divalent ion (calcium and sulfate) presence\" and other sections mention CaSO\u2084, supporting the description that Ca\u00b2\u207a and SO\u2084\u00b2\u207b were added as calcium sulfate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].unit",
+        "reason": "This entry describes the chemical identity and form of divalent ions, not a numeric magnitude, so a null unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "The abstract notes that water characteristic impacts on adsorption of nine PFAS were studied, and the conclusion specifies \"nine drinking water relevant PFAS,\" matching the description. Individual PFAS names are not present in the provided text, consistent with the qualifier used.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "The abstract states: \"Decreasing ionic strength (10 to 2 mM) substantially (79%\u2013146%) increased PFAS qes,\" which matches the recorded range of 79\u2013146 and its use as a range value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The change is expressed in the abstract as percentages (79%\u2013146%), so the unit \"%\" is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "The abstract reports: \"Divalent ion (calcium and sulfate) presence without changing ionic strength increased qes (43%\u2013140%),\" which matches the recorded value range of 43\u2013140 and the range value_form.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "The change is reported in the abstract as percentages (43%\u2013140%), so the unit \"%\" is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "The methods/limitations text states that the study examined NOM and major ions, and that future work could expand the matrix impact evaluation to additional inorganic ions and other synthetic organic compounds. This supports that the matrix-impact evaluation for inorganic chemistry focused on pH, ionic strength, and major ions (Ca\u00b2\u207a, SO\u2084\u00b2\u207b) and did not extend to other inorganic species.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1]",
+        "reason": "The conclusion describes use of buffered Type 1 water with controlled amendments and notes challenges in translating isotherm findings to full- or pilot-scale systems. From these design details, it is reasonable to infer that batch isotherms in standardized water lack the complexity and temporal variability of real source waters, justifying the design-inferred limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "The abstract and conclusions indicate adsorption isotherms (batch tests) using Filtrasorb 400 GAC with controlled variations in pH, ionic strength, and ion/NOM presence in buffered Type 1 water, which is consistent with a bench-scale batch adsorption isotherm study under controlled conditions.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "The abstract and conclusion clearly describe PFAS adsorption onto Filtrasorb 400 GAC with systematic variation of water characteristics (pH, ionic strength, calcium, sulfate, NOM) to evaluate their effects on adsorption capacity, matching the treatment description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_type",
+        "reason": "The paper reports original experimental work (adsorption isotherms under various matrix conditions), so classifying it as a primary experiment is consistent with the source.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT10-bge_llm_local_rag-S13-R02",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements needed for synthesis\u2014source identity, matrix description, treatment, study scale, sorption endpoint and qe-based quantitative findings, and comparability status\u2014are well supported by the cited text. The only substantive issue is misclassification of a qe-based sorption metric as a separate 'removal' endpoint, which does not affect the quantitative findings or core interpretability and can be excluded at synthesis.",
+    "task_id": "RT10"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

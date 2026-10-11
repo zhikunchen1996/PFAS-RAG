@@ -1,0 +1,212 @@
+{
+  "batch_id": "test40-review-batch-05",
+  "batch_sha256": "86e817bf5c5f8af33f85319951777693778dcfc15108fbc77a62898296da23f5",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-review-batch-05",
+    "reviews": [
+      {
+        "question_id": "NQ27",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "NQ27_MMG001's registered exact_evidence_span/unit_exact_spans is limited to the 'replaced or regenerated' sentence, but it is repeatedly cited across NQ27-G01, G02, G03, G04, and X01 to support claims about landfill disposal, incineration cost/environmental concern, and PFAS leaching that are stated in later sentences of the same full_chunk_text ('...spent materials are often disposed of in landfills or incinerated, both costly and of environmental concern... Landfilled PFAS can leach back into the environment, while incineration may produce harmful byproducts...') which are not captured as registered unit spans.",
+          "NQ27_MMG008's registered exact_evidence_span covers only the 'Thermal destruction... flue gas cleaning' sentence, yet is cited in NQ27-G03 to support claims about the 20-40% residual PFAS loading and about PFAS-rich regeneration effluents, both of which are separate sentences present in the full_chunk_text but not registered as unit spans; the reference_answer directly quotes these unregistered sentences under [NQ27_MMG008]."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ27-G01",
+            "verdict": "partially_supported",
+            "issues": [
+              "The exact_spans entry for NQ27_MMG010 quotes the 'stabilizing or solidifying spent CFA' sentence but the accompanying 'supports' text describes a different claim ('thermal or chemical regeneration can restore adsorptive capacity of CFA'), which is actually stated in a different sentence of the same chunk not selected as the quoted span."
+            ],
+            "required_repairs": [
+              "Update the NQ27_MMG010 exact_spans entry in NQ27-G01 to quote the 'In some cases, thermal or chemical regeneration could restore CFA's adsorptive capacity...' sentence, matching the claim it is meant to support."
+            ]
+          },
+          {
+            "claim_group_id": "NQ27-G02",
+            "verdict": "partially_supported",
+            "issues": [
+              "Two exact_spans entries for NQ27_MMG010 quote the identical 'stabilizing or solidifying' sentence, but the second entry's 'supports' text describes repurposing spent CFA in construction materials, content found in a different sentence of the chunk not reflected in the quoted span.",
+              "Reliance on NQ27_MMG001's narrow registered span to support landfill/incineration claims stated in later, unregistered sentences of the same chunk."
+            ],
+            "required_repairs": [
+              "Update the second NQ27_MMG010 exact_spans entry to quote the 'Alternatively, spent CFA could be repurposed in construction materials...' sentence.",
+              "Expand NQ27_MMG001's registered unit_exact_spans to include the landfill/incineration/cost and leaching sentences actually being relied upon."
+            ]
+          },
+          {
+            "claim_group_id": "NQ27-G03",
+            "verdict": "partially_supported",
+            "issues": [
+              "Two exact_spans entries for NQ27_MMG008 quote the 'Thermal destruction...flue gas cleaning' sentence but describe support for the 20-40% residual PFAS loading claim and the PFAS-rich regeneration effluents claim, respectively, both distinct sentences elsewhere in the chunk not part of the registered exact_evidence_span or unit_exact_spans."
+            ],
+            "required_repairs": [
+              "Add unit_exact_spans to the NQ27_MMG008 evidence record covering the residual-loading sentence and the regeneration-effluents sentence, and cite these specific spans instead of reusing the thermal-destruction span."
+            ]
+          },
+          {
+            "claim_group_id": "NQ27-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ27-X01",
+            "verdict": "partially_supported",
+            "issues": [
+              "Relies on NQ27_MMG001's narrowly registered span to support claims about landfill leaching and incineration byproducts stated in unregistered later sentences of the same chunk."
+            ],
+            "required_repairs": [
+              "Expand NQ27_MMG001's registered unit_exact_spans to include the landfill leaching and incineration byproduct sentences directly relied upon by this constraint's support descriptions."
+            ]
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Expand approved_source_evidence unit_exact_spans for NQ27_MMG001 and NQ27_MMG008 to cover all sentences directly quoted or relied upon in the claim groups and reference_answer.",
+          "Correct mismatched exact_evidence_span citations for NQ27_MMG010 entries in G01 and G02 so the quoted span matches the specific claim it supports."
+        ]
+      },
+      {
+        "question_id": "NQ28",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "The NQ28_MMG003 citation in NQ28-G01 is supported mainly by inference from the document's title/topic ('hydroxyl- and sulphate-radical-based') rather than by content in its exact_evidence_span or full_chunk_text, which only states that the review 'covered' the knowledge state of AOPs for PFAS remediation without mentioning specific radical species."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ28-G01",
+            "verdict": "partially_supported",
+            "issues": [
+              "The 'supports' text for NQ28_MMG003 draws an implicit link to hydroxyl/sulfate radical mechanisms based on the paper's title rather than the quoted span or chunk content, a weaker form of attribution than the other entries in this group."
+            ],
+            "required_repairs": [
+              "Either drop the NQ28_MMG003 citation from NQ28-G01 (relying on NQ28_MMG002 alone, which directly supports the proposition) or replace it with a chunk excerpt from NQ28_MMG003 that explicitly names hydroxyl/sulfate radical mechanisms."
+            ]
+          },
+          {
+            "claim_group_id": "NQ28-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-G06",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Strengthen or remove the NQ28_MMG003 attribution in NQ28-G01, which currently relies on inference from document title/context rather than quoted evidence content."
+        ]
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 144550,
+    "num_turns": 7,
+    "stop_reason": "tool_use",
+    "session_id": "e0d00ee5-e7d3-46ff-8298-62f942c4416c",
+    "total_cost_usd": 0.5903203,
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 80916,
+      "cache_read_input_tokens": 205091,
+      "output_tokens": 14974,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 80916
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 2492,
+          "cache_read_input_tokens": 80528,
+          "cache_creation_input_tokens": 11459,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 11459,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 628,
+        "outputTokens": 18,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000718,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 10,
+        "outputTokens": 14974,
+        "cacheReadInputTokens": 205091,
+        "cacheCreationInputTokens": 80916,
+        "webSearchRequests": 0,
+        "costUSD": 0.5896023,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 6224,
+    "ttft_stream_ms": 1397,
+    "time_to_request_ms": 45,
+    "type": "result",
+    "duration_ms": 144160,
+    "uuid": "c4319964-960d-4f25-8c1b-568b1790c50d"
+  },
+  "candidate_test40_inputs_used": false
+}

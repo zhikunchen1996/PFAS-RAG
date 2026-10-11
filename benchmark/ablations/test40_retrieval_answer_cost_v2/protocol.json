@@ -1,0 +1,54 @@
+{
+  "analysis_id": "test40_retrieval_answer_cost_v2",
+  "analysis_type": "posthoc_derived_secondary_analysis",
+  "created_date": "2026-08-11",
+  "supersedes": "test40_retrieval_answer_cost_v1 for manuscript coupling analysis only",
+  "scope": [
+    "retrieval_answer_coupling",
+    "failure_path_classification",
+    "cost_performance"
+  ],
+  "new_model_calls": false,
+  "frozen_inputs_must_not_be_modified": true,
+  "l3_aggregation": "equal mean of the three canonical GPT-5.1 question-level scores",
+  "retrieval_answer_coupling": {
+    "primary_descriptive_comparisons": [
+      "final-answer quality grouped by no, partial, or full required-gold retrieval",
+      "within-question BGE-LLM minus Hybrid and BGE retrieval and L3 differences"
+    ],
+    "primary_correlation": "Spearman correlation between raw required_gold_recall@10 and raw final-answer quality across 114 question-system observations",
+    "confidence_interval": "percentile 95% interval from 10000 bootstrap replicates sampled by question, retaining all three system observations for each sampled question",
+    "bootstrap_seed": 20260811,
+    "question_level_centering": false,
+    "evidence_use_proxy": "a unique required-gold final chunk is visibly cited by its C-number in the answer; L1 required_gold_retrieved counts evidence records and can exceed the number of unique chunks",
+    "interpretation_boundary": "associations and deterministic transitions are descriptive, not causal"
+  },
+  "failure_paths": {
+    "mutually_exclusive_order": [
+      "not_applicable_no_required_gold",
+      "gold_document_miss",
+      "gold_chunk_miss_after_doc_hit",
+      "partial_required_gold_retrieval",
+      "full_required_gold_retrieved_not_cited",
+      "full_gold_used_with_material_or_boundary_error",
+      "complete_core_reference_coverage",
+      "full_gold_used_but_incomplete_answer"
+    ],
+    "majority_error_rule": "at least two of three L3 repeats flag a material error, boundary violation, or contradicted core claim",
+    "citation_scope_mismatch_flag": "L1.5 reports at least one unsupported or contradicted cited claim"
+  },
+  "cost_performance": {
+    "formal_retriever_comparison": "tagger plus answer generation for all systems, plus selector for BGE-LLM",
+    "multibase_comparison": "recorded answer-generation API cost only",
+    "excluded_from_deployment_cost": [
+      "L1.5 judge",
+      "L3 judge",
+      "local BM25 retrieval",
+      "local embedding retrieval",
+      "local BGE reranking",
+      "index construction"
+    ],
+    "currency": "USD",
+    "cost_basis": "frozen per-call estimated_cost_usd or frozen generation usage summary"
+  }
+}

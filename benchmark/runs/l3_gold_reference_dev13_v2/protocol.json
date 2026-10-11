@@ -1,0 +1,166 @@
+{
+  "protocol_id": "l3_gold_reference_dev13_v2",
+  "status": "frozen_dev13_reference_claim_ledgers",
+  "scope": "Dev13 only",
+  "supersedes": "l3_gold_reference_dev13_v1 draft scoring design",
+  "layers": {
+    "L2": {
+      "role": "citation-blind common answer-quality comparison",
+      "primary_use": "comparison among retrieval systems",
+      "location": "benchmark/runs/stage4_gpt51_dev13_pilot_v1"
+    },
+    "L3": {
+      "role": "gold-referenced literature-specific answer adequacy",
+      "primary_use": "independent scoring of matched Direct and RAG answers",
+      "normative_source": "human-approved frozen claim ledger"
+    }
+  },
+  "inputs": {
+    "questions": "benchmark/frozen_v3/input/questions_dev13.csv",
+    "gold": "benchmark/frozen_v3/gold/chunk_based_gold.jsonl",
+    "task_boundaries": "benchmark/runs/stage4_gpt51_dev13_pilot_v1/judge_calibration/citation_blind_boundaries_dev13.csv",
+    "task_components": "reference_build/inputs/task_components_dev13.jsonl",
+    "author_review_record": "benchmark/frozen_v3/methods/author_review_record.json"
+  },
+  "reference_construction": {
+    "current_frozen_checkpoint": {
+      "status": "project_author_approved_13_of_13",
+      "reference_packets": "reference_build/inputs/reference_packets_repair6.jsonl",
+      "reference_packets_sha256": "2e47cdafdad2e4a8b22891d8daafd535fd9ceb6fcfbc6d83a0f09c8a7ec55dd1",
+      "model_a_revisions": "reference_build/revisions/model_a_revisions_v2_repair7.jsonl",
+      "model_a_revisions_sha256": "5bbbf5c719e27ec529b028996b4c872baf18079aa88c88b5784f92452222969d",
+      "model_b_reviews": "reference_build/reviews/model_b_group_reviews_v2_repair7.jsonl",
+      "model_b_reviews_sha256": "2517aaa592e4b5ca7b00bdf8e3a9b2e20e006a35299938b21e7244a634bc6450",
+      "model_b_clean_questions": 13,
+      "model_b_blocking_questions": 0,
+      "human_audit_packet": "human_review_repair7/HUMAN_AUDIT_PACKET.md",
+      "human_decisions_approved": 13,
+      "human_decisions_pending": 0,
+      "candidate_answers_seen_before_reference_approval": false,
+      "l3_scores_seen_before_reference_approval": false
+    },
+    "historical_v1_draft": {
+      "model": "gpt-5.1-2025-11-13",
+      "reasoning_effort": "medium",
+      "role": "candidate-blind atomic reference draft"
+    },
+    "model_a_revision": {
+      "provider": "OpenAI",
+      "model": "gpt-5.1-2025-11-13",
+      "reasoning_effort": "low",
+      "temperature": "provider_default_not_sent",
+      "role": "orthogonal claim ontology, grouping, and issue repair"
+    },
+    "model_b": {
+      "provider": "Anthropic Claude CLI",
+      "model": "claude-sonnet-5",
+      "effort": "medium",
+      "role": "independent group-level exact-evidence verification"
+    },
+    "human_gate": {
+      "required_reviewer_role": "project_author",
+      "all_questions_must_be_approved": true,
+      "all_task_components_must_be_approved": true,
+      "all_claim_groups_must_be_reviewed": true,
+      "all_atomic_dispositions_must_be_reviewed": true,
+      "all_model_b_issues_must_be_resolved": true,
+      "post_model_b_edits_require_reverification": true
+    },
+    "forbidden_inputs": [
+      "candidate Direct answers",
+      "candidate RAG answers",
+      "retrieved top-k contexts",
+      "system identity",
+      "prior candidate judge outcomes",
+      "test40 answers or L3 outcomes"
+    ]
+  },
+  "reference_schema": {
+    "orthogonal_fields": {
+      "importance": [
+        "core",
+        "supplementary"
+      ],
+      "function": [
+        "affirmative",
+        "limitation",
+        "negative_finding",
+        "boundary_constraint"
+      ],
+      "scoring_role": [
+        "required_content",
+        "optional_content",
+        "constraint_only"
+      ]
+    },
+    "scoring_unit": "unique claim_group_id",
+    "audit_unit": "atomic claim plus exact evidence mapping",
+    "task_component_rule": "Every frozen task component requires one to three core required-content claim groups.",
+    "deduplication_rule": "A synthesis and its underlying examples cannot both receive required-content weight.",
+    "constraint_rule": "Constraint-only groups are excluded from all coverage denominators.",
+    "evidence_link_rule": "Every content group must cite frozen evidence IDs; exact spans are copied deterministically from frozen gold.",
+    "normative_source_rule": "The claim ledger is normative. Reference prose is non-normative and cannot add scoring requirements.",
+    "non_exhaustive_gold": true
+  },
+  "l3_scoring": {
+    "judge_model": "gpt-4.1-2025-04-14",
+    "judge_temperature": 0,
+    "judge_independence": "The L3 judge is distinct from Model A and Model B.",
+    "anonymous": true,
+    "citation_blind": true,
+    "independent_per_answer": true,
+    "claim_scores": {
+      "full": 1.0,
+      "partial": 0.5,
+      "absent": 0.0,
+      "contradicted": 0.0
+    },
+    "primary_continuous_metric": "mean_component_balanced_core_reference_claim_coverage",
+    "secondary_metrics": [
+      "mean_strict_core_reference_claim_coverage",
+      "mean_supplementary_reference_claim_coverage",
+      "boundary_compliance_rate",
+      "core_contradiction_rate",
+      "reference_anchored_material_error_rate",
+      "potential_external_error_flag_rate"
+    ],
+    "aggregation": {
+      "within_component": "mean over core required-content claim groups",
+      "within_question": "equal mean over frozen task components",
+      "system_level": "equal mean over questions",
+      "paired_system_comparison": "paired bootstrap over questions",
+      "bootstrap_iterations": 10000,
+      "bootstrap_seed": 20260729,
+      "reported_difference": "system_b minus system_a with percentile 95% confidence interval"
+    },
+    "binary_pass": {
+      "status": "not_calibrated",
+      "threshold": null,
+      "all_claim_coverage_gate": false,
+      "future_required_gates": [
+        "question core coverage at or above Dev-calibrated threshold",
+        "every task component coverage at or above 0.5",
+        "no contradicted core claim",
+        "no material boundary violation",
+        "no human-confirmed material scientific error"
+      ]
+    },
+    "error_policy": {
+      "reference_anchored_material_error": "May affect scoring when demonstrable from the frozen ledger, boundaries, or an internal contradiction.",
+      "potential_external_scientific_error": "Machine flag only; cannot affect pass without blinded human confirmation."
+    },
+    "outside_gold_policy": "Additional content is neutral unless it contradicts a frozen claim, violates a frozen material boundary, or contains a human-confirmed material error.",
+    "reliability_plan": {
+      "primary_order": "canonical claim order",
+      "stability_order": "reverse claim order",
+      "disagreement_policy": "Preserve disagreements and send consequential conflicts to blinded human adjudication."
+    }
+  },
+  "freeze_policy": {
+    "reference_freeze_required_before_candidate_scoring": true,
+    "all_human_decisions_must_be_approved": true,
+    "hash_algorithm": "sha256",
+    "test40_prohibited_before_dev_reference_and_judge_freeze": true,
+    "post_freeze_changes": "Version, document, re-review, re-hash, and rerun all affected scoring; never silently overwrite."
+  }
+}

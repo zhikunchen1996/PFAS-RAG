@@ -1,0 +1,260 @@
+{
+  "call_key": "RT03:bge_llm_local_rag:verify:RT03-bge_llm_local_rag-S01-R01",
+  "created_at": "2026-08-05T03:58:49.568075+00:00",
+  "raw_response_text": "{\"task_id\":\"RT03\",\"record_id\":\"RT03-bge_llm_local_rag-S01-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"citation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The citation details (authors, title, journal, year, article number) match the information in the provided source description.\"},{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record URL https://doi.org/10.1016/j.jwpe.2023.103965 matches the DOI given in the source metadata and text.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source explicitly refers to Perfluorooctanoic acid (PFOA) as the PFAS studied (e.g., S01-E05, S01-E06).\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E06 clearly states regeneration of PFOA-loaded K_AC and CTAB_K-AC using aqueous solutions of NaCl, NaOH, NH4Cl, KCl, and NH4OH at 5% w/v, matching the treatment description.\"},{\"field_path\":\"matrix.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E06 describes PFOA-loaded activated carbon being regenerated using 5% w/v aqueous solutions of inorganic salts/bases. The record\u2019s description that regeneration tests involved PFOA-loaded Karanja-based activated carbons in aqueous inorganic regenerant solutions is consistent, and the note that the matrix is not clearly specified for regeneration tests is consistent with the excerpted text.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E06 describes regeneration achieved by desorbing PFOA from the adsorbent using inorganic solutions, with outcomes expressed as regeneration capacity (%). This is a separation (desorption) endpoint rather than chemical transformation or mineralization, so endpoint_type = separation is consistent with the evidence.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The text (S01-E06) reports regeneration capacity as a percent and describes testing solutions to desorb PFOA, implying a fraction of adsorbed PFOA removed from the solid. However, the source does not explicitly define regeneration capacity as \u201cfraction of adsorbed PFOA desorbed,\u201d so the detailed interpretive wording goes slightly beyond what is directly stated, though it aligns with common usage.\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E06 uses the term \u201cregeneration capacity\u201d when reporting 32% and 25% values, matching the reported_term field.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E06 lists NaCl, NaOH, NH4Cl, KCl, and NH4OH solutions (5% w/v) as regenerants. This matches the enumerated regenerant types in the record.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This operating condition is categorical (regenerant type), so a null unit is appropriate and consistent with the source text, which lists chemical species but no numeric unit for this field.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E06 states that NaCl, NaOH, NH4Cl, KCl, and NH4OH solutions (5% w/v) were tested. The value 5 for regenerant concentration is directly supported.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The concentration is reported in the source as 5% w/v (S01-E06), so unit = \\\"% w/v\\\" is correct.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E06 reports that \u201cNH4Cl and NH4OH showed around 32% and 25% regeneration capacity for K_AC and CTAB_K-AC respectively.\u201d The record\u2019s approximate value \u201c~32\u201d % for K_AC is consistent with this statement and correctly marked as approximate_numeric.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Regeneration capacity is explicitly given in percent in S01-E06, so unit = \\\"%\\\" is correct.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E06 reports around 25% regeneration capacity for CTAB_K-AC. The record\u2019s approximate value \u201c~25\u201d % for CTAB_K-AC is consistent and correctly flagged as approximate_numeric.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Regeneration capacity is expressed in percent in S01-E06, so unit = \\\"%\\\" is correct.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Comparability is an analyst-derived judgment. Marking the status as \\\"descriptive_only\\\" is consistent with the fact that the record simply reports single-experiment regeneration capacities under specific conditions without attempting standardized comparison, and this does not conflict with any source text.\"},{\"field_path\":\"comparability.reason\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The reason correctly notes that regeneration capacities are based on inorganic regenerants at 5% w/v for PFOA-loaded K_AC and CTAB_K-AC (S01-E06) and that specific regenerant chemistries and adsorbents can limit cross-study comparability. However, the statement that there is \\\"without consistent reporting of loading protocol, contact time, or cycle number\\\" is not directly supported by the provided excerpts; the absence of such details in these chunks does not prove they were not reported elsewhere. Thus, the core comparability logic is supported, but some qualifiers overreach the cited text.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E06 shows that the regeneration study discussed uses only PFOA with two adsorbents (K_AC and CTAB_K-AC) and inorganic regenerants. Inferring a limitation in generalizability across PFAS classes and adsorbents from this design is a valid design_inferred limitation and directly follows from the described scope.\"},{\"field_path\":\"limitations[1].statement\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S01-E06 supports that the reported inorganic regenerant tests involve 5% w/v inorganic solutions and provide single regeneration capacity values, consistent with single-step desorption. However, the further claim that the number of regeneration cycles, long-term capacity recovery, and adsorbent stability were not described cannot be confirmed purely from the provided excerpts (absence of evidence here does not prove absence in the full study). Thus, the limitation is generally plausible but only partially supported by the cited text.\"},{\"field_path\":\"residuals_byproducts[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E06 clearly describes regeneration via desorption of PFOA from the adsorbent into aqueous regenerant solutions. It does not discuss any subsequent treatment of the spent regenerant. Inferring that this process generates a PFAS-enriched liquid regenerant stream and that further treatment/destruction steps are not described for these inorganic-only tests is a reasonable design_inferred consequence of the described regeneration approach.\"},{\"field_path\":\"study_scale.value\",\"status\":\"unsupported\",\"error_type\":\"other\",\"reason\":\"The provided excerpts do not specify the experimental scale (e.g., batch volume, pilot vs. bench scale). Claiming \u201cnot reported\u201d relies on absence of information in the limited text rather than explicit evidence that the study omitted scale, so this field is not supported by the cited content alone.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements needed for synthesis\u2014PFAS identity (PFOA), adsorbents (K_AC and CTAB_K-AC), regeneration treatment with specified inorganic regenerants and concentration, separation-type endpoint, and quantitative regeneration capacities\u2014are directly supported and correctly transcribed. Some interpretive/completeness statements (certain limitations and comparability reasoning, and the claim that scale is \u2018not reported\u2019) extend beyond what is explicitly in the excerpts, but these do not affect the integrity of the primary quantitative findings or endpoint classification, so the record remains usable for evidence synthesis with minor caution around the over-interpreted contextual fields.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of the evidence needed to choose among regeneration, replacement, and end-of-life management for PFAS-loaded adsorption media.\",\"task_id\":\"RT03\",\"title\":\"Deciding whether to regenerate or replace PFAS adsorption media\"}\n\nTask-specific extraction objective:\nExtract adsorbent and PFAS identity, loading protocol, regeneration or disposal method, operating conditions, desorption or destruction endpoint, capacity recovery, cycle number, material change, residual streams, energy, chemicals, and cost.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Shaikh, M.A.N.; Sarkar, P.; Nawaz, T. PFOA remediation from aqueous media using CTAB impregnated activated carbon - A closed-loop sustainable study with comprehensive selectivity analysis. J Water Process Eng. 2023;54:103965.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S01-E05\",\n      \"S01-E06\"\n    ],\n    \"reason\": \"The regeneration capacities reported here are based on single-step desorption of PFOA from specific Karanja-based activated carbons using 5% w/v inorganic regenerants, without consistent reporting of loading protocol, contact time, or cycle number. These conditions and endpoints may not be directly comparable to other PFAS media regeneration studies that employ different PFAS, adsorbents, regenerant chemistries, or multi-cycle capacity recovery endpoints.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.jwpe.2023.103965\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"separation\",\n      \"evidence_locator_ids\": [\n        \"S01-E06\"\n      ],\n      \"interpretation\": \"Fraction of adsorbed PFOA desorbed from PFOA-loaded activated carbon into the regenerant solution during a regeneration step, expressed as percent regeneration capacity; this reflects PFOA desorption (separation from the solid) rather than chemical degradation.\",\n      \"reported_term\": \"regeneration capacity\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S01-E05\",\n        \"S01-E06\"\n      ],\n      \"statement\": \"Regeneration tests for inorganic regenerants were conducted only for one PFAS (PFOA) and on two related activated carbon materials (K_AC and CTAB_K-AC), limiting generalizability across PFAS classes and adsorbents.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S01-E06\"\n      ],\n      \"statement\": \"Reported regeneration performance is based on single-step desorption with 5% w/v inorganic regenerant solutions; the number of regeneration cycles, long-term capacity recovery, and adsorbent stability over multiple regenerations were not described in the provided text.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S01-E05\",\n      \"S01-E06\"\n    ],\n    \"value\": \"not clearly specified for regeneration tests (PFOA-loaded Karanja-based activated carbons regenerated in aqueous inorganic regenerant solutions)\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S01-E06\"\n      ],\n      \"name\": \"Regenerant type\",\n      \"qualifiers\": \"each tested as 5% w/v aqueous solution for regeneration of PFOA-loaded K_AC and CTAB_K-AC\",\n      \"unit\": null,\n      \"value\": \"NaCl, NaOH, NH4Cl, KCl, NH4OH\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S01-E06\"\n      ],\n      \"name\": \"Regenerant concentration\",\n      \"qualifiers\": \"applied to each inorganic regenerant (NaCl, NaOH, NH4Cl, KCl, NH4OH)\",\n      \"unit\": \"% w/v\",\n      \"value\": \"5\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S01-E05\",\n        \"S01-E06\"\n      ],\n      \"value\": \"Perfluorooctanoic acid (PFOA)\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S01-E06\"\n      ],\n      \"name\": \"Regeneration capacity of K_AC with best inorganic regenerant\",\n      \"qualifiers\": \"around 32% regeneration capacity when using NH4Cl or NH4OH (5% w/v) as regenerant for PFOA-loaded K_AC; exact regenerant-to-value mapping not fully specified in the excerpt\",\n      \"unit\": \"%\",\n      \"value\": \"~32\",\n      \"value_form\": \"approximate_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S01-E06\"\n      ],\n      \"name\": \"Regeneration capacity of CTAB_K-AC with best inorganic regenerant\",\n      \"qualifiers\": \"around 25% regeneration capacity when using NH4Cl or NH4OH (5% w/v) as regenerant for PFOA-loaded CTAB_K-AC; exact regenerant-to-value mapping not fully specified in the excerpt\",\n      \"unit\": \"%\",\n      \"value\": \"~25\",\n      \"value_form\": \"approximate_numeric\"\n    }\n  ],\n  \"record_id\": \"RT03-bge_llm_local_rag-S01-R01\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S01-E06\"\n      ],\n      \"statement\": \"Regeneration with inorganic salt and base solutions transfers PFOA from the loaded activated carbon into the aqueous regenerant, generating a PFAS-enriched liquid regenerant stream; no subsequent treatment, concentration, or destruction of PFOA in this stream was described for these inorganic-only regenerant tests.\"\n    }\n  ],\n  \"source_id\": \"S01\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S01-E05\",\n      \"S01-E06\"\n    ],\n    \"value\": \"not reported\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S01-E06\"\n    ],\n    \"value\": \"Regeneration of PFOA-loaded Karanja-derived activated carbon (K_AC) and CTAB-impregnated Karanja activated carbon (CTAB_K-AC) using inorganic aqueous regenerant solutions (NaCl, NaOH, NH4Cl, KCl, NH4OH, each at 5% w/v) to desorb PFOA\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 1,\n  \"bge_score\": 0.7719241380691528,\n  \"citation\": \"Shaikh, M.A.N.; Sarkar, P.; Nawaz, T. PFOA remediation from aqueous media using CTAB impregnated activated carbon - A closed-loop sustainable study with comprehensive selectivity analysis. Journal of Water Process Engineering 2023 54 103965. DOI: 10.1016/j.jwpe.2023.103965.\",\n  \"doi\": \"10.1016/j.jwpe.2023.103965\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.jwpe.2023.103965\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 9,\n      \"locator_id\": \"S01-E01\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.10881919413805008,\n        \"RT03-C2\": 0.005933689419180155,\n        \"RT03-C3\": 0.00014246390492189676,\n        \"umbrella\": 0.5136294960975647\n      },\n      \"section\": \"results\",\n      \"text\": \"impact such that PFAS removal is feasible. Our study is among the few studies that has comprehensively explored the role of background spe - cies in affecting PFAS removal using AC. We have studied the back - ground species by quantifying their impact on PFAS adsorption using multiple thermodynamic parameters such as selectivity coefficient, partitioning fraction ratio, and partitioning coefficient and explored the role of solution pH and species concentration in mitigating their interference. Also, only a handful of studies have focused on developing a closed- loop material utilization process in the context of adsorptive PFAS removal where all the raw materials are recovered after their application in their nearly original form, suitable for further reuse. In this regard, the regeneration of the PFAS-loaded AC is critical. Therefore, more studies are needed that would investigate regeneration chemistry, determining the regenerant's composition and strength and subsequently recovering PFAS and the regenerant from the spent regenerant solution. In the present study, we have developed a closed-loop material utilization process with no waste generation where the sorbent has been regener - ated to its original form. Moreover, to further make the process sus - tainable, we have focused not on merely removing PFAS from the aqueous media but also on recovering them. Therefore, we explored the development of regenerant specification and recovery of the regenerant\"\n    },\n    {\n      \"corpus_chunk\": 2,\n      \"locator_id\": \"S01-E02\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.010763678699731827,\n        \"RT03-C2\": 0.020601414144039154,\n        \"RT03-C3\": 0.0004118755168747157,\n        \"umbrella\": 0.050309911370277405\n      },\n      \"section\": \"abstract\",\n      \"text\": \"Per - and polyfluoroalkylated substances (PFAS) are man-made sub - stances having a hydrophilic polar functional group linked to the fluo - rinated alkyl chain [ 44 ]. A wide range of industrial and consumer products, including detergents, adhesives, textiles, electronics devices, and surface coatings, have been manufactured all over the world using PFAS, due to their remarkable amphiphilic characteristics and thermal stability [ 45 \\u2013 47 ]. PFAS presence has been reported in the environmental systems including air, water, soil, plants, and living organisms [ 48 , 49 ]. PFAS exposure poses risks to infant and breastfeeding mothers and can also cause kidney and testicular malignancies in adults [ 50 ]. Moreover, the United States Environmental Protection Agency (US EPA) has also set a health advisory limit of 70 ng/L for the total concentration of Perfluorooctanoic acid (PFOA) and Perfluorooctanesulfonic acid (PFOS) in drinking water, the two PFAS that are most frequently detected in natural water systems [ 51 ]. Various treatment technologies have been employed for treatment of these chemicals. However, the primary challenge associated with PFAS remediation is its trace level concen - tration in water samples along with a higher concentration of the background matrix consisting of dissolved organic matter (DOM) and typical cationic and anionic species [ 52 , 53 ]. Since in typical environ -\"\n    },\n    {\n      \"corpus_chunk\": 5,\n      \"locator_id\": \"S01-E03\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.001261283177882433,\n        \"RT03-C2\": 0.00272753625176847,\n        \"RT03-C3\": 0.0010550718288868666,\n        \"umbrella\": 0.011799946427345276\n      },\n      \"section\": \"methods\",\n      \"text\": \"DOM in the influent water matrix not only blocked the pores and active sites of the adsorbent but also caused a reversal of surface charge on the adsorbent which negatively affected its PFAS removal efficiency. Guo et al. [ 63 ] utilized corn straw for the biochar synthesis and reported an uptake capacity of 169.6 mg PFOS/g. Similarly, Fagbayigbo et al. [ 2 ] synthesized AC from Vitis vinifera (grape) leaf for adsorptive removal of PFOA and PFOS and recorded an uptake capacity of 78.9 mg/g and 75.13 mg/g for PFOA and PFOS respectively. In another study, coconut shell was utilized for the synthesis of structured and porous biochar through alkali activation for the removal of perfluoroalkyl carboxylic acids (PFCAs). Although the biochar showed a high adsorption capacity of 1269 mg/g for PFOA, the range of initial PFAS concentrations was up to 300 mg/L which was a thousand times higher than the realistic values [ 60 ]. Steigerwald & Ray, [ 3 ] demonstrated the application of ground spent coffee biochar for PFOS removal with an uptake capacity of 43.4 mg PFOS /g. The effect of divalent cations (Ca 2 + & Mg 2 + ions) and DOM was also studied and the results showed that the adsorbent's PFOS\"\n    },\n    {\n      \"corpus_chunk\": 6,\n      \"locator_id\": \"S01-E04\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.016375437378883362,\n        \"RT03-C2\": 0.005270630586892366,\n        \"RT03-C3\": 0.0006194027955643833,\n        \"umbrella\": 0.09536761045455933\n      },\n      \"section\": \"results\",\n      \"text\": \"ions) and DOM was also studied and the results showed that the adsorbent's PFOS removal efficiency was enhanced by 24 % in the presence of divalent cations, but suffered a 60 % reduction due to the DOM. However, no regeneration study was conducted for the adsorbent. In another study, Wan et al. [ 4 ] employed a surface-modified biochar for PFOA and PFOS removal and achieved > 85 % efficiency in the presence of a variety of typical background species. Moreover, the regeneration through 50 % methanol solution exhibited ~90 % efficiency and increased the PFAS concentration up to 25-fold but a critical aspect of recovery of the regenerant and PFAS from the spent regenerant solution was not explored in this study. Table S1 (SI) shows a summary of the major studies conducted for adsorptive removal of PFOA through AC. One major aspect that has not been sufficiently explored in the literature is utilization of multiple adsorption mechanisms in a single sorbent that can be leveraged to remove a molecule like PFAS via multiple removal pathways. There is a need to develop adsorbents incorporated with diverse physico-chemical properties that can facili - tate PFAS removal via a combination of hydrophobic, electrostatic, hydrogen bonding, and ion-exchange interactions. In this respect, an adsorbent such as AC can be synthesized from precursor materials with\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S01-E05\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.021689772605895996,\n        \"RT03-C2\": 0.016566969454288483,\n        \"RT03-C3\": 0.0002253250131616369,\n        \"umbrella\": 0.07222352176904678\n      },\n      \"section\": \"abstract\",\n      \"text\": \"By CTAB-impregnation, the PFOA uptake capacity of the adsor - bent increased up to threefold. The maximum PFOA adsorption capacities exhibited by Karanja AC (K_AC) and CTAB_K-AC were 157.1 mg/g & 455.8 mg/g, respectively. The adsorbent exhibited high PFOA selectivity against all background co-contaminants i.e., NOM (humic acid), clay (bentonite), anions, and cations, and removed ~90 % PFOA. The regenerant (50 % ethanol with 1 % NH 4 OH aqueous solution) showed 80 \\u2013 90 % PFOA recovery. The distillation process at ~80 \\u25e6 C temperature recovered ~90 % PFOA and 80 \\u2013 90 % of the regenerant reagents from the spent regenerant solution. The packed-bed column run of the adsorbent showed high PFOA removal capacity from the river water matrix and the breakthrough data was well fitted with Thomas and Yoon Nelson Model with R 2 values of 0.97 for both the models. The results showed that novel CTAB_K-AC can be an effective adsorbent for PFOA adsorptive remediation from aqueous media with high treatment selectivity towards the PFOA in a materially closed-loop sustainable process. 1. Introduction Per - and polyfluoroalkylated substances (PFAS) are man-made sub - stances having a hydrophilic polar functional group linked to the fluo -\"\n    },\n    {\n      \"corpus_chunk\": 55,\n      \"locator_id\": \"S01-E06\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.01581207476556301,\n        \"RT03-C2\": 0.0020980502013117075,\n        \"RT03-C3\": 0.0003936881839763373,\n        \"umbrella\": 0.05682632327079773\n      },\n      \"section\": \"results\",\n      \"text\": \"The result shows that the in presence of a realistic background water matrix, PFR values were 178 and 200 for K_AC and CTAB_K-AC respectively, which show higher PFAS partition - ing towards the adsorbent as compared to the solution phase. These results revealed that the synthesized adsorbents exhibited good PFOA removal performance under realistic scenarios and can remove PFOA in the presence of higher background concentrations of typical water ma - trix species. The selectivity study of individual species showed that both humic acid and bentonite interact with the AC. Similar behaviour was observed for the realistic water background matrix as the humic acid and bentonite were adsorbed by the adsorbent. The 10 % decrease in PFOA removal efficiency of the adsorbent can be attributed to silicate species, humic acid, and bentonite as shown in Table 5 . 3.4. Regeneration study Since PFOA is removed via hydrophobic as well as electrostatic in - teractions, therefore both organic as well as inorganic species were tested for the PFOA-loaded adsorbent's regeneration. To desorb PFOA by weakening the electrostatic interaction, NaCl, NaOH, NH 4 Cl, KCl, and NH 4 OH solutions (5 % w/v) were tested, among these NH 4 Cl and NH 4 OH showed around 32 % and 25 % regeneration capacity for K_AC and CTAB_K-AC respectively ( Fig. 15 ). Further, NH\"\n    },\n    {\n      \"corpus_chunk\": 4,\n      \"locator_id\": \"S01-E07\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.03272904455661774,\n        \"RT03-C2\": 0.0030021171551197767,\n        \"RT03-C3\": 0.0004782753821928054,\n        \"umbrella\": 0.0435757115483284\n      },\n      \"section\": \"methods\",\n      \"text\": \"is a relevant approach for PFAS removal from aqueous media since AC's properties are tunable and PFAS-selective functional groups can be incorporated within its framework to facilitate high and targeted PFAS removal. From the literature review, it is evident that many studies have re - ported the application of AC as adsorbent for PFAS removal from aqueous media. Deng et al. [ 1 ] synthesized granular activated carbon (GAC) using bamboo for the removal of PFOA and PFOS from synthetic water, which showed high uptake capacity i.e., 2.32 mmol/g for PFOS and 1.15 mmol/g for PFOA, but the PFAS concentration range consid - ered in the study was between 20 and 250 mg/L, which was quite high as compared to their reported concentration under realistic conditions. The study reported 98 % regeneration of PFAS-saturated GACs using 50 % ethanol solution at 45 \\u25e6 C. Inyang and Dickenson [ 62 ] conducted a pilot- scale study for the removal of perfluoroalkyl acids (PFAAs) from lake water using hardwood biochar and the performance was compared with GAC and anthracite. The results of the study showed that the presence of DOM in the influent water matrix not only blocked the pores and active sites of the adsorbent but also caused a reversal of surface charge on the\"\n    },\n    {\n      \"corpus_chunk\": 7,\n      \"locator_id\": \"S01-E08\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.0034395058173686266,\n        \"RT03-C2\": 0.005919786170125008,\n        \"RT03-C3\": 0.0006392711657099426,\n        \"umbrella\": 0.02421862818300724\n      },\n      \"section\": \"results\",\n      \"text\": \"In this respect, an adsorbent such as AC can be synthesized from precursor materials with high lignocellulosic content that would provide a high carbon yield and content upon preparation. Subsequently, chemical additives with desired functional groups can be impregnated within the AC framework that can boost electrostatic, hydrogen bonding, or ion-exchange inter - action with the targeted PFAS adsorbate and improve its selective adsorption. This approach is practical since the water matrix can be of diverse composition in nature, therefore an adsorbent with multiple removal mechanisms will be a robust approach to address the problem of PFAS under different solution chemistry. Guided by this philosophy, we have tried Karanja waste shells ( Pongamia pinnata ) as a pre-cursor for preparing the AC due to their high lignocellulosic carbon content (around 71 %) and effectiveness in attaching the desirable functional group-containing surfactant compounds such as Cetyl - trimethylammonium bromide (CTAB) (functional group: quaternary ammonium), tert-Butylamine (TBA) (functional group: -NH 2 ) by hy - drophobic interactions between the surfactants carbon chains with the carbonaceous matter of the AC [ 64 \\u2013 66 ]. Further, to incorporate PFAS selective functional groups like quaternary ammonium, amine, etc. in the carbonaceous moiety of the Karanja AC, we have carried out mod - ifications using additives such as CTAB and TBA. The literature search\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2023 - Shaikh - PFOA remediation from aqueous media using CTAB impregnated activated carbon - A closed-loop sustainable study with comprehensive selectivity analysis.pdf\",\n  \"source_id\": \"S01\",\n  \"title\": \"PFOA remediation from aqueous media using CTAB impregnated activated carbon - A closed-loop sustainable study with comprehensive selectivity analysis\",\n  \"year\": \"2023\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "b4f2aef52640c89e1591e3b111895d32903fa1e5cb883051aa8404206316c17f",
+  "response_metadata": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.0412125,
+    "finish_reason": "stop",
+    "input_tokens": 6146,
+    "latency_seconds": 34.34006358298939,
+    "output_tokens": 3353,
+    "reasoning_tokens": 1494,
+    "response_id": "chatcmpl-E9N3f7O3fEQtvSpOx2lO74CZZQen5",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 9499,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "citation",
+        "reason": "The citation details (authors, title, journal, year, article number) match the information in the provided source description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The record URL https://doi.org/10.1016/j.jwpe.2023.103965 matches the DOI given in the source metadata and text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "The source explicitly refers to Perfluorooctanoic acid (PFOA) as the PFAS studied (e.g., S01-E05, S01-E06).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "S01-E06 clearly states regeneration of PFOA-loaded K_AC and CTAB_K-AC using aqueous solutions of NaCl, NaOH, NH4Cl, KCl, and NH4OH at 5% w/v, matching the treatment description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix.value",
+        "reason": "S01-E06 describes PFOA-loaded activated carbon being regenerated using 5% w/v aqueous solutions of inorganic salts/bases. The record\u2019s description that regeneration tests involved PFOA-loaded Karanja-based activated carbons in aqueous inorganic regenerant solutions is consistent, and the note that the matrix is not clearly specified for regeneration tests is consistent with the excerpted text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "S01-E06 describes regeneration achieved by desorbing PFOA from the adsorbent using inorganic solutions, with outcomes expressed as regeneration capacity (%). This is a separation (desorption) endpoint rather than chemical transformation or mineralization, so endpoint_type = separation is consistent with the evidence.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "The text (S01-E06) reports regeneration capacity as a percent and describes testing solutions to desorb PFOA, implying a fraction of adsorbed PFOA removed from the solid. However, the source does not explicitly define regeneration capacity as \u201cfraction of adsorbed PFOA desorbed,\u201d so the detailed interpretive wording goes slightly beyond what is directly stated, though it aligns with common usage.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "S01-E06 uses the term \u201cregeneration capacity\u201d when reporting 32% and 25% values, matching the reported_term field.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "S01-E06 lists NaCl, NaOH, NH4Cl, KCl, and NH4OH solutions (5% w/v) as regenerants. This matches the enumerated regenerant types in the record.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "This operating condition is categorical (regenerant type), so a null unit is appropriate and consistent with the source text, which lists chemical species but no numeric unit for this field.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "S01-E06 states that NaCl, NaOH, NH4Cl, KCl, and NH4OH solutions (5% w/v) were tested. The value 5 for regenerant concentration is directly supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The concentration is reported in the source as 5% w/v (S01-E06), so unit = \"% w/v\" is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "S01-E06 reports that \u201cNH4Cl and NH4OH showed around 32% and 25% regeneration capacity for K_AC and CTAB_K-AC respectively.\u201d The record\u2019s approximate value \u201c~32\u201d % for K_AC is consistent with this statement and correctly marked as approximate_numeric.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "Regeneration capacity is explicitly given in percent in S01-E06, so unit = \"%\" is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "S01-E06 reports around 25% regeneration capacity for CTAB_K-AC. The record\u2019s approximate value \u201c~25\u201d % for CTAB_K-AC is consistent and correctly flagged as approximate_numeric.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "Regeneration capacity is expressed in percent in S01-E06, so unit = \"%\" is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "Comparability is an analyst-derived judgment. Marking the status as \"descriptive_only\" is consistent with the fact that the record simply reports single-experiment regeneration capacities under specific conditions without attempting standardized comparison, and this does not conflict with any source text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "comparability.reason",
+        "reason": "The reason correctly notes that regeneration capacities are based on inorganic regenerants at 5% w/v for PFOA-loaded K_AC and CTAB_K-AC (S01-E06) and that specific regenerant chemistries and adsorbents can limit cross-study comparability. However, the statement that there is \"without consistent reporting of loading protocol, contact time, or cycle number\" is not directly supported by the provided excerpts; the absence of such details in these chunks does not prove they were not reported elsewhere. Thus, the core comparability logic is supported, but some qualifiers overreach the cited text.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].statement",
+        "reason": "S01-E06 shows that the regeneration study discussed uses only PFOA with two adsorbents (K_AC and CTAB_K-AC) and inorganic regenerants. Inferring a limitation in generalizability across PFAS classes and adsorbents from this design is a valid design_inferred limitation and directly follows from the described scope.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "limitations[1].statement",
+        "reason": "S01-E06 supports that the reported inorganic regenerant tests involve 5% w/v inorganic solutions and provide single regeneration capacity values, consistent with single-step desorption. However, the further claim that the number of regeneration cycles, long-term capacity recovery, and adsorbent stability were not described cannot be confirmed purely from the provided excerpts (absence of evidence here does not prove absence in the full study). Thus, the limitation is generally plausible but only partially supported by the cited text.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0].statement",
+        "reason": "S01-E06 clearly describes regeneration via desorption of PFOA from the adsorbent into aqueous regenerant solutions. It does not discuss any subsequent treatment of the spent regenerant. Inferring that this process generates a PFAS-enriched liquid regenerant stream and that further treatment/destruction steps are not described for these inorganic-only tests is a reasonable design_inferred consequence of the described regeneration approach.",
+        "status": "supported"
+      },
+      {
+        "error_type": "other",
+        "field_path": "study_scale.value",
+        "reason": "The provided excerpts do not specify the experimental scale (e.g., batch volume, pilot vs. bench scale). Claiming \u201cnot reported\u201d relies on absence of information in the limited text rather than explicit evidence that the study omitted scale, so this field is not supported by the cited content alone.",
+        "status": "unsupported"
+      }
+    ],
+    "record_id": "RT03-bge_llm_local_rag-S01-R01",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements needed for synthesis\u2014PFAS identity (PFOA), adsorbents (K_AC and CTAB_K-AC), regeneration treatment with specified inorganic regenerants and concentration, separation-type endpoint, and quantitative regeneration capacities\u2014are directly supported and correctly transcribed. Some interpretive/completeness statements (certain limitations and comparability reasoning, and the claim that scale is \u2018not reported\u2019) extend beyond what is explicitly in the excerpts, but these do not affect the integrity of the primary quantitative findings or endpoint classification, so the record remains usable for evidence synthesis with minor caution around the over-interpreted contextual fields.",
+    "task_id": "RT03"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

@@ -1,0 +1,99 @@
+{
+  "run_id": "dev13_retrieval_budget_gpt51_2026-07-26",
+  "status": "frozen_dev13_retrieval_budget",
+  "questions": 13,
+  "required_gold_applicable_questions": 12,
+  "negative_gold_applicable_questions": 6,
+  "negative_gold_metric": "Reported separately as secondary limitation-evidence retrieval; not included in required-gold recall or MRR.",
+  "systems": {
+    "Hybrid": [
+      "5/30",
+      "10/60",
+      "20/120"
+    ],
+    "BGE": [
+      "5/30",
+      "10/60",
+      "20/120"
+    ],
+    "BGE-LLM": [
+      "5/15/30",
+      "10/30/60",
+      "20/60/120"
+    ]
+  },
+  "reusable_results_provenance": "benchmark/frozen_v3/methods/promoted_reusable_artifacts.json",
+  "historical_source_path": "benchmark/frozen_v2/results/dev13_corrected_retrieval_sweep_2026-07-22/local_hybrid_bge",
+  "runtime_dependency_on_historical_source": false,
+  "copied_package_byte_identical": true,
+  "bge_model": "BAAI/bge-reranker-base",
+  "selector_model_requested": "gpt-5.1",
+  "selector_models_returned": [
+    "gpt-5.1-2025-11-13"
+  ],
+  "selector_temperature": 0,
+  "selector_full_chunks": true,
+  "selector_input": "visible_question_only",
+  "selector_fallback_policy": "When fewer than final_top_k valid IDs are returned, append the highest remaining BGE-ranked chunks.",
+  "selector_fallback_selected_chunks": 7,
+  "selector_fallback_selected_chunks_by_config": {
+    "bge_llm_gpt51_pool120_bge60_llm20_fullchunk": 7,
+    "bge_llm_gpt51_pool30_bge15_llm5_fullchunk": 0,
+    "bge_llm_gpt51_pool60_bge30_llm10_fullchunk": 0
+  },
+  "selector_prompt": "benchmark/frozen_v3/prompts/retrieval/bge_llm_selector_v3.txt",
+  "selector_api_calls": 39,
+  "selector_prompt_tokens": 553569,
+  "selector_completion_tokens": 22090,
+  "selector_total_tokens": 575659,
+  "estimated_selector_cost_usd": 0.91286125,
+  "price_basis_usd_per_million": {
+    "input": 1.25,
+    "output": 10.0
+  },
+  "promoted_hybrid_bge_file_sha256": {
+    "README.md": "bf25491d1a0bb14a44d57b8851ac1fc4bf62b55bef0e26312b0a5e21b99cdc49",
+    "bge_candidate_scores.jsonl": "0ae5a74aabc980457e645d035018c192c3c6c8693516031838fa16b1eaa294e2",
+    "experiment_manifest.json": "fd4d9baabf2b38b8f179e4c2d33a3355d4b965bcdb06f714df321248e25119fa",
+    "per_question_retrieval_metrics.csv": "b4f7207274da0f177832cb2db2491f4918953e396c183f1698f7ecf007c8edd8",
+    "retrieval_config_manifest.csv": "a4ff252e57b956a5c8a9337182d7f0fc406155742b325ead571cf93aed94a0cf",
+    "retrieval_outputs/rag_outputs_bge_base_top10_pool60_nodoccap.jsonl": "5ac37ecbe265d9d5b54f4fd4b3d039d753c4a28512fb33a1da70d0ebf270304a",
+    "retrieval_outputs/rag_outputs_bge_base_top20_pool120_nodoccap.jsonl": "9cd4ad689a84780f2d4d3ff441d6e5cb256092d7f76b369a0f5bd7b16cb4d277",
+    "retrieval_outputs/rag_outputs_bge_base_top5_pool30_nodoccap.jsonl": "f2ae481c1470a870f1711aae8e825b95c380aa3e1c4eeccdab66b967c28430f5",
+    "retrieval_outputs/rag_outputs_hybrid_top10_pool60_win0.jsonl": "daa3abb027a57e599b5921b63eb16ee2def5c7355b3cca689806c854b7cfa59c",
+    "retrieval_outputs/rag_outputs_hybrid_top20_pool120_win0.jsonl": "351f4e54bf3ed24afb26cbd231e88847a65d8f5c8bee7159dae21f72b8e4bcb9",
+    "retrieval_outputs/rag_outputs_hybrid_top5_pool30_win0.jsonl": "b4b38b26034ff8ec467a1a2abb14ecd12bcd5e0210780909e320df247fd0700c",
+    "runtime_metrics.csv": "24abfd300158266f133d619b32fc33d0e5600343966a8defc20f7e701144e86f",
+    "summary_retrieval_metrics.csv": "67186e5616af9e358bb4bedf54befae23f0db5340bff52760341d87e809b5e40"
+  },
+  "result_file_sha256": {
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/README.md": "36a31afd7093c2e697b85d5792d881fb05b260407416c941fb5798a080bad6a4",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/bge_llm_gpt51/README.md": "88a8360b138d85505a33270fbc6a7c4b00337f64e465a53cdde849656c633d73",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/bge_llm_gpt51/experiment_manifest.json": "9d561700efd41a7b0855a1b9661aaeb4924b7de73de6e3148efe9c3884b86d1a",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/bge_llm_gpt51/llm_candidate_scores.jsonl": "3b8179a44f48a27165b5343886dafc0cf092d80c2e3123f02f43f06771fd1747",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/bge_llm_gpt51/per_question_retrieval_metrics.csv": "b080b532dce74ab421e4a469784a7f67005798578fa3d7c187e874b7917109c7",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/bge_llm_gpt51/retrieval_config_manifest.csv": "7fba19ce27776d81778ef8502990f7f5565f84191ea6094447132cbdb38112ea",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/bge_llm_gpt51/retrieval_outputs/rag_outputs_bge_llm_gpt51_pool120_bge60_llm20_fullchunk.jsonl": "d52003b24bd70e9d7033d2a30ce3c60a30d1c72d51764ae82f2486fb01a7a20d",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/bge_llm_gpt51/retrieval_outputs/rag_outputs_bge_llm_gpt51_pool30_bge15_llm5_fullchunk.jsonl": "5ede1ba4ee66fb330086cb16fcf85f2666d309218779a3070bba7940768de2c2",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/bge_llm_gpt51/retrieval_outputs/rag_outputs_bge_llm_gpt51_pool60_bge30_llm10_fullchunk.jsonl": "ecbb4a72d8717de66440fa788e7c41f59a87702c85a5ced1f8a2d02e2c8a5b70",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/bge_llm_gpt51/selector_calls.jsonl": "29ce966e06f2bb792ad754ee91360ecfda2417d7407a76fd341926aaf98c2873",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/bge_llm_gpt51/summary_retrieval_metrics.csv": "7ad28e9eb2bcb3bb5a850bef39e6ab0d4d7ddce108eadc25b073b94aefcc07f0",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/bge_llm_gpt51/token_cost_summary.csv": "63d3b4d7cb7eab1d47aca1cdab2b53b205de54192c3bcfa06e0da08351efced1",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/dev13_retrieval_budget_summary.csv": "0e6d4f011acfd3eb9e947cc11f00fef9324c62c03479f25a2150c09d7a953125",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/README.md": "bf25491d1a0bb14a44d57b8851ac1fc4bf62b55bef0e26312b0a5e21b99cdc49",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/bge_candidate_scores.jsonl": "0ae5a74aabc980457e645d035018c192c3c6c8693516031838fa16b1eaa294e2",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/experiment_manifest.json": "fd4d9baabf2b38b8f179e4c2d33a3355d4b965bcdb06f714df321248e25119fa",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/per_question_retrieval_metrics.csv": "b4f7207274da0f177832cb2db2491f4918953e396c183f1698f7ecf007c8edd8",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/retrieval_config_manifest.csv": "a4ff252e57b956a5c8a9337182d7f0fc406155742b325ead571cf93aed94a0cf",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/retrieval_outputs/rag_outputs_bge_base_top10_pool60_nodoccap.jsonl": "5ac37ecbe265d9d5b54f4fd4b3d039d753c4a28512fb33a1da70d0ebf270304a",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/retrieval_outputs/rag_outputs_bge_base_top20_pool120_nodoccap.jsonl": "9cd4ad689a84780f2d4d3ff441d6e5cb256092d7f76b369a0f5bd7b16cb4d277",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/retrieval_outputs/rag_outputs_bge_base_top5_pool30_nodoccap.jsonl": "f2ae481c1470a870f1711aae8e825b95c380aa3e1c4eeccdab66b967c28430f5",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/retrieval_outputs/rag_outputs_hybrid_top10_pool60_win0.jsonl": "daa3abb027a57e599b5921b63eb16ee2def5c7355b3cca689806c854b7cfa59c",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/retrieval_outputs/rag_outputs_hybrid_top20_pool120_win0.jsonl": "351f4e54bf3ed24afb26cbd231e88847a65d8f5c8bee7159dae21f72b8e4bcb9",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/retrieval_outputs/rag_outputs_hybrid_top5_pool30_win0.jsonl": "b4b38b26034ff8ec467a1a2abb14ecd12bcd5e0210780909e320df247fd0700c",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/runtime_metrics.csv": "24abfd300158266f133d619b32fc33d0e5600343966a8defc20f7e701144e86f",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/summary_retrieval_metrics.csv": "67186e5616af9e358bb4bedf54befae23f0db5340bff52760341d87e809b5e40",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/negative_gold_retrieval_per_question.csv": "23dc6486d0a6220d4b2f0261e059c3a715fc89415220b8fe5d2a64047443b75d",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/negative_gold_retrieval_summary.csv": "a684fb1df5988f43137ef9e523d7650e13a738ef17bfe463e521ac50f71ad459"
+  }
+}

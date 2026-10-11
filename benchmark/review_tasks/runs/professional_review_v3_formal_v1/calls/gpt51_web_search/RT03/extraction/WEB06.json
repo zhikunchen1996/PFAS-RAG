@@ -1,0 +1,560 @@
+{
+  "call_key": "RT03:gpt51_web_search:extraction:WEB06",
+  "created_at": "2026-08-05T03:27:55.314513+00:00",
+  "raw_response_text": "{\"task_id\":\"RT03\",\"source_system\":\"gpt51_web_search\",\"records\":[{\"record_id\":\"WEB06-R1\",\"source_id\":\"WEB06\",\"doi_or_stable_url\":\"https://doi.org/10.1016/j.ces.2024.120623\",\"citation\":\"Ranjbar E., Ahmadi F., Baghdadi M. Regeneration of perfluorooctane sulfonic acid (PFOS) loaded granular activated carbon using organic/inorganic mixed solutions. Chemical Engineering Science. 2024;300:120623.\",\"study_type\":\"primary_experiment\",\"study_scale\":{\"value\":\"Laboratory-scale column/batch regeneration of PFAS-saturated granular activated carbon (GAC)\",\"evidence_locator_ids\":[\"WEB06-E01\",\"WEB06-E02\"]},\"matrix\":{\"value\":\"PFAS-saturated granular activated carbon (solid phase); aqueous PFAS solution contact implied but not detailed in abstract\",\"evidence_locator_ids\":[\"WEB06-E01\"]},\"pfas_scope\":[{\"value\":\"Perfluorooctane sulfonic acid (PFOS) (PFAS-saturated GAC; PFOS identified in title)\",\"evidence_locator_ids\":[\"WEB06-E01\"]}],\"treatment\":{\"value\":\"Regeneration of exhausted granular activated carbon using mixed organic/inorganic regenerant solutions, optimized to 0.1 mol/L HCl in ethanol\",\"evidence_locator_ids\":[\"WEB06-E01\"]},\"operating_conditions\":[{\"name\":\"Regenerant composition\",\"value\":\"0.1 mol/L HCl in ethanol\",\"unit\":null,\"qualifiers\":\"Identified as optimal organic/inorganic mixed solution for regeneration\",\"evidence_locator_ids\":[\"WEB06-E01\"]},{\"name\":\"Regeneration contact time (residence time)\",\"value\":\"30\",\"unit\":\"min\",\"qualifiers\":\"Reported as optimal residence time for effective regeneration\",\"evidence_locator_ids\":[\"WEB06-E01\"]},{\"name\":\"Number of regeneration/usage cycles evaluated\",\"value\":\"5\",\"unit\":null,\"qualifiers\":\"Abstract reports effective regeneration even after the fifth usage cycle\",\"evidence_locator_ids\":[\"WEB06-E02\"]}],\"endpoints\":[{\"endpoint_type\":\"separation\",\"reported_term\":\"regeneration of PFAS-saturated GAC\",\"interpretation\":\"PFAS (PFOS) was desorbed from exhausted GAC into the regenerant solution, restoring adsorption capacity; endpoint reflects phase transfer (desorption) rather than PFAS destruction.\",\"evidence_locator_ids\":[\"WEB06-E01\",\"WEB06-E02\"]},{\"endpoint_type\":\"sorption\",\"reported_term\":\"regeneration efficiency / reuse of GAC over multiple cycles\",\"interpretation\":\"Ability of regenerated GAC to be reused in up to five adsorption\u2013regeneration cycles with maintained performance; capacity recovery is qualitative in abstract.\",\"evidence_locator_ids\":[\"WEB06-E02\"]},{\"endpoint_type\":\"other\",\"reported_term\":\"BET surface area and total pore volume change\",\"interpretation\":\"BET analysis showed increased total pore volume and surface area in regenerated GAC compared with PFAS-saturated GAC, indicating structural/morphological changes associated with regeneration.\",\"evidence_locator_ids\":[\"WEB06-E03\"]}],\"quantitative_findings\":[],\"limitations\":[{\"statement\":\"Study investigates regeneration of a single PFAS (PFOS) on one adsorbent type (GAC) under a specific optimized regenerant composition (0.1 mol/L HCl in ethanol) and contact time (30 min), limiting generalizability to other PFAS, adsorbents, or conditions.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB06-E01\"]},{\"statement\":\"The abstract does not report quantitative regeneration efficiencies, PFOS loadings, breakthrough behavior after regeneration, or mass balance on PFOS between GAC and regenerant phases, constraining quantitative comparison with alternative regeneration or replacement strategies.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB06-E01\",\"WEB06-E02\"]}],\"residuals_byproducts\":[{\"statement\":\"Regeneration mechanism was attributed to physical displacement and solubilization of PFAS from exhausted GAC into the regenerant solution, implying a PFAS-rich liquid waste stream requiring further management but with no indication of PFAS destruction.\",\"basis\":\"author_reported\",\"evidence_locator_ids\":[\"WEB06-E02\"]},{\"statement\":\"BET analysis showed an increase in total pore volume and surface area in regenerated GAC compared with PFAS-saturated GAC, indicating that the regeneration process alters the pore structure in a way consistent with restored adsorption capacity.\",\"basis\":\"author_reported\",\"evidence_locator_ids\":[\"WEB06-E03\"]}],\"comparability\":{\"status\":\"descriptive_only\",\"reason\":\"The abstract qualitatively reports effective regeneration of PFOS-saturated GAC with 0.1 mol/L HCl in ethanol for at least five cycles and notes increased BET surface area and pore volume, but does not provide numeric regeneration efficiencies, adsorption capacities, or PFOS mass balances. These data are useful for identifying a regeneration approach and mechanism but cannot be directly compared quantitatively with other regeneration or media replacement options.\",\"evidence_locator_ids\":[\"WEB06-E01\",\"WEB06-E02\",\"WEB06-E03\"]}}],\"extraction_notes\":[\"Only abstract text was available for WEB06; no full-text experimental details, numerical regeneration efficiencies, PFOS loadings, or cost/energy information could be extracted.\",\"The title specifies PFOS, so PFAS identity in the record is constrained to PFOS, although the abstract uses the broader term PFAS-saturated GAC. No additional PFAS are identifiable from the provided text.\",\"No held-out anchor DOI, URL, or title from the exclusion list was encountered in this source packet.\"]}",
+  "request": {
+    "max_completion_tokens": 16000,
+    "messages": [
+      {
+        "content": "You are an evidence extraction specialist for PFAS treatment and remediation\nresearch. Build a structured study evidence table before any narrative review\nis written.\n\nExtract one record per primary-study experiment, modeled scenario, or field\ndeployment that contributes usable evidence to the review task. A paper may\nproduce more than one record only when materially different matrices,\ntechnologies, operating regimes, or endpoints would otherwise be conflated.\n\nReview articles and perspectives may help identify terminology or primary\nstudies, but they must not be used as the source of a quantitative study\nrecord. Never copy a review table as though it were a primary result.\n\nFor every populated source-dependent field:\n- preserve the PFAS identity or class, matrix, starting concentration or\n  loading, operating conditions, study scale, measured endpoint, value, unit,\n  and material qualifiers when reported;\n- attach only the field-level evidence locator identifiers that directly\n  support that specific value or statement;\n- use an empty string or empty array when the source does not report the\n  information; do not infer or estimate it;\n- do not turn the absence of information in the supplied packet into a study\n  finding, quantitative result, or author-reported limitation unless the source\n  explicitly states that absence;\n- distinguish removal, separation, sorption, parent-compound loss,\n  transformation, degradation, destruction, defluorination, mineralization,\n  total organofluorine change, and toxicity change;\n- classify endpoint_type from what was actually measured, not from the\n  authors' preferred label. Parent loss alone is not destruction. Phase\n  transfer is removal or separation, not degradation. Inorganic fluoride\n  release or fluorine-balance closure can establish defluorination but cannot\n  by itself establish mineralization. Use mineralization only when direct\n  carbon-fate evidence such as CO2/inorganic-carbon production or a carbon\n  balance is reported. Preserve a broader author term in reported_term and\n  explain any mismatch in interpretation;\n- do not normalize or compare values unless their units, denominators,\n  matrices, PFAS scope, operating conditions, and endpoints permit it.\n\nOnly populate quantitative_findings when the source reports an actual numeric\nvalue, inequality, approximate value, range, or explicit ND/not-detected\nresult. Put the number or censoring marker in value and the measurement unit in\nunit. Normalize Unicode inequality signs to ASCII >= or <= and range dashes to\nan ASCII hyphen while preserving the source wording in qualifiers. A unit or\norder-of-magnitude scale without a number is not a quantitative finding.\nQualitative parent loss, intermediate formation, or disappearance belongs in\nthe endpoint interpretation or residual/byproduct statements instead.\n\nSet value_form to exactly one of:\n- exact_numeric: a bare number such as `99.7` or `1.2e-3`;\n- approximate_numeric: `~` followed by a number;\n- inequality: `<`, `<=`, `>`, or `>=` followed by a number;\n- range: two numbers separated by `-` or `to`; or\n- not_detected: exactly `ND`, `N/D`, `not detected`,\n  `below detection limit`, or `below quantification limit`.\n\nPut uncertainty, denominators, fold-change wording, and explanatory text in\nqualifiers rather than value. A deterministic validator will remove malformed\nquantitative fields before source verification.\n\nFor limitations, use basis=author_reported only when the source states the\nlimitation. Use basis=design_inferred only for a constraint that follows\ndirectly from cited design evidence, such as one matrix, one compound, or\nbench-scale operation. Never label missing information in the supplied packet\nas a scientific limitation of the study.\n\nMark each record as comparable with conditions, descriptive only, or not\ncomparable. Comparability is an analyst inference rather than a quotation:\nattach locators for the matrix, scale, conditions, endpoint, and denominator\non which the inference rests, and explain the reason. Do not reward a study\nfor reporting a larger percentage when its endpoint or conditions differ.\n\nThe task was derived from a defining review that is held out from all\ncandidate retrieval systems. The supplied anchor identifiers are an exclusion\nlist, not evidence. Do not extract from the anchor, cite it, reconstruct its\nconclusions, or use its tables.\n\nReturn one JSON object that follows the supplied evidence-table schema exactly.\nDo not write the narrative review in this step.\n",
+        "role": "system"
+      },
+      {
+        "content": "Task:\n{\"review_brief\":\"Prepare a focused review of the evidence needed to choose among regeneration, replacement, and end-of-life management for PFAS-loaded adsorption media.\",\"task_id\":\"RT03\",\"title\":\"Deciding whether to regenerate or replace PFAS adsorption media\"}\n\nTask-specific data extraction objective:\nExtract adsorbent and PFAS identity, loading protocol, regeneration or disposal method, operating conditions, desorption or destruction endpoint, capacity recovery, cycle number, material change, residual streams, energy, chemicals, and cost.\n\nSource system (return this exact value):\ngpt51_web_search\n\nCandidate source identifier (all records must use this exact source_id):\nWEB06\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nFrozen inspected Web Search sources and evidence locators:\n{\n  \"access_scope\": \"abstract\",\n  \"capture_source_id\": \"WEB60\",\n  \"citation\": \"Ranjbar E., Ahmadi F., Baghdadi M. Regeneration of perfluorooctane sulfonic acid (PFOS) loaded granular activated carbon using organic/inorganic mixed solutions. Chemical Engineering Science. 2024;300:120623.\",\n  \"covered_component_ids\": [\n    \"RT03-C1\",\n    \"RT03-C3\"\n  ],\n  \"doi\": \"10.1016/j.ces.2024.120623\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.ces.2024.120623\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB06-E01\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Abstract\",\n      \"text\": \"Herein, regeneration of PFAS-saturated GAC was studied and organic/inorganic mixed solutions were used to regenerate exhausted GAC. Optimization experiments revealed that a regenerant solution consisting of 0.1 mol/L HCl in ethanol with a 30-min residence time effectively regenerated PFAS-saturated GAC.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB06-E02\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Abstract / conclusion\",\n      \"text\": \"The results showed that even after the fifth usage cycle, the proposed regeneration method can efficiently regenerate the PFAS-saturated GAC. Identification of the regeneration mechanism indicated that the regeneration process can be attributed to physical displacement and solubilization of PFAS from exhausted GAC.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB06-E03\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Abstract / conclusion\",\n      \"text\": \"Additionally, BET analysis of PFAS-saturated and regenerated GACs revealed an increase in total pore volume and BET surface area in regenerated GACs, demonstrating the suggested method\\u2019s regeneration capabilities.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://www.sciencedirect.com/science/article/pii/S0009250924009230\",\n  \"source_id\": \"WEB06\",\n  \"source_limitations\": [\n    \"Only abstract content was captured; specific PFOS loadings, regeneration efficiencies per cycle, and breakthrough curves after regeneration are not visible.\",\n    \"The fate of PFOS during regeneration (complete recovery in liquid phase vs partial degradation), composition and volume of regenerant waste, and any cost or energy evaluation are not provided in the inspected abstract.\"\n  ],\n  \"title\": \"Regeneration of perfluorooctane sulfonic acid (PFOS) loaded granular activated carbon using organic/inorganic mixed solutions\",\n  \"year\": \"2024\"\n}\n\nDo not use search-result snippets as evidence. Use only the frozen inspected\nsource packet and preserve its declared access scope. Omit any source that\nresolves to a held-out anchor DOI, URL, or exact title and report the violation\nin extraction_notes. Extract at most three materially distinct records from\nthis source, prioritizing records that answer the task components.\n\nExtract primary-study evidence needed to answer the task and return the\nschema-constrained study evidence table.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_review_evidence_table",
+        "schema": {
+          "$defs": {
+            "endpoint": {
+              "additionalProperties": false,
+              "properties": {
+                "endpoint_type": {
+                  "enum": [
+                    "removal",
+                    "separation",
+                    "sorption",
+                    "parent_compound_loss",
+                    "transformation",
+                    "degradation",
+                    "destruction",
+                    "defluorination",
+                    "mineralization",
+                    "total_organofluorine_change",
+                    "toxicity_change",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB06-E01",
+                      "WEB06-E02",
+                      "WEB06-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "interpretation": {
+                  "type": "string"
+                },
+                "reported_term": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "endpoint_type",
+                "reported_term",
+                "interpretation",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceRecord": {
+              "additionalProperties": false,
+              "properties": {
+                "citation": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "comparability": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_locator_ids": {
+                      "items": {
+                        "enum": [
+                          "WEB06-E01",
+                          "WEB06-E02",
+                          "WEB06-E03"
+                        ],
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "type": "array"
+                    },
+                    "reason": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "enum": [
+                        "comparable_with_conditions",
+                        "descriptive_only",
+                        "not_comparable"
+                      ],
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "status",
+                    "reason",
+                    "evidence_locator_ids"
+                  ],
+                  "type": "object"
+                },
+                "doi_or_stable_url": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "endpoints": {
+                  "items": {
+                    "$ref": "#/$defs/endpoint"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "limitations": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "matrix": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "operating_conditions": {
+                  "items": {
+                    "$ref": "#/$defs/namedValue"
+                  },
+                  "type": "array"
+                },
+                "pfas_scope": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceText"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "quantitative_findings": {
+                  "items": {
+                    "$ref": "#/$defs/quantitativeValue"
+                  },
+                  "type": "array"
+                },
+                "record_id": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "residuals_byproducts": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "source_id": {
+                  "enum": [
+                    "WEB06"
+                  ],
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "study_scale": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "study_type": {
+                  "enum": [
+                    "primary_experiment",
+                    "pilot_or_field_deployment",
+                    "modeling_or_life_cycle_study",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "treatment": {
+                  "$ref": "#/$defs/evidenceText"
+                }
+              },
+              "required": [
+                "record_id",
+                "source_id",
+                "doi_or_stable_url",
+                "citation",
+                "study_type",
+                "study_scale",
+                "matrix",
+                "pfas_scope",
+                "treatment",
+                "operating_conditions",
+                "endpoints",
+                "quantitative_findings",
+                "limitations",
+                "residuals_byproducts",
+                "comparability"
+              ],
+              "type": "object"
+            },
+            "evidenceStatement": {
+              "additionalProperties": false,
+              "properties": {
+                "basis": {
+                  "enum": [
+                    "author_reported",
+                    "design_inferred"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB06-E01",
+                      "WEB06-E02",
+                      "WEB06-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "statement": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "statement",
+                "basis",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceText": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB06-E01",
+                      "WEB06-E02",
+                      "WEB06-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "namedValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB06-E01",
+                      "WEB06-E02",
+                      "WEB06-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "quantitativeValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB06-E01",
+                      "WEB06-E02",
+                      "WEB06-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "value_form": {
+                  "enum": [
+                    "exact_numeric",
+                    "approximate_numeric",
+                    "inequality",
+                    "range",
+                    "not_detected"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "value_form",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "properties": {
+            "extraction_notes": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "records": {
+              "items": {
+                "$ref": "#/$defs/evidenceRecord"
+              },
+              "maxItems": 3,
+              "type": "array"
+            },
+            "source_system": {
+              "enum": [
+                "gpt51_web_search"
+              ],
+              "type": "string"
+            },
+            "task_id": {
+              "enum": [
+                "RT03"
+              ],
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "source_system",
+            "records",
+            "extraction_notes"
+          ],
+          "title": "PFAS review study evidence table",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "3a41d0c087c923f38d49758988641eae0599146028861099253f2ca23b9e2dd0",
+  "response_metadata": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.01824625,
+    "finish_reason": "stop",
+    "input_tokens": 2805,
+    "latency_seconds": 15.19989600009285,
+    "output_tokens": 1474,
+    "reasoning_tokens": 299,
+    "response_id": "chatcmpl-E9Ma4nuAOV8vbsp8w3SkFhueZewtf",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 4279,
+    "web_search_calls": 0
+  },
+  "result": {
+    "extraction_notes": [
+      "Only abstract text was available for WEB06; no full-text experimental details, numerical regeneration efficiencies, PFOS loadings, or cost/energy information could be extracted.",
+      "The title specifies PFOS, so PFAS identity in the record is constrained to PFOS, although the abstract uses the broader term PFAS-saturated GAC. No additional PFAS are identifiable from the provided text.",
+      "No held-out anchor DOI, URL, or title from the exclusion list was encountered in this source packet."
+    ],
+    "records": [
+      {
+        "citation": "Ranjbar E., Ahmadi F., Baghdadi M. Regeneration of perfluorooctane sulfonic acid (PFOS) loaded granular activated carbon using organic/inorganic mixed solutions. Chemical Engineering Science. 2024;300:120623.",
+        "comparability": {
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E02",
+            "WEB06-E03"
+          ],
+          "reason": "The abstract qualitatively reports effective regeneration of PFOS-saturated GAC with 0.1 mol/L HCl in ethanol for at least five cycles and notes increased BET surface area and pore volume, but does not provide numeric regeneration efficiencies, adsorption capacities, or PFOS mass balances. These data are useful for identifying a regeneration approach and mechanism but cannot be directly compared quantitatively with other regeneration or media replacement options.",
+          "status": "descriptive_only"
+        },
+        "doi_or_stable_url": "https://doi.org/10.1016/j.ces.2024.120623",
+        "endpoints": [
+          {
+            "endpoint_type": "separation",
+            "evidence_locator_ids": [
+              "WEB06-E01",
+              "WEB06-E02"
+            ],
+            "interpretation": "PFAS (PFOS) was desorbed from exhausted GAC into the regenerant solution, restoring adsorption capacity; endpoint reflects phase transfer (desorption) rather than PFAS destruction.",
+            "reported_term": "regeneration of PFAS-saturated GAC"
+          },
+          {
+            "endpoint_type": "sorption",
+            "evidence_locator_ids": [
+              "WEB06-E02"
+            ],
+            "interpretation": "Ability of regenerated GAC to be reused in up to five adsorption\u2013regeneration cycles with maintained performance; capacity recovery is qualitative in abstract.",
+            "reported_term": "regeneration efficiency / reuse of GAC over multiple cycles"
+          },
+          {
+            "endpoint_type": "other",
+            "evidence_locator_ids": [
+              "WEB06-E03"
+            ],
+            "interpretation": "BET analysis showed increased total pore volume and surface area in regenerated GAC compared with PFAS-saturated GAC, indicating structural/morphological changes associated with regeneration.",
+            "reported_term": "BET surface area and total pore volume change"
+          }
+        ],
+        "limitations": [
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB06-E01"
+            ],
+            "statement": "Study investigates regeneration of a single PFAS (PFOS) on one adsorbent type (GAC) under a specific optimized regenerant composition (0.1 mol/L HCl in ethanol) and contact time (30 min), limiting generalizability to other PFAS, adsorbents, or conditions."
+          },
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB06-E01",
+              "WEB06-E02"
+            ],
+            "statement": "The abstract does not report quantitative regeneration efficiencies, PFOS loadings, breakthrough behavior after regeneration, or mass balance on PFOS between GAC and regenerant phases, constraining quantitative comparison with alternative regeneration or replacement strategies."
+          }
+        ],
+        "matrix": {
+          "evidence_locator_ids": [
+            "WEB06-E01"
+          ],
+          "value": "PFAS-saturated granular activated carbon (solid phase); aqueous PFAS solution contact implied but not detailed in abstract"
+        },
+        "operating_conditions": [
+          {
+            "evidence_locator_ids": [
+              "WEB06-E01"
+            ],
+            "name": "Regenerant composition",
+            "qualifiers": "Identified as optimal organic/inorganic mixed solution for regeneration",
+            "unit": null,
+            "value": "0.1 mol/L HCl in ethanol"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB06-E01"
+            ],
+            "name": "Regeneration contact time (residence time)",
+            "qualifiers": "Reported as optimal residence time for effective regeneration",
+            "unit": "min",
+            "value": "30"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB06-E02"
+            ],
+            "name": "Number of regeneration/usage cycles evaluated",
+            "qualifiers": "Abstract reports effective regeneration even after the fifth usage cycle",
+            "unit": null,
+            "value": "5"
+          }
+        ],
+        "pfas_scope": [
+          {
+            "evidence_locator_ids": [
+              "WEB06-E01"
+            ],
+            "value": "Perfluorooctane sulfonic acid (PFOS) (PFAS-saturated GAC; PFOS identified in title)"
+          }
+        ],
+        "quantitative_findings": [],
+        "record_id": "WEB06-R1",
+        "residuals_byproducts": [
+          {
+            "basis": "author_reported",
+            "evidence_locator_ids": [
+              "WEB06-E02"
+            ],
+            "statement": "Regeneration mechanism was attributed to physical displacement and solubilization of PFAS from exhausted GAC into the regenerant solution, implying a PFAS-rich liquid waste stream requiring further management but with no indication of PFAS destruction."
+          },
+          {
+            "basis": "author_reported",
+            "evidence_locator_ids": [
+              "WEB06-E03"
+            ],
+            "statement": "BET analysis showed an increase in total pore volume and surface area in regenerated GAC compared with PFAS-saturated GAC, indicating that the regeneration process alters the pore structure in a way consistent with restored adsorption capacity."
+          }
+        ],
+        "source_id": "WEB06",
+        "study_scale": {
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E02"
+          ],
+          "value": "Laboratory-scale column/batch regeneration of PFAS-saturated granular activated carbon (GAC)"
+        },
+        "study_type": "primary_experiment",
+        "treatment": {
+          "evidence_locator_ids": [
+            "WEB06-E01"
+          ],
+          "value": "Regeneration of exhausted granular activated carbon using mixed organic/inorganic regenerant solutions, optimized to 0.1 mol/L HCl in ethanol"
+        }
+      }
+    ],
+    "source_system": "gpt51_web_search",
+    "task_id": "RT03"
+  },
+  "result_kind": "json",
+  "stage": "structured_extraction"
+}

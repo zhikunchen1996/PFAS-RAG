@@ -1,0 +1,302 @@
+{
+  "call_key": "RT10:gpt51_web_search:verify:RT10-gpt51_web_search-WEB12-R03",
+  "created_at": "2026-08-05T04:47:18.824317+00:00",
+  "raw_response_text": "{\"task_id\":\"RT10\",\"record_id\":\"RT10-gpt51_web_search-WEB12-R03\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record DOI/URL exactly matches the source DOI and URL (10.1021/acs.est.5b03715, ACS publisher page).\"},{\"field_path\":\"citation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The journal (Environmental Science & Technology), year (2016), and title phrase match the source title and metadata.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Both WEB12-E01 and WEB12-E03 explicitly identify PFOA as the PFAS studied, matching 'Perfluorooctanoic acid (PFOA)'.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB12-E01 describes PFOA destruction in a UV\u2013persulfate advanced oxidation process and WEB12-E03 notes sulfate-radical inhibition in UV\u2013persulfate systems with carbonate and chloride. Describing UV\u2013persulfate treatment of PFOA with carbonate species as matrix components is consistent with these snippets.\"},{\"field_path\":\"matrix.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB12-E01 and WEB12-E03 support that PFOA is treated in UV\u2013persulfate aqueous systems and that common inorganic ions including carbonate are evaluated in realistic matrices. However, the specific mention of bicarbonate vs. carbonate speciation and the explicit comparison phrase 'compared to clean laboratory water' are interpretive extensions beyond the snippets.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB12-E03 states that inorganic ions inhibit sulfate-radical reactions and thereby slow PFOA degradation, so classifying this endpoint as 'degradation' is appropriate.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB12-E03 supports that carbonate species (among other ions) inhibit sulfate-radical reactions in UV\u2013persulfate systems and slow PFOA degradation in realistic matrices. The record\u2019s added detail about an explicit carbonate-present vs. carbonate-absent comparison and clean-water contrast is reasonable but not directly stated in the snippets.\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This is a concise paraphrase of WEB12-E03, which explains that carbonate species inhibit sulfate-radical reactions and slow PFOA degradation.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The second endpoint concerns QR (quenching-rate) parameters, which are process descriptors rather than direct degradation or byproduct metrics, so classifying it as 'other' matches WEB12-E03.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB12-E03 states that QR analyses quantify how chloride and carbonate inhibit sulfate-radical reactions in UV\u2013persulfate systems, which aligns with the interpretation that QR gives a mechanistic parameter for matrix-induced reduction in degradation efficiency.\"},{\"field_path\":\"endpoints[1].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"'Sulfate-radical quenching rate (QR) by carbonate' accurately reflects the QR analyses for carbonate species described in WEB12-E03.\"},{\"field_path\":\"operating_conditions[0].name\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB12-E03 mentions chloride and carbonate species as inorganic ions in the system; treating these as 'co-ions' is consistent with their role in the matrix.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB12-E03 supports the presence of carbonate species as co-ions but does not specify their speciation as HCO3\u2212/CO3^2\u2212. The inclusion of specific species is interpretive beyond the snippet.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"No quantitative value is given for co-ion concentration; leaving the unit as null is appropriate and consistent with the qualitative description in WEB12-E03.\"},{\"field_path\":\"operating_conditions[0].qualifiers\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The qualifier notes that carbonate species are identified generically and that exact speciation and concentrations were not readable. This matches the source limitations and the fact that only table descriptions (not numeric entries) were accessible.\"},{\"field_path\":\"operating_conditions[1].name\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB12-E03 explicitly references 'Quenching\u2013rate (QR) analyses,' so naming this operating condition 'Process analysis' with QR analysis is consistent.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The value 'Quenching-rate (QR) analysis' is directly supported by WEB12-E03, which discusses QR analyses in the UV\u2013persulfate system.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This field describes an analytical approach rather than a numeric variable; no unit is appropriate and consistent with WEB12-E03.\"},{\"field_path\":\"operating_conditions[1].qualifiers\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The qualifier that QR analysis was used to quantify scavenging of sulfate radicals and relate it to reduced PFOA degradation directly reflects the description in WEB12-E03.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB12-E02 and WEB12-E03 state that quantitative information (rate constants, degrees of defluorination, QR analyses) are in tables, and the source limitations note that these tables were not viewable. Inferring that numeric carbonate concentrations, QR constants, and degradation rates could not be extracted is a justified design-inferred limitation.\"},{\"field_path\":\"limitations[0].basis\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Classifying the limitation as 'design_inferred' matches the fact that the limitation arises from inaccessible quantitative table data rather than an explicit author statement.\"},{\"field_path\":\"residuals_byproducts[0].statement\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB12-E01 supports that the study examines by-product (including chlorate) formation along with PFOA destruction, and WEB12-E03 supports that carbonate species act as competing scavengers that slow degradation. However, the explicit implication that carbonate alters inorganic byproduct *profiles* (e.g., chlorate formation changes with carbonate) is not stated in the snippets and is an extrapolation.\"},{\"field_path\":\"residuals_byproducts[0].basis\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The statement synthesizes supported design facts (focus on by-products and radical scavenging by carbonate) and is reasonably labeled as design_inferred rather than author-reported.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB12-E01 describes kinetic modeling constrained by experimental data in a UV\u2013persulfate process, implying bench-scale lab experiments, and WEB12-E03 describes QR analyses. The summary 'Bench-scale UV\u2013persulfate experiments ... supported by QR analysis and kinetic modeling' is consistent with these snippets.\"},{\"field_path\":\"study_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source is a peer-reviewed primary research article reporting original experiments and modeling (WEB12-E01, publication metadata), so 'primary_experiment' is appropriate.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Given that only qualitative descriptions of inhibition and the existence of multiple co-ion conditions are visible (WEB12-E02, WEB12-E03), and numeric data are not accessible, describing the comparability assessment as 'descriptive_only' is appropriate.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB12-E02 and WEB12-E03 indicate multiple water/co-ion conditions with kinetic and QR analyses but without accessible numeric values in the viewed content. Explaining that only qualitative inhibition trends can be reported is a faithful inference from these limitations.\"},{\"field_path\":\"endpoints\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Taken together, the endpoint entries correctly reflect that the study measured PFOA degradation in UV\u2013persulfate systems and used QR analyses to quantify inhibition of sulfate-radical reactions by inorganic ions (WEB12-E03).\"},{\"field_path\":\"quantitative_findings\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Leaving this array empty is consistent with the fact that numeric data were not accessible from the table descriptions and abstract snippets (WEB12-E02, source limitations).\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core aspects\u2014PFAS identity (PFOA), treatment process (UV\u2013persulfate), presence and role of carbonate co-ions, degradation and mechanistic QR endpoints, qualitative inhibition effect, and bench-scale experimental context\u2014are supported by the available snippets. Some qualifiers (specific carbonate speciation, explicit byproduct-profile changes, and clean-water comparison language) extend modestly beyond the text but do not alter the fundamental interpretation of matrix effects. The record is therefore usable for qualitative synthesis of water-matrix impacts, while numeric magnitudes and detailed speciation should not be inferred from it.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of how water-matrix effects should be tested and reported so that PFAS treatment performance can be translated beyond clean laboratory water.\",\"task_id\":\"RT10\",\"title\":\"Designing PFAS treatment studies that remain valid in real water\"}\n\nTask-specific extraction objective:\nExtract matrix constituent and concentration, PFAS identity, treatment, clean-water control, matrix-modified condition, direction and magnitude of effect, endpoint, proposed mechanism, constituent interaction, matched operating conditions, and study scale.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.hazadv.2023.100322\"],\"all_blocked_titles\":[\"effects of water matrix on per and poly fluoroalkyl substances pfas treatment physical separation and degradation processes a review\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.hazadv.2023.100322\"],\"anchor_id\":\"AR-ZEIDABADI-2023\",\"corpus_source\":\"2023 - Zeidabadi - Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment - Physical-separation and degradation processes - A review.pdf\",\"doi\":\"10.1016/j.hazadv.2023.100322\",\"title\":\"Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment: Physical-separation and degradation processes - A review\",\"url\":\"https://doi.org/10.1016/j.hazadv.2023.100322\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Environmental Science & Technology, 2016. Perfluorooctanoic Acid Degradation Using UV\\u2013Persulfate Process: Modeling of the Degradation and Chlorate Formation.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB12-E02\",\n      \"WEB12-E03\"\n    ],\n    \"reason\": \"The experiments were designed to compare PFOA degradation under carbonate-present versus carbonate-absent conditions using matched UV\\u2013persulfate treatment, but due to lack of accessible numeric data, only the qualitative inhibition trend can be reported for matrix effects.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1021/acs.est.5b03715\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"degradation\",\n      \"evidence_locator_ids\": [\n        \"WEB12-E03\"\n      ],\n      \"interpretation\": \"PFOA degradation in UV\\u2013persulfate systems was inhibited when carbonate species were present, with QR analysis indicating that carbonate scavenging of sulfate radicals slows PFOA transformation in realistic water matrices compared to clean water.\",\n      \"reported_term\": \"PFOA degradation slowed by carbonate species\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"WEB12-E03\"\n      ],\n      \"interpretation\": \"QR analysis quantified the rate at which carbonate species quench sulfate radicals, providing a mechanistic parameter that describes the matrix-induced reduction in PFOA degradation efficiency.\",\n      \"reported_term\": \"sulfate-radical quenching rate (QR) by carbonate\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB12-E02\",\n        \"WEB12-E03\"\n      ],\n      \"statement\": \"While carbonate-induced inhibition of PFOA degradation is clearly described, the absence of accessible numeric carbonate concentrations, QR constants, and corresponding degradation rates prevents extraction of quantitative matrix-effect magnitudes.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB12-E02\",\n      \"WEB12-E03\"\n    ],\n    \"value\": \"Aqueous PFOA solutions subjected to UV\\u2013persulfate treatment in the presence of carbonate species (e.g., bicarbonate/carbonate), representing more realistic water matrices compared to clean laboratory water.\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB12-E03\"\n      ],\n      \"name\": \"Co-ions\",\n      \"qualifiers\": \"Identified generically as carbonate species; the exact speciation and concentrations in each matrix were not readable.\",\n      \"unit\": null,\n      \"value\": \"Carbonate species (e.g., HCO3\\u2212 / CO3^2\\u2212)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB12-E03\"\n      ],\n      \"name\": \"Process analysis\",\n      \"qualifiers\": \"Used to quantify how carbonate species scavenge sulfate radicals in UV\\u2013persulfate systems and relate this to reduced PFOA degradation.\",\n      \"unit\": null,\n      \"value\": \"Quenching-rate (QR) analysis\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB12-E01\",\n        \"WEB12-E03\"\n      ],\n      \"value\": \"Perfluorooctanoic acid (PFOA)\"\n    }\n  ],\n  \"quantitative_findings\": [],\n  \"record_id\": \"RT10-gpt51_web_search-WEB12-R03\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB12-E01\",\n        \"WEB12-E03\"\n      ],\n      \"statement\": \"The study framework implicates carbonate species as competing radical scavengers that can alter both PFOA degradation and inorganic byproduct formation (e.g., chlorate) in UV\\u2013persulfate treatment, but the inspected content does not provide specific shifts in byproduct profiles with carbonate.\"\n    }\n  ],\n  \"source_id\": \"WEB12\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB12-E01\",\n      \"WEB12-E03\"\n    ],\n    \"value\": \"Bench-scale UV\\u2013persulfate experiments with carbonate species present as co-ions, supported by quenching-rate (QR) analysis and kinetic modeling.\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB12-E01\",\n      \"WEB12-E03\"\n    ],\n    \"value\": \"UV\\u2013persulfate advanced oxidation of PFOA with carbonate species added as matrix components to probe their impact on sulfate-radical-based degradation.\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"publisher_page\",\n  \"capture_source_id\": \"WEB13\",\n  \"citation\": \"Environmental Science & Technology, 2016\",\n  \"covered_component_ids\": [\n    \"RT10-C1\",\n    \"RT10-C2\",\n    \"RT10-C3\"\n  ],\n  \"doi\": \"10.1021/acs.est.5b03715\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1021/acs.est.5b03715\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB12-E01\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Publisher page / abstract snippet\",\n      \"text\": \"The work investigates PFOA destruction and by\\u2011product (including chlorate) formation in a UV\\u2013persulfate advanced oxidation process, developing a kinetic model constrained by experimental data.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB12-E02\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Supporting information description (ACS snippet)\",\n      \"text\": \"Tables described in the article summarize pseudo\\u2011first\\u2011order rate constants, degrees of defluorination and mineralization, and mass balances for PFOA and transformation products across different water samples and co\\u2011ion conditions.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB12-E03\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"ACS snippet (tables description)\",\n      \"text\": \"Quenching\\u2013rate (QR) analyses are reported for chloride and carbonate species, quantifying how these common inorganic ions inhibit sulfate\\u2011radical reactions in UV\\u2013persulfate systems and thereby slow PFOA degradation in realistic matrices.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://pubs.acs.org/doi/10.1021/acs.est.5b03715\",\n  \"source_id\": \"WEB12\",\n  \"source_limitations\": [\n    \"HTTP 403 blocked direct full-text access; only the publisher summary and description of tables could be inspected.\",\n    \"Specific matrix compositions, persulfate doses, and UV fluence were not directly readable from the viewed content, though indicated to be tabulated in the article and SI.\"\n  ],\n  \"title\": \"Perfluorooctanoic Acid Degradation Using UV\\u2013Persulfate Process: Modeling of the Degradation and Chlorate Formation\",\n  \"year\": \"2016\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "2cb409c22f4aaf54627dd1bfb5390f8b62e0e8b3491ffdf97937514a0fa336d6",
+  "response_metadata": {
+    "cached_input_tokens": 1152,
+    "estimated_cost_usd": 0.0334865,
+    "finish_reason": "stop",
+    "input_tokens": 2922,
+    "latency_seconds": 29.88991916598752,
+    "output_tokens": 3113,
+    "reasoning_tokens": 1066,
+    "response_id": "chatcmpl-E9NofvzJxhsn9OEilX62KVUhaNlil",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 6035,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The record DOI/URL exactly matches the source DOI and URL (10.1021/acs.est.5b03715, ACS publisher page).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "citation",
+        "reason": "The journal (Environmental Science & Technology), year (2016), and title phrase match the source title and metadata.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "Both WEB12-E01 and WEB12-E03 explicitly identify PFOA as the PFAS studied, matching 'Perfluorooctanoic acid (PFOA)'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "WEB12-E01 describes PFOA destruction in a UV\u2013persulfate advanced oxidation process and WEB12-E03 notes sulfate-radical inhibition in UV\u2013persulfate systems with carbonate and chloride. Describing UV\u2013persulfate treatment of PFOA with carbonate species as matrix components is consistent with these snippets.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "matrix.value",
+        "reason": "WEB12-E01 and WEB12-E03 support that PFOA is treated in UV\u2013persulfate aqueous systems and that common inorganic ions including carbonate are evaluated in realistic matrices. However, the specific mention of bicarbonate vs. carbonate speciation and the explicit comparison phrase 'compared to clean laboratory water' are interpretive extensions beyond the snippets.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "WEB12-E03 states that inorganic ions inhibit sulfate-radical reactions and thereby slow PFOA degradation, so classifying this endpoint as 'degradation' is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "WEB12-E03 supports that carbonate species (among other ions) inhibit sulfate-radical reactions in UV\u2013persulfate systems and slow PFOA degradation in realistic matrices. The record\u2019s added detail about an explicit carbonate-present vs. carbonate-absent comparison and clean-water contrast is reasonable but not directly stated in the snippets.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "This is a concise paraphrase of WEB12-E03, which explains that carbonate species inhibit sulfate-radical reactions and slow PFOA degradation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "The second endpoint concerns QR (quenching-rate) parameters, which are process descriptors rather than direct degradation or byproduct metrics, so classifying it as 'other' matches WEB12-E03.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "WEB12-E03 states that QR analyses quantify how chloride and carbonate inhibit sulfate-radical reactions in UV\u2013persulfate systems, which aligns with the interpretation that QR gives a mechanistic parameter for matrix-induced reduction in degradation efficiency.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].reported_term",
+        "reason": "'Sulfate-radical quenching rate (QR) by carbonate' accurately reflects the QR analyses for carbonate species described in WEB12-E03.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].name",
+        "reason": "WEB12-E03 mentions chloride and carbonate species as inorganic ions in the system; treating these as 'co-ions' is consistent with their role in the matrix.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "operating_conditions[0].value",
+        "reason": "WEB12-E03 supports the presence of carbonate species as co-ions but does not specify their speciation as HCO3\u2212/CO3^2\u2212. The inclusion of specific species is interpretive beyond the snippet.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "No quantitative value is given for co-ion concentration; leaving the unit as null is appropriate and consistent with the qualitative description in WEB12-E03.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].qualifiers",
+        "reason": "The qualifier notes that carbonate species are identified generically and that exact speciation and concentrations were not readable. This matches the source limitations and the fact that only table descriptions (not numeric entries) were accessible.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].name",
+        "reason": "WEB12-E03 explicitly references 'Quenching\u2013rate (QR) analyses,' so naming this operating condition 'Process analysis' with QR analysis is consistent.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "The value 'Quenching-rate (QR) analysis' is directly supported by WEB12-E03, which discusses QR analyses in the UV\u2013persulfate system.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "This field describes an analytical approach rather than a numeric variable; no unit is appropriate and consistent with WEB12-E03.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].qualifiers",
+        "reason": "The qualifier that QR analysis was used to quantify scavenging of sulfate radicals and relate it to reduced PFOA degradation directly reflects the description in WEB12-E03.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].statement",
+        "reason": "WEB12-E02 and WEB12-E03 state that quantitative information (rate constants, degrees of defluorination, QR analyses) are in tables, and the source limitations note that these tables were not viewable. Inferring that numeric carbonate concentrations, QR constants, and degradation rates could not be extracted is a justified design-inferred limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].basis",
+        "reason": "Classifying the limitation as 'design_inferred' matches the fact that the limitation arises from inaccessible quantitative table data rather than an explicit author statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "residuals_byproducts[0].statement",
+        "reason": "WEB12-E01 supports that the study examines by-product (including chlorate) formation along with PFOA destruction, and WEB12-E03 supports that carbonate species act as competing scavengers that slow degradation. However, the explicit implication that carbonate alters inorganic byproduct *profiles* (e.g., chlorate formation changes with carbonate) is not stated in the snippets and is an extrapolation.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0].basis",
+        "reason": "The statement synthesizes supported design facts (focus on by-products and radical scavenging by carbonate) and is reasonably labeled as design_inferred rather than author-reported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "WEB12-E01 describes kinetic modeling constrained by experimental data in a UV\u2013persulfate process, implying bench-scale lab experiments, and WEB12-E03 describes QR analyses. The summary 'Bench-scale UV\u2013persulfate experiments ... supported by QR analysis and kinetic modeling' is consistent with these snippets.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_type",
+        "reason": "The source is a peer-reviewed primary research article reporting original experiments and modeling (WEB12-E01, publication metadata), so 'primary_experiment' is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "Given that only qualitative descriptions of inhibition and the existence of multiple co-ion conditions are visible (WEB12-E02, WEB12-E03), and numeric data are not accessible, describing the comparability assessment as 'descriptive_only' is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "WEB12-E02 and WEB12-E03 indicate multiple water/co-ion conditions with kinetic and QR analyses but without accessible numeric values in the viewed content. Explaining that only qualitative inhibition trends can be reported is a faithful inference from these limitations.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints",
+        "reason": "Taken together, the endpoint entries correctly reflect that the study measured PFOA degradation in UV\u2013persulfate systems and used QR analyses to quantify inhibition of sulfate-radical reactions by inorganic ions (WEB12-E03).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings",
+        "reason": "Leaving this array empty is consistent with the fact that numeric data were not accessible from the table descriptions and abstract snippets (WEB12-E02, source limitations).",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT10-gpt51_web_search-WEB12-R03",
+    "record_usable": true,
+    "record_usable_rationale": "Core aspects\u2014PFAS identity (PFOA), treatment process (UV\u2013persulfate), presence and role of carbonate co-ions, degradation and mechanistic QR endpoints, qualitative inhibition effect, and bench-scale experimental context\u2014are supported by the available snippets. Some qualifiers (specific carbonate speciation, explicit byproduct-profile changes, and clean-water comparison language) extend modestly beyond the text but do not alter the fundamental interpretation of matrix effects. The record is therefore usable for qualitative synthesis of water-matrix impacts, while numeric magnitudes and detailed speciation should not be inferred from it.",
+    "task_id": "RT10"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

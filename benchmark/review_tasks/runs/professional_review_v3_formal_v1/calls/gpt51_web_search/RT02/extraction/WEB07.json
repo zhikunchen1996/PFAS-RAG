@@ -1,0 +1,522 @@
+{
+  "call_key": "RT02:gpt51_web_search:extraction:WEB07",
+  "created_at": "2026-08-05T03:24:57.420127+00:00",
+  "raw_response_text": "{\"task_id\":\"RT02\",\"source_system\":\"gpt51_web_search\",\"records\":[{\"record_id\":\"WEB07-R1\",\"source_id\":\"WEB07\",\"doi_or_stable_url\":\"https://pubmed.ncbi.nlm.nih.gov/39781100/\",\"citation\":\"Authors not specified (2024). Predicting per- and polyfluoroalkyl substances removal in pilot-scale granular activated carbon adsorbers from rapid small-scale column tests. Water Research.\",\"study_type\":\"modeling_or_life_cycle_study\",\"study_scale\":{\"value\":\"Rapid small-scale column tests (RSSCTs) used to predict pilot-scale granular activated carbon (GAC) adsorber performance for PFAS removal\",\"evidence_locator_ids\":[\"WEB07-E01\"]},\"matrix\":{\"value\":\"Aqueous phase (water) treated in pilot-scale GAC adsorbers; specific water matrix not specified in abstract\",\"evidence_locator_ids\":[\"WEB07-E01\"]},\"pfas_scope\":[{\"value\":\"Per- and polyfluoroalkyl substances (PFAS), individual compounds not specified\",\"evidence_locator_ids\":[\"WEB07-E01\"]}],\"treatment\":{\"value\":\"Granular activated carbon (GAC) adsorption in columns, with rapid small-scale column tests (RSSCTs) linked to pilot-scale GAC adsorbers via pore surface diffusion model (PSDM)\",\"evidence_locator_ids\":[\"WEB07-E01\",\"WEB07-E02\"]},\"operating_conditions\":[{\"name\":\"Configuration\",\"value\":\"RSSCTs and pilot-scale GAC columns; adsorption modeled using pore surface diffusion model (PSDM)\",\"unit\":null,\"qualifiers\":\"\",\"evidence_locator_ids\":[\"WEB07-E01\",\"WEB07-E02\"]},{\"name\":\"Breakthrough range considered\",\"value\":\"up to about 70% PFAS breakthrough\",\"unit\":\"% of influent concentration in effluent\",\"qualifiers\":\"Model scaling of intraparticle diffusivity with particle diameter reported as valid within this breakthrough range\",\"evidence_locator_ids\":[\"WEB07-E02\"]},{\"name\":\"Intraparticle diffusivity scaling\",\"value\":\"proportional to (dp)^0.25\",\"unit\":null,\"qualifiers\":\"dp denotes GAC particle diameter; proportionality derived within PSDM framework using RSSCT and pilot-scale data up to ~70% breakthrough\",\"evidence_locator_ids\":[\"WEB07-E02\"]}],\"endpoints\":[{\"endpoint_type\":\"other\",\"reported_term\":\"Prediction of PFAS breakthrough curves using PSDM and RSSCT data\",\"interpretation\":\"Study evaluates how rapid small-scale column tests and a pore surface diffusion model (PSDM) can be used to predict PFAS breakthrough behavior in pilot-scale GAC adsorbers, with a key modeling relationship that intraparticle diffusivity scales with particle diameter to the 0.25 power up to about 70% breakthrough.\",\"evidence_locator_ids\":[\"WEB07-E01\",\"WEB07-E02\"]}],\"quantitative_findings\":[],\"limitations\":[{\"statement\":\"Study focuses on relating RSSCT breakthrough behavior and PSDM modeling to pilot-scale GAC column performance; batch adsorption tests are not mentioned in the abstract, so the work does not directly examine translation from batch to continuous systems.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB07-E01\"]},{\"statement\":\"Model relationship for intraparticle diffusivity scaling with particle diameter is indicated as applicable only up to about 70% PFAS breakthrough, implying reduced reliability for predicting late-stage breakthrough or full media exhaustion.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB07-E02\"]}],\"residuals_byproducts\":[],\"comparability\":{\"status\":\"descriptive_only\",\"reason\":\"Only abstract-level information is available and focuses on a modeling relationship between RSSCTs and pilot-scale GAC columns (diffusivity proportional to particle diameter^0.25 up to 70% breakthrough) without numeric breakthrough, capacity, or bed-volume data. The study does not report batch adsorption tests, so it cannot be directly compared to batch-to-column translation results.\",\"evidence_locator_ids\":[\"WEB07-E01\",\"WEB07-E02\"]}}],\"extraction_notes\":[\"Only the PubMed abstract was accessible for WEB07; detailed experimental conditions (PFAS species, concentrations, water matrices, GAC properties, column dimensions, flow rates, and breakthrough criteria) are not visible and therefore not extracted.\",\"No batch adsorption experiments are mentioned in the abstract; the study instead links rapid small-scale column tests (RSSCTs) to pilot-scale GAC columns via PSDM, so its relevance to batch-to-column translation is indirect.\",\"No numeric performance metrics (e.g., bed volumes to breakthrough, capacities, or removal percentages) are provided in the inspected abstract; accordingly, the quantitative_findings field is left empty.\"]}",
+  "request": {
+    "max_completion_tokens": 16000,
+    "messages": [
+      {
+        "content": "You are an evidence extraction specialist for PFAS treatment and remediation\nresearch. Build a structured study evidence table before any narrative review\nis written.\n\nExtract one record per primary-study experiment, modeled scenario, or field\ndeployment that contributes usable evidence to the review task. A paper may\nproduce more than one record only when materially different matrices,\ntechnologies, operating regimes, or endpoints would otherwise be conflated.\n\nReview articles and perspectives may help identify terminology or primary\nstudies, but they must not be used as the source of a quantitative study\nrecord. Never copy a review table as though it were a primary result.\n\nFor every populated source-dependent field:\n- preserve the PFAS identity or class, matrix, starting concentration or\n  loading, operating conditions, study scale, measured endpoint, value, unit,\n  and material qualifiers when reported;\n- attach only the field-level evidence locator identifiers that directly\n  support that specific value or statement;\n- use an empty string or empty array when the source does not report the\n  information; do not infer or estimate it;\n- do not turn the absence of information in the supplied packet into a study\n  finding, quantitative result, or author-reported limitation unless the source\n  explicitly states that absence;\n- distinguish removal, separation, sorption, parent-compound loss,\n  transformation, degradation, destruction, defluorination, mineralization,\n  total organofluorine change, and toxicity change;\n- classify endpoint_type from what was actually measured, not from the\n  authors' preferred label. Parent loss alone is not destruction. Phase\n  transfer is removal or separation, not degradation. Inorganic fluoride\n  release or fluorine-balance closure can establish defluorination but cannot\n  by itself establish mineralization. Use mineralization only when direct\n  carbon-fate evidence such as CO2/inorganic-carbon production or a carbon\n  balance is reported. Preserve a broader author term in reported_term and\n  explain any mismatch in interpretation;\n- do not normalize or compare values unless their units, denominators,\n  matrices, PFAS scope, operating conditions, and endpoints permit it.\n\nOnly populate quantitative_findings when the source reports an actual numeric\nvalue, inequality, approximate value, range, or explicit ND/not-detected\nresult. Put the number or censoring marker in value and the measurement unit in\nunit. Normalize Unicode inequality signs to ASCII >= or <= and range dashes to\nan ASCII hyphen while preserving the source wording in qualifiers. A unit or\norder-of-magnitude scale without a number is not a quantitative finding.\nQualitative parent loss, intermediate formation, or disappearance belongs in\nthe endpoint interpretation or residual/byproduct statements instead.\n\nSet value_form to exactly one of:\n- exact_numeric: a bare number such as `99.7` or `1.2e-3`;\n- approximate_numeric: `~` followed by a number;\n- inequality: `<`, `<=`, `>`, or `>=` followed by a number;\n- range: two numbers separated by `-` or `to`; or\n- not_detected: exactly `ND`, `N/D`, `not detected`,\n  `below detection limit`, or `below quantification limit`.\n\nPut uncertainty, denominators, fold-change wording, and explanatory text in\nqualifiers rather than value. A deterministic validator will remove malformed\nquantitative fields before source verification.\n\nFor limitations, use basis=author_reported only when the source states the\nlimitation. Use basis=design_inferred only for a constraint that follows\ndirectly from cited design evidence, such as one matrix, one compound, or\nbench-scale operation. Never label missing information in the supplied packet\nas a scientific limitation of the study.\n\nMark each record as comparable with conditions, descriptive only, or not\ncomparable. Comparability is an analyst inference rather than a quotation:\nattach locators for the matrix, scale, conditions, endpoint, and denominator\non which the inference rests, and explain the reason. Do not reward a study\nfor reporting a larger percentage when its endpoint or conditions differ.\n\nThe task was derived from a defining review that is held out from all\ncandidate retrieval systems. The supplied anchor identifiers are an exclusion\nlist, not evidence. Do not extract from the anchor, cite it, reconstruct its\nconclusions, or use its tables.\n\nReturn one JSON object that follows the supplied evidence-table schema exactly.\nDo not write the narrative review in this step.\n",
+        "role": "system"
+      },
+      {
+        "content": "Task:\n{\"review_brief\":\"Prepare a focused review of when batch adsorption results do and do not predict column, pilot, or full-scale PFAS treatment performance.\",\"task_id\":\"RT02\",\"title\":\"Translating PFAS adsorption results from batch tests to continuous treatment\"}\n\nTask-specific data extraction objective:\nExtract study scale, adsorbent, PFAS and matrix, batch or flow configuration, contact time, flow and bed properties, capacity definition, breakthrough criterion, bed volumes, media lifetime, and uncertainty or scale-up limitation.\n\nSource system (return this exact value):\ngpt51_web_search\n\nCandidate source identifier (all records must use this exact source_id):\nWEB07\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nFrozen inspected Web Search sources and evidence locators:\n{\n  \"access_scope\": \"abstract\",\n  \"capture_source_id\": \"WEB70\",\n  \"citation\": \"Authors not specified in snippet (2024). Predicting per- and polyfluoroalkyl substances removal in pilot-scale granular activated carbon adsorbers from rapid small-scale column tests. Water Research.\",\n  \"covered_component_ids\": [\n    \"RT02-C1\",\n    \"RT02-C2\",\n    \"RT02-C3\"\n  ],\n  \"doi\": \"\",\n  \"doi_or_stable_url\": \"https://pubmed.ncbi.nlm.nih.gov/39781100/\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB07-E01\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Abstract\",\n      \"text\": \"The overarching goal of this study was to predict PFAS breakthrough curves obtained at the pilot-scale from rapid small-scale column test (RSSCT) data.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB07-E02\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Abstract\",\n      \"text\": \"Using the pore surface diffusion model (PSDM), intraparticle diffusivity was found to be proportional to (dp)0.25 when considering data up to about 70% PFAS breakthrough.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"modeling_or_life_cycle_study\",\n  \"source\": \"https://pubmed.ncbi.nlm.nih.gov/39781100/\",\n  \"source_id\": \"WEB07\",\n  \"source_limitations\": [\n    \"Only PubMed abstract accessible due to access controls; full experimental conditions for RSSCTs and pilot columns are not visible.\",\n    \"Study focuses on GAC columns; batch isotherm work, if any, is not described in the abstract.\",\n    \"Model structure, parameter uncertainty, and performance across different PFAS and water qualities cannot be fully evaluated from inspected content.\"\n  ],\n  \"title\": \"Predicting per- and polyfluoroalkyl substances removal in pilot-scale granular activated carbon adsorbers from rapid small-scale column tests\",\n  \"year\": \"2024\"\n}\n\nDo not use search-result snippets as evidence. Use only the frozen inspected\nsource packet and preserve its declared access scope. Omit any source that\nresolves to a held-out anchor DOI, URL, or exact title and report the violation\nin extraction_notes. Extract at most three materially distinct records from\nthis source, prioritizing records that answer the task components.\n\nExtract primary-study evidence needed to answer the task and return the\nschema-constrained study evidence table.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_review_evidence_table",
+        "schema": {
+          "$defs": {
+            "endpoint": {
+              "additionalProperties": false,
+              "properties": {
+                "endpoint_type": {
+                  "enum": [
+                    "removal",
+                    "separation",
+                    "sorption",
+                    "parent_compound_loss",
+                    "transformation",
+                    "degradation",
+                    "destruction",
+                    "defluorination",
+                    "mineralization",
+                    "total_organofluorine_change",
+                    "toxicity_change",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB07-E01",
+                      "WEB07-E02"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "interpretation": {
+                  "type": "string"
+                },
+                "reported_term": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "endpoint_type",
+                "reported_term",
+                "interpretation",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceRecord": {
+              "additionalProperties": false,
+              "properties": {
+                "citation": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "comparability": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_locator_ids": {
+                      "items": {
+                        "enum": [
+                          "WEB07-E01",
+                          "WEB07-E02"
+                        ],
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "type": "array"
+                    },
+                    "reason": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "enum": [
+                        "comparable_with_conditions",
+                        "descriptive_only",
+                        "not_comparable"
+                      ],
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "status",
+                    "reason",
+                    "evidence_locator_ids"
+                  ],
+                  "type": "object"
+                },
+                "doi_or_stable_url": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "endpoints": {
+                  "items": {
+                    "$ref": "#/$defs/endpoint"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "limitations": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "matrix": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "operating_conditions": {
+                  "items": {
+                    "$ref": "#/$defs/namedValue"
+                  },
+                  "type": "array"
+                },
+                "pfas_scope": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceText"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "quantitative_findings": {
+                  "items": {
+                    "$ref": "#/$defs/quantitativeValue"
+                  },
+                  "type": "array"
+                },
+                "record_id": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "residuals_byproducts": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "source_id": {
+                  "enum": [
+                    "WEB07"
+                  ],
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "study_scale": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "study_type": {
+                  "enum": [
+                    "primary_experiment",
+                    "pilot_or_field_deployment",
+                    "modeling_or_life_cycle_study",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "treatment": {
+                  "$ref": "#/$defs/evidenceText"
+                }
+              },
+              "required": [
+                "record_id",
+                "source_id",
+                "doi_or_stable_url",
+                "citation",
+                "study_type",
+                "study_scale",
+                "matrix",
+                "pfas_scope",
+                "treatment",
+                "operating_conditions",
+                "endpoints",
+                "quantitative_findings",
+                "limitations",
+                "residuals_byproducts",
+                "comparability"
+              ],
+              "type": "object"
+            },
+            "evidenceStatement": {
+              "additionalProperties": false,
+              "properties": {
+                "basis": {
+                  "enum": [
+                    "author_reported",
+                    "design_inferred"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB07-E01",
+                      "WEB07-E02"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "statement": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "statement",
+                "basis",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceText": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB07-E01",
+                      "WEB07-E02"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "namedValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB07-E01",
+                      "WEB07-E02"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "quantitativeValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB07-E01",
+                      "WEB07-E02"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "value_form": {
+                  "enum": [
+                    "exact_numeric",
+                    "approximate_numeric",
+                    "inequality",
+                    "range",
+                    "not_detected"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "value_form",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "properties": {
+            "extraction_notes": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "records": {
+              "items": {
+                "$ref": "#/$defs/evidenceRecord"
+              },
+              "maxItems": 3,
+              "type": "array"
+            },
+            "source_system": {
+              "enum": [
+                "gpt51_web_search"
+              ],
+              "type": "string"
+            },
+            "task_id": {
+              "enum": [
+                "RT02"
+              ],
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "source_system",
+            "records",
+            "extraction_notes"
+          ],
+          "title": "PFAS review study evidence table",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "238b87ed1c59575d91d0cdf8fee28f96e8ac6059cae20de9656b5bd67bee9a76",
+  "response_metadata": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.0181825,
+    "finish_reason": "stop",
+    "input_tokens": 2618,
+    "latency_seconds": 13.550441792001948,
+    "output_tokens": 1491,
+    "reasoning_tokens": 505,
+    "response_id": "chatcmpl-E9MXEzSLzaxcyrSPdoqDyYvsvGZqA",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 4109,
+    "web_search_calls": 0
+  },
+  "result": {
+    "extraction_notes": [
+      "Only the PubMed abstract was accessible for WEB07; detailed experimental conditions (PFAS species, concentrations, water matrices, GAC properties, column dimensions, flow rates, and breakthrough criteria) are not visible and therefore not extracted.",
+      "No batch adsorption experiments are mentioned in the abstract; the study instead links rapid small-scale column tests (RSSCTs) to pilot-scale GAC columns via PSDM, so its relevance to batch-to-column translation is indirect.",
+      "No numeric performance metrics (e.g., bed volumes to breakthrough, capacities, or removal percentages) are provided in the inspected abstract; accordingly, the quantitative_findings field is left empty."
+    ],
+    "records": [
+      {
+        "citation": "Authors not specified (2024). Predicting per- and polyfluoroalkyl substances removal in pilot-scale granular activated carbon adsorbers from rapid small-scale column tests. Water Research.",
+        "comparability": {
+          "evidence_locator_ids": [
+            "WEB07-E01",
+            "WEB07-E02"
+          ],
+          "reason": "Only abstract-level information is available and focuses on a modeling relationship between RSSCTs and pilot-scale GAC columns (diffusivity proportional to particle diameter^0.25 up to 70% breakthrough) without numeric breakthrough, capacity, or bed-volume data. The study does not report batch adsorption tests, so it cannot be directly compared to batch-to-column translation results.",
+          "status": "descriptive_only"
+        },
+        "doi_or_stable_url": "https://pubmed.ncbi.nlm.nih.gov/39781100/",
+        "endpoints": [
+          {
+            "endpoint_type": "other",
+            "evidence_locator_ids": [
+              "WEB07-E01",
+              "WEB07-E02"
+            ],
+            "interpretation": "Study evaluates how rapid small-scale column tests and a pore surface diffusion model (PSDM) can be used to predict PFAS breakthrough behavior in pilot-scale GAC adsorbers, with a key modeling relationship that intraparticle diffusivity scales with particle diameter to the 0.25 power up to about 70% breakthrough.",
+            "reported_term": "Prediction of PFAS breakthrough curves using PSDM and RSSCT data"
+          }
+        ],
+        "limitations": [
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB07-E01"
+            ],
+            "statement": "Study focuses on relating RSSCT breakthrough behavior and PSDM modeling to pilot-scale GAC column performance; batch adsorption tests are not mentioned in the abstract, so the work does not directly examine translation from batch to continuous systems."
+          },
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB07-E02"
+            ],
+            "statement": "Model relationship for intraparticle diffusivity scaling with particle diameter is indicated as applicable only up to about 70% PFAS breakthrough, implying reduced reliability for predicting late-stage breakthrough or full media exhaustion."
+          }
+        ],
+        "matrix": {
+          "evidence_locator_ids": [
+            "WEB07-E01"
+          ],
+          "value": "Aqueous phase (water) treated in pilot-scale GAC adsorbers; specific water matrix not specified in abstract"
+        },
+        "operating_conditions": [
+          {
+            "evidence_locator_ids": [
+              "WEB07-E01",
+              "WEB07-E02"
+            ],
+            "name": "Configuration",
+            "qualifiers": "",
+            "unit": null,
+            "value": "RSSCTs and pilot-scale GAC columns; adsorption modeled using pore surface diffusion model (PSDM)"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB07-E02"
+            ],
+            "name": "Breakthrough range considered",
+            "qualifiers": "Model scaling of intraparticle diffusivity with particle diameter reported as valid within this breakthrough range",
+            "unit": "% of influent concentration in effluent",
+            "value": "up to about 70% PFAS breakthrough"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB07-E02"
+            ],
+            "name": "Intraparticle diffusivity scaling",
+            "qualifiers": "dp denotes GAC particle diameter; proportionality derived within PSDM framework using RSSCT and pilot-scale data up to ~70% breakthrough",
+            "unit": null,
+            "value": "proportional to (dp)^0.25"
+          }
+        ],
+        "pfas_scope": [
+          {
+            "evidence_locator_ids": [
+              "WEB07-E01"
+            ],
+            "value": "Per- and polyfluoroalkyl substances (PFAS), individual compounds not specified"
+          }
+        ],
+        "quantitative_findings": [],
+        "record_id": "WEB07-R1",
+        "residuals_byproducts": [],
+        "source_id": "WEB07",
+        "study_scale": {
+          "evidence_locator_ids": [
+            "WEB07-E01"
+          ],
+          "value": "Rapid small-scale column tests (RSSCTs) used to predict pilot-scale granular activated carbon (GAC) adsorber performance for PFAS removal"
+        },
+        "study_type": "modeling_or_life_cycle_study",
+        "treatment": {
+          "evidence_locator_ids": [
+            "WEB07-E01",
+            "WEB07-E02"
+          ],
+          "value": "Granular activated carbon (GAC) adsorption in columns, with rapid small-scale column tests (RSSCTs) linked to pilot-scale GAC adsorbers via pore surface diffusion model (PSDM)"
+        }
+      }
+    ],
+    "source_system": "gpt51_web_search",
+    "task_id": "RT02"
+  },
+  "result_kind": "json",
+  "stage": "structured_extraction"
+}

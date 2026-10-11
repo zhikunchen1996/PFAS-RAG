@@ -1,0 +1,368 @@
+{
+  "call_key": "RT06:bge_llm_local_rag:verify:RT06-bge_llm_local_rag-S15-R02",
+  "created_at": "2026-08-05T04:22:04.853026+00:00",
+  "raw_response_text": "{\"task_id\":\"RT06\",\"record_id\":\"RT06-bge_llm_local_rag-S15-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The DOI and URL exactly match the citation provided in the source (10.1021/acsestwater.5c00381).\"},{\"field_path\":\"matrix.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text explicitly describes PFAS-contaminated landfill leachate as the treated matrix (keywords in S15-E02 and description in S15-E03), matching the field value.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The source clearly indicates PFAS-contaminated landfill leachate, supporting a mixed PFAS scope (S15-E02, S15-E03). However, the statement that individual PFAS compounds are not specified in the life cycle modeling description is not directly documented in the provided excerpts, so that qualifier is not fully supported.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S15-E02 refers to one-stage and three-stage foam fractionation systems, supporting the description 'one-stage foam fractionation' as the system configuration.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 4 in S15-E05 lists 'one stage (20%)' and 'one stage (1%)', supporting a 1% foam fraction scenario for the one-stage system.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The foam fraction values in Table 4 are given as percentages (20 and 1), so '%' is the correct unit for the 1% foam fraction scenario.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The functional unit of 1000 m\u00b3 treated landfill leachate is implied by S15-E05 ('person-years per 1000 m3 treated') and reinforced by S15-E04 ('per 1000 m3 of treated landfill leachate'), so 1000 is supported as the treated volume per functional unit.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The table caption and text specify impacts per 1000 m3 treated landfill leachate (S15-E05, S15-E04), so 'm3 treated landfill leachate' is an appropriate unit description for the functional unit volume.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The described outcome is a set of normalized life cycle environmental impact metrics across categories (Table 4 in S15-E05), which are not direct separation or destruction metrics; classifying this as 'other' is appropriate and supported.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The second endpoint concerns life cycle cost (S15-E02), which is an economic, not separation, metric; assigning endpoint_type='other' is appropriate and supported.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"Table 4 in S15-E05 lists ozone depletion (OD) for one-stage (1%) as 0.00019 person-years per 1000 m3 treated; the recorded value 0.00019 matches exactly.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"unit\",\"reason\":\"Table 4 caption specifies 'person-years per 1000 m3 treated' as the unit; the field unit matches this phrasing.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"Global warming potential (GWP) for one-stage (1%) in Table 4 (S15-E05) is 0.015 person-years; the extracted value 0.015 is correct.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"unit\",\"reason\":\"The unit for GWP in Table 4 is the same normalized 'person-years per 1000 m3 treated'; the field unit is consistent with this.\"},{\"field_path\":\"quantitative_findings[2].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"Smog formation (SF) for one-stage (1%) in Table 4 (S15-E05) is 0.010 person-years, matching the recorded 0.010.\"},{\"field_path\":\"quantitative_findings[2].unit\",\"status\":\"supported\",\"error_type\":\"unit\",\"reason\":\"SF shares the same normalized unit 'person-years per 1000 m3 treated' as specified in Table 4 (S15-E05); the field unit is consistent.\"},{\"field_path\":\"quantitative_findings[3].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"Acidification (AD) for one-stage (1%) is 0.89 person-years in Table 4 (S15-E05), which matches the extracted value 0.89.\"},{\"field_path\":\"quantitative_findings[3].unit\",\"status\":\"supported\",\"error_type\":\"unit\",\"reason\":\"AD uses the normalized 'person-years per 1000 m3 treated' unit from Table 4; the field unit correctly reflects this.\"},{\"field_path\":\"quantitative_findings[4].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"Marine eutrophication (ME) for one-stage (1%) is 0.12 person-years in Table 4 (S15-E05); the extracted value 0.12 is correct.\"},{\"field_path\":\"quantitative_findings[4].unit\",\"status\":\"supported\",\"error_type\":\"unit\",\"reason\":\"ME uses the same 'person-years per 1000 m3 treated' unit per Table 4; the field unit matches.\"},{\"field_path\":\"quantitative_findings[5].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"Non-carcinogenics (NC) for one-stage (1%) in Table 4 (S15-E05) is 0.74 person-years; the recorded 0.74 is accurate.\"},{\"field_path\":\"quantitative_findings[5].unit\",\"status\":\"supported\",\"error_type\":\"unit\",\"reason\":\"NC is reported in 'person-years per 1000 m3 treated' per the table caption; the field unit reflects this correctly.\"},{\"field_path\":\"quantitative_findings[6].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"Respiratory effects (RE) for one-stage (1%) in Table 4 (S15-E05) is 0.079 person-years, matching the extracted 0.079.\"},{\"field_path\":\"quantitative_findings[6].unit\",\"status\":\"supported\",\"error_type\":\"unit\",\"reason\":\"RE shares the same normalized unit 'person-years per 1000 m3 treated'; the field unit matches the source.\"},{\"field_path\":\"quantitative_findings[7].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"Ecotoxicity (ET) for one-stage (1%) in Table 4 (S15-E05) is 0.015 person-years; the extracted 0.015 is correct.\"},{\"field_path\":\"quantitative_findings[7].unit\",\"status\":\"supported\",\"error_type\":\"unit\",\"reason\":\"ET uses the normalized 'person-years per 1000 m3 treated' unit per Table 4; the field unit is consistent.\"},{\"field_path\":\"quantitative_findings[8].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"S15-E02 states that life cycle costs were estimated at $77.4 per functional unit for the one-stage system; the extracted value 77.4 matches this figure.\"},{\"field_path\":\"quantitative_findings[8].unit\",\"status\":\"supported\",\"error_type\":\"unit\",\"reason\":\"The text in S15-E02 describes costs in dollars per functional unit; 'USD per functional unit' correctly captures this unit.\"},{\"field_path\":\"quantitative_findings[8].qualifiers\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The source supports that there is a single reported LCC value for the one-stage system (S15-E02), but it does not explicitly state that this same value applies to both 20% and 1% foam fraction scenarios. That part of the qualifier is inferred and not fully supported by the provided text.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S15-E06 notes that the life cycle analysis focuses on environmental and economic metrics and discusses PFAS removal efficiency only via literature values, with no PFAS removal results from this study; combined with Table 4\u2019s focus on impacts, this supports the stated design-inferred limitation.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The article is explicitly a life cycle assessment and life cycle costing analysis at system scale with a functional unit of 1000 m3 treated landfill leachate (S15-E02, S15-E04, S15-E05), aligning with the description of system-scale LCA/LCCA for a one-stage FF system at low foam fraction.\"},{\"field_path\":\"study_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The title and text clearly describe a life cycle assessment and life cycle costing analysis (S15-E02, S15-E03), supporting classification as a modeling_or_life_cycle_study.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text repeatedly describes one-stage foam fractionation systems for PFAS removal from landfill leachate (S15-E02, S15-E03), and Table 4 includes a 1% foam fraction one-stage scenario (S15-E05), supporting the treatment description.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 4 (S15-E05) lists normalized environmental impacts (ozone depletion, GWP, smog, acidification, marine eutrophication, non-carcinogenics, respiratory effects, ecotoxicity) in person-years per 1000 m3 treated for one-stage 1% foam fraction, matching the interpretation.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S15-E02 describes life cycle costs per functional unit for the one-stage foam fractionation system, consistent with the interpretation of life cycle cost per functional unit.\"},{\"field_path\":\"operating_conditions[0].name\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The name 'system_configuration' aptly describes the distinction between one-stage and three-stage systems referenced in S15-E02 and is consistent with the source context.\"},{\"field_path\":\"operating_conditions[1].name\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The condition being captured is clearly the foam fraction (1%) from Table 4 (S15-E05); using 'foam_fraction' as the name is accurate and supported.\"},{\"field_path\":\"operating_conditions[2].name\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The LCA clearly uses a treated volume (1000 m3) as the functional unit (S15-E04, S15-E05); 'functional_unit_treated_volume' is an accurate descriptor for this operating condition.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The study focuses on LCA/LCCA outcomes without providing PFAS removal, recovery, or enrichment data for the modeled scenarios (S15-E05, S15-E06), so labeling comparability as 'descriptive_only' follows logically.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Given that only environmental and cost metrics are quantified for the foam fraction scenarios and PFAS removal is only discussed qualitatively from literature (S15-E05, S15-E06), the stated reason accurately reflects why quantitative comparison to experimental separation-performance studies is limited.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014source identity, matrix (landfill leachate), treatment (one-stage foam fractionation with 1% foam fraction), study type (LCA/LCCA), and all key quantitative environmental impact and cost values with their units\u2014are directly supported by the cited text. Minor issues relate only to scope/qualifier inferences (PFAS specificity and cost sharing across foam fractions) and do not undermine the validity of the extracted core data for synthesis focused on foam-fractionation operating conditions and associated life cycle impacts.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of how PFAS properties, water chemistry, and reactor operation control foam-fractionation performance.\",\"task_id\":\"RT06\",\"title\":\"Identifying the operating conditions that control PFAS foam fractionation\"}\n\nTask-specific extraction objective:\nExtract PFAS and matrix composition, co-surfactants, reactor geometry, gas and flow conditions, bubble size, residence time, recycle, feed and foamate volumes, removal, recovery, enrichment, and mass-balance data.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.jhazmat.2023.133182\"],\"all_blocked_titles\":[\"a review of foam fractionation for the removal of per and polyfluoroalkyl substances pfas from aqueous matrices\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.jhazmat.2023.133182\"],\"anchor_id\":\"AR-WE-2024\",\"corpus_source\":\"2024 - We - A review of foam fractionation for the removal of per- and polyfluoroalkyl substances (PFAS) from aqueous matrices.pdf\",\"doi\":\"10.1016/j.jhazmat.2023.133182\",\"title\":\"A review of foam fractionation for the removal of per- and polyfluoroalkyl substances (PFAS) from aqueous matrices\",\"url\":\"https://doi.org/10.1016/j.jhazmat.2023.133182\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Li, G.; Wang, Y.; Huang, Q.; Peng, M.; Li, K. Life Cycle Assessment and Life Cycle Costing Analysis for Removing Per- and Polyfluoroalkyl Substances from Landfill Leachate with Foam Fractionation Technology. ACS ES&T Water. 2025, 5, 6289-6298.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S15-E02\",\n      \"S15-E05\",\n      \"S15-E06\"\n    ],\n    \"reason\": \"This record provides environmental and cost impacts for a specific foam fractionation operating regime (1% foam fraction) but does not include direct PFAS removal, recovery, or enrichment data under those conditions, limiting quantitative comparison with experimental studies focused on separation performance.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1021/acsestwater.5c00381\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S15-E05\"\n      ],\n      \"interpretation\": \"Life cycle environmental impacts (person-years per 1000 m3 treated landfill leachate) for a one-stage foam fractionation system at 1% foam fraction, across multiple impact categories (ozone depletion, global warming potential, smog formation, acidification, marine eutrophication, non-carcinogenics, respiratory effects, ecotoxicity).\",\n      \"reported_term\": \"life cycle environmental impact\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S15-E02\"\n      ],\n      \"interpretation\": \"Life cycle cost per functional unit (likely 1000 m3 treated) for the one-stage foam fractionation system at 1% foam fraction.\",\n      \"reported_term\": \"life cycle cost\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S15-E01\",\n        \"S15-E05\",\n        \"S15-E06\"\n      ],\n      \"statement\": \"The LCA/LCCA model varies foam fraction (1% vs 20%) but does not report corresponding experimentally measured PFAS removal efficiencies within the study; removal behavior is only discussed qualitatively and via literature citations.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S15-E02\",\n      \"S15-E03\"\n    ],\n    \"value\": \"Landfill leachate (PFAS-contaminated landfill leachate)\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S15-E02\",\n        \"S15-E05\"\n      ],\n      \"name\": \"system_configuration\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"one-stage foam fractionation\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S15-E05\"\n      ],\n      \"name\": \"foam_fraction\",\n      \"qualifiers\": \"One-stage (1%) scenario in Table 4\",\n      \"unit\": \"%\",\n      \"value\": \"1\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S15-E02\"\n      ],\n      \"name\": \"functional_unit_treated_volume\",\n      \"qualifiers\": \"Functional unit for LCA and LCCA analyses\",\n      \"unit\": \"m3 treated landfill leachate\",\n      \"value\": \"1000\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S15-E02\",\n        \"S15-E03\"\n      ],\n      \"value\": \"Mixed PFASs in landfill leachate; individual PFAS compounds not specified in the life cycle modeling description\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S15-E05\"\n      ],\n      \"name\": \"ozone_depletion_impact\",\n      \"qualifiers\": \"One-stage foam fractionation, 1% foam fraction scenario in Table 4\",\n      \"unit\": \"person-years per 1000 m3 treated\",\n      \"value\": \"0.00019\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S15-E05\"\n      ],\n      \"name\": \"global_warming_potential_impact\",\n      \"qualifiers\": \"One-stage foam fractionation, 1% foam fraction scenario in Table 4\",\n      \"unit\": \"person-years per 1000 m3 treated\",\n      \"value\": \"0.015\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S15-E05\"\n      ],\n      \"name\": \"smog_formation_impact\",\n      \"qualifiers\": \"One-stage foam fractionation, 1% foam fraction scenario in Table 4\",\n      \"unit\": \"person-years per 1000 m3 treated\",\n      \"value\": \"0.010\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S15-E05\"\n      ],\n      \"name\": \"acidification_impact\",\n      \"qualifiers\": \"One-stage foam fractionation, 1% foam fraction scenario in Table 4\",\n      \"unit\": \"person-years per 1000 m3 treated\",\n      \"value\": \"0.89\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S15-E05\"\n      ],\n      \"name\": \"marine_eutrophication_impact\",\n      \"qualifiers\": \"One-stage foam fractionation, 1% foam fraction scenario in Table 4\",\n      \"unit\": \"person-years per 1000 m3 treated\",\n      \"value\": \"0.12\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S15-E05\"\n      ],\n      \"name\": \"non_carcinogenics_impact\",\n      \"qualifiers\": \"One-stage foam fractionation, 1% foam fraction scenario in Table 4\",\n      \"unit\": \"person-years per 1000 m3 treated\",\n      \"value\": \"0.74\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S15-E05\"\n      ],\n      \"name\": \"respiratory_effects_impact\",\n      \"qualifiers\": \"One-stage foam fractionation, 1% foam fraction scenario in Table 4\",\n      \"unit\": \"person-years per 1000 m3 treated\",\n      \"value\": \"0.079\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S15-E05\"\n      ],\n      \"name\": \"ecotoxicity_impact\",\n      \"qualifiers\": \"One-stage foam fractionation, 1% foam fraction scenario in Table 4\",\n      \"unit\": \"person-years per 1000 m3 treated\",\n      \"value\": \"0.015\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S15-E02\"\n      ],\n      \"name\": \"life_cycle_cost\",\n      \"qualifiers\": \"Life cycle cost for one-stage foam fractionation system; the text reports a single cost value for the one-stage system, not resolved by foam fraction, so the same value is associated with both 20% and 1% foam fraction scenarios.\",\n      \"unit\": \"USD per functional unit\",\n      \"value\": \"77.4\",\n      \"value_form\": \"exact_numeric\"\n    }\n  ],\n  \"record_id\": \"RT06-bge_llm_local_rag-S15-R02\",\n  \"residuals_byproducts\": [],\n  \"source_id\": \"S15\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S15-E02\",\n      \"S15-E05\"\n    ],\n    \"value\": \"System-scale life cycle assessment and life cycle costing for a one-stage foam fractionation system treating landfill leachate (functional unit 1000 m3 treated) at low foam fraction (1%)\"\n  },\n  \"study_type\": \"modeling_or_life_cycle_study\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S15-E02\",\n      \"S15-E05\"\n    ],\n    \"value\": \"One-stage foam fractionation system for PFAS removal from landfill leachate with 1% foam fraction (low foam fraction scenario)\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 17,\n  \"bge_score\": 0.27999427914619446,\n  \"citation\": \"Li, G.; Wang, Y.; Huang, Q.; Peng, M.; Li, K. Life Cycle Assessment and Life Cycle Costing Analysis for Removing Per- and Polyfluoroalkyl Substances from Landfill Leachate with Foam Fractionation Technology. ACS ES&T Water 2025 5 6289-6298. DOI: 10.1021/acsestwater.5c00381.\",\n  \"doi\": \"10.1021/acsestwater.5c00381\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1021/acsestwater.5c00381\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 4,\n      \"locator_id\": \"S15-E01\",\n      \"query_scores\": {\n        \"RT06-C1\": 0.22165589034557343,\n        \"RT06-C2\": 0.0022000856697559357,\n        \"RT06-C3\": 0.0018169638933613896,\n        \"umbrella\": 0.7314678430557251\n      },\n      \"section\": \"introduction\",\n      \"text\": \"water phase into a more minor volume foam phase. The foam phase contains highly concentrated PFASs that can be disposed of or further treated. 9 The advantage of FF technology is that it can be implemented using a standard aeration process in wastewater treatment facilities. Converting an existing aeration process to foam fractionation for PFAS removal only requires installation of an appropriate foam collection system. PFASs removal depends on several opera- tional parameters such as contact time, air ratio, air flow rate, and foam fraction. 10 Removal efficiencies for long-chain PFASs are typically greater than 90% and removal of short-chain PFASs is typically 50% or less. 10 FF as a potent remediation technology for landfill leachate has been reported at the lab- scale, pilot-scale, and commercial-scale (Table 1). 11,12 A review of the FF operation parameters for lab, pilot, and full scales from literature in recent years is presented in Table 1. The air\\u2212water ratio, air flow rate, and aeration time are the major parameters that affect the PFASs treatment efficiency. All these studies found that PFASs of longer chain lengths were prone to higher removal and more significant enrichment than the short-chain. Also, the PFASs removal efficiency and the enrichment in the three-stage treatment were higher than in\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S15-E02\",\n      \"query_scores\": {\n        \"RT06-C1\": 0.29372546076774597,\n        \"RT06-C2\": 0.0012556960573419929,\n        \"RT06-C3\": 0.0001693992962827906,\n        \"umbrella\": 0.5989496111869812\n      },\n      \"section\": \"introduction\",\n      \"text\": \"eq for the three-stage system with 1% foam fraction. Life cycle costs were estimated at $77.4 and $110.6 per functional unit for the one-stage and three-stage systems, respectively, using the net present value method. Sensitivity and scale-up analyses were also performed to evaluate the influence of operational parameters and system configurations on both environmental and economic outcomes. KEYWORDS: life cycle assessment (LCA), life cycle costing analysis (LCCA), per- and polyfluoroalkyl substances (PFASs), foam fractionation (FF), landfill leachate (LL) 1. INTRODUCTION Per- and polyfluoroalkyl substances (PFASs) have drawn public concern recently due to their toxic properties and environmental persistence. 1 PFAS substances are a broad class of emerging environmental contaminants used heavily by the industrial, commercial, and manufacturing sectors in previous decades; some products include surface coating, lubricants, and firefighting foams. 2,3 PFASs are highly persistent and bioaccumulated in the environment within biota and humans. Because of this, PFAS species have been consistently detected within the environment, in food products, and in humans. 4 Various potential health effects have been attributed to PFASs exposure due to their high toxicity. 5 Landfill leachate (LL) is a complex matrix containing high ammonia concentrations, chemical oxygen demand, salts, and\"\n    },\n    {\n      \"corpus_chunk\": 3,\n      \"locator_id\": \"S15-E03\",\n      \"query_scores\": {\n        \"RT06-C1\": 0.021894261240959167,\n        \"RT06-C2\": 0.005006684456020594,\n        \"RT06-C3\": 0.0003534122952260077,\n        \"umbrella\": 0.5841127038002014\n      },\n      \"section\": \"introduction\",\n      \"text\": \"waste handling. Membrane-based processes like NF/RO offer broad PFAS rejection but are energy-intensive and generate large volumes of concentrate that still require disposal or destruction. EO, while promising as a destructive technology, typically demands high electrical energy input and is best suited as a polishing step for concentrated waste streams. Received: April 1, 2025 Revised: October 9, 2025 Accepted: October 10, 2025 Published: October 22, 2025 Articlepubs.acs.org/estwater \\u00a9 2025 The Authors. Published by American Chemical Society 6289 https://doi.org/10.1021/acsestwater.5c00381 ACS EST Water 2025, 5, 6289\\u22126298 This article is licensed under CC-BY 4.0 Downloaded via QUEEN'S UNIV on April 18, 2026 at 00:14:34 (UTC). See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles. In comparison, foam fractionation (FF) is a promising separation-based technology that exploits the surface-active nature of PFASs, particularly long-chain species. Foam fractionation (FF) has been proven to effectively remove PFASs from PFASs-contaminated landfill leachate. 8 Using fine air bubbles, foam fractionation concentrates PFASs from a water phase into a more minor volume foam phase. The foam\"\n    },\n    {\n      \"corpus_chunk\": 33,\n      \"locator_id\": \"S15-E04\",\n      \"query_scores\": {\n        \"RT06-C1\": 0.003370902733877301,\n        \"RT06-C2\": 0.0011961061973124743,\n        \"RT06-C3\": 0.014302482828497887,\n        \"umbrella\": 0.12849067151546478\n      },\n      \"section\": \"methods\",\n      \"text\": \"3 is the emission factor for incineration; x, y, z are enrichment factors for foam volume reduction per stage. 3.4. Disposal Methods Alternative. In addition to incineration, electrochemical oxidation (EO) has recently emerged as a promising method for destroying PFASs in the concentrated foam solution generated by foam fractionation. 27 When EO is used following the FF process, the global warming potential (GWP) per 1000 m 3 of treated landfill leachate can be estimated for both the one-stage and three-stage systems as a function of system scale and air\\u2212water ratio (AWR). The equations below estimate GWP (in kg CO 2 eq ) for each system: = \\u00d7 \\u00d7 + + \\u00d7 \\u00d7 + \\u00d7 \\u00d7 \\u00d7 C S x GWP3 0.61 1 2.12 0.715 AWR 1000 EE/O O M 1000 0.714 n 1 i k j j j y { z z z (6) = \\u00d7 \\u00d7 + + \\u00d7 \\u00d7 \\u00d7 + + + \\u00d7 \\u00d7 \\u00d7 C S x y Z GWP4 0.61 1 4.55 0.715 AWR 1000 1 1 1 EE/O OM 1000 0.714 n 3 i k j j j j j y { z z z z z i k j j j y { z z z (7)\"\n    },\n    {\n      \"corpus_chunk\": 26,\n      \"locator_id\": \"S15-E05\",\n      \"query_scores\": {\n        \"RT06-C1\": 0.010182909667491913,\n        \"RT06-C2\": 0.00042187722283415496,\n        \"RT06-C3\": 0.0003102926129940897,\n        \"umbrella\": 0.5404836535453796\n      },\n      \"section\": \"results\",\n      \"text\": \"fractionation system to air generation conditions and under- score the importance of optimizing compressor performance for reducing system-wide environmental burdens. Overall, the results emphasize that minimizing energy intensity in com- pressed air production is critical for reducing the environ- mental footprint of FF-based PFAS treatment systems. Table 4. Environmental Impact Normalized Values for the One-Stage (20 and 1%) and Three-Stage FF Treatment Systems (Person-Years per 1000 m 3 Treated) impact category one stage (20%) one stage (1%) three stage unit ozone depletion (OD) 0.00035 0.00019 0.00022 person- years global warming potential (GWP) 0.034 0.015 0.017 person- years smog formation (SF) 0.015 0.010 0.012 person- years acidification (AD) 12.20 0.89 10.54 person- years marine eutrophication (ME) 1.74 0.12 1.35 person- years non-carcinogenics (NC) 2.15 0.74 0.79 person- years respiratory effects (RE) 0.12 0.079 0.093 person- years ecotoxicity (ET) 0.20 0.015 0.18 person- years\"\n    },\n    {\n      \"corpus_chunk\": 27,\n      \"locator_id\": \"S15-E06\",\n      \"query_scores\": {\n        \"RT06-C1\": 0.031080212444067,\n        \"RT06-C2\": 0.0020320804324001074,\n        \"RT06-C3\": 0.0010282907169312239,\n        \"umbrella\": 0.5317960977554321\n      },\n      \"section\": \"results\",\n      \"text\": \"ecotoxicity (ET) 0.20 0.015 0.18 person- years ozone depletion (OD) 0.13 0.056 0.064 person- years ACS ES&T Water pubs.acs.org/estwater Article https://doi.org/10.1021/acsestwater.5c00381 ACS EST Water 2025, 5, 6289\\u22126298 6294 3.1.5. Effect of Foam Fraction on Treatment Perform- ance. While the life cycle analysis in this study focuses on environmental and economic metrics, changes in foam fraction also influence PFAS removal efficiency. Literature reports (Table 1) indicate that higher foam fractions generally result in greater capture of short-chain PFASs, which are less surface- active and require larger processed volumes for efficient separation. 10,17 For example, pilot-scale continuous FF achieved >90% removal of long-chain PFASs (\\u2265C8) at both 1% and 20% foam fractions, but short-chain PFAS (\\u2264C6) removal dropped from \\u223c 60% at 20% foam fraction to \\u223c 40% at 1% foam fraction.10 In three-stage configurations, sequential concentration partially compensates for the lower short-chain removal in each stage, yielding higher overall performance. These findings suggest that while reducing foam fraction from\"\n    },\n    {\n      \"corpus_chunk\": 25,\n      \"locator_id\": \"S15-E07\",\n      \"query_scores\": {\n        \"RT06-C1\": 0.0007685001473873854,\n        \"RT06-C2\": 0.0007680894341319799,\n        \"RT06-C3\": 0.0008113516378216445,\n        \"umbrella\": 0.5103775262832642\n      },\n      \"section\": \"results\",\n      \"text\": \"conditions. The results show that higher pressure and lower power efficiency (<30 kW) dramatically increase environ- mental burdens across all categories. For instance, GWP values increase from 0.0715 kg CO 2 eq/m 3 at >30 kW, 6 bar gauge to 0.199 kg CO 2 eq/m 3 at <30 kW, 12 bar gauge\\ufffdan increase of nearly 180%. Similarly, acidification (AF) impact triples, and ecotoxicity (ET) increases by a factor of 10. Although it may initially appear that using a lower power compressor would reduce energy consumption and emissions, Table S4 reveals the opposite: environmental impacts increase significantly under lower power conditions. This is because smaller compressors (<30 kW) are generally less energy-efficient, requiring more electricity to generate the same volume of compressed air. The higher energy demand arises from greater relative friction losses, suboptimal motor design, and reduced thermal recovery capabilities. As a result, key impact categories such as global warming potential, acidification, and ecotoxicity show marked increases under low-power, high-pressure configurations\\ufffdhighlighting the importance of energy effi- ciency in compressed air system design. These results explain the high sensitivity of the foam fractionation system to air generation conditions and under- score the importance of optimizing compressor performance\"\n    },\n    {\n      \"corpus_chunk\": 41,\n      \"locator_id\": \"S15-E08\",\n      \"query_scores\": {\n        \"RT06-C1\": 0.009474137797951698,\n        \"RT06-C2\": 0.0007255779346451163,\n        \"RT06-C3\": 0.0003058686852455139,\n        \"umbrella\": 0.5092524290084839\n      },\n      \"section\": \"results\",\n      \"text\": \"with low foam fraction offers a promising and cost-effective alternative. System design and operational parameters should be co-optimized to balance performance, cost, and environ- mental impact in future large-scale PFAS treatment applica- tions. \\u25a0 ASSOCIATED CONTENT * s\\u0131 Supporting Information The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/acsestwater.5c00381. Environmental impact categories analyzed in this study; unit environmental impact of 1 m 3 compressed air generated under various power and pressure conditions; capital construction costs to treat 1000 m 3 PFAS- contaminated landfill leachate in the one-stage FF system from various system design sources; normalized environmental impact between one-stage FF system and three-stage FF system; normalized unit environmental impacts of compressed air under different generation conditions (compressed air generated under >30 kW and 6 bar gauge is as the reference); Appendix: input/ output parameters and economic cost data obtained using the Work Breakdown Structure-Based Cost Model for Multi-Stage Bubble Aeration Drinking Water Treat- ment from the U.S. EPA Web site (PDF) \\u25a0 AUTHOR INFORMATION Corresponding Author Ke Li \\u2212 College of Engineering, University of Georgia, Athens, Georgia 30602, United States; orcid.org/0000-0001-\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2025 - Li - Life Cycle Assessment and Life Cycle Costing Analysis for Removing Per- and Polyfluoroalkyl Substances from Landfill Leachate with Foam Fractionation.pdf\",\n  \"source_id\": \"S15\",\n  \"title\": \"Life Cycle Assessment and Life Cycle Costing Analysis for Removing Per- and Polyfluoroalkyl Substances from Landfill Leachate with Foam Fractionation Technology\",\n  \"year\": \"2025\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "aea750c4e1b8d0f4e798b1ac779a8a810b4e47b5493072ca1af9e79c4458b6f4",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.04930425,
+    "finish_reason": "stop",
+    "input_tokens": 6669,
+    "latency_seconds": 31.226197625044733,
+    "output_tokens": 4212,
+    "reasoning_tokens": 1467,
+    "response_id": "chatcmpl-E9NQEuVQKjujZIjAWLWyIcPRTbryw",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 10881,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The DOI and URL exactly match the citation provided in the source (10.1021/acsestwater.5c00381).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix.value",
+        "reason": "The text explicitly describes PFAS-contaminated landfill leachate as the treated matrix (keywords in S15-E02 and description in S15-E03), matching the field value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "pfas_scope[0].value",
+        "reason": "The source clearly indicates PFAS-contaminated landfill leachate, supporting a mixed PFAS scope (S15-E02, S15-E03). However, the statement that individual PFAS compounds are not specified in the life cycle modeling description is not directly documented in the provided excerpts, so that qualifier is not fully supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "S15-E02 refers to one-stage and three-stage foam fractionation systems, supporting the description 'one-stage foam fractionation' as the system configuration.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "Table 4 in S15-E05 lists 'one stage (20%)' and 'one stage (1%)', supporting a 1% foam fraction scenario for the one-stage system.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The foam fraction values in Table 4 are given as percentages (20 and 1), so '%' is the correct unit for the 1% foam fraction scenario.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "The functional unit of 1000 m\u00b3 treated landfill leachate is implied by S15-E05 ('person-years per 1000 m3 treated') and reinforced by S15-E04 ('per 1000 m3 of treated landfill leachate'), so 1000 is supported as the treated volume per functional unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "The table caption and text specify impacts per 1000 m3 treated landfill leachate (S15-E05, S15-E04), so 'm3 treated landfill leachate' is an appropriate unit description for the functional unit volume.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The described outcome is a set of normalized life cycle environmental impact metrics across categories (Table 4 in S15-E05), which are not direct separation or destruction metrics; classifying this as 'other' is appropriate and supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "The second endpoint concerns life cycle cost (S15-E02), which is an economic, not separation, metric; assigning endpoint_type='other' is appropriate and supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "Table 4 in S15-E05 lists ozone depletion (OD) for one-stage (1%) as 0.00019 person-years per 1000 m3 treated; the recorded value 0.00019 matches exactly.",
+        "status": "supported"
+      },
+      {
+        "error_type": "unit",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "Table 4 caption specifies 'person-years per 1000 m3 treated' as the unit; the field unit matches this phrasing.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "Global warming potential (GWP) for one-stage (1%) in Table 4 (S15-E05) is 0.015 person-years; the extracted value 0.015 is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "unit",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "The unit for GWP in Table 4 is the same normalized 'person-years per 1000 m3 treated'; the field unit is consistent with this.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[2].value",
+        "reason": "Smog formation (SF) for one-stage (1%) in Table 4 (S15-E05) is 0.010 person-years, matching the recorded 0.010.",
+        "status": "supported"
+      },
+      {
+        "error_type": "unit",
+        "field_path": "quantitative_findings[2].unit",
+        "reason": "SF shares the same normalized unit 'person-years per 1000 m3 treated' as specified in Table 4 (S15-E05); the field unit is consistent.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[3].value",
+        "reason": "Acidification (AD) for one-stage (1%) is 0.89 person-years in Table 4 (S15-E05), which matches the extracted value 0.89.",
+        "status": "supported"
+      },
+      {
+        "error_type": "unit",
+        "field_path": "quantitative_findings[3].unit",
+        "reason": "AD uses the normalized 'person-years per 1000 m3 treated' unit from Table 4; the field unit correctly reflects this.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[4].value",
+        "reason": "Marine eutrophication (ME) for one-stage (1%) is 0.12 person-years in Table 4 (S15-E05); the extracted value 0.12 is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "unit",
+        "field_path": "quantitative_findings[4].unit",
+        "reason": "ME uses the same 'person-years per 1000 m3 treated' unit per Table 4; the field unit matches.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[5].value",
+        "reason": "Non-carcinogenics (NC) for one-stage (1%) in Table 4 (S15-E05) is 0.74 person-years; the recorded 0.74 is accurate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "unit",
+        "field_path": "quantitative_findings[5].unit",
+        "reason": "NC is reported in 'person-years per 1000 m3 treated' per the table caption; the field unit reflects this correctly.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[6].value",
+        "reason": "Respiratory effects (RE) for one-stage (1%) in Table 4 (S15-E05) is 0.079 person-years, matching the extracted 0.079.",
+        "status": "supported"
+      },
+      {
+        "error_type": "unit",
+        "field_path": "quantitative_findings[6].unit",
+        "reason": "RE shares the same normalized unit 'person-years per 1000 m3 treated'; the field unit matches the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[7].value",
+        "reason": "Ecotoxicity (ET) for one-stage (1%) in Table 4 (S15-E05) is 0.015 person-years; the extracted 0.015 is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "unit",
+        "field_path": "quantitative_findings[7].unit",
+        "reason": "ET uses the normalized 'person-years per 1000 m3 treated' unit per Table 4; the field unit is consistent.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[8].value",
+        "reason": "S15-E02 states that life cycle costs were estimated at $77.4 per functional unit for the one-stage system; the extracted value 77.4 matches this figure.",
+        "status": "supported"
+      },
+      {
+        "error_type": "unit",
+        "field_path": "quantitative_findings[8].unit",
+        "reason": "The text in S15-E02 describes costs in dollars per functional unit; 'USD per functional unit' correctly captures this unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "quantitative_findings[8].qualifiers",
+        "reason": "The source supports that there is a single reported LCC value for the one-stage system (S15-E02), but it does not explicitly state that this same value applies to both 20% and 1% foam fraction scenarios. That part of the qualifier is inferred and not fully supported by the provided text.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].statement",
+        "reason": "S15-E06 notes that the life cycle analysis focuses on environmental and economic metrics and discusses PFAS removal efficiency only via literature values, with no PFAS removal results from this study; combined with Table 4\u2019s focus on impacts, this supports the stated design-inferred limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "The article is explicitly a life cycle assessment and life cycle costing analysis at system scale with a functional unit of 1000 m3 treated landfill leachate (S15-E02, S15-E04, S15-E05), aligning with the description of system-scale LCA/LCCA for a one-stage FF system at low foam fraction.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_type",
+        "reason": "The title and text clearly describe a life cycle assessment and life cycle costing analysis (S15-E02, S15-E03), supporting classification as a modeling_or_life_cycle_study.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "The text repeatedly describes one-stage foam fractionation systems for PFAS removal from landfill leachate (S15-E02, S15-E03), and Table 4 includes a 1% foam fraction one-stage scenario (S15-E05), supporting the treatment description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "Table 4 (S15-E05) lists normalized environmental impacts (ozone depletion, GWP, smog, acidification, marine eutrophication, non-carcinogenics, respiratory effects, ecotoxicity) in person-years per 1000 m3 treated for one-stage 1% foam fraction, matching the interpretation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "S15-E02 describes life cycle costs per functional unit for the one-stage foam fractionation system, consistent with the interpretation of life cycle cost per functional unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].name",
+        "reason": "The name 'system_configuration' aptly describes the distinction between one-stage and three-stage systems referenced in S15-E02 and is consistent with the source context.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].name",
+        "reason": "The condition being captured is clearly the foam fraction (1%) from Table 4 (S15-E05); using 'foam_fraction' as the name is accurate and supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].name",
+        "reason": "The LCA clearly uses a treated volume (1000 m3) as the functional unit (S15-E04, S15-E05); 'functional_unit_treated_volume' is an accurate descriptor for this operating condition.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The study focuses on LCA/LCCA outcomes without providing PFAS removal, recovery, or enrichment data for the modeled scenarios (S15-E05, S15-E06), so labeling comparability as 'descriptive_only' follows logically.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "Given that only environmental and cost metrics are quantified for the foam fraction scenarios and PFAS removal is only discussed qualitatively from literature (S15-E05, S15-E06), the stated reason accurately reflects why quantitative comparison to experimental separation-performance studies is limited.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT06-bge_llm_local_rag-S15-R02",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014source identity, matrix (landfill leachate), treatment (one-stage foam fractionation with 1% foam fraction), study type (LCA/LCCA), and all key quantitative environmental impact and cost values with their units\u2014are directly supported by the cited text. Minor issues relate only to scope/qualifier inferences (PFAS specificity and cost sharing across foam fractions) and do not undermine the validity of the extracted core data for synthesis focused on foam-fractionation operating conditions and associated life cycle impacts.",
+    "task_id": "RT06"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

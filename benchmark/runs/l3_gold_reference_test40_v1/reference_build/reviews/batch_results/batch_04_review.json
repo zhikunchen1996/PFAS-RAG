@@ -1,0 +1,169 @@
+{
+  "batch_id": "test40-review-batch-04",
+  "batch_sha256": "89ee2c50c5adfd7530b833079feecd8f07aba0421f6c6ea2a6e95b75d8804461",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-review-batch-04",
+    "reviews": [
+      {
+        "question_id": "NQ20",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Constraint group NQ20-X01 lists 7 evidence_ids (MMG001, MMG002, MMG003, MMG004, MMG005, MMG006, MMG008) but its exact_spans array only contains entries for 4 of them (MMG001, MMG002, MMG005, MMG006); MMG003, MMG004, and MMG008 are cited as linked evidence but have no corresponding exact_spans/supports entry justifying their inclusion in this group."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ20-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ20-G02",
+            "verdict": "supported",
+            "issues": [
+              "The exact_evidence_span quoted for NQ20_MMG004 in this group ('degradation performance was consistently better in synthetic wastewater') is the same generic sentence quoted elsewhere and, read alone, is opposite in direction from the paired 'supports' text about the combined plasma-ferrate process matching synthetic performance; the specific supporting sentence ('Surprisingly, the combined plasma-ferrate process resulted in similar degradation kinetics...') is only present in the evidence's full_chunk_text/unit_exact_spans, not in this entry's quoted span. Functionally supported by the full chunk, but the span-to-claim mapping is imprecise."
+            ],
+            "required_repairs": [
+              "For the NQ20_MMG004 entry in NQ20-G02, quote the specific unit span ('Surprisingly, the combined plasma – ferrate process resulted in similar degradation kinetics in real and synthetic wastewater...') instead of the generic 'consistently better in synthetic wastewater' sentence, to avoid an apparent direction mismatch with the 'supports' text."
+            ]
+          },
+          {
+            "claim_group_id": "NQ20-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ20-X01",
+            "verdict": "partially_supported",
+            "issues": [
+              "evidence_ids includes NQ20_MMG003, NQ20_MMG004, and NQ20_MMG008, but the exact_spans array omits entries for these three evidence items, leaving their contribution to the constraint proposition (that matrix effects range from minor to severe) unexplained and unverifiable against a specific span."
+            ],
+            "required_repairs": [
+              "Add exact_spans entries (with evidence_id, exact_evidence_span, and a 'supports' rationale) for NQ20_MMG003, NQ20_MMG004, and NQ20_MMG008 in NQ20-X01, or remove these ids from evidence_ids if they are not actually needed to support the constraint."
+            ]
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Add missing exact_spans entries for NQ20_MMG003, NQ20_MMG004, and NQ20_MMG008 in constraint group NQ20-X01 (or trim evidence_ids to match what is actually cited).",
+          "Optionally correct the NQ20_MMG004 span quoted in NQ20-G02 to the sentence that actually supports the 'similar degradation kinetics' claim."
+        ]
+      },
+      {
+        "question_id": "NQ22",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ22-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ22-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ22-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ22-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 117371,
+    "num_turns": 6,
+    "stop_reason": "tool_use",
+    "session_id": "89cddf01-07ec-4ab8-b55c-79ed19961c63",
+    "total_cost_usd": 0.41323185000000007,
+    "usage": {
+      "input_tokens": 8,
+      "cache_creation_input_tokens": 54747,
+      "cache_read_input_tokens": 118962,
+      "output_tokens": 11433,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 54747
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 10127,
+          "cache_read_input_tokens": 59040,
+          "cache_creation_input_tokens": 6778,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 6778,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 628,
+        "outputTokens": 19,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000723,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 8,
+        "outputTokens": 11433,
+        "cacheReadInputTokens": 118962,
+        "cacheCreationInputTokens": 54747,
+        "webSearchRequests": 0,
+        "costUSD": 0.41250885000000004,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 7874,
+    "ttft_stream_ms": 2670,
+    "time_to_request_ms": 1062,
+    "type": "result",
+    "duration_ms": 117968,
+    "uuid": "20894057-84df-48e0-9658-647fd5cf7370"
+  },
+  "candidate_test40_inputs_used": false
+}

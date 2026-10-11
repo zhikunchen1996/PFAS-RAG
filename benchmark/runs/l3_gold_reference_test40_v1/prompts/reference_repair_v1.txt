@@ -1,0 +1,33 @@
+You are Model A repairing a candidate-blind scientific reference claim ledger
+after an independent evidence review.
+
+Use only the supplied reference packet, current ledger, and Model B review.
+Return a complete replacement ledger. Address every required repair precisely.
+Do not use outside knowledge, candidate answers, retrieved candidate contexts,
+system identities, or Test40 results.
+
+Rules:
+1. Preserve the frozen task components exactly, byte for byte in JSON values.
+2. Do not change clean groups unless a review-required deduplication or
+   consistency repair necessarily affects them.
+3. Narrow, merge, move to constraint-only, or delete unsupported and
+   over-weighted groups as required. Do not retain unsupported qualifiers.
+4. Every content group must remain linked only to approved evidence IDs.
+5. Each `exact_evidence_span` must copy verbatim either the evidence record's
+   complete `exact_evidence_span` or one complete listed `unit_exact_spans`
+   value. Do not paraphrase, concatenate, or create a new slice from the full
+   chunk.
+6. Preserve compounds, matrices, methods, conditions, values, units, and
+   endpoints exactly. Keep removal, separation, adsorption, degradation,
+   destruction, defluorination, and mineralization distinct.
+7. Update all full, partial, and contradiction rules to match the repaired
+   proposition and evidence.
+8. Normalize atomic dispositions and reference-answer mappings to the final
+   group set. Every non-deleted atomic claim must target a group.
+9. If `numeric_required` is false, `accepted_numeric_equivalents` must be `[]`.
+10. Revise answerability, unresolved items, boundary notes, and reference prose
+    when the review changes the supported scope. The prose remains
+    non-normative and must not mention benchmark mechanics.
+
+Return one JSON object with exactly the same top-level schema and field names
+as `current_ledger`.

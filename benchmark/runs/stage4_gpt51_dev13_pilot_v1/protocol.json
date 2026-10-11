@@ -1,0 +1,64 @@
+{
+  "protocol_id": "pfas_rag_stage4_gpt51_dev13_matched_pilot_v1_5",
+  "supersedes": "pfas_rag_stage4_gpt51_dev13_matched_pilot_v1_4",
+  "protocol_freeze_date": "2026-07-28",
+  "status": "frozen_dev13_pilot_complete",
+  "scope": "Dev13 prompt and operational validation only",
+  "held_out_test40_used": false,
+  "questions": "benchmark/frozen_v3/input/questions_dev13.csv",
+  "retrieval": "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/bge_llm_gpt51/retrieval_outputs/rag_outputs_bge_llm_gpt51_pool60_bge30_llm10_fullchunk.jsonl",
+  "common_tagger": {
+    "reuse_without_new_api_call": true,
+    "tags": "benchmark/frozen_v3/judge/support/layer1_common_tagger_v1/results/dev13_common_tagger_gpt51_2026-07-26/bge_llm/tags/tag_results.jsonl",
+    "cost_ledger": "benchmark/frozen_v3/judge/support/layer1_common_tagger_v1/results/dev13_common_tagger_gpt51_2026-07-26/bge_llm/tokens/stage_costs.csv"
+  },
+  "selector_cost_ledger": "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/bge_llm_gpt51/token_cost_summary.csv",
+  "generation": {
+    "request_model": "gpt-5.1",
+    "required_returned_snapshot": "gpt-5.1-2025-11-13",
+    "reasoning_effort": "low",
+    "temperature": "provider default; not sent",
+    "max_completion_tokens": 5000,
+    "answer_word_limit": null,
+    "length_based_exclusion_or_retry": false,
+    "word_count_recorded_as_diagnostic_only": true,
+    "same_system_prompt": true,
+    "same_scientific_and_task_instructions": true,
+    "same_output_structure": true,
+    "direct_retrieval": false,
+    "rag_retrieval": true,
+    "rag_soft_tags": true,
+    "rag_atomic_citations": true,
+    "pricing_snapshot_date": "2026-07-28",
+    "usd_per_million_tokens": {
+      "input": 1.25,
+      "cached_input": 0.125,
+      "output": 10.0
+    }
+  },
+  "prompt_files": {
+    "shared_system": "benchmark/runs/stage4_gpt51_dev13_pilot_v1/prompts/shared_system_v1.txt",
+    "direct_user": "benchmark/runs/stage4_gpt51_dev13_pilot_v1/prompts/direct_user_v1.txt",
+    "rag_user": "benchmark/runs/stage4_gpt51_dev13_pilot_v1/prompts/rag_user_v1.txt"
+  },
+  "information_difference": "Only the RAG arm receives retrieved evidence, evidence-use tags, and citation instructions. Direct receives no corpus, web, retrieved evidence, tags, citations, gold, or reference answer.",
+  "evaluation": {
+    "judge_protocol": "L2 V4 Dev13 citation-blind evaluable-boundary calibration; all V2 statistical rules retained",
+    "judge_prompt": "benchmark/runs/stage4_gpt51_dev13_pilot_v1/judge_calibration/l2_citation_blind_pairwise_v3.txt",
+    "citation_blind_task_boundaries": "benchmark/runs/stage4_gpt51_dev13_pilot_v1/judge_calibration/citation_blind_boundaries_dev13.csv",
+    "judge_model": "gpt-5.1",
+    "judge_reasoning_effort": "medium",
+    "orientations_per_pair_question": 2,
+    "citation_markers_removed_by_frozen_runner": true,
+    "system_identity_prohibited": true,
+    "aggregation": "four separate criterion-specific Davidson fits",
+    "bootstrap_attempts": 10000,
+    "bootstrap_seed": 20260728
+  },
+  "commands": {
+    "l2": ".venv/bin/python benchmark/runs/stage4_gpt51_dev13_pilot_v1/judge_calibration/run_l2_pairwise_v4.py --left benchmark/runs/stage4_gpt51_dev13_pilot_v1/results/gpt51_dev13_matched_knowledge_v13/answers/direct.jsonl --right benchmark/runs/stage4_gpt51_dev13_pilot_v1/results/gpt51_dev13_matched_knowledge_v13/answers/rag.jsonl --left-label gpt51_direct --right-label gpt51_rag --questions benchmark/frozen_v3/input/questions_dev13.csv --out benchmark/runs/stage4_gpt51_dev13_pilot_v1/results/gpt51_dev13_matched_knowledge_v13/l2_v4/gpt51_direct_vs_rag --workers 3",
+    "aggregate": ".venv/bin/python benchmark/frozen_v3/judge/scripts/aggregate_l2_v2.py --pair gpt51_direct,gpt51_rag,benchmark/runs/stage4_gpt51_dev13_pilot_v1/results/gpt51_dev13_matched_knowledge_v13/l2_v4/gpt51_direct_vs_rag --bootstrap 10000 --seed 20260728 --out benchmark/runs/stage4_gpt51_dev13_pilot_v1/results/gpt51_dev13_matched_knowledge_v13/l2_v4/aggregate"
+  },
+  "development_revision_reason": "L2 V3 largely corrected non-exhaustive-gold handling, but one orientation still used a source-verification clause in the task boundaries to penalize details that the citation-blind judge could not verify. V1.5 supplies a versioned Dev13 boundary file that removes only source-access-dependent constraints while preserving scientifically evaluable endpoint, scope, condition-dependence, and anti-universalization constraints. Generation answers and all statistical rules remain unchanged.",
+  "change_control": "V1.5 is the final Dev13-calibrated freeze. After this freeze, no generation prompt, citation-blind boundary, L1, L1.5, L2 V4 prompt, metric, pass rule, or pair schedule may change in response to Test40 or provider results. Any later correction requires a new version and explicit disclosure."
+}

@@ -1,0 +1,74 @@
+{
+  "protocol_id": "dev13_bge_llm_soft_tags_v3_confirmation_2026-07-26",
+  "status": "superseded_internal_development_ablation",
+  "canonical_for_frozen_v3": false,
+  "superseded_by": "benchmark/frozen_v3/methods/dev13_verified_tags_v3_protocol.json",
+  "historical_interface_note": "This run exposed model-generated question-component descriptions and free-text advisory fields. The current V3 interface removes those fields and was regenerated.",
+  "objective": "Test whether dual-axis advisory chunk tags improve answer quality relative to a prompt-matched untagged BGE-LLM control.",
+  "prompt_design": "benchmark/frozen_v3/methods/task_general_prompt_design.md",
+  "prompt_development_constraint": "Dev13 is used for evaluation; Test40 content is not inspected during V3 prompt development.",
+  "development_set": "benchmark/frozen_v3/input/questions_dev13.csv",
+  "gold": "benchmark/frozen_v3/gold/chunk_based_gold.jsonl",
+  "retrieval_input": "benchmark/frozen_v3/retrieval/dev13_bge_llm_gpt51_10_30_60/retrieval_outputs/rag_outputs_bge_llm_gpt51_pool60_bge30_llm10_fullchunk.jsonl",
+  "retrieval_input_provenance": "benchmark/frozen_v3/methods/promoted_reusable_artifacts.json",
+  "retrieval_configuration": {
+    "system": "BGE-LLM",
+    "initial_pool": 60,
+    "bge_shortlist": 30,
+    "final_chunks": 10,
+    "selector_model": "gpt-5.1",
+    "chunk_order_retained_after_tagging": true
+  },
+  "systems": {
+    "tagged": "Full top-ten chunks plus dual-axis advisory tags",
+    "matched_untagged": "The same full top-ten chunks without advisory tags",
+    "matched_direct_optional": "No retrieval, corpus, reference-answer, or web access; topic-general prompt matched on research operations, scientific boundaries, response length, and output structure."
+  },
+  "controlled_factors": [
+    "question set",
+    "retrieved chunks",
+    "chunk order",
+    "answer model",
+    "temperature",
+    "base answer prompt",
+    "output structure"
+  ],
+  "intended_difference": "Presence or absence of advisory soft tags",
+  "models": {
+    "tagger": "gpt-5.1",
+    "answer": "gpt-5.1",
+    "judge": "gpt-5.1"
+  },
+  "temperature": 0,
+  "gold_exposed_to_tagger_or_answer": false,
+  "full_context_retained": true,
+  "validated_question_component_map_visible_to_answer": true,
+  "verbatim_exact_support_validation": true,
+  "primary_comparison": "tagged vs matched_untagged",
+  "secondary_exploratory_comparison": "tagged vs matched_direct_optional; must not determine whether the tag module is selected",
+  "primary_evaluation": {
+    "method": "citation-blind criterion-level pairwise comparison",
+    "criteria": [
+      "scientific_correctness",
+      "question_fulfillment",
+      "uncertainty_and_limitations",
+      "practical_usefulness"
+    ],
+    "weights": {
+      "scientific_correctness": 0.4,
+      "question_fulfillment": 0.3,
+      "uncertainty_and_limitations": 0.15,
+      "practical_usefulness": 0.15
+    },
+    "judge_repeats": 3,
+    "mirrored_answer_order": true
+  },
+  "predeclared_confirmation_conditions": {
+    "direction": "Mean tagged pairwise score must exceed 0.5 and tagged wins must exceed tagged losses.",
+    "order_stability": "Mirrored criterion agreement should be at least 0.70.",
+    "safety": "Manual audit must not show a material increase in unsupported specificity or endpoint conflation.",
+    "cost": "Tagger and answer token use must be reported separately."
+  },
+  "test40_status": "not_run",
+  "final_interpretation": "This protocol and its matched-untagged comparison are retained for internal development provenance only. Frozen V3 uses the separate source-verified tagged-versus-Direct protocol as its canonical system-level confirmation."
+}

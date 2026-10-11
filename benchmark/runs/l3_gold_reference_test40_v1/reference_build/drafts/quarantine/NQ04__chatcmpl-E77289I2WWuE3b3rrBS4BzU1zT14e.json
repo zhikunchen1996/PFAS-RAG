@@ -1,0 +1,285 @@
+{
+  "question_id": "NQ04",
+  "reference_packet_sha256": "73e384aeead18b3a89989968c4bd699187ebf5fd709fb6c3352d0acb38433be7",
+  "prompt_sha256": "008063f21e0cb5cd76c21b98aa9dbeec16fa63bd7461cb3a179e5107e8c8c30d",
+  "raw_result": {
+    "question_id": "NQ04",
+    "answerability": "supported",
+    "answerability_rationale": "The evidence set contains multiple PFAS analytical method papers that explicitly describe how LOD/LOQ or MDL were calculated (signal-to-noise thresholds, blank-based statistics, IUPAC recommendations, EPA standard MDL procedures) and, in one case, provide a numeric LOQ range with units. Additional evidence explicitly discusses matrix effects. Together, these support a description of how LOD/LOQ are reported and why they are difficult to compare across methods, matrices, and analytes, while allowing the answer to highlight dependence on method, matrix, and analyte without overgeneralizing.",
+    "task_components": [
+      {
+        "task_component_id": "NQ04-T01",
+        "component_text": "Describe how detection limits and quantification limits (LOD/LOQ) are reported for PFAS analytical methods, including explicit citation of the reported numerical values (with units) and the criteria or calculation approaches used to derive them (e.g., signal-to-noise, standard deviation of blanks, regulatory definitions), while making clear that these limits depend on the specific analytical method, sample matrix, and target analyte and cannot be used to rank methods solely by a single sensitivity number."
+      },
+      {
+        "task_component_id": "NQ04-T02",
+        "component_text": "Explain why LOD/LOQ values for PFAS are difficult to compare across different analytical methods or sample matrices, explicitly tying the explanation to differences in method, matrix, and analyte, as well as to differences in how LOD/LOQ are calculated and reported (including units and criteria), and avoiding any unqualified claims that the method with the lowest reported LOD/LOQ is universally best or that values are directly comparable across matrices or units."
+      }
+    ],
+    "claim_groups": [
+      {
+        "claim_group_id": "NQ04-G01",
+        "task_component_id": "NQ04-T01",
+        "canonical_proposition": "PFAS LOD/LOQ (or MDL) are reported using several different calculation criteria, including signal-to-noise thresholds, blank-based statistics, IUPAC recommendations, and EPA standard MDL procedures, yielding method- and analyte-specific values such as LOQs of 0.02–0.92 ng/L for different perfluoroalkyl acids in water.",
+        "central_proposition": "PFAS analytical methods report detection and quantification limits using diverse, explicitly defined criteria—signal-to-noise ratios (e.g., S/N = 3 for LOD and 10 for LOQ), statistical treatment of blank samples (mean plus 3 or 10 times the standard deviation), IUPAC-recommended approaches at a given confidence level, or EPA standard method MDL procedures—resulting in method- and analyte-specific LOD/LOQ or MDL values, such as LOQs ranging from 0.02 to 0.92 ng/L for different PFAAs in water.",
+        "material_qualifiers": [
+          "PFAS in EPA‑533 PAR standard mix analyzed by SPE‑LC/q‑TOF",
+          "Perfluoroalkyl acids in tap water with Milli‑Q blanks",
+          "Perfluoroalkyl substances in irrigation water matrix",
+          "PFAS in groundwater for GAC breakthrough studies"
+        ],
+        "importance": "core",
+        "function": "affirmative",
+        "scoring_role": "required_content",
+        "evidence_ids": [
+          "NQ04_MMG001",
+          "NQ04_MMG002",
+          "NQ04_MMG003",
+          "NQ04_MMG004"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Award full credit if the answer describes at least three distinct LOD/LOQ (or MDL) reporting approaches used for PFAS methods (e.g., signal-to-noise thresholds with specific values for LOD and LOQ, statistical calculations based on blanks with explicit multipliers, IUPAC recommendation use with confidence level, EPA standard MDL procedures) and includes at least one explicit numerical LOD/LOQ value with units from the evidence, while making clear that these limits are method- and analyte-specific.",
+        "partial_rule": "Award partial credit if the answer correctly describes one or two LOD/LOQ (or MDL) calculation approaches or mentions that PFAS limits are reported based on criteria like signal-to-noise or blank statistics but omits either the explicit numeric example with units or the diversity of criteria.",
+        "contradiction_rule": "Mark as contradiction if the answer claims that PFAS LOD/LOQ are always calculated in a single standardized way (e.g., only by signal-to-noise) or if it attributes a specific numerical value or criterion (e.g., S/N thresholds, multipliers, confidence level) that is not supported by the cited evidence.",
+        "source_atomic_claim_ids": [
+          "NQ04-A01",
+          "NQ04-A02",
+          "NQ04-A03",
+          "NQ04-A04"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ04_MMG001",
+            "exact_evidence_span": "The limit of detection (LOD) and the limit of quantification (LOQ) of the PFAS contained in the mix of standard EPA-533 PAR were calculated by the signal-to-noise ratio (S/N) of the deprotonated ions. LOD and LOQ were defined as S/N equal to 3 and 10, respectively.",
+            "supports": "Shows that in one PFAS LC/q‑TOF method, LOD and LOQ are reported based on signal-to-noise of deprotonated ions, with explicit thresholds S/N = 3 for LOD and S/N = 10 for LOQ."
+          },
+          {
+            "evidence_id": "NQ04_MMG002",
+            "exact_evidence_span": "The limit of detection (LOD) and the limit of quanti ﬁcation (LOQ) of the instrument were calculated as the mean value of Milli-Q samples (n = 10) plus three/ten times their standard deviation, respectively. ... The LOQ of di ﬀerent PFAAs varied from 0.02 ng/L to 0.92 ng/L, and the recovery of di ﬀerent PFAAs in the recovery experiments varied from 75 % to 95 %, depending on the per ﬂuoroalkyl chain length.",
+            "supports": "Shows a different PFAS method where LOD/LOQ are reported using the mean of Milli‑Q blank samples plus 3 or 10 times the standard deviation, and provides an explicit LOQ range (0.02–0.92 ng/L) for different PFAAs, with dependence on perfluoroalkyl chain length."
+          },
+          {
+            "evidence_id": "NQ04_MMG003",
+            "exact_evidence_span": "The sensitivity of the method was also evaluated with the estimation of the limit of detection (LOD) and limit of quantiﬁcation (LOQ), following the IUPAC recommendations, with a 95% conﬁdence level [ 51].",
+            "supports": "Shows that another PFAS method estimates LOD and LOQ according to IUPAC recommendations at a 95% confidence level, indicating use of a standardized but distinct calculation approach."
+          },
+          {
+            "evidence_id": "NQ04_MMG004",
+            "exact_evidence_span": "Method detection limits (MDL) for all PFAS were calculated according to EPA standard methods ( U.S. EPA, 2016 ). These analytes, their detection limits, and influent concentrations are described in Table 2 .",
+            "supports": "Shows that PFAS method detection limits (MDL) can be reported based on EPA standard methods, pointing to another formalized procedure distinct from signal-to-noise or simple blank-based calculations."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "NQ04-G02",
+        "task_component_id": "NQ04-T02",
+        "canonical_proposition": "PFAS LOD/LOQ (and MDL) values are difficult to compare across methods and matrices because they depend on the specific calculation approach, target analyte characteristics, and sample matrix effects, so reported limits such as LOQs from 0.02 to 0.92 ng/L in one water method or method-specific MDLs cannot be directly used to rank overall method sensitivity.",
+        "central_proposition": "Reported PFAS detection and quantification limits are not directly comparable across analytical methods or sample matrices because they are derived using different criteria (e.g., signal-to-noise thresholds, blank-based statistics, IUPAC protocols, EPA MDL methods), are influenced by analyte-specific factors like perfluoroalkyl chain length that cause LOQs to vary (e.g., 0.02–0.92 ng/L for different PFAAs in one study), and are affected by matrix-dependent phenomena such as signal suppression or enhancement in complex matrices like wastewater, meaning that a single lowest LOD/LOQ number from one study cannot universally rank method performance.",
+        "material_qualifiers": [
+          "Perfluoroalkyl acids in tap water versus complex wastewater matrices",
+          "PFAS in irrigation water versus groundwater",
+          "Dependence on perfluoroalkyl chain length"
+        ],
+        "importance": "core",
+        "function": "affirmative",
+        "scoring_role": "required_content",
+        "evidence_ids": [
+          "NQ04_MMG001",
+          "NQ04_MMG002",
+          "NQ04_MMG003",
+          "NQ04_MMG004",
+          "NQ04_MMG005"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Award full credit if the answer explicitly explains that PFAS LOD/LOQ (and MDL) values are hard to compare across methods or matrices because (i) different studies use different calculation criteria or formal definitions (e.g., S/N = 3/10; mean blank plus 3/10 SD; IUPAC recommendations at 95% confidence; EPA standard MDL procedures), (ii) limits vary by analyte properties (e.g., chain length) with explicit mention of a reported range such as LOQs from 0.02 to 0.92 ng/L for different PFAAs, and (iii) matrix effects like signal suppression or enhancement in complex matrices influence detection, all while avoiding any unqualified claim that the method with the lowest reported limit is universally best or that values are directly comparable across matrices.",
+        "partial_rule": "Award partial credit if the answer mentions at least two of the following elements: differing calculation criteria, analyte-dependent variability, or matrix effects, but does not connect them clearly to the difficulty of comparing LOD/LOQ across methods and matrices, or omits the explicit numeric LOQ range while still correctly describing qualitative variability.",
+        "contradiction_rule": "Mark as contradiction if the answer asserts that PFAS LOD/LOQ values from different methods or matrices are directly comparable without caveats, implies that the method with the lowest LOD/LOQ reported in one study is universally the most sensitive, or denies the role of matrix or analyte differences despite the provided evidence.",
+        "source_atomic_claim_ids": [
+          "NQ04-A02",
+          "NQ04-A05"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ04_MMG002",
+            "exact_evidence_span": "The LOQ of di ﬀerent PFAAs varied from 0.02 ng/L to 0.92 ng/L, and the recovery of di ﬀerent PFAAs in the recovery experiments varied from 75 % to 95 %, depending on the per ﬂuoroalkyl chain length.",
+            "supports": "Shows that quantification limits vary across different PFAAs within the same method, with a numeric range (0.02–0.92 ng/L) and a dependence on perfluoroalkyl chain length, illustrating analyte-dependent variability that complicates comparisons."
+          },
+          {
+            "evidence_id": "NQ04_MMG002",
+            "exact_evidence_span": "The limit of detection (LOD) and the limit of quanti ﬁcation (LOQ) of the instrument were calculated as the mean value of Milli-Q samples (n = 10) plus three/ten times their standard deviation, respectively.",
+            "supports": "Illustrates a specific blank-based LOD/LOQ calculation approach that differs from signal-to-noise or IUPAC methods, contributing to non-uniform definitions across studies."
+          },
+          {
+            "evidence_id": "NQ04_MMG001",
+            "exact_evidence_span": "LOD and LOQ were defined as S/N equal to 3 and 10, respectively.",
+            "supports": "Provides an example of LOD/LOQ definitions based on signal-to-noise thresholds, contrasting with other calculation approaches and underscoring definitional differences."
+          },
+          {
+            "evidence_id": "NQ04_MMG003",
+            "exact_evidence_span": "limit of detection (LOD) and limit of quantiﬁcation (LOQ), following the IUPAC recommendations, with a 95% conﬁdence level",
+            "supports": "Indicates that some PFAS methods use IUPAC-based statistical criteria at a specified confidence level, distinct from simple S/N or blank-based thresholds."
+          },
+          {
+            "evidence_id": "NQ04_MMG004",
+            "exact_evidence_span": "Method detection limits (MDL) for all PFAS were calculated according to EPA standard methods ( U.S. EPA, 2016 ).",
+            "supports": "Shows that some PFAS studies report MDL following EPA standard methods, which again differs from LOD/LOQ definitions used in other studies."
+          },
+          {
+            "evidence_id": "NQ04_MMG005",
+            "exact_evidence_span": "It is also important to consider the potential influence of matrix effects in the influent water, which could lead to signal suppression or enhancement, affecting the detection of PFCAs in complex matrices like wastewater.",
+            "supports": "Explicitly states that matrix effects such as signal suppression or enhancement in complex matrices like wastewater affect detection of PFCAs, illustrating matrix dependence that complicates comparison of LOD/LOQ across matrices."
+          }
+        ]
+      }
+    ],
+    "constraint_groups": [
+      {
+        "claim_group_id": "NQ04-X01",
+        "task_component_id": "NQ04-T02",
+        "canonical_proposition": "Reported PFAS LOD/LOQ or MDL values and their ranges in these studies are specific to the methods, analytes, and matrices examined (e.g., particular PFAAs and water matrices) and should not be generalized as universally applicable or directly comparable rankings of method sensitivity.",
+        "central_proposition": "The specific LOD, LOQ, and MDL values and ranges reported in the cited PFAS studies (e.g., LOQs from 0.02 to 0.92 ng/L for different PFAAs in one water method, or MDLs determined by EPA procedures) are context-dependent and must not be treated as universally comparable or as a definitive ranking of analytical method sensitivity across all PFAS methods and matrices.",
+        "material_qualifiers": [
+          "Study-specific PFAS analyte sets and water matrices",
+          "Dependence on chain length and matrix effects"
+        ],
+        "importance": "core",
+        "function": "limitation",
+        "scoring_role": "constraint_only",
+        "evidence_ids": [
+          "NQ04_MMG002",
+          "NQ04_MMG005"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Use this group to penalize answers that generalize the reported LOD/LOQ or MDL values and ranges as universally comparable or that claim a method with the lowest number is inherently best, despite evidence of analyte-dependent variability and matrix effects.",
+        "partial_rule": "If an answer mostly respects context-dependence but slips into mild overgeneralization without explicit universal claims (e.g., implying broad comparability), treat this as a minor boundary issue rather than full contradiction.",
+        "contradiction_rule": "Mark as violating this constraint if the answer states or implies that LOD/LOQ or MDL values reported in these specific studies can be directly compared across all PFAS methods or matrices, or that the smallest reported value indicates the universally most sensitive method, ignoring analyte and matrix dependence.",
+        "source_atomic_claim_ids": [
+          "NQ04-A02",
+          "NQ04-A05"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ04_MMG002",
+            "exact_evidence_span": "The LOQ of di ﬀerent PFAAs varied from 0.02 ng/L to 0.92 ng/L, and the recovery of di ﬀerent PFAAs in the recovery experiments varied from 75 % to 95 %, depending on the per ﬂuoroalkyl chain length.",
+            "supports": "Demonstrates that LOQ values are specific to individual PFAAs and depend on perfluoroalkyl chain length, implying that a single LOQ value cannot represent all analytes or methods."
+          },
+          {
+            "evidence_id": "NQ04_MMG005",
+            "exact_evidence_span": "It is also important to consider the potential influence of matrix effects in the influent water, which could lead to signal suppression or enhancement, affecting the detection of PFCAs in complex matrices like wastewater.",
+            "supports": "Shows that detection performance is matrix dependent and affected by matrix effects, indicating that LOD/LOQ determined in one matrix may not translate directly to another."
+          }
+        ]
+      }
+    ],
+    "atomic_claim_dispositions": [
+      {
+        "atomic_claim_id": "NQ04-A01",
+        "atomic_claim": "In Tomei et al. 2025, for PFAS in an EPA-533 PAR standard mix analyzed by SPE-LC/q-TOF, the LOD and LOQ were calculated from the signal-to-noise ratio of the deprotonated ions, with LOD and LOQ defined as S/N equal to 3 and 10, respectively.",
+        "evidence_ids": [
+          "NQ04_MMG001"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ04-G01"
+        ],
+        "rationale": "Directly supported by the text and illustrates a signal-to-noise based definition of LOD/LOQ required for describing reporting approaches."
+      },
+      {
+        "atomic_claim_id": "NQ04-A02",
+        "atomic_claim": "In Meng et al. 2019, PFAS instrument LOD and LOQ were calculated as the mean value of Milli-Q samples (n = 10) plus three or ten times their standard deviation, respectively, and the LOQ of different PFAAs in tap water varied from 0.02 ng/L to 0.92 ng/L with recovery from 75% to 95% depending on perfluoroalkyl chain length.",
+        "evidence_ids": [
+          "NQ04_MMG002"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ04-G01",
+          "NQ04-G02",
+          "NQ04-X01"
+        ],
+        "rationale": "Text explicitly reports the calculation procedure and numeric LOQ range with dependence on chain length; this underpins both how limits are reported and why they vary by analyte."
+      },
+      {
+        "atomic_claim_id": "NQ04-A03",
+        "atomic_claim": "In Pellicer-Castell et al. 2022, the sensitivity of the PFAS method was evaluated by estimating LOD and LOQ following IUPAC recommendations with a 95% confidence level.",
+        "evidence_ids": [
+          "NQ04_MMG003"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ04-G01"
+        ],
+        "rationale": "Supported verbatim and provides an example of an IUPAC-based LOD/LOQ calculation approach."
+      },
+      {
+        "atomic_claim_id": "NQ04-A04",
+        "atomic_claim": "In Croll et al. 2022, method detection limits (MDL) for PFAS were calculated according to U.S. EPA standard methods.",
+        "evidence_ids": [
+          "NQ04_MMG004"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ04-G01"
+        ],
+        "rationale": "Directly supported and adds EPA MDL procedures as another way PFAS detection limits are reported."
+      },
+      {
+        "atomic_claim_id": "NQ04-A05",
+        "atomic_claim": "In Habib et al. 2024, matrix effects in influent water could cause signal suppression or enhancement, affecting detection of PFCAs in complex matrices like wastewater.",
+        "evidence_ids": [
+          "NQ04_MMG005"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ04-G02",
+          "NQ04-X01"
+        ],
+        "rationale": "Explicitly supported and used to justify matrix-dependent variability and the need to avoid direct cross-matrix comparison of LOD/LOQ."
+      }
+    ],
+    "reference_answer": "Across PFAS analytical methods, detection and quantification limits are reported using several distinct calculation approaches, and the resulting limits are specific to the method, analyte, and matrix.\n\nOne LC/q‑TOF method for PFAS in an EPA‑533 PAR standard mix defined its limits based on instrument signal-to-noise. The authors state that “The limit of detection (LOD) and the limit of quantification (LOQ) of the PFAS contained in the mix of standard EPA-533 PAR were calculated by the signal-to-noise ratio (S/N) of the deprotonated ions. LOD and LOQ were defined as S/N equal to 3 and 10, respectively.” [NQ04_MMG001] This is a typical S/N-based reporting approach, where the chosen S/N thresholds (3 for LOD, 10 for LOQ) are part of the method definition.\n\nA different study measuring perfluoroalkyl acids (PFAAs) in water used a blank-based statistical approach. It reports that “The limit of detection (LOD) and the limit of quantiﬁcation (LOQ) of the instrument were calculated as the mean value of Milli-Q samples (n = 10) plus three/ten times their standard deviation, respectively.” [NQ04_MMG002] In the same work, the authors provide an explicit range of LOQs for different PFAAs and note their analyte dependence: “The LOQ of diﬀerent PFAAs varied from 0.02 ng/L to 0.92 ng/L, and the recovery of diﬀerent PFAAs in the recovery experiments varied from 75 % to 95 %, depending on the perﬂuoroalkyl chain length.” [NQ04_MMG002] Thus, in this method, both the calculation procedure (mean blank plus 3 or 10 standard deviations) and the resulting LOQ values (0.02–0.92 ng/L) are explicitly reported and are shown to vary with perfluoroalkyl chain length.\n\nOther PFAS methods formalize LOD/LOQ according to established guidelines. In an irrigation water application, “The sensitivity of the method was also evaluated with the estimation of the limit of detection (LOD) and limit of quantiﬁcation (LOQ), following the IUPAC recommendations, with a 95% conﬁdence level.” [NQ04_MMG003] Here the study does not restate the full formula, but it specifies that IUPAC procedures at a 95% confidence level were used, which is a different criterion from a simple S/N threshold or a mean-plus-multiple‑SD rule.\n\nIn a groundwater treatment study, the authors report method detection limits according to U.S. regulatory guidance: “Method detection limits (MDL) for all PFAS were calculated according to EPA standard methods ( U.S. EPA, 2016 ). These analytes, their detection limits, and influent concentrations are described in Table 2.” [NQ04_MMG004] This introduces another related but distinct metric—MDL—determined via EPA standard procedures, again reinforcing that limit definitions vary by study.\n\nThese examples together show that PFAS LOD/LOQ (and MDL) are reported using different criteria: signal-to-noise thresholds such as S/N = 3 and 10 [NQ04_MMG001], blank-based statistics using mean plus multiples of the standard deviation [NQ04_MMG002], IUPAC-recommended calculations with a specified confidence level [NQ04_MMG003], and U.S. EPA standard MDL methods [NQ04_MMG004]. They also demonstrate that reported numerical values, such as LOQs ranging from 0.02 to 0.92 ng/L for different PFAAs [NQ04_MMG002], are specific to particular analytes, methods, and matrices.\n\nBecause of this diversity, PFAS LOD/LOQ values are difficult to compare across methods or matrices. First, the underlying definitions differ: one study defines LOD and LOQ as S/N = 3 and 10 [NQ04_MMG001], whereas another bases them on the mean of blank Milli‑Q samples plus three or ten times the standard deviation [NQ04_MMG002]; a third follows IUPAC recommendations at 95 % confidence [NQ04_MMG003]; and another reports MDLs obtained via EPA standard methods [NQ04_MMG004]. These criteria are not strictly interchangeable, so a numerical limit from one study does not necessarily correspond to the same detection probability or confidence level as a limit from another.\n\nSecond, limits vary by analyte even within the same method and matrix. Meng et al. report that “The LOQ of diﬀerent PFAAs varied from 0.02 ng/L to 0.92 ng/L … depending on the perﬂuoroalkyl chain length.” [NQ04_MMG002] This shows that longer or shorter chain PFAAs can have different LOQs under identical instrumental and sample-preparation conditions; thus, quoting a single LOQ number does not capture the sensitivity for all PFAS targets.\n\nThird, matrix effects influence detection. Habib et al. emphasize that “It is also important to consider the potential influence of matrix effects in the influent water, which could lead to signal suppression or enhancement, affecting the detection of PFCAs in complex matrices like wastewater.” [NQ04_MMG005] This indicates that a method’s effective detection capability can differ between relatively clean waters (e.g., Milli‑Q or tap water) and complex matrices like wastewater, even if nominal LOD/LOQ values are calculated in a similar way.\n\nTaken together, these studies show that reported LOD, LOQ, and MDL values for PFAS are conditioned by the specific analytical method (instrumentation and calculation criteria), the analytes under consideration (e.g., perfluoroalkyl chain length), and the sample matrix (e.g., Milli‑Q water, tap water, irrigation water, groundwater, or wastewater with matrix effects). Therefore, while individual studies may report very low limits (for example, LOQs down to 0.02 ng/L for certain PFAAs in water [NQ04_MMG002]), these numbers cannot be used in isolation to rank methods universally by sensitivity or to directly compare performance across different matrices or PFAS analyte sets without careful consideration of these contextual differences.",
+    "reference_answer_claim_map": [
+      {
+        "claim_group_id": "NQ04-G01",
+        "reference_answer_excerpt": "One LC/q‑TOF method for PFAS in an EPA‑533 PAR standard mix defined its limits based on instrument signal-to-noise. The authors state that “The limit of detection (LOD) and the limit of quantification (LOQ) of the PFAS contained in the mix of standard EPA-533 PAR were calculated by the signal-to-noise ratio (S/N) of the deprotonated ions. LOD and LOQ were defined as S/N equal to 3 and 10, respectively.” [NQ04_MMG001] ... It reports that “The limit of detection (LOD) and the limit of quantiﬁcation (LOQ) of the instrument were calculated as the mean value of Milli-Q samples (n = 10) plus three/ten times their standard deviation, respectively.” [NQ04_MMG002] ... “The LOQ of diﬀerent PFAAs varied from 0.02 ng/L to 0.92 ng/L, and the recovery of diﬀerent PFAAs in the recovery experiments varied from 75 % to 95 %, depending on the perﬂuoroalkyl chain length.” [NQ04_MMG002] ... “The sensitivity of the method was also evaluated with the estimation of the limit of detection (LOD) and limit of quantiﬁcation (LOQ), following the IUPAC recommendations, with a 95% conﬁdence level.” [NQ04_MMG003] ... “Method detection limits (MDL) for all PFAS were calculated according to EPA standard methods ( U.S. EPA, 2016 ).” [NQ04_MMG004]"
+      },
+      {
+        "claim_group_id": "NQ04-G02",
+        "reference_answer_excerpt": "Because of this diversity, PFAS LOD/LOQ values are difficult to compare across methods or matrices. First, the underlying definitions differ: one study defines LOD and LOQ as S/N = 3 and 10 [NQ04_MMG001], whereas another bases them on the mean of blank Milli‑Q samples plus three or ten times the standard deviation [NQ04_MMG002]; a third follows IUPAC recommendations at 95 % confidence [NQ04_MMG003]; and another reports MDLs obtained via EPA standard methods [NQ04_MMG004]. ... Second, limits vary by analyte even within the same method and matrix. Meng et al. report that “The LOQ of diﬀerent PFAAs varied from 0.02 ng/L to 0.92 ng/L … depending on the perﬂuoroalkyl chain length.” [NQ04_MMG002] ... Third, matrix effects influence detection. Habib et al. emphasize that “It is also important to consider the potential influence of matrix effects in the influent water, which could lead to signal suppression or enhancement, affecting the detection of PFCAs in complex matrices like wastewater.” [NQ04_MMG005] ... Therefore, while individual studies may report very low limits (for example, LOQs down to 0.02 ng/L for certain PFAAs in water [NQ04_MMG002]), these numbers cannot be used in isolation to rank methods universally by sensitivity or to directly compare performance across different matrices or PFAS analyte sets without careful consideration of these contextual differences."
+      }
+    ],
+    "unresolved_or_unsupported": [
+      "The evidence set does not provide explicit regulatory or legal definitions of LOD/LOQ beyond referencing IUPAC recommendations and EPA MDL methods.",
+      "No single study in the provided evidence explicitly compares LOD/LOQ values between different PFAS analytical methods or across different matrices in a quantitative way; cross-comparison reasoning is based on juxtaposing separate studies rather than direct comparison experiments.",
+      "The evidence does not report specific LOD values with units (only LOQ ranges are numerically specified), so any detailed discussion of LOD magnitudes beyond the provided qualitative criteria would require outside information.",
+      "The evidence does not supply numeric MDL values from the EPA-based method, only stating that MDL was calculated according to EPA standard methods and tabulated elsewhere."
+    ],
+    "boundary_check": {
+      "must_include_addressed": true,
+      "must_not_claim_respected": true,
+      "notes": "The answer cites and explains multiple LOD/LOQ/MDL calculation criteria (signal-to-noise thresholds, blank-based statistics, IUPAC recommendations, EPA MDL methods) and includes the explicit LOQ range of 0.02–0.92 ng/L with units, emphasizing analyte (chain-length) dependence and noting matrix effects. It repeatedly stresses that these limits are method-, analyte-, and matrix-specific and explicitly states that they cannot be used to rank methods universally, thereby respecting the 'must_not_claim' constraints and avoiding unqualified cross-matrix or cross-method comparisons."
+    }
+  },
+  "generation": {
+    "request_model": "gpt-5.1",
+    "response_model": "gpt-5.1-2025-11-13",
+    "response_id": "chatcmpl-E77289I2WWuE3b3rrBS4BzU1zT14e",
+    "reasoning_effort": "low",
+    "temperature": "provider_default_not_sent",
+    "max_completion_tokens": 20000,
+    "finish_reason": "stop",
+    "prompt_tokens": 4982,
+    "cached_prompt_tokens": 0,
+    "completion_tokens": 7810,
+    "total_tokens": 12792,
+    "latency_seconds": 50.031180375022814,
+    "request_sha256": "ad3a158973a105c515f1f5bb5332dd8c3aa8ac6ba49527d99c8c7bb3d19db954",
+    "estimated_cost_usd": 0.0843275
+  },
+  "analytical_status": "quarantined_schema_invalid"
+}

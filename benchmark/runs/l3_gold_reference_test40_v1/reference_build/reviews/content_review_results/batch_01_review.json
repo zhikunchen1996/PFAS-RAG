@@ -1,0 +1,258 @@
+{
+  "batch_id": "test40-content-review-batch-01",
+  "batch_sha256": "18c6849b45f4ec2455e819e24c0d625686f70d70a1a080bd21ee739ea16b7a3c",
+  "prompt_sha256": "77caaf6d224a0af070ec3bac7c71b2336488cf1c8cbfdab4d8658a20b0b58d3f",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-content-review-batch-01",
+    "reviews": [
+      {
+        "question_id": "NQ28",
+        "verdict": "clean",
+        "question_level_issues": [
+          "Previously required repairs are confirmed resolved: (1) NQ28-G04's and NQ28-G06's misattributed exact_spans (both had reused the introductory 'systematic comparison was conducted' sentence for supports text about energy-density/EE-O) now correctly quote the verbatim energy-density sentence from NQ28_MMG001 ('However, it should be emphasized that the input energy density...'), which matches their supports text and is already a registered unit_exact_span (no new audit flag needed for these two entries). (2) NQ28-A02's evidence_ids now cite only NQ28_MMG002 (the unsupported NQ28_MMG003 linkage was removed), consistent with NQ28-G01's own evidence_ids and its supporting content."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ28-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-G02",
+            "verdict": "supported",
+            "issues": [
+              "The two exact_spans quoting NQ28_MMG001's 'Environmental Implications...' sentence and NQ28_MMG002's UV-ARP sentence are not in the registered unit_exact_spans for those evidence records; they are valid full-chunk-verbatim spans but require project-author audit before freeze, consistent with the prior review's disposition."
+            ],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-G03",
+            "verdict": "supported",
+            "issues": [
+              "The exact_spans quoting NQ28_MMG002's 'AOPs can sometimes be ineffective...' sentence and NQ28_MMG003's electrochemical-oxidation performance sentence are newly selected full-chunk spans not present in the registered unit_exact_spans; valid per the full-chunk verbatim rule but flagged for project-author audit."
+            ],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-G04",
+            "verdict": "supported",
+            "issues": [
+              "Previously misattributed third exact_spans entry is now repaired: it correctly quotes the verbatim energy-density sentence from NQ28_MMG001 and matches its supports text."
+            ],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-G06",
+            "verdict": "supported",
+            "issues": [
+              "Previously misattributed final exact_spans entry is now repaired: it correctly quotes the verbatim energy-density sentence from NQ28_MMG001, matching its supports text about differing energy inputs."
+            ],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "WF10_009",
+        "verdict": "clean",
+        "question_level_issues": [
+          "Both previously required repairs are confirmed resolved: (1) WF10_009-G02's third exact_spans entry now quotes the verbatim Ca2+ sentence from WF10_009_MMG002 ('The concentration of Ca 2 + was increased from 0.1 mM to 2 mM, and the level of PFOS rejection was raised from 97.10 % to 99.40 %.'), matching its Ca2+-focused supports text (previously it duplicated the pH sentence). (2) WF10_009-X01's second exact_spans entry now quotes the verbatim 'could reach up to 99 %' sentence from WF10_009_MMG001, matching its supports text (previously it duplicated the CCMF/98.3% sentence)."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_009-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_009-G02",
+            "verdict": "supported",
+            "issues": [
+              "The Ca2+ sentence used for the third exact_spans entry is not in WF10_009_MMG002's registered unit_exact_spans (only the pH sentence is registered); it is a valid full-chunk-verbatim span but requires project-author audit before freeze."
+            ],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_009-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_009-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_009-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_009-X01",
+            "verdict": "supported",
+            "issues": [
+              "The 'could reach up to 99 %' sentence used for the second exact_spans entry is not in WF10_009_MMG001's registered unit_exact_spans (only the CCMF sentence is registered); it is a valid full-chunk-verbatim span but requires project-author audit before freeze."
+            ],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "WF10_011",
+        "verdict": "clean",
+        "question_level_issues": [
+          "The previously required repair is confirmed resolved: a new core claim group WF10_011-G03, mapped to task component WF10_011-T02 (regeneration), has been added using the verbatim approved full-chunk sentence from WF10_011_MMG003 describing negative-bias-driven PFOA desorption and >80% regeneration at -1.5 V. Atomic claim disposition WF10_011-A03 is restored and correctly targets WF10_011-G03. The answerability_rationale, unresolved_or_unsupported list, boundary_check notes, and reference_answer/claim map have all been updated to reflect that regeneration evidence is present and is kept distinct from degradation/removal/coagulation endpoints, and the prior incorrect statement that no regeneration evidence existed has been removed."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_011-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-G03",
+            "verdict": "supported",
+            "issues": [
+              "The regeneration sentence quoted from WF10_011_MMG003 is not in that record's registered unit_exact_spans (only the 'Applied voltage' intro sentence is registered); it is a valid full-chunk-verbatim span, and the deterministic_resolution correctly flags project_author_audit_required for this addition."
+            ],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-X02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-X03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-X04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 93023,
+    "num_turns": 8,
+    "stop_reason": "tool_use",
+    "session_id": "ee052f1e-ad9c-4601-b3c9-89833309fcd5",
+    "total_cost_usd": 0.5389278499999999,
+    "usage": {
+      "input_tokens": 12,
+      "cache_creation_input_tokens": 90335,
+      "cache_read_input_tokens": 229592,
+      "output_tokens": 8689,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 90335
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 7068,
+          "cache_read_input_tokens": 78710,
+          "cache_creation_input_tokens": 16680,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 16680,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 838,
+        "outputTokens": 17,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000923,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 12,
+        "outputTokens": 8689,
+        "cacheReadInputTokens": 229592,
+        "cacheCreationInputTokens": 90335,
+        "webSearchRequests": 0,
+        "costUSD": 0.5380048500000001,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 9374,
+    "ttft_stream_ms": 2035,
+    "time_to_request_ms": 157,
+    "type": "result",
+    "duration_ms": 92858,
+    "uuid": "a8480bf9-bad1-44d7-b7fb-74ee5aca6789"
+  },
+  "candidate_test40_inputs_used": false
+}

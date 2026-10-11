@@ -1,0 +1,344 @@
+{
+  "call_key": "RT09:bge_llm_local_rag:verify:RT09-bge_llm_local_rag-S14-R02",
+  "created_at": "2026-08-05T04:37:45.075058+00:00",
+  "raw_response_text": "{\"task_id\":\"RT09\",\"record_id\":\"RT09-bge_llm_local_rag-S14-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The study examines multiple PFAS types and plasma gases, reports several different endpoints (parent loss, defluorination, byproducts, energy), and the text stresses co-alignment of measurements rather than simple numeric comparison, so characterizing the record as descriptive_only is a reasonable inference from the cited sections.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Cited sections show multiple PFAS, different plasma gases, various endpoints (percent destruction, defluorination, fluorine mass balance, energy), and limited explicit numeric detail in the provided chunks, so the stated reason accurately characterizes why results are best used qualitatively.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E01 and S14-E07 describe disappearance of target analytes and calculation of percent destruction from initial and final PFAS concentrations measured by LC-MS/MS, which corresponds to parent_compound_loss.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E01 notes comparing percent destruction of PFNA, PFOS, and 8:2 FtS; S14-E07 explains percent destruction is based on measured initial and final PFAS concentrations. This matches the interpretation that destruction reflects loss of parent analyte from the aqueous phase by LC-MS/MS.\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E01 and S14-E07 use the term 'percent destruction' for this endpoint, matching the reported_term.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E02 and S14-E06 describe formation of degradation products, head-group cleavage, and chain-length reduction, which are transformation phenomena, so endpoint_type='transformation' is appropriate.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E02 notes PFOA formation from PFOS and PFOS formation from 8:2 FtS and head group cleavage; S14-E05 and S14-E06 describe qualitative UV\u2013vis evidence of chain reduction and LC-MS/MS & QTOF analysis of byproducts. This aligns with the stated interpretation.\"},{\"field_path\":\"endpoints[1].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record paraphrases author descriptions (formation of degradation products, chain length reduction, head group cleavage) found in S14-E02, E05, and E06; this is consistent with the source wording.\"},{\"field_path\":\"endpoints[2].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E05, E06, and E07 explicitly discuss 'defluorination' measured via fluoride and calculated as percent defluorination, so classifying this endpoint as defluorination is directly supported.\"},{\"field_path\":\"endpoints[2].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E05 states defluorination was measured using a fluorine-selective probe for PFCA, PFSA and FtS compounds, with greater defluorination for longer chains and slower defluorination than parent destruction over time. This matches the interpretation given.\"},{\"field_path\":\"endpoints[2].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The term 'defluorination' is explicitly used in S14-E05, E06, and E07, matching the reported_term.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E03 states that samples were analyzed for a 'selected list of 24 PFAS' using the Vista method. It is a valid design-inferred limitation that transformation products not on this list, including highly degraded or atypical PFAS, would not be detected.\"},{\"field_path\":\"limitations[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E05 describes UV\u2013vis analysis as qualitative to observe chain reduction, and S14-E02/E06 plus the fluorine mass-balance discussion indicate limited conversion into quantified PFAS byproducts. It is a reasonable design-inferred limitation that chain reduction/head-group cleavage are characterized largely qualitatively without full quantitative speciation or mass closure.\"},{\"field_path\":\"matrix.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E01 mentions PFAS compounds in 'aqueous matrices,' and the article context is PFAS contaminated water; S14-E06 references treatment of PFCA, PFSA, and FtS compounds in this GAP system. Describing the matrix as aqueous solutions of these PFAS is consistent.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E01 notes the GAP system was designed for generating reverse-vortex gliding arc discharges, which corresponds to a reverse-vortex gliding arc plasma reactor.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Reactor type is a categorical descriptor and appropriately has no unit.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E01 states that air, nitrogen (N2), and oxygen (O2) were compared to determine which gas leads to the most rapid PFAS degradation, matching the description of plasma gases used for comparison.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The plasma gas comparison is categorical; no unit is appropriate and the field is null.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E06 states that FtS compounds with similar perfluorinated chain lengths to PFSAs were 'destroyed more within an hour (Fig. 3)', which is the basis for the qualitative treatment-time description; leaving the numeric value blank is consistent with the qualitative nature of the statement.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"No explicit numeric treatment-time value is provided in the record for this entry, so omitting a unit is appropriate.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E01 identifies PFNA as one of the compounds compared and refers to it as a PFCA, matching the value.\"},{\"field_path\":\"pfas_scope[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E01 includes PFOS in the gas comparison and it is a PFSA; S14-E02 discusses PFOS in degradation experiments, so the PFOS (PFSA) scope is supported.\"},{\"field_path\":\"pfas_scope[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E01 lists 8:2 FtS; S14-E06 explicitly mentions 4:2 FtS, 6:2 FtS, and 8:2 FtS in chain-length comparisons. This supports the stated FtS scope.\"},{\"field_path\":\"pfas_scope[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E06 mentions 'PFBS and 4:2 FtS; PFHxS and 6:2 FtS; PFOS and 8:2 FtS', supporting inclusion of PFBS and PFHxS as other PFSA analogues discussed in comparisons.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S14-E06 states that the relevant FtS compounds 'were destroyed more within an hour (Fig. 3)'. Recording this as an exact value of 1 h overstates precision and turns a qualitative 'within an hour' observation into an exact numeric, so the core time scale is supported but the exactness is not.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The time scale is expressed in hours in the phrase 'within an hour', so using 'h' as the unit is appropriate.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E03 reports the ion-selective electrode method range as 0.01 mg L\u22121 to 19 000 mg L\u22121 F\u2212. The recorded range '0.01-19000' matches these bounds.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E03 explicitly gives the range in mg L\u22121 F\u2212, matching the unit string 'mg L-1 F-'.\"},{\"field_path\":\"quantitative_findings[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E03 states that the modified EPA Method 537 has a detection limit of 2.0 ng L\u22121, matching the recorded value.\"},{\"field_path\":\"quantitative_findings[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The detection limit in S14-E03 is expressed in ng L\u22121, matching the unit.\"},{\"field_path\":\"quantitative_findings[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E07 states that LOQ values were analyte-specific and spanned 0.01 to 0.1 \u00b5g L\u22121; the recorded range '0.01-0.1' matches.\"},{\"field_path\":\"quantitative_findings[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E07 reports LOQs in \u00b5g L\u22121, matching the unit string.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E02 notes head-group cleavage and observes PFOA formation during PFOS treatment and PFOS formation during 8:2 FtS treatment; S14-E06 describes characterization of degradation products. This supports the statement about shorter-chain PFCAs and cross-formation of regulated PFAS as byproducts.\"},{\"field_path\":\"residuals_byproducts[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E05 describes UV\u2013vis analysis to assess chain-length reduction, with initial peak maxima for PFOA at ~214 nm shifting to longer wavelengths during treatment, which is consistent with the statement about spectral shifts indicating chain-length reduction.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E02 references 'batch experiments with PFOS and 8:2 FtS'; the overall article deals with a laboratory GAP system. Describing the work as bench-scale batch evaluations is a reasonable design-based inference consistent with the cited text.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S14-E01 describes a GAP system designed for reverse-vortex gliding arc discharges and compares air, N2, and O2 as working gases for PFAS degradation, matching the treatment description.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014study identity, aqueous PFAS matrix, GAP plasma treatment and gases, parent-compound percent destruction, defluorination measurement, transformation products, and key analytical limits\u2014are all supported by the cited text. The only minor issue is representing 'within an hour' as an exact 1 h, which is a qualifier-level approximation and does not materially affect use of the record for qualitative synthesis.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of the measurements needed to distinguish disappearance of a target PFAS from transformation, defluorination, and broader destruction.\",\"task_id\":\"RT09\",\"title\":\"Determining whether a PFAS destructive treatment achieved meaningful destruction\"}\n\nTask-specific extraction objective:\nExtract treatment and conditions, parent PFAS measurement, transformation-product scope, fluoride or fluorine measurement, mass-balance method, mineralization-related endpoint, detection limits, sampling time, unidentified fraction, and authors' endpoint terminology.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.coche.2023.100944\"],\"all_blocked_titles\":[\"scaling up water treatment technologies for pfas destruction current status and potential for fit for purpose application\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.coche.2023.100944\"],\"anchor_id\":\"AR-BLOTEVOGEL-2023\",\"corpus_source\":\"2024 - Blotevogel - Scaling up water treatment technologies for PFAS destruction_ current status and potential for fit-for-purpose application.pdf\",\"doi\":\"10.1016/j.coche.2023.100944\",\"title\":\"Scaling up water treatment technologies for PFAS destruction: current status and potential for fit-for-purpose application\",\"url\":\"https://doi.org/10.1016/j.coche.2023.100944\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Lewis, A.J.; Joyce, T.; Hadaya, M.; Ebrahimi, F.; Dragiev, I.; Giardetti, N.; Yang, J.; Fridman, G.; Rabinovich, A.; Fridman, A.A.; et al. Rapid degradation of PFAS in aqueous solutions by reverse vortex flow gliding arc plasma. Environ. Sci.: Water Res. Technol. 2020, 6, 1044\\u20131057. https://doi.org/10.1039/c9ew01050e.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S14-E01\",\n      \"S14-E02\",\n      \"S14-E05\",\n      \"S14-E06\",\n      \"S14-E07\"\n    ],\n    \"reason\": \"This record combines multiple PFAS chemistries and plasma gas conditions with limited explicit numeric data in the provided text; results are best used to characterize qualitative trends in parent loss, transformation, and defluorination rather than directly compare quantitative performance across compounds or with other technologies.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1039/c9ew01050e\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"parent_compound_loss\",\n      \"evidence_locator_ids\": [\n        \"S14-E01\",\n        \"S14-E07\"\n      ],\n      \"interpretation\": \"Percent destruction for each PFAS (PFNA, PFOS, 8:2 FtS and related analogues) was computed from changes in aqueous concentrations measured by LC-MS/MS; represents loss of the parent or target analyte from the measured aqueous phase.\",\n      \"reported_term\": \"percent destruction\"\n    },\n    {\n      \"endpoint_type\": \"transformation\",\n      \"evidence_locator_ids\": [\n        \"S14-E02\",\n        \"S14-E05\",\n        \"S14-E06\"\n      ],\n      \"interpretation\": \"Transformation products and chain-shortened PFCAs were identified qualitatively via LC-MS/MS, QTOF, and UV\\u2013vis; observations included perfluoroalkyl chain length reduction and cleavage of PFAS head groups (e.g., PFOA formation during PFOS degradation and PFOS formation during 8:2 FtS degradation).\",\n      \"reported_term\": \"formation of degradation products / chain length reduction / head group cleavage\"\n    },\n    {\n      \"endpoint_type\": \"defluorination\",\n      \"evidence_locator_ids\": [\n        \"S14-E05\",\n        \"S14-E06\"\n      ],\n      \"interpretation\": \"Defluorination was quantified via fluoride produced (F\\u2212) in solution using a fluoride ion-selective probe across PFCA, PFSA, and FtS compounds; longer-chain PFAS showed greater defluorination than shorter chains, and defluorination increased with treatment time but lagged behind parent destruction.\",\n      \"reported_term\": \"defluorination\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S14-E03\",\n        \"S14-E06\"\n      ],\n      \"statement\": \"Only a selected list of 24 PFAS were included in the targeted LC-MS/MS method used for byproduct identification, so transformation products outside this list\\u2014including highly degraded intermediates or non-standard PFAS\\u2014would not be detected.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S14-E02\",\n        \"S14-E05\",\n        \"S14-E06\"\n      ],\n      \"statement\": \"Chain length reduction and head group cleavage are characterized largely qualitatively (e.g., UV\\u2013vis shifts, presence of key transformation products), without full quantitative speciation or closure of PFAS mass into known transformation products.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S14-E01\",\n      \"S14-E06\"\n    ],\n    \"value\": \"Aqueous solutions of PFCA, PFSA, and fluorotelomer sulfonate (FtS) compounds\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E01\",\n        \"S14-E04\"\n      ],\n      \"name\": \"Reactor type\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"Reverse-vortex gliding arc plasma (GAP) reactor\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E01\"\n      ],\n      \"name\": \"Plasma gas comparison\",\n      \"qualifiers\": \"Most effective gas determined by comparing percent destruction of PFNA, PFOS, and 8:2 FtS\",\n      \"unit\": null,\n      \"value\": \"Air, nitrogen (N2), and oxygen (O2) used as working gases to compare PFAS degradation effectiveness\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Treatment time range\",\n      \"qualifiers\": \"Text notes that FtS compounds with similar perfluorinated chain lengths to PFSAs were destroyed more within an hour; specific sampling times summarized qualitatively (e.g., 1 h) in the supplied text, with detailed time series in supplemental figures.\",\n      \"unit\": null,\n      \"value\": \"\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E01\"\n      ],\n      \"value\": \"Perfluorononanoic acid (PFNA, PFCA)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E01\",\n        \"S14-E02\"\n      ],\n      \"value\": \"Perfluorooctane sulfonate (PFOS, PFSA)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E01\",\n        \"S14-E06\"\n      ],\n      \"value\": \"8:2 fluorotelomer sulfonate (8:2 FtS) and other FtS analogues (4:2 FtS, 6:2 FtS)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"value\": \"Other PFSA analogues such as PFBS and PFHxS are mentioned in chain-length comparisons\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Relative observation time for destruction of FtS vs. PFSA analogues\",\n      \"qualifiers\": \"FtS compounds with similar perfluorinated chain lengths to PFSAs (e.g., PFBS and 4:2 FtS; PFHxS and 6:2 FtS; PFOS and 8:2 FtS) were described as being destroyed more within an hour; no explicit numeric destruction percentages are given in the supplied text.\",\n      \"unit\": \"h\",\n      \"value\": \"1\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E03\"\n      ],\n      \"name\": \"Fluoride ISE measurement range\",\n      \"qualifiers\": \"Analytical range for fluoride measurement applied to all PFCA, PFSA, and FtS defluorination experiments using the ion-selective electrode.\",\n      \"unit\": \"mg L-1 F-\",\n      \"value\": \"0.01-19000\",\n      \"value_form\": \"range\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E03\"\n      ],\n      \"name\": \"Vista Analytical PFAS method detection limit\",\n      \"qualifiers\": \"External lab method DL for a selected set of 24 PFAS (VAL Method PFAS, modified EPA Method 537), used in byproduct screening for multiple PFAS treatments.\",\n      \"unit\": \"ng L-1\",\n      \"value\": \"2.0\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E07\"\n      ],\n      \"name\": \"LC-MS/MS internal method LOQ range for PFAS\",\n      \"qualifiers\": \"Analyte-specific LOQs for in-house LC-MS/MS used for parent PFAS quantification and some transformation products across experiments.\",\n      \"unit\": \"\\u00b5g L-1\",\n      \"value\": \"0.01-0.1\",\n      \"value_form\": \"range\"\n    }\n  ],\n  \"record_id\": \"RT09-bge_llm_local_rag-S14-R02\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S14-E02\",\n        \"S14-E06\"\n      ],\n      \"statement\": \"LC-MS/MS and QTOF analyses identified formation of shorter-chain PFCAs and cross-formation of PFOA from PFOS and PFOS from 8:2 FtS, indicating that the GAP treatment transforms PFAS into other, sometimes regulated PFAS species.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S14-E05\",\n        \"S14-E06\"\n      ],\n      \"statement\": \"UV\\u2013vis analysis showed spectral shifts consistent with perfluorinated chain length reduction for PFCAs during treatment.\"\n    }\n  ],\n  \"source_id\": \"S14\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S14-E01\",\n      \"S14-E06\"\n    ],\n    \"value\": \"Bench-scale batch evaluations of multiple PFAS types in a GAP reactor with different plasma gases\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S14-E01\"\n    ],\n    \"value\": \"Reverse-vortex gliding arc plasma treatment with varied plasma gases (air, N2, O2) to compare PFAS degradation behavior\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 17,\n  \"bge_score\": 0.10340187698602676,\n  \"citation\": \"Lewis, A.J.; Joyce, T.; Hadaya, M.; Ebrahimi, F.; Dragiev, I.; Giardetti, N.; Yang, J.; Fridman, G.; Rabinovich, A.; Fridman, A.A.; et al. rsc.li/es-water Rapid degradation of PFAS in aqueous solutions by reverse vortex flow gliding arc plasma \\u2020. Environmental Science: Water Research & Technology 2020 6 1044-1057. DOI: 10.1039/c9ew01050e.\",\n  \"doi\": \"10.1039/c9ew01050e\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1039/c9ew01050e\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 18,\n      \"locator_id\": \"S14-E01\",\n      \"query_scores\": {\n        \"RT09-C1\": 0.0002796334447339177,\n        \"RT09-C2\": 7.177088991738856e-05,\n        \"RT09-C3\": 6.132329872343689e-05,\n        \"umbrella\": 0.6484723091125488\n      },\n      \"section\": \"results\",\n      \"text\": \"Results and discussion To demonstrate that the engineered GAP system is an effec- tive treatment system for PFAS contaminated water the disap- pearance of the target analyte \\u0132s), formation of degradation products, defluorination, and energy costs were measured and calculated. Examination of only one or a couple of these measurements or calculations is insufficient in evaluating if the destructive method of PFAS is a beneficial or effective method. As a result, the data needs to be co-aligned to show that PFAS are truly destroyed and not just altered, in an en- ergy efficient way shown in the following sections. Effectiveness of different plasma gasses on PFAS degradation in GAP system The reactive environment created by plasma can be altered by the type of discharges generated in the reactor. The reac- tive species produced from non-equilibrium plasma can be tuned by changing the gas used and the type of plasma dis- charge. 72 Since the GAP system was designed for generating reverse-vortex gliding arc discharges, air, nitrogen (N 2), and oxygen (O 2) were compared to determine which gas leads to the most rapid degradation of PFAS compounds in aqueous matrices. The most effective plasma gas was determined by comparing the percent destruction of PFNA, PFOS, and 8 : 2 FtS (each, respectively, a PFCA, PFSA, and FtS compound with\"\n    },\n    {\n      \"corpus_chunk\": 28,\n      \"locator_id\": \"S14-E02\",\n      \"query_scores\": {\n        \"RT09-C1\": 0.1053013801574707,\n        \"RT09-C2\": 0.0005523438449017704,\n        \"RT09-C3\": 3.731220567715354e-05,\n        \"umbrella\": 0.020192379131913185\n      },\n      \"section\": \"methods\",\n      \"text\": \"creased overtime except for PFOS. While there is significant evidence of perfluoroalkyl chain length reduction, it also ap- pears that the head groups of the PFAS tested can be cleaved during treatment in the GAP reactor. For example, in the batch experiments with PFOS and 8 : 2 FtS (Fig. 5(B) and S3 \\u2020), the formation of PFOA in the treatment of PFOS and the for- mation of PFOS in the treatment of 8 : 2 FtS were observed. Fluorine mass balance for treatment of PFAS in GAP system The C \\u2013F bond in PFAS compounds is recalcitrant to degrada- tion, so it is important to look at where the fluorine ends up during the course of destructive treatments. In Fig. 6 fluorine was tracked on the initial analyte being tested, the quantifi- able byproduct/co-contaminant fluorine measured by the LC- MS/MS method, and fluoride. Fig. 6 demonstrates all of the analytical measurements taken and the accounting of total fluorine in the sample. From this accounting, it is apparent that the amount of the parent compound converted to other quantifiable PFCA, PFSA or FTS compounds was significantly low. For example, in Fig. 6(A), even though concentration of PFOA dropped from 70 100 \\u03bcgL \\u22121 to 52 800 \\u03bcgL \\u22121 the con-\"\n    },\n    {\n      \"corpus_chunk\": 15,\n      \"locator_id\": \"S14-E03\",\n      \"query_scores\": {\n        \"RT09-C1\": 0.0008531521307304502,\n        \"RT09-C2\": 0.042580291628837585,\n        \"RT09-C3\": 3.728656156454235e-05,\n        \"umbrella\": 0.017973756417632103\n      },\n      \"section\": \"methods\",\n      \"text\": \"To extend lifetime of the analytical column, samples were fil- tered through a polyethersulfone (PES) 0.22 \\u03bcm filter to re- move polymerized products from treatment and other parti- cles that could affect the column. Anion analysis for F \\u2212. The concentration of fluoride ions in aqueous samples was measured directly using a fluoride ion selective electrode (Intellical \\u2122 ISEF121, Hach, Loveland, CO, USA). This method has a range of 0.01 mg L \\u22121 to 19 000 mg L \\u22121 F\\u2212, which this experiment was well within. Samples were kept at 4 \\u00b0C and measurements were taken at room tem- perature for all standards and samples. LCMS/MS analysis. For validation of our RPLC/IC analyti- cal method and for analysis of byproducts generated, sam- ples were sent out to Vista Analytical Laboratory (El Dorado Hills, CA, USA), a Department of Defense Environmental Lab- oratory accredited laboratory. The samples were extracted and analyzed for a selected list of 24 PFAS using Vista Analyti- cal Laboratory (VAL) Method PFAS, a modified EPA Method 537 with a detection limit of 2.0 ng L \\u22121. The results reported for PFHxS, PFOA, PFOS, MeFOSAA, and EtFOSAA include both linear and branched isomers. All other analytes reported\"\n    },\n    {\n      \"corpus_chunk\": 6,\n      \"locator_id\": \"S14-E04\",\n      \"query_scores\": {\n        \"RT09-C1\": 7.227183959912509e-05,\n        \"RT09-C2\": 5.216872159508057e-05,\n        \"RT09-C3\": 0.0008848259458318353,\n        \"umbrella\": 0.08093784749507904\n      },\n      \"section\": \"methods\",\n      \"text\": \"been studied for their treatment ability include sonolysis, 47\\u201350 thermal degradation, 51 photocatalytic ozonation, 52 electro- chemical oxidation, 53\\u201356 persulfate,51,57\\u201359 alkaline hydrother- mal treatment, 60 microwave/persulfate,61 UV,62,63 ionizing ra- diation electron beam, 64 \\u03b3-irradiation,65 boron-doped diamond film electrode oxidation, 66 electrical discharge plasma,67 and biodegradation. 68 Novel reductive processes such as photogenerated hydrated electrons (e \\u2212 aq)69\\u201371 are also being developed as a treatment technology. These methods described above have been demonstrated to be effective in degradation and lead to varying degrees of destruction involv- ing reduction in chain length, cleaving of C \\u2013F bond, and re- moval of head group. A promising treatment technology, non-equilibrium plasma discharge, is not in thermodynamic equilibrium and only the electron temperature is much hotter than the rest of the gas. Non-equilibrium plasma can generate a reactive envi- ronment of heat, ultraviolet (UV) radiation, and highly reac- tive chemical species such as electrons, ions, and reactive neutral species. 72 At the gas \\u2013liquid interface, non- equilibrium plasma generates diverse reactive environments containing a variety of reactive chemical species like reactive\"\n    },\n    {\n      \"corpus_chunk\": 26,\n      \"locator_id\": \"S14-E05\",\n      \"query_scores\": {\n        \"RT09-C1\": 0.021622976288199425,\n        \"RT09-C2\": 7.672556967008859e-05,\n        \"RT09-C3\": 0.0002913347852881998,\n        \"umbrella\": 0.5415173768997192\n      },\n      \"section\": \"methods\",\n      \"text\": \"chain reduction of PFCAs. For PFCAs, the wavelength and intensity for maximal UV absorption decreases as the carbon chain length increases. 85 Therefore, UV-vis can be used to as- sess chain length reduction. For example, for degradation of PFOA, initial peak maxima in water corresponded to \\u223c214 nm and was observed to shift towards longer wavelengths during the treatment process, as seen in S2 (ESI \\u2020). Defluorination was measured by a fluorine selective ion- probe for the PFCA, PFSA, and FtS compounds tested (Fig. 4). A trend of greater defluorination was observed in the longer chain lengths than the shorter chain lengths. Defluorination of PFAS chemicals is significant since mineralization of these compounds is the goal. Longer treatment times result in greater magnitudes of defluorination in addition to reduction in chain length and removal of head group. Since the C \\u2013F bond is very recalcitrant, especially once it is found in envi- ronmental settings, a strong focus on complete mineraliza- tion of these compounds is a priority. In order to measure the progress throughout treatment of mineralization, defluorination was measured for different time points (S4, ESI\\u2020). It was observed that percent destruction of compounds over time was greatly reduced, but defluorination occurred at a much slower pace due to the strength of the C \\u2013F bonds.\"\n    },\n    {\n      \"corpus_chunk\": 25,\n      \"locator_id\": \"S14-E06\",\n      \"query_scores\": {\n        \"RT09-C1\": 0.0034211312886327505,\n        \"RT09-C2\": 0.00011974738299613819,\n        \"RT09-C3\": 4.253390579833649e-05,\n        \"umbrella\": 0.2651885747909546\n      },\n      \"section\": \"methods\",\n      \"text\": \"relates to reduction of the fluorinated chain from the hydro- phobic end, in addition to some transformation of the head group from reactive species in the bulk liquid. It is observed from the data that the FtS compounds with similar perfluorinated chain lengths to PFSA ( e.g., PFBS and 4 : 2 FtS; PFHxS and 6 : 2 FtS; PFOS, and 8 : 2 FtS) were destroyed more within an hour (Fig. 3), demonstrating that the methyl groups in the telomeric portion of FtS compounds could be attacked by reactive species in the bulk liquid. Characterization of degradation products in treatment system: evidence of chain reduction, defluorination, and byproducts generated While it is promising that a range of PFCA, PFSA, and FtS compounds can be rapidly destroyed in the GAP system constructed (Fig. 2 and 3), it is important to examine the deg- radation products generated throughout the treatment pro- cess because they are also a concern in the environment. In this study, qualitative UV-vis analysis was used to look at chain reduction, LCMS/MS and QTOF were used to look at byproduct PFAS compounds, and defluorination was mea- sured using a fluorine selective probe. The UV-vis analysis was conducted to qualitatively observe chain reduction of PFCAs. For PFCAs, the wavelength and\"\n    },\n    {\n      \"corpus_chunk\": 17,\n      \"locator_id\": \"S14-E07\",\n      \"query_scores\": {\n        \"RT09-C1\": 0.002277846448123455,\n        \"RT09-C2\": 0.0004052029689773917,\n        \"RT09-C3\": 8.29671262181364e-05,\n        \"umbrella\": 0.22947105765342712\n      },\n      \"section\": \"methods\",\n      \"text\": \"20 \\u03bcgL \\u22121) and mass-labelled internal standards were used for isotope dilution. Double blanks and quality control vials were also included in the analysis to assess carry-over and identify possible contamination. The limit of quantitation (LOQ) values were analyte specific and spanned 0.01 to 0.1 \\u03bcgL \\u22121 for this method. Data calculations. Percent destruction was calculated by measuring the initial and final concentration of PFAS in trip- licate and dividing average final concentration by average ini- tial concentration. Percent defluorination was calculated by measuring samples initial and final fluoride concentration in triplicate and dividing the final fluoride mass in solution by the mass of fluorine on the initial concentration of PFAS. En- ergy estimations were calculated by the power setting of the GAP system, time of treatment, and volume of solution treated. Electric energy per order ( E Eo) values were calculated in order to compare this technology presented to existing technologies by the formula below. The value represented the energy required (kW h) to degrade a contaminant by an order of magnitude in a unit volume (m 3) of contaminated water.82,87,88 EEo \\u00bc P \\u00d7 t \\u00d7 1000 V \\u00d7 60 \\u00d7 log Ci=C f\\u00f0\\u00de (1) Results and discussion To demonstrate that the engineered GAP system is an effec-\"\n    },\n    {\n      \"corpus_chunk\": 33,\n      \"locator_id\": \"S14-E08\",\n      \"query_scores\": {\n        \"RT09-C1\": 0.0006001272704452276,\n        \"RT09-C2\": 7.629467290826142e-05,\n        \"RT09-C3\": 0.0001375113643007353,\n        \"umbrella\": 0.21987320482730865\n      },\n      \"section\": \"methods\",\n      \"text\": \"strated from these calculations (Fig. 8) that to achieve pro- gressively higher degrees of removal that the amount of en- ergy required increases ( i.e., the slope for each experimental curve increases as percent destruction increases). It is impor- tant to note that for the experiment with no power but with the same gas flow (see S6 (ESI \\u2020)) that adsorption of PFAS to the reactor or other losses were not a significant mechanism for removal in the system. In order to determine the most energy efficient cost for destruction of PFAS in water by GAP from the experimental data, one has to identify the shallowest slope observed in Fig. 8. For PFOA (Fig. 8(A)), this occurs for the experiment ran at 140 W. For this experiment, the most energy efficient removal achieved was 21% destruction and 17% defluorination in 20 minutes at 150 W (Fig. 3 and 4). This re- gime of near complete mineralization of the amount PFOA degraded in 20 minutes corresponds to 180 kJ L \\u22121 of energy used. If this energy efficiency could have been maintained, it would require 900 kJ L \\u22121 of energy to completely degrade PFOA. However, due to reactor inefficiencies of the current GAP reactor design, the highest amount of removal achieved\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2020 - Lewis - rsc.li - es-water Rapid degradation of PFAS in aqueous solutions by reverse vortex flow gliding arc plasma \\u2020.pdf\",\n  \"source_id\": \"S14\",\n  \"title\": \"rsc.li/es-water Rapid degradation of PFAS in aqueous solutions by reverse vortex flow gliding arc plasma \\u2020\",\n  \"year\": \"2020\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "529ba67647a04a8cdcf9afbc703de2ab8a35dbc383e52e607c3b6699c857171e",
+  "response_metadata": {
+    "cached_input_tokens": 1152,
+    "estimated_cost_usd": 0.04472525,
+    "finish_reason": "stop",
+    "input_tokens": 7065,
+    "latency_seconds": 31.94331904198043,
+    "output_tokens": 3719,
+    "reasoning_tokens": 1196,
+    "response_id": "chatcmpl-E9NfNwT6KGq6L377yaJmTx7vrEbBB",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 10784,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The study examines multiple PFAS types and plasma gases, reports several different endpoints (parent loss, defluorination, byproducts, energy), and the text stresses co-alignment of measurements rather than simple numeric comparison, so characterizing the record as descriptive_only is a reasonable inference from the cited sections.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "Cited sections show multiple PFAS, different plasma gases, various endpoints (percent destruction, defluorination, fluorine mass balance, energy), and limited explicit numeric detail in the provided chunks, so the stated reason accurately characterizes why results are best used qualitatively.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "S14-E01 and S14-E07 describe disappearance of target analytes and calculation of percent destruction from initial and final PFAS concentrations measured by LC-MS/MS, which corresponds to parent_compound_loss.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "S14-E01 notes comparing percent destruction of PFNA, PFOS, and 8:2 FtS; S14-E07 explains percent destruction is based on measured initial and final PFAS concentrations. This matches the interpretation that destruction reflects loss of parent analyte from the aqueous phase by LC-MS/MS.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "S14-E01 and S14-E07 use the term 'percent destruction' for this endpoint, matching the reported_term.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "S14-E02 and S14-E06 describe formation of degradation products, head-group cleavage, and chain-length reduction, which are transformation phenomena, so endpoint_type='transformation' is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "S14-E02 notes PFOA formation from PFOS and PFOS formation from 8:2 FtS and head group cleavage; S14-E05 and S14-E06 describe qualitative UV\u2013vis evidence of chain reduction and LC-MS/MS & QTOF analysis of byproducts. This aligns with the stated interpretation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].reported_term",
+        "reason": "The record paraphrases author descriptions (formation of degradation products, chain length reduction, head group cleavage) found in S14-E02, E05, and E06; this is consistent with the source wording.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].endpoint_type",
+        "reason": "S14-E05, E06, and E07 explicitly discuss 'defluorination' measured via fluoride and calculated as percent defluorination, so classifying this endpoint as defluorination is directly supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].interpretation",
+        "reason": "S14-E05 states defluorination was measured using a fluorine-selective probe for PFCA, PFSA and FtS compounds, with greater defluorination for longer chains and slower defluorination than parent destruction over time. This matches the interpretation given.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].reported_term",
+        "reason": "The term 'defluorination' is explicitly used in S14-E05, E06, and E07, matching the reported_term.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "S14-E03 states that samples were analyzed for a 'selected list of 24 PFAS' using the Vista method. It is a valid design-inferred limitation that transformation products not on this list, including highly degraded or atypical PFAS, would not be detected.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1]",
+        "reason": "S14-E05 describes UV\u2013vis analysis as qualitative to observe chain reduction, and S14-E02/E06 plus the fluorine mass-balance discussion indicate limited conversion into quantified PFAS byproducts. It is a reasonable design-inferred limitation that chain reduction/head-group cleavage are characterized largely qualitatively without full quantitative speciation or mass closure.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix.value",
+        "reason": "S14-E01 mentions PFAS compounds in 'aqueous matrices,' and the article context is PFAS contaminated water; S14-E06 references treatment of PFCA, PFSA, and FtS compounds in this GAP system. Describing the matrix as aqueous solutions of these PFAS is consistent.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "S14-E01 notes the GAP system was designed for generating reverse-vortex gliding arc discharges, which corresponds to a reverse-vortex gliding arc plasma reactor.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "Reactor type is a categorical descriptor and appropriately has no unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "S14-E01 states that air, nitrogen (N2), and oxygen (O2) were compared to determine which gas leads to the most rapid PFAS degradation, matching the description of plasma gases used for comparison.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The plasma gas comparison is categorical; no unit is appropriate and the field is null.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "S14-E06 states that FtS compounds with similar perfluorinated chain lengths to PFSAs were 'destroyed more within an hour (Fig. 3)', which is the basis for the qualitative treatment-time description; leaving the numeric value blank is consistent with the qualitative nature of the statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "No explicit numeric treatment-time value is provided in the record for this entry, so omitting a unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "S14-E01 identifies PFNA as one of the compounds compared and refers to it as a PFCA, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1].value",
+        "reason": "S14-E01 includes PFOS in the gas comparison and it is a PFSA; S14-E02 discusses PFOS in degradation experiments, so the PFOS (PFSA) scope is supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[2].value",
+        "reason": "S14-E01 lists 8:2 FtS; S14-E06 explicitly mentions 4:2 FtS, 6:2 FtS, and 8:2 FtS in chain-length comparisons. This supports the stated FtS scope.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[3].value",
+        "reason": "S14-E06 mentions 'PFBS and 4:2 FtS; PFHxS and 6:2 FtS; PFOS and 8:2 FtS', supporting inclusion of PFBS and PFHxS as other PFSA analogues discussed in comparisons.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "S14-E06 states that the relevant FtS compounds 'were destroyed more within an hour (Fig. 3)'. Recording this as an exact value of 1 h overstates precision and turns a qualitative 'within an hour' observation into an exact numeric, so the core time scale is supported but the exactness is not.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The time scale is expressed in hours in the phrase 'within an hour', so using 'h' as the unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "S14-E03 reports the ion-selective electrode method range as 0.01 mg L\u22121 to 19 000 mg L\u22121 F\u2212. The recorded range '0.01-19000' matches these bounds.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "S14-E03 explicitly gives the range in mg L\u22121 F\u2212, matching the unit string 'mg L-1 F-'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].value",
+        "reason": "S14-E03 states that the modified EPA Method 537 has a detection limit of 2.0 ng L\u22121, matching the recorded value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].unit",
+        "reason": "The detection limit in S14-E03 is expressed in ng L\u22121, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].value",
+        "reason": "S14-E07 states that LOQ values were analyte-specific and spanned 0.01 to 0.1 \u00b5g L\u22121; the recorded range '0.01-0.1' matches.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].unit",
+        "reason": "S14-E07 reports LOQs in \u00b5g L\u22121, matching the unit string.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "S14-E02 notes head-group cleavage and observes PFOA formation during PFOS treatment and PFOS formation during 8:2 FtS treatment; S14-E06 describes characterization of degradation products. This supports the statement about shorter-chain PFCAs and cross-formation of regulated PFAS as byproducts.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[1]",
+        "reason": "S14-E05 describes UV\u2013vis analysis to assess chain-length reduction, with initial peak maxima for PFOA at ~214 nm shifting to longer wavelengths during treatment, which is consistent with the statement about spectral shifts indicating chain-length reduction.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "S14-E02 references 'batch experiments with PFOS and 8:2 FtS'; the overall article deals with a laboratory GAP system. Describing the work as bench-scale batch evaluations is a reasonable design-based inference consistent with the cited text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "S14-E01 describes a GAP system designed for reverse-vortex gliding arc discharges and compares air, N2, and O2 as working gases for PFAS degradation, matching the treatment description.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT09-bge_llm_local_rag-S14-R02",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014study identity, aqueous PFAS matrix, GAP plasma treatment and gases, parent-compound percent destruction, defluorination measurement, transformation products, and key analytical limits\u2014are all supported by the cited text. The only minor issue is representing 'within an hour' as an exact 1 h, which is a qualifier-level approximation and does not materially affect use of the record for qualitative synthesis.",
+    "task_id": "RT09"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

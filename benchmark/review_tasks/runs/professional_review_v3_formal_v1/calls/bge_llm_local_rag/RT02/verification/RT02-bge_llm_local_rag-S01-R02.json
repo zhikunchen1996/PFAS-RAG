@@ -1,0 +1,260 @@
+{
+  "call_key": "RT02:bge_llm_local_rag:verify:RT02-bge_llm_local_rag-S01-R02",
+  "created_at": "2026-08-05T03:53:42.364989+00:00",
+  "raw_response_text": "{\"task_id\":\"RT02\",\"record_id\":\"RT02-bge_llm_local_rag-S01-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The DOI and URL exactly match the citation provided in the source metadata (10.1016/j.watres.2022.119019).\"},{\"field_path\":\"matrix\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The source states the pilot was conducted at a U.S. Department of Defense site near Willow Grove, PA with PFAS contamination from historical AFFF releases and total detected PFAS 30\u201355 \u00b5g/L (S01-E01). The added qualifier that it is the \\\"same sourcewater as for single-use resin columns\\\" is not explicitly stated in the cited text, though it is a reasonable inference from the shared pilot system. Thus, the core matrix description is supported but one qualifier is inferred rather than sourced.\"},{\"field_path\":\"pfas_scope[0]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S01-E01 reports total detected sourcewater PFAS concentrations of 30\u201355 \u00b5g/L and mentions EPA\u2019s advisory for PFOS+PFOA, indicating a PFAS mixture at that level. However, the specific statement that the mixture includes both PFSAs and PFCAs such as PFOS and PFOA is only partly grounded: PFOS and PFOA are implied via the advisory but not listed as measured analytes in this chunk, and PFSAs/PFCAs as classes are not named here. Hence the mixture and concentration range are supported, but the explicit class naming is partly inferred.\"},{\"field_path\":\"pfas_scope[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E05 explicitly discusses the PFSA class, noting that every PFSA other than PFOS is detected in A520E effluent within 61,000 BVs, whereas long-chain PFSAs remain non-detect for \u2265150,000 BVs on the single-use resins. This supports the focus on PFSA-class breakthrough and long-chain versus other PFSAs.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E05 reports bed volumes treated until PFAS breakthrough (e.g., PFOS removal through 31,000 BVs for A520E and \u226575,000 BVs for single-use resins). This reflects performance quantified as maintained removal up to a breakthrough criterion. Classifying the endpoint as \\\"removal\\\" (operational removal to breakthrough) is consistent with the described measurements.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E05 discusses PFOS and other PFSAs in terms of bed volumes treated until breakthrough for A520E versus single-use resins (31,000 BVs vs \u226575,000 BVs for PFOS, and PFSA class behavior). This aligns with the interpretation that PFAS removal is quantified via bed volumes to breakthrough and compared across resins.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E01 states that the pilot system had 24 individual vessels packed with resin arranged in eight parallel columns, each with three vessels in series and sample ports before and after each vessel. S01-E05 identifies the regenerable A520E among the resins. Together, these support that A520E was packed into vessels within this multi-vessel, multi-column pilot system as described.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The field correctly leaves the unit null for a descriptive column configuration; no numerical unit is applicable or required by the source.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E07 states that \u201c> 750,000 BVs were treated through the lead vessel (30-sec EBCT) in each column,\u201d providing a 30-second EBCT for the lead vessel. The recorded value of 30 (seconds) matches this text.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The EBCT for the lead vessel is reported as 30 seconds in S01-E07. Using unit \\\"s\\\" is consistent with the source.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E01 reports that total detected sourcewater PFAS concentrations ranged from 30\u201355 \u00b5g/L. The recorded value \\\"30-55\\\" matches this range.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The concentration range in S01-E01 is given in \u00b5g/L, so the unit \\\"ug/L\\\" is correctly transcribed.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E05 states that PFOS was removed through \u201conly 31,000 BVs for the regenerable A520E.\u201d The recorded value 31000 with exact_numeric form is an accurate transcription.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The metric in S01-E05 is expressed in bed volumes (BVs). The unit \\\"BVs\\\" correctly reflects this.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E05 reports \u201c< 1,000 BVs for A860\u201d for PFOS removal. The recorded value \\\"<1000\\\" with inequality form matches the source statement.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E05 expresses this performance in bed volumes (BVs), and the unit is correctly recorded as \\\"BVs\\\".\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E01 describes a unified pilot system with 24 vessels in eight columns, and S01-E07 notes common EBCTs (30-sec lead vessel EBCT, combined 2-min EBCT) and that the field pilot compared multiple resins, including regenerable vs single-use resins. S01-E05 provides A520E and single-use resin breakthrough in BVs. These shared conditions (same groundwater, system, EBCT, column configuration) support judging the results as comparable with conditions across resins.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The explanation that A520E was operated in the same pilot system, treating the same groundwater with the same EBCT and bed configuration as the single-use resins is consistent with S01-E01, S01-E05, and S01-E07, which together describe a multi-resin field pilot under shared hydraulic and sourcewater conditions.\"},{\"field_path\":\"limitations[0]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S01-E01 and E05 document that the site has very high PFAS concentrations and S01-E07 specifies short EBCTs (30-sec lead vessel, 2-min combined). S01-E05 also shows lower bed volumes to breakthrough for A520E than for single-use resins. However, the statement that these lower BVs for A520E are specifically limited to this site and EBCT and may differ elsewhere is an interpretation that goes beyond what is strictly required by the design facts. It is reasonable as a design-inferred limitation but not explicitly or necessarily stated, so it is only partially supported.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S01-E02 explains that long-chain PFSAs and long-chain PFCAs have higher affinity, that shorter-chain PFASs are more easily displaced to later column sections and effluent (with effluent concentrations exceeding influent for some structures), and emphasizes competitive displacement and chromatographic behavior. S01-E05 notes earlier breakthrough and near-immediate breakthrough for some PFAS/resin combinations. The summarized statement about earlier elution and altered effluent PFAS mixture composition under multisolute competitive conditions is consistent with these author-reported mechanisms.\"},{\"field_path\":\"study_scale\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S01-E07 explicitly refers to a \\\"field pilot\\\" and describes EBCT and large bed volumes treated, indicating pilot-scale continuous-flow columns treating groundwater. The use of a regenerable A520E resin is also clear from S01-E05. However, the specific descriptor \\\"polystyrene-based\\\" for A520E is not stated in the cited chunks, even if likely true from broader knowledge. Thus the pilot-scale continuous-flow groundwater treatment is supported, but the polymer backbone qualifier is not directly sourced here.\"},{\"field_path\":\"treatment\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S01-E05 identifies the regenerable A520E and compares it with single-use resins; S01-E01 describes resin-packed vessels arranged in series in columns, which is consistent with a packed-bed configuration; S01-E07 notes evaluation of regenerable vs single-use resins and that five resins were compared in the same field pilot system. These support A520E as a regenerable AER in the pilot packed-bed columns operated alongside single-use resins. However, the qualifier \\\"polystyrene-based\\\" for A520E is not explicitly given in these chunks, so that portion is inferred rather than sourced.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014study identity, matrix (AFFF-impacted groundwater), pilot-scale continuous-flow column design, EBCT, key PFAS breakthrough bed volumes for A520E and A860, and the comparability of resins under shared pilot conditions\u2014are directly supported by the cited text with correct numeric transcription and units. Some polymer-backbone descriptors and a design-inferred limitation include modest unsourced qualifiers but do not affect the core quantitative or interpretive use of the record for comparing batch versus continuous PFAS adsorption performance.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of when batch adsorption results do and do not predict column, pilot, or full-scale PFAS treatment performance.\",\"task_id\":\"RT02\",\"title\":\"Translating PFAS adsorption results from batch tests to continuous treatment\"}\n\nTask-specific extraction objective:\nExtract study scale, adsorbent, PFAS and matrix, batch or flow configuration, contact time, flow and bed properties, capacity definition, breakthrough criterion, bed volumes, media lifetime, and uncertainty or scale-up limitation.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Ellis, A.C.; Liu, C.J.; Fang, Y.; Boyer, T.H.; Schaefer, C.E.; Higgins, C.P.; Strathmann, T.J. Pilot study comparison of regenerable and emerging single-use anion exchange resins for treatment of groundwater contaminated by per- and polyfluoroalkyl substances (PFASs). Water Research 2022, 223, 119019.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S01-E01\",\n      \"S01-E05\",\n      \"S01-E07\"\n    ],\n    \"reason\": \"A520E was operated in the same pilot system, treating the same groundwater and using the same EBCT and bed configuration as the single-use resins; bed volumes to breakthrough for individual PFASs are directly comparable across resins under these shared conditions.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.watres.2022.119019\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S01-E05\"\n      ],\n      \"interpretation\": \"Removal of PFASs by regenerable A520E resin quantified as bed volumes treated until breakthrough of PFOS and other PFSAs; compared directly against single-use resins in terms of bed volumes to a given breakthrough threshold.\",\n      \"reported_term\": \"PFAS breakthrough and bed volumes treated (regenerable A520E)\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S01-E01\",\n        \"S01-E05\",\n        \"S01-E07\"\n      ],\n      \"statement\": \"Lower bed volumes to breakthrough for A520E relative to single-use resins are specific to the high-concentration AFFF-impacted groundwater and the relatively short EBCT used; other sites or operating conditions could yield different relative performance.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S01-E01\",\n      \"S01-E05\"\n    ],\n    \"value\": \"AFFF-impacted groundwater from a U.S. Department of Defense site, same sourcewater as for single-use resin columns.\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S01-E01\",\n        \"S01-E05\"\n      ],\n      \"name\": \"column_configuration\",\n      \"qualifiers\": \"Same hydraulic configuration and sampling approach as for single-use resins.\",\n      \"unit\": null,\n      \"value\": \"Resin A520E packed in pilot vessels that were part of the 24-vessel, eight-parallel-column system, each column with three vessels in series.\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S01-E07\"\n      ],\n      \"name\": \"empty_bed_contact_time_lead_vessel\",\n      \"qualifiers\": \"Lead-vessel EBCT reported for the pilot columns; A520E operated under the same EBCT regime as the single-use resins.\",\n      \"unit\": \"s\",\n      \"value\": \"30\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S01-E01\"\n      ],\n      \"name\": \"influent_total_PFAS_concentration_range\",\n      \"qualifiers\": \"Total detected PFAS concentration in source groundwater; same sourcewater as other columns.\",\n      \"unit\": \"ug/L\",\n      \"value\": \"30-55\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S01-E01\",\n        \"S01-E05\"\n      ],\n      \"value\": \"Mixture of PFASs with total detected influent 30-55 ug/L, including PFSAs and PFCAs such as PFOS and PFOA.\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S01-E05\"\n      ],\n      \"value\": \"PFSA class explicitly discussed for breakthrough on A520E, with focus on long-chain PFSAs versus other PFSAs.\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S01-E05\"\n      ],\n      \"name\": \"bed_volumes_PFOS_removal_A520E\",\n      \"qualifiers\": \"Regenerable A520E resin provided PFOS removal through only 31,000 bed volumes, compared with >75,000 BVs for single-use resins.\",\n      \"unit\": \"BVs\",\n      \"value\": \"31000\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S01-E05\"\n      ],\n      \"name\": \"bed_volumes_PFOS_removal_A860\",\n      \"qualifiers\": \"For comparison, the polyacrylic A860 resin showed <1,000 bed volumes of PFOS removal (near-immediate breakthrough).\",\n      \"unit\": \"BVs\",\n      \"value\": \"<1000\",\n      \"value_form\": \"inequality\"\n    }\n  ],\n  \"record_id\": \"RT02-bge_llm_local_rag-S01-R02\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S01-E02\",\n        \"S01-E05\"\n      ],\n      \"statement\": \"Shorter bed volumes to breakthrough for non-PFOS PFSAs and near-immediate breakthrough for PFASs on the polyacrylic resin suggest that under multisolute competitive conditions, less strongly sorbing or less hydrophobic PFASs are displaced and elute earlier, affecting effluent PFAS mixture composition.\"\n    }\n  ],\n  \"source_id\": \"S01\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S01-E05\",\n      \"S01-E08\"\n    ],\n    \"value\": \"Field pilot-scale continuous-flow columns using a regenerable polystyrene-based anion exchange resin (A520E) treating PFAS-contaminated groundwater.\"\n  },\n  \"study_type\": \"pilot_or_field_deployment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S01-E05\",\n      \"S01-E08\"\n    ],\n    \"value\": \"Regenerable polystyrene-based anion exchange resin (A520E) in packed-bed configuration, operated in the same pilot column system as single-use resins.\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 1,\n  \"bge_score\": 0.6826871633529663,\n  \"citation\": \"Ellis, A.C.; Liu, C.J.; Fang, Y.; Boyer, T.H.; Schaefer, C.E.; Higgins, C.P.; Strathmann, T.J. Pilot study comparison of regenerable and emerging single-use anion exchange resins for treatment of groundwater contaminated by per- and polyfluoroalkyl substances (PFASs). Water Research 2022 223 119019. DOI: 10.1016/j.watres.2022.119019.\",\n  \"doi\": \"10.1016/j.watres.2022.119019\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.watres.2022.119019\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 10,\n      \"locator_id\": \"S01-E01\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.00024235017190221697,\n        \"RT02-C2\": 0.008105636574327946,\n        \"RT02-C3\": 3.731298784259707e-05,\n        \"umbrella\": 0.7785425782203674\n      },\n      \"section\": \"results\",\n      \"text\": \"This enabled assessment of the importance of polymer backbone in PFAS adsorption from groundwater under field conditions and comparison of relative resin performance trends in batch versus continuous-flow operation. Furthermore, while our earlier batch adsorption data suggested poor performance of A860, other recent re - ports have indicated that the resin is effective in adsorbing PFASs from groundwater ( Dixit et al., 2020 ; Dixit et al., 2021a ). The pilot study was conducted at a U.S. Department of Defense site located in the Willow Grove, PA area where elevated groundwater PFAS concentrations have been documented due to historical releases of AFFF ( Leeson et al., 2020 ). Total detected sourcewater PFAS concentrations ranged from 30-55 \\u03bc g/L, more than 400 times greater than the EPA \\u2019 s lifetime health advisory level of 70 ng/L (PFOS + PFOA combined) ( Goode and Senior, 2020 ). Resin quantities in each vessel were designed to allow prolonged PFAS loading while maintaining a vessel-to-particle diameter ratio > 40 to prevent preferential flow paths due to walling effects ( Tian et al., 2016 ). The pilot system was outfitted with 24 indi - vidual vessels packed with resin arranged in eight parallel columns ( Fig. 1 ), each containing three vessels in series with sample ports before and after each vessel.\"\n    },\n    {\n      \"corpus_chunk\": 43,\n      \"locator_id\": \"S01-E02\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.061264414340257645,\n        \"RT02-C2\": 0.013636643067002296,\n        \"RT02-C3\": 3.737335282494314e-05,\n        \"umbrella\": 0.062169961631298065\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"These data reinforce the trends seen in the breakthrough data, indicating long-chain struc - tures and PFSAs have higher affinity for all AERs than short-chain structures and PFCAs, respectively. This suggests that not only does the increased hydrophobic character of PFASs with longer fluorocarbon tails lead to greater resin affinity, but also that PFASs with shorter tails are more easily displaced from resins due to the lower hydrophobic attraction between the target analytes and the hydrophobic resin poly - mer. While chromatographic elution of PFAS analytes is well- established, these adsorbate distribution profiles underscore the importance that competitive displacement mechanisms play in the breakthrough behavior of individual PFASs when treating PFAS mix - tures in AFFF-impacted water sources. Comparison of the total PFAS mass found on each section shows that the total adsorbed mass decreases substantially along the length of the column. On a molar basis, the total PFAS mass adsorbed in the first section of each single-use resin is > 15-fold higher than that adsorbed in Fig. 7. Pairwise scatter of the estimated bed volumes treated until PFAA breakthrough reaches 50% for various combinations of resin. Axes represent bed volumes treated in thousands (k) or millions (M). Individual points represent a single analyte \\u2019 s estimated breakthrough for a given pairing of resins. A.C. Ellis et al.\"\n    },\n    {\n      \"corpus_chunk\": 32,\n      \"locator_id\": \"S01-E03\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0024732407182455063,\n        \"RT02-C2\": 0.0776977464556694,\n        \"RT02-C3\": 3.7287558370735496e-05,\n        \"umbrella\": 0.5246019959449768\n      },\n      \"section\": \"methods\",\n      \"text\": \"treatment site conditions in the present study, as well as the presence of elevated NOM levels in the earlier bench-scale studies. Because A860 has been found to remove NOM better than polystyrene PFAS-selective resins ( Dixit et al., 2020 ; Dixit et al., 2021a ), the presence of higher NOM levels may improve PFAS adsorption by cooperative adsorption mech - anisms. The superiority of polystyrene-based resins for PFAS adsorption observed in the present study can be attributed to their greater hydro - phobicity in comparison to polyacrylic-based resins. It is interesting to note the similar performance of three single-use resins despite large differences in maximum PFOS adsorption capacity measured in batch equilibrium experiments ( Table 1 ) ( Fang et al., 2021 ). Although the macroporous CalRes 2301 yielded a maximum batch adsorption capacity > 4 times greater than either of the other two gel-type single-use resins, breakthrough data for PFOS was similar for all three resins. Thus, other factors beyond maximum adsorption capacity control uptake and competition among PFASs on these resins. Influent PFAS concentrations is likely one such factor, as other pilot-scale treatment systems at lower-concentration sites experienced complete PFAS breakthrough after adsorption of significantly lower total PFAS masses ( Liu et al , Under Review; Dixit et al., 2021b ). Other factors\"\n    },\n    {\n      \"corpus_chunk\": 2,\n      \"locator_id\": \"S01-E04\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0005288048996590078,\n        \"RT02-C2\": 0.04644031822681427,\n        \"RT02-C3\": 4.706216714112088e-05,\n        \"umbrella\": 0.39666709303855896\n      },\n      \"section\": \"methods\",\n      \"text\": \") measured in batch experiments. Postmortem analysis of PFASs extracted from spent resins revealed chromato - graphic elution behavior and competition among PFASs for adsorption to the resins. PFSAs and long-chain PFCAs were preferentially adsorbed to earlier sections in the AER columns, whereas short-chain PFCAs were compet - itively displaced towards the later sections of the columns and into the effluent, consistent with effluent con - centrations of the latter structures exceeding influent values. These results provide insights into the mechanisms that govern PFAS adsorption to AERs in real multisolute groundwater matrices and support findings from other diverse sites regarding PFAS affinity, elution behavior, and competition for exchange sites. 1. Introduction Groundwater contamination by per- and polyfluoroalkyl substances (PFASs) has been documented on a global scale ( Janousek et al., 2019 ). Although there are many sources of PFASs including food packaging, clothing, and furniture coatings ( Boronow et al., 2019 ), the primary source of groundwater contamination is historical use of aqueous film-forming foam (AFFF) to counter fuel fires ( Schultz et al., 2004 ; Leeson et al., 2020 ). Since the 1940s, AFFF has been routinely released as part of fire training exercises ( Sunderland et al., 2018 ), and large PFAS plumes have been detected in groundwater supplies near fire\"\n    },\n    {\n      \"corpus_chunk\": 31,\n      \"locator_id\": \"S01-E05\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0003915239358320832,\n        \"RT02-C2\": 0.07594982534646988,\n        \"RT02-C3\": 3.728691808646545e-05,\n        \"umbrella\": 0.6032454967498779\n      },\n      \"section\": \"discussion\",\n      \"text\": \"only 31,000 BVs for the regenerable A520E (and < 1,000 BVs for A860). This disparity holds true for the PFSA class as well, as every PFSA pre - sent in the sourcewater other than PFOS is detected in A520E effluent samples within 61,000 BVs, whereas long-chain PFSAs remain at non- detect levels for \\u2265 150,000 BVs with all three single-use resins. Among the three single-use resins, PFAS treatment performance is similar for all analytes after 2 min of EBCT. Although some recent reports have indicated successful use of pol - yacrylic AERs ( Deng et al., 2010 ; Dixit et al., 2021a ), findings from this study and recent laboratory investigations ( Laura del Moral et al., 2020; Dietz et al., 2021 ) demonstrate the superiority of polystyrene AERs. The four polystyrene-based resins removed PFSAs through \\u2265 40,000 BVs with complete PFOS removal through \\u2265 75,000 BVs, whereas near-immediate breakthrough was observed with the polyacrylic resin. The success of A860 in prior studies might result from longer contact times (e.g., > 10 min) and lengthy batch reactions that do not reflect treatment site conditions in the present study, as well as the presence of elevated NOM levels in the earlier bench-scale studies.\"\n    },\n    {\n      \"corpus_chunk\": 35,\n      \"locator_id\": \"S01-E06\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0004279511049389839,\n        \"RT02-C2\": 0.011894050054252148,\n        \"RT02-C3\": 3.735617428901605e-05,\n        \"umbrella\": 0.3726215660572052\n      },\n      \"section\": \"methods\",\n      \"text\": \"Model fitting and breakthrough predictions. The trends in 50% breakthrough values observed for individual PFAA-resin combinations are generally consistent with trends in equi - librium ion exchange affinity constants measured in batch experiments ( Fang et al., 2021 ). Fig. 6 shows the relationship between the BVs at Fig. 5. Sigmoid curve fits to breakthrough data for all PFAS structures after treatment using CalRes 2301 at a 30-sec EBCT. Corresponding fits for A520E, PFA694E, and PSR2 + are provided in Section 5 of the SM. A.C. Ellis et al. Water Research 223 (2022) 119019 9 which breakthrough reaches 50% for different analytes ( Table 3 ) and the PFAS-Cl \\u2013 exchange coefficients (log K ex ) measured for the same analyte-AER combinations in batch adsorption experiments; corre - sponding linear correlation fits for individual resins provided in Figures S6.1-S6.5. These empirical correlations \\u2013 particularly strong for the single-use AERs \\u2013 suggest that field performance of new resins under development may be roughly estimated from batch adsorption experi - ments for the new resin in tandem with pilot breakthrough data already collected for existing resins where these correlations have been observed. While such predictions need further validation, this suggests an approach that could be used to rapidly screen and downselect new\"\n    },\n    {\n      \"corpus_chunk\": 8,\n      \"locator_id\": \"S01-E07\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0005096158129163086,\n        \"RT02-C2\": 0.006307866424322128,\n        \"RT02-C3\": 3.735646168934181e-05,\n        \"umbrella\": 0.3450354337692261\n      },\n      \"section\": \"results\",\n      \"text\": \"combined EBCT of two minutes for the first two media vessels in each column while > 750,000 BVs were treated through the lead vessel (30- sec EBCT) in each column. The goals of this field pilot were to evaluate (1) regenerable vs single-use resin performance, (2) the sorbent prop - erties most important for PFAS removal, (3) the effects of EBCT on PFAS elution, (4) identify structure-reactivity patterns among PFASs and relate individual PFAS breakthrough behavior with batch-derived adsorption parameters, and (5) how to best optimize ion exchange sys - tem configuration. The Thomas Model was fit to breakthrough data to provide objective quantification of breakthrough parameters for indi - vidual PFASs on each resin. Postmortem analysis of the spent resins was performed to characterize adsorption zones for individual PFASs along each sorbent column to obtain a deeper understanding of how competitive adsorption among target PFASs influences sorbent capacity and analyte breakthrough. Breakthrough data and postmortem adsor - bate profiles were used to identify important factors, including site- specific treatment criteria, that will determine media usage rates (MURs) across a range of diverse sites. 2. Materials and methods 2.1. Field pilot design Five resins were compared, down-selected from a larger group studied in batch systems ( Fang et al., 2021 ).\"\n    },\n    {\n      \"corpus_chunk\": 5,\n      \"locator_id\": \"S01-E08\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0018513182876631618,\n        \"RT02-C2\": 0.016821831464767456,\n        \"RT02-C3\": 3.7440844607772306e-05,\n        \"umbrella\": 0.32791629433631897\n      },\n      \"section\": \"methods\",\n      \"text\": \"products designed to be disposed or incinerated upon exhaustion ( Boodoo et al., 2019 ). While this limits operational lifetimes for the resins, it simplifies the treatment train by eliminating the need for AER regeneration and waste brine/cosolvent management infrastructure. Furthermore, the high selectivity of these resins for PFASs, coupled with the trace levels of PFASs detected at most sites, potentially allows for extended operation (e.g., > 1 year) before media replacement. While a growing number of studies report effective treatment of PFASs using AERs, most reports are limited to batch adsorption and bench-scale continuous-flow studies ( Carter and Farrell, 2010 ; Zaggia et al., 2016 ; McCleaf et al., 2017 ; Schaefer et al., 2019 ; Fang et al., 2021 ). Tests of single-use \\u201c PFAS-selective \\u201d AERs confirm their higher affinity for PFASs, especially long-chain structures like PFOS (perfluorooctane sulfonate) and PFOA (perfluorooctanoic acid), compared to conventional regen - erable AERs ( Fang et al., 2021 ). While single-use AERs share many of the same properties of some regenerable resins (e.g., a polystyrene back - bone and quaternary amine functional groups), these sorbents benefit from the inclusion of longer chain hydrocarbon moieties within the\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2022 - Ellis - Pilot study comparison of regenerable and emerging single-use anion exchange resins for treatment of groundwater contaminated by per- and.pdf\",\n  \"source_id\": \"S01\",\n  \"title\": \"Pilot study comparison of regenerable and emerging single-use anion exchange resins for treatment of groundwater contaminated by per- and polyfluoroalkyl substances (PFASs)\",\n  \"year\": \"2022\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "3b0d697a612591c715f818093706cdb286ba5d1c1f9f0a34ef074d0fb26f20c2",
+  "response_metadata": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.04368125,
+    "finish_reason": "stop",
+    "input_tokens": 6249,
+    "latency_seconds": 26.95715683407616,
+    "output_tokens": 3587,
+    "reasoning_tokens": 1412,
+    "response_id": "chatcmpl-E9MypBTND8W7mhbReW7henbd0B08J",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 9836,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The DOI and URL exactly match the citation provided in the source metadata (10.1016/j.watres.2022.119019).",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "matrix",
+        "reason": "The source states the pilot was conducted at a U.S. Department of Defense site near Willow Grove, PA with PFAS contamination from historical AFFF releases and total detected PFAS 30\u201355 \u00b5g/L (S01-E01). The added qualifier that it is the \"same sourcewater as for single-use resin columns\" is not explicitly stated in the cited text, though it is a reasonable inference from the shared pilot system. Thus, the core matrix description is supported but one qualifier is inferred rather than sourced.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "pfas_scope[0]",
+        "reason": "S01-E01 reports total detected sourcewater PFAS concentrations of 30\u201355 \u00b5g/L and mentions EPA\u2019s advisory for PFOS+PFOA, indicating a PFAS mixture at that level. However, the specific statement that the mixture includes both PFSAs and PFCAs such as PFOS and PFOA is only partly grounded: PFOS and PFOA are implied via the advisory but not listed as measured analytes in this chunk, and PFSAs/PFCAs as classes are not named here. Hence the mixture and concentration range are supported, but the explicit class naming is partly inferred.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1]",
+        "reason": "S01-E05 explicitly discusses the PFSA class, noting that every PFSA other than PFOS is detected in A520E effluent within 61,000 BVs, whereas long-chain PFSAs remain non-detect for \u2265150,000 BVs on the single-use resins. This supports the focus on PFSA-class breakthrough and long-chain versus other PFSAs.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "S01-E05 reports bed volumes treated until PFAS breakthrough (e.g., PFOS removal through 31,000 BVs for A520E and \u226575,000 BVs for single-use resins). This reflects performance quantified as maintained removal up to a breakthrough criterion. Classifying the endpoint as \"removal\" (operational removal to breakthrough) is consistent with the described measurements.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "S01-E05 discusses PFOS and other PFSAs in terms of bed volumes treated until breakthrough for A520E versus single-use resins (31,000 BVs vs \u226575,000 BVs for PFOS, and PFSA class behavior). This aligns with the interpretation that PFAS removal is quantified via bed volumes to breakthrough and compared across resins.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "S01-E01 states that the pilot system had 24 individual vessels packed with resin arranged in eight parallel columns, each with three vessels in series and sample ports before and after each vessel. S01-E05 identifies the regenerable A520E among the resins. Together, these support that A520E was packed into vessels within this multi-vessel, multi-column pilot system as described.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The field correctly leaves the unit null for a descriptive column configuration; no numerical unit is applicable or required by the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "S01-E07 states that \u201c> 750,000 BVs were treated through the lead vessel (30-sec EBCT) in each column,\u201d providing a 30-second EBCT for the lead vessel. The recorded value of 30 (seconds) matches this text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The EBCT for the lead vessel is reported as 30 seconds in S01-E07. Using unit \"s\" is consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "S01-E01 reports that total detected sourcewater PFAS concentrations ranged from 30\u201355 \u00b5g/L. The recorded value \"30-55\" matches this range.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "The concentration range in S01-E01 is given in \u00b5g/L, so the unit \"ug/L\" is correctly transcribed.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "S01-E05 states that PFOS was removed through \u201conly 31,000 BVs for the regenerable A520E.\u201d The recorded value 31000 with exact_numeric form is an accurate transcription.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The metric in S01-E05 is expressed in bed volumes (BVs). The unit \"BVs\" correctly reflects this.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "S01-E05 reports \u201c< 1,000 BVs for A860\u201d for PFOS removal. The recorded value \"<1000\" with inequality form matches the source statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "S01-E05 expresses this performance in bed volumes (BVs), and the unit is correctly recorded as \"BVs\".",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "S01-E01 describes a unified pilot system with 24 vessels in eight columns, and S01-E07 notes common EBCTs (30-sec lead vessel EBCT, combined 2-min EBCT) and that the field pilot compared multiple resins, including regenerable vs single-use resins. S01-E05 provides A520E and single-use resin breakthrough in BVs. These shared conditions (same groundwater, system, EBCT, column configuration) support judging the results as comparable with conditions across resins.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The explanation that A520E was operated in the same pilot system, treating the same groundwater with the same EBCT and bed configuration as the single-use resins is consistent with S01-E01, S01-E05, and S01-E07, which together describe a multi-resin field pilot under shared hydraulic and sourcewater conditions.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "limitations[0]",
+        "reason": "S01-E01 and E05 document that the site has very high PFAS concentrations and S01-E07 specifies short EBCTs (30-sec lead vessel, 2-min combined). S01-E05 also shows lower bed volumes to breakthrough for A520E than for single-use resins. However, the statement that these lower BVs for A520E are specifically limited to this site and EBCT and may differ elsewhere is an interpretation that goes beyond what is strictly required by the design facts. It is reasonable as a design-inferred limitation but not explicitly or necessarily stated, so it is only partially supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "S01-E02 explains that long-chain PFSAs and long-chain PFCAs have higher affinity, that shorter-chain PFASs are more easily displaced to later column sections and effluent (with effluent concentrations exceeding influent for some structures), and emphasizes competitive displacement and chromatographic behavior. S01-E05 notes earlier breakthrough and near-immediate breakthrough for some PFAS/resin combinations. The summarized statement about earlier elution and altered effluent PFAS mixture composition under multisolute competitive conditions is consistent with these author-reported mechanisms.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "study_scale",
+        "reason": "S01-E07 explicitly refers to a \"field pilot\" and describes EBCT and large bed volumes treated, indicating pilot-scale continuous-flow columns treating groundwater. The use of a regenerable A520E resin is also clear from S01-E05. However, the specific descriptor \"polystyrene-based\" for A520E is not stated in the cited chunks, even if likely true from broader knowledge. Thus the pilot-scale continuous-flow groundwater treatment is supported, but the polymer backbone qualifier is not directly sourced here.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "treatment",
+        "reason": "S01-E05 identifies the regenerable A520E and compares it with single-use resins; S01-E01 describes resin-packed vessels arranged in series in columns, which is consistent with a packed-bed configuration; S01-E07 notes evaluation of regenerable vs single-use resins and that five resins were compared in the same field pilot system. These support A520E as a regenerable AER in the pilot packed-bed columns operated alongside single-use resins. However, the qualifier \"polystyrene-based\" for A520E is not explicitly given in these chunks, so that portion is inferred rather than sourced.",
+        "status": "partially_supported"
+      }
+    ],
+    "record_id": "RT02-bge_llm_local_rag-S01-R02",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014study identity, matrix (AFFF-impacted groundwater), pilot-scale continuous-flow column design, EBCT, key PFAS breakthrough bed volumes for A520E and A860, and the comparability of resins under shared pilot conditions\u2014are directly supported by the cited text with correct numeric transcription and units. Some polymer-backbone descriptors and a design-inferred limitation include modest unsourced qualifiers but do not affect the core quantitative or interpretive use of the record for comparing batch versus continuous PFAS adsorption performance.",
+    "task_id": "RT02"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

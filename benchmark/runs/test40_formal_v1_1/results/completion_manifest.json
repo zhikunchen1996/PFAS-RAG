@@ -1,0 +1,61 @@
+{
+  "protocol_id": "test40_formal_v1_1",
+  "status": "complete",
+  "execution_date": "2026-07-30",
+  "question_count": 40,
+  "systems": [
+    "hybrid",
+    "bge",
+    "bge_llm"
+  ],
+  "validated_row_counts": {
+    "hybrid_retrieval": 40,
+    "bge_retrieval": 40,
+    "bge_llm_selector": 40,
+    "generated_answers": 120,
+    "l15_judgments": 120,
+    "l3_repeat_1_judgments": 120,
+    "l3_repeat_2_judgments": 120,
+    "l3_repeat_3_judgments": 120
+  },
+  "usage": {
+    "valid_paid_calls": 760,
+    "tracked_tokens": 6241725,
+    "tracked_cost_usd": 20.15611975,
+    "schema_invalid_unrecorded_calls": 3,
+    "estimated_bill_including_invalid_calls_usd": 20.23637593
+  },
+  "l3_primary": {
+    "metric": "component-balanced core reference-claim coverage",
+    "repeat_count": 3,
+    "aggregation": "equal mean of three repeat-specific system means",
+    "uncertainty": "sample standard deviation across repeat-specific system means",
+    "bootstrap": false,
+    "systems": {
+      "hybrid": {
+        "mean": 0.5030092592592592,
+        "sample_sd": 0.015291910025143303
+      },
+      "bge": {
+        "mean": 0.4979166666666667,
+        "sample_sd": 0.0055119818980512315
+      },
+      "bge_llm": {
+        "mean": 0.5729166666666666,
+        "sample_sd": 0.02094587657202178
+      }
+    }
+  },
+  "key_sha256": {
+    "l1_summary": "598589628b550033f980cb6e36672c770aab062ae1e048d0e1aa932eff3be13b",
+    "all_system_answers": "c22d66acde0af5703d00a0555fabb68676a32ca44f01b0730bccc10c537c3c34",
+    "l15_summary": "b4bc700c79eba2c4969d7d9014dddbfff2fc0a007b792d948e159178bfdc7ab0",
+    "l15_judgments": "cd94b2cab0d320afc6e64a819854e97769ae7a61c42ff5771906cea27431ea64",
+    "l3_repeat_1_judgments": "f438a7c2ccc502ffa040add875cfab1eb04d76f0628d47555f551832664ce137",
+    "l3_repeat_2_judgments": "aed5d28553a01adac0c04252b1f7b38c04092d889be5d8223235e3a4e8a155c3",
+    "l3_repeat_3_judgments": "970c6ea735919951ab353648cbc75a881e7955d83937e3f5fbc834b9c983d860",
+    "l3_three_repeat_summary": "d7da45b472f60664136a0a38c3c1ce29b52fec5ad51bd38f7d5cd6aad62a4ca4"
+  },
+  "held_out_boundary_preserved": true,
+  "test_results_used_for_configuration": false
+}

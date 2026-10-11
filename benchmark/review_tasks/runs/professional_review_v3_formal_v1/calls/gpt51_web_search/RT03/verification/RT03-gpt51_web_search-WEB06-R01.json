@@ -1,0 +1,236 @@
+{
+  "call_key": "RT03:gpt51_web_search:verify:RT03-gpt51_web_search-WEB06-R01",
+  "created_at": "2026-08-05T04:04:20.943993+00:00",
+  "raw_response_text": "{\"task_id\":\"RT03\",\"record_id\":\"RT03-gpt51_web_search-WEB06-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract only provides qualitative statements about effective regeneration, mechanism, and BET changes, without any numerical regeneration efficiencies, capacities, or mass balances. Describing the study as providing only descriptive/qualitative evidence is consistent with the cited text.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract describes regeneration of PFAS-saturated GAC using mixed regenerant solutions and attributes the mechanism to physical displacement and solubilization of PFAS from exhausted GAC (WEB06-E02). This clearly reflects desorption/phase transfer rather than destruction, matching endpoint_type='separation'.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB06-E02 states that even after the fifth usage cycle the method can efficiently regenerate PFAS-saturated GAC, implying restoration of adsorption performance upon reuse. This fits a sorption endpoint (capacity recovery over cycles).\"},{\"field_path\":\"endpoints[2].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB06-E03 reports BET analysis showing increased total pore volume and BET surface area in regenerated GACs. Classifying this as an 'other' endpoint focused on structural/physical properties is appropriate and directly supported.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB06-E01 explicitly states that the optimized regenerant solution consisted of 0.1 mol/L HCl in ethanol. The value string exactly matches this composition.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The operating condition is a descriptive composition (\\\"0.1 mol/L HCl in ethanol\\\"), not a standalone numeric quantity. Leaving the unit null is appropriate and consistent with the abstract.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB06-E01 reports a \\\"30-min residence time\\\" for the optimized regeneration condition. Recording the numeric value as 30 is accurate.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract specifies a 30-min residence time (WEB06-E01). Using 'min' as the unit is correct.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB06-E02 states that even after the fifth usage cycle the regeneration method is efficient. Recording the number of cycles evaluated as 5 is directly supported.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The number of cycles is a count, not a physical quantity with units. Leaving the unit null is appropriate.\"},{\"field_path\":\"matrix.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB06-E01 clearly supports that the matrix is PFAS-saturated GAC (solid phase): \\\"regeneration of PFAS-saturated GAC\\\" and \\\"exhausted GAC.\\\" The additional phrase about an aqueous PFAS solution being implied is an inference not stated in the abstract, though it is qualified as an implication. Core identification of PFAS-loaded GAC is supported; the implied aqueous-contact detail is interpretive.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The article title in the source metadata is \\\"Regeneration of perfluorooctane sulfonic acid (PFOS) loaded granular activated carbon using organic/inorganic mixed solutions,\\\" which explicitly identifies PFOS as the PFAS. The field correctly captures this.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The design is limited to PFOS-loaded GAC and organic/inorganic regenerant solutions, with an optimized condition of 0.1 mol/L HCl in ethanol and 30-min residence time (title and WEB06-E01). Inferring limited generalizability to other PFAS, adsorbents, or conditions directly follows from these design facts and is an appropriate design_inferred limitation.\"},{\"field_path\":\"limitations[1].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The captured content is only the abstract, which does not report numerical regeneration efficiencies, PFOS loading, breakthrough behavior, or PFAS mass balances; it only gives qualitative statements about efficiency, mechanism, and BET changes (WEB06-E01, WEB06-E02, WEB06-E03). Inferring that this constrains quantitative comparison is a valid design_inferred limitation.\"},{\"field_path\":\"residuals_byproducts[0].statement\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB06-E02 states that the regeneration mechanism is attributed to physical displacement and solubilization of PFAS from exhausted GAC, which supports desorption into a liquid regenerant. However, the statement further infers a PFAS-rich liquid waste stream and explicitly notes no indication of PFAS destruction. While these are reasonable inferences, they are not directly stated in the abstract. Thus, the mechanism part is supported but the waste-stream and non-destruction qualifiers go beyond the text.\"},{\"field_path\":\"residuals_byproducts[1].statement\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB06-E03 reports that BET analysis revealed increased total pore volume and BET surface area in regenerated GACs, demonstrating regeneration capabilities. The record additionally interprets this as indicating that the process alters pore structure in a way consistent with restored adsorption capacity. The increase in BET metrics is author-reported, but the explicit claim of altered pore structure and linkage to restored capacity is interpretive rather than verbatim, so the statement is only partially supported.\"},{\"field_path\":\"study_scale.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The abstract and publication venue clearly indicate an experimental study, which reasonably implies laboratory scale, even though 'laboratory-scale' is not stated explicitly. However, it does not specify whether the experiments were batch, column, or both. The added detail 'column/batch' is not supported by the abstract text, making the field only partially supported.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB06-E01 states that organic/inorganic mixed solutions were used to regenerate exhausted GAC and that optimization identified 0.1 mol/L HCl in ethanol with a 30-min residence time as effective. The treatment description accurately summarizes these conditions.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014PFAS identity (PFOS), matrix (PFAS-saturated GAC), treatment (regeneration using 0.1 mol/L HCl in ethanol, 30-min), key operating conditions, and endpoints (desorption-based regeneration, reuse over five cycles, BET changes)\u2014are well supported by the abstract. Partial issues are limited to interpretive qualifiers (waste-stream characterization, pore-structure interpretation, and specific experiment format in study_scale) and do not compromise the basic identity, conditions, or qualitative outcomes needed for synthesis.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of the evidence needed to choose among regeneration, replacement, and end-of-life management for PFAS-loaded adsorption media.\",\"task_id\":\"RT03\",\"title\":\"Deciding whether to regenerate or replace PFAS adsorption media\"}\n\nTask-specific extraction objective:\nExtract adsorbent and PFAS identity, loading protocol, regeneration or disposal method, operating conditions, desorption or destruction endpoint, capacity recovery, cycle number, material change, residual streams, energy, chemicals, and cost.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Ranjbar E., Ahmadi F., Baghdadi M. Regeneration of perfluorooctane sulfonic acid (PFOS) loaded granular activated carbon using organic/inorganic mixed solutions. Chemical Engineering Science. 2024;300:120623.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB06-E01\",\n      \"WEB06-E02\",\n      \"WEB06-E03\"\n    ],\n    \"reason\": \"The abstract qualitatively reports effective regeneration of PFOS-saturated GAC with 0.1 mol/L HCl in ethanol for at least five cycles and notes increased BET surface area and pore volume, but does not provide numeric regeneration efficiencies, adsorption capacities, or PFOS mass balances. These data are useful for identifying a regeneration approach and mechanism but cannot be directly compared quantitatively with other regeneration or media replacement options.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.ces.2024.120623\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"separation\",\n      \"evidence_locator_ids\": [\n        \"WEB06-E01\",\n        \"WEB06-E02\"\n      ],\n      \"interpretation\": \"PFAS (PFOS) was desorbed from exhausted GAC into the regenerant solution, restoring adsorption capacity; endpoint reflects phase transfer (desorption) rather than PFAS destruction.\",\n      \"reported_term\": \"regeneration of PFAS-saturated GAC\"\n    },\n    {\n      \"endpoint_type\": \"sorption\",\n      \"evidence_locator_ids\": [\n        \"WEB06-E02\"\n      ],\n      \"interpretation\": \"Ability of regenerated GAC to be reused in up to five adsorption\\u2013regeneration cycles with maintained performance; capacity recovery is qualitative in abstract.\",\n      \"reported_term\": \"regeneration efficiency / reuse of GAC over multiple cycles\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"WEB06-E03\"\n      ],\n      \"interpretation\": \"BET analysis showed increased total pore volume and surface area in regenerated GAC compared with PFAS-saturated GAC, indicating structural/morphological changes associated with regeneration.\",\n      \"reported_term\": \"BET surface area and total pore volume change\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB06-E01\"\n      ],\n      \"statement\": \"Study investigates regeneration of a single PFAS (PFOS) on one adsorbent type (GAC) under a specific optimized regenerant composition (0.1 mol/L HCl in ethanol) and contact time (30 min), limiting generalizability to other PFAS, adsorbents, or conditions.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB06-E01\",\n        \"WEB06-E02\"\n      ],\n      \"statement\": \"The abstract does not report quantitative regeneration efficiencies, PFOS loadings, breakthrough behavior after regeneration, or mass balance on PFOS between GAC and regenerant phases, constraining quantitative comparison with alternative regeneration or replacement strategies.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB06-E01\"\n    ],\n    \"value\": \"PFAS-saturated granular activated carbon (solid phase); aqueous PFAS solution contact implied but not detailed in abstract\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB06-E01\"\n      ],\n      \"name\": \"Regenerant composition\",\n      \"qualifiers\": \"Identified as optimal organic/inorganic mixed solution for regeneration\",\n      \"unit\": null,\n      \"value\": \"0.1 mol/L HCl in ethanol\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB06-E01\"\n      ],\n      \"name\": \"Regeneration contact time (residence time)\",\n      \"qualifiers\": \"Reported as optimal residence time for effective regeneration\",\n      \"unit\": \"min\",\n      \"value\": \"30\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB06-E02\"\n      ],\n      \"name\": \"Number of regeneration/usage cycles evaluated\",\n      \"qualifiers\": \"Abstract reports effective regeneration even after the fifth usage cycle\",\n      \"unit\": null,\n      \"value\": \"5\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB06-E01\"\n      ],\n      \"value\": \"Perfluorooctane sulfonic acid (PFOS) (PFAS-saturated GAC; PFOS identified in title)\"\n    }\n  ],\n  \"quantitative_findings\": [],\n  \"record_id\": \"RT03-gpt51_web_search-WEB06-R01\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"WEB06-E02\"\n      ],\n      \"statement\": \"Regeneration mechanism was attributed to physical displacement and solubilization of PFAS from exhausted GAC into the regenerant solution, implying a PFAS-rich liquid waste stream requiring further management but with no indication of PFAS destruction.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"WEB06-E03\"\n      ],\n      \"statement\": \"BET analysis showed an increase in total pore volume and surface area in regenerated GAC compared with PFAS-saturated GAC, indicating that the regeneration process alters the pore structure in a way consistent with restored adsorption capacity.\"\n    }\n  ],\n  \"source_id\": \"WEB06\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB06-E01\",\n      \"WEB06-E02\"\n    ],\n    \"value\": \"Laboratory-scale column/batch regeneration of PFAS-saturated granular activated carbon (GAC)\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB06-E01\"\n    ],\n    \"value\": \"Regeneration of exhausted granular activated carbon using mixed organic/inorganic regenerant solutions, optimized to 0.1 mol/L HCl in ethanol\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"abstract\",\n  \"capture_source_id\": \"WEB60\",\n  \"citation\": \"Ranjbar E., Ahmadi F., Baghdadi M. Regeneration of perfluorooctane sulfonic acid (PFOS) loaded granular activated carbon using organic/inorganic mixed solutions. Chemical Engineering Science. 2024;300:120623.\",\n  \"covered_component_ids\": [\n    \"RT03-C1\",\n    \"RT03-C3\"\n  ],\n  \"doi\": \"10.1016/j.ces.2024.120623\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.ces.2024.120623\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB06-E01\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Abstract\",\n      \"text\": \"Herein, regeneration of PFAS-saturated GAC was studied and organic/inorganic mixed solutions were used to regenerate exhausted GAC. Optimization experiments revealed that a regenerant solution consisting of 0.1 mol/L HCl in ethanol with a 30-min residence time effectively regenerated PFAS-saturated GAC.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB06-E02\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Abstract / conclusion\",\n      \"text\": \"The results showed that even after the fifth usage cycle, the proposed regeneration method can efficiently regenerate the PFAS-saturated GAC. Identification of the regeneration mechanism indicated that the regeneration process can be attributed to physical displacement and solubilization of PFAS from exhausted GAC.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB06-E03\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Abstract / conclusion\",\n      \"text\": \"Additionally, BET analysis of PFAS-saturated and regenerated GACs revealed an increase in total pore volume and BET surface area in regenerated GACs, demonstrating the suggested method\\u2019s regeneration capabilities.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://www.sciencedirect.com/science/article/pii/S0009250924009230\",\n  \"source_id\": \"WEB06\",\n  \"source_limitations\": [\n    \"Only abstract content was captured; specific PFOS loadings, regeneration efficiencies per cycle, and breakthrough curves after regeneration are not visible.\",\n    \"The fate of PFOS during regeneration (complete recovery in liquid phase vs partial degradation), composition and volume of regenerant waste, and any cost or energy evaluation are not provided in the inspected abstract.\"\n  ],\n  \"title\": \"Regeneration of perfluorooctane sulfonic acid (PFOS) loaded granular activated carbon using organic/inorganic mixed solutions\",\n  \"year\": \"2024\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "f5607886551de0013234a494a73203e27d96c224a3245c3a82c2c83f09c630bb",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.028498,
+    "finish_reason": "stop",
+    "input_tokens": 3208,
+    "latency_seconds": 25.64123866695445,
+    "output_tokens": 2564,
+    "reasoning_tokens": 1007,
+    "response_id": "chatcmpl-E9N99ItpaU1T21LqBDseKtMgssIdI",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 5772,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The abstract only provides qualitative statements about effective regeneration, mechanism, and BET changes, without any numerical regeneration efficiencies, capacities, or mass balances. Describing the study as providing only descriptive/qualitative evidence is consistent with the cited text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The abstract describes regeneration of PFAS-saturated GAC using mixed regenerant solutions and attributes the mechanism to physical displacement and solubilization of PFAS from exhausted GAC (WEB06-E02). This clearly reflects desorption/phase transfer rather than destruction, matching endpoint_type='separation'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "WEB06-E02 states that even after the fifth usage cycle the method can efficiently regenerate PFAS-saturated GAC, implying restoration of adsorption performance upon reuse. This fits a sorption endpoint (capacity recovery over cycles).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].endpoint_type",
+        "reason": "WEB06-E03 reports BET analysis showing increased total pore volume and BET surface area in regenerated GACs. Classifying this as an 'other' endpoint focused on structural/physical properties is appropriate and directly supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "WEB06-E01 explicitly states that the optimized regenerant solution consisted of 0.1 mol/L HCl in ethanol. The value string exactly matches this composition.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The operating condition is a descriptive composition (\"0.1 mol/L HCl in ethanol\"), not a standalone numeric quantity. Leaving the unit null is appropriate and consistent with the abstract.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "WEB06-E01 reports a \"30-min residence time\" for the optimized regeneration condition. Recording the numeric value as 30 is accurate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The abstract specifies a 30-min residence time (WEB06-E01). Using 'min' as the unit is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "WEB06-E02 states that even after the fifth usage cycle the regeneration method is efficient. Recording the number of cycles evaluated as 5 is directly supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "The number of cycles is a count, not a physical quantity with units. Leaving the unit null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "matrix.value",
+        "reason": "WEB06-E01 clearly supports that the matrix is PFAS-saturated GAC (solid phase): \"regeneration of PFAS-saturated GAC\" and \"exhausted GAC.\" The additional phrase about an aqueous PFAS solution being implied is an inference not stated in the abstract, though it is qualified as an implication. Core identification of PFAS-loaded GAC is supported; the implied aqueous-contact detail is interpretive.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "The article title in the source metadata is \"Regeneration of perfluorooctane sulfonic acid (PFOS) loaded granular activated carbon using organic/inorganic mixed solutions,\" which explicitly identifies PFOS as the PFAS. The field correctly captures this.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].statement",
+        "reason": "The design is limited to PFOS-loaded GAC and organic/inorganic regenerant solutions, with an optimized condition of 0.1 mol/L HCl in ethanol and 30-min residence time (title and WEB06-E01). Inferring limited generalizability to other PFAS, adsorbents, or conditions directly follows from these design facts and is an appropriate design_inferred limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1].statement",
+        "reason": "The captured content is only the abstract, which does not report numerical regeneration efficiencies, PFOS loading, breakthrough behavior, or PFAS mass balances; it only gives qualitative statements about efficiency, mechanism, and BET changes (WEB06-E01, WEB06-E02, WEB06-E03). Inferring that this constrains quantitative comparison is a valid design_inferred limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "residuals_byproducts[0].statement",
+        "reason": "WEB06-E02 states that the regeneration mechanism is attributed to physical displacement and solubilization of PFAS from exhausted GAC, which supports desorption into a liquid regenerant. However, the statement further infers a PFAS-rich liquid waste stream and explicitly notes no indication of PFAS destruction. While these are reasonable inferences, they are not directly stated in the abstract. Thus, the mechanism part is supported but the waste-stream and non-destruction qualifiers go beyond the text.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "residuals_byproducts[1].statement",
+        "reason": "WEB06-E03 reports that BET analysis revealed increased total pore volume and BET surface area in regenerated GACs, demonstrating regeneration capabilities. The record additionally interprets this as indicating that the process alters pore structure in a way consistent with restored adsorption capacity. The increase in BET metrics is author-reported, but the explicit claim of altered pore structure and linkage to restored capacity is interpretive rather than verbatim, so the statement is only partially supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "study_scale.value",
+        "reason": "The abstract and publication venue clearly indicate an experimental study, which reasonably implies laboratory scale, even though 'laboratory-scale' is not stated explicitly. However, it does not specify whether the experiments were batch, column, or both. The added detail 'column/batch' is not supported by the abstract text, making the field only partially supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "WEB06-E01 states that organic/inorganic mixed solutions were used to regenerate exhausted GAC and that optimization identified 0.1 mol/L HCl in ethanol with a 30-min residence time as effective. The treatment description accurately summarizes these conditions.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT03-gpt51_web_search-WEB06-R01",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014PFAS identity (PFOS), matrix (PFAS-saturated GAC), treatment (regeneration using 0.1 mol/L HCl in ethanol, 30-min), key operating conditions, and endpoints (desorption-based regeneration, reuse over five cycles, BET changes)\u2014are well supported by the abstract. Partial issues are limited to interpretive qualifiers (waste-stream characterization, pore-structure interpretation, and specific experiment format in study_scale) and do not compromise the basic identity, conditions, or qualitative outcomes needed for synthesis.",
+    "task_id": "RT03"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

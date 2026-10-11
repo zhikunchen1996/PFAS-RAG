@@ -1,0 +1,13 @@
+{
+  "run_id": "local_hybrid_bge",
+  "questions": "benchmark/frozen249/input/questions_dev13.csv",
+  "gold": "benchmark/frozen249/gold/chunk_based_gold.jsonl",
+  "combos": "5/30,10/60,20/120",
+  "hybrid_policy": "hybrid candidate retrieval; final context is first top_k chunks",
+  "bge_policy": "hybrid candidate retrieval; BAAI/bge-reranker-base reranks candidate pool; no per-document cap before final top_k",
+  "bge_model": "BAAI/bge-reranker-base",
+  "bge_device": "mps",
+  "bge_doc_cap": null,
+  "outputs_are_answer_ready": true,
+  "answer_field": "empty string"
+}

@@ -1,0 +1,168 @@
+{
+  "batch_id": "test40-rereview2-batch-01",
+  "batch_sha256": "00e31c21d9e3ac74764d43e83bb8a7f1ab4cceba900359679a65ec140cc0fd5a",
+  "prompt_sha256": "bc7904e476fd67ebd0a410a32318efe13ee807e1e031944c11e245ffec8c2c15",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-rereview2-batch-01",
+    "reviews": [
+      {
+        "question_id": "NQ16",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ16-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ16-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ16-G03",
+            "verdict": "supported",
+            "issues": [
+              "Previously required repair resolved: evidence_ids now list only NQ16_MMG002, NQ16_MMG003, NQ16_MMG004, matching one-to-one with the exact_spans array; the orphaned NQ16_MMG001 reference has been removed and no unattributed evidence_id remains."
+            ],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ16-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "NQ27",
+        "verdict": "clean",
+        "question_level_issues": [
+          "The previously flagged NQ27_MMG005 reliance issue in NQ27-G01 (its second exact_spans entry, 'These findings highlight the importance of carbon replacement and/or regeneration for ensuring the removal of PFAS by GAC,' is verbatim and contiguous in NQ27_MMG005's approved full_chunk_text but was not separately listed in NQ27_MMG005's registered exact_evidence_span/unit_exact_spans) is valid candidate evidence under the current review rule and does not require repair; per instructions it is logged here as requiring project-author audit before freeze rather than as a defect."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ27-G01",
+            "verdict": "supported",
+            "issues": [
+              "Second NQ27_MMG005 exact_spans entry ('These findings highlight the importance of carbon replacement and/or regeneration for ensuring the removal of PFAS by GAC') is a verbatim contiguous span in the approved full_chunk_text for NQ27_MMG005 but is not present in that evidence item's registered exact_evidence_span/unit_exact_spans fields; this newly selected span (also directly quoted in the reference_answer) requires project-author audit before freeze but does not itself downgrade the group's support."
+            ],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ27-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ27-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ27-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ27-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 71064,
+    "num_turns": 7,
+    "stop_reason": "tool_use",
+    "session_id": "16165b9d-2b9b-4f67-b6e2-7ef78d77ec2d",
+    "total_cost_usd": 0.3753611,
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 60734,
+      "cache_read_input_tokens": 141982,
+      "output_tokens": 6945,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 60734
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 5780,
+          "cache_read_input_tokens": 51401,
+          "cache_creation_input_tokens": 14388,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 14388,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 729,
+        "outputTokens": 16,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000809,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 10,
+        "outputTokens": 6945,
+        "cacheReadInputTokens": 141982,
+        "cacheCreationInputTokens": 60734,
+        "webSearchRequests": 0,
+        "costUSD": 0.37455210000000005,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 4879,
+    "ttft_stream_ms": 877,
+    "time_to_request_ms": 69,
+    "type": "result",
+    "duration_ms": 70348,
+    "uuid": "f7f96f01-7373-493e-9558-c8e52dec4d67"
+  },
+  "candidate_test40_inputs_used": false
+}

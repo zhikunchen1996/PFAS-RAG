@@ -1,0 +1,82 @@
+{
+  "protocol_id": "dev13_neutral_evidence_pairwise_v3_2026-07-26",
+  "status": "validated_canonical_dev13_run",
+  "scope": "Dev13 only; no Test40 execution",
+  "source_answer_run": "benchmark/frozen_v3/results/dev13_verified_tags_v3_r2_confirmation_2026-07-26",
+  "canonical_comparison": "tagged_vs_matched_direct",
+  "judge_model": "gpt-5.1",
+  "temperature": 0,
+  "temperature_zero_resamples": 3,
+  "mirrored_answer_order": true,
+  "model_visible_payload": [
+    "visible question",
+    "common scientific boundaries",
+    "non-exhaustive reference evidence",
+    "deduplicated common verification evidence",
+    "anonymous answer A without citation markers",
+    "anonymous answer B without citation markers"
+  ],
+  "model_hidden_local_fields": [
+    "payload_id",
+    "question_id",
+    "comparison",
+    "repeat",
+    "orientation",
+    "system_A",
+    "system_B",
+    "task_type",
+    "answerability_type",
+    "must_include",
+    "must_not_claim"
+  ],
+  "common_verification_evidence": {
+    "construction": "Deduplicated union sorted by document and chunk identity",
+    "mean_chunks_per_question": 20.8,
+    "canonical_rag_chunks_included_per_question": 10,
+    "mean_chunks_unique_to_canonical_rag_per_question": 3.9,
+    "residual_asymmetry": "The common union includes all canonical RAG chunks by construction. Direct is a no-retrieval generation baseline and therefore did not receive an information-matched generation substrate.",
+    "sources": [
+      "Hybrid top10/pool60",
+      "BGE top10/pool60",
+      "BGE-LLM top10/BGE30/pool60"
+    ],
+    "system_labels_exposed_to_judge": false,
+    "ranking_fields_exposed_to_judge": false
+  },
+  "reference_evidence": {
+    "status": "project-author retention-confirmed, non-exhaustive reference evidence",
+    "author_review_record": "benchmark/frozen_v3/methods/author_review_record.json",
+    "absence_interpretation": "Absence from reference evidence is not evidence that a claim is false."
+  },
+  "criteria": [
+    "scientific_correctness",
+    "question_fulfillment",
+    "uncertainty_and_limitations",
+    "practical_usefulness"
+  ],
+  "weights": {
+    "scientific_correctness": 0.4,
+    "question_fulfillment": 0.3,
+    "uncertainty_and_limitations": 0.15,
+    "practical_usefulness": 0.15
+  },
+  "prompt": "benchmark/frozen_v3/prompts/evaluation/neutral_evidence_pairwise_content_v3.txt",
+  "runner": "benchmark/frozen_v3/scripts/run_dev13_neutral_evidence_judge_v3.py",
+  "result": "benchmark/frozen_v3/results/dev13_neutral_evidence_v3_2026-07-26",
+  "result_summary": {
+    "v3_wins": 10,
+    "direct_wins": 3,
+    "ties": 0,
+    "mean_weighted_v3_score": 0.7846153846153846,
+    "mirrored_criterion_agreement": 0.7692307692307693,
+    "responses_with_non_scoring_schema_repairs": 17,
+    "response_schema_repair_rate": 0.21794871794871795,
+    "non_scoring_auxiliary_field_repairs": 51,
+    "schema_repair_interpretation": "All scored criterion preferences and rationales were present; repairs affected auxiliary confidence and material-error fields only."
+  },
+  "historical_sensitivity_results_to_report": [
+    "benchmark/frozen_v3/results/dev13_soft_tags_v3_confirmation_2026-07-26",
+    "benchmark/frozen_v3/results/dev13_soft_tags_v3_source_verified_rejudge_2026-07-26",
+    "benchmark/frozen_v3/results/dev13_verified_tags_v3_r2_source_verified_2026-07-26"
+  ]
+}

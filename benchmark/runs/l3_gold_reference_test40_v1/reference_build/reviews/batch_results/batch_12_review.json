@@ -1,0 +1,234 @@
+{
+  "batch_id": "test40-review-batch-12",
+  "batch_sha256": "cf298149e3e58fa73a75b095d216474d9efe93b05cdab858fd4d3de722e2a62b",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-review-batch-12",
+    "reviews": [
+      {
+        "question_id": "WF10_039",
+        "verdict": "repair_required",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_039-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_039-G02",
+            "verdict": "partially_supported",
+            "issues": [
+              "In the exact_spans array, the second entry (evidence_id WF10_039_MMG005) is malformed: it embeds a third citation as an extra key-value pair (\"WF10_039_MMG006\": \"...\") inside the MMG005 object instead of listing it as its own well-formed exact_spans object with evidence_id/exact_evidence_span/supports fields. Evidence WF10_039_MMG006 is listed in evidence_ids and cited in the reference answer, so its span citation must be structurally correct."
+            ],
+            "required_repairs": [
+              "Split the malformed entry into two separate, properly structured exact_spans objects: keep the MMG005 object as-is (evidence_id, exact_evidence_span, supports), and add a new object for evidence_id WF10_039_MMG006 with exact_evidence_span 'The higher removal of PFOS can be attributed to higher afﬁnity of sulfo- nate groups of PFOS toward irons or alumina when compared to the that of the carboxylate groups of PFOA ( Wang and Shih, 2011 ).' and an appropriate supports description."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_039-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_039-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_039-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Fix the malformed exact_spans entry in claim group WF10_039-G02 by giving evidence WF10_039_MMG006 its own well-formed citation object."
+        ]
+      },
+      {
+        "question_id": "NQ03a",
+        "verdict": "repair_required",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ03a-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ03a-G02",
+            "verdict": "partially_supported",
+            "issues": [
+              "The first exact_spans entry for evidence_id NQ03a_MMG006 quotes 'The stock solution was initially made with methanol, while Milli-Q water was used to formulate all subsequent working solutions.' but its 'supports' text describes GC-ECD external-calibration verification and ±5% agreement with nominal values -- content that is not contained in the quoted span at all (it is a different sentence later in the same full_chunk_text). The quoted span does not substantiate the stated central proposition about analytical verification of concentration.",
+              "This produces a duplicate-looking pair of entries for the same evidence_id with identical exact_evidence_span text but different supports narratives, one of which is mismatched to its quote."
+            ],
+            "required_repairs": [
+              "Replace the exact_evidence_span text in the first NQ03a_MMG006 entry with the actual verification sentence from the approved chunk: 'The concentrations of the prepared PFOA solutions were verified using Gas Chromatography–Electron Capture Detector (GC–ECD) ... analysis after derivatization based on external calibration with derivatized PFOA standards, and the measured concentrations were within ±5% of the nominal values.' so the quote matches the supports narrative."
+            ]
+          },
+          {
+            "claim_group_id": "NQ03a-G03",
+            "verdict": "partially_supported",
+            "issues": [
+              "The exact_spans entry for evidence_id NQ03a_MMG002 quotes only the stock-storage/dilution sentence (80:20 methanol:water), but its 'supports' text also claims the span shows 'SPME calibration curve...spiked at 5000 ng/L...diluted to give final concentration levels of 0.5, 1, 2.5, 5, 10, 20, 50, 250, 500...' -- that SPME calibration content is a separate sentence in the same chunk and is not part of the quoted span, so the quote is insufficient for the full proposition being supported."
+            ],
+            "required_repairs": [
+              "Extend the quoted exact_evidence_span for the NQ03a_MMG002 entry (or add a second span entry) to include the SPME calibration sentence ('For the SPME calibration curve, ultra-pure water was spiked at 5000 ng L−1 ... diluted to give final concentration levels of 0.5, 1, 2.5, 5, 10, 20, 50, 250, 500...') so the citation matches what the supports text claims."
+            ]
+          },
+          {
+            "claim_group_id": "NQ03a-G04",
+            "verdict": "partially_supported",
+            "issues": [
+              "Two exact_spans entries for evidence_id NQ03a_MMG002 (both quoting the same stock-storage/dilution sentence) have supports text describing Milli-Q-system water and SPME/calibration matrices -- content found elsewhere in the same chunk but absent from the quoted span; the two entries are also near-duplicative of each other.",
+              "The exact_spans entry for evidence_id NQ03a_MMG007 quotes only the dilution/calibration-curve sentence, but its supports text also claims the span shows QC via 'internal standards, method blanks, and calibration linearity' -- that QC sentence is elsewhere in the chunk and not included in the quoted span.",
+              "The exact_spans entry for evidence_id NQ03a_MMG004 quotes only the stock-preparation/dilution sentence, but its supports text claims the span shows storage 'at low temperature in polypropylene bottles' -- that storage sentence is elsewhere in the chunk and not included in the quoted span.",
+              "The exact_spans entry for evidence_id NQ03a_MMG005 quotes the stock-concentration/4°C-storage sentence but the supports text claims 'both stock and working PFAS standards are refrigerated'; the quoted span only covers stock refrigeration, with the working-standard refrigeration statement occurring in a separate, unquoted sentence.",
+              "The exact_spans entry for evidence_id NQ03a_MMG008 quotes only the stock-concentration sentence, but its supports text claims the span shows dilution 'with ultrapure water' -- that dilution sentence is elsewhere in the chunk and not included in the quoted span."
+            ],
+            "required_repairs": [
+              "For each mismatched entry (NQ03a_MMG002 x2, NQ03a_MMG007, NQ03a_MMG004, NQ03a_MMG005, NQ03a_MMG008), either extend the quoted exact_evidence_span to include the specific sentence that substantiates the supports narrative (Milli-Q water source, SPME calibration matrix, QC method-blank/linearity sentence, PP-bottle 4°C storage sentence, working-standard refrigeration sentence, ultrapure-water dilution sentence, respectively) or rewrite the supports text to match only what the quoted span actually contains.",
+              "Deduplicate the two near-identical NQ03a_MMG002 entries into a single entry (or two entries each tied to a distinct, correctly quoted sub-span) rather than repeating the same quote with different supports claims."
+            ]
+          },
+          {
+            "claim_group_id": "NQ03a-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Correct the exact-span/supports mismatches identified in claim groups NQ03a-G02, NQ03a-G03, and NQ03a-G04 so that each quoted span actually contains the content its supports narrative claims, and deduplicate the repeated NQ03a_MMG002 entry in G04."
+        ]
+      },
+      {
+        "question_id": "NQ07a",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ07a-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ07a-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ07a-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ07a-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ07a-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 167825,
+    "num_turns": 7,
+    "stop_reason": "tool_use",
+    "session_id": "abd629aa-98af-4c9c-aa87-01ac6c7fdfd9",
+    "total_cost_usd": 0.6213549,
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 80860,
+      "cache_read_input_tokens": 198973,
+      "output_tokens": 17179,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 80860
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 15969,
+          "cache_read_input_tokens": 80219,
+          "cache_creation_input_tokens": 11712,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 11712,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 628,
+        "outputTokens": 19,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000723,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 10,
+        "outputTokens": 17179,
+        "cacheReadInputTokens": 198973,
+        "cacheCreationInputTokens": 80860,
+        "webSearchRequests": 0,
+        "costUSD": 0.6206319,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 4940,
+    "ttft_stream_ms": 967,
+    "time_to_request_ms": 36,
+    "type": "result",
+    "duration_ms": 165583,
+    "uuid": "48b52ff5-6cce-4652-928e-4b181e8dd3cd"
+  },
+  "candidate_test40_inputs_used": false
+}

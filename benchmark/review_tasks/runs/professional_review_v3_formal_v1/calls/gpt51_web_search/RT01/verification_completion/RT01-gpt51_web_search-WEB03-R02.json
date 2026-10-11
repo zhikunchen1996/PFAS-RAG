@@ -1,0 +1,152 @@
+{
+  "call_key": "RT01:gpt51_web_search:verify_completion:RT01-gpt51_web_search-WEB03-R02:29f938bd169d05f53c0f2a308e80a465c46a7fd2b1e9d99d29268e1110e7128e",
+  "created_at": "2026-08-05T04:48:04.084960+00:00",
+  "raw_response_text": "{\"task_id\":\"RT01\",\"record_id\":\"RT01-gpt51_web_search-WEB03-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The field is intentionally left without a unit for a descriptive co-constituent condition. The cited text describes the presence and variation of NaCl and Na2SO4 but does not provide a numerical quantity needing units, so a null unit is appropriate and consistent with the source.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The value states that chloride and sulfate are present and varied together, with sulfate causing stronger inhibition of PFAA adsorption than chloride. This is directly supported by the cited passages: WEB03-E02 notes batch experiments varying NaCl and Na2SO4, and WEB03-E04 states that when both chloride and sulfate were present, sulfate caused stronger inhibition of PFAA adsorption, particularly for short-chain PFCAs.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The field describes the resin ionic form qualitatively, which does not require a numerical unit. The cited passage (WEB03-E02) specifies the ionic forms of the resins, so leaving the unit null is appropriate and consistent with the qualitative nature of this condition.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The value states that M600 was tested in the chloride form. WEB03-E02 reports that \\\"resins were tested in their supplied ionic forms (A111 free base, others chloride),\\\" which clearly implies that M600, being one of the \\\"others,\\\" was in the chloride form. Thus the statement is directly supported by the source.\"}],\"record_usable\":true,\"record_usable_rationale\":\"All newly assessed operating-condition fields are supported by the cited evidence and contain no numeric, unit, or qualifier errors that would mislead synthesis. No core aspects of the record are rendered unsupported or contradicted by these assessments, so the record remains usable.\"}",
+  "request": {
+    "max_completion_tokens": 6000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n\n\nThis is a deterministic completion pass triggered because the initial\nverification omitted one or more mandatory metric-bearing field paths.\n\nAssess exactly the field paths listed in MISSING_REQUIRED_FIELD_PATHS, once\neach, and no other field paths. Apply all value/unit, measured-endpoint,\ncomparability, and source-support rules above. Do not revise or repeat any\nassessment that is not listed.\n\nSet record_usable=false if any completed assessment reveals an unsupported or\ncontradicted core field that would make synthesis misleading. Otherwise,\nrecord_usable may remain true. The completion can make eligibility stricter;\nit cannot override a prior exclusion. Return the normal verification schema.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused, data-grounded review explaining how an engineer should select an adsorption medium for a specified PFAS profile and water matrix.\",\"task_id\":\"RT01\",\"title\":\"Selecting an adsorption medium for a defined PFAS water-treatment application\"}\n\nTask-specific extraction objective:\nExtract adsorbent identity and properties, PFAS identity, water matrix, influent concentration, pH, co-constituents, dose or bed conditions, adsorption endpoint, quantitative result, and reported mechanism.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Lesmeister L, Hale SE, Merklinger M, Horn H, Riegel M. The effect of inorganic anions on the adsorption of perfluoroalkyl acids to various polymeric anion exchange resins. J Environ Chem Eng. 2024;12:114871.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB03-E01\",\n      \"WEB03-E02\",\n      \"WEB03-E03\",\n      \"WEB03-E04\",\n      \"WEB03-E05\"\n    ],\n    \"reason\": \"M600 data in the available text are limited to qualitative trends in adsorption affinity versus PFAS chain length and inorganic anion effects, plus modeled column breakthrough. Numerical isotherm parameters, capacities, or breakthrough volumes are not provided, so this record primarily supports conceptual comparisons of resin functionality rather than quantitative cross-study benchmarking.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.jece.2024.114871\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"sorption\",\n      \"evidence_locator_ids\": [\n        \"WEB03-E01\",\n        \"WEB03-E03\"\n      ],\n      \"interpretation\": \"For M600, adsorption affinity of PFAAs increased with PFAS alkyl chain length. Across the three resins, affinity followed the order of functional-group hydrophobicity: A111 (dimethylamine) < M600 (dimethylethanolamine) < PSR2Plus (tributylamine), indicating that both strong-base functionality and longer alkyl moieties enhance PFAS sorption.\",\n      \"reported_term\": \"adsorption affinity / sorption strength\"\n    },\n    {\n      \"endpoint_type\": \"sorption\",\n      \"evidence_locator_ids\": [\n        \"WEB03-E02\",\n        \"WEB03-E04\"\n      ],\n      \"interpretation\": \"Sulfate in the presence of chloride inhibited PFAA adsorption on M600 more strongly than chloride alone; adsorption of short-chain PFCAs (C3\\u2013C4) was especially sensitive to inorganic anion competition, highlighting that ion-exchange sites on M600 are strongly affected by background anions at drinking-water levels.\",\n      \"reported_term\": \"effect of inorganic anion competition on adsorption\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"WEB03-E05\"\n      ],\n      \"interpretation\": \"Batch-derived relationships between residual aqueous PFAA concentration and inorganic anion concentrations were used to estimate stoichiometric breakthrough bed volumes for M600 fixed-bed filters under varying NaCl/Na2SO4 conditions; these are model-based forecasts intended to translate batch behavior to column design.\",\n      \"reported_term\": \"modeled stoichiometric breakthrough bed volumes for fixed-bed filters\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"WEB03-E05\"\n      ],\n      \"statement\": \"Batch equilibrium tests with M600 were used to infer column behavior through modeling; no direct fixed-bed experiments were reported in the available text, so breakthrough predictions may not fully capture dynamic effects such as mass-transfer limitations.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"WEB03-E02\"\n      ],\n      \"statement\": \"Solutions contained only inorganic anions (chloride and sulfate) as main competitors; natural organic matter and other co-contaminants were not included, limiting transferability to more complex source waters.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"WEB03-E01\"\n      ],\n      \"statement\": \"Only eight PFAAs were studied (C3\\u2013C8 PFCAs, C4, C6, C8 PFSAs), which constrains extrapolation to ultra-short or longer-chain PFAS, and to precursors.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB03-E02\",\n        \"WEB03-E04\"\n      ],\n      \"statement\": \"The performance of M600 is characterized under a constrained pH and ionic-strength window that is typical of drinking water but may not represent industrial wastewaters or groundwater with different chemistry.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB03-E02\",\n      \"WEB03-E04\"\n    ],\n    \"value\": \"Aqueous solutions representing typical drinking-water anion conditions (NaCl and Na2SO4, relatively clean matrix with inorganic anions and no reported NOM)\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB03-E02\"\n      ],\n      \"name\": \"Inorganic anion concentration (NaCl and Na2SO4)\",\n      \"qualifiers\": \"Range of NaCl and Na2SO4 concentrations used to represent typical drinking water\",\n      \"unit\": \"mM\",\n      \"value\": \"0.5-3.8\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB03-E02\",\n        \"WEB03-E04\"\n      ],\n      \"name\": \"Co-constituents\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"Chloride and sulfate present; varied together in solution, with sulfate causing stronger inhibition of PFAA adsorption than chloride\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB03-E02\"\n      ],\n      \"name\": \"Resin ionic form\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"M600 tested in chloride form\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB03-E01\"\n      ],\n      \"value\": \"Eight perfluoroalkyl acids (PFAAs) with 1\\u20137 perfluorinated carbons: PFPrA, PFBA, PFPeA, PFHxA, PFOA, PFBS, PFHxS, PFOS\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB03-E01\"\n      ],\n      \"name\": \"PFAS perfluorinated carbon number range\",\n      \"qualifiers\": \"PFPrA to PFOS span 1\\u20137 perfluorinated carbons in the study set\",\n      \"unit\": \"perfluorinated carbons\",\n      \"value\": \"1-7\",\n      \"value_form\": \"range\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB03-E02\"\n      ],\n      \"name\": \"Inorganic anion concentration range\",\n      \"qualifiers\": \"Combined NaCl and Na2SO4 concentrations used to represent typical drinking water anion levels in batch adsorption tests\",\n      \"unit\": \"mM\",\n      \"value\": \"0.5-3.8\",\n      \"value_form\": \"range\"\n    }\n  ],\n  \"record_id\": \"RT01-gpt51_web_search-WEB03-R02\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB03-E01\",\n        \"WEB03-E04\"\n      ],\n      \"statement\": \"The study focused on sorptive removal of PFAS by the strong-base AER M600; no transformation products, defluorination, or mineralization were investigated, so PFAS are presumed to remain intact on the resin phase.\"\n    }\n  ],\n  \"source_id\": \"WEB03\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB03-E01\",\n      \"WEB03-E02\",\n      \"WEB03-E05\"\n    ],\n    \"value\": \"Bench-scale batch adsorption experiments with equilibrium-based modeling for fixed-bed predictions\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB03-E01\",\n      \"WEB03-E03\"\n    ],\n    \"value\": \"Polymeric polystyrenic anion exchange resin M600 (strong-base type II, dimethylethanolamine functional groups) used in batch adsorption tests\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"full_text\",\n  \"capture_source_id\": \"WEB13\",\n  \"citation\": \"Lesmeister L, Hale SE, Merklinger M, Horn H, Riegel M. The effect of inorganic anions on the adsorption of perfluoroalkyl acids to various polymeric anion exchange resins. Journal of Environmental Chemical Engineering. 2024;12:114871.\",\n  \"covered_component_ids\": [\n    \"RT01-C1\",\n    \"RT01-C2\",\n    \"RT01-C3\"\n  ],\n  \"doi\": \"10.1016/j.jece.2024.114871\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.jece.2024.114871\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB03-E01\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Introduction/Methods \\u2013 PFAAs and resins (PDF p.1\\u20132, Table 1\\u20132)\",\n      \"text\": \"Eight PFAAs with 1\\u20137 perfluorinated carbons (PFPrA, PFBA, PFPeA, PFHxA, PFOA, PFBS, PFHxS, PFOS) were tested on three polystyrenic AERs: A111 (weak-base tertiary amine), M600 (strong-base type II) and PSR2Plus (strong-base PFAS-selective).\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB03-E02\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Methods \\u2013 Batch experiments (PDF p.2, lines 189\\u2013195)\",\n      \"text\": \"Batch experiments varied NaCl and Na2SO4 concentrations between 0.5 and 3.8 mM to represent typical drinking water; resins were tested in their supplied ionic forms (A111 free base, others chloride).\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB03-E03\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract/Results summary (PDF p.0, lines 19\\u201321)\",\n      \"text\": \"Adsorption affinity increased with alkyl chain length and with longer alkyl moieties in the resin functional groups, following dimethylamines (A111) < dimethylethanolamines (M600) < tributylamines (PSR2Plus).\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB03-E04\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract/Results (PDF p.0\\u20131, lines 21\\u201325, 41\\u201344)\",\n      \"text\": \"When both chloride and sulfate were present, sulfate caused stronger inhibition of PFAA adsorption on all resins; adsorption of short-chain PFCAs (C3\\u2013C4) was particularly sensitive to inorganic anion competition.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB03-E05\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Methods/Results \\u2013 modeling and breakthrough prediction (PDF p.1\\u20132, lines 123\\u2013132)\",\n      \"text\": \"For each resin and PFAA, the authors developed log\\u2013log relationships between residual aqueous PFAA concentration and inorganic anion concentration, then used these to estimate stoichiometric breakthrough bed volumes for fixed-bed filters under different water chemistries.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://publikationen.bibliothek.kit.edu/1000177158/156090187\",\n  \"source_id\": \"WEB03\",\n  \"source_limitations\": [\n    \"Experiments were batch rather than continuous-flow, so fixed-bed predictions rely on equilibrium-based modeling with acknowledged limitations.\",\n    \"NOM and more complex water matrices were not directly tested; focus is on inorganic anions in relatively clean solutions.\",\n    \"Ultra-short chain PFAS (e.g., TFA) and many precursors were not included.\"\n  ],\n  \"title\": \"The effect of inorganic anions on the adsorption of perfluoroalkyl acids to various polymeric anion exchange resins\",\n  \"year\": \"2024\"\n}\n\nMissing required field paths:\n[\n  \"operating_conditions[1].unit\",\n  \"operating_conditions[1].value\",\n  \"operating_conditions[2].unit\",\n  \"operating_conditions[2].value\"\n]\n\nReturn exactly one field assessment for each listed path and no assessments\nfor any other path. Reconsider record usability only in light of these\ncompleted assessments.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification_completion",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "d4794c8e2bdd6ac8159c6dabf470a5bb10365021b4a60ba20e6e7c76dc74a773",
+  "response_metadata": {
+    "cached_input_tokens": 1152,
+    "estimated_cost_usd": 0.0098765,
+    "finish_reason": "stop",
+    "input_tokens": 4154,
+    "latency_seconds": 6.438993167015724,
+    "output_tokens": 598,
+    "reasoning_tokens": 127,
+    "response_id": "chatcmpl-E9NplQI7Bh3lKdxUooBBbAl34Rd6z",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 4752,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The field is intentionally left without a unit for a descriptive co-constituent condition. The cited text describes the presence and variation of NaCl and Na2SO4 but does not provide a numerical quantity needing units, so a null unit is appropriate and consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "The value states that chloride and sulfate are present and varied together, with sulfate causing stronger inhibition of PFAA adsorption than chloride. This is directly supported by the cited passages: WEB03-E02 notes batch experiments varying NaCl and Na2SO4, and WEB03-E04 states that when both chloride and sulfate were present, sulfate caused stronger inhibition of PFAA adsorption, particularly for short-chain PFCAs.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "The field describes the resin ionic form qualitatively, which does not require a numerical unit. The cited passage (WEB03-E02) specifies the ionic forms of the resins, so leaving the unit null is appropriate and consistent with the qualitative nature of this condition.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "The value states that M600 was tested in the chloride form. WEB03-E02 reports that \"resins were tested in their supplied ionic forms (A111 free base, others chloride),\" which clearly implies that M600, being one of the \"others,\" was in the chloride form. Thus the statement is directly supported by the source.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT01-gpt51_web_search-WEB03-R02",
+    "record_usable": true,
+    "record_usable_rationale": "All newly assessed operating-condition fields are supported by the cited evidence and contain no numeric, unit, or qualifier errors that would mislead synthesis. No core aspects of the record are rendered unsupported or contradicted by these assessments, so the record remains usable.",
+    "task_id": "RT01"
+  },
+  "result_kind": "json",
+  "stage": "source_verification_completion"
+}

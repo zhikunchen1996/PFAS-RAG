@@ -1,0 +1,266 @@
+{
+  "call_key": "RT02:bge_llm_local_rag:verify:RT02-bge_llm_local_rag-S02-R03",
+  "created_at": "2026-08-05T03:54:03.052181+00:00",
+  "raw_response_text": "{\"task_id\":\"RT02\",\"record_id\":\"RT02-bge_llm_local_rag-S02-R03\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The paper explicitly states that batch and RSSCT removals were directly correlated to full-scale evidence and that full-scale monitoring data were collected and compared to experimental findings for validation (S02-E01, S02-E08). Given same AC types and EBCT scaling, classifying the comparison as \u2018comparable_with_conditions\u2019 is a reasonable synthesis of these statements.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S02-E01 notes that the study correlates batch and RSSCT results with full-scale evidences; S02-E03 defines EBCT_FS (11 min) used for RSSCT scaling; S02-E04 confirms the same four ACs from full-scale adsorbers were used in experiments; S02-E08 reports agreement between full-scale solid phase loadings and RSSCT estimates. These support the stated cross-scale comparability rationale, though some wording is interpretive.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S02-E08 discusses \u2018median removals\u2019 and \u2018removal efficiency\u2019 for each PFAS and describes negative removals (Cout > Cin), which are clearly performance/removal metrics rather than capacity or transformation endpoints.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S02-E08 mentions \u2018agreement with the overall solid phase loading estimated for each PFAS through RSSCT\u2019, which is an adsorption loading/capacity measure consistent with endpoint_type = sorption.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S02-E05 states that water samples were \u2018monthly collected for one year starting in January 2019\u2019 at the inlet and outlet. From this design fact, the inference that such monthly grab sampling limits temporal resolution of breakthrough behavior follows directly and necessarily, so it is a valid design_inferred limitation.\"},{\"field_path\":\"limitations[1].statement\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S02-E06 and S02-E08 state that chromatographic effects caused negative removals for hydrophilic and marginally hydrophobic PFAS, due to competitive displacement by hydrophobic PFAS and DOM, at both RSSCT and full scale. However, the further claim that this \u2018indicates that apparent performance based on simple influent/effluent monitoring may underestimate long-term risks of displacement and tailing\u2019 is an interpretive extension not directly attributed to the authors. Core phenomenon is supported; the risk framing is not explicitly author-reported.\"},{\"field_path\":\"matrix.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S02-E04 notes that ACs were collected from full-scale adsorbers in 17 drinking water treatment plants, and S02-E05 describes monitoring of PFAS at the inlet and outlet of these full-scale GAC adsorbers, implying a drinking water treatment context. However, the additional specification \u2018treated surface/groundwater\u2019 is not stated in the provided excerpts. Thus the general \u2018drinking water entering and leaving full-scale fixed-bed GAC adsorbers\u2019 is supported but the source-type qualifier is not.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S02-E04 states that GAC samples were \u2018collected in full-scale adsorbers located in 17 drinking water treatment plants (DWTPs)\u2019, matching value = 17.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The field represents a count of plants; leaving unit as null is appropriate and consistent with S02-E04.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S02-E03 reports \u2018EBCT_RSSCT was set to 5.5 s, downscaling a full-scale (FS) EBCT_FS of 11 min, calculated as the average EBCT of full-scale fixed-bed GAC adsorbers\u2019, directly supporting value = 11.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The same sentence in S02-E03 specifies \u201811 min\u2019, so unit = min is correct.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S02-E05 states that water samples were \u2018monthly collected for one year starting in January 2019\u2019, supporting a monitoring duration of 1 year.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Duration is explicitly \u2018one year\u2019 in S02-E05, so unit = year is appropriate.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S02-E05 notes that water samples were \u2018monthly collected for one year\u2019, supporting the qualitative value \u2018monthly\u2019 for sampling_frequency.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Sampling frequency is described qualitatively as \u2018monthly\u2019 in S02-E05; leaving unit null is appropriate.\"},{\"field_path\":\"operating_conditions[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S02-E04 explains that four GACs were collected from full-scale adsorbers and that they differ in origin and activation state; S02-E03 lists abbreviations (vc-AC, rc-AC, vb-AC, rb-AC) corresponding to virgin/reactivated coconut-based and virgin/reactivated bituminous AC, supporting the specified AC types.\"},{\"field_path\":\"operating_conditions[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This field is a categorical description of AC types; a null unit is appropriate.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S02-E02 notes that adsorption isotherms and breakthrough curves were studied for eight PFAS. S02-E08 discusses hydrophilic, marginally hydrophobic, and hydrophobic PFAS and notes that PFOS removal was significantly higher compared to other compounds and that median removals and negative removals were evaluated. This supports the description of eight PFAS with differing hydrophobicity, including PFOS, assessed at full scale.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S02-E03 explicitly reports a full-scale EBCT_FS of 11 min as the average EBCT of full-scale fixed-bed GAC adsorbers, matching value = 11 with value_form = exact_numeric.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The EBCT_FS is given as \u201811 min\u2019 in S02-E03, so the unit \u2018min\u2019 is correct.\"},{\"field_path\":\"residuals_byproducts[0].statement\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S02-E06 and S02-E08 clearly state that a chromatographic effect was observed at both RSSCT and full scale, with hydrophilic and marginally hydrophobic PFAS showing negative removals due to competitive displacement by hydrophobic PFAS and DOM, and that this was more pronounced for reactivated bituminous AC. However, the final clause that this \u2018represents redistribution between phases rather than degradation\u2019 is an interpretive inference and not explicitly stated by the authors. Thus the main content is supported, but the mechanistic qualifier goes beyond the text.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S02-E04 describes GAC collected from full-scale adsorbers in 17 DWTPs in Italy, and S02-E05 details full-scale GAC adsorber monitoring for PFAS over one year, supporting the characterization as full-scale fixed-bed GAC adsorbers in 17 DWTPs monitored for PFAS removal.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S02-E04 states that all experiments used four GACs collected from full-scale adsorbers in 17 DWTPs and that the ACs differ by origin and activation state; S02-E03 lists abbreviations consistent with virgin/reactivated coconut-based and bituminous-based ACs. Together, these support the description of full-scale fixed-bed GAC adsorbers using those media types, which are the same ACs tested in batch and RSSCT.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014study identity, full-scale GAC treatment configuration, matrix as drinking water, AC types, PFAS scope, key operating condition (full-scale EBCT), and performance/adsorption endpoints\u2014are directly supported by the cited text. Minor over-interpretations in some limitation and residual/byproduct statements do not affect the main quantitative or design information, so the record is suitable for synthesis with cautious use of those interpretive qualifiers.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of when batch adsorption results do and do not predict column, pilot, or full-scale PFAS treatment performance.\",\"task_id\":\"RT02\",\"title\":\"Translating PFAS adsorption results from batch tests to continuous treatment\"}\n\nTask-specific extraction objective:\nExtract study scale, adsorbent, PFAS and matrix, batch or flow configuration, contact time, flow and bed properties, capacity definition, breakthrough criterion, bed volumes, media lifetime, and uncertainty or scale-up limitation.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Cantoni, B.; Turolla, A.; Wellmitz, J.; Ruhl, A.S.; Antonelli, M. Perfluoroalkyl substances (PFAS) adsorption in drinking water by granular activated carbon - Influence of activated carbon and PFAS characteristics. Science of The Total Environment 2021, 795, 148821.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S02-E03\",\n      \"S02-E04\",\n      \"S02-E05\",\n      \"S02-E06\",\n      \"S02-E08\"\n    ],\n    \"reason\": \"Full-scale GAC adsorbers used the same AC types as the batch and RSSCT tests, and were operated with similar EBCT; the study explicitly compares full-scale median PFAS removals and solid-phase loadings to RSSCT-derived BV50 and batch correlations, supporting cross-scale comparability with attention to matrix and AC characteristics.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.scitotenv.2021.148821\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S02-E05\",\n        \"S02-E06\",\n        \"S02-E08\"\n      ],\n      \"interpretation\": \"Median removals for individual PFAS were estimated across full-scale GAC adsorbers, and these were compared with RSSCT BV50 and solid-phase loading estimates. Hydrophilic and marginally hydrophobic PFAS showed lower median removals than hydrophobic PFAS; negative removals (C_out > C_in) were observed for some hydrophilic PFAS, indicating chromatographic elution and competitive displacement.\",\n      \"reported_term\": \"PFAS removal efficiency; median removal; negative removals\"\n    },\n    {\n      \"endpoint_type\": \"sorption\",\n      \"evidence_locator_ids\": [\n        \"S02-E08\",\n        \"S02-E06\"\n      ],\n      \"interpretation\": \"Solid-phase loadings of PFAS on full-scale GAC estimated from monitoring were in overall agreement with the RSSCT-based capacity estimates (BV50), providing cross-scale validation of adsorption capacity measures.\",\n      \"reported_term\": \"agreement between full-scale solid-phase loadings and RSSCT-derived capacities\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S02-E05\"\n      ],\n      \"statement\": \"Full-scale observations are based on monthly grab samples over one year, which limits temporal resolution of breakthrough behavior and may miss short-term fluctuations or early chromatographic peaks.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S02-E06\",\n        \"S02-E08\"\n      ],\n      \"statement\": \"The study reports that hydrophilic PFAS can show negative removals at full-scale due to chromatographic effects, indicating that apparent performance based on simple influent/effluent monitoring may underestimate long-term risks of displacement and tailing.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S02-E04\",\n      \"S02-E05\"\n    ],\n    \"value\": \"Drinking water (treated surface/groundwater) entering and leaving full-scale fixed-bed GAC adsorbers\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S02-E04\"\n      ],\n      \"name\": \"number_of_plants\",\n      \"qualifiers\": \"GAC samples collected from full-scale adsorbers located in 17 DWTPs\",\n      \"unit\": null,\n      \"value\": \"17\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S02-E03\"\n      ],\n      \"name\": \"full_scale_EBCT\",\n      \"qualifiers\": \"Average empty bed contact time of full-scale GAC adsorbers (EBCT_FS) used for RSSCT scaling and representing typical operating conditions\",\n      \"unit\": \"min\",\n      \"value\": \"11\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S02-E05\"\n      ],\n      \"name\": \"monitoring_duration\",\n      \"qualifiers\": \"Water samples collected monthly for one year starting January 2019 at inlet and outlet of full-scale GAC adsorbers for PFAS analysis\",\n      \"unit\": \"year\",\n      \"value\": \"1\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S02-E05\"\n      ],\n      \"name\": \"sampling_frequency\",\n      \"qualifiers\": \"PFAS concentrations monitored monthly at full-scale adsorbers\",\n      \"unit\": null,\n      \"value\": \"monthly\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S02-E03\",\n        \"S02-E04\"\n      ],\n      \"name\": \"AC_types_in_full_scale\",\n      \"qualifiers\": \"Same four AC types characterized in detail (origin, porosity, reactivation cycles) and used in bench tests\",\n      \"unit\": null,\n      \"value\": \"virgin coconut-based, reactivated coconut-based, virgin bituminous, reactivated bituminous\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S02-E02\",\n        \"S02-E06\",\n        \"S02-E08\"\n      ],\n      \"value\": \"Eight PFAS monitored at full-scale; hydrophilic, marginally hydrophobic, and hydrophobic PFAS, including PFOS, assessed for median removal and chromatographic effects\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S02-E03\"\n      ],\n      \"name\": \"full_scale_EBCT\",\n      \"qualifiers\": \"Average empty bed contact time of the full-scale fixed-bed GAC adsorbers used as the basis for RSSCT scaling\",\n      \"unit\": \"min\",\n      \"value\": \"11\",\n      \"value_form\": \"exact_numeric\"\n    }\n  ],\n  \"record_id\": \"RT02-bge_llm_local_rag-S02-R03\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S02-E06\",\n        \"S02-E08\"\n      ],\n      \"statement\": \"A chromatographic effect at full-scale led to negative removals (C_out > C_in) for hydrophilic and marginally hydrophobic PFAS, particularly for reactivated bituminous AC, due to competitive displacement by hydrophobic PFAS and DOM; this represents redistribution between phases rather than degradation.\"\n    }\n  ],\n  \"source_id\": \"S02\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S02-E04\",\n      \"S02-E05\"\n    ],\n    \"value\": \"Full-scale fixed-bed GAC adsorbers in 17 drinking water treatment plants (DWTPs) in a highly urbanized area in Italy, monitored for PFAS removal\"\n  },\n  \"study_type\": \"pilot_or_field_deployment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S02-E04\",\n      \"S02-E06\",\n      \"S02-E08\"\n    ],\n    \"value\": \"Full-scale fixed-bed granular activated carbon adsorbers using virgin and reactivated coconut-based and bituminous-based GACs (same AC types tested in batch and RSSCT)\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 2,\n  \"bge_score\": 0.6644898653030396,\n  \"citation\": \"Cantoni, B.; Turolla, A.; Wellmitz, J.; Ruhl, A.S.; Antonelli, M. Perfluoroalkyl substances (PFAS) adsorption in drinking water by granular activated carbon - Influence of activated carbon and PFAS characteristics. Science of The Total Environment 2021 795 148821. DOI: 10.1016/j.scitotenv.2021.148821.\",\n  \"doi\": \"10.1016/j.scitotenv.2021.148821\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.scitotenv.2021.148821\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 9,\n      \"locator_id\": \"S02-E01\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0007895874441601336,\n        \"RT02-C2\": 0.03159862384200096,\n        \"RT02-C3\": 3.729939999175258e-05,\n        \"umbrella\": 0.5212074518203735\n      },\n      \"section\": \"methods\",\n      \"text\": \"(Altmann et al., 2016 ; Zietzschmann et al., 2014 ). Few studies highlighted that the correlation between PFAS removal and UVA 254 removal is dependent on the tested water matrix (synthetic and real surface water and wastewater) ( Anumol et al., 2015 ; Sgroi et al., 2018 ), but no studies evaluate whether this correlation is also in \\ufb02uenced by the AC characteristics. Besides, to the best of the authors' knowledge, there are no av ailable studies about the trans- ferability of this correlation among different scales, from batch to pilot and full scale. Our study aims at evaluating the in\\ufb02uence of AC characteristics and reactivation on PFAS adsorption capacity in the presence of DOM. Tap water spiked with eight PFAS was tested in both batch experiments and RSSCTs, comparing four ACs differing in origin and activation state. The adsorption performance was evaluated to highlight the main affecting factors among AC characteristics, taking into account PFAS properties and the interactions between AC and PFAS characteris- tics. Moreover, the applicability of UVA254 as a surrogate parameter for PFAS removal in \\ufb01xed-bed GAC applications was investigated. Obtained results were successfully validated based on PFAS monitoring data de- rived from full-scale GAC adsorbers. To the best of the authors' knowl- edge, this is the \\ufb01rst study in which PFAS removals in batch\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S02-E02\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.10237382352352142,\n        \"RT02-C2\": 0.029975391924381256,\n        \"RT02-C3\": 3.7290010368451476e-05,\n        \"umbrella\": 0.32345858216285706\n      },\n      \"section\": \"results\",\n      \"text\": \"Per\\ufb02uoroalkyl substances (PFAS) persistence in the environment leads to their presence in drinking water, that is of high concern due to their potential human health risk. Adsorption onto activated carbon (AC) has been iden- ti\\ufb01ed as an effective technique to remove PFAS. Adsorption isotherms and breakthrough curves, determined by rapid small-scale column tests (RSSCTs), were studied for eight PFAS and four granular ACs, characterized by dif- ferent origins, porosities and numbers of reactivation cycles. Both batch and RSSCT results highlighted the strong interaction of AC and PFAS characteristics in adsorption capacity. The most important factor affecting AC perfor- mance is the surface charge: a positively-charged AC showed higher adsorption capacities with greater Freundlich constants (K F) and later 50% breakthroughs compared to the AC with neutral surface. Among the positively-charged ACs, a microporous AC demonstrated higher adsorption capacities for hydrophilic and Science of the Total Environment 795 (2021) 148821 Abbreviations:1/n, Freundlich exponent; AC, Activated Carbon; ANOVA, Analysis Of Variance; AOF, Adsorbable Organic Fluorine; BV, Bed Volume; BV50, Bed Volume of half saturation; Ce, Equilibrium concentration in solution; CIN, RSSCT column inlet concentration; COUT, RSSCT column outlet concentration; D, Diffusivity; DOM, Dissolved Organic Matter; DOC, Dissolved\"\n    },\n    {\n      \"corpus_chunk\": 14,\n      \"locator_id\": \"S02-E03\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.004103721585124731,\n        \"RT02-C2\": 0.2228475660085678,\n        \"RT02-C3\": 3.731565811904147e-05,\n        \"umbrella\": 0.12132143974304199\n      },\n      \"section\": \"methods\",\n      \"text\": \"water prior to RSSCT experiments. The RSSCTs were performed adopting the constant diffusivity model ( Crittenden et al., 1991 ). RSSCT empty bed contact time EBCT RSSCT was set to 5.5 s, downscaling a full-scale (FS) EBCT FS of 11 min, calculated as the average EBCT of full-scale \\ufb01xed-bed GAC adsorbers (Section 2.5). Speci\\ufb01c details are de- scribed in Section S2 in Supplementary Material. The columns were op- erated in up- \\ufb02ow for seven days. The in \\ufb02uent to each column was sampled every two days, while ef \\ufb02uent sampling was performed every three hours by an automatic sampler. The theoretical model proposed byLin and Huang (1999)to describe the breakthrough of a sorbate (Eq. (2)) was selected to \\ufb01t the RSSCT results: Table 1 Abbreviations (vc-AC for virgin coconut-based AC, rc-AC for reactivated coconut-based AC, vb-AC for virgin bituminous AC and rb-AC for reactivatedbituminous AC) and main character- istics of the tested ACs: iodine number, BET (Brunauer\\u2013 Emmett\\u2013 Teller) speci\\ufb01c surface area, micropore volume fraction and pH at point of zero charge (pHPZC). Activated carbon Model Activation state Origin Porosity status Bulk density Iodine number BET speci\\ufb01c surface area Micropore volume fraction\"\n    },\n    {\n      \"corpus_chunk\": 10,\n      \"locator_id\": \"S02-E04\",\n      \"query_scores\": {\n        \"RT02-C1\": 5.226183566264808e-05,\n        \"RT02-C2\": 0.013097211718559265,\n        \"RT02-C3\": 5.872674228157848e-05,\n        \"umbrella\": 0.18430452048778534\n      },\n      \"section\": \"methods\",\n      \"text\": \"To the best of the authors' knowl- edge, this is the \\ufb01rst study in which PFAS removals in batch experiments and RSSCTs are directly correlated to full-scale evidences. 2. Materials and methods 2.1. Activated carbon All experiments were performed with four GAC, manufactured by Arkema Group, collected in full-scale adsorbers located in 17 drinking water treatment plants (DWTPs) in a highly urbanized area in Italy (Section 2.5). The ACs differ for origin and activation state as listed in Table 1, where abbreviations used to indicate the tested AC samples and their main characteristics are also reported. The adsorption capacities of the reactivated ACs have been restored through a steam-activation pro- cess. The granular AC samples were milled and sieved to 20\\u2013 50 \\u03bcmp o w - dered activated carbon (PAC) for batch experiments, and to 90\\u2013 125 \\u03bcm AC for RSSCTs. PAC stock suspensions (2 g/L) were prepared for each AC in ultra-pure water and stored overnight for full wetting. B. Cantoni, A. Turolla, J. Wellmitz et al. Science of the Total Environment 795 (2021) 148821 2 2.2. Test solution PFAS reference standards were obtained from Sigma-Aldrich\"\n    },\n    {\n      \"corpus_chunk\": 17,\n      \"locator_id\": \"S02-E05\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.007619129028171301,\n        \"RT02-C2\": 0.01100723072886467,\n        \"RT02-C3\": 3.729395757545717e-05,\n        \"umbrella\": 0.46681949496269226\n      },\n      \"section\": \"methods\",\n      \"text\": \"Cantoni, A. Turolla, J. Wellmitz et al. Science of the Total Environment 795 (2021) 148821 3 BV \\u00bc BV50 \\u00fe 1 kC ln Cout BV\\u00f0\\u00de Cin\\u2212Cout BV\\u00f0\\u00de /C20/C21 \\u00f02\\u00de where cin and cout are the concentrations of the individual PFAS, respec- tively, in the column in \\ufb02uent and ef \\ufb02uent at the corresponding throughput, expressed in thousand bed volume (BV, here as 10 3 BV), namely the treated water volume normalized to the volume of the AC bed. According to Eq. (2),k C is a column constant related to the slope of the breakthrough curve and, as a consequence, to the mass transfer zone (MTZ), that is the portion of the GAC bed active in the adsorption process; while BV 50 corresponds to the throughput at which c out reaches 50% of c in. Among these two parameters, for simplicity, BV 50 was chosen as an indicator of adsorption capacity ( Corwin and Summers, 2011), to compare results of the RSSCTs with both batch iso- therms and full-scale observations. 2.5. Full-scale GAC adsorber monitoring In order to monitor PFAS concentrations, water samples were monthly collected for one year starting in January 2019 at the inlet\"\n    },\n    {\n      \"corpus_chunk\": 49,\n      \"locator_id\": \"S02-E06\",\n      \"query_scores\": {\n        \"RT02-C1\": 3.944834315916523e-05,\n        \"RT02-C2\": 0.0285386573523283,\n        \"RT02-C3\": 3.728567389771342e-05,\n        \"umbrella\": 0.39437755942344666\n      },\n      \"section\": \"methods\",\n      \"text\": \"Among the positively-charged ACs, the pore size distribution and the micropore surface area showed crucial in \\ufb02u- ence on PFAS adsorption depending on PFAS hydrophobicity, positively affecting both the RSSCT BV50 and the full-scale median removal for hy- drophilic and marginally hydrophobic PFAS. The role of mesopores, highly present in reactivated ACs, was more important for more hydro- phobic PFAS, due to less pore blocking by DOM in mesoporous com- pared to microporous ACs. A chromatographic effect was observed in both RSSCT and full-scale adsorbers, with hydrophilic PFAS ef\\ufb02uent con- centrations exceeding the in\\ufb02uent concentrations due to their compet- itive displacement by hydrophobic PFAS and DOM. UVA254 measurements are suitable to estimate PFAS removals in GAC adsorbers, since correlations determined in batch tests are suitable to predict PFAS removals in column tests with adequate accuracy. CRediT authorship contribution statement Beatrice Cantoni: Methodology, Formal analysis, Investigation, Writing \\u2013 original draft, Writing \\u2013 review & editing. Andrea Turolla: Formal analysis, Writing \\u2013 review & editing. J\\u00f6rg Wellmitz: Resources, Writing \\u2013 review & editing.Aki S. Ruhl: Supervision, Conceptualization, Writing \\u2013 review & editing.Manuela Antonelli:Supervision, Conceptu- alization, Writing \\u2013 original draft, Writing \\u2013 review & editing. Declaration of competing interest\"\n    },\n    {\n      \"corpus_chunk\": 7,\n      \"locator_id\": \"S02-E07\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0011689288076013327,\n        \"RT02-C2\": 0.02838829532265663,\n        \"RT02-C3\": 3.728869342012331e-05,\n        \"umbrella\": 0.3864975869655609\n      },\n      \"section\": \"methods\",\n      \"text\": \"McCleaf et al., 2017), considering that pilot-testing is highly time con- suming especially when the goal is to obtain full breakthrough of long-chain PFAS (Park et al., 2020). Despite their lower precisions, two more alternative methods to obtain breakthrough curves are: i) numerical simulations based on dependable isotherm data (Patterson et al., 2019; Xiao et al., 2017), or ii) rapid small-scale column tests (RSSCTs) based on a similitude approach (Crittenden et al., 1987). Numerical simulations have been already applied to predict PFAS break- through curves in full-scale treatment systems, but uncertainty is inev- itably associated to kinetic parameters estimation which negatively affects predictive capabilities (Athanasaki et al., 2015). The experimen- tal RSSCT approach allows convenient testing of various operating con- ditions of full-scale adsorbers in a short time, without the need for isotherm or kinetic data and complex modeling ( Crittenden et al., 1987). This approach has been recently adopted by Park et al. for assessing the breakthrough of 9 PFAS, spiked in groundwater with low organic content (<1 mg/L dissolved organic carbon (DOC)), comparing four bituminous ACs (Park et al., 2020). A correlation between physical-\"\n    },\n    {\n      \"corpus_chunk\": 48,\n      \"locator_id\": \"S02-E08\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0001642336865188554,\n        \"RT02-C2\": 0.012076609767973423,\n        \"RT02-C3\": 3.732896948349662e-05,\n        \"umbrella\": 0.3740639388561249\n      },\n      \"section\": \"methods\",\n      \"text\": \"agreement with the overall solid phase loading estimated for each PFAS through RSSCT (Table S8). Hydrophilic or marginally hydrophobic PFAS showed lower median removals compared to hydrophobic PFAS, and PFOS removal was signif- icantly higher compared to other compounds ( Fig. 4c), where the re- moval ef \\ufb01ciency achieved for each PFAS, regardless the AC type, is reported as a function of the number of \\ufb02uorinated carbons in the mol- ecule for both carboxylates and sulfonates. The chromatographic effect found in RSSCT was experienced also at full-scale (seeFig. 7). Negative removals were calculated for hydrophilic and marginally hydrophobic PFAS. For rb-AC this phenomenon oc- curred to a greater extent compared to vb-AC, in agreement with the RSSCT breakthrough curves (see Fig. S6). 4. Conclusions The adsorption of eight PFAS in tap water was studied by batch tests and RSSCT with four ACs. Full-scale monitoring data were collected and compared to experimental \\ufb01ndings for validation purposes. The main AC characteristic in\\ufb02uencing PFAS removal was the AC sur- face charge, pointing out the role of electrostatic interactions in PFAS re- moval. The worst performance was found for a neutral AC compared to positively-charged ACs. Among the positively-charged ACs, the pore size distribution and the micropore surface area showed crucial in \\ufb02u-\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2021 - Cantoni - Perfluoroalkyl substances (PFAS) adsorption in drinking water by granular activated carbon - Influence of activated carbon and PFAS characteristics.pdf\",\n  \"source_id\": \"S02\",\n  \"title\": \"Perfluoroalkyl substances (PFAS) adsorption in drinking water by granular activated carbon - Influence of activated carbon and PFAS characteristics\",\n  \"year\": \"2021\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "7de5f5596864c6f2aa0412ab54f74160b411524624ce61b5033fec88f99ffe44",
+  "response_metadata": {
+    "cached_input_tokens": 1152,
+    "estimated_cost_usd": 0.03806275,
+    "finish_reason": "stop",
+    "input_tokens": 6567,
+    "latency_seconds": 20.68501350004226,
+    "output_tokens": 3115,
+    "reasoning_tokens": 1147,
+    "response_id": "chatcmpl-E9MzGVJosj0CFtWVeueW7WqUgf5bE",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 9682,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The paper explicitly states that batch and RSSCT removals were directly correlated to full-scale evidence and that full-scale monitoring data were collected and compared to experimental findings for validation (S02-E01, S02-E08). Given same AC types and EBCT scaling, classifying the comparison as \u2018comparable_with_conditions\u2019 is a reasonable synthesis of these statements.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "S02-E01 notes that the study correlates batch and RSSCT results with full-scale evidences; S02-E03 defines EBCT_FS (11 min) used for RSSCT scaling; S02-E04 confirms the same four ACs from full-scale adsorbers were used in experiments; S02-E08 reports agreement between full-scale solid phase loadings and RSSCT estimates. These support the stated cross-scale comparability rationale, though some wording is interpretive.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "S02-E08 discusses \u2018median removals\u2019 and \u2018removal efficiency\u2019 for each PFAS and describes negative removals (Cout > Cin), which are clearly performance/removal metrics rather than capacity or transformation endpoints.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "S02-E08 mentions \u2018agreement with the overall solid phase loading estimated for each PFAS through RSSCT\u2019, which is an adsorption loading/capacity measure consistent with endpoint_type = sorption.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].statement",
+        "reason": "S02-E05 states that water samples were \u2018monthly collected for one year starting in January 2019\u2019 at the inlet and outlet. From this design fact, the inference that such monthly grab sampling limits temporal resolution of breakthrough behavior follows directly and necessarily, so it is a valid design_inferred limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "limitations[1].statement",
+        "reason": "S02-E06 and S02-E08 state that chromatographic effects caused negative removals for hydrophilic and marginally hydrophobic PFAS, due to competitive displacement by hydrophobic PFAS and DOM, at both RSSCT and full scale. However, the further claim that this \u2018indicates that apparent performance based on simple influent/effluent monitoring may underestimate long-term risks of displacement and tailing\u2019 is an interpretive extension not directly attributed to the authors. Core phenomenon is supported; the risk framing is not explicitly author-reported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "matrix.value",
+        "reason": "S02-E04 notes that ACs were collected from full-scale adsorbers in 17 drinking water treatment plants, and S02-E05 describes monitoring of PFAS at the inlet and outlet of these full-scale GAC adsorbers, implying a drinking water treatment context. However, the additional specification \u2018treated surface/groundwater\u2019 is not stated in the provided excerpts. Thus the general \u2018drinking water entering and leaving full-scale fixed-bed GAC adsorbers\u2019 is supported but the source-type qualifier is not.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "S02-E04 states that GAC samples were \u2018collected in full-scale adsorbers located in 17 drinking water treatment plants (DWTPs)\u2019, matching value = 17.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The field represents a count of plants; leaving unit as null is appropriate and consistent with S02-E04.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "S02-E03 reports \u2018EBCT_RSSCT was set to 5.5 s, downscaling a full-scale (FS) EBCT_FS of 11 min, calculated as the average EBCT of full-scale fixed-bed GAC adsorbers\u2019, directly supporting value = 11.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The same sentence in S02-E03 specifies \u201811 min\u2019, so unit = min is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "S02-E05 states that water samples were \u2018monthly collected for one year starting in January 2019\u2019, supporting a monitoring duration of 1 year.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "Duration is explicitly \u2018one year\u2019 in S02-E05, so unit = year is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "S02-E05 notes that water samples were \u2018monthly collected for one year\u2019, supporting the qualitative value \u2018monthly\u2019 for sampling_frequency.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "Sampling frequency is described qualitatively as \u2018monthly\u2019 in S02-E05; leaving unit null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].value",
+        "reason": "S02-E04 explains that four GACs were collected from full-scale adsorbers and that they differ in origin and activation state; S02-E03 lists abbreviations (vc-AC, rc-AC, vb-AC, rb-AC) corresponding to virgin/reactivated coconut-based and virgin/reactivated bituminous AC, supporting the specified AC types.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].unit",
+        "reason": "This field is a categorical description of AC types; a null unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "S02-E02 notes that adsorption isotherms and breakthrough curves were studied for eight PFAS. S02-E08 discusses hydrophilic, marginally hydrophobic, and hydrophobic PFAS and notes that PFOS removal was significantly higher compared to other compounds and that median removals and negative removals were evaluated. This supports the description of eight PFAS with differing hydrophobicity, including PFOS, assessed at full scale.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "S02-E03 explicitly reports a full-scale EBCT_FS of 11 min as the average EBCT of full-scale fixed-bed GAC adsorbers, matching value = 11 with value_form = exact_numeric.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The EBCT_FS is given as \u201811 min\u2019 in S02-E03, so the unit \u2018min\u2019 is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "residuals_byproducts[0].statement",
+        "reason": "S02-E06 and S02-E08 clearly state that a chromatographic effect was observed at both RSSCT and full scale, with hydrophilic and marginally hydrophobic PFAS showing negative removals due to competitive displacement by hydrophobic PFAS and DOM, and that this was more pronounced for reactivated bituminous AC. However, the final clause that this \u2018represents redistribution between phases rather than degradation\u2019 is an interpretive inference and not explicitly stated by the authors. Thus the main content is supported, but the mechanistic qualifier goes beyond the text.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "S02-E04 describes GAC collected from full-scale adsorbers in 17 DWTPs in Italy, and S02-E05 details full-scale GAC adsorber monitoring for PFAS over one year, supporting the characterization as full-scale fixed-bed GAC adsorbers in 17 DWTPs monitored for PFAS removal.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "S02-E04 states that all experiments used four GACs collected from full-scale adsorbers in 17 DWTPs and that the ACs differ by origin and activation state; S02-E03 lists abbreviations consistent with virgin/reactivated coconut-based and bituminous-based ACs. Together, these support the description of full-scale fixed-bed GAC adsorbers using those media types, which are the same ACs tested in batch and RSSCT.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT02-bge_llm_local_rag-S02-R03",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014study identity, full-scale GAC treatment configuration, matrix as drinking water, AC types, PFAS scope, key operating condition (full-scale EBCT), and performance/adsorption endpoints\u2014are directly supported by the cited text. Minor over-interpretations in some limitation and residual/byproduct statements do not affect the main quantitative or design information, so the record is suitable for synthesis with cautious use of those interpretive qualifiers.",
+    "task_id": "RT02"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

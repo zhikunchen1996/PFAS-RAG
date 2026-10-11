@@ -1,0 +1,56 @@
+{
+  "status": "revision3_neutral_evidence_validated",
+  "canonical_judge_prompt": "benchmark/frozen_v3/prompts/evaluation/neutral_evidence_pairwise_content_v3.txt",
+  "canonical_judge_runner": "benchmark/frozen_v3/scripts/run_dev13_neutral_evidence_judge_v3.py",
+  "canonical_comparison": "tagged_vs_matched_direct",
+  "canonical_generation": "benchmark/frozen_v3/results/dev13_verified_tags_v3_r2_confirmation_2026-07-26",
+  "canonical_result": "benchmark/frozen_v3/results/dev13_neutral_evidence_v3_2026-07-26",
+  "judge_model": "gpt-5.1",
+  "temperature": 0,
+  "temperature_zero_resamples": 3,
+  "mirrored_answer_order": true,
+  "model_visible_system_identity": false,
+  "model_visible_question_id": false,
+  "model_visible_task_or_answerability_labels": false,
+  "citation_markers_retained": false,
+  "citation_quality_scored": false,
+  "verification_evidence": "Deduplicated union of Hybrid, BGE, and BGE-LLM top-10 passages",
+  "reference_evidence_interpretation": "Non-exhaustive; absence is not evidence that a claim is false.",
+  "non_scoring_auxiliary_schema_policy": "Missing confidence or material-error arrays are logged and normalized; scored criterion preferences and rationales are mandatory.",
+  "canonical_summary": {
+    "v3_wins": 10,
+    "direct_wins": 3,
+    "ties": 0,
+    "mean_weighted_v3_score": 0.7846153846153846,
+    "mirrored_criterion_agreement": 0.7692307692307693
+  },
+  "judge_sensitivity_results": [
+    {
+      "result": "benchmark/frozen_v3/results/dev13_soft_tags_v3_confirmation_2026-07-26",
+      "answers": "Revision 1",
+      "judge": "citation-blind",
+      "v3_wins": 5,
+      "direct_wins": 8,
+      "ties": 0,
+      "interpretation": "Historical sensitivity result; gold-only verification could not verify valid source-specific details."
+    },
+    {
+      "result": "benchmark/frozen_v3/results/dev13_soft_tags_v3_source_verified_rejudge_2026-07-26",
+      "answers": "Same Revision 1 answers",
+      "judge": "RAG-context source-verified",
+      "v3_wins": 13,
+      "direct_wins": 0,
+      "ties": 0,
+      "interpretation": "Historical sensitivity result with system-identifying payload metadata and RAG-owned verification context."
+    },
+    {
+      "result": "benchmark/frozen_v3/results/dev13_verified_tags_v3_r2_source_verified_2026-07-26",
+      "answers": "Selector-aligned Revision 2",
+      "judge": "RAG-context source-verified",
+      "v3_wins": 13,
+      "direct_wins": 0,
+      "ties": 0,
+      "interpretation": "Superseded by the neutral-evidence Revision 3 judge."
+    }
+  ]
+}

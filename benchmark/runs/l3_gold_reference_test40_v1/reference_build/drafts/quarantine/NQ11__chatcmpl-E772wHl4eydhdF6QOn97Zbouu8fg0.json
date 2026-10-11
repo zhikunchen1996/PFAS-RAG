@@ -1,0 +1,315 @@
+{
+  "question_id": "NQ11",
+  "reference_packet_sha256": "91fd59993325718572df8d58c49be575da55641b0fa5201ccf253e8fbc441e8c",
+  "prompt_sha256": "008063f21e0cb5cd76c21b98aa9dbeec16fa63bd7461cb3a179e5107e8c8c30d",
+  "raw_result": {
+    "question_id": "NQ11",
+    "answerability": "supported",
+    "answerability_rationale": "The evidence describes isotope-labeled internal standards being added at the start of PFAS sample preparation for isotope-dilution quantification and notes their role in correcting analytical bias in complex matrices. Additional evidence explains how internal standards are selected and assigned to analytes based on functional group and fluorocarbon chain length when exact labeled analogs are not available, including use for suspect/semiquantitative analyses and for broader PFAS classes. Together, these examples support all three task components with concrete, study-specific practices, although they do not exhaust all possible PFAS methods or internal-standard strategies.",
+    "task_components": [
+      {
+        "task_component_id": "NQ11-T01",
+        "component_text": "Describe how isotope-labelled internal standards are used in PFAS analysis, including their function in quantification, correction for losses or matrix effects, and overall role in data quality."
+      },
+      {
+        "task_component_id": "NQ11-T02",
+        "component_text": "Explain how the choice of isotope-labelled standards (exact vs non-exact analogs) is connected to analyte coverage and the scope of the PFAS method (e.g., number and types of targeted PFAS)."
+      },
+      {
+        "task_component_id": "NQ11-T03",
+        "component_text": "Identify situations or study designs in which non-exact isotope-labelled analogs are relied upon instead of exact labelled standards, and describe how they are applied in PFAS analysis under those conditions."
+      }
+    ],
+    "claim_groups": [
+      {
+        "claim_group_id": "NQ11-G01",
+        "task_component_id": "NQ11-T01",
+        "canonical_proposition": "In PFAS analyses, isotope-labelled internal standards are added (often at the start of sample preparation) and used in isotope-dilution approaches to enable quantification and correct analytical bias in complex environmental samples, thereby supporting data quality.",
+        "central_proposition": "Isotope-labelled internal standards in PFAS methods are introduced during sample preparation for isotope-dilution quantification and are used to correct analytical bias in complex matrices, improving data quality.",
+        "material_qualifiers": [
+          "PFAS analysis using SPE and LC-MS/MS",
+          "environmental water samples"
+        ],
+        "importance": "core",
+        "function": "affirmative",
+        "scoring_role": "required_content",
+        "evidence_ids": [
+          "NQ11_MMG001",
+          "NQ11_MMG002"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Count this claim group as fully satisfied when the answer explains that isotope-labelled internal standards are used in PFAS analysis by adding them during sample preparation for isotope-dilution-based quantification and that they are used to correct analytical bias or matrix-related issues, thus supporting data quality; this must be explicitly tied to PFAS analytical workflows (e.g., SPE plus LC-MS/MS).",
+        "partial_rule": "Count this claim group as partially satisfied when the answer mentions isotope-labelled internal standards and quantification in PFAS analysis but does not clearly describe their timing of addition or their role in correcting analytical bias/matrix effects and data quality.",
+        "contradiction_rule": "Mark this claim group as contradicted if the answer asserts that isotope-labelled internal standards are not used for quantification or not needed for correcting analytical bias/matrix effects in PFAS analysis, or implies they are added only after all sample preparation steps without any role in isotope-dilution approaches.",
+        "source_atomic_claim_ids": [
+          "NQ11-A01",
+          "NQ11-A02"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ11_MMG001",
+            "exact_evidence_span": "Isotope-labelled internal standards will be added at the start of sample preparation, typically at 10 ng \t L \t \t 1, to enable isotope-dilution quantification.",
+            "supports": "Shows that isotope-labelled internal standards are added at the start of PFAS sample preparation and are specifically used to enable isotope-dilution quantification."
+          },
+          {
+            "evidence_id": "NQ11_MMG002",
+            "exact_evidence_span": "An isotope dilution technique was employed for the PFAS compounds of interest using carbon-13 and/or oxygen-18 labeled analogs to allow for the correction of analytical bias encountered with chemically complex environmental samples.",
+            "supports": "Shows the use of isotope dilution with carbon-13 and/or oxygen-18 labeled analogs to correct analytical bias in chemically complex environmental PFAS samples."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "NQ11-G02",
+        "task_component_id": "NQ11-T02",
+        "canonical_proposition": "When exact isotope-labelled analogs are unavailable for some PFAS, methods extend analyte coverage by assigning closely related or class-representative labeled internal standards selected based on functional group and fluorocarbon chain length, aligning standard choice with the scope of targeted and suspect PFAS.",
+        "central_proposition": "PFAS methods connect the choice of isotope-labelled internal standards to analyte coverage and method scope by using exact labeled analogs where available and, for other PFAS, using structurally related or class-based internal standards chosen by functional group and chain length.",
+        "material_qualifiers": [
+          "methods including target and suspect PFAS",
+          "use of class-based or chain-length-based assignments"
+        ],
+        "importance": "core",
+        "function": "affirmative",
+        "scoring_role": "required_content",
+        "evidence_ids": [
+          "NQ11_MMG002",
+          "NQ11_MMG003",
+          "NQ11_MMG004"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Count this claim group as fully satisfied when the answer explains that PFAS analytical methods use exact isotope-labelled analogs when available, but to broaden analyte coverage and match the method’s scope they also assign non-exact or class-representative internal standards to other PFAS based on structural similarity, such as ionizable functional group and fluorocarbon chain length.",
+        "partial_rule": "Count this claim group as partially satisfied when the answer notes that non-exact or surrogate isotope-labelled standards are used for some PFAS but does not clearly connect this to method scope, analyte coverage, or the criteria (e.g., functional group, chain length) used to select these standards.",
+        "contradiction_rule": "Mark this claim group as contradicted if the answer claims that PFAS methods only use exact isotope-labelled analogs for every analyte, or denies that non-exact/structurally related internal standards are used to expand analyte coverage.",
+        "source_atomic_claim_ids": [
+          "NQ11-A03",
+          "NQ11-A04"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ11_MMG002",
+            "exact_evidence_span": "Compounds that do not have an identically labeled analog were quantitated using a closely related labeled analog.",
+            "supports": "Shows that when exact (identically labeled) analogs are not available for certain PFAS, quantification relies on closely related labeled analogs, linking standard choice to analyte coverage."
+          },
+          {
+            "evidence_id": "NQ11_MMG003",
+            "exact_evidence_span": "For the semiquantitative analysis of suspect analytes, concentrations were estimated with a target calibrant and an internal standard from the target analyte list, selected based upon the ionizable functional group and ﬂuoroalkyl chain length.",
+            "supports": "Shows that internal standards for suspect PFAS are selected from an existing target list based on ionizable functional group and fluorinated chain length, indicating a class/structure-based approach to extend coverage beyond analytes with exact labeled standards."
+          },
+          {
+            "evidence_id": "NQ11_MMG004",
+            "exact_evidence_span": "quantiﬁable PFAAs were assigned to be the internal standards of unsaturated per ﬂuoroalkyl acids (U-PFAAs) and keto perﬂuoroalkyl acids (K-PFAAs), and the internal standards of speciﬁc compounds within these classes were matched based on their ﬂuorocarbon chain length (e.g., PFBA to U-PFBA and K-PFBA, and PFOA to U-PFOA and K-PFOA).",
+            "supports": "Shows that quantifiable PFAAs are assigned as internal standards for other PFAS classes (U-PFAAs and K-PFAAs) and that the specific internal standard within a class is matched using fluorocarbon chain length, illustrating class-based and chain-length-based coverage."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "NQ11-G03",
+        "task_component_id": "NQ11-T03",
+        "canonical_proposition": "In PFAS studies that include suspect screening or PFAS classes lacking exact labeled analogs, non-exact isotope-labelled or class-representative internal standards from a target analyte list are used for semi-quantitative estimation or quantification, with assignments guided by PFAS functional group and chain length or by class (e.g., using quantifiable PFAAs for U-PFAAs and K-PFAAs).",
+        "central_proposition": "Non-exact isotope-labelled or structurally related internal standards are relied on in PFAS analyses for suspect/semiquantitative work and for PFAS classes without identically labeled standards, where they are applied by matching functional group, chain length, or class to estimate or determine concentrations.",
+        "material_qualifiers": [
+          "suspect screening and semiquantitative analysis",
+          "PFAS classes without identically labeled standards",
+          "class-based internal standard assignment"
+        ],
+        "importance": "core",
+        "function": "affirmative",
+        "scoring_role": "required_content",
+        "evidence_ids": [
+          "NQ11_MMG002",
+          "NQ11_MMG003",
+          "NQ11_MMG004"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Count this claim group as fully satisfied when the answer identifies that, in study designs such as suspect screening, semiquantitative analysis, or analysis of PFAS classes lacking exact labeled analogs, researchers rely on non-exact or class-representative isotope-labelled internal standards (or target analyte internal standards) and apply them by matching structural features such as ionizable functional group, fluorocarbon chain length, or PFAS class to estimate concentrations.",
+        "partial_rule": "Count this claim group as partially satisfied when the answer either (a) mentions use of non-exact isotope-labelled standards for suspect or non-target PFAS but does not describe how they are assigned/applied, or (b) describes class-based or chain-length-based internal standard assignment without clearly tying it to the absence of exact labeled analogs or to suspect/semiquantitative study designs.",
+        "contradiction_rule": "Mark this claim group as contradicted if the answer asserts that non-exact or class-representative isotope-labelled standards are not used in PFAS analysis, or claims that suspect and class-level PFAS analyses only rely on exact labeled analogs for every compound.",
+        "source_atomic_claim_ids": [
+          "NQ11-A03",
+          "NQ11-A04"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ11_MMG002",
+            "exact_evidence_span": "Compounds that do not have an identically labeled analog were quantitated using a closely related labeled analog.",
+            "supports": "Indicates that when PFAS do not have identically labeled standards, the study relies on closely related labeled analogs for quantitation, exemplifying reliance on non-exact analogs in such situations."
+          },
+          {
+            "evidence_id": "NQ11_MMG003",
+            "exact_evidence_span": "For the semiquantitative analysis of suspect analytes, concentrations were estimated with a target calibrant and an internal standard from the target analyte list, selected based upon the ionizable functional group and ﬂuoroalkyl chain length.",
+            "supports": "Shows that in semiquantitative suspect analysis, non-exact internal standards from a target analyte list are used and selected based on functional group and chain length to estimate concentrations of suspect PFAS."
+          },
+          {
+            "evidence_id": "NQ11_MMG004",
+            "exact_evidence_span": "quantiﬁable PFAAs were assigned to be the internal standards of unsaturated per ﬂuoroalkyl acids (U-PFAAs) and keto perﬂuoroalkyl acids (K-PFAAs), and the internal standards of speciﬁc compounds within these classes were matched based on their ﬂuorocarbon chain length (e.g., PFBA to U-PFBA and K-PFBA, and PFOA to U-PFOA and K-PFOA). After assigning an internal standard peak area to each suspect PFAS, the suspect ’s concentration was calculated based on the target PFAS ’s calibration curve.",
+            "supports": "Demonstrates a situation where quantifiable PFAAs are used as internal standards for unsaturated and keto PFAAs; assignments are based on chain length and are used to calculate suspect PFAS concentrations from target calibration curves, illustrating application of non-exact/class-based internal standards for suspect/class PFAS."
+          }
+        ]
+      }
+    ],
+    "constraint_groups": [
+      {
+        "claim_group_id": "NQ11-X01",
+        "task_component_id": "NQ11-T02",
+        "canonical_proposition": "The available evidence only describes internal standard choices and labeled-standard sets for specific PFAS methods and compound lists; it does not show that any single exact labeled-standard set is universally sufficient for all PFAS analytical methods.",
+        "central_proposition": "Evidence is method- and compound-list-specific and does not justify claiming a universally sufficient exact-labeled internal-standard set for all PFAS analyses.",
+        "material_qualifiers": [
+          "method-specific compound lists",
+          "limited PFAS sets per study"
+        ],
+        "importance": "core",
+        "function": "limitation",
+        "scoring_role": "constraint_only",
+        "evidence_ids": [
+          "NQ11_MMG002",
+          "NQ11_MMG003",
+          "NQ11_MMG004"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Use this constraint to ensure the answer does not generalize from study-specific internal-standard strategies to a claim that one exact isotope-labelled standard set is universally sufficient for all PFAS methods; the answer should acknowledge or implicitly reflect that different studies target different PFAS and use different internal-standard selections.",
+        "partial_rule": "If the answer is silent on universality but otherwise neutral, treat this constraint as implicitly respected; only explicit overgeneralization should be flagged.",
+        "contradiction_rule": "This constraint is contradicted if the answer explicitly claims that a particular exact isotope-labelled standard set is sufficient for all PFAS analytical methods or implies universal adequacy without qualification.",
+        "source_atomic_claim_ids": [
+          "NQ11-A05"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ11_MMG002",
+            "exact_evidence_span": "An isotope dilution technique was employed for the PFAS compounds of interest using carbon-13 and/or oxygen-18 labeled analogs",
+            "supports": "Shows that the described isotope-dilution and labeled-standard approach is defined for a specific set of 'PFAS compounds of interest', not all conceivable PFAS, indicating method-specific scope."
+          },
+          {
+            "evidence_id": "NQ11_MMG003",
+            "exact_evidence_span": "For the semiquantitative analysis of suspect analytes, concentrations were estimated with a target calibrant and an internal standard from the target analyte list",
+            "supports": "Indicates that the internal standards are drawn from a defined 'target analyte list', again emphasizing that the described approach pertains to a specific set of PFAS rather than a universal standard set."
+          },
+          {
+            "evidence_id": "NQ11_MMG004",
+            "exact_evidence_span": "quantiﬁable PFAAs were assigned to be the internal standards of unsaturated per ﬂuoroalkyl acids (U-PFAAs) and keto perﬂuoroalkyl acids (K-PFAAs)",
+            "supports": "Shows that this internal-standard strategy is tailored to specific PFAS subclasses in this study, supporting the interpretation that internal-standard sets are method- and class-specific rather than universally applicable."
+          }
+        ]
+      }
+    ],
+    "atomic_claim_dispositions": [
+      {
+        "atomic_claim_id": "NQ11-A01",
+        "atomic_claim": "In at least one PFAS method, isotope-labelled internal standards are added at the start of sample preparation, typically at 10 ng·L⁻¹, to enable isotope-dilution quantification.",
+        "evidence_ids": [
+          "NQ11_MMG001"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ11-G01"
+        ],
+        "rationale": "Directly supported by NQ11_MMG001 and central to describing how isotope-labelled internal standards are used for quantification."
+      },
+      {
+        "atomic_claim_id": "NQ11-A02",
+        "atomic_claim": "In PFAS LC-MS/MS analysis of complex environmental samples, an isotope dilution technique using carbon-13 and/or oxygen-18 labeled analogs is employed to allow correction of analytical bias.",
+        "evidence_ids": [
+          "NQ11_MMG002"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ11-G01"
+        ],
+        "rationale": "Directly supported by NQ11_MMG002 and essential to capture the role of isotope-labelled standards in correcting analytical bias/matrix effects."
+      },
+      {
+        "atomic_claim_id": "NQ11-A03",
+        "atomic_claim": "When PFAS compounds do not have an identically labeled analog, they can be quantitated using a closely related labeled analog or an internal standard from a target analyte list selected based on ionizable functional group and fluoroalkyl chain length.",
+        "evidence_ids": [
+          "NQ11_MMG002",
+          "NQ11_MMG003"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ11-G02",
+          "NQ11-G03"
+        ],
+        "rationale": "Combines complementary evidence showing that non-exact/closely related labeled analogs and class-based internal standards are used when exact analogs are unavailable."
+      },
+      {
+        "atomic_claim_id": "NQ11-A04",
+        "atomic_claim": "Quantifiable PFAAs can be assigned as internal standards for unsaturated perfluoroalkyl acids and keto perfluoroalkyl acids, with specific internal standards matched to individual suspects by fluorocarbon chain length and used with target PFAS calibration curves to calculate suspect concentrations.",
+        "evidence_ids": [
+          "NQ11_MMG004"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ11-G02",
+          "NQ11-G03"
+        ],
+        "rationale": "Directly describes a study design where non-exact, class-based internal standards are applied for suspect/class PFAS, relevant to both analyte coverage and use conditions."
+      },
+      {
+        "atomic_claim_id": "NQ11-A05",
+        "atomic_claim": "The internal standard strategies described in the evidence are specific to defined PFAS sets (e.g., compounds of interest or target analyte lists) rather than demonstrating a universally sufficient labeled-standard set for all PFAS methods.",
+        "evidence_ids": [
+          "NQ11_MMG002",
+          "NQ11_MMG003",
+          "NQ11_MMG004"
+        ],
+        "action": "constraint_only",
+        "target_claim_group_ids": [
+          "NQ11-X01"
+        ],
+        "rationale": "Synthesizes multiple pieces of evidence indicating method- and list-specific internal standard selection, and is used solely to constrain overgeneralization about universal sufficiency."
+      }
+    ],
+    "reference_answer": "In the PFAS methods illustrated, isotope‑labelled internal standards are incorporated directly into the sample‑preparation and LC‑MS/MS workflow to support isotope‑dilution quantification and control analytical bias.\n\nFor target PFAS analysis, isotope‑labelled internal standards are added early in the workflow so they experience the same extraction and concentration steps as the native analytes. In one protocol, “Isotope-labelled internal standards will be added at the start of sample preparation, typically at 10 ng ⋅ L⁻¹, to enable isotope-dilution quantification” [NQ11_MMG001]. In another study, LC‑MS/MS analysis of groundwater used “an isotope dilution technique … for the PFAS compounds of interest using carbon-13 and/or oxygen-18 labeled analogs to allow for the correction of analytical bias encountered with chemically complex environmental samples” [NQ11_MMG002]. These examples show that isotope‑labelled standards are introduced before analysis and used in isotope‑dilution calculations to obtain quantitative results while correcting for matrix‑related analytical bias, thereby improving data quality.\n\nThe choice between exact and non‑exact isotope‑labelled standards is linked to which PFAS are targeted and how broad the method’s scope is. Where an identically labelled analog exists, it can be used directly. However, the groundwater study explicitly notes that “Compounds that do not have an identically labeled analog were quantitated using a closely related labeled analog” [NQ11_MMG002]. This indicates that, to maintain coverage when the target list includes PFAS lacking exact labelled standards, the method substitutes structurally similar labeled analogs. In broader AFFF studies that include both target and suspect PFAS, the internal standards for suspect compounds are chosen from an existing target list rather than being exact analogs. For semiquantitative suspect analysis, “concentrations were estimated with a target calibrant and an internal standard from the target analyte list, selected based upon the ionizable functional group and fluoroalkyl chain length” [NQ11_MMG003]. Similarly, another AFFF study assigned “quantifiable PFAAs … to be the internal standards of unsaturated perfluoroalkyl acids (U‑PFAAs) and keto perfluoroalkyl acids (K‑PFAAs), and the internal standards of specific compounds within these classes were matched based on their fluorocarbon chain length (e.g., PFBA to U‑PFBA and K‑PFBA, and PFOA to U‑PFOA and K‑PFOA)” [NQ11_MMG004]. These approaches tie internal‑standard choice to PFAS class and chain length so that a finite set of labeled or quantifiable PFAAs can support measurement of a broader range of PFAS, aligning internal‑standard selection with the method’s analyte coverage.\n\nNon‑exact isotope‑labelled or class‑representative analogs are therefore relied upon in several specific situations. In the ion‑exchange/electrochemical oxidation groundwater study, whenever a PFAS “do[es] not have an identically labeled analog” it “was quantitated using a closely related labeled analog” [NQ11_MMG002], showing that structurally related labeled standards are used to obtain quantitative results for PFAS beyond those with exact labels. In suspect‑screening workflows for AFFF, where many PFAS do not have individual calibrated standards, “semiquantitative analysis of suspect analytes” is performed by estimating concentrations “with a target calibrant and an internal standard from the target analyte list, selected based upon the ionizable functional group and fluoroalkyl chain length” [NQ11_MMG003]. Likewise, in class‑based analysis of novel PFAS such as U‑PFAAs and K‑PFAAs, “quantifiable PFAAs were assigned to be the internal standards” for those classes, with assignments matched by “fluorocarbon chain length,” and after assigning an internal‑standard peak area to each suspect PFAS, “the suspect’s concentration was calculated based on the target PFAS’s calibration curve” [NQ11_MMG004]. These examples illustrate that, when expanding beyond a narrow set of targets or when exact labeled analogs are unavailable, studies rely on non‑exact, structurally or class‑matched internal standards for quantitative or semiquantitative PFAS analysis.\n\nAcross these studies, the internal‑standard and labeled‑standard sets are defined for specific PFAS compound lists (e.g., “PFAS compounds of interest” [NQ11_MMG002] or a particular “target analyte list” [NQ11_MMG003]) and specific PFAS classes such as U‑PFAAs and K‑PFAAs [NQ11_MMG004]. The evidence does not indicate that any one exact isotope‑labelled standard set would be sufficient for all PFAS analytical methods; rather, internal‑standard selection is tailored to the targeted PFAS and the scope of each method.",
+    "reference_answer_claim_map": [
+      {
+        "claim_group_id": "NQ11-G01",
+        "reference_answer_excerpt": "In one protocol, “Isotope-labelled internal standards will be added at the start of sample preparation, typically at 10 ng ⋅ L⁻¹, to enable isotope-dilution quantification” [NQ11_MMG001]. In another study, LC‑MS/MS analysis of groundwater used “an isotope dilution technique … for the PFAS compounds of interest using carbon-13 and/or oxygen-18 labeled analogs to allow for the correction of analytical bias encountered with chemically complex environmental samples” [NQ11_MMG002]. These examples show that isotope‑labelled standards are introduced before analysis and used in isotope‑dilution calculations to obtain quantitative results while correcting for matrix‑related analytical bias, thereby improving data quality."
+      },
+      {
+        "claim_group_id": "NQ11-G02",
+        "reference_answer_excerpt": "Where an identically labelled analog exists, it can be used directly. However, the groundwater study explicitly notes that “Compounds that do not have an identically labeled analog were quantitated using a closely related labeled analog” [NQ11_MMG002]. This indicates that, to maintain coverage when the target list includes PFAS lacking exact labelled standards, the method substitutes structurally similar labeled analogs. In broader AFFF studies that include both target and suspect PFAS, the internal standards for suspect compounds are chosen from an existing target list rather than being exact analogs. For semiquantitative suspect analysis, “concentrations were estimated with a target calibrant and an internal standard from the target analyte list, selected based upon the ionizable functional group and fluoroalkyl chain length” [NQ11_MMG003]. Similarly, another AFFF study assigned “quantifiable PFAAs … to be the internal standards of unsaturated perfluoroalkyl acids (U‑PFAAs) and keto perfluoroalkyl acids (K‑PFAAs), and the internal standards of specific compounds within these classes were matched based on their fluorocarbon chain length” [NQ11_MMG004]. These approaches tie internal‑standard choice to PFAS class and chain length so that a finite set of labeled or quantifiable PFAAs can support measurement of a broader range of PFAS, aligning internal‑standard selection with the method’s analyte coverage."
+      },
+      {
+        "claim_group_id": "NQ11-G03",
+        "reference_answer_excerpt": "Non‑exact isotope‑labelled or class‑representative analogs are therefore relied upon in several specific situations. In the ion‑exchange/electrochemical oxidation groundwater study, whenever a PFAS “do[es] not have an identically labeled analog” it “was quantitated using a closely related labeled analog” [NQ11_MMG002], showing that structurally related labeled standards are used to obtain quantitative results for PFAS beyond those with exact labels. In suspect‑screening workflows for AFFF, where many PFAS do not have individual calibrated standards, “semiquantitative analysis of suspect analytes” is performed by estimating concentrations “with a target calibrant and an internal standard from the target analyte list, selected based upon the ionizable functional group and fluoroalkyl chain length” [NQ11_MMG003]. Likewise, in class‑based analysis of novel PFAS such as U‑PFAAs and K‑PFAAs, “quantifiable PFAAs were assigned to be the internal standards” for those classes, with assignments matched by “fluorocarbon chain length,” and after assigning an internal‑standard peak area to each suspect PFAS, “the suspect’s concentration was calculated based on the target PFAS’s calibration curve” [NQ11_MMG004]. These examples illustrate that, when expanding beyond a narrow set of targets or when exact labeled analogs are unavailable, studies rely on non‑exact, structurally or class‑matched internal standards for quantitative or semiquantitative PFAS analysis."
+      },
+      {
+        "claim_group_id": "NQ11-X01",
+        "reference_answer_excerpt": "Across these studies, the internal‑standard and labeled‑standard sets are defined for specific PFAS compound lists (e.g., “PFAS compounds of interest” [NQ11_MMG002] or a particular “target analyte list” [NQ11_MMG003]) and specific PFAS classes such as U‑PFAAs and K‑PFAAs [NQ11_MMG004]. The evidence does not indicate that any one exact isotope‑labelled standard set would be sufficient for all PFAS analytical methods; rather, internal‑standard selection is tailored to the targeted PFAS and the scope of each method."
+      }
+    ],
+    "unresolved_or_unsupported": [
+      "Any general, method-independent rules for how many isotope-labelled internal standards are needed for a given number of PFAS analytes are not described in the evidence.",
+      "The evidence does not specify detailed criteria for when a closely related labeled analog is considered sufficiently similar beyond mentioning functional group and fluorocarbon chain length.",
+      "The evidence does not cover isotope-labelled standard strategies for all PFAS classes (e.g., fluorotelomer sulfonates, polymers) or all matrices beyond the specific groundwater and AFFF-related examples."
+    ],
+    "boundary_check": {
+      "must_include_addressed": true,
+      "must_not_claim_respected": true,
+      "notes": "The reference answer explains the role of isotope-labelled internal standards in quantification and correction of analytical bias, connects exact versus non-exact standard use to analyte coverage and method scope, and gives concrete situations where non-exact analogs are applied. It also explicitly notes that the evidence does not support claiming any one exact labeled-standard set as universally sufficient for all PFAS methods."
+    }
+  },
+  "generation": {
+    "request_model": "gpt-5.1",
+    "response_model": "gpt-5.1-2025-11-13",
+    "response_id": "chatcmpl-E772wHl4eydhdF6QOn97Zbouu8fg0",
+    "reasoning_effort": "low",
+    "temperature": "provider_default_not_sent",
+    "max_completion_tokens": 20000,
+    "finish_reason": "stop",
+    "prompt_tokens": 4460,
+    "cached_prompt_tokens": 0,
+    "completion_tokens": 7174,
+    "total_tokens": 11634,
+    "latency_seconds": 47.335130624996964,
+    "request_sha256": "8ca49f7222155f5752c12252abcae31e08cee3c18262bd13b47e6d5b8c3cf067",
+    "estimated_cost_usd": 0.077315
+  },
+  "analytical_status": "quarantined_schema_invalid"
+}

@@ -1,0 +1,398 @@
+{
+  "call_key": "RT10:bge_llm_local_rag:verify:RT10-bge_llm_local_rag-S07-R01",
+  "created_at": "2026-08-05T04:43:11.964262+00:00",
+  "raw_response_text": "{\"task_id\":\"RT10\",\"record_id\":\"RT10-bge_llm_local_rag-S07-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Experiments are described as examining complex PFAS mixtures in AFFF diluted into well-defined laboratory water matrices, with no mention of varying natural water matrices. UV-only controls are mentioned, but not systematic matrix variation, consistent with a descriptive-only comparability assessment.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Figure 1 timecourses are described as showing degradation of PFOS and PFOA by 98% and 93%, and other PFASs, which is a direct measure of loss of parent compounds under treatment. Classifying this endpoint as parent_compound_loss is consistent with the text.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text reports generation (increased concentrations) of shorter-chain PFSAs from precursors and further experiments with FOSAA showing formation of PFOS and PFOA from precursor degradation, which is clearly PFAS transformation. Endpoint_type=transformation is appropriate.\"},{\"field_path\":\"endpoints[2].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The methods note that total fluorine, fluoride release, and TOP assay were performed to elucidate overall PFAS mineralization in AFFF. These measurements reflect C\u2013F bond cleavage/defluorination, so classifying the endpoint as defluorination is justified based on the cited text.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The article explicitly states that AFFF was diluted into well-defined laboratory water matrices and calls for additional work on real AFFF-impacted natural waters containing background constituents and co-contaminants. This supports the stated limitation about lab matrices vs natural waters.\"},{\"field_path\":\"limitations[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The study reports tracking 15 target PFASs and later notes the need to elucidate structure\u2013reactivity trends for a wider array of PFASs outside the target list. This supports the limitation that behavior was primarily evaluated for selected target PFASs with many PFAS structures not quantified.\"},{\"field_path\":\"limitations[2]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The work is clearly described as applying UV-sulfite to AFFF mixtures in well-defined laboratory matrices, i.e., bench-scale UV-sulfite experiments. Inferring that reactivity comparisons among PFSA, PFCA, and FTS classes under these specific conditions may not directly translate to other processes or matrices is a reasonable design-inferred limitation.\"},{\"field_path\":\"matrix\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text repeatedly refers to AFFF diluted into well-defined laboratory water matrices and treatment of PFAS mixtures in AFFF-impacted water sources. Describing the matrix as aqueous AFFF solutions in laboratory water matrices is consistent with the source.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The study describes UV-sulfite treatment as the main process and mentions UV-only controls (\\\"control\\\" in SI) for AFFF. The summarized condition of UV-sulfite photoreductive treatment with UV-only control matches the cited text.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The operating condition entry is categorical (treatment process description), so leaving the unit null is appropriate.\"},{\"field_path\":\"pfas_scope[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFOS is explicitly mentioned as one of the individual PFASs in AFFF whose timecourse is shown and degraded by 98%, confirming inclusion of PFOS in the PFAS scope.\"},{\"field_path\":\"pfas_scope[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFOA is explicitly mentioned as an individual PFAS in AFFF degraded by 93%, confirming its presence in the PFAS scope.\"},{\"field_path\":\"pfas_scope[2]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text lists perfluorononanesulfonic acid (PFNS; 9C) and perfluoroheptanesulfonic acid (PFHpS; 7C) as other long-chain PFSAs that were readily degraded, matching the described PFAS scope entry.\"},{\"field_path\":\"pfas_scope[3]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Shorter-chain PFSAs PFHxS (6C), PFPeS (5C), PFBS (4C), and PFPrS (3C) are explicitly named and discussed as initially increasing in concentration, matching the scope description of shorter-chain PFSAs.\"},{\"field_path\":\"pfas_scope[4]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The article states that 15 compounds spanning PFSAs, PFCAs, and FTSs were tracked, and the table/snippet includes PFBA and FTSs (4:2, 6:2, 8:2). The comparison text mentions PFHxA and PFOA, supporting the scope description of PFCAs (PFBA, PFHxA, PFOA) and 4:2, 6:2, 8:2 FTSs.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"The text states that PFOS was degraded by 98% in AFFF. The recorded numeric value 98 with unit % and exact_numeric form matches this statement.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The degradation extent is reported as a percent. Using % as the unit is consistent with the source.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"The text states that PFOA was degraded by 93% in AFFF. The recorded value 93 with exact_numeric form matches the reported value.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The degradation is reported as percent; using % as the unit is appropriate.\"},{\"field_path\":\"quantitative_findings[2].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"The table line shows \\\"PFBA 4C 0.457 \u00b1 0.268 ...\\\". The extracted value 0.457 corresponds exactly to this reported value for PFBA.\"},{\"field_path\":\"quantitative_findings[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Although the column heading is not in the snippet, these values are described elsewhere as pseudo-first-order rate constants kobs, typically with units of min^-1. Assigning min^-1 as the unit is consistent with the context of kobs values in the study.\"},{\"field_path\":\"quantitative_findings[3].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"The table lists \\\"24.4 \u00b1 0.4\\\" in the same PFBA row as a dimensionless relative parameter. The extracted value 24.4 matches this value.\"},{\"field_path\":\"quantitative_findings[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The 24.4 \u00b1 0.4 value is a relative reactivity ratio, so leaving the unit as an empty string (dimensionless) is appropriate.\"},{\"field_path\":\"quantitative_findings[4].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"In the PFBA row, the third numeric entry is \\\"0.306 \u00b1 0.042\\\". The extracted value 0.306 matches this value.\"},{\"field_path\":\"quantitative_findings[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This third parameter is described in footnote b/c as a kinetic parameter derived from rate or maximum formed concentration and is in the same table of rate constants. Assigning min^-1 as the unit is consistent with the table\u2019s kinetic context.\"},{\"field_path\":\"quantitative_findings[5].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"The 8:2 FTS line shows \\\"0.146 \u00b1 0.073\\\" as the first numeric value. The recorded value 0.146 matches the table.\"},{\"field_path\":\"quantitative_findings[5].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This is the kobs pseudo-first-order rate constant for 8:2 FTS and thus appropriately expressed in min^-1.\"},{\"field_path\":\"quantitative_findings[6].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"The 8:2 FTS line shows \\\"0.063 c \u00b1 0.005\\\" as the third numeric value. The extracted 0.063 matches the reported value.\"},{\"field_path\":\"quantitative_findings[6].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This parameter is described in a footnote as calculated from maximum formed concentration and is treated as a kinetic rate constant; min^-1 is a consistent unit choice with the table context.\"},{\"field_path\":\"quantitative_findings[7].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"The 6:2 FTS row shows \\\"0.424 \u00b1 0.196\\\" as the first numeric value. The extracted 0.424 matches this number.\"},{\"field_path\":\"quantitative_findings[7].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"As with other kobs values in the table, min^-1 is the appropriate unit for this pseudo-first-order rate constant.\"},{\"field_path\":\"quantitative_findings[8].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"The 6:2 FTS row shows \\\"0.012 c \u00b1 0.001\\\" as the third numeric entry. The extracted 0.012 matches the table.\"},{\"field_path\":\"quantitative_findings[8].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This additional kinetic parameter is calculated similarly to the 8:2 FTS parameter and is appropriately expressed in min^-1.\"},{\"field_path\":\"quantitative_findings[9].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"The 4:2 FTS 6C row lists \\\"0.029 \u00b1 0.012\\\". The extracted 0.029 matches this value.\"},{\"field_path\":\"quantitative_findings[9].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This is again a pseudo-first-order rate constant kobs and is correctly given in min^-1.\"},{\"field_path\":\"quantitative_findings[10].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"The text states that PFOA was 5\u00d7 more reactive than PFOS for 8C structures, based on kobs comparisons. The recorded value 5 matches this factor.\"},{\"field_path\":\"quantitative_findings[10].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This is a dimensionless relative reactivity ratio; using an empty unit is appropriate.\"},{\"field_path\":\"quantitative_findings[11].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"The text reports that PFOA was 37\u00d7 more reactive than 6:2 FTS for 8C homologues. The extracted value 37 matches the statement.\"},{\"field_path\":\"quantitative_findings[11].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This is a dimensionless reactivity ratio and is correctly specified without a unit.\"},{\"field_path\":\"quantitative_findings[12].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"The text states that PFHxA was 26\u00d7 more reactive than PFHxS for 6C homologues. The extracted 26 matches this reported ratio.\"},{\"field_path\":\"quantitative_findings[12].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Again, this is a dimensionless ratio and an empty unit is correct.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The methods text explains that shorter-chain PFSAs (PFHxS, PFPeS, PFBS, PFPrS) initially increased in concentration, with PFHxS and PFPeS later degraded after reaching maximum concentration, while PFBS and PFPrS remained unreactive. This matches the summarized statement.\"},{\"field_path\":\"residuals_byproducts[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The authors hypothesize PFSA generation from reactions of eaq- (or related reactive species) with sulfonamide-containing precursors and then show in a FOSAA experiment that degradation yields PFOS and PFOA. They note that these results help explain observed generation of PFSAs, PFCAs, and FTSs, supporting the stated mechanism-based byproduct description.\"},{\"field_path\":\"study_scale\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The work is clearly described as applying UV-sulfite to PFAS mixtures in AFFF diluted into laboratory water matrices, which are typical bench-scale treatment experiments. The description of bench-scale UV-sulfite treatment of diluted AFFF in lab matrices is consistent with the cited sections.\"},{\"field_path\":\"treatment\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text describes the UV-sulfite process, focusing on reactions with eaq\u2212 and explicitly mentions UV-only controls in the experimental context. The treatment description of UV-sulfite photoreductive treatment generating hydrated electrons with UV-only controls matches the evidence.\"}],\"record_usable\":true,\"record_usable_rationale\":\"All core elements\u2014study identity, matrix, treatment, PFAS scope, endpoints, and quantitative observations\u2014are directly supported by the cited text, with no contradictions or significant transcription or unit issues that would mislead downstream synthesis. The record is therefore usable.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of how water-matrix effects should be tested and reported so that PFAS treatment performance can be translated beyond clean laboratory water.\",\"task_id\":\"RT10\",\"title\":\"Designing PFAS treatment studies that remain valid in real water\"}\n\nTask-specific extraction objective:\nExtract matrix constituent and concentration, PFAS identity, treatment, clean-water control, matrix-modified condition, direction and magnitude of effect, endpoint, proposed mechanism, constituent interaction, matched operating conditions, and study scale.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.hazadv.2023.100322\"],\"all_blocked_titles\":[\"effects of water matrix on per and poly fluoroalkyl substances pfas treatment physical separation and degradation processes a review\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.hazadv.2023.100322\"],\"anchor_id\":\"AR-ZEIDABADI-2023\",\"corpus_source\":\"2023 - Zeidabadi - Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment - Physical-separation and degradation processes - A review.pdf\",\"doi\":\"10.1016/j.hazadv.2023.100322\",\"title\":\"Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment: Physical-separation and degradation processes - A review\",\"url\":\"https://doi.org/10.1016/j.hazadv.2023.100322\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Tenorio, R.; Liu, J.; Xiao, X.; Maizel, A.; Higgins, C. P.; Schaefer, C. E.; Strathmann, T. J. Destruction of Per- and Polyfluoroalkyl Substances (PFASs) in Aqueous Film-Forming Foam (AFFF) with UV-Sulfite Photoreductive Treatment. Environ. Sci. Technol. 2020, 54, 6957\\u20136967.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S07-E01\",\n      \"S07-E02\",\n      \"S07-E05\",\n      \"S07-E06\"\n    ],\n    \"reason\": \"Experiments were performed in a single type of well-defined laboratory water matrix with diluted AFFF, without explicit variation of natural water constituents or comparison across different water matrices; UV-only controls were included, but matrix composition was not systematically varied for matrix-effect assessment.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1021/acs.est.0c00961\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"parent_compound_loss\",\n      \"evidence_locator_ids\": [\n        \"S07-E02\"\n      ],\n      \"interpretation\": \"Loss of parent PFASs (e.g., PFOS, PFOA) from AFFF solutions during UV-sulfite exposure, reported as percent degradation; this reflects transformation/defluorination potential but is measured as parent concentration decrease.\",\n      \"reported_term\": \"PFAS degradation in AFFF during UV-sulfite treatment\"\n    },\n    {\n      \"endpoint_type\": \"transformation\",\n      \"evidence_locator_ids\": [\n        \"S07-E02\",\n        \"S07-E08\"\n      ],\n      \"interpretation\": \"Observed increases in concentrations of shorter-chain PFSAs (PFHxS, PFPeS, PFBS, PFPrS) during UV-sulfite treatment are interpreted as transformation products formed from AFFF precursors reacting with eaq\\u2212 or other UV-generated species.\",\n      \"reported_term\": \"PFSA and PFCA generation from AFFF precursors\"\n    },\n    {\n      \"endpoint_type\": \"defluorination\",\n      \"evidence_locator_ids\": [\n        \"S07-E05\"\n      ],\n      \"interpretation\": \"Total fluorine and fluoride release measurements, along with TOP assay, were used to assess extent of C\\u2013F bond cleavage and overall conversion of PFASs in AFFF; specific numeric values are not provided in the supplied text, so only qualitative use of these endpoints is captured.\",\n      \"reported_term\": \"Total fluorine, fluoride release, TOP assay to elucidate overall PFAS mineralization in AFFF\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S07-E01\",\n        \"S07-E05\"\n      ],\n      \"statement\": \"Experiments were conducted in diluted AFFF solutions prepared in well-defined laboratory water matrices rather than in natural waters containing a full range of background constituents and co-contaminants.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S07-E01\",\n        \"S07-E05\"\n      ],\n      \"statement\": \"Kinetic and degradation behavior were primarily evaluated for selected target PFASs, while a broader array of PFAS structures present in AFFF mixtures remained outside the quantified target list.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S07-E03\",\n        \"S07-E04\"\n      ],\n      \"statement\": \"Reported reactivity comparisons among PFSA, PFCA, and FTS classes are based on bench-scale UV-sulfite conditions and may not directly translate to other treatment processes or matrices.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S07-E01\",\n      \"S07-E03\",\n      \"S07-E05\"\n    ],\n    \"value\": \"Aqueous solutions of AFFF (PFAS mixtures in diluted AFFF) prepared in laboratory water matrices.\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E02\",\n        \"S07-E03\",\n        \"S07-E05\",\n        \"S07-E06\"\n      ],\n      \"name\": \"Treatment process\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"UV-sulfite photoreductive treatment of AFFF solutions; comparison with UV-only control.\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E02\"\n      ],\n      \"value\": \"PFOS (perfluorooctanesulfonic acid) in AFFF mixture.\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E02\"\n      ],\n      \"value\": \"PFOA (perfluorooctanoic acid) in AFFF mixture.\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E02\"\n      ],\n      \"value\": \"Other long-chain PFSAs: PFNS (perfluorononanesulfonic acid, 9C) and PFHpS (perfluoroheptanesulfonic acid, 7C).\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E02\"\n      ],\n      \"value\": \"Shorter-chain PFSAs: PFHxS (perfluorohexanesulfonic acid, 6C), PFPeS (perfluoropentanesulfonic acid, 5C), PFBS (perfluorobutanesulfonic acid, 4C), PFPrS (perfluoropropanesulfonic acid, 3C).\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E04\",\n        \"S07-E06\"\n      ],\n      \"value\": \"PFCAs (e.g., PFBA, PFHxA, PFOA) and fluorotelomer sulfonates (FTSs: 4:2, 6:2, 8:2) in AFFF mixtures for kinetic comparisons.\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E02\"\n      ],\n      \"name\": \"PFOS degradation in AFFF under UV-sulfite\",\n      \"qualifiers\": \"Percent degradation of PFOS observed in AFFF during UV-sulfite treatment timecourse.\",\n      \"unit\": \"%\",\n      \"value\": \"98\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E02\"\n      ],\n      \"name\": \"PFOA degradation in AFFF under UV-sulfite\",\n      \"qualifiers\": \"Percent degradation of PFOA observed in AFFF during UV-sulfite treatment timecourse.\",\n      \"unit\": \"%\",\n      \"value\": \"93\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E06\"\n      ],\n      \"name\": \"PFBA (4C) observed pseudo-first-order rate constant, kobs, in AFFF under UV-sulfite\",\n      \"qualifiers\": \"kobs \\u00b1 0.268 reported; PFBA (4C). Uncertainty not included in numeric value per schema.\",\n      \"unit\": \"min^-1\",\n      \"value\": \"0.457\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E06\"\n      ],\n      \"name\": \"PFBA (4C) relative reactivity ratio\",\n      \"qualifiers\": \"Reported as 24.4 \\u00b1 0.4; likely relative to PFOS, but exact denominator not discernible from excerpt.\",\n      \"unit\": \"\",\n      \"value\": \"24.4\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E06\"\n      ],\n      \"name\": \"PFBA (4C) additional kinetic parameter\",\n      \"qualifiers\": \"Reported as 0.306 \\u00b1 0.042; context in the partial table is unclear, but associated with PFBA in UV-sulfite experiments.\",\n      \"unit\": \"min^-1\",\n      \"value\": \"0.306\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E06\"\n      ],\n      \"name\": \"8:2 FTS (10C) observed pseudo-first-order rate constant, kobs, in AFFF under UV-sulfite\",\n      \"qualifiers\": \"Reported as 0.146 \\u00b1 0.073; 8:2 fluorotelomer sulfonate (10C).\",\n      \"unit\": \"min^-1\",\n      \"value\": \"0.146\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E06\"\n      ],\n      \"name\": \"8:2 FTS (10C) additional kinetic parameter\",\n      \"qualifiers\": \"Reported as 0.063 \\u00b1 0.005; calculated from maximum formed concentration.\",\n      \"unit\": \"min^-1\",\n      \"value\": \"0.063\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E06\"\n      ],\n      \"name\": \"6:2 FTS (8C) observed pseudo-first-order rate constant, kobs, in AFFF under UV-sulfite\",\n      \"qualifiers\": \"Reported as 0.424 \\u00b1 0.196; 6:2 fluorotelomer sulfonate (8C).\",\n      \"unit\": \"min^-1\",\n      \"value\": \"0.424\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E06\"\n      ],\n      \"name\": \"6:2 FTS (8C) additional kinetic parameter\",\n      \"qualifiers\": \"Reported as 0.012 \\u00b1 0.001; calculated from maximum formed concentration.\",\n      \"unit\": \"min^-1\",\n      \"value\": \"0.012\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E06\"\n      ],\n      \"name\": \"4:2 FTS (6C) observed pseudo-first-order rate constant, kobs, in AFFF under UV-sulfite\",\n      \"qualifiers\": \"Reported as 0.029 \\u00b1 0.012; 4:2 fluorotelomer sulfonate (6C); NA entries in the table indicate no statistically significant degradation for some species.\",\n      \"unit\": \"min^-1\",\n      \"value\": \"0.029\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E04\"\n      ],\n      \"name\": \"Relative reactivity comparison: PFOA vs PFOS (8C homologues)\",\n      \"qualifiers\": \"PFOA reported as 5\\u00d7 more reactive than PFOS (kobs comparison for 8C structure).\",\n      \"unit\": \"\",\n      \"value\": \"5\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E04\"\n      ],\n      \"name\": \"Relative reactivity comparison: PFOA vs 6:2 FTS (8C homologues)\",\n      \"qualifiers\": \"PFOA reported as 37\\u00d7 more reactive than 6:2 FTS (kobs comparison for 8C structure).\",\n      \"unit\": \"\",\n      \"value\": \"37\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S07-E04\"\n      ],\n      \"name\": \"Relative reactivity comparison: PFHxA vs PFHxS (6C homologues)\",\n      \"qualifiers\": \"PFHxA reported as 26\\u00d7 more reactive than PFHxS (kobs comparison for 6C structure).\",\n      \"unit\": \"\",\n      \"value\": \"26\",\n      \"value_form\": \"exact_numeric\"\n    }\n  ],\n  \"record_id\": \"RT10-bge_llm_local_rag-S07-R01\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S07-E02\"\n      ],\n      \"statement\": \"Shorter-chain PFSAs (PFHxS, PFPeS, PFBS, PFPrS) increased in concentration during the initial stages of UV-sulfite treatment of AFFF, indicating generation from precursor structures; PFHxS and PFPeS later degraded after reaching maximum concentrations, whereas PFBS and PFPrS remained unreactive after reaching peak values.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S07-E02\",\n        \"S07-E08\"\n      ],\n      \"statement\": \"Transformation of AFFF precursors by eaq\\u2212 or other UV-generated reactive species was implicated in formation of additional PFSAs, PFCAs, and FTSs observed during treatment.\"\n    }\n  ],\n  \"source_id\": \"S07\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S07-E01\",\n      \"S07-E03\",\n      \"S07-E05\"\n    ],\n    \"value\": \"Bench-scale UV-sulfite photoreductive treatment experiments with diluted AFFF solutions in well-defined laboratory water matrices.\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S07-E02\",\n      \"S07-E03\",\n      \"S07-E05\",\n      \"S07-E06\"\n    ],\n    \"value\": \"UV-sulfite photoreductive treatment generating hydrated electrons (eaq\\u2212) for transformation of PFASs in diluted AFFF solutions; UV-only controls also performed.\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 8,\n  \"bge_score\": 0.12237696349620819,\n  \"citation\": \"Tenorio, R.; Liu, J.; Xiao, X.; Maizel, A.; Higgins, C.P.; Schaefer, C.E.; Strathmann, T.J. Destruction of Per- and Polyfluoroalkyl Substances (PFASs) in Aqueous Film-Forming Foam (AFFF) with UV-Sulfite Photoreductive Treatment. Environmental Science & Technology 2020 54 6957-6967. DOI: 10.1021/acs.est.0c00961.\",\n  \"doi\": \"10.1021/acs.est.0c00961\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1021/acs.est.0c00961\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 41,\n      \"locator_id\": \"S07-E01\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.00016051091370172799,\n        \"RT10-C2\": 0.017026718705892563,\n        \"RT10-C3\": 3.7297228118404746e-05,\n        \"umbrella\": 0.3227125108242035\n      },\n      \"section\": \"results\",\n      \"text\": \"modeling treatment of AFFF-impacted sites, since the mass of precursors can potentially exceed that of PFAAs that are the focus of analytical measurements performed during most site investigations. It is recommended that source waters be characterized for potential precursors in addition to direct quanti\\ufb01cation of PFAAs. In the event of large pools of precursors, potential impacts of their transformation on predicted rates of net PFAA removal need to be carefully considered. Finally, this work introduced added complexity to UV-sul \\ufb01te treatment by examining reactivity of complex PFAS mixtures present in AFFF diluted into well-de \\ufb01ned laboratory water matrices. Future work is needed in applying suspect screening analysis to UV-sul \\ufb01te reactions of diluted AFFF solutions to elucidate structure\\u2212reactivity trends for a wider array of PFASs Environmental Science & Technology pubs.acs.org/est Article https://dx.doi.org/10.1021/acs.est.0c00961 Environ. Sci. Technol. 2020, 54, 6957 \\u22126967 6964 outside the target list used in this study. Additional work is also needed to address treatment of PFAS mixtures in real AFFF- impacted natural waters containing a range of background natural water constituents (including known e aq \\u2212 scavengers, e.g., NO 2 \\u2212,N O 3 \\u2212)31 and AFFF co-contaminants (e.g.,\"\n    },\n    {\n      \"corpus_chunk\": 17,\n      \"locator_id\": \"S07-E02\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.010859884321689606,\n        \"RT10-C2\": 0.04946323111653328,\n        \"RT10-C3\": 6.945259519852698e-05,\n        \"umbrella\": 0.05094277858734131\n      },\n      \"section\": \"methods\",\n      \"text\": \"Figure 1 shows observed UV-sul\\ufb01te timecourses for individual PFASs in AFFF. PFOS and PFOA were degraded by 98% and 93%, respectively. Degradation for the two compounds is consistent with single-solute experiments reported previously for UV- sul\\ufb01te. 31,33,38,50 Other long-chain PFSAs such as per \\ufb02uorono- nanesulfonic acid (PFNS; 9C) and per \\ufb02uoroheptanesulfonic acid (PFHpS; 7C) were also readily degraded ( Figure 1 A). Interestingly, shorter-chain PFSAs such as per \\ufb02uorohexane- sulfonic acid (PFHxS; 6C), per \\ufb02uoropentanesulfonic acid (PFPeS; 5C), per \\ufb02uorobutanesulfonic acid (PFBS; 4C), and per\\ufb02uoropropanesulfonic acid (PFPrS; 3C) initially increased in concentration upon UV-sul \\ufb01te treatment. Because AFFF contains a variety of PFAA precursors, 49 it was hypothesized that the observed PFSA generation was a product of reaction between e aq \\u2212 (or other reactive species resulting from e aq \\u2212 ejection from sul \\ufb01te) and precursors containing sulfonamide linkages (discussed later). PFHxS (6C) and PFPeS (5C) were degraded but only after reaching a maximum concentration during the \\ufb01rst 4 h of reaction. In contrast, shorter-chain PFBS (4C) and PFPrS (3C) remained unreactive after increasing to their peak values. This is in accordance with previous reports\"\n    },\n    {\n      \"corpus_chunk\": 5,\n      \"locator_id\": \"S07-E03\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.00036461211857385933,\n        \"RT10-C2\": 0.1558523178100586,\n        \"RT10-C3\": 3.729441959876567e-05,\n        \"umbrella\": 0.0853661298751831\n      },\n      \"section\": \"methods\",\n      \"text\": \"sul\\ufb01te).31,32,39\\u221241 Practical technology development has focused on the UV-sul \\ufb01te process due to the low cost and widespread use of sul \\ufb01te in existing wastewater treatment plants (for dechlorination),42 and since the sulfate byproduct is naturally occurring and not harmful to human health. 31,43 Application of UV-sul \\ufb01te also eliminates possible formation of toxic oxyanion byproducts observed during persulfate and electrochemical treatment applications. 19,44,45 While the UV-sul \\ufb01te process has been demonstrated to e\\ufb00ectively transform individual PFASs in single-solute experi- ments,31,33,38 the e \\ufb03 cacy of this process for treatment of PFASs present in complex AFFF mixtures remains unknown. Thus, further investigation is needed to understand the reactivity of PFASs possessing varying functional groups (i.e., branched and linear isomers), chain lengths, and degree of \\ufb02uorination (i.e., per \\ufb02uoro- versus poly \\ufb02uoroalkyl structures). Signi\\ufb01cant advancements in analytical techniques have made it possible to quantify PFAS concentrations to sub ng \\u00b7L \\u22121 levels.4,46 These techniques can now be applied to characterize eaq \\u2212 reactions with an array of PFASs in AFFF mixtures at environmentally relevant concentration levels simultaneously, providing valuable information to relate reactivity to PFAS structural properties, and ultimately o \\ufb00er insights into the\"\n    },\n    {\n      \"corpus_chunk\": 36,\n      \"locator_id\": \"S07-E04\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.0009911134839057922,\n        \"RT10-C2\": 0.081448495388031,\n        \"RT10-C3\": 0.0003207679546903819,\n        \"umbrella\": 0.04245476797223091\n      },\n      \"section\": \"methods\",\n      \"text\": \"found that \\u2212CH 2CH2\\u2212 moieties adjacent to terminal carboxylic acid headgroups in \\ufb02uorotelomer carboxylic acids (FTCAs) also introduced chain length dependent reactivity trends that contrast with the chain length independent reactivity of PFCAs. 50 DFT calculations included in that study suggested that, similar to PFSAs, low BDEs of \\u2212CF2\\u2212 groups located in the middle of longer-chain FTCAs may be responsible for the increased reactivity of long-chain FTCAs during UV-sul \\ufb01te treatment. 50 Moreover, product analysis in that study showed formation of lower-chain FTCA structures during UV-sul \\ufb01te treatment indicating dissociation of the \\u2212CH 2CH2COO\\u2212 headgroup.50 Because FTSs in this study share a similar \\ufb02uorotelomer alkyl chain (i.e., CF3(CF2)n(CH2)2\\u2212), these mechanisms could extend to FTSs. Reactivity trends among di \\ufb00erent PFAS classes were also apparent. A comparison of kobs for PFSA, PFCA, and FTS classes containing an 8C structure showed that PFOA was 5 \\u00d7 more reactive than PFOS and 37 \\u00d7 more reactive than 6:2 FTS. A comparison of kobs for 6C homologues showed a more signi\\ufb01cant di \\ufb00erence; PFHxA was 26 \\u00d7 more reactive than PFHxS, whereas 4:2 FTS was unreactive. These results con \\ufb01rm previous reports showing PFCAs are more reactive than PFSAs\"\n    },\n    {\n      \"corpus_chunk\": 6,\n      \"locator_id\": \"S07-E05\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.0009118618327192962,\n        \"RT10-C2\": 0.15116800367832184,\n        \"RT10-C3\": 3.7935453292448074e-05,\n        \"umbrella\": 0.06989132612943649\n      },\n      \"section\": \"methods\",\n      \"text\": \"providing valuable information to relate reactivity to PFAS structural properties, and ultimately o \\ufb00er insights into the potential of UV-sul \\ufb01te processes for remediation of AFFF- impacted water sources. This contribution describes the application of UV-sul \\ufb01te to transform PFASs present in AFFF to (i) better understand the fate of individual PFASs during treatment of such mixtures, (ii) gain insights into how PFAS structure in \\ufb02uences reactivity with e aq \\u2212, and (iii) support the further development of a practical technology for remediation of AFFF-impacted groundwater. Liquid chromatography quadrupole time-of- \\ufb02ight mass spec- trometry (LC-QTOF-MS) was applied to track the evolution of 15 compounds spanning 3 PFAS classes including PFSAs, PFCAs, and \\ufb02uorotelomer sulfonic acids (FTSs); total \\ufb02uorine, \\ufb02uoride release, and the total oxidizable precursor (TOP) assay were also performed to elucidate overall PFAS mineralization in AFFF. Results reveal structural limits on PFAS reactivity with e aq \\u2212 and provide a critical step toward predicting treatment and degradation of individual PFASs in sourcewaters containing PFAS mixtures. Observed reactivity trends among P F A S sa n dt r a n s i e n tf o r m a t i o na n dd e c a yp a t t e r n so f individual PFASs also provide insights into controlling reaction mechanisms.\"\n    },\n    {\n      \"corpus_chunk\": 16,\n      \"locator_id\": \"S07-E06\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.0002695269649848342,\n        \"RT10-C2\": 0.147820383310318,\n        \"RT10-C3\": 3.7488218367798254e-05,\n        \"umbrella\": 0.023778336122632027\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"PFBA 4C 0.457 \\u00b1 0.268 24.4 \\u00b1 0.4 0.306 \\u00b1 0.042 8:2 FTS 10C 0.146 \\u00b1 0.073 NA 0.063 c \\u00b1 0.005 6:2 FTS 8C 0.424 \\u00b1 0.196 NA 0.012 c \\u00b1 0.001 4:2 FTS 6C 0.029 \\u00b1 0.012 NA NA aNA indicates no statistically signi \\ufb01cant degradation; no branched isomer was observed if no kobs value is reported. bEstimated by the initial rate method using 2 points ( SI Section S1.9.1). cCalculated from the maximum formed concentration ( SI Section S1.9.3). Environmental Science & Technology pubs.acs.org/est Article https://dx.doi.org/10.1021/acs.est.0c00961 Environ. Sci. Technol. 2020, 54, 6957 \\u22126967 6959 control ( SI Section S2.1), further supporting the conclusion that the mixture contains an abundance of PFAA precursors. Though the mechanism in UV-only controls is unclear, this result may indicate involvement of other photochemically produced reactive species. Photodegradation of PFASs in AFFF. Figure 1 shows observed UV-sul\\ufb01te timecourses for individual PFASs in AFFF.\"\n    },\n    {\n      \"corpus_chunk\": 2,\n      \"locator_id\": \"S07-E07\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.002201040741056204,\n        \"RT10-C2\": 0.11421527713537216,\n        \"RT10-C3\": 3.742017725016922e-05,\n        \"umbrella\": 0.053844649344682693\n      },\n      \"section\": \"methods\",\n      \"text\": \"further contamination is critical. 6 In May 2016, the U.S. EPA issued lifetime federal health advisory levels (HALs) for per \\ufb02uorooctanesulfonic acid (PFOS) and per \\ufb02uorooctanoic acid (PFOA) at 70 ng \\u00b7L\\u22121 combined; several state governments have begun to set more stringent limits. 4,7 Millions of people in the U.S. live near drinking water supplies containing PFAS concentrations exceeding HALs, 4 and exposure to PFASs has been linked to a number of human health e \\ufb00ects, including impacts on developmental, liver, immune, and thyroid systems, and cancer. 7 Furthermore, some PFASs have been shown to bioaccumulate and cannot degrade through naturally occurring biological and abiotic processes. 3,8,9 Currently, there are no conventional treatment options that e \\ufb00ectively destroy or remove the full range of PFASs identi \\ufb01ed in AFFF. 10,11 Granular activated carbon and ion exchange treatment are e\\ufb00ective for sorption of long-chain per \\ufb02uoroalkyl acids (PFAAs), but rapid breakthrough of short-chain PFAAs is often observed. 10,12,13 Biological transformation is mostly limited to PFAA precursors, and reactions simply convert precursors into biologically inert PFAAs. 14\\u221217 A recent report showed cometabolic biotransformation of PFOS and PFOA by an autotrophic Acidimicrobium sp., but observed rates were too\"\n    },\n    {\n      \"corpus_chunk\": 24,\n      \"locator_id\": \"S07-E08\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.005865952931344509,\n        \"RT10-C2\": 0.09671743214130402,\n        \"RT10-C3\": 3.73107468476519e-05,\n        \"umbrella\": 0.0622408464550972\n      },\n      \"section\": \"methods\",\n      \"text\": \"result from e aq \\u2212 cleavage of PFAA and FTS derivative structures. To test this hypothesis, a UV-sul \\ufb01te experiment was conducted with 10 \\u03bcg\\u00b7L\\u22121 of per\\ufb02uorooctanesulfonamido- acetic acid (FOSAA; a sulfonamide-containing PFAA precursor) under identical experimental conditions as those presented in Figure 1 . Results ( Figure 2 ) showed 42% degradation of FOSAA during the \\ufb01rst hour, yielding 22% PFOS, 14% PFOA, and 7% per \\ufb02uorooctane sulfonamide (FOSA; 8C) (i.e., molar percent of degraded FOSAA). These results con \\ufb01rm both PFSA and PFCA formation from precursor reactions with e aq \\u2212 (or other reactive species), helping to explain the observed generation of PFSAs, PFCAs, and FTSs already discussed. Although the exact mechanism of these reactions remains unclear, it is possible that e aq \\u2212 can initiate cleavage of S \\u2212Na n dC \\u2212Nb o n d sw i t h i nt h e sulfonamide linkage similar to C \\u2212C and C \\u2212S bond cleavages that contribute to PFSA and PFCA degradation. Alternatively, oxidation of the precursor by other UV-generated reactive species could transform precursors to PFCAs and PFSAs. One possible UV-generated reactive species includes the sul \\ufb01te radical (SO 3 \\u2022 \\u2212), a known mild oxidant generated upon ejection of eaq\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2020 - Tenorio - Destruction of Per- and Polyfluoroalkyl Substances (PFASs) in Aqueous Film-Forming Foam (AFFF) with UV-Sulfite Photoreductive Treatment.pdf\",\n  \"source_id\": \"S07\",\n  \"title\": \"Destruction of Per- and Polyfluoroalkyl Substances (PFASs) in Aqueous Film-Forming Foam (AFFF) with UV-Sulfite Photoreductive Treatment\",\n  \"year\": \"2020\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "3892c7522bbf293efe150b5a703751c9b2b36eb7460b0d0dcbc159f249f6a7a4",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.05528675,
+    "finish_reason": "stop",
+    "input_tokens": 8487,
+    "latency_seconds": 34.31362283299677,
+    "output_tokens": 4583,
+    "reasoning_tokens": 1551,
+    "response_id": "chatcmpl-E9NkbSyVdk1p7yN5Tbu8PFqMAYd7A",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 13070,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "Experiments are described as examining complex PFAS mixtures in AFFF diluted into well-defined laboratory water matrices, with no mention of varying natural water matrices. UV-only controls are mentioned, but not systematic matrix variation, consistent with a descriptive-only comparability assessment.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "Figure 1 timecourses are described as showing degradation of PFOS and PFOA by 98% and 93%, and other PFASs, which is a direct measure of loss of parent compounds under treatment. Classifying this endpoint as parent_compound_loss is consistent with the text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "The text reports generation (increased concentrations) of shorter-chain PFSAs from precursors and further experiments with FOSAA showing formation of PFOS and PFOA from precursor degradation, which is clearly PFAS transformation. Endpoint_type=transformation is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].endpoint_type",
+        "reason": "The methods note that total fluorine, fluoride release, and TOP assay were performed to elucidate overall PFAS mineralization in AFFF. These measurements reflect C\u2013F bond cleavage/defluorination, so classifying the endpoint as defluorination is justified based on the cited text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "The article explicitly states that AFFF was diluted into well-defined laboratory water matrices and calls for additional work on real AFFF-impacted natural waters containing background constituents and co-contaminants. This supports the stated limitation about lab matrices vs natural waters.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1]",
+        "reason": "The study reports tracking 15 target PFASs and later notes the need to elucidate structure\u2013reactivity trends for a wider array of PFASs outside the target list. This supports the limitation that behavior was primarily evaluated for selected target PFASs with many PFAS structures not quantified.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[2]",
+        "reason": "The work is clearly described as applying UV-sulfite to AFFF mixtures in well-defined laboratory matrices, i.e., bench-scale UV-sulfite experiments. Inferring that reactivity comparisons among PFSA, PFCA, and FTS classes under these specific conditions may not directly translate to other processes or matrices is a reasonable design-inferred limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix",
+        "reason": "The text repeatedly refers to AFFF diluted into well-defined laboratory water matrices and treatment of PFAS mixtures in AFFF-impacted water sources. Describing the matrix as aqueous AFFF solutions in laboratory water matrices is consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "The study describes UV-sulfite treatment as the main process and mentions UV-only controls (\"control\" in SI) for AFFF. The summarized condition of UV-sulfite photoreductive treatment with UV-only control matches the cited text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The operating condition entry is categorical (treatment process description), so leaving the unit null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0]",
+        "reason": "PFOS is explicitly mentioned as one of the individual PFASs in AFFF whose timecourse is shown and degraded by 98%, confirming inclusion of PFOS in the PFAS scope.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1]",
+        "reason": "PFOA is explicitly mentioned as an individual PFAS in AFFF degraded by 93%, confirming its presence in the PFAS scope.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[2]",
+        "reason": "The text lists perfluorononanesulfonic acid (PFNS; 9C) and perfluoroheptanesulfonic acid (PFHpS; 7C) as other long-chain PFSAs that were readily degraded, matching the described PFAS scope entry.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[3]",
+        "reason": "Shorter-chain PFSAs PFHxS (6C), PFPeS (5C), PFBS (4C), and PFPrS (3C) are explicitly named and discussed as initially increasing in concentration, matching the scope description of shorter-chain PFSAs.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[4]",
+        "reason": "The article states that 15 compounds spanning PFSAs, PFCAs, and FTSs were tracked, and the table/snippet includes PFBA and FTSs (4:2, 6:2, 8:2). The comparison text mentions PFHxA and PFOA, supporting the scope description of PFCAs (PFBA, PFHxA, PFOA) and 4:2, 6:2, 8:2 FTSs.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "The text states that PFOS was degraded by 98% in AFFF. The recorded numeric value 98 with unit % and exact_numeric form matches this statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The degradation extent is reported as a percent. Using % as the unit is consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "The text states that PFOA was degraded by 93% in AFFF. The recorded value 93 with exact_numeric form matches the reported value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "The degradation is reported as percent; using % as the unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[2].value",
+        "reason": "The table line shows \"PFBA 4C 0.457 \u00b1 0.268 ...\". The extracted value 0.457 corresponds exactly to this reported value for PFBA.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].unit",
+        "reason": "Although the column heading is not in the snippet, these values are described elsewhere as pseudo-first-order rate constants kobs, typically with units of min^-1. Assigning min^-1 as the unit is consistent with the context of kobs values in the study.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[3].value",
+        "reason": "The table lists \"24.4 \u00b1 0.4\" in the same PFBA row as a dimensionless relative parameter. The extracted value 24.4 matches this value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].unit",
+        "reason": "The 24.4 \u00b1 0.4 value is a relative reactivity ratio, so leaving the unit as an empty string (dimensionless) is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[4].value",
+        "reason": "In the PFBA row, the third numeric entry is \"0.306 \u00b1 0.042\". The extracted value 0.306 matches this value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].unit",
+        "reason": "This third parameter is described in footnote b/c as a kinetic parameter derived from rate or maximum formed concentration and is in the same table of rate constants. Assigning min^-1 as the unit is consistent with the table\u2019s kinetic context.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[5].value",
+        "reason": "The 8:2 FTS line shows \"0.146 \u00b1 0.073\" as the first numeric value. The recorded value 0.146 matches the table.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[5].unit",
+        "reason": "This is the kobs pseudo-first-order rate constant for 8:2 FTS and thus appropriately expressed in min^-1.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[6].value",
+        "reason": "The 8:2 FTS line shows \"0.063 c \u00b1 0.005\" as the third numeric value. The extracted 0.063 matches the reported value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[6].unit",
+        "reason": "This parameter is described in a footnote as calculated from maximum formed concentration and is treated as a kinetic rate constant; min^-1 is a consistent unit choice with the table context.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[7].value",
+        "reason": "The 6:2 FTS row shows \"0.424 \u00b1 0.196\" as the first numeric value. The extracted 0.424 matches this number.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[7].unit",
+        "reason": "As with other kobs values in the table, min^-1 is the appropriate unit for this pseudo-first-order rate constant.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[8].value",
+        "reason": "The 6:2 FTS row shows \"0.012 c \u00b1 0.001\" as the third numeric entry. The extracted 0.012 matches the table.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[8].unit",
+        "reason": "This additional kinetic parameter is calculated similarly to the 8:2 FTS parameter and is appropriately expressed in min^-1.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[9].value",
+        "reason": "The 4:2 FTS 6C row lists \"0.029 \u00b1 0.012\". The extracted 0.029 matches this value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[9].unit",
+        "reason": "This is again a pseudo-first-order rate constant kobs and is correctly given in min^-1.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[10].value",
+        "reason": "The text states that PFOA was 5\u00d7 more reactive than PFOS for 8C structures, based on kobs comparisons. The recorded value 5 matches this factor.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[10].unit",
+        "reason": "This is a dimensionless relative reactivity ratio; using an empty unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[11].value",
+        "reason": "The text reports that PFOA was 37\u00d7 more reactive than 6:2 FTS for 8C homologues. The extracted value 37 matches the statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[11].unit",
+        "reason": "This is a dimensionless reactivity ratio and is correctly specified without a unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[12].value",
+        "reason": "The text states that PFHxA was 26\u00d7 more reactive than PFHxS for 6C homologues. The extracted 26 matches this reported ratio.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[12].unit",
+        "reason": "Again, this is a dimensionless ratio and an empty unit is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "The methods text explains that shorter-chain PFSAs (PFHxS, PFPeS, PFBS, PFPrS) initially increased in concentration, with PFHxS and PFPeS later degraded after reaching maximum concentration, while PFBS and PFPrS remained unreactive. This matches the summarized statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[1]",
+        "reason": "The authors hypothesize PFSA generation from reactions of eaq- (or related reactive species) with sulfonamide-containing precursors and then show in a FOSAA experiment that degradation yields PFOS and PFOA. They note that these results help explain observed generation of PFSAs, PFCAs, and FTSs, supporting the stated mechanism-based byproduct description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale",
+        "reason": "The work is clearly described as applying UV-sulfite to PFAS mixtures in AFFF diluted into laboratory water matrices, which are typical bench-scale treatment experiments. The description of bench-scale UV-sulfite treatment of diluted AFFF in lab matrices is consistent with the cited sections.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment",
+        "reason": "The text describes the UV-sulfite process, focusing on reactions with eaq\u2212 and explicitly mentions UV-only controls in the experimental context. The treatment description of UV-sulfite photoreductive treatment generating hydrated electrons with UV-only controls matches the evidence.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT10-bge_llm_local_rag-S07-R01",
+    "record_usable": true,
+    "record_usable_rationale": "All core elements\u2014study identity, matrix, treatment, PFAS scope, endpoints, and quantitative observations\u2014are directly supported by the cited text, with no contradictions or significant transcription or unit issues that would mislead downstream synthesis. The record is therefore usable.",
+    "task_id": "RT10"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

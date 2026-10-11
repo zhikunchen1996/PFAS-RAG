@@ -1,0 +1,222 @@
+{
+  "batch_id": "test40-rereview1-batch-08",
+  "batch_sha256": "cbae48b69b40067975ce130de5d4879ecdef51775270e0d73629e0d67d850ea5",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-rereview1-batch-08",
+    "reviews": [
+      {
+        "question_id": "NQ25",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "The systemic exact-span misattribution problem flagged in the prior review (reused NQ25_MMG002/NQ25_MMG003 spans supporting unrelated content) has been resolved for the surviving groups by deleting the unsupported atomic claims (A01, A03, A04, A07, A08, A11, A12, A14) and removing the claim groups (former G02, G06) that depended on them, rather than by re-quoting spans. This is an acceptable repair path.",
+          "However, the reference_answer prose was not correspondingly cleaned up and still contains substantial content tied to these deleted/removed claims: (1) the paragraph on Freundlich isotherm parameters, batch experiments in demineralized water, solid-phase concentrations, and bed-volume/run-time reporting metrics (deleted claims A03, A04, A12); (2) the specific PFOA > PFHxA > PFPeA > PFBA and PFOS > PFHxS > PFBS ≈ PFOA > ... adsorption-order statements (deleted claims A07, A08); (3) the Purolite A600 resin-chemistry description (deleted claim A11); and (4) claims about GAC effective sizes, surface areas, and iodine numbers for Filtrasorb 400/Norit 1240 W, which go beyond NQ25_MMG005's approved exact/unit span (only the preparation-route sentence is approved, not the size/surface-area/iodine-number figures). None of this content is mapped in reference_answer_claim_map to any surviving claim group, so the prose is no longer consistent with the ledger."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ25-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ25-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ25-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ25-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ25-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": false,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Remove or rewrite the reference_answer paragraph discussing Freundlich KF/n parameters, batch demineralized-water experiments, solid-phase concentrations, and bed-volume/run-time reporting-metric comparisons, since the atomic claims backing this content (A03, A04, A12) were deleted for lacking exact-span support.",
+          "Remove or rewrite the reference_answer sentences giving the specific PFOA > PFHxA > PFPeA > PFBA and PFOS > PFHxS > PFBS ≈ PFOA > PFHpA > PFHxA > PFPeA > PFBA adsorption orders, since the backing claims (A07, A08) were deleted.",
+          "Remove or rewrite the reference_answer sentence describing Purolite A600's resin chemistry, since the backing claim (A11) was deleted.",
+          "Remove the reference_answer detail on GAC effective sizes, surface areas, and iodine numbers for Filtrasorb 400/Norit 1240 W, or add proper unit-span support to NQ25_MMG005 covering those figures, since only the preparation-route sentence is currently approved."
+        ]
+      },
+      {
+        "question_id": "WF10_017",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_017-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_017-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_017-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_017-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_017-G06",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_017-G07",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_017-G09",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_017-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "WF10_031",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_031-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_031-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_031-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 103064,
+    "num_turns": 6,
+    "stop_reason": "tool_use",
+    "session_id": "59b609d6-f9f5-46ae-aba7-9d694a481a7c",
+    "total_cost_usd": 0.47556495000000004,
+    "usage": {
+      "input_tokens": 8,
+      "cache_creation_input_tokens": 75265,
+      "cache_read_input_tokens": 127414,
+      "output_tokens": 10279,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 75265
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 8900,
+          "cache_read_input_tokens": 64908,
+          "cache_creation_input_tokens": 21428,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 21428,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 808,
+        "outputTokens": 16,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000888,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 8,
+        "outputTokens": 10279,
+        "cacheReadInputTokens": 127414,
+        "cacheCreationInputTokens": 75265,
+        "webSearchRequests": 0,
+        "costUSD": 0.47467695000000004,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 7077,
+    "ttft_stream_ms": 844,
+    "time_to_request_ms": 68,
+    "type": "result",
+    "duration_ms": 102906,
+    "uuid": "11f07898-0d60-433c-b899-d57e2a005a45"
+  },
+  "candidate_test40_inputs_used": false
+}

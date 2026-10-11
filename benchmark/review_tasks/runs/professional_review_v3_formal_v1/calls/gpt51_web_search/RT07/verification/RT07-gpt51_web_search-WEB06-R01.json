@@ -1,0 +1,230 @@
+{
+  "call_key": "RT07:gpt51_web_search:verify:RT07-gpt51_web_search-WEB06-R01",
+  "created_at": "2026-08-05T04:28:45.808318+00:00",
+  "raw_response_text": "{\"task_id\":\"RT07\",\"record_id\":\"RT07-gpt51_web_search-WEB06-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The cited passages describe only overall enrichment factors for a multi-stage SAFF system without influent concentrations, species-resolved behavior, or operating duration. Treating these findings as descriptive-only for cross-study comparison is a reasonable inference from WEB06-E01 and WEB06-E02.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB06-E02 describes a multi-stage SAFF system where PFAS concentration in a drier foam is increased up to about 1,500-fold and about 10,000-fold overall after two stages. This reflects physical phase separation and concentration of PFAS into foam, consistent with the endpoint_type \\\"separation\\\" and not degradation.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB06-E02 summarizes only the presence of a multi-stage SAFF system and its enrichment factors. Combined with the nature of a brief poster, it is reasonable to infer that detailed feed/foamate volumes, operating duration, and species-resolved enrichment factors are not provided for this enrichment example.\"},{\"field_path\":\"limitations[1].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB06-E01 and WEB06-E02 describe the SAFF process qualitatively (no filter media, only air and electricity, enrichment performance). There is no mention of energy consumption metrics or downstream treatment/destruction of the foamate, so inferring this as a design-inferred limitation is supported and aligns with the source-level limitations text.\"},{\"field_path\":\"matrix.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB06-E02 clearly indicates that SAFF is concentrating PFAS in a multi-stage system, implying a PFAS-impacted aqueous matrix. However, the phrase \\\"PFAS-impacted water\\\" and the explicit note that the exact source/composition are not specified for the enrichment-factor description are interpretive. The core idea (water containing PFAS, with unspecified detailed composition) is supported, but the wording is partly inferred.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB06-E02 explicitly notes that the second fractionation step produces a drier foam that is removed by vacuum in a multi-stage SAFF system. Describing this as a two-stage foam fractionation with a second-step drier foam removed by vacuum is directly supported.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The field is descriptive of process configuration and correctly leaves the unit null, which is appropriate because no numeric value or physical dimension is reported in WEB06-E02.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB06-E01 states that SAFF \\\"is completely unaffected by other pollutants such as metals or organic substances, particles, pH, nutrients or other water chemistry.\\\" The operating condition describing tolerance to co-contaminants is directly supported.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This is a qualitative statement about co-contaminant tolerance, so leaving the unit null is appropriate and consistent with WEB06-E01.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB06-E02 refers generally to increasing \\\"PFAS concentration\\\" without listing individual compounds for the enrichment-factor description. Characterizing the scope as PFAS as a class with individual species not specified is consistent with this passage.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"WEB06-E02 states that the second fractionation step produces a drier foam, increasing PFAS concentration by \\\"up to about 1,500 times.\\\" Recording this as an approximate value \\\"~1500\\\" is consistent with the text and correctly labeled as approximate_numeric; the minor abstraction from text to numeric is acceptable.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB06-E02 uses the phrase \\\"1,500 times,\\\" which is appropriately captured with the dimensionless unit \\\"fold.\\\"\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"WEB06-E02 reports that the total concentration increase after two stages is \\\"roughly 10,000-fold.\\\" Recording this as an approximate numeric value \\\"~10000\\\" is a faithful numeric transcription and correctly marked as approximate_numeric.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB06-E02 uses the phrase \\\"10,000-fold,\\\" which is appropriately represented with the dimensionless unit \\\"fold.\\\"\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB06-E01 states that SAFF \\\"does not use filter materials, only air and electricity\\\" and WEB06-E02 describes a multi-stage SAFF system. The treatment description as a multi-stage SAFF system using only air and electricity and no filter media is directly supported by these passages.\"},{\"field_path\":\"study_scale.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB06-E02 supports that the system is a multi-stage SAFF configuration. However, WEB06-E01 and WEB06-E02, as cited, do not explicitly state that this particular enrichment example is at field scale, even though that may be true for the broader poster context. The multi-stage aspect is supported, but the \\\"field scale\\\" qualifier is inferred from outside the cited text.\"},{\"field_path\":\"residuals_byproducts[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB06-E01 notes that SAFF uses only air and electricity and is unaffected by other pollutants, and WEB06-E02 describes only physical enrichment of PFAS into foam. There is no discussion of chemical transformation, byproduct formation, or defluorination. Concluding that SAFF is presented purely as a physical separation/concentration step and that no such information is provided is a supported design-inferred statement.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements needed for synthesis\u2014treatment identity (multi-stage SAFF, no filter media), matrix as PFAS-containing water, the separation endpoint, and the key enrichment factors (1,500-fold in the second stage and ~10,000-fold overall)\u2014are directly supported by the cited text. Minor qualifiers about matrix description and field scale are partially supported but do not misrepresent the quantitative findings or the treatment process, so the record remains suitable for use with attention to these noted qualifiers.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of when foam fractionation is useful as a concentration step and how the resulting PFAS-rich foamate should be managed.\",\"task_id\":\"RT07\",\"title\":\"Placing foam fractionation within a PFAS treatment train\"}\n\nTask-specific extraction objective:\nExtract feed source, PFAS profile, scale, operating duration, feed and foamate volume, recovery, enrichment, short-chain performance, energy, operational stability, downstream foamate treatment, and residual endpoint.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.jhazmat.2023.133182\"],\"all_blocked_titles\":[\"a review of foam fractionation for the removal of per and polyfluoroalkyl substances pfas from aqueous matrices\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.jhazmat.2023.133182\"],\"anchor_id\":\"AR-WE-2024\",\"corpus_source\":\"2024 - We - A review of foam fractionation for the removal of per- and polyfluoroalkyl substances (PFAS) from aqueous matrices.pdf\",\"doi\":\"10.1016/j.jhazmat.2023.133182\",\"title\":\"A review of foam fractionation for the removal of per- and polyfluoroalkyl substances (PFAS) from aqueous matrices\",\"url\":\"https://doi.org/10.1016/j.jhazmat.2023.133182\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Envytech. SAFF \\u2013 Surface Active Foam Fractionation technology poster (Arlanda Airport surface runoff and Tveta landfill leachate case studies). 2022 Battelle Chlorinated Conference poster.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB06-E01\",\n      \"WEB06-E02\"\n    ],\n    \"reason\": \"The enrichment factors describe overall PFAS concentration increase in a multi-stage SAFF system without specifying influent concentrations, individual PFAS species behavior, or operating duration, which limits direct quantitative comparison with other studies that report species-resolved removal or concentration under defined conditions.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://www.battelle.org/docs/default-source/hidden/2022-chlorinated-conference-posters/e6_-991_poster_hinrichsen.pdf?sfvrsn=7d31a816_3\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"separation\",\n      \"evidence_locator_ids\": [\n        \"WEB06-E02\"\n      ],\n      \"interpretation\": \"SAFF transfers PFAS from bulk water into a PFAS-rich foam; the second-stage dry foam increases PFAS concentration by up to ~1,500-fold, with an overall ~10,000-fold enrichment after two stages. This is phase separation/concentration rather than chemical degradation.\",\n      \"reported_term\": \"PFAS concentration increase / enrichment in foamate\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB06-E02\"\n      ],\n      \"statement\": \"The poster does not provide feed or foamate volumes, operating duration, or species-resolved enrichment factors for the multi-stage SAFF configuration.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB06-E01\",\n        \"WEB06-E02\"\n      ],\n      \"statement\": \"Energy consumption and downstream treatment of the PFAS-rich foamate are not quantified or described for this enrichment example.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB06-E02\"\n    ],\n    \"value\": \"PFAS-impacted water (exact source and composition not specified for the enrichment-factor description)\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB06-E02\"\n      ],\n      \"name\": \"Process configuration\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"Two-stage foam fractionation where the second fractionation step produces a drier foam removed by vacuum\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB06-E01\"\n      ],\n      \"name\": \"Co-contaminants tolerance\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"Reported to be unaffected by presence of metals, organic substances, particles, pH, nutrients or other water chemistry\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB06-E02\"\n      ],\n      \"value\": \"PFAS as a class (individual species not specified for the enrichment-factor description)\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB06-E02\"\n      ],\n      \"name\": \"PFAS concentration increase in second-stage dry foam\",\n      \"qualifiers\": \"Described as \\\"up to about 1,500 times\\\" PFAS concentration increase in the second fractionation step relative to upstream stream; applies to PFAS as a class, individual species not specified.\",\n      \"unit\": \"fold\",\n      \"value\": \"~1500\",\n      \"value_form\": \"approximate_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB06-E02\"\n      ],\n      \"name\": \"Total PFAS concentration increase after two SAFF stages\",\n      \"qualifiers\": \"Described as \\\"roughly 10,000-fold\\\" total concentration increase after two stages of SAFF; PFAS species not differentiated.\",\n      \"unit\": \"fold\",\n      \"value\": \"~10000\",\n      \"value_form\": \"approximate_numeric\"\n    }\n  ],\n  \"record_id\": \"RT07-gpt51_web_search-WEB06-R01\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB06-E01\",\n        \"WEB06-E02\"\n      ],\n      \"statement\": \"No information is provided on chemical transformation, byproduct formation, or defluorination; SAFF is presented purely as a physical separation/concentration step using air and electricity.\"\n    }\n  ],\n  \"source_id\": \"WEB06\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB06-E01\",\n      \"WEB06-E02\"\n    ],\n    \"value\": \"Multi-stage SAFF (Surface Active Foam Fractionation) system used at field scale for PFAS-impacted waters\"\n  },\n  \"study_type\": \"pilot_or_field_deployment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB06-E01\",\n      \"WEB06-E02\"\n    ],\n    \"value\": \"Multi-stage Surface Active Foam Fractionation (SAFF) system using only air and electricity and no filter media\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"full_text\",\n  \"capture_source_id\": \"WEB60\",\n  \"citation\": \"Envytech. SAFF \\u2013 Surface Active Foam Fractionation technology poster (Arlanda Airport surface runoff and Tveta landfill leachate case studies).\",\n  \"covered_component_ids\": [\n    \"RT07-C1\",\n    \"RT07-C2\",\n    \"RT07-C3\"\n  ],\n  \"doi\": \"\",\n  \"doi_or_stable_url\": \"https://www.battelle.org/docs/default-source/hidden/2022-chlorinated-conference-posters/e6_-991_poster_hinrichsen.pdf?sfvrsn=7d31a816_3\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB06-E01\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Poster text, technology description\",\n      \"text\": \"\\\"Envytech offers the SAFF - Surface Active Foam Fractionation technology\\u2026 SAFF does not use filter materials, only air and electricity, and is completely unaffected by other pollutants such as metals or organic substances, particles, pH, nutrients or other water chemistry.\\\"\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB06-E02\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Poster text, process description\",\n      \"text\": \"The poster describes a multi\\u2011stage SAFF system in which the second fractionation step produces a drier foam that is removed by vacuum, increasing PFAS concentration by up to about 1,500 times so that the total concentration increase after two stages is roughly 10,000\\u2011fold.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB06-E03\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Poster, Table 2\",\n      \"text\": \"A table summarizing PFAS concentrations for untreated water, treated water and treated water with detergent at a PFAS\\u2011impacted site indicates high removals for long\\u2011chain species (e.g., 100% PFOS, PFOA, 6:2 FTS, PFDA, PFNA; 97\\u201399% PFHxS) and more modest removals for short\\u2011chain PFAS such as PFHxA, PFPeA, PFBA and PFBS (0\\u201362%).\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB06-E04\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Poster text, Tveta landfill description\",\n      \"text\": \"For the Tveta landfill leachate, the poster notes that leachate contains nitrogen, phosphorus, DOC, TOC, suspended solids, larvae, and algae, and that previous treatment trials with various filter technologies had failed, whereas full\\u2011scale SAFF treatment is being carried out to meet a discharge limit of 50 ng/L PFOS to the receiving wastewater treatment plant.\"\n    }\n  ],\n  \"publication_status\": \"technical_report\",\n  \"publication_type\": \"pilot_or_field_deployment\",\n  \"source\": \"https://www.battelle.org/docs/default-source/hidden/2022-chlorinated-conference-posters/e6_-991_poster_hinrichsen.pdf?sfvrsn=7d31a816_3\",\n  \"source_id\": \"WEB06\",\n  \"source_limitations\": [\n    \"Conference poster format limits the description of experimental design, sampling frequency, and analytical methods.\",\n    \"Foamate volumes, precise enrichment factors for each stage, and long\\u2011term operational data are only qualitatively indicated.\",\n    \"Energy consumption and detailed economic analysis of multi\\u2011stage SAFF treatment and downstream destruction options are not quantified.\"\n  ],\n  \"title\": \"SAFF \\u2013 Surface Active Foam Fractionation technology (multi-site performance poster)\",\n  \"year\": \"2022\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "c5cd430651448965000f41e07a37266cc147b69404430fafc732e0fa5a628113",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.02941425,
+    "finish_reason": "stop",
+    "input_tokens": 3285,
+    "latency_seconds": 19.91401541698724,
+    "output_tokens": 2646,
+    "reasoning_tokens": 1170,
+    "response_id": "chatcmpl-E9NWsRpTGBkKQXYyxvyM1FSHC1Vqf",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 5931,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The cited passages describe only overall enrichment factors for a multi-stage SAFF system without influent concentrations, species-resolved behavior, or operating duration. Treating these findings as descriptive-only for cross-study comparison is a reasonable inference from WEB06-E01 and WEB06-E02.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "WEB06-E02 describes a multi-stage SAFF system where PFAS concentration in a drier foam is increased up to about 1,500-fold and about 10,000-fold overall after two stages. This reflects physical phase separation and concentration of PFAS into foam, consistent with the endpoint_type \"separation\" and not degradation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].statement",
+        "reason": "WEB06-E02 summarizes only the presence of a multi-stage SAFF system and its enrichment factors. Combined with the nature of a brief poster, it is reasonable to infer that detailed feed/foamate volumes, operating duration, and species-resolved enrichment factors are not provided for this enrichment example.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1].statement",
+        "reason": "WEB06-E01 and WEB06-E02 describe the SAFF process qualitatively (no filter media, only air and electricity, enrichment performance). There is no mention of energy consumption metrics or downstream treatment/destruction of the foamate, so inferring this as a design-inferred limitation is supported and aligns with the source-level limitations text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "matrix.value",
+        "reason": "WEB06-E02 clearly indicates that SAFF is concentrating PFAS in a multi-stage system, implying a PFAS-impacted aqueous matrix. However, the phrase \"PFAS-impacted water\" and the explicit note that the exact source/composition are not specified for the enrichment-factor description are interpretive. The core idea (water containing PFAS, with unspecified detailed composition) is supported, but the wording is partly inferred.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "WEB06-E02 explicitly notes that the second fractionation step produces a drier foam that is removed by vacuum in a multi-stage SAFF system. Describing this as a two-stage foam fractionation with a second-step drier foam removed by vacuum is directly supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The field is descriptive of process configuration and correctly leaves the unit null, which is appropriate because no numeric value or physical dimension is reported in WEB06-E02.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "WEB06-E01 states that SAFF \"is completely unaffected by other pollutants such as metals or organic substances, particles, pH, nutrients or other water chemistry.\" The operating condition describing tolerance to co-contaminants is directly supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "This is a qualitative statement about co-contaminant tolerance, so leaving the unit null is appropriate and consistent with WEB06-E01.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "WEB06-E02 refers generally to increasing \"PFAS concentration\" without listing individual compounds for the enrichment-factor description. Characterizing the scope as PFAS as a class with individual species not specified is consistent with this passage.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "WEB06-E02 states that the second fractionation step produces a drier foam, increasing PFAS concentration by \"up to about 1,500 times.\" Recording this as an approximate value \"~1500\" is consistent with the text and correctly labeled as approximate_numeric; the minor abstraction from text to numeric is acceptable.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "WEB06-E02 uses the phrase \"1,500 times,\" which is appropriately captured with the dimensionless unit \"fold.\"",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "WEB06-E02 reports that the total concentration increase after two stages is \"roughly 10,000-fold.\" Recording this as an approximate numeric value \"~10000\" is a faithful numeric transcription and correctly marked as approximate_numeric.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "WEB06-E02 uses the phrase \"10,000-fold,\" which is appropriately represented with the dimensionless unit \"fold.\"",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "WEB06-E01 states that SAFF \"does not use filter materials, only air and electricity\" and WEB06-E02 describes a multi-stage SAFF system. The treatment description as a multi-stage SAFF system using only air and electricity and no filter media is directly supported by these passages.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "study_scale.value",
+        "reason": "WEB06-E02 supports that the system is a multi-stage SAFF configuration. However, WEB06-E01 and WEB06-E02, as cited, do not explicitly state that this particular enrichment example is at field scale, even though that may be true for the broader poster context. The multi-stage aspect is supported, but the \"field scale\" qualifier is inferred from outside the cited text.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0].statement",
+        "reason": "WEB06-E01 notes that SAFF uses only air and electricity and is unaffected by other pollutants, and WEB06-E02 describes only physical enrichment of PFAS into foam. There is no discussion of chemical transformation, byproduct formation, or defluorination. Concluding that SAFF is presented purely as a physical separation/concentration step and that no such information is provided is a supported design-inferred statement.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT07-gpt51_web_search-WEB06-R01",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements needed for synthesis\u2014treatment identity (multi-stage SAFF, no filter media), matrix as PFAS-containing water, the separation endpoint, and the key enrichment factors (1,500-fold in the second stage and ~10,000-fold overall)\u2014are directly supported by the cited text. Minor qualifiers about matrix description and field scale are partially supported but do not misrepresent the quantitative findings or the treatment process, so the record remains suitable for use with attention to these noted qualifiers.",
+    "task_id": "RT07"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

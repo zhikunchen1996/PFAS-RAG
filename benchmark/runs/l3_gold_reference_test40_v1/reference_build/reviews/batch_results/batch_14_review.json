@@ -1,0 +1,243 @@
+{
+  "batch_id": "test40-review-batch-14",
+  "batch_sha256": "018c60c54e5ffcf334d029ea7d01dbf5de0b15066f476214841892c50acac12c",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-review-batch-14",
+    "reviews": [
+      {
+        "question_id": "WF10_017",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Recurring pattern across several claim groups: the textual detail actually asserted in a group's 'supports' statement is not present in the cited evidence item's exact_evidence_span or unit_exact_spans, only in the surrounding full_chunk_text. Per the verification instructions this content is not licensed evidence for the claim and needs either an added/expanded unit span or removal of the unsupported portion of the claim.",
+          "Affected evidence items: WF10_017_MMG004 (cation NH4+/Na+ effect), WF10_017_MMG001 (macroporous > gel-type regenerability statement), WF10_017_MMG009 (the 'decide after multiple cycles: solvent vs. disposal' continuation, and the 'these studies used regenerable resins... unclear for PFAS-specific resins' sentence), WF10_017_MMG010 (the electrostatic/hydrophobic regeneration-chemistry sentences underlying G04's entire proposition), WF10_017_MMG008 (the 99.9%/90.3% UV/SO3 degradation detail), WF10_017_MMG003 (the persulfate-oxidation/sulfate-form sentences underlying part of G08)."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_017-G01",
+            "verdict": "partially_supported",
+            "issues": [
+              "The 'supports' claim that cation identity (NH4+ vs Na+) affects PFAS recovery, citing WF10_017_MMG004, is not contained in MMG004's exact_evidence_span or either of its unit_exact_spans; that sentence ('NH4+ works slightly better for TAN1, while Na+...') only appears in full_chunk_text beyond the approved spans."
+            ],
+            "required_repairs": [
+              "Add a unit span to WF10_017_MMG004 capturing the cation-effect sentence, or remove/re-source that supports claim from the group."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_017-G02",
+            "verdict": "partially_supported",
+            "issues": [
+              "The 'supports' claim that macroporous resins are more regenerable than gel-type resins, citing WF10_017_MMG001, is not present in MMG001's exact_evidence_span or unit_exact_spans; it only appears in full_chunk_text."
+            ],
+            "required_repairs": [
+              "Add a unit span to WF10_017_MMG001 covering the macroporous-vs-gel-type sentence, or remove that supports claim."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_017-G03",
+            "verdict": "partially_supported",
+            "issues": [
+              "The second 'supports' claim (decision point after multiple cycles: full solvent restoration vs. disposal), citing WF10_017_MMG009, extends beyond MMG009's approved exact_evidence_span, which stops at '(Park et al., 2020);'. The continuation sentence is only in full_chunk_text."
+            ],
+            "required_repairs": [
+              "Extend WF10_017_MMG009's exact_evidence_span/unit_exact_spans to include the 'after multiple cycles... dispose of the exhausted resins' sentence, or remove that supports claim from the group."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_017-G04",
+            "verdict": "misattributed",
+            "issues": [
+              "The entire canonical/central proposition (inorganic salts/alkaline solutions efficient for electrostatically-bound contaminants; organic solvents required for PFOA-type hydrophobic+electrostatic binding) is not present anywhere in WF10_017_MMG010's approved exact_evidence_span or unit_exact_spans, which only cover a sentence about 'knowledge gaps... in regeneration options.' The actual supporting sentences appear later in the same full_chunk_text but were never captured as approved evidence for this group."
+            ],
+            "required_repairs": [
+              "Add the correct unit span(s) to WF10_017_MMG010 (or a new evidence entry) covering: 'For contaminants and anion exchange resins which dominantly interact via electrostatic interactions, regeneration by inorganic salts and/or alkaline solutions is efficient...' and '...require organic solvents such as methanol or mixed solvent and salt solutions for desorption', and re-link the group to that span."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_017-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_017-G06",
+            "verdict": "partially_supported",
+            "issues": [
+              "The 'exact_spans' entries for WF10_017_MMG006 display the primary exact_evidence_span text (about ethanol/NaOH/HCl elution) even though the actual quoted support content ('due to the challenges in preventing solvent leaching...single-use-and-dispose mode') is drawn from unit_exact_spans[1] of the same evidence item. The content is technically covered by an approved unit span, but the displayed exact_spans citation is mismatched/misleading."
+            ],
+            "required_repairs": [
+              "Update the exact_spans entry for this supports statement to cite the correct unit span text (the solvent-leaching/single-use sentence) rather than reusing the primary exact_evidence_span excerpt."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_017-G07",
+            "verdict": "partially_supported",
+            "issues": [
+              "The third 'supports' claim (99.9% PFOS degradation and 90.3% defluorination via UV/SO3) is not present in WF10_017_MMG008's unit_exact_spans, which only cover the CTAB-desorption sentence and the five-reuse-cycles sentence; the degradation/defluorination figures are only in full_chunk_text."
+            ],
+            "required_repairs": [
+              "Add a unit span to WF10_017_MMG008 covering the UV/SO3 degradation/defluorination sentence, or remove that supports claim."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_017-G08",
+            "verdict": "misattributed",
+            "issues": [
+              "The 'supports' claim for WF10_017_MMG003 (activated-persulfate oxidation as in-situ regeneration; sulfate-form resins showing higher removal) has no basis in MMG003's approved exact_evidence_span/unit span, which is entirely about PFAS-specific resins being 'non-regenerable... via conventional regeneration approaches.' The persulfate/sulfate-form content is a separate part of the full_chunk_text that was never captured as approved evidence.",
+              "The 'supports' claim for WF10_017_MMG009 references the sentence 'These studies used regenerable resins, while it is unclear whether the same approaches could regenerate PFAS-specific resins,' which precedes and falls outside MMG009's approved exact_evidence_span (which begins at 'Given that simple salt solutions...')."
+            ],
+            "required_repairs": [
+              "Create/attach a correctly scoped unit span (or new evidence entry from chunk 41) for the persulfate-oxidation/sulfate-form sentences and re-link this half of the claim to that evidence.",
+              "Extend WF10_017_MMG009's approved span to include the preceding 'unclear whether... PFAS-specific resins' sentence, or remove that supports claim."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_017-G09",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_017-X01",
+            "verdict": "partially_supported",
+            "issues": [
+              "Same issue as in G08: the 'supports' statement for WF10_017_MMG009 cites the 'unclear whether... PFAS-specific resins' sentence, which is outside MMG009's approved exact_evidence_span."
+            ],
+            "required_repairs": [
+              "Extend WF10_017_MMG009's approved span to include the relevant sentence, matching the repair requested for G08."
+            ]
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Audit and expand unit_exact_spans for WF10_017_MMG003, MMG004, MMG006, MMG008, MMG009, and MMG010 so that every 'supports' statement in the claim groups is backed by an approved exact/unit span rather than by unapproved full_chunk_text content; re-link WF10_017-G04 to properly scoped evidence given its proposition is currently unsupported by any approved span."
+        ]
+      },
+      {
+        "question_id": "WF10_031",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "The single evidence item covering task component T02 (WF10_031_MMG001) has only one approved exact_evidence_span/unit_exact_span ('Other studies have not used natural raw water... hampers direct comparisons'), yet claim group G03 (and constraint X01) build their entire proposition on two other sentences from the same chunk ('PFASs with MWs lower than the nominal MWCO... concentrated by the membrane... by a factor of approximately two' and 'other processes than size exclusion were involved... electrostatic repulsion and diffusion into the polymeric phase') that were never captured as approved spans."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_031-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_031-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_031-G03",
+            "verdict": "misattributed",
+            "issues": [
+              "The two exact_spans quoted for this group ('Interestingly, PFASs with molecular weights (MWs) lower than the nominal MWCO of 270 Da were found to be concen-trated by the membrane process by a factor of approximately two.' and 'This indicates that other pro-cesses than size exclusion were involved for the rejection of PFASs...') are not present in WF10_031_MMG001's approved exact_evidence_span or unit_exact_spans, which cover only the separate 'hampers direct comparisons' sentence. The entire canonical/central proposition of this group currently rests on unapproved full_chunk_text content."
+            ],
+            "required_repairs": [
+              "Add the two small-PFAS/MWCO sentences as unit_exact_spans (or a new evidence record) under WF10_031_MMG001 so the claim group's proposition is backed by approved evidence, or split them into a properly re-scoped evidence entry."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_031-X01",
+            "verdict": "partially_supported",
+            "issues": [
+              "The constraint's second exact_spans entry (competition/reduced-efficiency text) is fine, but it also relies indirectly on the same MMG001 small-PFAS quotes used in G03, which are not in MMG001's approved spans."
+            ],
+            "required_repairs": [
+              "Apply the same MMG001 span-expansion repair requested for G03; the constraint inherits the same attribution gap."
+            ]
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Expand WF10_031_MMG001's unit_exact_spans to include the small-PFAS/MWCO concentration sentence and the non-size-exclusion mechanism sentence, since claim group G03 and constraint X01 currently cite text outside the approved span for this evidence item."
+        ]
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 159602,
+    "num_turns": 6,
+    "stop_reason": "tool_use",
+    "session_id": "a01d6ec3-40cb-40b4-802d-b7354365c604",
+    "total_cost_usd": 0.48630175,
+    "usage": {
+      "input_tokens": 8,
+      "cache_creation_input_tokens": 53663,
+      "cache_read_input_tokens": 122595,
+      "output_tokens": 16503,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 53663
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 15112,
+          "cache_read_input_tokens": 60577,
+          "cache_creation_input_tokens": 4157,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 4157,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 628,
+        "outputTokens": 18,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000718,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 8,
+        "outputTokens": 16503,
+        "cacheReadInputTokens": 122595,
+        "cacheCreationInputTokens": 53663,
+        "webSearchRequests": 0,
+        "costUSD": 0.48558375,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 9141,
+    "ttft_stream_ms": 979,
+    "time_to_request_ms": 57,
+    "type": "result",
+    "duration_ms": 159219,
+    "uuid": "61b89dae-e079-468e-a252-098a83cbb85c"
+  },
+  "candidate_test40_inputs_used": false
+}

@@ -1,0 +1,259 @@
+{
+  "batch_id": "test40-rereview2-batch-04",
+  "batch_sha256": "aad9b8922739f88554fadc7274b8bf988e4eb3574f3b742b9b64ba3e95de0503",
+  "prompt_sha256": "bc7904e476fd67ebd0a410a32318efe13ee807e1e031944c11e245ffec8c2c15",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-rereview2-batch-04",
+    "reviews": [
+      {
+        "question_id": "WF10_035",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "The previously required merge/justification of duplicate evidence WF10_035_MMG001 and WF10_035_MMG003 (identical doc_id, chunk_id, exact_evidence_span, and full_chunk_text) was still not carried out; both remain unmerged in approved_source_evidence with no added rationale.",
+          "The G01/G02/G03 span-attribution repairs from the prior review were carried out by quoting the correct sentences, but several of these newly quoted exact_spans for MMG001 (the six-PFAS adsorbed-amount-order sentence in G01/G03, and the co-solute-effects sentences in G02/G03) differ from MMG001's registered evidence-level exact_evidence_span/unit_exact_spans. Per the review-prompt rule, this is valid candidate evidence (verbatim and contiguous in the approved full chunk) but must be flagged for project-author audit before freeze rather than treated as a defect."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_035-G01",
+            "verdict": "supported",
+            "issues": [
+              "exact_spans entry for MMG001 now quotes the correct six-PFAS adsorbed-amount-order sentence (resolving the prior misattribution), but this quoted span is a newly selected verbatim span not listed in MMG001's registered exact_evidence_span/unit_exact_spans and requires project-author audit before freeze."
+            ],
+            "required_repairs": [
+              "Flag the MMG001 exact_spans entry in G01 for project-author audit as a newly selected verbatim span."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_035-G02",
+            "verdict": "supported",
+            "issues": [
+              "exact_spans entry for MMG001 now correctly quotes the co-solute-effects sentences (resolving the prior misattribution), but this is a newly selected verbatim span differing from MMG001's registered exact_evidence_span and requires project-author audit before freeze."
+            ],
+            "required_repairs": [
+              "Flag the MMG001 exact_spans entry in G02 for project-author audit as a newly selected verbatim span."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_035-G03",
+            "verdict": "supported",
+            "issues": [
+              "The first (six-PFAS order) and third (co-solute effects) MMG001 exact_spans entries now correctly match their supports text (resolving both prior issues), but both are newly selected verbatim spans differing from MMG001's registered exact_evidence_span and require project-author audit before freeze."
+            ],
+            "required_repairs": [
+              "Flag the two MMG001 exact_spans entries in G03 for project-author audit as newly selected verbatim spans."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_035-X01",
+            "verdict": "duplicate_or_overweighted",
+            "issues": [
+              "The required merge/justification of the duplicate evidence records WF10_035_MMG001 and WF10_035_MMG003 (identical doc_id, chunk_id, exact_evidence_span, full_chunk_text) was not completed; both remain in approved_source_evidence, and this group still relies on MMG001 while the duplicate MMG003 sits unused and unresolved at the reference-packet level."
+            ],
+            "required_repairs": [
+              "Merge WF10_035_MMG001 and WF10_035_MMG003 into a single evidence record, or add an explicit rationale in the reference packet for retaining both as separate evidence_ids/types."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_035-X02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Complete the previously required MMG001/MMG003 duplicate-evidence resolution at the reference_packet level (merge or add explicit retention rationale).",
+          "Record project-author audit flags for the newly selected MMG001 verbatim spans introduced in G01, G02, and G03 (content differs from MMG001's registered exact_evidence_span/unit_exact_spans though it is verbatim and contiguous in the approved full chunk)."
+        ]
+      },
+      {
+        "question_id": "WF10_039",
+        "verdict": "clean",
+        "question_level_issues": [
+          "The previously required repairs for G03 and X01 (extending quoted exact_evidence_spans, or narrowing supports text, to eliminate span/supports mismatches) were resolved by extending the quoted spans for MMG001/MMG003/MMG006 (in G03) and MMG002/MMG007 (in X01) so they now contain the sentences described in their supports text. These extended spans are newly selected verbatim spans that differ from the respective evidence records' registered exact_evidence_span/unit_exact_spans fields and should be flagged for project-author audit before freeze, consistent with the review-prompt's handling of newly selected spans."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_039-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_039-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_039-G03",
+            "verdict": "supported",
+            "issues": [
+              "The MMG001, MMG003, and MMG006 exact_spans entries were extended to include the hydrophobic/electrostatic/hydrophilic-film and synergistic-interaction sentences, resolving the prior mismatch, but each extended span is a newly selected verbatim span differing from that evidence record's registered exact_evidence_span and requires project-author audit before freeze."
+            ],
+            "required_repairs": [
+              "Flag the extended MMG001, MMG003, and MMG006 exact_spans entries in G03 for project-author audit."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_039-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_039-X01",
+            "verdict": "supported",
+            "issues": [
+              "The MMG007 and MMG002 exact_spans entries were extended to include the 'minor compared to GAC capacity' and 'aluminum did not incrementally contribute' sentences, resolving the prior mismatch, but each extended span is a newly selected verbatim span differing from that evidence record's registered exact_evidence_span and requires project-author audit before freeze."
+            ],
+            "required_repairs": [
+              "Flag the extended MMG007 and MMG002 exact_spans entries in X01 for project-author audit."
+            ]
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Record project-author audit flags for the newly selected/extended verbatim spans in G03 (MMG001, MMG003, MMG006) and X01 (MMG007, MMG002) prior to freeze."
+        ]
+      },
+      {
+        "question_id": "NQ03a",
+        "verdict": "clean",
+        "question_level_issues": [
+          "All three previously required repairs (G02 GC-ECD verification span for MMG006, G03 SPME-calibration span for MMG002, and G04 removal of the unsupported contamination-avoidance inference for MMG008) were carried out correctly.",
+          "The newly added exact_spans entries for MMG006 in G02 (GC-ECD/±5% sentence) and MMG002 in G03 (SPME calibration sentence) are verbatim and contiguous in their respective approved full chunks but differ from those evidence records' registered exact_evidence_span/unit_exact_spans fields, so they should be flagged for project-author audit before freeze. The pre-existing MMG004 citation in G04 ('All solutions were stored at 4 °C in polypropylene (PP) bottles.') is likewise a verbatim span not listed in MMG004's registered unit_exact_spans and warrants the same audit note."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ03a-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ03a-G02",
+            "verdict": "supported",
+            "issues": [
+              "The required repair adding an exact_spans entry for MMG006 quoting the GC-ECD/±5% verification sentence was completed, but this span is a newly selected verbatim span differing from MMG006's registered exact_evidence_span and requires project-author audit before freeze."
+            ],
+            "required_repairs": [
+              "Flag the new MMG006 GC-ECD exact_spans entry in G02 for project-author audit."
+            ]
+          },
+          {
+            "claim_group_id": "NQ03a-G03",
+            "verdict": "supported",
+            "issues": [
+              "The required repair adding a second exact_spans entry for MMG002 quoting the SPME calibration sentence was completed, but this span is a newly selected verbatim span differing from MMG002's registered exact_evidence_span and requires project-author audit before freeze."
+            ],
+            "required_repairs": [
+              "Flag the new MMG002 SPME-calibration exact_spans entry in G03 for project-author audit."
+            ]
+          },
+          {
+            "claim_group_id": "NQ03a-G04",
+            "verdict": "supported",
+            "issues": [
+              "The unsupported contamination-avoidance inference in the MMG008 supports text was correctly removed. Separately, the MMG004 citation quoting 'All solutions were stored at 4 °C in polypropylene (PP) bottles.' is a verbatim span not listed among MMG004's registered unit_exact_spans and should be flagged for project-author audit before freeze."
+            ],
+            "required_repairs": [
+              "Flag the MMG004 storage-condition exact_spans entry in G04 for project-author audit."
+            ]
+          },
+          {
+            "claim_group_id": "NQ03a-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Record project-author audit flags for the newly selected verbatim spans: MMG006 (G02, GC-ECD sentence), MMG002 (G03, SPME calibration sentence), and MMG004 (G04, storage-condition sentence)."
+        ]
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 135656,
+    "num_turns": 8,
+    "stop_reason": "tool_use",
+    "session_id": "c37f2ef8-35a1-4ca6-a22b-dad3e330339c",
+    "total_cost_usd": 0.592051,
+    "usage": {
+      "input_tokens": 12,
+      "cache_creation_input_tokens": 82166,
+      "cache_read_input_tokens": 225225,
+      "output_tokens": 14362,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 82166
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 12723,
+          "cache_read_input_tokens": 73709,
+          "cache_creation_input_tokens": 19528,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 19528,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 805,
+        "outputTokens": 18,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.0008950000000000001,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 12,
+        "outputTokens": 14362,
+        "cacheReadInputTokens": 225225,
+        "cacheCreationInputTokens": 82166,
+        "webSearchRequests": 0,
+        "costUSD": 0.591156,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 4473,
+    "ttft_stream_ms": 1061,
+    "time_to_request_ms": 38,
+    "type": "result",
+    "duration_ms": 135223,
+    "uuid": "2dd169ef-d4e1-44cb-96e7-b0837ceff1f2"
+  },
+  "candidate_test40_inputs_used": false
+}

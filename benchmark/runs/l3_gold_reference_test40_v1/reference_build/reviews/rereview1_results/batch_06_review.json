@@ -1,0 +1,278 @@
+{
+  "batch_id": "test40-rereview1-batch-06",
+  "batch_sha256": "3c46ae1cc20a298fe545f89ac435c355e6d11e2f430ffdf4b87e7a1aa0632112",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-rereview1-batch-06",
+    "reviews": [
+      {
+        "question_id": "WF10_032",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "The previous required repair asked to correct multiple exact_spans entries that reused one evidence item's headline exact_evidence_span for unrelated sub-claims. In this ledger, several of the flagged incorrect entries were simply deleted rather than replaced with the correct literal citation, leaving parts of the canonical_proposition/full_rule for G04, G05, and X01 completely uncited, and G01's original misattribution was left entirely unaddressed.",
+          "A new instance of the same reused-headline-span problem appears in G03 (not previously flagged), where a quoted span is reused to support a distinct 'regeneration efficiency' claim that is actually a different, uncited sentence in the same chunk."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_032-G01",
+            "verdict": "misattributed",
+            "issues": [
+              "The single exact_spans entry still cites MMG001's cycle-2 adsorption-efficiency sentence ('In the second cycle, the adsorption efficiency of PFPrA and PFBA decreased...') to support the regenerant-composition/optimization claim; that sentence does not mention the regenerant at all. The previously required repair (cite the actual regenerant sentence) was not applied."
+            ],
+            "required_repairs": [
+              "Cite the literal regenerant sentence from MMG001's full_chunk_text: 'A combination of ammonium solution with methanol, i.e., 50% methanol with 1% NH4OH, exhibited a higher value for PFCA desorption among all the tested specs of regenerants... The optimized spec of the regenerant was employed for subsequent cycles of adsorption–desorption.'"
+            ]
+          },
+          {
+            "claim_group_id": "WF10_032-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_032-G03",
+            "verdict": "partially_supported",
+            "issues": [
+              "The second exact_spans entry reuses the quoted desorption-percentages sentence to support a claim that 'overall regeneration efficiency improved... as compared to the first cycle,' but that specific language is a separate, uncited sentence in MMG002's full_chunk_text."
+            ],
+            "required_repairs": [
+              "Cite (or extend the exact_evidence_span to include) the literal sentence: 'This is because in the second cycle, adsorption mainly occurred on the easily accessible surface sites, which facilitated effective desorption by the regenerant, and an increase in regeneration efficiency as compared to the first cycle was observed.'"
+            ]
+          },
+          {
+            "claim_group_id": "WF10_032-G04",
+            "verdict": "partially_supported",
+            "issues": [
+              "The previously misattributed second exact_spans entry was removed but not replaced; the desorption-consistency portion of the canonical_proposition/full_rule (PFOA and PFPeA desorption also consistent over three cycles) now has no supporting citation at all."
+            ],
+            "required_repairs": [
+              "Add an exact_spans entry citing MMG002: 'Similarly, the desorption was also consistent up to three successive cycles.'"
+            ]
+          },
+          {
+            "claim_group_id": "WF10_032-G05",
+            "verdict": "partially_supported",
+            "issues": [
+              "The previously misattributed NaOH/ammonia entry was removed but not replaced; the NaOH/ammonia/>85% retention/4–5 cycles portion of the canonical_proposition and full_rule is now completely uncited."
+            ],
+            "required_repairs": [
+              "Add an exact_spans entry citing MMG004: 'Alkaline regenerants such as NaOH and ammonia showed similar trends: high recovery for short-chain PFASs on anion-exchange resins and mesoporous polymers (>85% retention after 4–5 cycles)...'"
+            ]
+          },
+          {
+            "claim_group_id": "WF10_032-X01",
+            "verdict": "partially_supported",
+            "issues": [
+              "The required correction to cite MMG002 (not MMG001) for the 'incomplete desorption... reduced adsorption capacity in the second cycle' half of the canonical_proposition was not made; evidence_ids still omits MMG002 and no exact_span supports this half of the claim.",
+              "The required correction to cite the specific 'persistent residuals of PFOA/PFOS' sentence for the comparative long-chain limitation was also dropped rather than added; only the general 60–80% efficiency sentence remains as support."
+            ],
+            "required_repairs": [
+              "Add WF10_032_MMG002 to evidence_ids and cite: 'This incomplete desorption led to the preoccupation of adsorption sites, thereby reducing the adsorption capacity in the second cycle.'",
+              "Add an exact_spans entry citing MMG004's sentence: '...persistent residuals of PFOA/PFOS even after extended contact times [61,128,133].'"
+            ]
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Re-audit all groups per the prior required repair: removing an incorrect exact_spans citation is not sufficient — the correct, literally matching replacement citation must also be added so every distinct sub-claim in each canonical_proposition has valid support."
+        ]
+      },
+      {
+        "question_id": "WF10_034",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "The previously required task_component_id reassignments (G02 and G03 moved from T02/T03 to T04) were correctly implemented.",
+          "A new/previously-uncaught misattribution pattern involving evidence MMG003 affects G04 and X01: MMG003's designated exact_evidence_span (about ineffectiveness when mixed with other streams) is reused to support unrelated claims (efficiency within a concentration range; short-chain vs C6-C8 efficiency) that are actually separate, uncited sentences in the same chunk."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_034-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_034-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_034-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_034-G04",
+            "verdict": "misattributed",
+            "issues": [
+              "The exact_spans entry cites MMG003's exact_evidence_span ('If the PFAS-containing wastewater is mixed with other wastewater streams... the treatment process is ineffective.') to support a claim about achieving very high efficiency within a defined concentration range; that quoted span is about ineffectiveness under mixing/pH conditions and does not mention efficiency or concentration range. The actual supporting sentence ('...successfully demonstrated under production conditions to treat PFAS with up to 99% efficiency in the concentration range of 1,000–20,000 μg/l (1 ppm–20 ppm)') exists in MMG003's full_chunk_text but is not the evidence item's designated exact_evidence_span."
+            ],
+            "required_repairs": [
+              "Correct MMG003's exact_evidence_span/unit_exact_spans (or add a distinct evidence record) to the literal efficiency/concentration-range sentence, and cite that corrected span in G04 instead of the mixing/ineffectiveness sentence."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_034-X01",
+            "verdict": "partially_supported",
+            "issues": [
+              "The second exact_spans entry reuses MMG003's mixing/ineffectiveness exact_evidence_span to support the separate claim that the process was less efficient for short-chain PFAS than C6–C8 PFAS; that content is a distinct, uncited sentence in the same chunk."
+            ],
+            "required_repairs": [
+              "Replace the second exact_spans entry with the literal sentence from MMG003's full_chunk_text: 'For the short chain PFAS, (perfluorobutylsulfonate) the process was less efficient than C6–C8 PFAS.'"
+            ]
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Audit all citations that use MMG003 for literal match to the attributed content; either add a second evidence record covering the efficiency/concentration-range and short-chain/C6-C8 sentences, or update the corresponding exact_spans to quote them directly."
+        ]
+      },
+      {
+        "question_id": "WF10_035",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "The previously required repair to merge or justify the duplicate evidence pair WF10_035_MMG001/WF10_035_MMG003 (identical doc, chunk_id, exact_evidence_span, and full_chunk_text) was not carried out; both entries remain in approved_source_evidence unmerged and without added rationale.",
+          "Multiple groups (G01, G02, G03) rely on MMG001's designated exact_evidence_span (the bisolute PFHxS/PFOS replacement sentence) to support unrelated claims — the six-PFAS adsorbed-amount order and PFHxS co-solute effects — which are separate, uncited sentences within the same chunk."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_035-G01",
+            "verdict": "partially_supported",
+            "issues": [
+              "The exact_spans entry citing MMG001 quotes the bisolute-replacement sentence to support the six-PFAS adsorbed-amount-order claim, but that order statement is a different, uncited sentence in the same chunk."
+            ],
+            "required_repairs": [
+              "Replace the MMG001 exact_spans entry with the literal sentence: 'When six PFASs were presented in the simulated AFFF-impacted groundwater, their adsorbed amounts decreased in the order of PFOS > PFHxS > PFOA > PFBS > PFHxA > PFBA.'"
+            ]
+          },
+          {
+            "claim_group_id": "WF10_035-G02",
+            "verdict": "misattributed",
+            "issues": [
+              "The exact_spans entry cites MMG001's bisolute-replacement sentence to support the co-solute-effects claim (TEC/MB/SDS/HA/inorganic anions on PFHxS removal); that content is an entirely separate, uncited sentence in the same chunk."
+            ],
+            "required_repairs": [
+              "Replace the exact_spans entry with the literal sentences: 'The nonionic organic compounds including TEC and MB hardly interfered with the PFHxS removal, while ionic ones including SDS and HA significantly decreased the adsorbed amount. The presence of inorganic anions including sulfate, bicarbonate, chloride, and phosphate slightly decreased the removal efficiency of PFHxS and their influences were almost similar.'"
+            ]
+          },
+          {
+            "claim_group_id": "WF10_035-G03",
+            "verdict": "partially_supported",
+            "issues": [
+              "The first exact_spans entry cites MMG001's bisolute-replacement sentence to define the six-PFAS competitive-adsorption order, which is a separate, uncited sentence in the same chunk (same issue as G01).",
+              "The third exact_spans entry reuses the same MMG001 span to support a weaker, tangential point about study focus on specific co-solutes/resin; this citation is only loosely justified."
+            ],
+            "required_repairs": [
+              "Replace the first exact_spans entry with the literal six-PFAS-order sentence (see G01 repair).",
+              "Either remove the third exact_spans entry or provide clearer rationale for why the bisolute-replacement sentence supports the 'study is focused on particular co-solutes and specific resin' point."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_035-X01",
+            "verdict": "duplicate_or_overweighted",
+            "issues": [
+              "The required merge/justification of the duplicate evidence records WF10_035_MMG001 and WF10_035_MMG003 (identical span/chunk) was not completed; the duplicate remains in approved_source_evidence even though this group's exact_spans no longer directly cite MMG003."
+            ],
+            "required_repairs": [
+              "Merge WF10_035_MMG001 and WF10_035_MMG003 into a single evidence record, or add an explicit rationale in the reference packet for retaining both as separate evidence_ids/types."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_035-X02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Complete the previously required MMG001/MMG003 duplicate-evidence resolution at the reference_packet level.",
+          "Audit and correct all MMG001-based exact_spans citations in G01–G03 so each cites the literal sentence matching its attributed content rather than reusing the bisolute-replacement headline span."
+        ]
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 162350,
+    "num_turns": 6,
+    "stop_reason": "tool_use",
+    "session_id": "e7b83daf-2f6e-4e08-851c-f21af9dfe2c8",
+    "total_cost_usd": 0.51403,
+    "usage": {
+      "input_tokens": 8,
+      "cache_creation_input_tokens": 59520,
+      "cache_read_input_tokens": 121470,
+      "output_tokens": 16897,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 59520
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 15918,
+          "cache_read_input_tokens": 59858,
+          "cache_creation_input_tokens": 10733,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 10733,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 820,
+        "outputTokens": 18,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.00091,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 8,
+        "outputTokens": 16897,
+        "cacheReadInputTokens": 121470,
+        "cacheCreationInputTokens": 59520,
+        "webSearchRequests": 0,
+        "costUSD": 0.51312,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 5379,
+    "ttft_stream_ms": 1001,
+    "time_to_request_ms": 37,
+    "type": "result",
+    "duration_ms": 160902,
+    "uuid": "9f59344f-4f7f-4de1-94da-2279ffcaf544"
+  },
+  "candidate_test40_inputs_used": false
+}

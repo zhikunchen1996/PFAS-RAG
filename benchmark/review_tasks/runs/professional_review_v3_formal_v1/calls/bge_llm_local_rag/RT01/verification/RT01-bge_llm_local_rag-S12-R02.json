@@ -1,0 +1,320 @@
+{
+  "call_key": "RT01:bge_llm_local_rag:verify:RT01-bge_llm_local_rag-S12-R02",
+  "created_at": "2026-08-05T03:51:23.789285+00:00",
+  "raw_response_text": "{\"task_id\":\"RT01\",\"record_id\":\"RT01-bge_llm_local_rag-S12-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"citation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Citation text, authors, journal, year, and article title match the source metadata provided.\"},{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The DOI and URL exactly match the source metadata: 10.1016/j.heliyon.2024.e25130.\"},{\"field_path\":\"matrix.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The methods state that 500 mL of tap water in 2 L HDPE bottles was used and spiked with the PFAS mixture, and other text describes this as a real drinking water matrix, consistent with the field description.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text specifies that the PFAS mixture included three precursor groups: per-/polyfluoroalkyl ether acids (PFEA), sulfonamides, and sulfonamide acetic acids, with chain-length details for PFEA (C4\u2013C10) and sulfonamides (C4, C6, C8) and explicit mention of C8 EtFOSAA and MeFOSAA, matching the described scope.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The methods describe three bituminous coal-based granulated activated carbons, Filtrasorb 400 (F400), reactivated F400 (R-F400), and SRD, which matches the listed GAC types.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"No numeric quantity is reported for adsorbent identity, so leaving the unit null is appropriate.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The methods specify addition of 5.0 \u00b1 0.1 mg of sieved GAC per bottle, matching the recorded value string.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The GAC dose is reported in mg in the source; the unit field correctly records mg.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The methods state that 500 mL of tap water was used per 2 L HDPE bottle, matching the value 500.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The water volume is reported in mL in the text; the unit mL is correct.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Contact times in the methods are 1, 5, 24, 96, and 240 h; summarizing this as 1\u2013240 h with the specific times in qualifiers is consistent with the source.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Contact times are reported in hours in the text; unit h is correct.\"},{\"field_path\":\"operating_conditions[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The methods report a constant temperature of 22 \u00b1 1 \u00b0C; the value string reflects this correctly.\"},{\"field_path\":\"operating_conditions[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Temperature is reported in \u00b0C in the text; the unit \u00b0C is correct.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The study explicitly investigates sorption of PFAS and PFAS precursors onto GAC at ng/L levels; this is an adsorption/partitioning endpoint, so classifying endpoint_type as sorption is correct.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text describes batch sorption experiments of PFAS (including precursors) in tap water onto GAC at ~5 ng/L, with removal generally below 50% and focus on sorption behavior rather than degradation, consistent with the interpretation.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This endpoint summarizes structure\u2013sorption relationships (chain length and functional groups), which is a derived interpretation rather than a distinct measured endpoint; classifying as 'other' is appropriate.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The results and conclusion state that no clear relation between sorption and carbon chain length was observed for PFEA and sulfonamides due to limited chain-length range, and that ether linkages and sulfonamide groups enhanced sorption, with C8 sulfonamide acetic acids having higher sorption than a similar-chain PFCA; this matches the interpretation.\"},{\"field_path\":\"endpoints[2].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This describes isomer-specific behavior (branching effects) rather than a distinct physical endpoint, so 'other' is a reasonable classification.\"},{\"field_path\":\"endpoints[2].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text reports that sulfonamide acetic acids showed significantly different sorption (p < 0.05) with higher sorption for branched than linear isomers and attributes this to tail geometry affecting electrostatic interaction, matching the interpretation.\"},{\"field_path\":\"endpoints[3].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This endpoint explains mechanistic drivers (hydrophobic and electrostatic interactions) rather than reporting a new measured quantity; 'other' is an appropriate endpoint_type.\"},{\"field_path\":\"endpoints[3].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Multiple passages state that sorption is determined by both hydrophobic and electrostatic interactions, and that ether linkages and sulfonamide functionalities enhance sorption; the role of dual functional groups in sulfonamide acetic acids is explicitly discussed, aligning with the interpretation.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The methods state that tap water was spiked with 5 ng/L of each of 31 PFAS, which includes each precursor compound; the numeric value 5 with value_form exact_numeric matches this.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The influent concentration is explicitly given in ng/L in the source; the unit field correctly records ng/L.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The results note no clear relation between sorption and chain length for PFEA and sulfonamides and explicitly state that the limited range of tested chain lengths for these PFAS precursors is important, which matches the limitation about restricted ability to infer a chain-length\u2013sorption relationship.\"},{\"field_path\":\"limitations[1].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The methods describe batch experiments with a single tap-water matrix, a fixed water-to-GAC ratio, and a single low concentration (~5 ng/L). From these design facts, it reasonably follows (as a design_inferred limitation) that extrapolation to other water chemistries and concentration regimes is limited.\"},{\"field_path\":\"residuals_byproducts[0].statement\",\"status\":\"unsupported\",\"error_type\":\"qualifier\",\"reason\":\"The cited text only describes measuring sorption of PFAS and performing SPE of aqueous samples; it does not explicitly state whether transformations to terminal PFAS or other byproducts were or were not monitored or reported. Asserting that downstream transformation was not reported goes beyond what is directly supported.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The methods describe bench-scale batch sorption tests in bottles with 500 mL tap water, shaken for up to 240 h at 22 \u00b1 1 \u00b0C, which matches the summarized study scale.\"},{\"field_path\":\"study_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The article describes original laboratory sorption experiments rather than a review or modeling study, consistent with classification as a primary experiment.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The methods explain that three bituminous coal-based GAC sorbents with differing micro/mesopore structures (including thermally reactivated GAC) were used to study sorption of PFAS and precursors, matching the treatment description.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The study uses commercial GAC, a real tap-water matrix, and environmentally relevant ng/L concentrations in batch mode; considering these design elements, judging the record as comparable_with_conditions for similar low-level drinking-water adsorption contexts is a reasonable inference from the cited text.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reason accurately reflects the study design\u2014commercial GAC, real tap water, ~5 ng/L PFAS, batch experiments, and focus on relative sorption trends\u2014which are all described in the cited methods and results sections.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements necessary for synthesis\u2014source identity, matrix (tap water), treatment (three bituminous coal-based GACs), operating conditions, sorption endpoint classification, PFAS precursor scope, and influent concentration\u2014are all directly supported and correctly transcribed. The only unsupported field concerns an inferred statement about lack of byproduct reporting, which does not affect the usability of the record for adsorption behavior analysis.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused, data-grounded review explaining how an engineer should select an adsorption medium for a specified PFAS profile and water matrix.\",\"task_id\":\"RT01\",\"title\":\"Selecting an adsorption medium for a defined PFAS water-treatment application\"}\n\nTask-specific extraction objective:\nExtract adsorbent identity and properties, PFAS identity, water matrix, influent concentration, pH, co-constituents, dose or bed conditions, adsorption endpoint, quantitative result, and reported mechanism.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Sadia, M.; Beut, L.B.; Prani\\u0107, M.; Wezel, A.P.; Laak, T.L. Sorption of per- and poly-fluoroalkyl substances and their precursors on activated carbon under realistic drinking water conditions: Insights into sorbent variability and PFAS structural effects. Heliyon 2024, 10, e25130.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S12-E01\",\n      \"S12-E02\",\n      \"S12-E05\",\n      \"S12-E06\",\n      \"S12-E08\"\n    ],\n    \"reason\": \"Experiments use commercial GAC, real tap water, and environmentally relevant (~5 ng/L) concentrations in batch mode; endpoints are relative sorption/removal trends for defined precursor species, making results broadly comparable to other adsorption studies under similar low ng/L, drinking-water conditions, though they are more qualitative than quantitative.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.heliyon.2024.e25130\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"sorption\",\n      \"evidence_locator_ids\": [\n        \"S12-E01\",\n        \"S12-E02\",\n        \"S12-E05\",\n        \"S12-E06\"\n      ],\n      \"interpretation\": \"Batch sorption/removal of precursor PFAS (PFEA, sulfonamides, sulfonamide acetic acids) from tap water onto GAC at ~5 ng/L, expressed qualitatively as higher or lower sorption relative to other PFAS groups. This is adsorption (phase transfer), not chemical degradation.\",\n      \"reported_term\": \"sorption of PFAS precursors onto GAC; PFAS precursor removal\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S12-E06\",\n        \"S12-E08\"\n      ],\n      \"interpretation\": \"No clear relation between sorption and carbon chain length was observed for PFEA and sulfonamides within the limited chain-length range tested. Ether linkages and sulfonamide groups enhanced sorption, and C8 sulfonamide acetic acids (EtFOSAA and MeFOSAA) exhibited higher sorption than PFCA of similar chain length (C9).\",\n      \"reported_term\": \"chain-length and functional-group effects for PFAS precursors\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S12-E08\"\n      ],\n      \"interpretation\": \"Branched isomers of sulfonamide acetic acids showed significantly higher sorption than their linear counterparts (p < 0.05), attributed to changes in hydrophobic tail geometry and resulting electrostatic interactions of the functional groups with GAC.\",\n      \"reported_term\": \"branching effects in sulfonamide acetic acids\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S12-E02\",\n        \"S12-E03\",\n        \"S12-E05\",\n        \"S12-E06\",\n        \"S12-E08\"\n      ],\n      \"interpretation\": \"Overall sorption of PFAS precursors to GAC is explained by combined hydrophobic and electrostatic interactions, with sulfonamide and ether functionalities increasing affinity; additional electrostatic interactions in sulfonamide acetic acids (sulfonamide plus carboxylic group) enhance sorption compared to analogous PFCA.\",\n      \"reported_term\": \"sorption mechanism for precursors\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S12-E06\"\n      ],\n      \"statement\": \"Limited range of tested carbon chain lengths for PFAS precursors (specific subsets of PFEA and sulfonamides) restricts the ability to derive a clear chain-length\\u2013sorption relationship.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S12-E01\",\n        \"S12-E05\",\n        \"S12-E06\"\n      ],\n      \"statement\": \"Batch design in a single tap-water matrix and at a single low concentration (~5 ng/L) may limit extrapolation of precursor sorption behavior to other water chemistries and concentration regimes.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S12-E01\",\n      \"S12-E05\",\n      \"S12-E07\"\n    ],\n    \"value\": \"Tap water (real drinking water matrix) spiked with a PFAS mixture including PFAS precursors.\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E04\"\n      ],\n      \"name\": \"Adsorbent type\",\n      \"qualifiers\": \"Bituminous coal-based; similar total porosity (50\\u201358%), differing in micro/mesopore volumes; includes thermally reactivated material relevant to drinking water practice.\",\n      \"unit\": null,\n      \"value\": \"Granular activated carbon (GAC): F400, reactivated F400 (R-F400), SRD\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E01\"\n      ],\n      \"name\": \"GAC dose\",\n      \"qualifiers\": \"Per 500 mL tap water per batch bottle.\",\n      \"unit\": \"mg\",\n      \"value\": \"5.0 \\u00b1 0.1\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E01\"\n      ],\n      \"name\": \"Water volume\",\n      \"qualifiers\": \"Tap water per 2 L HDPE bottle.\",\n      \"unit\": \"mL\",\n      \"value\": \"500\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E01\"\n      ],\n      \"name\": \"Contact time\",\n      \"qualifiers\": \"Samples at 1, 5, 24, 96, and 240 h in triplicate.\",\n      \"unit\": \"h\",\n      \"value\": \"1-240\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E01\"\n      ],\n      \"name\": \"Temperature\",\n      \"qualifiers\": \"Laboratory shaker at constant temperature.\",\n      \"unit\": \"\\u00b0C\",\n      \"value\": \"22 \\u00b1 1\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E01\",\n        \"S12-E05\",\n        \"S12-E06\",\n        \"S12-E08\"\n      ],\n      \"value\": \"PFAS precursor groups in the mixture: per-/polyfluoroalkyl ether acids (PFEA, mono- and di-ether, C4\\u2013C10), sulfonamides (C4\\u2013C8), and sulfonamide acetic acids (including C8 EtFOSAA and MeFOSAA, linear and branched isomers).\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E05\"\n      ],\n      \"name\": \"Influent PFAS precursor concentration (each precursor compound)\",\n      \"qualifiers\": \"Same spiking level as other PFAS in the 31-compound mixture: 5 ng/L of each precursor in tap water.\",\n      \"unit\": \"ng/L\",\n      \"value\": \"5\",\n      \"value_form\": \"exact_numeric\"\n    }\n  ],\n  \"record_id\": \"RT01-bge_llm_local_rag-S12-R02\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S12-E01\",\n        \"S12-E05\",\n        \"S12-E06\"\n      ],\n      \"statement\": \"Study evaluated precursor disappearance from water and sorption to GAC but did not report on downstream transformation of precursors to terminal PFAS or other byproducts during the adsorption tests.\"\n    }\n  ],\n  \"source_id\": \"S12\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S12-E01\",\n      \"S12-E05\",\n      \"S12-E07\"\n    ],\n    \"value\": \"Bench-scale batch sorption experiments with PFAS precursors in tap water, 500 mL per bottle, shaken up to 240 h at 22 \\u00b1 1 \\u00b0C.\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S12-E04\",\n      \"S12-E05\",\n      \"S12-E08\"\n    ],\n    \"value\": \"Adsorption of PFAS precursors onto three bituminous coal-based GAC sorbents (F400, reactivated F400, and SRD) differing in micro/mesopore structure and including thermally reactivated GAC.\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 17,\n  \"bge_score\": 0.29998666048049927,\n  \"citation\": \"Sadia, M.; Beut, L.B.; Prani\\u0107, M.; Wezel, A.P.; Laak, T.L. Sorption of per- and poly-fluoroalkyl substances and their precursors on activated carbon under realistic drinking water conditions: Insights into sorbent variability and PFAS structural effects. Heliyon 2024 10 e25130. DOI: 10.1016/j.heliyon.2024.e25130.\",\n  \"doi\": \"10.1016/j.heliyon.2024.e25130\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.heliyon.2024.e25130\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 8,\n      \"locator_id\": \"S12-E01\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.008474955335259438,\n        \"RT01-C2\": 0.0021199346520006657,\n        \"RT01-C3\": 3.952930637751706e-05,\n        \"umbrella\": 0.12771320343017578\n      },\n      \"section\": \"methods\",\n      \"text\": \"per-/poly-fluoroalkyl of the ether acids (PFEA, Fig. 1 ), sulfonamides, and sul - fonamide acetic acids) were selected, including branched isomers for PFHxS, EtFOSAA, and MeFOSAA ( Table S1 ). For the sorption experiments, 500 mL of tap water in 2 L HDPE plastic bottles were spiked with the PFAS mixture (12.5 \\u03bc L; 0.2 ng/ \\u03bc L for each PFAS in methanol; Table S2 ), followed by the addition of 5.0 \\u00b1 0.1 mg of sieved GAC. The bottles were then placed in a laboratory shaker at a constant temperature of 22 \\u00b1 1 \\u25e6 C for specific durations (1 h, 5 h, 24 h, 96 h, 240 h, all in triplicate). After the designated time intervals, the sorbent was removed, and solid-phase extraction (SPE) was performed on the aqueous samples. The batch experiments using GAC may not capture the full dynamics of continuous treatment systems found in real-scenario drinking water treatment plants [ 40 , 41 ]. However, these experiments provide valuable insights into PFAS sorption onto GAC. Water to GAC ratio was chosen based on real scenario application of powdered activated carbon (PAC) in the drinking water treatment\"\n    },\n    {\n      \"corpus_chunk\": 20,\n      \"locator_id\": \"S12-E02\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.4290032684803009,\n        \"RT01-C2\": 0.0035078823566436768,\n        \"RT01-C3\": 0.00020007257990073413,\n        \"umbrella\": 0.02602238953113556\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"removal of PFAS using GAC below the advised safe threshold. This indicates that (carbon) sorbents, process conditions, management and maintenance of drinking water production to remove PFAS from drinking water requires improvement to meet potential future M. Sadia et al. Heliyon 10 (2024) e25130 6 thresholds. Improvements to sorbents such as increased fluorophilicity, hydrophobicity, and affinity for chemicals carrying a negative charge have been suggested [ 61 ]. Alternatively, reverse-osmosis membrane-based treatments demonstrated efficient removal of low PFAS concentrations from source water, and may currently be the most viable alternative to carbon sorbents [ 5 , 14 ]. 4. Conclusion This study investigated the sorption behavior of PFAS, including PFCA, PFSA, and three classes of PFAS precursors, on GAC at environmentally relevant concentrations (~5 ng/L), with a focus on their implications for drinking water production. Our findings reveal that the sorption of PFAS onto GAC at these realistic concentrations, taking into account GAC dosing relevant to drinking water treatment, was relatively low for all studied PFAS and PFAS precursors, except for the short-chain PFAS precursors. The sorption of PFAS was found to be influenced by both the carbon chain length and functional groups present, with a dominant role played by both electrostatic and hydrophobic interactions. Notably, while no clear linear relationship between sorption and chain\"\n    },\n    {\n      \"corpus_chunk\": 4,\n      \"locator_id\": \"S12-E03\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.04510866478085518,\n        \"RT01-C2\": 0.03330160677433014,\n        \"RT01-C3\": 7.613594061695039e-05,\n        \"umbrella\": 0.025642359629273415\n      },\n      \"section\": \"results\",\n      \"text\": \"interact electrostatically with charged surface groups on GAC. Additionally, the hydrophobic tail of PFAS results in enhanced sorption for longer chain PFAS through hydrophobic interactions [ 29 \\u2013 31 ]. Innovative forms of GAC are currently under development to enhance the removal of micropollutants from water. This is achieved by modifying the sorbent \\u2019 s surface chemistry and physical properties. Sorbent surface chemistry can be characterized by elemental composition [ 32 ], surface acidity and basicity [ 33 ], and point of zero charge [ 34 ]. Physical properties are summarized in terms of porosity, pore volume, and pore shape [ 35 ]. Furthermore, the sorption of PFAS and other micropollutants can be influenced by aqueous chemistry, including factors such as pH [ 34 ], co-occurring organic compounds like organic matter (OM) [ 36 ], and inorganic ions [ 32 ]. Given that guidelines for safe drinking water levels have become stricter over the past decades [ 37 ], there is an urgent need for more effective water treatment processes to ensure that PFAS concentrations in drinking water remain below these levels. Recent studies have shown that some Dutch drinking water treatment plants, which apply GAC treatment, complied with regulatory drinking water standards but were unable to meet guideline values such as the European Food Safety Authority (EFSA) recommendation for\"\n    },\n    {\n      \"corpus_chunk\": 6,\n      \"locator_id\": \"S12-E04\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.3075188398361206,\n        \"RT01-C2\": 0.0018235562602058053,\n        \"RT01-C3\": 4.394075949676335e-05,\n        \"umbrella\": 0.01743314601480961\n      },\n      \"section\": \"methods\",\n      \"text\": \"sulfonamides, and sulfonamide acetic acids, including both branched and linear isomers for three different PFAS. Three distinct GAC sorbents were used, varying in porosity and micro- and mesopore volumes, including thermally reactivated GAC, as it is relevant to the drinking water production practices. The study aims to provide insight into the role of the chain length, functional groups, and branching tail structure of the PFAS and PFAS precursors in sorption onto GAC under realistic drinking water production conditions. 2. Material and methods 2.1. Sorbents Three bituminous coal-based granulated activated carbon (GAC) were acquired from Calgon Carbon Corporation, Feluy, Belgium, namely Filtrasorb \\u00ae 400 (F400), reactivated Filtrasorb \\u00ae 400 (R \\u2013 F400) and the carbon sorbent SRD. A detailed material character - ization of the adsorbents, including density, micropores and mesopore volume, particle porosity, and pH point of zero charge (pH pzc ), is provided in Table S2 . Details on the method used for measuring the GAC porosity and pH pzc listed in the supplementary information. All studied GAC had a similar total porosity of 50 \\u2013 58 %. F400 has a slightly lower mesopore volume, and is commonly used in drinking water treatment. R \\u2013 F400 was provided by supplier and is F400 that was reactivated at least five times by thermal reactivation to 700 \\u25e6\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S12-E05\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.2967541515827179,\n        \"RT01-C2\": 0.001104127848520875,\n        \"RT01-C3\": 3.7504491047002375e-05,\n        \"umbrella\": 0.026051979511976242\n      },\n      \"section\": \"methods\",\n      \"text\": \"This study investigated the sorption of per- and polyfluorinated-alkyl substances (PFAS) onto granular activated carbon (GAC). The study was performed at environmentally relevant PFAS concentrations and a realistic water-to-GAC ratio, providing a realism often overlooked in existing studies. Three different forms of GAC were evaluated, differing in micropore and mesopore structures. Tap water spiked with 5 ng/L of each of 31 PFAS was used in the sorption experiments, i.e. perfluorocarboxylic acids (C 4 \\u2013 C 12 ), perfluorosulfonic acids (PFSA, C 5 \\u2013 C 10 ) including linear and branched isomers, and three groups of PFAS precursors (per-/polyfluoroalkyl ether acids, sulfonamides, and sulfonamide acetic acids). The three studied GAC did not exhibit distinct differences in PFAS sorption. The removal of PFAS was below 50 % for most studied PFAS, except for the short-chain PFAS precursors. Sorption was affected by both the carbon chain length and functional groups for PFAS, while this was not observed for PFAS precursors. The presence of ether linkages and sulfonamide groups notably enhanced sorption. Linear and branched PFSA demonstrated similar sorption behavior, whereas branched isomers of the sulfonamide acetic acid precursors exhibited significantly higher sorp - tion. This indicates that sorption was determined by both hydrophobic and electrostatic interactions.\"\n    },\n    {\n      \"corpus_chunk\": 13,\n      \"locator_id\": \"S12-E06\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.12162882834672928,\n        \"RT01-C2\": 0.0009942789329215884,\n        \"RT01-C3\": 7.984566036611795e-05,\n        \"umbrella\": 0.012397175654768944\n      },\n      \"section\": \"methods\",\n      \"text\": \"The shorter chain PFCA and PFSA exhibited relatively low sorption compared to the longer chain PFCA and PFSA, suggesting a limited role for electrostatic interactions between the anionic head group and the GAC under the experimental conditions [ 44 ]. PFSA consistently showed higher sorption compared to PFCA for all three sorbents ( Fig. 2 ), except for PFSA with a C5 \\u2013 C6 carbon chain length. This trend can be attributed to differences in electron withdrawal between sulfonate and carboxylate groups, influencing the hydrophobic properties of perfluoroalkyl chains in both molecular and ionized forms [ 45 ]. Similarly, previous studies have also indicated stronger interactions between long-chain PFAS and sulfonated head groups on granular activated carbon (GAC) surfaces compared to PFAS with carboxylic acid heads [ 46 , 47 ]. No clear relation between sorption and carbon chain length could be observed for the PFAS precursors, specifically PFEA (mono- and di-ether: C 4 \\u2013 C 10 ), and sulfonamides (C 4 \\u2013 C 8 ) ( Fig. 2 , Table S4 ). However, it \\u2019 s important to note that the limited range of tested carbon chain lengths for the PFAS precursors (including mono-ether PFEA C 4 , C 5 , C 8 , and C 10 , di-ether C 4 and C 5 , sulfonamides C 4 , C 6 , and C 8\"\n    },\n    {\n      \"corpus_chunk\": 5,\n      \"locator_id\": \"S12-E07\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.10410425812005997,\n        \"RT01-C2\": 0.0027332131285220385,\n        \"RT01-C3\": 5.8759687817655504e-05,\n        \"umbrella\": 0.1034540981054306\n      },\n      \"section\": \"results\",\n      \"text\": \"studies have shown that some Dutch drinking water treatment plants, which apply GAC treatment, complied with regulatory drinking water standards but were unable to meet guideline values such as the European Food Safety Authority (EFSA) recommendation for total PFAS intake TWI of 4.4 ng/kg bodyweight [ 14 ]. Previous research on PFAS sorption onto GAC had primarily focused on well-known PFAS like PFOA and PFOS at levels far above environmental concentrations ( \\u03bc g/L, mg/L) [ 38 ]. This highlights the pressing need to gain a deeper understanding of PFAS and PFAS precursor sorption onto GAC at concentrations within the ng/L range, given that GAC treatment is the most used advanced technology for drinking water production [ 24 , 25 ]. Therefore, this study aims to investigate the sorption behavior of a broad spectrum of PFAS at environment relevant concentrations (~5 ng/L) in a real drinking water matrix using realistic water to GAC ratio. The PFAS mixture includes PFCA: perfluoro-carboxylic acids (C 4 \\u2013 C 12 ), PFSA: perfluoro-sulfonic acids (C 5 \\u2013 C 10 ), and PFAS precursor groups: per-/poly-fluoroalkyl of the ether acids (PFEA), sulfonamides, and sulfonamide acetic acids, including both branched and linear isomers for three different PFAS. Three distinct GAC\"\n    },\n    {\n      \"corpus_chunk\": 16,\n      \"locator_id\": \"S12-E08\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.10359185934066772,\n        \"RT01-C2\": 0.0017659595469012856,\n        \"RT01-C3\": 4.63784126623068e-05,\n        \"umbrella\": 0.010152061469852924\n      },\n      \"section\": \"introduction\",\n      \"text\": \", Fig. S2 . Moreover, in the case of sulfonamide acetic acid C 8 (EtFOSAA and MeFOSAA), the presence of both the sulfonamide group and carboxylic group enhanced their sorption compared to the PFCA of same chain length, like C 9 ( Fig. 2 , Table S4 ). This can be attributed to the additional electrostatic interaction on top of hydrophobic interaction. No significant difference in time-averaged sorption was observed between linear and branched isomers of PFHxS on all tested GAC ( Table S4 ). However, both sulfonamide acetic acids showed significantly different sorption (p < 0.05), with higher sorption observed for branched than linear isomers. The decrease in length and increase in width of the hydrophobic tail in branched isomers, compared to linear isomers, exerts a more pronounced effect on the functional group, affecting the electrostatic interaction [ 51 , 52 ]. Overall, the sorption of the studied PFAS and PFAS precursors to the GAC can be explained by both hydrophobic and electrostatic interactions, with the relative contributions of each type of interactions dependent on the chemical structure. 3.2. Comparison of carbon sorbents The porosity and structure of micropores and mesopores can impact the sorption of chemicals on GAC [ 38 , 53 ]. However, this study\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2024 - Sadia - Sorption of per- and poly-fluoroalkyl substances and their precursors on activated carbon under realistic drinking water conditions - Insights into.pdf\",\n  \"source_id\": \"S12\",\n  \"title\": \"Sorption of per- and poly-fluoroalkyl substances and their precursors on activated carbon under realistic drinking water conditions: Insights into sorbent variability and PFAS structural effects\",\n  \"year\": \"2024\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "134e41c4afe9ff76ed0d30b36bc0a29b57c8e5a0a50b0a971ff4f758c6b68eb3",
+  "response_metadata": {
+    "cached_input_tokens": 1152,
+    "estimated_cost_usd": 0.0458415,
+    "finish_reason": "stop",
+    "input_tokens": 6894,
+    "latency_seconds": 27.20747725002002,
+    "output_tokens": 3852,
+    "reasoning_tokens": 1752,
+    "response_id": "chatcmpl-E9MwapvTv5KFNLcqtYZLMh0N8EEcu",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 10746,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "citation",
+        "reason": "Citation text, authors, journal, year, and article title match the source metadata provided.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The DOI and URL exactly match the source metadata: 10.1016/j.heliyon.2024.e25130.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix.value",
+        "reason": "The methods state that 500 mL of tap water in 2 L HDPE bottles was used and spiked with the PFAS mixture, and other text describes this as a real drinking water matrix, consistent with the field description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "The text specifies that the PFAS mixture included three precursor groups: per-/polyfluoroalkyl ether acids (PFEA), sulfonamides, and sulfonamide acetic acids, with chain-length details for PFEA (C4\u2013C10) and sulfonamides (C4, C6, C8) and explicit mention of C8 EtFOSAA and MeFOSAA, matching the described scope.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "The methods describe three bituminous coal-based granulated activated carbons, Filtrasorb 400 (F400), reactivated F400 (R-F400), and SRD, which matches the listed GAC types.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "No numeric quantity is reported for adsorbent identity, so leaving the unit null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "The methods specify addition of 5.0 \u00b1 0.1 mg of sieved GAC per bottle, matching the recorded value string.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The GAC dose is reported in mg in the source; the unit field correctly records mg.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "The methods state that 500 mL of tap water was used per 2 L HDPE bottle, matching the value 500.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "The water volume is reported in mL in the text; the unit mL is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "Contact times in the methods are 1, 5, 24, 96, and 240 h; summarizing this as 1\u2013240 h with the specific times in qualifiers is consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "Contact times are reported in hours in the text; unit h is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].value",
+        "reason": "The methods report a constant temperature of 22 \u00b1 1 \u00b0C; the value string reflects this correctly.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].unit",
+        "reason": "Temperature is reported in \u00b0C in the text; the unit \u00b0C is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The study explicitly investigates sorption of PFAS and PFAS precursors onto GAC at ng/L levels; this is an adsorption/partitioning endpoint, so classifying endpoint_type as sorption is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "The text describes batch sorption experiments of PFAS (including precursors) in tap water onto GAC at ~5 ng/L, with removal generally below 50% and focus on sorption behavior rather than degradation, consistent with the interpretation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "This endpoint summarizes structure\u2013sorption relationships (chain length and functional groups), which is a derived interpretation rather than a distinct measured endpoint; classifying as 'other' is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "The results and conclusion state that no clear relation between sorption and carbon chain length was observed for PFEA and sulfonamides due to limited chain-length range, and that ether linkages and sulfonamide groups enhanced sorption, with C8 sulfonamide acetic acids having higher sorption than a similar-chain PFCA; this matches the interpretation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].endpoint_type",
+        "reason": "This describes isomer-specific behavior (branching effects) rather than a distinct physical endpoint, so 'other' is a reasonable classification.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].interpretation",
+        "reason": "The text reports that sulfonamide acetic acids showed significantly different sorption (p < 0.05) with higher sorption for branched than linear isomers and attributes this to tail geometry affecting electrostatic interaction, matching the interpretation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[3].endpoint_type",
+        "reason": "This endpoint explains mechanistic drivers (hydrophobic and electrostatic interactions) rather than reporting a new measured quantity; 'other' is an appropriate endpoint_type.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[3].interpretation",
+        "reason": "Multiple passages state that sorption is determined by both hydrophobic and electrostatic interactions, and that ether linkages and sulfonamide functionalities enhance sorption; the role of dual functional groups in sulfonamide acetic acids is explicitly discussed, aligning with the interpretation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "The methods state that tap water was spiked with 5 ng/L of each of 31 PFAS, which includes each precursor compound; the numeric value 5 with value_form exact_numeric matches this.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The influent concentration is explicitly given in ng/L in the source; the unit field correctly records ng/L.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].statement",
+        "reason": "The results note no clear relation between sorption and chain length for PFEA and sulfonamides and explicitly state that the limited range of tested chain lengths for these PFAS precursors is important, which matches the limitation about restricted ability to infer a chain-length\u2013sorption relationship.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1].statement",
+        "reason": "The methods describe batch experiments with a single tap-water matrix, a fixed water-to-GAC ratio, and a single low concentration (~5 ng/L). From these design facts, it reasonably follows (as a design_inferred limitation) that extrapolation to other water chemistries and concentration regimes is limited.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "residuals_byproducts[0].statement",
+        "reason": "The cited text only describes measuring sorption of PFAS and performing SPE of aqueous samples; it does not explicitly state whether transformations to terminal PFAS or other byproducts were or were not monitored or reported. Asserting that downstream transformation was not reported goes beyond what is directly supported.",
+        "status": "unsupported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "The methods describe bench-scale batch sorption tests in bottles with 500 mL tap water, shaken for up to 240 h at 22 \u00b1 1 \u00b0C, which matches the summarized study scale.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_type",
+        "reason": "The article describes original laboratory sorption experiments rather than a review or modeling study, consistent with classification as a primary experiment.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "The methods explain that three bituminous coal-based GAC sorbents with differing micro/mesopore structures (including thermally reactivated GAC) were used to study sorption of PFAS and precursors, matching the treatment description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The study uses commercial GAC, a real tap-water matrix, and environmentally relevant ng/L concentrations in batch mode; considering these design elements, judging the record as comparable_with_conditions for similar low-level drinking-water adsorption contexts is a reasonable inference from the cited text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The reason accurately reflects the study design\u2014commercial GAC, real tap water, ~5 ng/L PFAS, batch experiments, and focus on relative sorption trends\u2014which are all described in the cited methods and results sections.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT01-bge_llm_local_rag-S12-R02",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements necessary for synthesis\u2014source identity, matrix (tap water), treatment (three bituminous coal-based GACs), operating conditions, sorption endpoint classification, PFAS precursor scope, and influent concentration\u2014are all directly supported and correctly transcribed. The only unsupported field concerns an inferred statement about lack of byproduct reporting, which does not affect the usability of the record for adsorption behavior analysis.",
+    "task_id": "RT01"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

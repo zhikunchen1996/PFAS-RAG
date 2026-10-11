@@ -1,0 +1,41 @@
+{
+  "protocol_id": "dev13_source_verified_pairwise_content_v2_revision2_2026-07-26",
+  "status": "superseded_historical_judge_sensitivity",
+  "scope": "Dev13 only; Test40 not inspected or run",
+  "source_answer_run": "benchmark/frozen_v3/results/dev13_verified_tags_v3_r2_confirmation_2026-07-26",
+  "answer_regeneration": true,
+  "canonical_comparison": "tagged_vs_matched_direct",
+  "internal_development_diagnostic": null,
+  "judge_model": "gpt-5.1",
+  "temperature": 0,
+  "judge_repeats": 3,
+  "mirrored_answer_order": true,
+  "gold_available_to_judge": true,
+  "verification_context": "The final C1-C10 chunks supplied to the tagged RAG system, shown to the judge for scientific-correctness verification of both answers",
+  "citations_retained": true,
+  "citation_quality_scored": false,
+  "citation_neutrality": [
+    "Do not reward or penalize citation presence or absence",
+    "Do not reward or penalize citation count, density, placement, formatting, or coverage",
+    "Use C-number markers only to locate evidence for scientific-correctness verification",
+    "An answer without citations remains eligible to win every criterion"
+  ],
+  "criteria": [
+    "scientific_correctness",
+    "question_fulfillment",
+    "uncertainty_and_limitations",
+    "practical_usefulness"
+  ],
+  "weights": {
+    "scientific_correctness": 0.4,
+    "question_fulfillment": 0.3,
+    "uncertainty_and_limitations": 0.15,
+    "practical_usefulness": 0.15
+  },
+  "scored_schema_policy": "Every criterion preference and rationale is mandatory.",
+  "auxiliary_schema_policy": "Missing confidence or material-error arrays are logged and normalized but never affect scores.",
+  "prompt": "benchmark/frozen_v3/prompts/evaluation/source_verified_pairwise_content_v2.txt",
+  "runner": "benchmark/frozen_v3/scripts/run_dev13_soft_tags_v3_source_verified_judge.py",
+  "result": "benchmark/frozen_v3/results/dev13_verified_tags_v3_r2_source_verified_2026-07-26",
+  "interpretation": "Historical three-resample Dev13 sensitivity result. The model-visible payload exposed comparison metadata and the verification context belonged to the RAG arm. It is superseded by the Revision 3 neutral-evidence judge and must not be reported as the canonical result."
+}

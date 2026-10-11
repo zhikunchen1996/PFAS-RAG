@@ -1,0 +1,356 @@
+{
+  "call_key": "RT02:bge_llm_local_rag:verify:RT02-bge_llm_local_rag-S10-R02",
+  "created_at": "2026-08-05T03:55:49.275079+00:00",
+  "raw_response_text": "{\"task_id\":\"RT02\",\"record_id\":\"RT02-bge_llm_local_rag-S10-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The study focuses on nanofiltration (NF) rejection performance (not adsorption capacities). Cited text describes NF rejection, pilot NF operation, and subsequent RSSCT adsorption tests, justifying that this record is descriptive-only for adsorption comparability (E01, E03, E05, E07, E08).\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reason correctly explains that NF rejection data are different in nature from batch/column adsorption capacities and that additional hydraulic and loading information would be needed. This interpretation is consistent with the NF-focused methods and results in the cited text (E01, E03, E05, E07, E08).\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The endpoint concerns PFAS rejection by a nanofiltration membrane, which is appropriately classified as a separation endpoint. The abstract and methods explicitly discuss PFAS rejection by NF270 (E01, E03, E05, E08).\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The interpretation accurately summarizes that NF270 provided high rejection of most PFAS, especially longer-chain PFAAs and Gen-X, but that permeate concentrations remained above EPA MCLs, making NF more suitable as a pretreatment step before adsorption. These points are supported by E03, E05, and E08.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E04/E05 explicitly state that the membrane was not continuously exposed to PFAS during the pilot and that the impact of PFAS adsorption on rejection was not determined, matching the limitation text.\"},{\"field_path\":\"limitations[1].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E03 and E05 state that NF provided high PFAS rejection (particularly long-chain regulated compounds) but that combined permeate concentrations still exceeded EPA MCLs, so additional treatment would be required. This directly supports the limitation statement.\"},{\"field_path\":\"limitations[2].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 and E07 describe PFAS being periodically spiked into the NF feed and evaluated in high-recovery batch experiments, and E05 notes lack of continuous PFAS exposure. From this design it reasonably follows (design-inferred) that extrapolation to continuous PFAS loading is limited.\"},{\"field_path\":\"matrix.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"E01 states the NF system treated tertiary wastewater effluent, and E06 notes that permeate from batch experiments was collected and stored for subsequent adsorbent experiments. However, the phrase \u201cused directly as product water\u201d is not explicitly stated in the text and is somewhat interpretive, so the matrix description is mostly but not fully supported.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 states that a pilot-scale NF system was outfitted with a Filmtec NF270 membrane. Describing it as a loose nanofiltration membrane is consistent with E03, which discusses loose NF membranes providing significant PFAS rejection.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The field appropriately has a null unit for a membrane type descriptor; no numeric unit is expected or provided in the source.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E07 states that under normal operation the system treated wastewater effluent in a flow-through configuration where permeate and concentrate were both discharged, exposing the membrane continuously to wastewater to study fouling/scaling impacts. This matches the described baseline operation mode and duration context from E01/E15 (>45 days).\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Operation mode is a qualitative description; leaving the unit as null is appropriate and consistent with the text.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E07 describes the PFAS rejection tests: on days 1, 15, and 30, wastewater feed was stopped, PFAS were spiked into the NF feed tank, permeate and concentrate were recycled for 15 min to mix, then permeate was discharged while concentrate was recycled until 90% effective recovery. This matches the recorded operation mode description for PFAS rejection tests.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This field is a qualitative mode description, so a null unit is appropriate and consistent with the source.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E07 states that NF feed and permeate samples were collected at the end of recirculation (15% effective and single pass recovery) and at 25, 50, 75, 85, and 90% effective recovery set points. These set points match the listed values exactly.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The use of \u201c%\u201d as the unit for effective water recovery is consistent with the way recovery is expressed in E07.\"},{\"field_path\":\"operating_conditions[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 and E15 specify that the pilot NF system was operated continuously for >45 days treating wastewater effluent, and E07 clarifies PFAS were added only during periodic batch rejection tests. This supports the described operation duration and qualifiers.\"},{\"field_path\":\"operating_conditions[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The unit \u201cdays\u201d matches the way operation duration (>45 days) is reported in E01 and E15.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"E01 states the PFAS mix included long, short, and ultrashort chain PFAAs, Gen-X, and a sulfonamide precursor. E05 lists specific PFAS (PFOA, PFOS, PFHxS, PFNA, Gen-X) but does not explicitly label them as \u201cMCL-regulated\u201d in the provided excerpt. Thus, the PFAS mixture description is supported, but the explicit framing as \u201cMCL-regulated\u201d PFAAs is an interpretive qualifier.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E08 reports \u201c>92% rejection of C \u2265 4 perfluoroalkyl acids (PFAAs).\u201d The recorded value \u201c>92\u201d with inequality form matches this statement.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Although E08 does not restate the unit, the context clearly refers to percent rejection; the unit \u201c% rejection\u201d is appropriate and consistent.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E08 reports \u201c>98% rejection of hexafluoropropylene oxide dimer acid (Gen-X).\u201d The recorded value \u201c>98\u201d with inequality form matches the source.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The data in E08 are expressed as percent rejection; the unit \u201c% rejection\u201d is correct.\"},{\"field_path\":\"quantitative_findings[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E08 states \u201clower rejection (63\u201392%) of ultrashort chain PFAS,\u201d which corresponds directly to the recorded range value \u201c63-92.\u201d\"},{\"field_path\":\"quantitative_findings[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"These values are clearly percentages of rejection; the unit \u201c% rejection\u201d is appropriate.\"},{\"field_path\":\"quantitative_findings[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 reports combined permeate concentration for PFOA as 16.1 \u00b1 0.1 ng/L. The extracted value 16.1 (exact_numeric) matches the mean reported value.\"},{\"field_path\":\"quantitative_findings[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Unit \u201cng/L\u201d matches the concentration unit reported for PFOA in E05.\"},{\"field_path\":\"quantitative_findings[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 reports PFOS concentration in combined permeate as 10.7 \u00b1 0.0 ng/L. The recorded value 10.7 matches the mean.\"},{\"field_path\":\"quantitative_findings[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Unit \u201cng/L\u201d matches the unit used for PFOS in E05.\"},{\"field_path\":\"quantitative_findings[5].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 reports PFHxS concentration in combined permeate as 29.3 \u00b1 0.1 ng/L. The extracted value 29.3 matches.\"},{\"field_path\":\"quantitative_findings[5].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Unit \u201cng/L\u201d is consistent with E05 for PFHxS.\"},{\"field_path\":\"quantitative_findings[6].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 reports PFNA concentration in combined permeate as 10.4 \u00b1 0.9 ng/L. The recorded value 10.4 matches the mean.\"},{\"field_path\":\"quantitative_findings[6].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Unit \u201cng/L\u201d matches the PFNA unit in E05.\"},{\"field_path\":\"quantitative_findings[7].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 reports Gen-X concentration in combined permeate as 21.4 \u00b1 0.3 ng/L. The extracted value 21.4 is correct.\"},{\"field_path\":\"quantitative_findings[7].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Unit \u201cng/L\u201d matches the Gen-X concentration unit in E05.\"},{\"field_path\":\"residuals_byproducts[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 notes that, despite high PFAS rejection, combined permeate concentrations (PFOA, PFOS, PFHxS, PFNA, Gen-X) still exceeded EPA MCLs and that additional treatment would be required. This matches the summarized statement about residual PFAS in permeate and need for further treatment.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 and E15 describe a pilot-scale NF system operated continuously for >45 days treating tertiary wastewater effluent. This matches the study scale description.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E03 describes the use of a loose NF membrane for initial PFAS and matrix constituent rejection, and E01/E06 specify a Filmtec NF270 membrane, high-recovery batch PFAS rejection tests, and subsequent GAC and IX RSSCTs treating NF permeate. This supports the treatment description as NF with NF270 at high recovery followed by potential GAC or IX adsorption.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014study identity, pilot NF scale and configuration, wastewater matrix, PFAS mixture, separation endpoints, and all quantitative PFAS rejection and permeate concentration values with correct units\u2014are directly supported. Minor interpretive qualifiers in matrix and PFAS scope do not materially affect the main findings, so the record is suitable for use in synthesis with attention to those qualifiers.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of when batch adsorption results do and do not predict column, pilot, or full-scale PFAS treatment performance.\",\"task_id\":\"RT02\",\"title\":\"Translating PFAS adsorption results from batch tests to continuous treatment\"}\n\nTask-specific extraction objective:\nExtract study scale, adsorbent, PFAS and matrix, batch or flow configuration, contact time, flow and bed properties, capacity definition, breakthrough criterion, bed volumes, media lifetime, and uncertainty or scale-up limitation.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Griffin, A.M.; Elbers, J.; Bellona, C.; Strathmann, T.J. Combining Nanofiltration and Adsorbents to Achieve Effective PFAS Removal in Wastewater Effluent. Environ. Sci. Technol. 2026. DOI: 10.1021/10.1021/acs.est.5c17011.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S10-E01\",\n      \"S10-E03\",\n      \"S10-E05\",\n      \"S10-E07\",\n      \"S10-E08\"\n    ],\n    \"reason\": \"This record concerns NF membrane separation performance rather than adsorption; while permeate quality and removal percentages are relevant to downstream adsorbent design and treatment-train scale-up, NF rejection endpoints are not directly comparable to batch or column adsorption capacities without additional information on hydraulic loading, membrane area, and PFAS loading, which are not fully specified in the provided text.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1021/acs.est.5c17011\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"separation\",\n      \"evidence_locator_ids\": [\n        \"S10-E01\",\n        \"S10-E03\",\n        \"S10-E05\",\n        \"S10-E08\"\n      ],\n      \"interpretation\": \"NF270 provided high rejection of most PFAS, especially longer-chain PFAAs and Gen-X, but residual PFAS concentrations in permeate remained above EPA MCLs due to elevated feed concentrations; NF is positioned as a pretreatment that reduces PFAS and competitors (EfOM, inorganic ions) before downstream adsorption.\",\n      \"reported_term\": \"PFAS rejection by nanofiltration (effective and single-pass rejection versus recovery) and residual PFAS concentrations in NF permeate\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S10-E04\",\n        \"S10-E05\"\n      ],\n      \"statement\": \"The NF membrane was not continuously exposed to PFAS for the entire 45-day pilot run, so the impact of continuous PFAS adsorption to/interaction with the membrane on long-term rejection performance was not determined.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S10-E03\",\n        \"S10-E05\",\n        \"S10-E08\"\n      ],\n      \"statement\": \"NF alone provided high PFAS rejection, especially for long-chain regulated compounds, but permeate PFAS concentrations still exceeded EPA MCLs for several target PFAS because of high feed concentrations; therefore, additional downstream treatment (e.g., adsorption) would be needed for applications requiring very low PFAS levels.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S10-E01\",\n        \"S10-E04\",\n        \"S10-E07\"\n      ],\n      \"statement\": \"PFAS rejection was evaluated in periodically spiked batch experiments rather than in a continuously PFAS-contaminated wastewater stream, limiting direct extrapolation of rejection trends under realistic continuous PFAS loading conditions.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S10-E01\",\n      \"S10-E07\"\n    ],\n    \"value\": \"tertiary wastewater effluent used as NF feed; NF permeate used directly as product water and as feed to subsequent adsorption tests\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E01\",\n        \"S10-E03\"\n      ],\n      \"name\": \"membrane type\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"Filmtec NF270 loose nanofiltration membrane\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E07\"\n      ],\n      \"name\": \"operation mode (baseline)\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"continuous flow-through treatment of wastewater effluent, both permeate and concentrate discharged, to study fouling and scaling over >45 days\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E07\"\n      ],\n      \"name\": \"operation mode (PFAS rejection tests)\",\n      \"qualifiers\": \"PFAS rejection evaluated during high-recovery (90%) batch experiments at multiple effective recovery set points\",\n      \"unit\": null,\n      \"value\": \"on days 1, 15, and 30, wastewater feed was stopped and PFAS were spiked into the NF feed tank; permeate and concentrate were recycled for 15 min to fully mix PFAS (batch mode), then operated to 90% effective recovery with permeate discharged and concentrate recycled\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E07\"\n      ],\n      \"name\": \"effective recovery set points\",\n      \"qualifiers\": \"PFAS samples collected from NF feed and permeate at each set point\",\n      \"unit\": \"%\",\n      \"value\": \"15%, 25%, 50%, 75%, 85%, and 90% effective water recovery\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E01\",\n        \"S10-E04\",\n        \"S10-E07\"\n      ],\n      \"name\": \"operation duration\",\n      \"qualifiers\": \"continuous treatment of wastewater effluent for fouling/scaling evaluation; PFAS were added only during periodic batch rejection tests, not continuously\",\n      \"unit\": \"days\",\n      \"value\": \">45\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E01\",\n        \"S10-E05\",\n        \"S10-E08\"\n      ],\n      \"value\": \"mixture of PFAS including long, short, and ultrashort chain PFAAs, hexafluoropropylene oxide dimer acid (Gen-X), and a sulfonamide precursor; individual MCL-regulated PFAAs reported include PFOA, PFOS, PFHxS, and PFNA\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E08\"\n      ],\n      \"name\": \"PFAS rejection - C>=4 PFAAs\",\n      \"qualifiers\": \"effective rejection of perfluoroalkyl acids with chain length C>=4 during NF batch experiments at high recovery; exact conditions not further specified in supplied text\",\n      \"unit\": \"% rejection\",\n      \"value\": \">92\",\n      \"value_form\": \"inequality\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E08\"\n      ],\n      \"name\": \"PFAS rejection - Gen-X\",\n      \"qualifiers\": \"rejection of hexafluoropropylene oxide dimer acid (Gen-X) by NF270 in wastewater effluent during batch tests\",\n      \"unit\": \"% rejection\",\n      \"value\": \">98\",\n      \"value_form\": \"inequality\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E08\"\n      ],\n      \"name\": \"PFAS rejection - ultrashort PFAS\",\n      \"qualifiers\": \"reported range of rejection for ultrashort-chain PFAS by NF270 in wastewater effluent; specific compounds not listed in supplied text\",\n      \"unit\": \"% rejection\",\n      \"value\": \"63-92\",\n      \"value_form\": \"range\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E05\"\n      ],\n      \"name\": \"NF permeate concentration - PFOA\",\n      \"qualifiers\": \"combined permeate from batch NF experiments; mean \\u00b1 standard deviation 16.1 \\u00b1 0.1 ng/L; value exceeded EPA MCL\",\n      \"unit\": \"ng/L\",\n      \"value\": \"16.1\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E05\"\n      ],\n      \"name\": \"NF permeate concentration - PFOS\",\n      \"qualifiers\": \"combined permeate from batch NF experiments; 10.7 \\u00b1 0.0 ng/L; value exceeded EPA MCL\",\n      \"unit\": \"ng/L\",\n      \"value\": \"10.7\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E05\"\n      ],\n      \"name\": \"NF permeate concentration - PFHxS\",\n      \"qualifiers\": \"combined permeate from batch NF experiments; 29.3 \\u00b1 0.1 ng/L; value exceeded EPA MCL\",\n      \"unit\": \"ng/L\",\n      \"value\": \"29.3\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E05\"\n      ],\n      \"name\": \"NF permeate concentration - PFNA\",\n      \"qualifiers\": \"combined permeate from batch NF experiments; 10.4 \\u00b1 0.9 ng/L; value exceeded EPA MCL\",\n      \"unit\": \"ng/L\",\n      \"value\": \"10.4\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E05\"\n      ],\n      \"name\": \"NF permeate concentration - Gen-X\",\n      \"qualifiers\": \"combined permeate from batch NF experiments; 21.4 \\u00b1 0.3 ng/L; value exceeded EPA MCL\",\n      \"unit\": \"ng/L\",\n      \"value\": \"21.4\",\n      \"value_form\": \"exact_numeric\"\n    }\n  ],\n  \"record_id\": \"RT02-bge_llm_local_rag-S10-R02\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S10-E05\",\n        \"S10-E08\"\n      ],\n      \"statement\": \"Despite high rejection percentages, residual PFAS concentrations in NF permeate after batch experiments (e.g., PFOA 16.1 ng/L, PFOS 10.7 ng/L, PFHxS 29.3 ng/L, PFNA 10.4 ng/L, Gen-X 21.4 ng/L) remained above EPA MCLs, indicating incomplete removal and the need for additional treatment steps.\"\n    }\n  ],\n  \"source_id\": \"S10\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S10-E01\",\n      \"S10-E07\"\n    ],\n    \"value\": \"pilot-scale nanofiltration (NF) system operated continuously for more than 45 days treating tertiary wastewater effluent\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S10-E01\",\n      \"S10-E03\",\n      \"S10-E07\"\n    ],\n    \"value\": \"nanofiltration using a loose NF270 membrane operated at high water recovery; NF permeate then considered for subsequent GAC or IX adsorption treatment\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 11,\n  \"bge_score\": 0.358879417181015,\n  \"citation\": \"Griffin, A.M.; Elbers, J.; Bellona, C.; Strathmann, T.J. Combining Nanofiltration and Adsorbents to Achieve Effective PFAS Removal in Wastewater Effluent. Environmental Science & Technology 2026. DOI: 10.1021/acs.est.5c17011.\",\n  \"doi\": \"10.1021/acs.est.5c17011\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1021/acs.est.5c17011\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 6,\n      \"locator_id\": \"S10-E01\",\n      \"query_scores\": {\n        \"RT02-C1\": 4.3426618503872305e-05,\n        \"RT02-C2\": 0.03565094992518425,\n        \"RT02-C3\": 3.72884824173525e-05,\n        \"umbrella\": 0.5186657309532166\n      },\n      \"section\": \"methods\",\n      \"text\": \"of PFAS and matrix constituents, including EfOM and inorganic ions that inhibit adsorption, followed by either GAC or IX treatment of NF permeate for further PFAS removal. A pilot-scale NF system outfitted with a Filmtec NF270 membrane was operated continuously to treat tertiary wastewater effluent for >45 days. A mixture of PFAS was spiked into the NF feed at intervals to evaluate PFAS rejection in high recovery (90%) batch experiments and determine the impact of continuous membrane exposure to wastewater on PFAS rejection. The mix of PFAS examined included long, short, and ultrashort chain PFAAs, Gen-X, and a sulfonamide precursor. Rapid small scale column tests (RSSCTs) then compared PFAS adsorption by GAC (Calgon Filtersorb 400) and PFAS-selective IX (Calgon Calres2301) in wastewater effluent with and without NF pretreatment. Additional RSSCTs were performed where PFAS were spiked into the NF permeate to specifically assess how membrane removal of nontarget constituents (e.g., EfOM, inorganic ions) affects PFAS adsorption. Findings from this work advance the understanding of PFAS rejection by NF membranes in wastewater, PFAS adsorption by GAC and IX in varied water matrices, and removal of ultrashort PFAS by NF and adsorbents and demonstrate the potential of a combined membrane-adsorbent treatment train for meeting strict PFAS limits when treating wastewater and other solute-rich matrices\"\n    },\n    {\n      \"corpus_chunk\": 15,\n      \"locator_id\": \"S10-E02\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0208046343177557,\n        \"RT02-C2\": 0.011214186437427998,\n        \"RT02-C3\": 3.733210178324953e-05,\n        \"umbrella\": 0.11048030853271484\n      },\n      \"section\": \"methods\",\n      \"text\": \"(BVs) treated before breakthrough in RSSCTs. BVs were calculated by comparing the volume of water treated to the volume of the adsorbent bed. = \\u00d7 BV Flow Rate T ime Volume Ads orbent Bed (5) Breakthrough was quantified by BV 10 , BV 50 , and BV MCL values. BV 10 is the number of BVs treated until the RSSCT effluent concentration (C) was equivalent to 10% of the RSSCT influent concentration (C 0 ). Similarly, BV 50 is the number of BVs treated until C/C 0 = 0.5. BV MCL is the number of BVs treated until C first surpassed one of the EPA MCL criteria. BV 10 , BV 50 , and BV MCL were calculated by linear interpolation between sampling points. Media usage rates (MURs; pounds per million gallons (lb/MG)) were estimated based on the mass of media required to treat one million gallons of water if media replacement occurred at BV MCL . 3. RESULTS AND DISCUSSION 3.1. PFAS Rejection from Wastewater Effluent by Nanofiltration The pilot NF system was operated in the flow-through configuration for >45 days, treating wastewater effluent that was periodically spiked with PFAS to evaluate PFAS rejection during high recovery batch experiments. PFAS effective and single pass rejection values vs recovery for the day 30 batch\"\n    },\n    {\n      \"corpus_chunk\": 5,\n      \"locator_id\": \"S10-E03\",\n      \"query_scores\": {\n        \"RT02-C1\": 6.624920933973044e-05,\n        \"RT02-C2\": 0.0028566820546984673,\n        \"RT02-C3\": 3.836588439298794e-05,\n        \"umbrella\": 0.016009896993637085\n      },\n      \"section\": \"methods\",\n      \"text\": \"osmosis (RO) or nanofiltration (NF) membranes can be applied, as an alternative to conventional adsorbents, to remove PFAS from complex wastewater streams, in combina- tion with destructive treatment technologies to mineralize PFAS in membrane concentrate. RO provides near complete PFAS rejection, but elevated concentrations of nontarget solutes present in wastewater increase energy requirements and limit water recovery. Loose NF membranes with larger effective pore sizes (or molecular weight cutoffs (MWCO)) than RO can provide significant rejection of PFAS, especially longer chain compounds (>95% rejection), with lower required energy and propensity for fouling or scaling than RO. 9,11,15 However, residual PFAS may be present in NF permeate at concentrations exceeding EPA MCLs, limiting the standalone use of NF in certain treatment applications (e.g., wastewater reuse and strict industrial treatment goals). Moreover, the majority of studies evaluating PFAS rejection by NF and RO membranes have been conducted over short durations in relatively clean water matrices; therefore, the impact of organic fouling and inorganic scaling on PFAS rejection is not well understood. 16,17 To address the limitations of each respective treatment technology, this contribution evaluated a treatment train consisting of a loose NF membrane to provide initial rejection of PFAS and matrix constituents, including EfOM and inorganic ions that inhibit adsorption, followed by either\"\n    },\n    {\n      \"corpus_chunk\": 22,\n      \"locator_id\": \"S10-E04\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.00010503079829504713,\n        \"RT02-C2\": 0.0030626230873167515,\n        \"RT02-C3\": 3.728944284375757e-05,\n        \"umbrella\": 0.39356979727745056\n      },\n      \"section\": \"results\",\n      \"text\": \"39 These results indicate that foulants may improve rejection by enhancing steric exclusion of long chain PFAS through coordination of PFAS with natural organic matter (NOM) or by NOM reducing the membrane\\u2019s effective pore size, but have varied impacts on electrostatic repulsion, which is important for the rejection of short chain PFAS like PFBS. Studies evaluating PFAS rejection in real wastewater matrices by spiral wound membranes are less common. PFAS rejection by the Filmtec NF90 membrane was observed to be higher in semiconductor manufacturing wastewater compared to deionized water (5 mM NaCl, 1 mM NaHCO 3 ). 9 This was attributed to increased coordination of PFAS with EfOM or inorganic ions increasing steric exclusion, but the limited volume of water treated precluded analysis of the long-term impact of membrane fouling on PFAS rejection and electrostatic interactions are less important for PFAS rejection by the tighter NF90 compared to the NF270 membrane used in the present study. 9 Liu et al. found that PFAS rejection by the NF270 membrane did not change significantly over 30 days of continuous treatment of contaminated groundwater, but organic fouling or biofouling was not observed over the duration of testing. 11 The stability of batch rejection values in the current study suggests that PFAS rejection was not significantly impacted by the fouling or scaling that occurred; however, the membrane was not continuously exposed to PFAS for the duration of the pilot,\"\n    },\n    {\n      \"corpus_chunk\": 23,\n      \"locator_id\": \"S10-E05\",\n      \"query_scores\": {\n        \"RT02-C1\": 3.9503418520325795e-05,\n        \"RT02-C2\": 0.0012896494008600712,\n        \"RT02-C3\": 3.731131801032461e-05,\n        \"umbrella\": 0.37194734811782837\n      },\n      \"section\": \"methods\",\n      \"text\": \"scaling that occurred; however, the membrane was not continuously exposed to PFAS for the duration of the pilot, so the impact of PFAS adsorption on rejection was not determined. Additional research evaluating PFAS rejection in a continuous PFAS-impacted wastewater stream is recommen- ded. While the NF system provided high rejection of PFAS, particularly long chain compounds that are subject to regulation, concentrations in the combined permeate (PFOA = 16.1 \\u00b1 0.1 ng/L, PFOS = 10.7 \\u00b1 0.0 ng/L, PFHxS = 29.3 \\u00b1 0.1 ng/L, PFNA = 10.4 \\u00b1 0.9 ng/L, and Gen-X = 21.4 \\u00b1 0.3 ng/L) from batch NF experiments still exceeded EPA MCLs due to the high PFAS concentrations in the feedwater. Therefore, additional treatment would be required if the NF permeate is intended for use in applications such as augmentation of drinking water supplies. Figure 4. NF pilot system feed pressure (left axis) and temperature- corrected specific flux (TCSF; right axis) over the 45 day duration of continuously treating wastewater effluent. The vertical dashed line indicates when sequential NaOH (pH 12) and HCl (pH 4) cleaning was performed.\"\n    },\n    {\n      \"corpus_chunk\": 11,\n      \"locator_id\": \"S10-E06\",\n      \"query_scores\": {\n        \"RT02-C1\": 9.940720337908715e-05,\n        \"RT02-C2\": 0.006277197040617466,\n        \"RT02-C3\": 3.728990486706607e-05,\n        \"umbrella\": 0.2804590165615082\n      },\n      \"section\": \"methods\",\n      \"text\": \"Permeate from the batch experiments was also collected and stored for use in subsequent adsorbent experiments (Section 2.4). 2.4. Rapid Small Scale Column Testing RSSCTs were performed using the constant diffusivity approach to evaluate the performance of GAC and IX for the adsorption of PFAS. 22 RSSCTs were chosen as they allowed for the evaluation of GAC and IX treatment of several feedwater sources in significantly less time and with less water than pilot-scale tests with full size media. Moreover, breakthrough data gathered through RSSCTs have been shown to be representative of pilot performance, and RSSCTs have been widely adopted for the evaluation of PFAS removal by GAC and IX. 13,22,23 Three RSSCT feedwaters were evaluated: 1) wastewater effluent spiked with PFAS, 2) NF permeate from the treatment of wastewater effluent spiked with PFAS (treatment train), and 3) NF permeate spiked with PFAS after the treatment of wastewater effluent (PFAS-spiked permeate). The order of PFAS addition and pretreat- ment for each feedwater is shown in Figure 1. The third feedwater was included to assess the effects of reduced EfOM and other nontarget water constituent concentrations in NF permeate on adsorbent performance while maintaining initial PFAS concentrations com- parable to the first feedwater. RSSCTs for each combination of feedwater and adsorbent were performed in duplicate, and PFAS were\"\n    },\n    {\n      \"corpus_chunk\": 10,\n      \"locator_id\": \"S10-E07\",\n      \"query_scores\": {\n        \"RT02-C1\": 4.046710455440916e-05,\n        \"RT02-C2\": 0.004940834827721119,\n        \"RT02-C3\": 3.730551907210611e-05,\n        \"umbrella\": 0.266082763671875\n      },\n      \"section\": \"methods\",\n      \"text\": \"Under normal operation, the system treated wastewater effluent without the addition of PFAS in a flow-through configuration, where the NF permeate and concentrate were both discharged. This exposed the NF membrane to a continuous source of wastewater effluent with elevated concentrations of EfOM and select inorganic ions (Table 1 and Table S5 in the SI) and facilitated investigation of the impact of membrane fouling and scaling on PFAS rejection. On days 1, 15, and 30 of operation, duplicate batch experiments were performed where the mixture of PFAS described in Table 1 was spiked into the NF feed tank. The supply of wastewater effluent to the NF feed tank was discontinued, PFAS were spiked into the feed tank, and the NF permeate and concentrate were both recycled to the feed tank for 15 min to provide complete mixing. After 15 min, NF concentrate recycling continued, but the permeate was discharged until an effective water recovery of 90% was achieved (see Section 2.6). NF feed and permeate samples were collected at the end of recirculation (15% effective and single pass recovery) and at 25, 50, 75, 85, and 90% effective recovery set points (see Section 2.6). Permeate from the batch experiments was also collected and stored for use in subsequent adsorbent experiments (Section 2.4).\"\n    },\n    {\n      \"corpus_chunk\": 0,\n      \"locator_id\": \"S10-E08\",\n      \"query_scores\": {\n        \"RT02-C1\": 3.995144652435556e-05,\n        \"RT02-C2\": 0.01589931733906269,\n        \"RT02-C3\": 3.730160460690968e-05,\n        \"umbrella\": 0.19408529996871948\n      },\n      \"section\": \"abstract\",\n      \"text\": \"Combining Nanofiltration and Adsorbents to Achieve Effective PFAS Removal in Wastewater Effluent Aron M. Griffin,* Jaidyn Elbers, Christopher Bellona, and Timothy J. Strathmann Cite This: https://doi.org/10.1021/acs.est.5c17011 Read Online ACCESS Metrics & More Article Recommendations * s\\u0131 Supporting Information ABSTRACT: Adsorption of per- and polyfluoroalkyl substances (PFAS) by granular activated carbon (GAC) and ion exchange resins (IX) is negatively impacted by elevated concentrations of effluent organic matter (EfOM) and other background water constituents (e.g., coadsorbing inorganic ions) in complex matrices such as wastewater effluent. Here, we evaluated a hybrid system comprised of nanofiltration (NF) as an initial treatment step to reduce concentrations of PFAS, EfOM, and select inorganic ions, followed by either GAC or IX treatment of membrane permeate. A pilot membrane system utilizing a loose nanofilter (NF270) was operated continuously for >45 days, treating wastewater effluent with PFAS periodically added to the feed to evaluate rejection in high recovery (90%) batch experiments. Experimental results demonstrated >92% rejection of C \\u2265 4 perfluoroalkyl acids (PFAAs), >98% rejection of hexafluoropropylene oxide dimer acid (Gen-X), and lower rejection (63\\u221292%) of ultrashort chain PFAS and\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2026 - Griffin - Combining Nanofiltration and Adsorbents to Achieve Effective PFAS Removal in Wastewater Effluent.pdf\",\n  \"source_id\": \"S10\",\n  \"title\": \"Combining Nanofiltration and Adsorbents to Achieve Effective PFAS Removal in Wastewater Effluent\",\n  \"year\": \"2026\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "6c69e65233e59618be853784984035c63a4ebeea2d25611d4f8eb06df482fd8e",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.0482305,
+    "finish_reason": "stop",
+    "input_tokens": 7210,
+    "latency_seconds": 33.205364916007966,
+    "output_tokens": 4037,
+    "reasoning_tokens": 1468,
+    "response_id": "chatcmpl-E9N0muQ5POYSWNNL4zTxhD6nguYkh",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 11247,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The study focuses on nanofiltration (NF) rejection performance (not adsorption capacities). Cited text describes NF rejection, pilot NF operation, and subsequent RSSCT adsorption tests, justifying that this record is descriptive-only for adsorption comparability (E01, E03, E05, E07, E08).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The reason correctly explains that NF rejection data are different in nature from batch/column adsorption capacities and that additional hydraulic and loading information would be needed. This interpretation is consistent with the NF-focused methods and results in the cited text (E01, E03, E05, E07, E08).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The endpoint concerns PFAS rejection by a nanofiltration membrane, which is appropriately classified as a separation endpoint. The abstract and methods explicitly discuss PFAS rejection by NF270 (E01, E03, E05, E08).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "The interpretation accurately summarizes that NF270 provided high rejection of most PFAS, especially longer-chain PFAAs and Gen-X, but that permeate concentrations remained above EPA MCLs, making NF more suitable as a pretreatment step before adsorption. These points are supported by E03, E05, and E08.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].statement",
+        "reason": "E04/E05 explicitly state that the membrane was not continuously exposed to PFAS during the pilot and that the impact of PFAS adsorption on rejection was not determined, matching the limitation text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1].statement",
+        "reason": "E03 and E05 state that NF provided high PFAS rejection (particularly long-chain regulated compounds) but that combined permeate concentrations still exceeded EPA MCLs, so additional treatment would be required. This directly supports the limitation statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[2].statement",
+        "reason": "E01 and E07 describe PFAS being periodically spiked into the NF feed and evaluated in high-recovery batch experiments, and E05 notes lack of continuous PFAS exposure. From this design it reasonably follows (design-inferred) that extrapolation to continuous PFAS loading is limited.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "matrix.value",
+        "reason": "E01 states the NF system treated tertiary wastewater effluent, and E06 notes that permeate from batch experiments was collected and stored for subsequent adsorbent experiments. However, the phrase \u201cused directly as product water\u201d is not explicitly stated in the text and is somewhat interpretive, so the matrix description is mostly but not fully supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "E01 states that a pilot-scale NF system was outfitted with a Filmtec NF270 membrane. Describing it as a loose nanofiltration membrane is consistent with E03, which discusses loose NF membranes providing significant PFAS rejection.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The field appropriately has a null unit for a membrane type descriptor; no numeric unit is expected or provided in the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "E07 states that under normal operation the system treated wastewater effluent in a flow-through configuration where permeate and concentrate were both discharged, exposing the membrane continuously to wastewater to study fouling/scaling impacts. This matches the described baseline operation mode and duration context from E01/E15 (>45 days).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "Operation mode is a qualitative description; leaving the unit as null is appropriate and consistent with the text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "E07 describes the PFAS rejection tests: on days 1, 15, and 30, wastewater feed was stopped, PFAS were spiked into the NF feed tank, permeate and concentrate were recycled for 15 min to mix, then permeate was discharged while concentrate was recycled until 90% effective recovery. This matches the recorded operation mode description for PFAS rejection tests.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "This field is a qualitative mode description, so a null unit is appropriate and consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "E07 states that NF feed and permeate samples were collected at the end of recirculation (15% effective and single pass recovery) and at 25, 50, 75, 85, and 90% effective recovery set points. These set points match the listed values exactly.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "The use of \u201c%\u201d as the unit for effective water recovery is consistent with the way recovery is expressed in E07.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].value",
+        "reason": "E01 and E15 specify that the pilot NF system was operated continuously for >45 days treating wastewater effluent, and E07 clarifies PFAS were added only during periodic batch rejection tests. This supports the described operation duration and qualifiers.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].unit",
+        "reason": "The unit \u201cdays\u201d matches the way operation duration (>45 days) is reported in E01 and E15.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "pfas_scope[0].value",
+        "reason": "E01 states the PFAS mix included long, short, and ultrashort chain PFAAs, Gen-X, and a sulfonamide precursor. E05 lists specific PFAS (PFOA, PFOS, PFHxS, PFNA, Gen-X) but does not explicitly label them as \u201cMCL-regulated\u201d in the provided excerpt. Thus, the PFAS mixture description is supported, but the explicit framing as \u201cMCL-regulated\u201d PFAAs is an interpretive qualifier.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "E08 reports \u201c>92% rejection of C \u2265 4 perfluoroalkyl acids (PFAAs).\u201d The recorded value \u201c>92\u201d with inequality form matches this statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "Although E08 does not restate the unit, the context clearly refers to percent rejection; the unit \u201c% rejection\u201d is appropriate and consistent.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "E08 reports \u201c>98% rejection of hexafluoropropylene oxide dimer acid (Gen-X).\u201d The recorded value \u201c>98\u201d with inequality form matches the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "The data in E08 are expressed as percent rejection; the unit \u201c% rejection\u201d is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].value",
+        "reason": "E08 states \u201clower rejection (63\u201392%) of ultrashort chain PFAS,\u201d which corresponds directly to the recorded range value \u201c63-92.\u201d",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].unit",
+        "reason": "These values are clearly percentages of rejection; the unit \u201c% rejection\u201d is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].value",
+        "reason": "E05 reports combined permeate concentration for PFOA as 16.1 \u00b1 0.1 ng/L. The extracted value 16.1 (exact_numeric) matches the mean reported value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].unit",
+        "reason": "Unit \u201cng/L\u201d matches the concentration unit reported for PFOA in E05.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].value",
+        "reason": "E05 reports PFOS concentration in combined permeate as 10.7 \u00b1 0.0 ng/L. The recorded value 10.7 matches the mean.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].unit",
+        "reason": "Unit \u201cng/L\u201d matches the unit used for PFOS in E05.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[5].value",
+        "reason": "E05 reports PFHxS concentration in combined permeate as 29.3 \u00b1 0.1 ng/L. The extracted value 29.3 matches.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[5].unit",
+        "reason": "Unit \u201cng/L\u201d is consistent with E05 for PFHxS.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[6].value",
+        "reason": "E05 reports PFNA concentration in combined permeate as 10.4 \u00b1 0.9 ng/L. The recorded value 10.4 matches the mean.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[6].unit",
+        "reason": "Unit \u201cng/L\u201d matches the PFNA unit in E05.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[7].value",
+        "reason": "E05 reports Gen-X concentration in combined permeate as 21.4 \u00b1 0.3 ng/L. The extracted value 21.4 is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[7].unit",
+        "reason": "Unit \u201cng/L\u201d matches the Gen-X concentration unit in E05.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0].statement",
+        "reason": "E05 notes that, despite high PFAS rejection, combined permeate concentrations (PFOA, PFOS, PFHxS, PFNA, Gen-X) still exceeded EPA MCLs and that additional treatment would be required. This matches the summarized statement about residual PFAS in permeate and need for further treatment.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "E01 and E15 describe a pilot-scale NF system operated continuously for >45 days treating tertiary wastewater effluent. This matches the study scale description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "E03 describes the use of a loose NF membrane for initial PFAS and matrix constituent rejection, and E01/E06 specify a Filmtec NF270 membrane, high-recovery batch PFAS rejection tests, and subsequent GAC and IX RSSCTs treating NF permeate. This supports the treatment description as NF with NF270 at high recovery followed by potential GAC or IX adsorption.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT02-bge_llm_local_rag-S10-R02",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014study identity, pilot NF scale and configuration, wastewater matrix, PFAS mixture, separation endpoints, and all quantitative PFAS rejection and permeate concentration values with correct units\u2014are directly supported. Minor interpretive qualifiers in matrix and PFAS scope do not materially affect the main findings, so the record is suitable for use in synthesis with attention to those qualifiers.",
+    "task_id": "RT02"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

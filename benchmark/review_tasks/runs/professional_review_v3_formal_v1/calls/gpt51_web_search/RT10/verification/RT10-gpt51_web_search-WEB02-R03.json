@@ -1,0 +1,248 @@
+{
+  "call_key": "RT10:gpt51_web_search:verify:RT10-gpt51_web_search-WEB02-R03",
+  "created_at": "2026-08-05T04:45:25.134221+00:00",
+  "raw_response_text": "{\"task_id\":\"RT10\",\"record_id\":\"RT10-gpt51_web_search-WEB02-R03\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract only provides qualitative trends (e.g., NOM reduces capacity; multispecies isotherms lower capacity) without numerical capacities or clearly defined denominators. Classifying comparability as 'descriptive_only' is a reasonable synthesis judgment consistent with the limited quantitative detail in the cited text.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract explicitly discusses PFAS adsorption capacities with GAC and how they change with NOM and ions (E03), which fits a sorption endpoint.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E03 states that NOM reduced PFAS adsorption capacities and that this negative effect was partially offset by Ca and sulfate at constant ionic strength, consistent with competitive sorption, pore-blocking, and charge-screening by divalent ions. The record\u2019s interpretation restates these points and only slightly elaborates the mechanism (electrostatic screening), which is consistent with the phrase 'charge-screening by divalent ions'.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E04 reports that multispecies competitive isotherms yielded lower solid-phase capacities than single-solute isotherms, which is clearly a sorption/adsorption endpoint.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E04 says multispecies competitive isotherms gave lower capacities than single-solute isotherms, demonstrating strong competitive interactions among co-occurring PFAS and other solutes in realistic water matrices. The interpretation accurately reflects this statement.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Within the abstract, matrix effects of NOM and Ca/sulfate and multispecies conditions are only described qualitatively, with no concentrations or numerical capacity changes and no specific PFAS identities listed (E01\u2013E04). Characterizing this as a design-inferred limitation matches the cited content.\"},{\"field_path\":\"matrix.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The abstract mentions 'batch adsorption experiments' and 'realistic water matrices' (E01\u2013E04) but does not explicitly state that solutions are 'representative of drinking/source waters.' It does, however, support the presence of NOM, calcium, sulfate, and co-occurring PFAS/solutes. The added description of representativeness to drinking/source water is an inference beyond the text.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 explicitly states that batch adsorption experiments used Filtrasorb 400 GAC. Using 'Filtrasorb 400' as the GAC type is correct.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This operating condition is categorical (GAC type), so leaving the unit null is appropriate and consistent with the source.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This condition flags the presence of NOM without a numeric value. E03 confirms the presence of natural organic matter and its qualitative effect. An empty string for value with detail in qualifiers is consistent with the qualitative nature of the abstract.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"No numeric NOM concentration is reported in the abstract, so a null unit is appropriate.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E03 states that calcium and sulfate were present at constant ionic strength and partially offset NOM\u2019s negative effect. Treating this as a qualitative presence condition (empty value, with explanatory qualifiers) is consistent with the cited text.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Since no concentrations of Ca2+ or sulfate are given in the abstract, leaving unit null is appropriate.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E04 describes 'multispecies competitive isotherms' with co-occurring PFAS and other solutes. The value 'multispecies competitive isotherms' correctly reflects this condition.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The condition is categorical (type of isotherm), so having no unit is appropriate.\"},{\"field_path\":\"operating_conditions[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E04 contrasts 'multispecies competitive isotherms' with 'single-solute isotherms.' Using 'single-solute isotherms' to describe the PFAS-only condition matches the source.\"},{\"field_path\":\"operating_conditions[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This is again a categorical operating condition (type of isotherm); a null unit is appropriate.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The title specifies 'Perfluoroalkyl Chemical Adsorption,' and PFAS adsorption is discussed throughout the abstract (E01\u2013E04). The abstract does not list individual PFAS or concentrations, so the note that identities and concentrations are not specified is accurate.\"},{\"field_path\":\"study_scale.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The abstract mentions 'batch adsorption experiments' (E01), which supports batch laboratory tests with GAC. However, the term 'bench-scale' is an inference; the abstract does not explicitly state the experimental scale. Thus, batch experiments are supported, while 'bench-scale' is added interpretation.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract describes batch adsorption experiments using Filtrasorb 400 GAC, examines single-solute vs multispecies isotherms, and investigates the presence of NOM and calcium/sulfate (E01\u2013E04). The treatment summary accurately captures adsorption onto Filtrasorb 400 GAC under these matrix conditions.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014PFAS adsorption onto Filtrasorb 400 GAC, matrix modifiers (NOM, Ca2+/sulfate, multispecies competition), sorption endpoints, and qualitative matrix effects\u2014are supported by the abstract. Minor overinterpretations (e.g., calling the water representative of drinking/source waters or specifying bench-scale) do not misrepresent the main findings and can be corrected or down-weighted during synthesis.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of how water-matrix effects should be tested and reported so that PFAS treatment performance can be translated beyond clean laboratory water.\",\"task_id\":\"RT10\",\"title\":\"Designing PFAS treatment studies that remain valid in real water\"}\n\nTask-specific extraction objective:\nExtract matrix constituent and concentration, PFAS identity, treatment, clean-water control, matrix-modified condition, direction and magnitude of effect, endpoint, proposed mechanism, constituent interaction, matched operating conditions, and study scale.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.hazadv.2023.100322\"],\"all_blocked_titles\":[\"effects of water matrix on per and poly fluoroalkyl substances pfas treatment physical separation and degradation processes a review\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.hazadv.2023.100322\"],\"anchor_id\":\"AR-ZEIDABADI-2023\",\"corpus_source\":\"2023 - Zeidabadi - Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment - Physical-separation and degradation processes - A review.pdf\",\"doi\":\"10.1016/j.hazadv.2023.100322\",\"title\":\"Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment: Physical-separation and degradation processes - A review\",\"url\":\"https://doi.org/10.1016/j.hazadv.2023.100322\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Perfluoroalkyl Chemical Adsorption by Granular Activated Carbon: Impacts of Source Water Characteristics, AWWA Water Science, 2025, 7(4), e70027.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB02-E03\",\n      \"WEB02-E04\"\n    ],\n    \"reason\": \"Although experiments compared single-solute vs multispecies conditions and NOM-only vs NOM+Ca/sulfate at constant ionic strength using the same GAC, the abstract does not provide quantitative capacities or consistent denominators, limiting use to qualitative interpretation of competitive and matrix-interaction effects.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1002/aws2.70027\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"sorption\",\n      \"evidence_locator_ids\": [\n        \"WEB02-E03\"\n      ],\n      \"interpretation\": \"NOM reduced PFAS equilibrium adsorption capacities on Filtrasorb 400 GAC, attributed to competitive sorption and/or pore blocking. When Ca2+ and sulfate were added at constant ionic strength, the negative effect of NOM was partially mitigated, suggesting that divalent cations screen electrostatic repulsion and modify NOM\\u2013PFAS\\u2013GAC interactions.\",\n      \"reported_term\": \"equilibrium PFAS adsorption capacity in the presence of NOM, Ca2+, and sulfate\"\n    },\n    {\n      \"endpoint_type\": \"sorption\",\n      \"evidence_locator_ids\": [\n        \"WEB02-E04\"\n      ],\n      \"interpretation\": \"Multispecies competitive isotherms (with co-occurring PFAS and other solutes) yielded lower effective solid-phase capacities than single-solute isotherms, demonstrating strong competitive interactions among PFAS and other solutes in more realistic water matrices.\",\n      \"reported_term\": \"equilibrium PFAS adsorption capacity from single-solute vs multispecies competitive isotherms\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB02-E03\",\n        \"WEB02-E04\"\n      ],\n      \"statement\": \"Matrix effects of NOM, Ca2+/sulfate, and co-occurring solutes were evaluated qualitatively in bench-scale batch tests; the abstract does not report constituent concentrations or numerical capacity changes, and PFAS identities are not specified.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB02-E03\",\n      \"WEB02-E04\"\n    ],\n    \"value\": \"Aqueous solutions representative of drinking/source waters, amended with natural organic matter (NOM), calcium, sulfate, and co-occurring PFAS/solutes for multi-species conditions.\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB02-E03\",\n        \"WEB02-E04\"\n      ],\n      \"name\": \"GAC type\",\n      \"qualifiers\": \"Commercial granular activated carbon used for all batch adsorption tests.\",\n      \"unit\": null,\n      \"value\": \"Filtrasorb 400\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB02-E03\"\n      ],\n      \"name\": \"Natural organic matter (NOM)\",\n      \"qualifiers\": \"Presence of NOM in solution; concentrations not reported in abstract. NOM presence reduced PFAS adsorption capacities.\",\n      \"unit\": null,\n      \"value\": \"\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB02-E03\"\n      ],\n      \"name\": \"Calcium (Ca2+) and sulfate (SO4 2-)\",\n      \"qualifiers\": \"Calcium and sulfate were present in some NOM experiments at constant ionic strength; these divalent ions partially offset the negative impact of NOM on PFAS adsorption, consistent with charge screening.\",\n      \"unit\": null,\n      \"value\": \"\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB02-E04\"\n      ],\n      \"name\": \"PFAS and solute mixture condition\",\n      \"qualifiers\": \"Isotherms including multiple PFAS and other solutes; compared to single-solute isotherms for the same GAC and general matrix type.\",\n      \"unit\": null,\n      \"value\": \"multispecies competitive isotherms\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB02-E04\"\n      ],\n      \"name\": \"PFAS condition\",\n      \"qualifiers\": \"Isotherms with individual PFAS only, used as reference for multi-species competitive isotherms.\",\n      \"unit\": null,\n      \"value\": \"single-solute isotherms\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB02-E03\",\n        \"WEB02-E04\"\n      ],\n      \"value\": \"Perfluoroalkyl chemicals (PFAS), evaluated alone and in multi-species mixtures; individual identities and concentrations not specified in abstract.\"\n    }\n  ],\n  \"quantitative_findings\": [],\n  \"record_id\": \"RT10-gpt51_web_search-WEB02-R03\",\n  \"residuals_byproducts\": [],\n  \"source_id\": \"WEB02\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB02-E03\",\n      \"WEB02-E04\"\n    ],\n    \"value\": \"Bench-scale batch adsorption experiments with Filtrasorb 400 granular activated carbon (GAC).\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB02-E03\",\n      \"WEB02-E04\"\n    ],\n    \"value\": \"Adsorption onto Filtrasorb 400 granular activated carbon (GAC) in batch equilibrium tests under single-solute and multi-solute conditions, with and without natural organic matter and divalent ions (Ca2+, sulfate).\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"abstract\",\n  \"capture_source_id\": \"WEB12\",\n  \"citation\": \"AWWA Water Science, 2025, 7(4), e70027\",\n  \"covered_component_ids\": [\n    \"RT10-C1\",\n    \"RT10-C2\"\n  ],\n  \"doi\": \"10.1002/aws2.70027\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1002/aws2.70027\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB02-E01\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract (EBSCOhost)\",\n      \"text\": \"Batch adsorption experiments with Filtrasorb 400 GAC showed that decreasing ionic strength from 10 to 2 mM substantially increased equilibrium PFAS capacities by about 79\\u2013146%, indicating inhibitory effects of higher background electrolyte.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB02-E02\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract (EBSCOhost)\",\n      \"text\": \"At pH 9, equilibrium capacities were modestly reduced (up to 19%) relative to pH 7.7\\u20138.1, suggesting mild pH sensitivity of PFAS adsorption to GAC in the tested range.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB02-E03\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract (EBSCOhost)\",\n      \"text\": \"Presence of natural organic matter reduced PFAS adsorption capacities, but this negative effect was partially offset when calcium and sulfate were present at constant ionic strength, consistent with competitive sorption and pore-blocking by NOM and charge\\u2011screening by divalent ions.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB02-E04\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract (EBSCOhost)\",\n      \"text\": \"Multispecies competitive isotherms yielded lower effective solid-phase capacities than single\\u2011solute isotherms, demonstrating strong competitive interactions among co\\u2011occurring PFAS and other solutes in realistic water matrices.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://openurl.ebsco.com/contentitem/doi%3A10.1002%2Faws2.70027?id=ebsco%3Adoi%3A10.1002%2Faws2.70027&sid=ebsco%3Aplink%3Acrawler\",\n  \"source_id\": \"WEB02\",\n  \"source_limitations\": [\n    \"Only the structured abstract and indexing information were accessible; full experimental design, including individual PFAS identities and concentrations, was not visible.\",\n    \"The inspected page does not show explicit clean\\u2011water control data or detailed operating conditions such as contact time and GAC dose.\"\n  ],\n  \"title\": \"Perfluoroalkyl Chemical Adsorption by Granular Activated Carbon: Impacts of Source Water Characteristics\",\n  \"year\": \"2025\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "1d17db539dd2e40d540fbabfd43df1cb3b16085a7b309075fe6d96aa0b78537b",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.02547425,
+    "finish_reason": "stop",
+    "input_tokens": 3261,
+    "latency_seconds": 18.641786166932434,
+    "output_tokens": 2255,
+    "reasoning_tokens": 790,
+    "response_id": "chatcmpl-E9Nn0sVJCHMTb37qg7kWhkNv8juWY",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 5516,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The abstract only provides qualitative trends (e.g., NOM reduces capacity; multispecies isotherms lower capacity) without numerical capacities or clearly defined denominators. Classifying comparability as 'descriptive_only' is a reasonable synthesis judgment consistent with the limited quantitative detail in the cited text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The abstract explicitly discusses PFAS adsorption capacities with GAC and how they change with NOM and ions (E03), which fits a sorption endpoint.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "E03 states that NOM reduced PFAS adsorption capacities and that this negative effect was partially offset by Ca and sulfate at constant ionic strength, consistent with competitive sorption, pore-blocking, and charge-screening by divalent ions. The record\u2019s interpretation restates these points and only slightly elaborates the mechanism (electrostatic screening), which is consistent with the phrase 'charge-screening by divalent ions'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "E04 reports that multispecies competitive isotherms yielded lower solid-phase capacities than single-solute isotherms, which is clearly a sorption/adsorption endpoint.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "E04 says multispecies competitive isotherms gave lower capacities than single-solute isotherms, demonstrating strong competitive interactions among co-occurring PFAS and other solutes in realistic water matrices. The interpretation accurately reflects this statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "Within the abstract, matrix effects of NOM and Ca/sulfate and multispecies conditions are only described qualitatively, with no concentrations or numerical capacity changes and no specific PFAS identities listed (E01\u2013E04). Characterizing this as a design-inferred limitation matches the cited content.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "matrix.value",
+        "reason": "The abstract mentions 'batch adsorption experiments' and 'realistic water matrices' (E01\u2013E04) but does not explicitly state that solutions are 'representative of drinking/source waters.' It does, however, support the presence of NOM, calcium, sulfate, and co-occurring PFAS/solutes. The added description of representativeness to drinking/source water is an inference beyond the text.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "E01 explicitly states that batch adsorption experiments used Filtrasorb 400 GAC. Using 'Filtrasorb 400' as the GAC type is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "This operating condition is categorical (GAC type), so leaving the unit null is appropriate and consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "This condition flags the presence of NOM without a numeric value. E03 confirms the presence of natural organic matter and its qualitative effect. An empty string for value with detail in qualifiers is consistent with the qualitative nature of the abstract.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "No numeric NOM concentration is reported in the abstract, so a null unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "E03 states that calcium and sulfate were present at constant ionic strength and partially offset NOM\u2019s negative effect. Treating this as a qualitative presence condition (empty value, with explanatory qualifiers) is consistent with the cited text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "Since no concentrations of Ca2+ or sulfate are given in the abstract, leaving unit null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "E04 describes 'multispecies competitive isotherms' with co-occurring PFAS and other solutes. The value 'multispecies competitive isotherms' correctly reflects this condition.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "The condition is categorical (type of isotherm), so having no unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].value",
+        "reason": "E04 contrasts 'multispecies competitive isotherms' with 'single-solute isotherms.' Using 'single-solute isotherms' to describe the PFAS-only condition matches the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].unit",
+        "reason": "This is again a categorical operating condition (type of isotherm); a null unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "The title specifies 'Perfluoroalkyl Chemical Adsorption,' and PFAS adsorption is discussed throughout the abstract (E01\u2013E04). The abstract does not list individual PFAS or concentrations, so the note that identities and concentrations are not specified is accurate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "study_scale.value",
+        "reason": "The abstract mentions 'batch adsorption experiments' (E01), which supports batch laboratory tests with GAC. However, the term 'bench-scale' is an inference; the abstract does not explicitly state the experimental scale. Thus, batch experiments are supported, while 'bench-scale' is added interpretation.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "The abstract describes batch adsorption experiments using Filtrasorb 400 GAC, examines single-solute vs multispecies isotherms, and investigates the presence of NOM and calcium/sulfate (E01\u2013E04). The treatment summary accurately captures adsorption onto Filtrasorb 400 GAC under these matrix conditions.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT10-gpt51_web_search-WEB02-R03",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014PFAS adsorption onto Filtrasorb 400 GAC, matrix modifiers (NOM, Ca2+/sulfate, multispecies competition), sorption endpoints, and qualitative matrix effects\u2014are supported by the abstract. Minor overinterpretations (e.g., calling the water representative of drinking/source waters or specifying bench-scale) do not misrepresent the main findings and can be corrected or down-weighted during synthesis.",
+    "task_id": "RT10"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

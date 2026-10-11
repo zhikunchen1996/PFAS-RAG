@@ -1,0 +1,212 @@
+{
+  "batch_id": "test40-review-batch-08",
+  "batch_sha256": "956dd48c3260a1ed495d11e13dec9513274c9b53eb6bfab0d94eb74535e3c920",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-review-batch-08",
+    "reviews": [
+      {
+        "question_id": "WF10_010",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_010-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_010-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_010-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_010-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_010-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_010-G06",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_010-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_010-X02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_010-X03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "WF10_011",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Group WF10_011-G03 cites an exact_evidence_span for WF10_011_MMG003 that is copy-pasted from the applied-voltage/adsorption-capacity sentence (also used verbatim in WF10_011-G01) rather than the negative-bias desorption sentence that actually supports this group's central proposition, even though the correct desorption sentence is present in WF10_011_MMG003's full_chunk_text."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_011-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-G03",
+            "verdict": "partially_supported",
+            "issues": [
+              "The exact_spans entry for evidence WF10_011_MMG003 quotes '3.2 Effect of operating conditions... increases with the increase of the applied voltage (Wang et al., 2014a;' with a 'supports' description claiming it shows negative-bias desorption/regeneration. That quoted text is unrelated to desorption/regeneration and is identical to the span already used for WF10_011-G01. The actual desorption evidence ('the author found that the bound PFOA could be effectively desorbed due to the charge repulsion when a negative bias was applied (e.g., regeneration of > 80% at –1.5 V)') exists in MMG003's full_chunk_text but is not the span cited in this group."
+            ],
+            "required_repairs": [
+              "Replace the exact_spans entry for WF10_011_MMG003 in claim group WF10_011-G03 with the correct span from the full_chunk_text describing negative-bias-induced desorption and >80% regeneration at –1.5 V, so the cited quote matches the 'supports' description and the central/canonical proposition."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_011-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-X02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-X03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-X04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Correct the exact_spans citation in claim group WF10_011-G03 to quote the actual negative-bias desorption/regeneration sentence from WF10_011_MMG003's full_chunk_text instead of reusing the applied-voltage-increases-adsorption sentence."
+        ]
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 100657,
+    "num_turns": 6,
+    "stop_reason": "tool_use",
+    "session_id": "63fe5bb9-bee8-409f-8547-a6bdc6e8f971",
+    "total_cost_usd": 0.39883789999999997,
+    "usage": {
+      "input_tokens": 8,
+      "cache_creation_input_tokens": 57552,
+      "cache_read_input_tokens": 121153,
+      "output_tokens": 9730,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 57552
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 7397,
+          "cache_read_input_tokens": 61487,
+          "cache_creation_input_tokens": 7136,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 7136,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 628,
+        "outputTokens": 14,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.0006979999999999999,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 8,
+        "outputTokens": 9730,
+        "cacheReadInputTokens": 121153,
+        "cacheCreationInputTokens": 57552,
+        "webSearchRequests": 0,
+        "costUSD": 0.3981399,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 2777,
+    "ttft_stream_ms": 937,
+    "time_to_request_ms": 48,
+    "type": "result",
+    "duration_ms": 99640,
+    "uuid": "50ab2435-404e-45d3-bcb0-14d0296b90b8"
+  },
+  "candidate_test40_inputs_used": false
+}

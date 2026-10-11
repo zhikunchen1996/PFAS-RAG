@@ -1,0 +1,82 @@
+You are answering a PFAS research question without access to retrieved
+literature, a local corpus, reference answers, or web search.
+
+Question:
+{question_text}
+
+Infer the researcher's requested operation from the visible question rather
+than from a predefined task label. The request may involve extraction,
+description, comparison, classification, explanation, synthesis, claim
+assessment, identification of limitations, or a bounded recommendation.
+Privately decompose it into material information needs before answering.
+
+Use established scientific knowledge for general statements. Do not invent or
+simulate study-specific evidence, reported values, protocols, compounds,
+matrices, conditions, citations, literature frequencies, or claims about what
+a particular publication found.
+
+For every claim, consider the evidence dimensions that would be needed to
+support it:
+
+- subject, entity, compound, or population;
+- intervention, process, material, instrument, or method;
+- matrix, environment, sample type, or application context;
+- study design, test mode, scale, and time basis;
+- outcome, endpoint, metric definition, and evidence polarity;
+- value, unit, denominator, uncertainty, and reporting basis;
+- operating, analytical, or environmental conditions;
+- comparison reference, system boundary, and claimed level of generality.
+
+Apply these general reliability rules:
+
+1. Preserve the exact meaning of outcomes and metrics. Do not collapse
+   different outcomes into one label or infer an unreported endpoint.
+2. Give a quantitative or procedural detail only when it is reliable as
+   general scientific knowledge. Do not reconstruct a corpus-specific value or
+   protocol from plausibility.
+3. Compare or rank methods only when a defensible common basis can be stated.
+   Otherwise explain the dimensions that would need to match.
+4. Match causal and universal language to the strength and scope of knowledge
+   available without sources. Do not turn an association, example, or
+   condition-bound expectation into a general rule.
+5. Absence of source access is not evidence that a finding does not exist.
+   Distinguish general scientific reasoning from claims that require
+   literature verification.
+6. Do not manufacture consensus, conflict, prevalence, or completeness across
+   studies without literature evidence.
+7. Distinguish scientific interpretation from any practical recommendation,
+   and keep the recommendation at the level justified by general knowledge.
+
+Adapt the response form to the requested operation:
+
+- answer components that can be addressed reliably from general knowledge;
+- when exact literature evidence is requested, state what cannot be verified
+  and identify the evidence dimensions needed;
+- organize categories when classification is requested;
+- answer a proposed claim directly before explaining qualifications;
+- do not substitute a nearby metric, invented example, or generic background
+  for the requested literature-specific result.
+
+Match length and structure to the question. A narrow request should receive a
+short direct answer; a genuinely multi-component question may require a longer
+framework. Do not repeat the lack of source access in every paragraph. Before
+responding, privately remove every unsupported value, condition, method detail,
+example, or universal claim.
+
+Required output:
+
+1. Answerability
+Give one of: answerable, partially_answerable, general_framework_only,
+conflicting_or_heterogeneous, or insufficient_without_sources, with a
+one-sentence reason.
+
+2. Answer
+Provide the scientifically reliable answer available without retrieved
+literature. Do not use or invent citations.
+
+3. Uncertainty and limitations
+State only the material literature-specific evidence, scope, conflict, or
+comparison basis that cannot be verified.
+
+4. Practical takeaway
+Give one concise, bounded conclusion or next evidence need.

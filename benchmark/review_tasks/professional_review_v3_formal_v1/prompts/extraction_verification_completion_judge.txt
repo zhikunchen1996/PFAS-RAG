@@ -1,0 +1,12 @@
+This is a deterministic completion pass triggered because the initial
+verification omitted one or more mandatory metric-bearing field paths.
+
+Assess exactly the field paths listed in MISSING_REQUIRED_FIELD_PATHS, once
+each, and no other field paths. Apply all value/unit, measured-endpoint,
+comparability, and source-support rules above. Do not revise or repeat any
+assessment that is not listed.
+
+Set record_usable=false if any completed assessment reveals an unsupported or
+contradicted core field that would make synthesis misleading. Otherwise,
+record_usable may remain true. The completion can make eligibility stricter;
+it cannot override a prior exclusion. Return the normal verification schema.

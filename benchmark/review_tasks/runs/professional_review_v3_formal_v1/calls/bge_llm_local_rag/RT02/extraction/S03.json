@@ -1,0 +1,637 @@
+{
+  "call_key": "RT02:bge_llm_local_rag:extraction:S03",
+  "created_at": "2026-08-05T03:23:00.721112+00:00",
+  "raw_response_text": "{\"task_id\":\"RT02\",\"source_system\":\"bge_llm_local_rag\",\"records\":[{\"record_id\":\"S03-R1\",\"source_id\":\"S03\",\"doi_or_stable_url\":\"https://doi.org/10.1002/aws2.70027\",\"citation\":\"Abulikemu, G.; Pressman, J.G.; Wahman, D.G.; Sorial, G.A.; Sanan, T.T.; Stebel, E.K.; Gray, B.N.; Hughes, E.W.; Kleiner, E.J.; Pedigo, S.G.; et al. Perfluoroalkyl Chemical Adsorption by Granular Activated Carbon: Impacts of Source Water Characteristics. AWWA Water Science. 2025, 7, e70027. DOI: 10.1002/aws2.70027.\",\"study_type\":\"primary_experiment\",\"study_scale\":{\"value\":\"Bench-scale batch isotherm experiments using ground granular activated carbon (GAC) to study PFAS adsorption under drinking-water-relevant conditions.\",\"evidence_locator_ids\":[\"S03-E04\",\"S03-E07\"]},\"matrix\":{\"value\":\"Drinking-water-relevant aqueous solutions with controlled source water characteristics (natural organic matter, major ions, co-occurring PFAS).\",\"evidence_locator_ids\":[\"S03-E01\",\"S03-E05\",\"S03-E07\",\"S03-E08\"]},\"pfas_scope\":[{\"value\":\"Nine PFAS species, including the six regulated PFAS (specific compounds not all listed in provided text; examples given include PFOA and PFOS).\",\"evidence_locator_ids\":[\"S03-E04\",\"S03-E07\"]}],\"treatment\":{\"value\":\"Adsorption onto granular activated carbon (GAC) evaluated via equilibrium isotherm (batch) tests, using ground GAC particles.\",\"evidence_locator_ids\":[\"S03-E01\",\"S03-E04\",\"S03-E05\",\"S03-E07\"]},\"operating_conditions\":[{\"name\":\"configuration\",\"value\":\"Batch equilibrium isotherm tests (no flow-through columns in this study)\",\"unit\":null,\"qualifiers\":\"Isotherm parameters intended for use in adsorption modeling tools (e.g., AdDesignS) and RSSCT or column design.\",\"evidence_locator_ids\":[\"S03-E04\",\"S03-E05\",\"S03-E07\"]},{\"name\":\"GAC form\",\"value\":\"ground granular activated carbon\",\"unit\":null,\"qualifiers\":\"Isotherm parameters obtained with ground GAC; authors note that parameters may need adjustment when applied to full-scale GAC with larger particle size.\",\"evidence_locator_ids\":[\"S03-E05\"]},{\"name\":\"source water characteristics evaluated\",\"value\":\"co-adsorption of multiple PFAS, pH, ionic strength, background major ions, natural organic matter (NOM), and other co-occurring species\",\"unit\":null,\"qualifiers\":\"Factors evaluated for their impact on PFAS adsorption capacity toward GAC under drinking-water-relevant conditions.\",\"evidence_locator_ids\":[\"S03-E01\",\"S03-E05\",\"S03-E07\",\"S03-E08\"]},{\"name\":\"intended application\",\"value\":\"Design and modeling of GAC columns (full- or pilot-scale) using batch-derived isotherm parameters in tools such as Adsorption Design Software (AdDesignS) and IAST-based models\",\"unit\":null,\"qualifiers\":\"Batch isotherms used to support modeling of adsorption breakthrough in continuous systems, but not directly measuring breakthrough here.\",\"evidence_locator_ids\":[\"S03-E04\",\"S03-E05\",\"S03-E07\"]}],\"endpoints\":[{\"endpoint_type\":\"sorption\",\"reported_term\":\"adsorption capacity; isotherm parameters; PFAS adsorption effectiveness\",\"interpretation\":\"Equilibrium batch isotherm tests quantified PFAS uptake by GAC as a function of equilibrium PFAS concentration, to derive adsorption capacities and isotherm parameters and to assess how source water characteristics (NOM, competing PFAS, ions, pH) affect capacity. These measurements address sorption behavior rather than column breakthrough or destruction.\",\"evidence_locator_ids\":[\"S03-E01\",\"S03-E04\",\"S03-E05\",\"S03-E07\"]},{\"endpoint_type\":\"removal\",\"reported_term\":\"PFAS removal efficacy; GAC treatment efficacy\",\"interpretation\":\"While the study discusses GAC \u201ctreatment efficacy,\u201d the actual experiments measured equilibrium adsorption capacities and removal in batch, not continuous-treatment breakthrough; removal is therefore interpreted as batch-phase PFAS concentration decrease at equilibrium, conditional on the isotherm tests.\",\"evidence_locator_ids\":[\"S03-E01\",\"S03-E07\"]},{\"endpoint_type\":\"other\",\"reported_term\":\"modeling performance of IAST and column-scale design assumptions\",\"interpretation\":\"The study evaluates the suitability and limitations of applying ideal adsorbed solution theory (IAST) and AdDesignS-type models for predicting PFAS mixture adsorption from batch isotherm data, highlighting that PFAS trace-level behavior and competition can lead to modeling inaccuracies when scaling to column performance.\",\"evidence_locator_ids\":[\"S03-E02\",\"S03-E04\",\"S03-E07\",\"S03-E08\"]}],\"quantitative_findings\":[],\"limitations\":[{\"statement\":\"Isotherm (batch) tests do not directly evaluate adsorption breakthrough in GAC columns; modeling tools (e.g., Adsorption Design Software) are required to relate isotherm parameters to full- or pilot-scale breakthrough performance.\",\"basis\":\"author_reported\",\"evidence_locator_ids\":[\"S03-E05\"]},{\"statement\":\"Isotherm parameters obtained with ground GAC may need adjustment when used to design or model full- or pilot-scale GAC systems with larger particle sizes, due to particle-size impacts on adsorption behavior and kinetics.\",\"basis\":\"author_reported\",\"evidence_locator_ids\":[\"S03-E05\"]},{\"statement\":\"Ideal adsorbed solution theory (IAST) performed poorly for PFAS mixtures, with and without NOM, and may be insensitive when modeling trace constituents like PFAS; using IAST as currently implemented can therefore lead to errors in predicting GAC performance from batch data.\",\"basis\":\"author_reported\",\"evidence_locator_ids\":[\"S03-E02\",\"S03-E07\"]},{\"statement\":\"The study focused on impacts of NOM and major ions and did not investigate competition with non-PFAS adsorbable synthetic organic compounds; additional background species and kinetics in columns were not explored.\",\"basis\":\"author_reported\",\"evidence_locator_ids\":[\"S03-E05\",\"S03-E07\"]},{\"statement\":\"Because the work uses controlled batch isotherm experiments rather than site-specific pilot or full-scale columns, results can indicate general trends but cannot replace site-specific pilot or other studies to determine actual GAC breakthrough performance.\",\"basis\":\"author_reported\",\"evidence_locator_ids\":[\"S03-E01\",\"S03-E04\",\"S03-E07\"]},{\"statement\":\"Only bench-scale, batch equilibrium conditions were investigated; no flow, bed configuration, or real-time breakthrough data were collected, which limits direct translation to media lifetime or bed volumes treated in continuous systems.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"S03-E04\",\"S03-E05\",\"S03-E07\"]}],\"residuals_byproducts\":[],\"comparability\":{\"status\":\"descriptive_only\",\"reason\":\"This study provides batch equilibrium isotherm data and qualitative assessments of how source water characteristics affect PFAS adsorption to GAC, but it does not report column, pilot, or full-scale breakthrough, bed volumes, or media lifetime. Batch conditions, ground GAC, and the absence of flow and bed-structure information mean that the results are useful for qualitative comparison and for informing models, but they are not directly comparable on a quantitative basis with continuous-treatment performance metrics.\",\"evidence_locator_ids\":[\"S03-E01\",\"S03-E04\",\"S03-E05\",\"S03-E07\"]}}],\"extraction_notes\":[\"Only introductory, methods-summary, and discussion fragments were available for this source. No explicit numerical isotherm parameters, capacities, contact times, or PFAS concentrations were present in the supplied text, so quantitative_findings are left empty.\",\"The article explicitly focuses on batch isotherm tests and implications for modeling and column design; no actual column, pilot, or full-scale breakthrough data are reported in the provided excerpts, so no records for continuous-flow experiments were created.\"]}",
+  "request": {
+    "max_completion_tokens": 16000,
+    "messages": [
+      {
+        "content": "You are an evidence extraction specialist for PFAS treatment and remediation\nresearch. Build a structured study evidence table before any narrative review\nis written.\n\nExtract one record per primary-study experiment, modeled scenario, or field\ndeployment that contributes usable evidence to the review task. A paper may\nproduce more than one record only when materially different matrices,\ntechnologies, operating regimes, or endpoints would otherwise be conflated.\n\nReview articles and perspectives may help identify terminology or primary\nstudies, but they must not be used as the source of a quantitative study\nrecord. Never copy a review table as though it were a primary result.\n\nFor every populated source-dependent field:\n- preserve the PFAS identity or class, matrix, starting concentration or\n  loading, operating conditions, study scale, measured endpoint, value, unit,\n  and material qualifiers when reported;\n- attach only the field-level evidence locator identifiers that directly\n  support that specific value or statement;\n- use an empty string or empty array when the source does not report the\n  information; do not infer or estimate it;\n- do not turn the absence of information in the supplied packet into a study\n  finding, quantitative result, or author-reported limitation unless the source\n  explicitly states that absence;\n- distinguish removal, separation, sorption, parent-compound loss,\n  transformation, degradation, destruction, defluorination, mineralization,\n  total organofluorine change, and toxicity change;\n- classify endpoint_type from what was actually measured, not from the\n  authors' preferred label. Parent loss alone is not destruction. Phase\n  transfer is removal or separation, not degradation. Inorganic fluoride\n  release or fluorine-balance closure can establish defluorination but cannot\n  by itself establish mineralization. Use mineralization only when direct\n  carbon-fate evidence such as CO2/inorganic-carbon production or a carbon\n  balance is reported. Preserve a broader author term in reported_term and\n  explain any mismatch in interpretation;\n- do not normalize or compare values unless their units, denominators,\n  matrices, PFAS scope, operating conditions, and endpoints permit it.\n\nOnly populate quantitative_findings when the source reports an actual numeric\nvalue, inequality, approximate value, range, or explicit ND/not-detected\nresult. Put the number or censoring marker in value and the measurement unit in\nunit. Normalize Unicode inequality signs to ASCII >= or <= and range dashes to\nan ASCII hyphen while preserving the source wording in qualifiers. A unit or\norder-of-magnitude scale without a number is not a quantitative finding.\nQualitative parent loss, intermediate formation, or disappearance belongs in\nthe endpoint interpretation or residual/byproduct statements instead.\n\nSet value_form to exactly one of:\n- exact_numeric: a bare number such as `99.7` or `1.2e-3`;\n- approximate_numeric: `~` followed by a number;\n- inequality: `<`, `<=`, `>`, or `>=` followed by a number;\n- range: two numbers separated by `-` or `to`; or\n- not_detected: exactly `ND`, `N/D`, `not detected`,\n  `below detection limit`, or `below quantification limit`.\n\nPut uncertainty, denominators, fold-change wording, and explanatory text in\nqualifiers rather than value. A deterministic validator will remove malformed\nquantitative fields before source verification.\n\nFor limitations, use basis=author_reported only when the source states the\nlimitation. Use basis=design_inferred only for a constraint that follows\ndirectly from cited design evidence, such as one matrix, one compound, or\nbench-scale operation. Never label missing information in the supplied packet\nas a scientific limitation of the study.\n\nMark each record as comparable with conditions, descriptive only, or not\ncomparable. Comparability is an analyst inference rather than a quotation:\nattach locators for the matrix, scale, conditions, endpoint, and denominator\non which the inference rests, and explain the reason. Do not reward a study\nfor reporting a larger percentage when its endpoint or conditions differ.\n\nThe task was derived from a defining review that is held out from all\ncandidate retrieval systems. The supplied anchor identifiers are an exclusion\nlist, not evidence. Do not extract from the anchor, cite it, reconstruct its\nconclusions, or use its tables.\n\nReturn one JSON object that follows the supplied evidence-table schema exactly.\nDo not write the narrative review in this step.\n",
+        "role": "system"
+      },
+      {
+        "content": "Task:\n{\"review_brief\":\"Prepare a focused review of when batch adsorption results do and do not predict column, pilot, or full-scale PFAS treatment performance.\",\"task_id\":\"RT02\",\"title\":\"Translating PFAS adsorption results from batch tests to continuous treatment\"}\n\nTask-specific data extraction objective:\nExtract study scale, adsorbent, PFAS and matrix, batch or flow configuration, contact time, flow and bed properties, capacity definition, breakthrough criterion, bed volumes, media lifetime, and uncertainty or scale-up limitation.\n\nSource system (return this exact value):\nbge_llm_local_rag\n\nCandidate source identifier (all records must use this exact source_id):\nS03\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nCandidate local-corpus source documents and complete evidence chunks:\n{\n  \"bge_document_rank\": 3,\n  \"bge_score\": 0.5553191900253296,\n  \"citation\": \"Abulikemu, G.; Pressman, J.G.; Wahman, D.G.; Sorial, G.A.; Sanan, T.T.; Stebel, E.K.; Gray, B.N.; Hughes, E.W.; Kleiner, E.J.; Pedigo, S.G.; et al. Perfluoroalkyl Chemical Adsorption by Granular Activated Carbon: Impacts of Source Water Characteristics. AWWA Water Science 2025 7. DOI: 10.1002/aws2.70027.\",\n  \"doi\": \"10.1002/aws2.70027\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1002/aws2.70027\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 2,\n      \"locator_id\": \"S03-E01\",\n      \"query_scores\": {\n        \"RT02-C1\": 4.085742693860084e-05,\n        \"RT02-C2\": 0.012029226869344711,\n        \"RT02-C3\": 3.731722608790733e-05,\n        \"umbrella\": 0.33386799693107605\n      },\n      \"section\": \"introduction\",\n      \"text\": \"adsorptive surface to help optimize PFAS treatment efficacy and minimize operational costs. 1 | Introduction With the United States Environmental Protection Agency final - izing a regulation that includes enforceable maximum contam - inant levels or hazard indexes for six per- and polyfluoroalkyl substances (PFAS) (USEPA\\u00a0 2024), the demand for effective PFAS water treatment technologies has never been more press - ing. Granular activated carbon (GAC) adsorption is being con - sidered for PFAS treatment because it has been widely used in the water industry, has a demonstrated ability to remove multi - ple PFAS and various co- contaminants, and could be retrofitted in existing conventional filters (AWWA\\u00a0 2020). However, source water characteristics can significantly impact GAC treatment efficacy, which can vary widely in practice. Understanding the impact of this variability is important for developing effective and cost- efficient GAC treatment systems, but it can still require case study and optimization for each site. Optimization based on these source water characteristics could be improved by inclu - sion of their effects in mechanistic models, which are currently not available. Multiple factors affect GAC, including GAC and target adsor - bate properties, source water quality, and GAC treatment system operating conditions (Chowdhury et\\u00a0al. 2013). Therefore, GAC adsorber design requires conducting adsorption tests under conditions that represent treatment site conditions. Pilot- scale\"\n    },\n    {\n      \"corpus_chunk\": 42,\n      \"locator_id\": \"S03-E02\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.001057598739862442,\n        \"RT02-C2\": 0.057813502848148346,\n        \"RT02-C3\": 3.72881258954294e-05,\n        \"umbrella\": 0.05267992988228798\n      },\n      \"section\": \"discussion\",\n      \"text\": \"11 of 15 processes should be determined based on the source water qual- ity and the evaluation of overall treatment cost. Depending on the properties and concentrations of various spe - cies contained in source waters, one factor can dominate over others and drive adsorption effectiveness. The key is balancing multiple factors and their potential impacts to achieve the op - timum condition. The quantitative evaluations provided in the current study offer a reference point for evaluating the potential impacts of essential water quality parameters on PFAS adsorp - tion that can be used in combination with utility historic data for evaluation and optimization of treatment cost and efficacy. Some parameters may change due to normal operations or have some variability throughout bed life. For example, during ini - tial GAC column operation, the pH can increase towards the pHPZC, likely caused by some ion exchange behavior within GAC, which could also contribute to lower removal efficiencies for shorter- chain ionic PFAS. Another key factor to consider is how poorly IAST performed when modeling PFAS, both with and without NOM. Previous modeling (Burkhardt et\\u00a0 al. 2022; Haupert et\\u00a0 al. 2023) treated PFAS capacity as an effective single species capacity because little was known about PFAS competition with other PFAS or background adsorbable constituents. Further, this work showed that competition will impact capacities, and given that PFAS is\"\n    },\n    {\n      \"corpus_chunk\": 48,\n      \"locator_id\": \"S03-E03\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0001633967476664111,\n        \"RT02-C2\": 0.00010213853238383308,\n        \"RT02-C3\": 3.9776041376171634e-05,\n        \"umbrella\": 0.0005921086412854493\n      },\n      \"section\": \"methods\",\n      \"text\": \"of Research and Development funded and managed the research de - scribed here. Authors thank Maily Pham, Deborah Roose, David Griffith, Ingrid Weber, Eugenia Riddick, and Sonia O'Dell for analytical support; Adam Redding for providing GAC samples. Disclosure This document has been reviewed in accordance with U.S. Environmental Protection Agency policy and approved for publica - tion. Any mention of trade names, manufacturers, or products does not imply an endorsement by the United States Government or the U.S. Environmental Protection Agency. EPA and its employees do not en - dorse any commercial products, services, or enterprises. Conflicts of Interest The authors declare no conflicts of interest. Data Availability Statement Data for this work is available at https:// data. gov/ . References Abulikemu, G., J. G. Pressman, G. A. Sorial, et\\u00a0al. 2025. \\u201cPerfluoroalkyl Chemical Adsorption by Granular Activated Carbon: Assessment of Particle Size Impact on Equilibrium Parameters and Associated Rapid Small- Scale Column Test Scaling Assumptions.\\u201d Water Research 271: 122977. Abulikemu, G., T. F. Speth, J. A. Vogt, M. Meyer, Y. Hong, and J. G. Pressman. 2022. \\u201cValidating the Use of Lyophilized Natural Organic\"\n    },\n    {\n      \"corpus_chunk\": 3,\n      \"locator_id\": \"S03-E04\",\n      \"query_scores\": {\n        \"RT02-C1\": 7.435323641402647e-05,\n        \"RT02-C2\": 0.007181008346378803,\n        \"RT02-C3\": 3.7303707358660176e-05,\n        \"umbrella\": 0.24682281911373138\n      },\n      \"section\": \"introduction\",\n      \"text\": \"conditions that represent treatment site conditions. Pilot- scale Published 2025. This article is a U.S. Government work and is in the public domain in the USA. 2 of 15 AWW A Water Science, 2025 column tests conducted with a system's source water provide the most dependable evaluation, but pilot- scale study time and resource requirements are usually cost- prohibitive for many utilities. Given PFAS analysis expense, even rapid small- scale column tests (RSSCTs)\\u2014a normally affordable alternatives to pilot testing\\u2014are potentially too expensive for many small sys - tems (Cordner et\\u00a0al. 2021). Consequently, modeling tools such as Adsorption Design Software (AdDesignS) that can simulate adsorption breakthrough are becoming increasingly desir - able (Hokanson et\\u00a0al. 1994\\u20132005). Modeling tools can stream- line RSSCTs or pilot- scale column test design by simulating GAC system performance under various design conditions but require isotherm and kinetic parameters, which can be ob - tained from batch studies (Sontheimer et\\u00a0 al. 1988; Hokanson et\\u00a0al. 1994\\u20132005). Although isotherm tests are common in adsorption studies, sys - tematic evaluations for many PFAS remain limited. Most pub - lished isotherm studies only included two of the six regulated PFAS (i.e., perfluorooctanoic acid (PFOA) and perfluorooctane\"\n    },\n    {\n      \"corpus_chunk\": 45,\n      \"locator_id\": \"S03-E05\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.00013395337737165391,\n        \"RT02-C2\": 0.021367091685533524,\n        \"RT02-C3\": 3.728919182321988e-05,\n        \"umbrella\": 0.1502729207277298\n      },\n      \"section\": \"methods\",\n      \"text\": \"PFOS). The larger q e decrease with preloading NOM com - pared to co- loading NOM suggested both direct competition and pore blockage were impacts from NOM that hindered PFAS adsorption. \\u2022 Multiple source water quality parameters need to be con - sidered when attempting to identify the dominant factor that may potentially determine the overall impact on PFAS adsorption. Although gaining valuable insights into how different water components affect adsorption capacity towards PFAS, it is im - portant to consider certain challenges when implementing the isotherm findings in full- or pilot- scale GAC treatment systems: \\u2022 Isotherms do not directly evaluate adsorption breakthrough; therefore, modeling efforts with tools (e.g., AdDesignS) are required to correlate isotherm parameters and the adsorp - tion breakthrough in full- or pilot- scale GAC treatment sys- tems. Additionally, the isotherm parameters obtained with ground GAC may need to be adjusted to account for the ef - fect of particle size reduction on PFAS adsorption, which is discussed in detail elsewhere (Abulikemu et\\u00a0al. 2025 ). \\u2022 The study examined NOM and major ions, but it did not in- vestigate competition with non- PFAS adsorbable synthetic organic compounds due to time and resource limitations. Future work could expand the matrix impact evaluation to additional inorganic ions and other synthetic organic compounds. \\u2022 Future research can investigate impacts of source water\"\n    },\n    {\n      \"corpus_chunk\": 46,\n      \"locator_id\": \"S03-E06\",\n      \"query_scores\": {\n        \"RT02-C1\": 3.834880408248864e-05,\n        \"RT02-C2\": 0.0018671792931854725,\n        \"RT02-C3\": 3.7292462366167456e-05,\n        \"umbrella\": 0.0803648978471756\n      },\n      \"section\": \"results\",\n      \"text\": \"compounds. \\u2022 Future research can investigate impacts of source water characteristics via small and pilot- scale column tests with simultaneous modeling efforts to improve the accu - racy of models for GAC system performance prediction. Specifically, work is needed to improve IAST predictions for adsorption of PFAS mixtures with and without NOM. Despite this limitation, these results highlight specific water quality characteristics that could help improve or inhibit PFAS adsorption by GAC and those that are likely to reduce perfor - mance, which should help improve the treatability of PFAS in drinking water systems. Author Contributions Gulizhaer Abulikemu: conceptualization, data curation, formal analysis, validation, investigation, visualization, methodology, writ - ing \\u2013 original draft, project administration, writing \\u2013 review and edit - ing. Jonathan G. Pressman: conceptualization, supervision, writing 25778161, 2025, 4, Downloaded from https://awwa.onlinelibrary.wiley.com/doi/10.1002/aws2.70027 by Queen's University, Wiley Online Library on [17/04/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License 12 of 15 AWW A Water Science, 2025 \\u2013 review and editing. David G.\"\n    },\n    {\n      \"corpus_chunk\": 43,\n      \"locator_id\": \"S03-E07\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.00022792415984440595,\n        \"RT02-C2\": 0.016633491963148117,\n        \"RT02-C3\": 3.7349978811107576e-05,\n        \"umbrella\": 0.07531716674566269\n      },\n      \"section\": \"discussion\",\n      \"text\": \"Further, this work showed that competition will impact capacities, and given that PFAS is often a trace chemical, their adsorption can be impacted by the presence of other adsorbable species at much higher concentra - tions\\u2014which may be difficult to predict and warrant further research. This work highlights that using IAST as it is currently implemented may lead to errors in predicting performance, as liquid or solid phase concentrations can become insensitive to the other for modeling trace constituents like PFAS. For exam - ple, a 1000% change in one concentration may only result in a 0.1% change in the other. This work focused on understanding the impacts of various co- occurring chemical species through isotherms. In practice, GAC performance is also impacted by the kinetics of adsorption for each species, but this was not explored herein and warrants fur - ther study. These results can help predict a general trend in per - formance, but do not replace a site- specific pilot or other study to determine GAC's breakthrough performance. 4 | Conclusion The study investigated the impacts of source water characteristics on PFAS adsorption of nine species, including the six regulated PFAS, through controlled isotherm experiments focused on drink- ing water relevant conditions. The investigated factors included co- adsorption of multiple PFAS, pH, ionic strength, background\"\n    },\n    {\n      \"corpus_chunk\": 5,\n      \"locator_id\": \"S03-E08\",\n      \"query_scores\": {\n        \"RT02-C1\": 9.606283128960058e-05,\n        \"RT02-C2\": 0.025364354252815247,\n        \"RT02-C3\": 3.7288871681084856e-05,\n        \"umbrella\": 0.07220207154750824\n      },\n      \"section\": \"introduction\",\n      \"text\": \"has previously been shown to reduce GAC efficacy towards various trace organic contaminants due to direct competi - tion and pore blockage mechanisms (Li et\\u00a0 al. 2003 ; Corwin and Summers\\u00a0 2010; Kennedy and Summers\\u00a0 2015; Kennedy et\\u00a0al. 2017). Some studies reported similar adverse NOM im - pacts on PFAS adsorption (Zhao et\\u00a0 al. 2011; Yu et\\u00a0 al. 2012; Appleman et\\u00a0 al. 2013; Pramanik et\\u00a0 al. 2015, 2017; Inyang and Dickenson\\u00a0 2017). Besides NOM, competitive adsorption among PFAS was also found to reduce GAC longevity by causing faster breakthrough of shorter chain PFAS due to dis - placement by longer chain PFAS (Appleman et\\u00a0al. 2013, 2014; McCleaf et\\u00a0al. 2017; Maimaiti et\\u00a0al. 2018; Cantoni et\\u00a0al. 2021). Pilot- scale studies have also investigated the impact of NOM or other background constituents including polyphosphate (Burkhardt et\\u00a0al. 2022 ; Haupert et\\u00a0al. 2023 ). Ideal adsorbed solution theory (IAST), a thermodynamic theory originally developed for gaseous mixtures (Myers and Prausnitz\\u00a0 1965), has successfully predicted competi - tive adsorption of volatile organic compounds, phenolics, and other trace compounds from aqueous solutions (Radke and Prausnitz\\u00a0 1972; Crittenden et\\u00a0 al. 1985; Sorial George et\\u00a0al. 1993; Sorial et\\u00a0al.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2025 - Abulikemu - Perfluoroalkyl Chemical Adsorption by Granular Activated Carbon Impacts of Source.pdf\",\n  \"source_id\": \"S03\",\n  \"title\": \"Perfluoroalkyl Chemical Adsorption by Granular Activated Carbon: Impacts of Source Water Characteristics\",\n  \"year\": \"2025\"\n}\n\nAll anchor records should already have been removed by deterministic filtering.\nIf an anchor identifier is nevertheless present, omit it and report the\nviolation in extraction_notes. Extract at most three materially distinct\nrecords from this source, prioritizing records that answer the task components.\n\nUse only the supplied source documents. Extract primary-study evidence needed\nto answer the task and return the schema-constrained study evidence table.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_review_evidence_table",
+        "schema": {
+          "$defs": {
+            "endpoint": {
+              "additionalProperties": false,
+              "properties": {
+                "endpoint_type": {
+                  "enum": [
+                    "removal",
+                    "separation",
+                    "sorption",
+                    "parent_compound_loss",
+                    "transformation",
+                    "degradation",
+                    "destruction",
+                    "defluorination",
+                    "mineralization",
+                    "total_organofluorine_change",
+                    "toxicity_change",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "S03-E01",
+                      "S03-E02",
+                      "S03-E03",
+                      "S03-E04",
+                      "S03-E05",
+                      "S03-E06",
+                      "S03-E07",
+                      "S03-E08"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "interpretation": {
+                  "type": "string"
+                },
+                "reported_term": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "endpoint_type",
+                "reported_term",
+                "interpretation",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceRecord": {
+              "additionalProperties": false,
+              "properties": {
+                "citation": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "comparability": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_locator_ids": {
+                      "items": {
+                        "enum": [
+                          "S03-E01",
+                          "S03-E02",
+                          "S03-E03",
+                          "S03-E04",
+                          "S03-E05",
+                          "S03-E06",
+                          "S03-E07",
+                          "S03-E08"
+                        ],
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "type": "array"
+                    },
+                    "reason": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "enum": [
+                        "comparable_with_conditions",
+                        "descriptive_only",
+                        "not_comparable"
+                      ],
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "status",
+                    "reason",
+                    "evidence_locator_ids"
+                  ],
+                  "type": "object"
+                },
+                "doi_or_stable_url": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "endpoints": {
+                  "items": {
+                    "$ref": "#/$defs/endpoint"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "limitations": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "matrix": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "operating_conditions": {
+                  "items": {
+                    "$ref": "#/$defs/namedValue"
+                  },
+                  "type": "array"
+                },
+                "pfas_scope": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceText"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "quantitative_findings": {
+                  "items": {
+                    "$ref": "#/$defs/quantitativeValue"
+                  },
+                  "type": "array"
+                },
+                "record_id": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "residuals_byproducts": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "source_id": {
+                  "enum": [
+                    "S03"
+                  ],
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "study_scale": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "study_type": {
+                  "enum": [
+                    "primary_experiment",
+                    "pilot_or_field_deployment",
+                    "modeling_or_life_cycle_study",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "treatment": {
+                  "$ref": "#/$defs/evidenceText"
+                }
+              },
+              "required": [
+                "record_id",
+                "source_id",
+                "doi_or_stable_url",
+                "citation",
+                "study_type",
+                "study_scale",
+                "matrix",
+                "pfas_scope",
+                "treatment",
+                "operating_conditions",
+                "endpoints",
+                "quantitative_findings",
+                "limitations",
+                "residuals_byproducts",
+                "comparability"
+              ],
+              "type": "object"
+            },
+            "evidenceStatement": {
+              "additionalProperties": false,
+              "properties": {
+                "basis": {
+                  "enum": [
+                    "author_reported",
+                    "design_inferred"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "S03-E01",
+                      "S03-E02",
+                      "S03-E03",
+                      "S03-E04",
+                      "S03-E05",
+                      "S03-E06",
+                      "S03-E07",
+                      "S03-E08"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "statement": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "statement",
+                "basis",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceText": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "S03-E01",
+                      "S03-E02",
+                      "S03-E03",
+                      "S03-E04",
+                      "S03-E05",
+                      "S03-E06",
+                      "S03-E07",
+                      "S03-E08"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "namedValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "S03-E01",
+                      "S03-E02",
+                      "S03-E03",
+                      "S03-E04",
+                      "S03-E05",
+                      "S03-E06",
+                      "S03-E07",
+                      "S03-E08"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "quantitativeValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "S03-E01",
+                      "S03-E02",
+                      "S03-E03",
+                      "S03-E04",
+                      "S03-E05",
+                      "S03-E06",
+                      "S03-E07",
+                      "S03-E08"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "value_form": {
+                  "enum": [
+                    "exact_numeric",
+                    "approximate_numeric",
+                    "inequality",
+                    "range",
+                    "not_detected"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "value_form",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "properties": {
+            "extraction_notes": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "records": {
+              "items": {
+                "$ref": "#/$defs/evidenceRecord"
+              },
+              "maxItems": 3,
+              "type": "array"
+            },
+            "source_system": {
+              "enum": [
+                "bge_llm_local_rag"
+              ],
+              "type": "string"
+            },
+            "task_id": {
+              "enum": [
+                "RT02"
+              ],
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "source_system",
+            "records",
+            "extraction_notes"
+          ],
+          "title": "PFAS review study evidence table",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "cbff1c6510fd82aebc0d9aa50804482dea8d40553a00595b976e02de7facb2db",
+  "response_metadata": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.0269575,
+    "finish_reason": "stop",
+    "input_tokens": 6006,
+    "latency_seconds": 15.813229583087377,
+    "output_tokens": 1945,
+    "reasoning_tokens": 224,
+    "response_id": "chatcmpl-E9MVJvHjXo7Utb8tpCPz6UkoAwhBa",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 7951,
+    "web_search_calls": 0
+  },
+  "result": {
+    "extraction_notes": [
+      "Only introductory, methods-summary, and discussion fragments were available for this source. No explicit numerical isotherm parameters, capacities, contact times, or PFAS concentrations were present in the supplied text, so quantitative_findings are left empty.",
+      "The article explicitly focuses on batch isotherm tests and implications for modeling and column design; no actual column, pilot, or full-scale breakthrough data are reported in the provided excerpts, so no records for continuous-flow experiments were created."
+    ],
+    "records": [
+      {
+        "citation": "Abulikemu, G.; Pressman, J.G.; Wahman, D.G.; Sorial, G.A.; Sanan, T.T.; Stebel, E.K.; Gray, B.N.; Hughes, E.W.; Kleiner, E.J.; Pedigo, S.G.; et al. Perfluoroalkyl Chemical Adsorption by Granular Activated Carbon: Impacts of Source Water Characteristics. AWWA Water Science. 2025, 7, e70027. DOI: 10.1002/aws2.70027.",
+        "comparability": {
+          "evidence_locator_ids": [
+            "S03-E01",
+            "S03-E04",
+            "S03-E05",
+            "S03-E07"
+          ],
+          "reason": "This study provides batch equilibrium isotherm data and qualitative assessments of how source water characteristics affect PFAS adsorption to GAC, but it does not report column, pilot, or full-scale breakthrough, bed volumes, or media lifetime. Batch conditions, ground GAC, and the absence of flow and bed-structure information mean that the results are useful for qualitative comparison and for informing models, but they are not directly comparable on a quantitative basis with continuous-treatment performance metrics.",
+          "status": "descriptive_only"
+        },
+        "doi_or_stable_url": "https://doi.org/10.1002/aws2.70027",
+        "endpoints": [
+          {
+            "endpoint_type": "sorption",
+            "evidence_locator_ids": [
+              "S03-E01",
+              "S03-E04",
+              "S03-E05",
+              "S03-E07"
+            ],
+            "interpretation": "Equilibrium batch isotherm tests quantified PFAS uptake by GAC as a function of equilibrium PFAS concentration, to derive adsorption capacities and isotherm parameters and to assess how source water characteristics (NOM, competing PFAS, ions, pH) affect capacity. These measurements address sorption behavior rather than column breakthrough or destruction.",
+            "reported_term": "adsorption capacity; isotherm parameters; PFAS adsorption effectiveness"
+          },
+          {
+            "endpoint_type": "removal",
+            "evidence_locator_ids": [
+              "S03-E01",
+              "S03-E07"
+            ],
+            "interpretation": "While the study discusses GAC \u201ctreatment efficacy,\u201d the actual experiments measured equilibrium adsorption capacities and removal in batch, not continuous-treatment breakthrough; removal is therefore interpreted as batch-phase PFAS concentration decrease at equilibrium, conditional on the isotherm tests.",
+            "reported_term": "PFAS removal efficacy; GAC treatment efficacy"
+          },
+          {
+            "endpoint_type": "other",
+            "evidence_locator_ids": [
+              "S03-E02",
+              "S03-E04",
+              "S03-E07",
+              "S03-E08"
+            ],
+            "interpretation": "The study evaluates the suitability and limitations of applying ideal adsorbed solution theory (IAST) and AdDesignS-type models for predicting PFAS mixture adsorption from batch isotherm data, highlighting that PFAS trace-level behavior and competition can lead to modeling inaccuracies when scaling to column performance.",
+            "reported_term": "modeling performance of IAST and column-scale design assumptions"
+          }
+        ],
+        "limitations": [
+          {
+            "basis": "author_reported",
+            "evidence_locator_ids": [
+              "S03-E05"
+            ],
+            "statement": "Isotherm (batch) tests do not directly evaluate adsorption breakthrough in GAC columns; modeling tools (e.g., Adsorption Design Software) are required to relate isotherm parameters to full- or pilot-scale breakthrough performance."
+          },
+          {
+            "basis": "author_reported",
+            "evidence_locator_ids": [
+              "S03-E05"
+            ],
+            "statement": "Isotherm parameters obtained with ground GAC may need adjustment when used to design or model full- or pilot-scale GAC systems with larger particle sizes, due to particle-size impacts on adsorption behavior and kinetics."
+          },
+          {
+            "basis": "author_reported",
+            "evidence_locator_ids": [
+              "S03-E02",
+              "S03-E07"
+            ],
+            "statement": "Ideal adsorbed solution theory (IAST) performed poorly for PFAS mixtures, with and without NOM, and may be insensitive when modeling trace constituents like PFAS; using IAST as currently implemented can therefore lead to errors in predicting GAC performance from batch data."
+          },
+          {
+            "basis": "author_reported",
+            "evidence_locator_ids": [
+              "S03-E05",
+              "S03-E07"
+            ],
+            "statement": "The study focused on impacts of NOM and major ions and did not investigate competition with non-PFAS adsorbable synthetic organic compounds; additional background species and kinetics in columns were not explored."
+          },
+          {
+            "basis": "author_reported",
+            "evidence_locator_ids": [
+              "S03-E01",
+              "S03-E04",
+              "S03-E07"
+            ],
+            "statement": "Because the work uses controlled batch isotherm experiments rather than site-specific pilot or full-scale columns, results can indicate general trends but cannot replace site-specific pilot or other studies to determine actual GAC breakthrough performance."
+          },
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "S03-E04",
+              "S03-E05",
+              "S03-E07"
+            ],
+            "statement": "Only bench-scale, batch equilibrium conditions were investigated; no flow, bed configuration, or real-time breakthrough data were collected, which limits direct translation to media lifetime or bed volumes treated in continuous systems."
+          }
+        ],
+        "matrix": {
+          "evidence_locator_ids": [
+            "S03-E01",
+            "S03-E05",
+            "S03-E07",
+            "S03-E08"
+          ],
+          "value": "Drinking-water-relevant aqueous solutions with controlled source water characteristics (natural organic matter, major ions, co-occurring PFAS)."
+        },
+        "operating_conditions": [
+          {
+            "evidence_locator_ids": [
+              "S03-E04",
+              "S03-E05",
+              "S03-E07"
+            ],
+            "name": "configuration",
+            "qualifiers": "Isotherm parameters intended for use in adsorption modeling tools (e.g., AdDesignS) and RSSCT or column design.",
+            "unit": null,
+            "value": "Batch equilibrium isotherm tests (no flow-through columns in this study)"
+          },
+          {
+            "evidence_locator_ids": [
+              "S03-E05"
+            ],
+            "name": "GAC form",
+            "qualifiers": "Isotherm parameters obtained with ground GAC; authors note that parameters may need adjustment when applied to full-scale GAC with larger particle size.",
+            "unit": null,
+            "value": "ground granular activated carbon"
+          },
+          {
+            "evidence_locator_ids": [
+              "S03-E01",
+              "S03-E05",
+              "S03-E07",
+              "S03-E08"
+            ],
+            "name": "source water characteristics evaluated",
+            "qualifiers": "Factors evaluated for their impact on PFAS adsorption capacity toward GAC under drinking-water-relevant conditions.",
+            "unit": null,
+            "value": "co-adsorption of multiple PFAS, pH, ionic strength, background major ions, natural organic matter (NOM), and other co-occurring species"
+          },
+          {
+            "evidence_locator_ids": [
+              "S03-E04",
+              "S03-E05",
+              "S03-E07"
+            ],
+            "name": "intended application",
+            "qualifiers": "Batch isotherms used to support modeling of adsorption breakthrough in continuous systems, but not directly measuring breakthrough here.",
+            "unit": null,
+            "value": "Design and modeling of GAC columns (full- or pilot-scale) using batch-derived isotherm parameters in tools such as Adsorption Design Software (AdDesignS) and IAST-based models"
+          }
+        ],
+        "pfas_scope": [
+          {
+            "evidence_locator_ids": [
+              "S03-E04",
+              "S03-E07"
+            ],
+            "value": "Nine PFAS species, including the six regulated PFAS (specific compounds not all listed in provided text; examples given include PFOA and PFOS)."
+          }
+        ],
+        "quantitative_findings": [],
+        "record_id": "S03-R1",
+        "residuals_byproducts": [],
+        "source_id": "S03",
+        "study_scale": {
+          "evidence_locator_ids": [
+            "S03-E04",
+            "S03-E07"
+          ],
+          "value": "Bench-scale batch isotherm experiments using ground granular activated carbon (GAC) to study PFAS adsorption under drinking-water-relevant conditions."
+        },
+        "study_type": "primary_experiment",
+        "treatment": {
+          "evidence_locator_ids": [
+            "S03-E01",
+            "S03-E04",
+            "S03-E05",
+            "S03-E07"
+          ],
+          "value": "Adsorption onto granular activated carbon (GAC) evaluated via equilibrium isotherm (batch) tests, using ground GAC particles."
+        }
+      }
+    ],
+    "source_system": "bge_llm_local_rag",
+    "task_id": "RT02"
+  },
+  "result_kind": "json",
+  "stage": "structured_extraction"
+}

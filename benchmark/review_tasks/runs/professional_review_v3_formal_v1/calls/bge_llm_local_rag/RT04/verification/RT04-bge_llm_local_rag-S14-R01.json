@@ -1,0 +1,698 @@
+{
+  "call_key": "RT04:bge_llm_local_rag:verify:RT04-bge_llm_local_rag-S14-R01",
+  "created_at": "2026-08-05T04:09:40.728560+00:00",
+  "raw_response_text": "{\"task_id\":\"RT04\",\"record_id\":\"RT04-bge_llm_local_rag-S14-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record classifies the data as comparable with conditions due to shared membrane, matrix, and operating envelope plus limitations from detection limits and operation modes; this synthesis-oriented judgment is consistent with the pilot NF90 setup, shared conditions (flux, recovery, pretreatment), and detection-limit discussion in the cited text.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Text supports that a pilot NF90 system was used, that PFAS- and co-contaminant-specific rejection values and feed concentrations were obtained in fab wastewater and lab solution, and that detection limits constrained \u2265C4 PFAS rejection plus semi-batch versus single-pass operation (E04, E05, E08).\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Rejection values for individual PFAS and co-contaminants are explicitly reported (e.g., TPS and TMAH, and overall batch rejections of multiple PFAS), which is a separation endpoint (E04, E05, E08).\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Temperature corrected specific flux (TCSF) is a hydraulic performance metric rather than a separation or degradation endpoint; treating it as endpoint_type \u2018other\u2019 is appropriate and consistent with E05, which plots TCSF to compare feeds.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E04 states: \u201cThe calculation of rejection values for \u2265 C4 PFAS was limited by permeate detection limits, so the actual effective rejection likely exceeds the reported values,\u201d matching the recorded limitation.\"},{\"field_path\":\"limitations[1].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 states that, given conflicting trends in past studies, \u201cadditional study with multiple fab wastewater feeds of varying composition is recommended to comprehensively determine the impact of wastewater matrix on PFAS rejection,\u201d matching the limitation.\"},{\"field_path\":\"limitations[2].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01, E05, and E08 show that NF90 (and NF270 in some tests) were evaluated in specific pilot configurations; inferring limited generalizability to other membrane types, pressures, or pretreatment trains is a reasonable design-based limitation.\"},{\"field_path\":\"matrix.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 describes lab solution and fab wastewater matrices; E05 describes pretreatment with cation exchange resin and membrane filters to 1 \u00b5m or 0.2 \u00b5m; E06 provides a table of fab wastewater quality, supporting the recorded description.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 states that Filmtec NF270 and NF90 commercial membranes, including spiral-wound modules, were used and that NF270 is loose and NF90 tight NF; NF90 is the pilot membrane for fab wastewater, matching the value.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Membrane type is a descriptive categorical variable and appropriately has no unit specified.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 mentions single-pass operation for TPS/TMAH; E08 describes semi-batch operation with reject recirculation and permeate discharge. Recording both single-pass and semi-batch as operation modes is supported.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Operation mode is categorical and correctly has no unit.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05: \u201csingle pass operation at 25 LMH and 15 % single pass recovery,\u201d supporting a flux value of 25.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Flux is reported in LMH in the text (E05), matching the unit.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 reports \u201c15 % single pass recovery,\u201d matching the value 15.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Single-pass water recovery is expressed in percent in the source (E05), matching the unit.\"},{\"field_path\":\"operating_conditions[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E08 lists effective recoveries of 15 %, 25 %, 50 %, and 90 %; representing this as 15\u201390 % for effective recovery in semi-batch operation is a concise range of the reported discrete values.\"},{\"field_path\":\"operating_conditions[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Effective water recovery is expressed in percent in E08, matching the unit.\"},{\"field_path\":\"operating_conditions[5].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 describes NF90 treatment \u201cfollowing pretreatment with cation exchange resin and a series of membrane filters down to either 1 \u00b5m or 0.2 \u00b5m,\u201d matching the recorded pretreatment description.\"},{\"field_path\":\"operating_conditions[5].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Pretreatment description is categorical/process-based and correctly unitless.\"},{\"field_path\":\"operating_conditions[6].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 3 in E06 reports fab wastewater pH as 6.9, matching the value.\"},{\"field_path\":\"operating_conditions[6].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"pH is reported as a dimensionless quantity in the table (no unit), so an empty unit string is acceptable.\"},{\"field_path\":\"operating_conditions[7].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 3 in E06 reports Conductivity 2000 mS/cm, matching the value 2000.\"},{\"field_path\":\"operating_conditions[7].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Conductivity is reported in mS/cm in E06, matching the unit.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFOS is defined in the abbreviations list (E02) and appears in the semi-batch rejection discussion (E08), supporting its inclusion.\"},{\"field_path\":\"pfas_scope[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFOA is defined in E02 and appears in Table 3 (E06) and in overall batch rejection values (E08), supporting its inclusion.\"},{\"field_path\":\"pfas_scope[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFBS is defined in E02 and appears in Table 3 (E06) and in the list of short-chain PFAS with specific rejection values (E08).\"},{\"field_path\":\"pfas_scope[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFHxA is defined in E02, appears in Table 3 (E06), and in the list of short-chain PFAS with semi-batch rejection values (E08).\"},{\"field_path\":\"pfas_scope[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"TFA is defined in E02, appears in Table 3 (E06), and in the calculated permeate and rejection discussions (E04, E08).\"},{\"field_path\":\"pfas_scope[5].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"TFMS is defined in E02, appears in Table 3 (E06), and in the calculated permeate and rejection discussions (E04, E08).\"},{\"field_path\":\"pfas_scope[6].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFPrA is defined in E02 and appears in Table 3 (E06) and in calculated permeate concentrations (E04).\"},{\"field_path\":\"pfas_scope[7].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFBA is defined in E02 and appears in Table 3 (E06) as a quantified PFAS in fab wastewater.\"},{\"field_path\":\"pfas_scope[8].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFPeA is defined in E02 and appears in Table 3 (E06) as a quantified PFAS in fab wastewater.\"},{\"field_path\":\"pfas_scope[9].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFHpA is defined in E02 and appears in Table 3 (E06) as a quantified PFAS in fab wastewater.\"},{\"field_path\":\"pfas_scope[10].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFNA is defined in E02 and appears in Table 3 (E06) and in the detection limit discussion (E04).\"},{\"field_path\":\"pfas_scope[11].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFDA is defined in E02 and appears in Table 3 (E06) as a quantified PFAS in fab wastewater.\"},{\"field_path\":\"pfas_scope[12].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFHxS is defined in the abbreviations list (E02); the record correctly notes it is only mentioned in abbreviations and not quantified in the fab wastewater table.\"},{\"field_path\":\"pfas_scope[13].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFDS is defined in the abbreviations list (E02) and correctly marked as abbreviations only in the record.\"},{\"field_path\":\"pfas_scope[14].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFPrS is defined in the abbreviations list (E02) and correctly noted as appearing only in abbreviations.\"},{\"field_path\":\"pfas_scope[15].value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"E02 defines AFFF and FTS; E08 reports rejection of 6.2 TFS and 8.2 FTS. However, the text does not explicitly state that these PFAS are from AFFF in the specific lab solution tests, so the phrase \u201cfrom aqueous film forming foam (AFFF)\u201d is an unsupported qualifier.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 3 (E06) lists TFMS 202 ng/L in fab wastewater, matching the value 202.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"TFMS concentration is reported in ng/L in Table 3 (E06), matching the unit.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 3 (E06) lists TFA 96,413 ng/L, matching 96413.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"TFA concentration is reported in ng/L (E06), matching the unit.\"},{\"field_path\":\"quantitative_findings[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 3 (E06) lists PFPrA 11,796 ng/L, matching the value.\"},{\"field_path\":\"quantitative_findings[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFPrA concentration is reported in ng/L (E06), matching the unit.\"},{\"field_path\":\"quantitative_findings[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 3 (E06) lists PFBA 504 ng/L, matching the value.\"},{\"field_path\":\"quantitative_findings[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFBA concentration is reported in ng/L (E06), matching the unit.\"},{\"field_path\":\"quantitative_findings[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 3 (E06) lists PFBS 213 ng/L, matching the value.\"},{\"field_path\":\"quantitative_findings[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFBS concentration is reported in ng/L (E06), matching the unit.\"},{\"field_path\":\"quantitative_findings[5].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 3 (E06) lists PFPeA 310 ng/L, matching the value.\"},{\"field_path\":\"quantitative_findings[5].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFPeA concentration is reported in ng/L (E06), matching the unit.\"},{\"field_path\":\"quantitative_findings[6].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 3 (E06) lists PFHxA 178 ng/L, matching the value.\"},{\"field_path\":\"quantitative_findings[6].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFHxA concentration is reported in ng/L (E06), matching the unit.\"},{\"field_path\":\"quantitative_findings[7].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 3 (E06) lists PFHpA 85 ng/L, matching the value.\"},{\"field_path\":\"quantitative_findings[7].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFHpA concentration is reported in ng/L (E06), matching the unit.\"},{\"field_path\":\"quantitative_findings[8].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 3 (E06) lists PFOA 38.0 ng/L, matching the value.\"},{\"field_path\":\"quantitative_findings[8].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFOA concentration is reported in ng/L (E06), matching the unit.\"},{\"field_path\":\"quantitative_findings[9].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 3 (E06) lists PFNA 17.18 ng/L, matching the value.\"},{\"field_path\":\"quantitative_findings[9].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFNA concentration is reported in ng/L (E06), matching the unit.\"},{\"field_path\":\"quantitative_findings[10].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 3 (E06) lists PFDA 57.3 ng/L, matching the value.\"},{\"field_path\":\"quantitative_findings[10].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFDA concentration is reported in ng/L (E06), matching the unit.\"},{\"field_path\":\"quantitative_findings[11].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 3 (E06) lists DIA < 3.3 \u00b5g/L, matching the value format '< 3.3'.\"},{\"field_path\":\"quantitative_findings[11].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"DIA concentration is reported in \u00b5g/L (E06), matching the unit.\"},{\"field_path\":\"quantitative_findings[12].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 3 (E06) lists TPS 34.8 \u00b5g/L, matching the value.\"},{\"field_path\":\"quantitative_findings[12].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"TPS concentration is reported in \u00b5g/L (E06), matching the unit.\"},{\"field_path\":\"quantitative_findings[13].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 3 (E06) lists TMAH 211 \u00b5g/L, matching the value.\"},{\"field_path\":\"quantitative_findings[13].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"TMAH concentration is reported in \u00b5g/L (E06), matching the unit.\"},{\"field_path\":\"quantitative_findings[14].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 3 (E06) lists TOC 8.7 mg/L, matching the value.\"},{\"field_path\":\"quantitative_findings[14].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"TOC is reported in mg/L (E06), matching the unit.\"},{\"field_path\":\"quantitative_findings[15].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Table 3 (E06) lists TN 93.4 mg/L, matching the value.\"},{\"field_path\":\"quantitative_findings[15].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"TN is reported in mg/L (E06), matching the unit.\"},{\"field_path\":\"quantitative_findings[16].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E08 states overall batch rejection values for PFOA were > 99 %, matching the value format '> 99'.\"},{\"field_path\":\"quantitative_findings[16].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Rejection is reported in percent in E08, matching the unit.\"},{\"field_path\":\"quantitative_findings[17].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E08 states overall batch rejection values for PFOS were > 99 %, matching the value format '> 99'.\"},{\"field_path\":\"quantitative_findings[17].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Rejection is reported in percent in E08, matching the unit.\"},{\"field_path\":\"quantitative_findings[18].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E08 states overall batch rejection values for 6.2 TFS were > 99 %, matching the recorded '> 99' for 6:2 FTS.\"},{\"field_path\":\"quantitative_findings[18].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Rejection is reported in percent in E08, matching the unit.\"},{\"field_path\":\"quantitative_findings[19].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E08 states overall batch rejection values for 8.2 FTS were > 99 %, matching the recorded '> 99' for 8:2 FTS.\"},{\"field_path\":\"quantitative_findings[19].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Rejection is reported in percent in E08, matching the unit.\"},{\"field_path\":\"quantitative_findings[20].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E08 reports TFA overall batch rejection of 93.7 %, matching the value.\"},{\"field_path\":\"quantitative_findings[20].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Rejection is reported in percent in E08, matching the unit.\"},{\"field_path\":\"quantitative_findings[21].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E08 reports TFMS overall batch rejection of 95.0 %, matching the value.\"},{\"field_path\":\"quantitative_findings[21].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Rejection is reported in percent in E08, matching the unit.\"},{\"field_path\":\"quantitative_findings[22].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E08 reports PFBS overall batch rejection of 96.5 %, matching the value.\"},{\"field_path\":\"quantitative_findings[22].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Rejection is reported in percent in E08, matching the unit.\"},{\"field_path\":\"quantitative_findings[23].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E08 reports PFHxA overall batch rejection of 97.6 %, matching the value.\"},{\"field_path\":\"quantitative_findings[23].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Rejection is reported in percent in E08, matching the unit.\"},{\"field_path\":\"quantitative_findings[24].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E04 states calculated overall batch permeate concentrations of TFA were 2022 ng/L, matching the value.\"},{\"field_path\":\"quantitative_findings[24].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"These permeate concentrations are reported in ng/L in E04, matching the unit.\"},{\"field_path\":\"quantitative_findings[25].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E04 states calculated overall batch permeate concentrations of TFMS and PFPrA were 1.8 and 29.1 ng/L, respectively, matching the values 1.8 and 29.1.\"},{\"field_path\":\"quantitative_findings[25].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"These permeate concentrations are reported in ng/L in E04, matching the unit.\"},{\"field_path\":\"residuals_byproducts[0].statement\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"E08 reports lower overall batch rejection for TFA, TFMS, PFBS, and PFHxA relative to longer-chain PFAS, implying higher residuals; E04 gives ng/L permeate concentrations for some species. However, the phrase \u201clargely below ng/L to low \u00b5g/L levels\u201d overgeneralizes residual levels beyond the specific permeate concentrations reported, so the statement is only partially supported.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 describes lab and pilot scale experiments and use of spiral-wound NF modules; E05 and E08 refer to pilot system operation and semi-batch configuration, supporting the description of a pilot-scale spiral-wound NF90 system treating fab wastewater and lab solution in single-pass and semi-batch modes.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E01 notes commercial Filmtec NF270 and NF90 membranes; E05 describes NF90 treatment following pretreatment; E08 describes semi-batch operation with recirculated reject. This supports the description of nanofiltration with a Filmtec NF90 spiral-wound module, with both single-pass and semi-batch configurations after cation exchange and membrane filtration pretreatment.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014source identity, matrices, membrane type and scale, PFAS scope, operating conditions, and all quantitative findings (concentrations and rejection values)\u2014are well supported by the cited text. The only issues are minor qualifier overreach in one PFAS scope entry and the residuals/byproducts narrative, which do not affect the usability of the quantitative and operational data for synthesis.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused, comparative review of how membrane processes should be selected for a specified PFAS composition, water matrix, and treatment objective.\",\"task_id\":\"RT04\",\"title\":\"Selecting a membrane process for a defined PFAS feed water\"}\n\nTask-specific extraction objective:\nExtract membrane type and properties, PFAS identity, feed matrix and concentration, pressure, flux, recovery, rejection or adsorption endpoint, fouling, permeability, energy, scale, and comparison limitations.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envint.2021.106876\",\"10.3929/ethz-b-000506220\"],\"all_blocked_titles\":[\"membrane based technologies for per and poly fluoroalkyl substances pfass removal from water removal mechanisms applications challenges and perspectives\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envint.2021.106876\",\"https://www.research-collection.ethz.ch/items/f9152dfa-5b8e-4ce2-8153-1cbb37911e55\"],\"anchor_id\":\"AR-JIN-2021\",\"corpus_source\":\"2021 - Jin - Membrane-based technologies for per- and poly-fluoroalkyl substances (PFASs) removal from water - Removal mechanisms, applications, challenges and.pdf\",\"doi\":\"10.1016/j.envint.2021.106876\",\"title\":\"Membrane-based technologies for per- and poly-fluoroalkyl substances (PFASs) removal from water: Removal mechanisms, applications, challenges and perspectives\",\"url\":\"https://doi.org/10.1016/j.envint.2021.106876\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Griffin, A.M.; Bellona, C.; Strathmann, T.J. Rejection of PFAS and priority co-contaminants in semiconductor fabrication wastewater by nanofiltration membranes. Water Research 262 (2024) 122111.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S14-E01\",\n      \"S14-E04\",\n      \"S14-E05\",\n      \"S14-E06\",\n      \"S14-E08\"\n    ],\n    \"reason\": \"Pilot-scale NF90 experiments report PFAS- and co-contaminant-specific rejection values, feed concentrations, matrix composition, and operating conditions (flux, recovery, pretreatment), allowing comparison across PFAS chain lengths and between short- and long-chain PFAS within the same membrane, matrix, and operational envelope. However, detection-limit constraints for \\u2265C4 PFAS and mixed operation modes (single-pass vs semi-batch) mean comparisons to other studies or membranes require careful adjustment for these conditions.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.watres.2024.122111\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"separation\",\n      \"evidence_locator_ids\": [\n        \"S14-E04\",\n        \"S14-E05\",\n        \"S14-E08\"\n      ],\n      \"interpretation\": \"Percentage rejection of individual PFAS and selected co-contaminants based on concentration differences between feed and permeate in pilot-scale NF90 system; overall batch rejection in semi-batch mode reflects cumulative separation over increasing effective water recovery rather than single-pass separation.\",\n      \"reported_term\": \"rejection\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S14-E05\"\n      ],\n      \"interpretation\": \"TCSF used to compare hydraulic performance (permeability/fouling behavior) between lab solution and fab wastewater feeds at similar conditions, though specific numeric values are not provided in the supplied text.\",\n      \"reported_term\": \"temperature corrected specific flux (TCSF)\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S14-E04\"\n      ],\n      \"statement\": \"The calculation of rejection values for \\u2265 C4 PFAS was limited by permeate detection limits, so the actual effective rejection likely exceeds the reported values.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S14-E05\"\n      ],\n      \"statement\": \"Given conflicting trends in previous studies and the use of only one fab wastewater composition here, additional study with multiple fab wastewater feeds of varying composition is recommended to comprehensively determine the impact of wastewater matrix on PFAS rejection.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S14-E01\",\n        \"S14-E05\",\n        \"S14-E08\"\n      ],\n      \"statement\": \"Pilot tests focused on NF90 membranes and specific operating configurations; results may not directly extend to other membrane types, pressures, or pretreatment trains.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S14-E01\",\n      \"S14-E05\",\n      \"S14-E06\"\n    ],\n    \"value\": \"Semiconductor fabrication wastewater (\\\"fab wastewater\\\"), after pretreatment with cation exchange resin and membrane filtration to 1 \\u00b5m or 0.2 \\u00b5m; also a defined lab solution feed used in the same pilot system\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E01\"\n      ],\n      \"name\": \"Membrane type\",\n      \"qualifiers\": \"Described as representative of tight NF; NF270 also evaluated but pilot system used NF90 for fab wastewater experiments\",\n      \"unit\": null,\n      \"value\": \"Filmtec NF90 (tight nanofiltration membrane), commercial spiral-wound module\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E05\",\n        \"S14-E08\"\n      ],\n      \"name\": \"Operation mode\",\n      \"qualifiers\": \"Semi-batch: membrane reject recirculated to feed tank, permeate discharged; used to vary effective water recovery\",\n      \"unit\": null,\n      \"value\": \"Single-pass and semi-batch in pilot system\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E05\"\n      ],\n      \"name\": \"Flux\",\n      \"qualifiers\": \"Single-pass operation at 25 LMH and 15% single-pass recovery for TPS and TMAH rejection; flux for PFAS semi-batch operation not explicitly stated in provided text\",\n      \"unit\": \"LMH\",\n      \"value\": \"25\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E05\"\n      ],\n      \"name\": \"Single-pass water recovery\",\n      \"qualifiers\": \"Single-pass mode, TPS and TMAH rejection reported at 15% recovery\",\n      \"unit\": \"%\",\n      \"value\": \"15\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E08\"\n      ],\n      \"name\": \"Effective water recovery (semi-batch)\",\n      \"qualifiers\": \"Semi-batch operation: effective recoveries of 15%, 25%, 50%, and 90% achieved by recirculating reject and discharging permeate\",\n      \"unit\": \"%\",\n      \"value\": \"15-90\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E05\"\n      ],\n      \"name\": \"Pretreatment\",\n      \"qualifiers\": \"Applied prior to NF90 membrane treatment of lab solution and fab wastewater\",\n      \"unit\": null,\n      \"value\": \"Cation exchange resin and membrane filters down to either 1 \\u00b5m or 0.2 \\u00b5m\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Fab wastewater pH\",\n      \"qualifiers\": \"Feed water characterization prior to membrane treatment\",\n      \"unit\": \"\",\n      \"value\": \"6.9\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Fab wastewater conductivity\",\n      \"qualifiers\": \"As reported in table of fab wastewater quality; likely represents high ionic strength semiconductor wastewater\",\n      \"unit\": \"mS/cm\",\n      \"value\": \"2000\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E02\",\n        \"S14-E08\"\n      ],\n      \"value\": \"PFOS (perfluorooctane sulfonic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E02\",\n        \"S14-E04\",\n        \"S14-E06\",\n        \"S14-E08\"\n      ],\n      \"value\": \"PFOA (perfluorooctanoic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E02\",\n        \"S14-E04\",\n        \"S14-E06\",\n        \"S14-E08\"\n      ],\n      \"value\": \"PFBS (perfluorobutane sulfonic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E02\",\n        \"S14-E04\",\n        \"S14-E06\",\n        \"S14-E08\"\n      ],\n      \"value\": \"PFHxA (perfluorohexanoic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E02\",\n        \"S14-E04\",\n        \"S14-E06\",\n        \"S14-E08\"\n      ],\n      \"value\": \"TFA (trifluoroacetic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E02\",\n        \"S14-E04\",\n        \"S14-E06\",\n        \"S14-E08\"\n      ],\n      \"value\": \"TFMS (trifluoromethane sulfonic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E02\",\n        \"S14-E04\",\n        \"S14-E06\"\n      ],\n      \"value\": \"PFPrA (perfluoropropanoic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E02\",\n        \"S14-E06\"\n      ],\n      \"value\": \"PFBA (perfluorobutanoic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E02\",\n        \"S14-E06\"\n      ],\n      \"value\": \"PFPeA (perfluoropentanoic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E02\",\n        \"S14-E06\"\n      ],\n      \"value\": \"PFHpA (perfluoroheptanoic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E02\",\n        \"S14-E04\",\n        \"S14-E06\"\n      ],\n      \"value\": \"PFNA (perfluorononanoic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E02\",\n        \"S14-E06\"\n      ],\n      \"value\": \"PFDA (perfluorodecanoic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E02\"\n      ],\n      \"value\": \"PFHxS (perfluorhexane sulfonic acid) (mentioned in abbreviations; not specifically quantified in fab wastewater table)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E02\"\n      ],\n      \"value\": \"PFDS (perfluorodecane sulfonic acid) (abbreviations only)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E02\"\n      ],\n      \"value\": \"PFPrS (perfluoropropane sulfonic acid) (abbreviations only)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E02\",\n        \"S14-E08\"\n      ],\n      \"value\": \"PFAS from aqueous film forming foam (AFFF) and fluorotelomer sulfonates (FTS) including 6:2 FTS and 8:2 FTS in lab solution semi-batch tests\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Fab wastewater TFMS concentration\",\n      \"qualifiers\": \"Feed concentration before NF treatment\",\n      \"unit\": \"ng/L\",\n      \"value\": \"202\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Fab wastewater TFA concentration\",\n      \"qualifiers\": \"Feed concentration before NF treatment\",\n      \"unit\": \"ng/L\",\n      \"value\": \"96413\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Fab wastewater PFPrA concentration\",\n      \"qualifiers\": \"Feed concentration before NF treatment\",\n      \"unit\": \"ng/L\",\n      \"value\": \"11796\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Fab wastewater PFBA concentration\",\n      \"qualifiers\": \"Feed concentration before NF treatment\",\n      \"unit\": \"ng/L\",\n      \"value\": \"504\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Fab wastewater PFBS concentration\",\n      \"qualifiers\": \"Feed concentration before NF treatment\",\n      \"unit\": \"ng/L\",\n      \"value\": \"213\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Fab wastewater PFPeA concentration\",\n      \"qualifiers\": \"Feed concentration before NF treatment\",\n      \"unit\": \"ng/L\",\n      \"value\": \"310\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Fab wastewater PFHxA concentration\",\n      \"qualifiers\": \"Feed concentration before NF treatment\",\n      \"unit\": \"ng/L\",\n      \"value\": \"178\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Fab wastewater PFHpA concentration\",\n      \"qualifiers\": \"Feed concentration before NF treatment\",\n      \"unit\": \"ng/L\",\n      \"value\": \"85\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Fab wastewater PFOA concentration\",\n      \"qualifiers\": \"Feed concentration before NF treatment\",\n      \"unit\": \"ng/L\",\n      \"value\": \"38.0\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Fab wastewater PFNA concentration\",\n      \"qualifiers\": \"Feed concentration before NF treatment\",\n      \"unit\": \"ng/L\",\n      \"value\": \"17.18\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Fab wastewater PFDA concentration\",\n      \"qualifiers\": \"Feed concentration before NF treatment\",\n      \"unit\": \"ng/L\",\n      \"value\": \"57.3\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Fab wastewater DIA concentration\",\n      \"qualifiers\": \"Diaryliodonium (DIA) co-contaminant; reported as < 3.3 \\u00b5g/L\",\n      \"unit\": \"\\u00b5g/L\",\n      \"value\": \"< 3.3\",\n      \"value_form\": \"inequality\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Fab wastewater TPS concentration\",\n      \"qualifiers\": \"Triphenylsulfonium (TPS) co-contaminant; feed concentration\",\n      \"unit\": \"\\u00b5g/L\",\n      \"value\": \"34.8\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Fab wastewater TMAH concentration\",\n      \"qualifiers\": \"Tetramethylammonium hydroxide (TMAH) co-contaminant; feed concentration\",\n      \"unit\": \"\\u00b5g/L\",\n      \"value\": \"211\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Fab wastewater TOC\",\n      \"qualifiers\": \"Total organic carbon in fab wastewater\",\n      \"unit\": \"mg/L\",\n      \"value\": \"8.7\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E06\"\n      ],\n      \"name\": \"Fab wastewater TN\",\n      \"qualifiers\": \"Total nitrogen in fab wastewater\",\n      \"unit\": \"mg/L\",\n      \"value\": \"93.4\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E08\"\n      ],\n      \"name\": \"Semi-batch overall batch rejection of PFOA\",\n      \"qualifiers\": \"NF90 pilot system semi-batch operation treating lab solution mixture (including PFOA) with recirculated reject; overall batch rejection across recoveries up to 90%\",\n      \"unit\": \"%\",\n      \"value\": \"> 99\",\n      \"value_form\": \"inequality\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E08\"\n      ],\n      \"name\": \"Semi-batch overall batch rejection of PFOS\",\n      \"qualifiers\": \"NF90 semi-batch pilot operation; overall batch rejection across recoveries up to 90%\",\n      \"unit\": \"%\",\n      \"value\": \"> 99\",\n      \"value_form\": \"inequality\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E08\"\n      ],\n      \"name\": \"Semi-batch overall batch rejection of 6:2 FTS\",\n      \"qualifiers\": \"NF90 semi-batch pilot operation; overall batch rejection of 6:2 fluorotelomer sulfonate\",\n      \"unit\": \"%\",\n      \"value\": \"> 99\",\n      \"value_form\": \"inequality\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E08\"\n      ],\n      \"name\": \"Semi-batch overall batch rejection of 8:2 FTS\",\n      \"qualifiers\": \"NF90 semi-batch pilot operation; overall batch rejection of 8:2 fluorotelomer sulfonate\",\n      \"unit\": \"%\",\n      \"value\": \"> 99\",\n      \"value_form\": \"inequality\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E08\"\n      ],\n      \"name\": \"Semi-batch overall batch rejection of TFA\",\n      \"qualifiers\": \"NF90 semi-batch pilot operation; overall batch rejection of ultrashort-chain PFCA TFA across recoveries up to 90%\",\n      \"unit\": \"%\",\n      \"value\": \"93.7\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E08\"\n      ],\n      \"name\": \"Semi-batch overall batch rejection of TFMS\",\n      \"qualifiers\": \"NF90 semi-batch pilot operation; overall batch rejection of ultrashort-chain PFSA TFMS across recoveries up to 90%\",\n      \"unit\": \"%\",\n      \"value\": \"95.0\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E08\"\n      ],\n      \"name\": \"Semi-batch overall batch rejection of PFBS\",\n      \"qualifiers\": \"NF90 semi-batch pilot operation; overall batch rejection of short-chain PFSA PFBS across recoveries up to 90%\",\n      \"unit\": \"%\",\n      \"value\": \"96.5\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E08\"\n      ],\n      \"name\": \"Semi-batch overall batch rejection of PFHxA\",\n      \"qualifiers\": \"NF90 semi-batch pilot operation; overall batch rejection of short-chain PFCA PFHxA across recoveries up to 90%\",\n      \"unit\": \"%\",\n      \"value\": \"97.6\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E04\"\n      ],\n      \"name\": \"Calculated batch permeate concentration of TFA\",\n      \"qualifiers\": \"Overall batch permeate concentration across semi-batch operation in pilot system\",\n      \"unit\": \"ng/L\",\n      \"value\": \"2022\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E04\"\n      ],\n      \"name\": \"Calculated batch permeate concentration of TFMS\",\n      \"qualifiers\": \"Overall batch permeate concentration across semi-batch operation\",\n      \"unit\": \"ng/L\",\n      \"value\": \"1.8\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S14-E04\"\n      ],\n      \"name\": \"Calculated batch permeate concentration of PFPrA\",\n      \"qualifiers\": \"Overall batch permeate concentration across semi-batch operation\",\n      \"unit\": \"ng/L\",\n      \"value\": \"29.1\",\n      \"value_form\": \"exact_numeric\"\n    }\n  ],\n  \"record_id\": \"RT04-bge_llm_local_rag-S14-R01\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S14-E04\",\n        \"S14-E08\"\n      ],\n      \"statement\": \"Short-chain and ultrashort-chain PFAS (TFA, TFMS, PFBS, PFHxA) exhibited lower overall batch rejection than longer-chain PFAS, resulting in higher residual concentrations in permeate, though still largely below ng/L to low \\u00b5g/L levels as reported.\"\n    }\n  ],\n  \"source_id\": \"S14\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S14-E01\",\n      \"S14-E05\",\n      \"S14-E08\"\n    ],\n    \"value\": \"Pilot-scale spiral-wound NF90 membrane system treating semiconductor fabrication wastewater and lab solution, operated in single-pass and semi-batch modes\"\n  },\n  \"study_type\": \"pilot_or_field_deployment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S14-E01\",\n      \"S14-E05\",\n      \"S14-E08\"\n    ],\n    \"value\": \"Nanofiltration using a commercial Filmtec NF90 membrane operated as a spiral-wound module in a pilot system, in both single-pass and semi-batch (reject recirculated) configurations after pretreatment of fab wastewater with cation exchange and cartridge/membrane filtration\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 18,\n  \"bge_score\": 0.6289722323417664,\n  \"citation\": \"Griffin, A.M.; Bellona, C.; Strathmann, T.J. Rejection of PFAS and priority co-contaminants in semiconductor fabrication wastewater by nanofiltration membranes. Water Research 2024 262 122111. DOI: 10.1016/j.watres.2024.122111.\",\n  \"doi\": \"10.1016/j.watres.2024.122111\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.watres.2024.122111\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 12,\n      \"locator_id\": \"S14-E01\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.005455133970826864,\n        \"RT04-C2\": 0.009665591642260551,\n        \"RT04-C3\": 0.0003081546747125685,\n        \"umbrella\": 0.5509103536605835\n      },\n      \"section\": \"methods\",\n      \"text\": \"ment of ultrashort chain PFAS that are increasingly important in these waters. This contribution examines the rejection of PFAS and organic fab co- contaminants by NF membranes at both the lab and pilot scale in a lab solution and a fab wastewater matrix. Experiments with the lab solution were first performed using a flat sheet filtration cell to identify an appropriate NF membrane for rejection of both PFAS and co- A.M. Griffin et al. Water Research 262 (2024) 122111 3 contaminants, which was then used in a pilot scale system to treat the lab solution and fab wastewater. The evaluation of lab solutions and fab wastewater at lab and pilot scale with inclusion of relevant ultrashort chain compounds and co-contaminants fills critical data gaps and sup- ports the further deployment of membrane technologies for managing fab wastewater and other complex water matrices to minimize release of PFAS. 2. Materials and methods 2.1. Membranes evaluated Experiments were conducted using Filmtec NF270 and NF90 mem- branes that were either cut from a flat sheet provided by the manufac- turer or purchased as a spiral wound module. These commercial membranes have been previously used for PFAS treatment in other water matrices and are considered to be representative loose (NF270) and tight (NF90) NF membranes ( Liu et al., 2021 ; Safulko et al., 2023 ).\"\n    },\n    {\n      \"corpus_chunk\": 3,\n      \"locator_id\": \"S14-E02\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.33818286657333374,\n        \"RT04-C2\": 0.05996803566813469,\n        \"RT04-C3\": 0.00131092534866184,\n        \"umbrella\": 0.28601744771003723\n      },\n      \"section\": \"abstract\",\n      \"text\": \"Abbreviations: PFAS, per- and polyfluoroalkyl substances; fab, semiconductor fabrication facility; PFOS, perfluorooctane sulfonic acid; PFOA, perfluorooctanoic acid; PFBS, perfluorobutane sulfonic acid; TFMS, trifluoromethane sulfonic acid; PFDS, perfluorodecane sulfonic acid; PFHxS, perfluorhexane sulfonic acid; LC-MS/ MS, liquid chromatography with tandem mass spectroscopy; PFSA, perfluorosulfonic acid; PFCA, perfluorocarboxylic acid; TFA, trifluoroacetic acid; PFPrA, per- fluoropropanoic acid; TMAH, tetramethylammonium hydroxide; NDMA, N-nitrosodimethylamine; PAG, photo acid generator; DIA, diaryliodonium; TPS, triphe- nylsulfonium; EPA, Environmental Protection Agency; PFAA, perfluoroalkyl acid; GAC, granular activated carbon; IX, ion exchange; DOM, dissolved organic matter; NF, nanofiltration; RO, reverse osmosis; MWCO, molecular weight cut off; PFPrS, perfluoropropane sulfonic acid; lpm, liter per minute; LMH, liters per square meter per hour; PFBA, perfluorobutanoic acid; NAP, Naproxen; BPA, bisphenol-A; DOC, dissolved organic carbon; AFFF, aqueous film forming foam; FTS, fluorotelomer sulfonate; HPLC, high pressure liquid chromatography; PFPeA, perfluoropentanoic acid; PFHxA, perfluorohexanoic acid; PFHpA, perfluoroheptanoic acid; PFNA, perfluorononanoic acid; PFDA, Perfluorodecanoic acid; HA, humic acid. * Corresponding author.\"\n    },\n    {\n      \"corpus_chunk\": 59,\n      \"locator_id\": \"S14-E03\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.017371831461787224,\n        \"RT04-C2\": 0.3716936409473419,\n        \"RT04-C3\": 0.00031822972232475877,\n        \"umbrella\": 0.03348996490240097\n      },\n      \"section\": \"results\",\n      \"text\": \"Speed, D., Westerhoff, P., Sierra-Alvarez, R., Draper, R., Pantano, P., Aravamudhan, S., Chen, K.L., Hristovski, K., Herckes, P., Bi, X., Yang, Y., Zeng, C., Otero-Gonzalez, L., Mikoryak, C., Wilson, B.A., Kosaraju, K., Tarannum, M., Crawford, S., Yi, P., Liu, X., Babu, S.V., Moinpour, M., Ranville, J., Montano, M., Corredor, C., Posner, J., Shadman, F., 2015. Physical, chemical, and in vitro toxicological characterization of nanoparticles in chemical mechanical planarization suspensions used in the semiconductor industry: towards environmental health and safety assessments. Environ. Sci. Nano 2, 227 \\u2013 244. https://doi.org/10.1039/C5EN00046G . Steinle-Darling, E., Reinhard, M., 2008. Nanofiltration for trace organic contaminant removal: structure, solution, and membrane fouling effects on the rejection of perfluorochemicals. Environ. Sci. Technol. 42, 5292 \\u2013 5297. https://doi.org/\"\n    },\n    {\n      \"corpus_chunk\": 36,\n      \"locator_id\": \"S14-E04\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.008196708746254444,\n        \"RT04-C2\": 0.016750190407037735,\n        \"RT04-C3\": 0.0038149089086800814,\n        \"umbrella\": 0.06074324995279312\n      },\n      \"section\": \"methods\",\n      \"text\": \"TFMS (98.3 \\u00b1 0.4 %). The calculation of rejection values for \\u2265 C4 PFAS was limited by permeate detection limits, so the actual effective rejec- tion likely exceeds the reported values. Moreso, the detection limits for PFOA (0.67 ng/L), PFNA (0.67 ng/L), and PFBS (1.33 ng/L) were below the recently finalized EPA maximum contaminant levels and hazard index health concentrations (4.0, 10, and 2000 ng/L, respectively) ( US EPA, 2024 ). The calculated concentrations of TFA, TFMS, and PFPrA in the overall batch permeate were 2022, 1.8, and 29.1 ng/L, respectively. Rejection values for all of the PFAS (TFMS, PFBS, PFHxA and PFOA), except TFA, present in both pilot scale experiments were higher in the fab wastewater than in the lab solution feed, potentially due to differ- ences in composition between the two waters. Several groups have investigated the impact of DOM and inorganic ions on PFAS rejection ( Appleman et al., 2013 ; Liu et al., 2023 ; Wang et al., 2018 ; Zhao et al., 2020 , 2016 ). One study found PFOS rejection by the Hydranautics\"\n    },\n    {\n      \"corpus_chunk\": 39,\n      \"locator_id\": \"S14-E05\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.008713307790458202,\n        \"RT04-C2\": 0.14878691732883453,\n        \"RT04-C3\": 0.0007878307369537652,\n        \"umbrella\": 0.5014017820358276\n      },\n      \"section\": \"methods\",\n      \"text\": \"Comparison of pilot system a) feed pressure and b) temperature cor- rected specific flux (TCSF) between the lab solution and fab wastewater treated by the NF90 membrane following pretreatment with cation exchange resin and a series of membrane filters down to either 1 \\u00b5 m or 0.2 \\u00b5 m. A.M. Griffin et al. Water Research 262 (2024) 122111 9 foulants added to synthetic wastewater matrices. Given the conflicting trends observed in these previous studies, additional study with multiple fab wastewater feeds of varying composition is recommended to comprehensively determine the impact of wastewater matrix on PFAS rejection. Analysis of permeate yielded rejection values of 94.9 % \\u00b1 0.2 for TPS and 56.8 % \\u00b1 13.0 for TMAH for single pass operation at 25 LMH and 15 % single pass recovery ( Fig. 4 b ). TPS rejection remained 94.9 % - 99.6 % and TMAH rejection increased to 73.8 \\u2013 76.3 % when recoveries were increased to higher values by operating in semi-batch mode. It follows that, like PFAS, treatment of fab co-contaminants was more effective for the fab wastewater compared to the lab solution feed where rejection values dropped dramatically with increasing water recoveries, even going negative for TPS at 90 % recovery. This improved effective\"\n    },\n    {\n      \"corpus_chunk\": 38,\n      \"locator_id\": \"S14-E06\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.006468543782830238,\n        \"RT04-C2\": 0.06422710418701172,\n        \"RT04-C3\": 0.0004098528006579727,\n        \"umbrella\": 0.436458557844162\n      },\n      \"section\": \"methods\",\n      \"text\": \"nate ( Liu et al., 2023 ). However, it should be noted that these studies were all performed using bench scale flat sheet filtration cells with Table 3 Analysis of fab wastewater used in membrane treatment experiments. Category Compound Concentration PFAS TFMS 202 ng/L TFA 96,413 ng/L PFPrA 11,796 ng/L PFBA 504 ng/L PFBS 213 ng/L PFPeA 310 ng/L PFHxA 178 ng/L PFHpA 85 ng/L PFOA 38.0 ng/L PFNA 17.18 ng/L PFDA 57.3 ng/L Fab Co- Contaminants DIA < 3.3 \\u00b5 g/L TPS 34.8 \\u00b5 g/L TMAH 211 \\u00b5 g/L Water Quality pH 6.9 Conductivity 2000 mS/cm Fl - 121 mg/L Cl - 24.5 mg/L NO 3 - 15.9 mg/L PO 4 3- 19.2 mg/L SO 4 2- 766 mg/L K + 1.7 mg/L Na + 434 mg/L Si + 34.0 TOC 8.7 mg/L TN 93.4 mg/L Fig. 5. Comparison of pilot system a) feed pressure and b) temperature cor- rected specific flux (TCSF) between the lab solution and fab wastewater treated\"\n    },\n    {\n      \"corpus_chunk\": 11,\n      \"locator_id\": \"S14-E07\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.008281441405415535,\n        \"RT04-C2\": 0.020619507879018784,\n        \"RT04-C3\": 0.001234296360053122,\n        \"umbrella\": 0.3529678285121918\n      },\n      \"section\": \"methods\",\n      \"text\": \"> 97 % at all fluxes evaluated ( Liu et al., 2021 ). In a separate study, the Filmtec NF90 membrane achieved comparable rejection to the Filmtec BW30 and SW30 RO membranes in a closed circuit configuration, while requiring 1.8x and 3.2x less energy, respectively, for operation ( Safulko et al., 2023 ). Few studies have focused on membrane treatment of PFAS in fab wastewater. An initial study evaluated the removal of high con- centrations (10 ppm) of PFOS, finding rejection values of 99 % and 90 \\u2013 99 % for RO and NF membranes, respectively ( Tang et al., 2007a , 2006 ). A second study evaluating C4-C14 PFAAs found the NF270 membrane achieved rejection values > 95 % for all compounds evalu- ated with exception of perfluoropentanoic acid (PFPeA), the lowest molecular weight compound included in the study, which was rejected by 72 % ( Steinle-Darling and Reinhard, 2008 ). These fab-specific studies were conducted using lab scale flat sheet filtration cells and synthetic wastewater with no or limited co-contaminants that are commonly present in fab wastewater. Minimal literature exists on the rejection of PFAS by NF or RO membranes in fab wastewater or membrane treat- ment of ultrashort chain PFAS that are increasingly important in these waters.\"\n    },\n    {\n      \"corpus_chunk\": 30,\n      \"locator_id\": \"S14-E08\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.0033185123465955257,\n        \"RT04-C2\": 0.3344346880912781,\n        \"RT04-C3\": 0.0011218173895031214,\n        \"umbrella\": 0.05999135971069336\n      },\n      \"section\": \"results\",\n      \"text\": \"Semi-Batch operation \\u2013 effect of increasing water recovery To evaluate the impact of recovery on the rejection of the studied solutes, the pilot system configuration was switched to the semi-batch configuration where membrane reject was recirculated to the feed tank and permeate was discharged. Figs. 3 a and 4 a also show the effects of varying the effective water recoveries (15 %, 25 %, 50 %, and 90 % effective recoveries) on rejection of PFAS and co-contaminants during the semi-batch mode operation of the pilot system. Overall batch rejection values for PFOA, PFOS, 6.2 TFS, and 8.2 FTS were > 99 % with lower values observed for the short chain PFAS TFA (93.7 %), TFMS (95.0 %), PFBS (96.5 %), and PFHxA (97.6 %). The batch rejection values displayed a similar chain length dependence to Fig. 2. Single pass rejection of a) PFAS and b) co-contaminants in lab solution by the NF270 and NF90 membranes. Experimental conditions: flat sheet membrane system, full recycle mode, flux 20 LMH, < 0.5 % recovery, lab so- lutions composition described in experimental section. Numbers in parentheses indicate molecular weight of the individual solutes. Error bars represent the\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2024 - Griffin - Rejection of PFAS and priority co-contaminants in semiconductor fabrication wastewater by nanofiltration membranes.pdf\",\n  \"source_id\": \"S14\",\n  \"title\": \"Rejection of PFAS and priority co-contaminants in semiconductor fabrication wastewater by nanofiltration membranes\",\n  \"year\": \"2024\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "2cafcfcf4c6f625fc963b5825ebdbdc3cfd807a5cca0d669c50c6217b2453cf4",
+  "response_metadata": {
+    "cached_input_tokens": 1152,
+    "estimated_cost_usd": 0.0795065,
+    "finish_reason": "stop",
+    "input_tokens": 9714,
+    "latency_seconds": 46.23415545804892,
+    "output_tokens": 6866,
+    "reasoning_tokens": 1958,
+    "response_id": "chatcmpl-E9NDyfLs8yIgIYA4R8ZSn8yOITAO3",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 16580,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The record classifies the data as comparable with conditions due to shared membrane, matrix, and operating envelope plus limitations from detection limits and operation modes; this synthesis-oriented judgment is consistent with the pilot NF90 setup, shared conditions (flux, recovery, pretreatment), and detection-limit discussion in the cited text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "Text supports that a pilot NF90 system was used, that PFAS- and co-contaminant-specific rejection values and feed concentrations were obtained in fab wastewater and lab solution, and that detection limits constrained \u2265C4 PFAS rejection plus semi-batch versus single-pass operation (E04, E05, E08).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "Rejection values for individual PFAS and co-contaminants are explicitly reported (e.g., TPS and TMAH, and overall batch rejections of multiple PFAS), which is a separation endpoint (E04, E05, E08).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "Temperature corrected specific flux (TCSF) is a hydraulic performance metric rather than a separation or degradation endpoint; treating it as endpoint_type \u2018other\u2019 is appropriate and consistent with E05, which plots TCSF to compare feeds.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].statement",
+        "reason": "E04 states: \u201cThe calculation of rejection values for \u2265 C4 PFAS was limited by permeate detection limits, so the actual effective rejection likely exceeds the reported values,\u201d matching the recorded limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1].statement",
+        "reason": "E05 states that, given conflicting trends in past studies, \u201cadditional study with multiple fab wastewater feeds of varying composition is recommended to comprehensively determine the impact of wastewater matrix on PFAS rejection,\u201d matching the limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[2].statement",
+        "reason": "E01, E05, and E08 show that NF90 (and NF270 in some tests) were evaluated in specific pilot configurations; inferring limited generalizability to other membrane types, pressures, or pretreatment trains is a reasonable design-based limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix.value",
+        "reason": "E01 describes lab solution and fab wastewater matrices; E05 describes pretreatment with cation exchange resin and membrane filters to 1 \u00b5m or 0.2 \u00b5m; E06 provides a table of fab wastewater quality, supporting the recorded description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "E01 states that Filmtec NF270 and NF90 commercial membranes, including spiral-wound modules, were used and that NF270 is loose and NF90 tight NF; NF90 is the pilot membrane for fab wastewater, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "Membrane type is a descriptive categorical variable and appropriately has no unit specified.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "E05 mentions single-pass operation for TPS/TMAH; E08 describes semi-batch operation with reject recirculation and permeate discharge. Recording both single-pass and semi-batch as operation modes is supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "Operation mode is categorical and correctly has no unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "E05: \u201csingle pass operation at 25 LMH and 15 % single pass recovery,\u201d supporting a flux value of 25.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "Flux is reported in LMH in the text (E05), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "E05 reports \u201c15 % single pass recovery,\u201d matching the value 15.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "Single-pass water recovery is expressed in percent in the source (E05), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].value",
+        "reason": "E08 lists effective recoveries of 15 %, 25 %, 50 %, and 90 %; representing this as 15\u201390 % for effective recovery in semi-batch operation is a concise range of the reported discrete values.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].unit",
+        "reason": "Effective water recovery is expressed in percent in E08, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[5].value",
+        "reason": "E05 describes NF90 treatment \u201cfollowing pretreatment with cation exchange resin and a series of membrane filters down to either 1 \u00b5m or 0.2 \u00b5m,\u201d matching the recorded pretreatment description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[5].unit",
+        "reason": "Pretreatment description is categorical/process-based and correctly unitless.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[6].value",
+        "reason": "Table 3 in E06 reports fab wastewater pH as 6.9, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[6].unit",
+        "reason": "pH is reported as a dimensionless quantity in the table (no unit), so an empty unit string is acceptable.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[7].value",
+        "reason": "Table 3 in E06 reports Conductivity 2000 mS/cm, matching the value 2000.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[7].unit",
+        "reason": "Conductivity is reported in mS/cm in E06, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "PFOS is defined in the abbreviations list (E02) and appears in the semi-batch rejection discussion (E08), supporting its inclusion.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1].value",
+        "reason": "PFOA is defined in E02 and appears in Table 3 (E06) and in overall batch rejection values (E08), supporting its inclusion.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[2].value",
+        "reason": "PFBS is defined in E02 and appears in Table 3 (E06) and in the list of short-chain PFAS with specific rejection values (E08).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[3].value",
+        "reason": "PFHxA is defined in E02, appears in Table 3 (E06), and in the list of short-chain PFAS with semi-batch rejection values (E08).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[4].value",
+        "reason": "TFA is defined in E02, appears in Table 3 (E06), and in the calculated permeate and rejection discussions (E04, E08).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[5].value",
+        "reason": "TFMS is defined in E02, appears in Table 3 (E06), and in the calculated permeate and rejection discussions (E04, E08).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[6].value",
+        "reason": "PFPrA is defined in E02 and appears in Table 3 (E06) and in calculated permeate concentrations (E04).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[7].value",
+        "reason": "PFBA is defined in E02 and appears in Table 3 (E06) as a quantified PFAS in fab wastewater.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[8].value",
+        "reason": "PFPeA is defined in E02 and appears in Table 3 (E06) as a quantified PFAS in fab wastewater.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[9].value",
+        "reason": "PFHpA is defined in E02 and appears in Table 3 (E06) as a quantified PFAS in fab wastewater.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[10].value",
+        "reason": "PFNA is defined in E02 and appears in Table 3 (E06) and in the detection limit discussion (E04).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[11].value",
+        "reason": "PFDA is defined in E02 and appears in Table 3 (E06) as a quantified PFAS in fab wastewater.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[12].value",
+        "reason": "PFHxS is defined in the abbreviations list (E02); the record correctly notes it is only mentioned in abbreviations and not quantified in the fab wastewater table.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[13].value",
+        "reason": "PFDS is defined in the abbreviations list (E02) and correctly marked as abbreviations only in the record.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[14].value",
+        "reason": "PFPrS is defined in the abbreviations list (E02) and correctly noted as appearing only in abbreviations.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "pfas_scope[15].value",
+        "reason": "E02 defines AFFF and FTS; E08 reports rejection of 6.2 TFS and 8.2 FTS. However, the text does not explicitly state that these PFAS are from AFFF in the specific lab solution tests, so the phrase \u201cfrom aqueous film forming foam (AFFF)\u201d is an unsupported qualifier.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "Table 3 (E06) lists TFMS 202 ng/L in fab wastewater, matching the value 202.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "TFMS concentration is reported in ng/L in Table 3 (E06), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "Table 3 (E06) lists TFA 96,413 ng/L, matching 96413.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "TFA concentration is reported in ng/L (E06), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].value",
+        "reason": "Table 3 (E06) lists PFPrA 11,796 ng/L, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].unit",
+        "reason": "PFPrA concentration is reported in ng/L (E06), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].value",
+        "reason": "Table 3 (E06) lists PFBA 504 ng/L, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].unit",
+        "reason": "PFBA concentration is reported in ng/L (E06), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].value",
+        "reason": "Table 3 (E06) lists PFBS 213 ng/L, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].unit",
+        "reason": "PFBS concentration is reported in ng/L (E06), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[5].value",
+        "reason": "Table 3 (E06) lists PFPeA 310 ng/L, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[5].unit",
+        "reason": "PFPeA concentration is reported in ng/L (E06), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[6].value",
+        "reason": "Table 3 (E06) lists PFHxA 178 ng/L, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[6].unit",
+        "reason": "PFHxA concentration is reported in ng/L (E06), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[7].value",
+        "reason": "Table 3 (E06) lists PFHpA 85 ng/L, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[7].unit",
+        "reason": "PFHpA concentration is reported in ng/L (E06), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[8].value",
+        "reason": "Table 3 (E06) lists PFOA 38.0 ng/L, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[8].unit",
+        "reason": "PFOA concentration is reported in ng/L (E06), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[9].value",
+        "reason": "Table 3 (E06) lists PFNA 17.18 ng/L, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[9].unit",
+        "reason": "PFNA concentration is reported in ng/L (E06), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[10].value",
+        "reason": "Table 3 (E06) lists PFDA 57.3 ng/L, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[10].unit",
+        "reason": "PFDA concentration is reported in ng/L (E06), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[11].value",
+        "reason": "Table 3 (E06) lists DIA < 3.3 \u00b5g/L, matching the value format '< 3.3'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[11].unit",
+        "reason": "DIA concentration is reported in \u00b5g/L (E06), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[12].value",
+        "reason": "Table 3 (E06) lists TPS 34.8 \u00b5g/L, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[12].unit",
+        "reason": "TPS concentration is reported in \u00b5g/L (E06), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[13].value",
+        "reason": "Table 3 (E06) lists TMAH 211 \u00b5g/L, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[13].unit",
+        "reason": "TMAH concentration is reported in \u00b5g/L (E06), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[14].value",
+        "reason": "Table 3 (E06) lists TOC 8.7 mg/L, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[14].unit",
+        "reason": "TOC is reported in mg/L (E06), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[15].value",
+        "reason": "Table 3 (E06) lists TN 93.4 mg/L, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[15].unit",
+        "reason": "TN is reported in mg/L (E06), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[16].value",
+        "reason": "E08 states overall batch rejection values for PFOA were > 99 %, matching the value format '> 99'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[16].unit",
+        "reason": "Rejection is reported in percent in E08, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[17].value",
+        "reason": "E08 states overall batch rejection values for PFOS were > 99 %, matching the value format '> 99'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[17].unit",
+        "reason": "Rejection is reported in percent in E08, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[18].value",
+        "reason": "E08 states overall batch rejection values for 6.2 TFS were > 99 %, matching the recorded '> 99' for 6:2 FTS.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[18].unit",
+        "reason": "Rejection is reported in percent in E08, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[19].value",
+        "reason": "E08 states overall batch rejection values for 8.2 FTS were > 99 %, matching the recorded '> 99' for 8:2 FTS.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[19].unit",
+        "reason": "Rejection is reported in percent in E08, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[20].value",
+        "reason": "E08 reports TFA overall batch rejection of 93.7 %, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[20].unit",
+        "reason": "Rejection is reported in percent in E08, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[21].value",
+        "reason": "E08 reports TFMS overall batch rejection of 95.0 %, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[21].unit",
+        "reason": "Rejection is reported in percent in E08, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[22].value",
+        "reason": "E08 reports PFBS overall batch rejection of 96.5 %, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[22].unit",
+        "reason": "Rejection is reported in percent in E08, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[23].value",
+        "reason": "E08 reports PFHxA overall batch rejection of 97.6 %, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[23].unit",
+        "reason": "Rejection is reported in percent in E08, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[24].value",
+        "reason": "E04 states calculated overall batch permeate concentrations of TFA were 2022 ng/L, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[24].unit",
+        "reason": "These permeate concentrations are reported in ng/L in E04, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[25].value",
+        "reason": "E04 states calculated overall batch permeate concentrations of TFMS and PFPrA were 1.8 and 29.1 ng/L, respectively, matching the values 1.8 and 29.1.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[25].unit",
+        "reason": "These permeate concentrations are reported in ng/L in E04, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "residuals_byproducts[0].statement",
+        "reason": "E08 reports lower overall batch rejection for TFA, TFMS, PFBS, and PFHxA relative to longer-chain PFAS, implying higher residuals; E04 gives ng/L permeate concentrations for some species. However, the phrase \u201clargely below ng/L to low \u00b5g/L levels\u201d overgeneralizes residual levels beyond the specific permeate concentrations reported, so the statement is only partially supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "E01 describes lab and pilot scale experiments and use of spiral-wound NF modules; E05 and E08 refer to pilot system operation and semi-batch configuration, supporting the description of a pilot-scale spiral-wound NF90 system treating fab wastewater and lab solution in single-pass and semi-batch modes.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "E01 notes commercial Filmtec NF270 and NF90 membranes; E05 describes NF90 treatment following pretreatment; E08 describes semi-batch operation with recirculated reject. This supports the description of nanofiltration with a Filmtec NF90 spiral-wound module, with both single-pass and semi-batch configurations after cation exchange and membrane filtration pretreatment.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT04-bge_llm_local_rag-S14-R01",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014source identity, matrices, membrane type and scale, PFAS scope, operating conditions, and all quantitative findings (concentrations and rejection values)\u2014are well supported by the cited text. The only issues are minor qualifier overreach in one PFAS scope entry and the residuals/byproducts narrative, which do not affect the usability of the quantitative and operational data for synthesis.",
+    "task_id": "RT04"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

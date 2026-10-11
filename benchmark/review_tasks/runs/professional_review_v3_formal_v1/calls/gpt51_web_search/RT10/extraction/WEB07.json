@@ -1,0 +1,561 @@
+{
+  "call_key": "RT10:gpt51_web_search:extraction:WEB07",
+  "created_at": "2026-08-05T03:46:53.784464+00:00",
+  "raw_response_text": "{\"task_id\":\"RT10\",\"source_system\":\"gpt51_web_search\",\"records\":[{\"record_id\":\"WEB07-R1\",\"source_id\":\"WEB07\",\"doi_or_stable_url\":\"https://doi.org/10.1016/j.watres.2024.122629\",\"citation\":\"Removal of Per- and Polyfluoroalkyl Substances (PFAS) in fixed bed anion exchange reactors: Factors determining PFAS uptake capacity and models predicting PFAS breakthrough. Water Research. 2025;268(Pt A):122629.\",\"study_type\":\"primary_experiment\",\"study_scale\":{\"value\":\"Bench-scale rapid small-scale column tests (fixed-bed anion exchange reactors) with two anion exchange resins and multiple water matrices.\",\"evidence_locator_ids\":[\"WEB07-E01\"]},\"matrix\":{\"value\":\"Eighteen different water matrices varying in dissolved organic matter and major inorganic anions (bicarbonate, chloride, sulfate, nitrate), compared to cleaner matrices used for capacity normalization.\",\"evidence_locator_ids\":[\"WEB07-E01\",\"WEB07-E03\"]},\"pfas_scope\":[{\"value\":\"Multiple PFAS, including shorter-chain and ether PFAS; specific compounds not listed in abstract.\",\"evidence_locator_ids\":[\"WEB07-E03\"]}],\"treatment\":{\"value\":\"Fixed-bed anion exchange treatment using two different anion exchange resins evaluated via rapid small-scale column tests.\",\"evidence_locator_ids\":[\"WEB07-E01\"]},\"operating_conditions\":[{\"name\":\"Reactor configuration\",\"value\":\"Fixed-bed anion exchange columns operated as rapid small-scale column tests (RSSCT) to determine PFAS uptake capacity (KIX).\",\"unit\":null,\"qualifiers\":\"\",\"evidence_locator_ids\":[\"WEB07-E01\"]},{\"name\":\"Water-matrix comparison design\",\"value\":\"KIX measured across eighteen distinct water matrices with differing DOM and inorganic anion backgrounds; performance compared to clean or low-interference matrices to quantify matrix effects.\",\"unit\":null,\"qualifiers\":\"Clean-water or low-constituent matrices implied as baseline for capacity normalization, but not described in detail in abstract.\",\"evidence_locator_ids\":[\"WEB07-E01\",\"WEB07-E03\"]},{\"name\":\"Constituent variables\",\"value\":\"Influent dissolved organic matter (DOM) concentration and nitrate concentration explicitly used as predictors in a quantitative structure\u2013property relationship model for KIX and breakthrough.\",\"unit\":null,\"qualifiers\":\"Exact DOM and nitrate concentrations not reported in abstract.\",\"evidence_locator_ids\":[\"WEB07-E02\"]}],\"endpoints\":[{\"endpoint_type\":\"sorption\",\"reported_term\":\"PFAS uptake capacity (KIX) in fixed-bed anion exchange reactors\",\"interpretation\":\"KIX represents PFAS sorption/uptake capacity of the anion exchange resins under varying water-matrix compositions; lower KIX indicates reduced sorption capacity due to matrix interferences.\",\"evidence_locator_ids\":[\"WEB07-E01\",\"WEB07-E03\"]},{\"endpoint_type\":\"removal\",\"reported_term\":\"PFAS breakthrough behavior modeled using matrix-aware KIX\",\"interpretation\":\"Breakthrough modeling uses KIX predicted from PFAS structure and matrix constituents (DOM, nitrate) to estimate column performance and PFAS removal over time under different water matrices.\",\"evidence_locator_ids\":[\"WEB07-E02\"]},{\"endpoint_type\":\"other\",\"reported_term\":\"Matrix effect on PFAS uptake capacity\",\"interpretation\":\"Background matrix constituents (DOM and major anions) systematically reduce KIX relative to clean matrices, with a larger negative effect for shorter-chain and ether PFAS, indicating stronger competitive interactions in more complex waters.\",\"evidence_locator_ids\":[\"WEB07-E01\",\"WEB07-E03\"]}],\"quantitative_findings\":[],\"limitations\":[{\"statement\":\"Only anion exchange resins in fixed-bed RSSCT configuration were evaluated, limiting generalization to other PFAS treatment technologies or reactor types.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB07-E01\"]},{\"statement\":\"Matrix effects were characterized using DOM and major inorganic anions (bicarbonate, chloride, sulfate, nitrate); other potentially important constituents (e.g., metals, silicate, alkalinity beyond bicarbonate speciation) are not discussed in the abstract.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB07-E01\"]},{\"statement\":\"The quantitative structure\u2013property relationship and matrix-aware breakthrough modeling are based on influent DOM and nitrate concentrations and PFAS structure; applicability to matrices outside the studied DOM/nitrate ranges cannot be assessed from abstract-only information.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB07-E02\"]}],\"residuals_byproducts\":[{\"statement\":\"Study focuses on PFAS uptake capacity and breakthrough in anion exchange resins; no PFAS transformation, degradation products, or inorganic fluoride release are mentioned in the abstract, implying treatment is based on separation/sorption rather than destruction.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB07-E01\",\"WEB07-E03\"]}],\"comparability\":{\"status\":\"descriptive_only\",\"reason\":\"Abstract-level information indicates consistent endpoints (PFAS uptake capacity KIX) and matched operating mode (fixed-bed AER RSSCT) across multiple water matrices, but does not report numeric KIX values, PFAS-specific concentrations, or detailed matrix chemistry needed for quantitative cross-condition comparison.\",\"evidence_locator_ids\":[\"WEB07-E01\",\"WEB07-E02\",\"WEB07-E03\"]}}],\"extraction_notes\":[\"Only abstract-level, paraphrased information was available for WEB07; no full-text operational details, specific PFAS identities, or numeric KIX/matrix-constituent concentrations were accessible, so quantitative_findings are intentionally left empty.\",\"The held-out anchor Zeidabadi 2023 review (10.1016/j.hazadv.2023.100322) was not used; only the primary experimental Water Research article (10.1016/j.watres.2024.122629) was used for evidence extraction.\"]}",
+  "request": {
+    "max_completion_tokens": 16000,
+    "messages": [
+      {
+        "content": "You are an evidence extraction specialist for PFAS treatment and remediation\nresearch. Build a structured study evidence table before any narrative review\nis written.\n\nExtract one record per primary-study experiment, modeled scenario, or field\ndeployment that contributes usable evidence to the review task. A paper may\nproduce more than one record only when materially different matrices,\ntechnologies, operating regimes, or endpoints would otherwise be conflated.\n\nReview articles and perspectives may help identify terminology or primary\nstudies, but they must not be used as the source of a quantitative study\nrecord. Never copy a review table as though it were a primary result.\n\nFor every populated source-dependent field:\n- preserve the PFAS identity or class, matrix, starting concentration or\n  loading, operating conditions, study scale, measured endpoint, value, unit,\n  and material qualifiers when reported;\n- attach only the field-level evidence locator identifiers that directly\n  support that specific value or statement;\n- use an empty string or empty array when the source does not report the\n  information; do not infer or estimate it;\n- do not turn the absence of information in the supplied packet into a study\n  finding, quantitative result, or author-reported limitation unless the source\n  explicitly states that absence;\n- distinguish removal, separation, sorption, parent-compound loss,\n  transformation, degradation, destruction, defluorination, mineralization,\n  total organofluorine change, and toxicity change;\n- classify endpoint_type from what was actually measured, not from the\n  authors' preferred label. Parent loss alone is not destruction. Phase\n  transfer is removal or separation, not degradation. Inorganic fluoride\n  release or fluorine-balance closure can establish defluorination but cannot\n  by itself establish mineralization. Use mineralization only when direct\n  carbon-fate evidence such as CO2/inorganic-carbon production or a carbon\n  balance is reported. Preserve a broader author term in reported_term and\n  explain any mismatch in interpretation;\n- do not normalize or compare values unless their units, denominators,\n  matrices, PFAS scope, operating conditions, and endpoints permit it.\n\nOnly populate quantitative_findings when the source reports an actual numeric\nvalue, inequality, approximate value, range, or explicit ND/not-detected\nresult. Put the number or censoring marker in value and the measurement unit in\nunit. Normalize Unicode inequality signs to ASCII >= or <= and range dashes to\nan ASCII hyphen while preserving the source wording in qualifiers. A unit or\norder-of-magnitude scale without a number is not a quantitative finding.\nQualitative parent loss, intermediate formation, or disappearance belongs in\nthe endpoint interpretation or residual/byproduct statements instead.\n\nSet value_form to exactly one of:\n- exact_numeric: a bare number such as `99.7` or `1.2e-3`;\n- approximate_numeric: `~` followed by a number;\n- inequality: `<`, `<=`, `>`, or `>=` followed by a number;\n- range: two numbers separated by `-` or `to`; or\n- not_detected: exactly `ND`, `N/D`, `not detected`,\n  `below detection limit`, or `below quantification limit`.\n\nPut uncertainty, denominators, fold-change wording, and explanatory text in\nqualifiers rather than value. A deterministic validator will remove malformed\nquantitative fields before source verification.\n\nFor limitations, use basis=author_reported only when the source states the\nlimitation. Use basis=design_inferred only for a constraint that follows\ndirectly from cited design evidence, such as one matrix, one compound, or\nbench-scale operation. Never label missing information in the supplied packet\nas a scientific limitation of the study.\n\nMark each record as comparable with conditions, descriptive only, or not\ncomparable. Comparability is an analyst inference rather than a quotation:\nattach locators for the matrix, scale, conditions, endpoint, and denominator\non which the inference rests, and explain the reason. Do not reward a study\nfor reporting a larger percentage when its endpoint or conditions differ.\n\nThe task was derived from a defining review that is held out from all\ncandidate retrieval systems. The supplied anchor identifiers are an exclusion\nlist, not evidence. Do not extract from the anchor, cite it, reconstruct its\nconclusions, or use its tables.\n\nReturn one JSON object that follows the supplied evidence-table schema exactly.\nDo not write the narrative review in this step.\n",
+        "role": "system"
+      },
+      {
+        "content": "Task:\n{\"review_brief\":\"Prepare a focused review of how water-matrix effects should be tested and reported so that PFAS treatment performance can be translated beyond clean laboratory water.\",\"task_id\":\"RT10\",\"title\":\"Designing PFAS treatment studies that remain valid in real water\"}\n\nTask-specific data extraction objective:\nExtract matrix constituent and concentration, PFAS identity, treatment, clean-water control, matrix-modified condition, direction and magnitude of effect, endpoint, proposed mechanism, constituent interaction, matched operating conditions, and study scale.\n\nSource system (return this exact value):\ngpt51_web_search\n\nCandidate source identifier (all records must use this exact source_id):\nWEB07\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.hazadv.2023.100322\"],\"all_blocked_titles\":[\"effects of water matrix on per and poly fluoroalkyl substances pfas treatment physical separation and degradation processes a review\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.hazadv.2023.100322\"],\"anchor_id\":\"AR-ZEIDABADI-2023\",\"corpus_source\":\"2023 - Zeidabadi - Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment - Physical-separation and degradation processes - A review.pdf\",\"doi\":\"10.1016/j.hazadv.2023.100322\",\"title\":\"Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment: Physical-separation and degradation processes - A review\",\"url\":\"https://doi.org/10.1016/j.hazadv.2023.100322\"}\n\nFrozen inspected Web Search sources and evidence locators:\n{\n  \"access_scope\": \"abstract\",\n  \"capture_source_id\": \"WEB17\",\n  \"citation\": \"Water Research, 2025, 268(Pt A):122629\",\n  \"covered_component_ids\": [\n    \"RT10-C1\",\n    \"RT10-C2\",\n    \"RT10-C3\"\n  ],\n  \"doi\": \"10.1016/j.watres.2024.122629\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.watres.2024.122629\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB07-E01\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract (PubMed)\",\n      \"text\": \"Rapid small\\u2011scale column tests with two anion exchange resins and eighteen water matrices were used to quantify how dissolved organic matter and major inorganic anions (bicarbonate, chloride, sulfate, nitrate) affect PFAS uptake capacity (KIX).\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB07-E02\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract (PubMed)\",\n      \"text\": \"The authors develop a quantitative structure\\u2013property relationship using normalized chain length to predict resin capacity from PFAS structure together with influent DOM and nitrate concentrations, enabling matrix\\u2011aware breakthrough modeling.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB07-E03\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract (PubMed)\",\n      \"text\": \"Background matrix constituents are shown to systematically reduce KIX for many PFAS relative to clean matrices, with stronger inhibition for shorter\\u2011chain and ether PFAS, consistent with competitive electrostatic and steric interactions.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://pubmed.ncbi.nlm.nih.gov/39442431/\",\n  \"source_id\": \"WEB07\",\n  \"source_limitations\": [\n    \"Only abstract-level information was accessible; detailed numeric KIX values, breakthrough curves, and specific DOM concentrations were not visible.\",\n    \"The inspected text does not explicitly describe side\\u2011by\\u2011side clean\\u2011water controls, though they are implied by the use of differing water matrices.\"\n  ],\n  \"title\": \"Removal of Per- and Polyfluoroalkyl Substances (PFAS) in fixed bed anion exchange reactors: Factors determining PFAS uptake capacity and models predicting PFAS breakthrough\",\n  \"year\": \"2025\"\n}\n\nDo not use search-result snippets as evidence. Use only the frozen inspected\nsource packet and preserve its declared access scope. Omit any source that\nresolves to a held-out anchor DOI, URL, or exact title and report the violation\nin extraction_notes. Extract at most three materially distinct records from\nthis source, prioritizing records that answer the task components.\n\nExtract primary-study evidence needed to answer the task and return the\nschema-constrained study evidence table.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_review_evidence_table",
+        "schema": {
+          "$defs": {
+            "endpoint": {
+              "additionalProperties": false,
+              "properties": {
+                "endpoint_type": {
+                  "enum": [
+                    "removal",
+                    "separation",
+                    "sorption",
+                    "parent_compound_loss",
+                    "transformation",
+                    "degradation",
+                    "destruction",
+                    "defluorination",
+                    "mineralization",
+                    "total_organofluorine_change",
+                    "toxicity_change",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB07-E01",
+                      "WEB07-E02",
+                      "WEB07-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "interpretation": {
+                  "type": "string"
+                },
+                "reported_term": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "endpoint_type",
+                "reported_term",
+                "interpretation",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceRecord": {
+              "additionalProperties": false,
+              "properties": {
+                "citation": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "comparability": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_locator_ids": {
+                      "items": {
+                        "enum": [
+                          "WEB07-E01",
+                          "WEB07-E02",
+                          "WEB07-E03"
+                        ],
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "type": "array"
+                    },
+                    "reason": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "enum": [
+                        "comparable_with_conditions",
+                        "descriptive_only",
+                        "not_comparable"
+                      ],
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "status",
+                    "reason",
+                    "evidence_locator_ids"
+                  ],
+                  "type": "object"
+                },
+                "doi_or_stable_url": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "endpoints": {
+                  "items": {
+                    "$ref": "#/$defs/endpoint"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "limitations": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "matrix": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "operating_conditions": {
+                  "items": {
+                    "$ref": "#/$defs/namedValue"
+                  },
+                  "type": "array"
+                },
+                "pfas_scope": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceText"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "quantitative_findings": {
+                  "items": {
+                    "$ref": "#/$defs/quantitativeValue"
+                  },
+                  "type": "array"
+                },
+                "record_id": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "residuals_byproducts": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "source_id": {
+                  "enum": [
+                    "WEB07"
+                  ],
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "study_scale": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "study_type": {
+                  "enum": [
+                    "primary_experiment",
+                    "pilot_or_field_deployment",
+                    "modeling_or_life_cycle_study",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "treatment": {
+                  "$ref": "#/$defs/evidenceText"
+                }
+              },
+              "required": [
+                "record_id",
+                "source_id",
+                "doi_or_stable_url",
+                "citation",
+                "study_type",
+                "study_scale",
+                "matrix",
+                "pfas_scope",
+                "treatment",
+                "operating_conditions",
+                "endpoints",
+                "quantitative_findings",
+                "limitations",
+                "residuals_byproducts",
+                "comparability"
+              ],
+              "type": "object"
+            },
+            "evidenceStatement": {
+              "additionalProperties": false,
+              "properties": {
+                "basis": {
+                  "enum": [
+                    "author_reported",
+                    "design_inferred"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB07-E01",
+                      "WEB07-E02",
+                      "WEB07-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "statement": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "statement",
+                "basis",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceText": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB07-E01",
+                      "WEB07-E02",
+                      "WEB07-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "namedValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB07-E01",
+                      "WEB07-E02",
+                      "WEB07-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "quantitativeValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB07-E01",
+                      "WEB07-E02",
+                      "WEB07-E03"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "value_form": {
+                  "enum": [
+                    "exact_numeric",
+                    "approximate_numeric",
+                    "inequality",
+                    "range",
+                    "not_detected"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "value_form",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "properties": {
+            "extraction_notes": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "records": {
+              "items": {
+                "$ref": "#/$defs/evidenceRecord"
+              },
+              "maxItems": 3,
+              "type": "array"
+            },
+            "source_system": {
+              "enum": [
+                "gpt51_web_search"
+              ],
+              "type": "string"
+            },
+            "task_id": {
+              "enum": [
+                "RT10"
+              ],
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "source_system",
+            "records",
+            "extraction_notes"
+          ],
+          "title": "PFAS review study evidence table",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "4d1a7b6157e7f3c5c2b20a1bb69ce0e0c1675b3cb952b1d95e06b8e4e5801c46",
+  "response_metadata": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.01911875,
+    "finish_reason": "stop",
+    "input_tokens": 2799,
+    "latency_seconds": 10.471936583984643,
+    "output_tokens": 1562,
+    "reasoning_tokens": 335,
+    "response_id": "chatcmpl-E9MsVViA2gK2fgyDJ3lEmRKQgu0WC",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 4361,
+    "web_search_calls": 0
+  },
+  "result": {
+    "extraction_notes": [
+      "Only abstract-level, paraphrased information was available for WEB07; no full-text operational details, specific PFAS identities, or numeric KIX/matrix-constituent concentrations were accessible, so quantitative_findings are intentionally left empty.",
+      "The held-out anchor Zeidabadi 2023 review (10.1016/j.hazadv.2023.100322) was not used; only the primary experimental Water Research article (10.1016/j.watres.2024.122629) was used for evidence extraction."
+    ],
+    "records": [
+      {
+        "citation": "Removal of Per- and Polyfluoroalkyl Substances (PFAS) in fixed bed anion exchange reactors: Factors determining PFAS uptake capacity and models predicting PFAS breakthrough. Water Research. 2025;268(Pt A):122629.",
+        "comparability": {
+          "evidence_locator_ids": [
+            "WEB07-E01",
+            "WEB07-E02",
+            "WEB07-E03"
+          ],
+          "reason": "Abstract-level information indicates consistent endpoints (PFAS uptake capacity KIX) and matched operating mode (fixed-bed AER RSSCT) across multiple water matrices, but does not report numeric KIX values, PFAS-specific concentrations, or detailed matrix chemistry needed for quantitative cross-condition comparison.",
+          "status": "descriptive_only"
+        },
+        "doi_or_stable_url": "https://doi.org/10.1016/j.watres.2024.122629",
+        "endpoints": [
+          {
+            "endpoint_type": "sorption",
+            "evidence_locator_ids": [
+              "WEB07-E01",
+              "WEB07-E03"
+            ],
+            "interpretation": "KIX represents PFAS sorption/uptake capacity of the anion exchange resins under varying water-matrix compositions; lower KIX indicates reduced sorption capacity due to matrix interferences.",
+            "reported_term": "PFAS uptake capacity (KIX) in fixed-bed anion exchange reactors"
+          },
+          {
+            "endpoint_type": "removal",
+            "evidence_locator_ids": [
+              "WEB07-E02"
+            ],
+            "interpretation": "Breakthrough modeling uses KIX predicted from PFAS structure and matrix constituents (DOM, nitrate) to estimate column performance and PFAS removal over time under different water matrices.",
+            "reported_term": "PFAS breakthrough behavior modeled using matrix-aware KIX"
+          },
+          {
+            "endpoint_type": "other",
+            "evidence_locator_ids": [
+              "WEB07-E01",
+              "WEB07-E03"
+            ],
+            "interpretation": "Background matrix constituents (DOM and major anions) systematically reduce KIX relative to clean matrices, with a larger negative effect for shorter-chain and ether PFAS, indicating stronger competitive interactions in more complex waters.",
+            "reported_term": "Matrix effect on PFAS uptake capacity"
+          }
+        ],
+        "limitations": [
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB07-E01"
+            ],
+            "statement": "Only anion exchange resins in fixed-bed RSSCT configuration were evaluated, limiting generalization to other PFAS treatment technologies or reactor types."
+          },
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB07-E01"
+            ],
+            "statement": "Matrix effects were characterized using DOM and major inorganic anions (bicarbonate, chloride, sulfate, nitrate); other potentially important constituents (e.g., metals, silicate, alkalinity beyond bicarbonate speciation) are not discussed in the abstract."
+          },
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB07-E02"
+            ],
+            "statement": "The quantitative structure\u2013property relationship and matrix-aware breakthrough modeling are based on influent DOM and nitrate concentrations and PFAS structure; applicability to matrices outside the studied DOM/nitrate ranges cannot be assessed from abstract-only information."
+          }
+        ],
+        "matrix": {
+          "evidence_locator_ids": [
+            "WEB07-E01",
+            "WEB07-E03"
+          ],
+          "value": "Eighteen different water matrices varying in dissolved organic matter and major inorganic anions (bicarbonate, chloride, sulfate, nitrate), compared to cleaner matrices used for capacity normalization."
+        },
+        "operating_conditions": [
+          {
+            "evidence_locator_ids": [
+              "WEB07-E01"
+            ],
+            "name": "Reactor configuration",
+            "qualifiers": "",
+            "unit": null,
+            "value": "Fixed-bed anion exchange columns operated as rapid small-scale column tests (RSSCT) to determine PFAS uptake capacity (KIX)."
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB07-E01",
+              "WEB07-E03"
+            ],
+            "name": "Water-matrix comparison design",
+            "qualifiers": "Clean-water or low-constituent matrices implied as baseline for capacity normalization, but not described in detail in abstract.",
+            "unit": null,
+            "value": "KIX measured across eighteen distinct water matrices with differing DOM and inorganic anion backgrounds; performance compared to clean or low-interference matrices to quantify matrix effects."
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB07-E02"
+            ],
+            "name": "Constituent variables",
+            "qualifiers": "Exact DOM and nitrate concentrations not reported in abstract.",
+            "unit": null,
+            "value": "Influent dissolved organic matter (DOM) concentration and nitrate concentration explicitly used as predictors in a quantitative structure\u2013property relationship model for KIX and breakthrough."
+          }
+        ],
+        "pfas_scope": [
+          {
+            "evidence_locator_ids": [
+              "WEB07-E03"
+            ],
+            "value": "Multiple PFAS, including shorter-chain and ether PFAS; specific compounds not listed in abstract."
+          }
+        ],
+        "quantitative_findings": [],
+        "record_id": "WEB07-R1",
+        "residuals_byproducts": [
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB07-E01",
+              "WEB07-E03"
+            ],
+            "statement": "Study focuses on PFAS uptake capacity and breakthrough in anion exchange resins; no PFAS transformation, degradation products, or inorganic fluoride release are mentioned in the abstract, implying treatment is based on separation/sorption rather than destruction."
+          }
+        ],
+        "source_id": "WEB07",
+        "study_scale": {
+          "evidence_locator_ids": [
+            "WEB07-E01"
+          ],
+          "value": "Bench-scale rapid small-scale column tests (fixed-bed anion exchange reactors) with two anion exchange resins and multiple water matrices."
+        },
+        "study_type": "primary_experiment",
+        "treatment": {
+          "evidence_locator_ids": [
+            "WEB07-E01"
+          ],
+          "value": "Fixed-bed anion exchange treatment using two different anion exchange resins evaluated via rapid small-scale column tests."
+        }
+      }
+    ],
+    "source_system": "gpt51_web_search",
+    "task_id": "RT10"
+  },
+  "result_kind": "json",
+  "stage": "structured_extraction"
+}

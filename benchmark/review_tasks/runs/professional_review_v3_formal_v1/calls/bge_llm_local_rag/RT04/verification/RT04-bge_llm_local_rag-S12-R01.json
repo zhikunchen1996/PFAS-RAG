@@ -1,0 +1,470 @@
+{
+  "call_key": "RT04:bge_llm_local_rag:verify:RT04-bge_llm_local_rag-S12-R01",
+  "created_at": "2026-08-05T04:08:54.487298+00:00",
+  "raw_response_text": "{\"task_id\":\"RT04\",\"record_id\":\"RT04-bge_llm_local_rag-S12-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record DOI/URL exactly matches the DOI given in the source metadata (10.1016/j.seppur.2023.124800).\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E01 states that PFOA was selected as a representative PFAS molecule; the abstract (S12-E05) also refers specifically to PFOA, supporting inclusion of PFOA in scope.\"},{\"field_path\":\"pfas_scope[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E01 explicitly states that PFOS was selected as a representative PFAS molecule, supporting its inclusion in PFAS scope.\"},{\"field_path\":\"matrix.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E07 states that PFOA/PFOS were spiked individually into synthetic groundwater containing 1 mM NaH2PO4 buffer and 5 mM NaCl, which matches the described synthetic groundwater matrix.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E07 notes treatment in a dead-end membrane filtration cell with an effective membrane area of 2.54 cm\u00b2, which supports a bench-scale dead-end lab setup as described.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunks S12-E01, S12-E05, S12-E06, and S12-E08 together describe PVDF-based membranes with chemically grafted quaternary ammonium brushes, synthesized by wet-phase inversion for pH-swing adsorption/regeneration of PFAS, matching the treatment description including QA loading from S12-E05.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunks S12-E07 and S12-E05 show a dead-end lab cell treating synthetic groundwater with clearly reported PFAS concentration, pressures, treatment capacities, and removals. Inferring that results are comparable with conditions to similar bench-scale membrane studies is a reasonable analyst judgment.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reason cites bench-scale dead-end operation, synthetic groundwater, clear PFAS identity/concentration, pressures, capacities, and removal/permeability endpoints, all of which are supported by S12-E05 and S12-E07. The caution about extrapolation to full-scale NF/RO is an appropriate inference from these conditions.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Endpoint concerns percentage decrease in aqueous PFOA concentration at a given treatment capacity. Chunks S12-E03 and S12-E05 describe >90% PFOA removal at a treatment capacity of 570 L/m\u00b2, so classifying this as a removal endpoint is appropriate.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E03 describes total PFOA removal over three pH-swing cycles, which is cumulative removal of PFAS from solution. Classifying as a removal endpoint is consistent with the reported metric.\"},{\"field_path\":\"endpoints[2].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E05 reports >97% desorption of PFOA at high pH with methanol; this is clearly a sorption/desorption behavior, so endpoint_type=sorption is appropriate.\"},{\"field_path\":\"endpoints[3].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E03 states that competitors (ions and organic matter) led to a 10\u201320% decrease in removal efficiency, which is a change in removal performance; classifying as a removal endpoint is consistent.\"},{\"field_path\":\"endpoints[4].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E04 reports enrichment factors (10.8-, 10.5-, 10.1-fold) for PFOA concentration after adsorption/regeneration cycles, which describes separation/enrichment, so endpoint_type=separation is appropriate.\"},{\"field_path\":\"endpoints[5].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E03 reports a 52.7% decrease in membrane permeability due to NOM fouling; this concerns hydrodynamic performance rather than PFAS concentration, so classifying under 'other' is reasonable.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E03 states that NOM caused a 52.7% decrease in membrane permeability after 10 h and that inclusion of ions and organic matter decreased removal efficiency by 10\u201320%, and mentions cake-layer fouling. The limitation statement accurately summarizes and interprets these author-reported impacts.\"},{\"field_path\":\"limitations[1].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E07 shows a lab dead-end cell with 2.54 cm\u00b2 membrane area, synthetic groundwater, and single-compound PFOA/PFOS feeds. Inferring that such bench-scale, single-PFAS tests may not fully reflect full-scale or multi-PFAS performance is a reasonable design-inferred limitation.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"Chunk S12-E01 notes that TA and QA moieties were chemically grafted to membrane backbone materials and that PVDF powder and PET nonwoven fabric were used, supporting PVDF backbone and QA grafting with PET support. However, the specific phrase 'grafted inside pores' is not explicitly stated in the cited chunk, so that detail is only partially supported.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"No numeric unit is needed for the descriptive membrane backbone entry; setting unit to null is appropriate.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E05 explicitly states 'QA-grafted membranes (QA loading: 1.1 mmol/g)', matching the value 1.1.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The QA loading in S12-E05 is given in mmol/g, matching the recorded unit.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E07 reports operating pressures from 0.30 to 1.65 bar, which corresponds to the value '0.30-1.65'.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Pressures are reported in bar in S12-E07, matching the unit.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E07 specifies C_PFAS = 0.24 \u00b5M, matching the recorded feed PFAS concentration value.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The concentration in S12-E07 is explicitly in \u00b5M, matching the unit.\"},{\"field_path\":\"operating_conditions[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E07 notes synthetic groundwater containing 1 mM NaH2PO4 buffer, matching value 1 for water chemistry.\"},{\"field_path\":\"operating_conditions[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The NaH2PO4 buffer concentration is given in mM in S12-E07, matching the unit.\"},{\"field_path\":\"operating_conditions[5].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E07 specifies 5 mM NaCl ionic strength adjuster, matching the recorded value 5.\"},{\"field_path\":\"operating_conditions[5].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"NaCl ionic strength adjuster is given in mM in S12-E07, matching the unit.\"},{\"field_path\":\"operating_conditions[6].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E05 states 'high permeability (165.6 L m\u22122 h\u22121 bar\u22121)', matching the recorded permeability value 165.6.\"},{\"field_path\":\"operating_conditions[6].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The permeability unit in S12-E05 is L m\u22122 h\u22121 bar\u22121, matching the recorded unit.\"},{\"field_path\":\"operating_conditions[7].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E05 reports desorption achieved at pH 12.5, and S12-E08 notes QA having pH IEP 11.2 enabling a pH-swing around groundwater-relevant pH. Using 'up to 12.5' as the swing window upper bound is consistent with these values.\"},{\"field_path\":\"operating_conditions[7].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"pH is dimensionless and reported as 'pH' in the article; using 'pH units' is an acceptable representation for this operating condition.\"},{\"field_path\":\"operating_conditions[8].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E05 states that >97% desorption was achieved at pH 12.5 and 5% methanol, matching the recorded 5 for regeneration solvent content.\"},{\"field_path\":\"operating_conditions[8].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The methanol content is given as 5% in S12-E05; recording the unit as '% (v/v) methanol' is consistent.\"},{\"field_path\":\"operating_conditions[9].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E07 specifies that the developed membranes had an effective area of 2.54 cm\u00b2, matching the value.\"},{\"field_path\":\"operating_conditions[9].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The effective area is expressed in cm\u00b2 in S12-E07, matching the unit.\"},{\"field_path\":\"operating_conditions[10].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E07 reports calibration curves using concentrations ranging from 0.1 to 100 \u00b5g/L, matching the recorded range '0.1-100'.\"},{\"field_path\":\"operating_conditions[10].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The calibration range is explicitly in \u00b5g/L (S12-E07), matching the unit.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E05 states that QA-grafted membranes 'presented > 90% removal of PFOA at a treatment capacity of 570 L per m\u00b2'. This supports the value '> 90' with inequality form.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Removal is expressed as a percentage in S12-E05; unit '%' is correct.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunks S12-E03 and S12-E05 both report a treatment capacity of 570 L/m\u00b2 associated with >90% PFOA removal, matching value 570.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Treatment capacity is expressed as L per m\u00b2 in the source (S12-E03, S12-E05), matching unit 'L m-2'.\"},{\"field_path\":\"quantitative_findings[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E05 states '> 97% desorption was achieved at pH 12.5 and 5% methanol,' matching the value '> 97' and inequality form.\"},{\"field_path\":\"quantitative_findings[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Desorption is reported as a percentage in S12-E05; unit '%' is correct.\"},{\"field_path\":\"quantitative_findings[3].value\",\"status\":\"contradicted\",\"error_type\":\"numeric_transcription\",\"reason\":\"Chunk S12-E05 (abstract) reports 'Within three pH-swing adsorption/regeneration cycles, a total PFOA removal of 82.4% was achieved with a treatment capacity of 2,930 L/m\u00b2', which supports 82.4%. However, chunk S12-E03 (conclusion) states 'Three pH-swing cycles were also conducted with a total PFOA removal of 84.7% at a treatment capacity of 2,930 L/m\u00b2.' Because the cited locators provide conflicting values (82.4 vs 84.7) for the same metric, the single numeric value 82.4 is directly contradicted by part of the cited evidence.\"},{\"field_path\":\"quantitative_findings[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Total PFOA removal over cycles is expressed as a percentage in both abstract and conclusion; unit '%' is correct.\"},{\"field_path\":\"quantitative_findings[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunks S12-E03 and S12-E05 specify a treatment capacity of 2,930 L/m\u00b2 for the three-cycle test, matching value 2930.\"},{\"field_path\":\"quantitative_findings[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The cumulative treatment capacity for three cycles is given in L/m\u00b2, matching unit 'L m-2'.\"},{\"field_path\":\"quantitative_findings[5].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E05 states 'high permeability (165.6 L m\u22122 h\u22121 bar\u22121)', matching value 165.6.\"},{\"field_path\":\"quantitative_findings[5].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Permeability is reported in L m\u22122 h\u22121 bar\u22121 (S12-E05); the unit matches.\"},{\"field_path\":\"quantitative_findings[6].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E03 specifies that 'A 52.7% decrease in membrane permeability was observed after 10 h of continuous filtration', matching value 52.7.\"},{\"field_path\":\"quantitative_findings[6].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The decrease in permeability is expressed as a percentage in S12-E03; unit '%' is appropriate.\"},{\"field_path\":\"quantitative_findings[7].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E03 states that inclusion of competitors led to a 'significant decrease in removal efficiency by 10\u201320%', matching the range 10-20.\"},{\"field_path\":\"quantitative_findings[7].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The change in removal efficiency is expressed as a percentage in S12-E03; unit '%' is correct.\"},{\"field_path\":\"quantitative_findings[8].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E04 reports enrichment factors of 10.8-, 10.5-, and 10.1-fold after adsorption/regeneration cycles. Representing this as a range 10.1\u201310.8 is consistent with these values.\"},{\"field_path\":\"quantitative_findings[8].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"'Fold' is an appropriate unit label for enrichment factors reported as '10.8-, 10.5-, and 10.1-fold' in S12-E04.\"},{\"field_path\":\"residuals_byproducts[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S12-E04 states that the pH-swing process 'enabled a significant enrichment of PFOA (10.8-, 10.5-, and 10.1-fold) after adsorption/regeneration cycles.' Inferring that this concentrates PFAS for downstream management without destruction or transformation is a reasonable design-based inference, as no degradation products are reported.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core study identity, matrix, treatment description, PFAS species, operating conditions, and most quantitative endpoints (removal, desorption, permeability, fouling, enrichment) are well supported. One cumulative removal value over three cycles (82.4%) is numerically inconsistent with another section of the same paper (84.7%), but the discrepancy is clearly noted in qualifiers and limited to this single metric. This does not undermine overall interpretability for comparative synthesis, so the record is usable with attention to that flagged value.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused, comparative review of how membrane processes should be selected for a specified PFAS composition, water matrix, and treatment objective.\",\"task_id\":\"RT04\",\"title\":\"Selecting a membrane process for a defined PFAS feed water\"}\n\nTask-specific extraction objective:\nExtract membrane type and properties, PFAS identity, feed matrix and concentration, pressure, flux, recovery, rejection or adsorption endpoint, fouling, permeability, energy, scale, and comparison limitations.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envint.2021.106876\",\"10.3929/ethz-b-000506220\"],\"all_blocked_titles\":[\"membrane based technologies for per and poly fluoroalkyl substances pfass removal from water removal mechanisms applications challenges and perspectives\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envint.2021.106876\",\"https://www.research-collection.ethz.ch/items/f9152dfa-5b8e-4ce2-8153-1cbb37911e55\"],\"anchor_id\":\"AR-JIN-2021\",\"corpus_source\":\"2021 - Jin - Membrane-based technologies for per- and poly-fluoroalkyl substances (PFASs) removal from water - Removal mechanisms, applications, challenges and.pdf\",\"doi\":\"10.1016/j.envint.2021.106876\",\"title\":\"Membrane-based technologies for per- and poly-fluoroalkyl substances (PFASs) removal from water: Removal mechanisms, applications, challenges and perspectives\",\"url\":\"https://doi.org/10.1016/j.envint.2021.106876\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Wan, H.; Fang, F.; Shi, K.; Yi, Z.; Lei, L.; Li, S.; Mills, R.; Bhattacharyya, D.; Xu, Z. pH-Swing membrane adsorption of perfluoroalkyl substances - Anion-exchange brushes and role of water chemistry. Sep. Purif. Technol. 2024, 329, 124800.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S12-E05\",\n      \"S12-E07\",\n      \"S12-E03\",\n      \"S12-E04\"\n    ],\n    \"reason\": \"Bench-scale dead-end filtration tests on synthetic groundwater with clearly reported PFAS identity, concentration, operating pressures, treatment capacities, and removal/desorption percentages; endpoints are percentage removal and permeability, which are comparable to other membrane studies under similar synthetic-matrix and adsorption-based operation, but comparisons to full-scale NF/RO need to account for differences in driving force and mechanism.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.seppur.2023.124800\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S12-E05\"\n      ],\n      \"interpretation\": \"Dynamic membrane adsorption removal of dissolved PFOA from synthetic groundwater, quantified as percentage decrease in aqueous concentration at specified treated volume per membrane area\",\n      \"reported_term\": \"> 90 % removal of PFOA at treatment capacity\"\n    },\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S12-E03\",\n        \"S12-E05\"\n      ],\n      \"interpretation\": \"Cumulative fraction of PFOA mass removed from feed across multiple adsorption/regeneration cycles at a given total treated volume per membrane area\",\n      \"reported_term\": \"Total PFOA removal over three pH-swing cycles\"\n    },\n    {\n      \"endpoint_type\": \"sorption\",\n      \"evidence_locator_ids\": [\n        \"S12-E05\"\n      ],\n      \"interpretation\": \"Fraction of previously adsorbed PFOA released from the membrane during high-pH/methanol regeneration step\",\n      \"reported_term\": \"> 97 % desorption during regeneration\"\n    },\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S12-E03\",\n        \"S12-E06\"\n      ],\n      \"interpretation\": \"Decrease in PFOA removal percentage due to competitive adsorption by co-present inorganic ions and natural organic matter in the water matrix\",\n      \"reported_term\": \"Impact of natural organic matter and ions on removal efficiency\"\n    },\n    {\n      \"endpoint_type\": \"separation\",\n      \"evidence_locator_ids\": [\n        \"S12-E04\"\n      ],\n      \"interpretation\": \"Fold enrichment of PFOA concentration in the regeneration solution relative to original feed as a consequence of adsorption and subsequent desorption\",\n      \"reported_term\": \"Enrichment factor during pH-swing cycles\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S12-E03\"\n      ],\n      \"interpretation\": \"Decrease in pure-water or solution permeability associated with fouling/cake layer formation by natural organic matter during continuous dead-end filtration\",\n      \"reported_term\": \"Membrane permeability change (fouling) in presence of NOM\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S12-E03\",\n        \"S12-E06\"\n      ],\n      \"statement\": \"The presence of competing ions and natural organic matter in the water matrix decreased PFOA removal efficiency by 10\\u201320 % and caused a 52.7 % decrease in membrane permeability due to cake-layer fouling in dead-end operation, highlighting the need to address competitive adsorption and fouling for complex waters.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S12-E07\",\n        \"S12-E05\"\n      ],\n      \"statement\": \"Results were obtained in a bench-scale dead-end cell with synthetic groundwater and single-compound PFAS feeds, which may not fully represent performance in full-scale systems or multi-PFAS mixtures.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S12-E07\"\n    ],\n    \"value\": \"Synthetic groundwater with 1 mM NaH2PO4 buffer and 5 mM NaCl (laboratory-prepared water matrix)\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E01\"\n      ],\n      \"name\": \"Membrane backbone\",\n      \"qualifiers\": \"PVDF powder used for membrane casting; QA agent = [2-(methacryloyloxy)ethyl]trimethylammonium chloride\",\n      \"unit\": null,\n      \"value\": \"PVDF with QA brushes grafted inside pores; PET nonwoven fabric used as support\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E05\"\n      ],\n      \"name\": \"QA loading\",\n      \"qualifiers\": \"Quaternary ammonium brushes grafted to membrane\",\n      \"unit\": \"mmol/g\",\n      \"value\": \"1.1\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E07\"\n      ],\n      \"name\": \"Operating pressure range\",\n      \"qualifiers\": \"Dead-end filtration cell; pressure adjusted to control residence time\",\n      \"unit\": \"bar\",\n      \"value\": \"0.30-1.65\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E07\"\n      ],\n      \"name\": \"Feed PFAS concentration\",\n      \"qualifiers\": \"PFOA or PFOS individually spiked in synthetic groundwater\",\n      \"unit\": \"\\u00b5M\",\n      \"value\": \"0.24\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E07\"\n      ],\n      \"name\": \"Water chemistry\",\n      \"qualifiers\": \"NaH2PO4 buffer in synthetic groundwater\",\n      \"unit\": \"mM\",\n      \"value\": \"1\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E07\"\n      ],\n      \"name\": \"Ionic strength adjuster\",\n      \"qualifiers\": \"NaCl added to synthetic groundwater\",\n      \"unit\": \"mM\",\n      \"value\": \"5\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E05\"\n      ],\n      \"name\": \"Membrane permeability\",\n      \"qualifiers\": \"Reported for QA-grafted membranes under pH-swing operation\",\n      \"unit\": \"L m-2 h-1 bar-1\",\n      \"value\": \"165.6\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E05\",\n        \"S12-E08\"\n      ],\n      \"name\": \"pH-swing adsorption/desorption window\",\n      \"qualifiers\": \"Adsorption at groundwater-relevant pH; desorption/regeneration at pH 12.5 with 5% methanol; QA membrane isoelectric point pH 11.2 enabling swing relative to groundwater pH\",\n      \"unit\": \"pH units\",\n      \"value\": \"up to 12.5\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E05\"\n      ],\n      \"name\": \"Regeneration solvent\",\n      \"qualifiers\": \"Used with pH 12.5 solution for desorption\",\n      \"unit\": \"% (v/v) methanol\",\n      \"value\": \"5\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E07\"\n      ],\n      \"name\": \"Membrane area\",\n      \"qualifiers\": \"Effective area in dead-end cell\",\n      \"unit\": \"cm2\",\n      \"value\": \"2.54\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E07\"\n      ],\n      \"name\": \"PFAS analysis range\",\n      \"qualifiers\": \"Calibration range for LC-MS quantification of PFOA and PFOS (R2 = 0.99)\",\n      \"unit\": \"\\u00b5g/L\",\n      \"value\": \"0.1-100\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E01\",\n        \"S12-E05\",\n        \"S12-E07\"\n      ],\n      \"value\": \"Perfluorooctanoic acid (PFOA)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E01\",\n        \"S12-E05\",\n        \"S12-E07\"\n      ],\n      \"value\": \"Perfluorooctane sulfonate (PFOS)\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E05\"\n      ],\n      \"name\": \"PFOA removal at specified treatment capacity\",\n      \"qualifiers\": \"> 90 % removal of PFOA at a treatment capacity of 570 L per m2 of membrane area for QA-grafted membranes\",\n      \"unit\": \"%\",\n      \"value\": \"> 90\",\n      \"value_form\": \"inequality\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E05\"\n      ],\n      \"name\": \"Treatment capacity at high PFOA removal\",\n      \"qualifiers\": \"Volume of water treated per unit membrane area while maintaining > 90 % PFOA removal\",\n      \"unit\": \"L m-2\",\n      \"value\": \"570\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E05\"\n      ],\n      \"name\": \"PFOA desorption during regeneration\",\n      \"qualifiers\": \"> 97 % desorption achieved at pH 12.5 with 5 % methanol\",\n      \"unit\": \"%\",\n      \"value\": \"> 97\",\n      \"value_form\": \"inequality\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E03\",\n        \"S12-E05\"\n      ],\n      \"name\": \"Total PFOA removal over three pH-swing cycles\",\n      \"qualifiers\": \"Total PFOA removal across three adsorption/regeneration cycles at a cumulative treatment capacity of 2,930 L/m2 (abstract states 82.4 %, conclusion notes 84.7 %)\",\n      \"unit\": \"%\",\n      \"value\": \"82.4\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E03\",\n        \"S12-E05\"\n      ],\n      \"name\": \"Cumulative treatment capacity over three cycles\",\n      \"qualifiers\": \"Total volume treated per membrane area over three pH-swing adsorption/regeneration cycles\",\n      \"unit\": \"L m-2\",\n      \"value\": \"2930\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E05\"\n      ],\n      \"name\": \"Membrane permeability (QA-grafted)\",\n      \"qualifiers\": \"Reported for QA-grafted membranes operated under pH-swing conditions\",\n      \"unit\": \"L m-2 h-1 bar-1\",\n      \"value\": \"165.6\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E03\"\n      ],\n      \"name\": \"Decrease in membrane permeability due to NOM fouling\",\n      \"qualifiers\": \"Decrease in membrane permeability after 10 h of continuous filtration in presence of negatively charged natural organic matter competitors\",\n      \"unit\": \"%\",\n      \"value\": \"52.7\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E03\"\n      ],\n      \"name\": \"Decrease in PFOA removal due to competitors (ions and NOM)\",\n      \"qualifiers\": \"Reduction in removal efficiency when various inorganic ions and organic matter were present\",\n      \"unit\": \"%\",\n      \"value\": \"10-20\",\n      \"value_form\": \"range\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S12-E04\"\n      ],\n      \"name\": \"PFOA enrichment factor during pH-swing\",\n      \"qualifiers\": \"PFOA concentration enrichment factors (10.8-, 10.5-, and 10.1-fold) after successive adsorption/regeneration cycles\",\n      \"unit\": \"fold\",\n      \"value\": \"10.1-10.8\",\n      \"value_form\": \"range\"\n    }\n  ],\n  \"record_id\": \"RT04-bge_llm_local_rag-S12-R01\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S12-E04\"\n      ],\n      \"statement\": \"pH-swing operation enabled significant enrichment (approximately 10-fold) of PFOA in the regeneration solution, concentrating PFAS for downstream management but not destroying or transforming the compounds.\"\n    }\n  ],\n  \"source_id\": \"S12\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S12-E07\"\n    ],\n    \"value\": \"Bench-scale dead-end membrane filtration cell (effective membrane area 2.54 cm2) treating synthetic groundwater in lab experiments\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S12-E01\",\n      \"S12-E05\",\n      \"S12-E06\",\n      \"S12-E08\"\n    ],\n    \"value\": \"Adsorptive PVDF-based membranes prepared by wet-phase inversion with post-grafted quaternary ammonium (QA) anion-exchange brushes (QA loading 1.1 mmol/g) operated in pH-swing mode for adsorption/desorption\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 16,\n  \"bge_score\": 0.6715030670166016,\n  \"citation\": \"Wan, H.; Fang, F.; Shi, K.; Yi, Z.; Lei, L.; Li, S.; Mills, R.; Bhattacharyya, D.; Xu, Z. pH-Swing membrane adsorption of perfluoroalkyl substances - Anion-exchange brushes and role of water chemistry. Separation and Purification Technology 2024 329 124800. DOI: 10.1016/j.seppur.2023.124800.\",\n  \"doi\": \"10.1016/j.seppur.2023.124800\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.seppur.2023.124800\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 7,\n      \"locator_id\": \"S12-E01\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.0026593792717903852,\n        \"RT04-C2\": 0.10476349294185638,\n        \"RT04-C3\": 0.0019568465650081635,\n        \"umbrella\": 0.823538064956665\n      },\n      \"section\": \"methods\",\n      \"text\": \"method. Given the negatively-charged nature of major PFAS molecules at neutral pH, two types of anion-exchange moieties, tertiary-amine (TA) and quaternary ammonium (QA), were chemically grafted to the membrane backbone materials. PFOA and PFOS were selected as representative PFAS molecules. The major objectives of the study were summarized as: (1) development of durable adsorptive membranes with both high permeability and effective PFAS removal; (2) evaluation of the roles of hydrophobic membrane backbone and ion-exchange moiety on removal mechanisms; (3) investigation of long-term removal perfor - mance and membrane stability; and (4) establishment of a pH-swing strategy towards PFOA adsorption and facile membrane regeneration. 2. Material and methods 2.1. Materials The PET nonwoven fabric was ordered from Iris International Trading Co., Ltd., while PVDF powder (M w ~ 300,000), 2-(dimethyla - mino)ethyl methacrylate (referred to as TA agent), [2-(meth - acryloyloxy)ethyl]trimethylammonium chloride (referred to as QA agent), and dimethylformamide (DMF), and bovine serum albumin (BSA) were obtained from Sigma-Aldrich. Sodium persulfate, fulvic acid, sodium alginate, inorganic salts, as well as feedstocks and analytical\"\n    },\n    {\n      \"corpus_chunk\": 5,\n      \"locator_id\": \"S12-E02\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.40389373898506165,\n        \"RT04-C2\": 0.20468154549598694,\n        \"RT04-C3\": 5.329728082870133e-05,\n        \"umbrella\": 0.7287051677703857\n      },\n      \"section\": \"methods\",\n      \"text\": \"Advanced membrane filtration methods, such as nanofiltration and reverse osmosis, are capable of intercepting PFAS molecules via size- exclusion and/or Donnan effect [25,26] , but the nano/sub-nanometer scaled pores require high operating pressures (5 \\u2013 55 bar) and are also highly vulnerable to membrane fouling [27,28] . To address these issues, ion-exchange moieties have been incorporated to porous membrane domain to remove PFAS molecules via adsorption mechanisms [27] . For instance, nanofibrous membranes, with electrospun ultrathin nanofibers ( < 200 nm) and post-grafted anion-exchange moieties [29,30] , removed 90 % of perfluorooctanoic acid at a static pressure of only 0.01 \\u2013 0.2 bar, which is significantly less than that required by conventional nano - filtration membranes [31] . Furthermore, the removal process can be controlled by adjusting operating conditions, such as temperature and electric field, allowing for feasible regeneration via switching between adsorption and desorption [32 \\u2013 36] . However, concerns regarding sta - bility of nanofibrous membranes (during the treatment and regeneration processes) were maintained, due to the sacrifice of mechanical strength and durability for the loose membrane structure [37] . In addition to membrane stability, the assessment of removal per - formance under complex water chemistry is crucial.\"\n    },\n    {\n      \"corpus_chunk\": 33,\n      \"locator_id\": \"S12-E03\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.00018469525093678385,\n        \"RT04-C2\": 0.25746798515319824,\n        \"RT04-C3\": 0.0008045200956985354,\n        \"umbrella\": 0.16910052299499512\n      },\n      \"section\": \"introduction\",\n      \"text\": \"the 100-fold higher concentration of negatively-charged NOM compet - itors. In addition to its impact on removal efficiency, the presence of NOM can also contribute to membrane fouling and reduce membrane permeability. A 52.7 % decrease in membrane permeability was observed after 10 h of continuous filtration (in Fig. S10 ). The dead-end filtration process tends to result in the formation of a cake layer composed of rejected NOM. Further investigation is anticipated to optimize the anti-fouling properties of the membrane surface in order to maintain high membrane permeability in the presence of NOM. In addition, the inclusion of competitors, such as ions and organic matter, led to a significant decrease in removal efficiency by 10 \\u2013 20 %. This substantial interference highlights the significance of addressing competitive adsorption in future studies. 4. Conclusion The pH-swing membrane adsorption of PFOA was achieved via grafting quaternary ammonium brushes inside the membrane pores. > 90 % PFOA removal was maintained at a treatment capacity of 570 L/ m 2 . Three pH-swing cycles were also conducted with a total PFOA removal of 84.7 % at a treatment capacity of 2,930 L/m 2 . Key findings were summarized below: Fig. 8. The schematic of the pH-swing strategy for PFAS removal and membrane regeneration. Table 2\"\n    },\n    {\n      \"corpus_chunk\": 27,\n      \"locator_id\": \"S12-E04\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.050068773329257965,\n        \"RT04-C2\": 0.0003537932352628559,\n        \"RT04-C3\": 0.003789863782003522,\n        \"umbrella\": 0.001986634684726596\n      },\n      \"section\": \"introduction\",\n      \"text\": \"8 . The swelling of positively-charged QA brushes could provide abundant and highly accessible electrostatic and hydrophobic interaction sites, while the increased OH \\u2013 could screen the positively-charged QA resulting in a switch from electrostatic attraction to repulsion (pH > pH IEP ). Once the increased repulsion forces surpassing the hydrophobic interactions, the adsorbed PFOA are released resulting in membrane regeneration. The pH-swing method was proven to be effective for PFOA removal and al - lows for facile membrane regeneration. The stability of PVDF- g -QA membranes under multiple pH-swing removal cycles was also confirmed by the consistent PFOA removal efficiency and membrane permeability ( Fig. 6 c & Fig.S8 ). Moreover, the pH-swing process enabled a significant enrichment of PFOA (10.8-, 10.5-, and 10.1-fold) after adsorption/ regeneration cycles. In comparison to conventional membrane filtration methods, the pH- swing membrane adsorption technique (dynamic adsorption) exhibited comparable removal efficiency as nanofiltration ( > 90 %), while demonstrating significantly higher water permeability, with 14.3- and 4.6-fold increases compared to nanofiltration and ultrafiltration mem - branes, respectively ( Table 2 ). This effective removal, coupled with improved permeability, has the potential to reduce energy re - quirements.\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S12-E05\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.0004029347619507462,\n        \"RT04-C2\": 0.19781018793582916,\n        \"RT04-C3\": 0.0010692663490772247,\n        \"umbrella\": 0.67182856798172\n      },\n      \"section\": \"abstract\",\n      \"text\": \"7.5), resulting in a suitable pH-swing adsorption/desorption range towards groundwater conditions. Such QA- grafted membranes (QA loading: 1.1 mmol/g) not only presented > 90 % removal of perfluorooctanoic acid (PFOA) at a treatment capacity of 570 L per m 2 of membrane area, but also enabled effective membrane regeneration that > 97 % desorption was achieved at pH 12.5 and 5 % methanol. The remediation is driven by synergetic electrostatic and hydrophobic interactions, as demonstrated by (1) the zeta-potential dependent removal performance and (2) the greater maximum adsorption capacity towards the more hydrophobic per - fluorooctane sulfonate than PFOA ( Q m : 0.65 mmol/g and 0.44 mmol/g, respectively). Within three pH-swing adsorption/regeneration cycles, a total PFOA removal of 82.4 % was achieved with a treatment capacity of 2,930 L/m 2 . The impacts of ionic strength, ionic types, and natural organic matters were evaluated. Overall, the pH-swing strategy is an effective method with high permeability (165.6 L m \\u0000 2 h \\u0000 1 bar \\u0000 1 ), stability, and tunable adsorption/regeneration processes. 1. Introduction Per- and polyfluoroalkyl substances (PFAS) are commonly-used\"\n    },\n    {\n      \"corpus_chunk\": 6,\n      \"locator_id\": \"S12-E06\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.0021672050934284925,\n        \"RT04-C2\": 0.038895897567272186,\n        \"RT04-C3\": 0.00015767452714499086,\n        \"umbrella\": 0.48213228583335876\n      },\n      \"section\": \"methods\",\n      \"text\": \"In addition to membrane stability, the assessment of removal per - formance under complex water chemistry is crucial. The environmental pH, for instance, can cause swelling or collapse of the polyanions/pol - ycations in the membrane matrix [38,39] , leading to inadequate inter - action between PFAS molecules and adsorption sites [25,40] . Additionally, the role of ionic strength and co-/counter-charged ions is also important. Co-ions, for example, can compete with negatively- charged PFAS molecules for electrostatic adsorption sites [41] , whereas counter-ions may compress the electrical double layer on the adsorbent [42] . Multivalent cations, such as Mg 2 + and Ca 2 + , have been reported to affect the adsorption process. These ions can form complexes with negatively-charged PFAS molecules, causing an impaired electro - static attraction, but ultimately resulting in a higher molecule size and hydrophobicity [43,44] . These factors, along with membrane stability, must be considered to obtain an accurate assessment of the performance of developed membranes in PFAS removal. This research aimed to synthesize adsorptive membranes for pH- swing adsorption of PFAS molecules using the wet-phase inversion method. Given the negatively-charged nature of major PFAS molecules\"\n    },\n    {\n      \"corpus_chunk\": 10,\n      \"locator_id\": \"S12-E07\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.007120467722415924,\n        \"RT04-C2\": 0.023868022486567497,\n        \"RT04-C3\": 7.514530443586409e-05,\n        \"umbrella\": 0.3420810103416443\n      },\n      \"section\": \"methods\",\n      \"text\": \"water contact angle was analyzed via a contact angle meter (JC2000D1, Shanghai Zhongchen Digital Technology Apparatus Co., Ltd). 2.3. Analytical methods PFAS analysis was conducted using a liquid chromatograph mass spectrometer (Shimadzu LCMS-8050). The LCMS method was modified based on our previous report [45] ( SI section 1 ), and the calibration curves of both PFOA and PFOS were established using concentrations ranging from 0.1 to 100 \\u00b5 g/L with high linearity (R 2 = 0.99). No additional separation step was required before sample injection. 2.4. PFAS adsorption test The feedstock of PFOA/PFOS were spiked, individually, into syn - thetic groundwater containing 1 mM NaH 2 PO 4 buffer and 5 mM NaCl ionic strength adjuster ( C PFAS = 0.24 \\u00b5 M). The solution was treated in a dead-end membrane filtration cell with the developed membranes (effective area: 2.54 cm 2 ). The membranes were firstly compacted for H. Wan et al. Separation and Purification Technology 329 (2024) 124800 3 2 h with DI water before filtration treatment. Different operating pres - sures from 0.30 to 1.65 bar were tested, and the residence time ( \\u03c4 ) of the PFAS species across the membranes was adjusted by the operating\"\n    },\n    {\n      \"corpus_chunk\": 0,\n      \"locator_id\": \"S12-E08\",\n      \"query_scores\": {\n        \"RT04-C1\": 0.0016599209047853947,\n        \"RT04-C2\": 0.01687239296734333,\n        \"RT04-C3\": 0.0001342223840765655,\n        \"umbrella\": 0.3059527575969696\n      },\n      \"section\": \"abstract\",\n      \"text\": \"Separation and Purification Technology 329 (2024) 124800 Available online 12 August 2023 1383-5866/\\u00a9 2023 Elsevier B.V. All rights reserved. pH-Swing membrane adsorption of perfluoroalkyl substances: Anion-exchange brushes and role of water chemistry Hongyi Wan a , * , Fumohan Fang a , Ke Shi a , Zhiyuan Yi a , Linfeng Lei a , Siyao Li a , Rollie Mills b , Dibakar Bhattacharyya b , Zhi Xu a , * a School of Chemical Engineering, East China University of Science and Technology, Shanghai 200237, China b Department of Chemical and Materials Engineering, University of Kentucky, Lexington, KY 40506, USA ARTICLE INFO Keywords: Adsorptive membrane PFAS removal Removal mechanism pH-swing regeneration Water matrix ABSTRACT The pH-swing membrane adsorption, aiming for effective removal, high membrane permeability, and facile regeneration, was developed to remediate emerging perfluoroalkyl contaminants. Compared to the collapse transformation of deprotonated tertiary-amine brushes at neutral pH (pK b : ~5.82), the quaternary-ammonium (QA) brushes endowed consistent membrane pore structure and higher isoelectric point (pH IEP : 11.2 versus 7.5), resulting in a suitable pH-swing adsorption/desorption range towards groundwater conditions. Such QA-\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2023 - Wan - pH-Swing membrane adsorption of perfluoroalkyl substances - Anion-exchange brushes and role of water chemistry.pdf\",\n  \"source_id\": \"S12\",\n  \"title\": \"pH-Swing membrane adsorption of perfluoroalkyl substances - Anion-exchange brushes and role of water chemistry\",\n  \"year\": \"2023\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "4fbdd07bdc305c9b96bb7c79e0eed670753c566c2430c48b7b555d70ac6c5e83",
+  "response_metadata": {
+    "cached_input_tokens": 1152,
+    "estimated_cost_usd": 0.06497525,
+    "finish_reason": "stop",
+    "input_tokens": 7913,
+    "latency_seconds": 41.2993159169564,
+    "output_tokens": 5638,
+    "reasoning_tokens": 1975,
+    "response_id": "chatcmpl-E9NDJAD1AChGXIsfwKb7olfuSfKSX",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 13551,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The record DOI/URL exactly matches the DOI given in the source metadata (10.1016/j.seppur.2023.124800).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "Chunk S12-E01 states that PFOA was selected as a representative PFAS molecule; the abstract (S12-E05) also refers specifically to PFOA, supporting inclusion of PFOA in scope.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1].value",
+        "reason": "Chunk S12-E01 explicitly states that PFOS was selected as a representative PFAS molecule, supporting its inclusion in PFAS scope.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix.value",
+        "reason": "Chunk S12-E07 states that PFOA/PFOS were spiked individually into synthetic groundwater containing 1 mM NaH2PO4 buffer and 5 mM NaCl, which matches the described synthetic groundwater matrix.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "Chunk S12-E07 notes treatment in a dead-end membrane filtration cell with an effective membrane area of 2.54 cm\u00b2, which supports a bench-scale dead-end lab setup as described.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "Chunks S12-E01, S12-E05, S12-E06, and S12-E08 together describe PVDF-based membranes with chemically grafted quaternary ammonium brushes, synthesized by wet-phase inversion for pH-swing adsorption/regeneration of PFAS, matching the treatment description including QA loading from S12-E05.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "Chunks S12-E07 and S12-E05 show a dead-end lab cell treating synthetic groundwater with clearly reported PFAS concentration, pressures, treatment capacities, and removals. Inferring that results are comparable with conditions to similar bench-scale membrane studies is a reasonable analyst judgment.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The reason cites bench-scale dead-end operation, synthetic groundwater, clear PFAS identity/concentration, pressures, capacities, and removal/permeability endpoints, all of which are supported by S12-E05 and S12-E07. The caution about extrapolation to full-scale NF/RO is an appropriate inference from these conditions.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "Endpoint concerns percentage decrease in aqueous PFOA concentration at a given treatment capacity. Chunks S12-E03 and S12-E05 describe >90% PFOA removal at a treatment capacity of 570 L/m\u00b2, so classifying this as a removal endpoint is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "Chunk S12-E03 describes total PFOA removal over three pH-swing cycles, which is cumulative removal of PFAS from solution. Classifying as a removal endpoint is consistent with the reported metric.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].endpoint_type",
+        "reason": "Chunk S12-E05 reports >97% desorption of PFOA at high pH with methanol; this is clearly a sorption/desorption behavior, so endpoint_type=sorption is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[3].endpoint_type",
+        "reason": "Chunk S12-E03 states that competitors (ions and organic matter) led to a 10\u201320% decrease in removal efficiency, which is a change in removal performance; classifying as a removal endpoint is consistent.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[4].endpoint_type",
+        "reason": "Chunk S12-E04 reports enrichment factors (10.8-, 10.5-, 10.1-fold) for PFOA concentration after adsorption/regeneration cycles, which describes separation/enrichment, so endpoint_type=separation is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[5].endpoint_type",
+        "reason": "Chunk S12-E03 reports a 52.7% decrease in membrane permeability due to NOM fouling; this concerns hydrodynamic performance rather than PFAS concentration, so classifying under 'other' is reasonable.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].statement",
+        "reason": "Chunk S12-E03 states that NOM caused a 52.7% decrease in membrane permeability after 10 h and that inclusion of ions and organic matter decreased removal efficiency by 10\u201320%, and mentions cake-layer fouling. The limitation statement accurately summarizes and interprets these author-reported impacts.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1].statement",
+        "reason": "Chunk S12-E07 shows a lab dead-end cell with 2.54 cm\u00b2 membrane area, synthetic groundwater, and single-compound PFOA/PFOS feeds. Inferring that such bench-scale, single-PFAS tests may not fully reflect full-scale or multi-PFAS performance is a reasonable design-inferred limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "operating_conditions[0].value",
+        "reason": "Chunk S12-E01 notes that TA and QA moieties were chemically grafted to membrane backbone materials and that PVDF powder and PET nonwoven fabric were used, supporting PVDF backbone and QA grafting with PET support. However, the specific phrase 'grafted inside pores' is not explicitly stated in the cited chunk, so that detail is only partially supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "No numeric unit is needed for the descriptive membrane backbone entry; setting unit to null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "Chunk S12-E05 explicitly states 'QA-grafted membranes (QA loading: 1.1 mmol/g)', matching the value 1.1.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The QA loading in S12-E05 is given in mmol/g, matching the recorded unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "Chunk S12-E07 reports operating pressures from 0.30 to 1.65 bar, which corresponds to the value '0.30-1.65'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "Pressures are reported in bar in S12-E07, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "Chunk S12-E07 specifies C_PFAS = 0.24 \u00b5M, matching the recorded feed PFAS concentration value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "The concentration in S12-E07 is explicitly in \u00b5M, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].value",
+        "reason": "Chunk S12-E07 notes synthetic groundwater containing 1 mM NaH2PO4 buffer, matching value 1 for water chemistry.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].unit",
+        "reason": "The NaH2PO4 buffer concentration is given in mM in S12-E07, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[5].value",
+        "reason": "Chunk S12-E07 specifies 5 mM NaCl ionic strength adjuster, matching the recorded value 5.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[5].unit",
+        "reason": "NaCl ionic strength adjuster is given in mM in S12-E07, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[6].value",
+        "reason": "Chunk S12-E05 states 'high permeability (165.6 L m\u22122 h\u22121 bar\u22121)', matching the recorded permeability value 165.6.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[6].unit",
+        "reason": "The permeability unit in S12-E05 is L m\u22122 h\u22121 bar\u22121, matching the recorded unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[7].value",
+        "reason": "Chunk S12-E05 reports desorption achieved at pH 12.5, and S12-E08 notes QA having pH IEP 11.2 enabling a pH-swing around groundwater-relevant pH. Using 'up to 12.5' as the swing window upper bound is consistent with these values.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[7].unit",
+        "reason": "pH is dimensionless and reported as 'pH' in the article; using 'pH units' is an acceptable representation for this operating condition.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[8].value",
+        "reason": "Chunk S12-E05 states that >97% desorption was achieved at pH 12.5 and 5% methanol, matching the recorded 5 for regeneration solvent content.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[8].unit",
+        "reason": "The methanol content is given as 5% in S12-E05; recording the unit as '% (v/v) methanol' is consistent.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[9].value",
+        "reason": "Chunk S12-E07 specifies that the developed membranes had an effective area of 2.54 cm\u00b2, matching the value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[9].unit",
+        "reason": "The effective area is expressed in cm\u00b2 in S12-E07, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[10].value",
+        "reason": "Chunk S12-E07 reports calibration curves using concentrations ranging from 0.1 to 100 \u00b5g/L, matching the recorded range '0.1-100'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[10].unit",
+        "reason": "The calibration range is explicitly in \u00b5g/L (S12-E07), matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "Chunk S12-E05 states that QA-grafted membranes 'presented > 90% removal of PFOA at a treatment capacity of 570 L per m\u00b2'. This supports the value '> 90' with inequality form.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "Removal is expressed as a percentage in S12-E05; unit '%' is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "Chunks S12-E03 and S12-E05 both report a treatment capacity of 570 L/m\u00b2 associated with >90% PFOA removal, matching value 570.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "Treatment capacity is expressed as L per m\u00b2 in the source (S12-E03, S12-E05), matching unit 'L m-2'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].value",
+        "reason": "Chunk S12-E05 states '> 97% desorption was achieved at pH 12.5 and 5% methanol,' matching the value '> 97' and inequality form.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].unit",
+        "reason": "Desorption is reported as a percentage in S12-E05; unit '%' is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[3].value",
+        "reason": "Chunk S12-E05 (abstract) reports 'Within three pH-swing adsorption/regeneration cycles, a total PFOA removal of 82.4% was achieved with a treatment capacity of 2,930 L/m\u00b2', which supports 82.4%. However, chunk S12-E03 (conclusion) states 'Three pH-swing cycles were also conducted with a total PFOA removal of 84.7% at a treatment capacity of 2,930 L/m\u00b2.' Because the cited locators provide conflicting values (82.4 vs 84.7) for the same metric, the single numeric value 82.4 is directly contradicted by part of the cited evidence.",
+        "status": "contradicted"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].unit",
+        "reason": "Total PFOA removal over cycles is expressed as a percentage in both abstract and conclusion; unit '%' is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].value",
+        "reason": "Chunks S12-E03 and S12-E05 specify a treatment capacity of 2,930 L/m\u00b2 for the three-cycle test, matching value 2930.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].unit",
+        "reason": "The cumulative treatment capacity for three cycles is given in L/m\u00b2, matching unit 'L m-2'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[5].value",
+        "reason": "Chunk S12-E05 states 'high permeability (165.6 L m\u22122 h\u22121 bar\u22121)', matching value 165.6.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[5].unit",
+        "reason": "Permeability is reported in L m\u22122 h\u22121 bar\u22121 (S12-E05); the unit matches.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[6].value",
+        "reason": "Chunk S12-E03 specifies that 'A 52.7% decrease in membrane permeability was observed after 10 h of continuous filtration', matching value 52.7.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[6].unit",
+        "reason": "The decrease in permeability is expressed as a percentage in S12-E03; unit '%' is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[7].value",
+        "reason": "Chunk S12-E03 states that inclusion of competitors led to a 'significant decrease in removal efficiency by 10\u201320%', matching the range 10-20.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[7].unit",
+        "reason": "The change in removal efficiency is expressed as a percentage in S12-E03; unit '%' is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[8].value",
+        "reason": "Chunk S12-E04 reports enrichment factors of 10.8-, 10.5-, and 10.1-fold after adsorption/regeneration cycles. Representing this as a range 10.1\u201310.8 is consistent with these values.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[8].unit",
+        "reason": "'Fold' is an appropriate unit label for enrichment factors reported as '10.8-, 10.5-, and 10.1-fold' in S12-E04.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0].statement",
+        "reason": "Chunk S12-E04 states that the pH-swing process 'enabled a significant enrichment of PFOA (10.8-, 10.5-, and 10.1-fold) after adsorption/regeneration cycles.' Inferring that this concentrates PFAS for downstream management without destruction or transformation is a reasonable design-based inference, as no degradation products are reported.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT04-bge_llm_local_rag-S12-R01",
+    "record_usable": true,
+    "record_usable_rationale": "Core study identity, matrix, treatment description, PFAS species, operating conditions, and most quantitative endpoints (removal, desorption, permeability, fouling, enrichment) are well supported. One cumulative removal value over three cycles (82.4%) is numerically inconsistent with another section of the same paper (84.7%), but the discrepancy is clearly noted in qualifiers and limited to this single metric. This does not undermine overall interpretability for comparative synthesis, so the record is usable with attention to that flagged value.",
+    "task_id": "RT04"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

@@ -1,0 +1,284 @@
+{
+  "call_key": "RT03:bge_llm_local_rag:verify:RT03-bge_llm_local_rag-S06-R01",
+  "created_at": "2026-08-05T04:00:51.428627+00:00",
+  "raw_response_text": "{\"task_id\":\"RT03\",\"record_id\":\"RT03-bge_llm_local_rag-S06-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"citation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The citation text matches the source article information, including authors, title, journal, year, volume, and article number as shown in the provided source metadata.\"},{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The DOI and URL 10.1016/j.seppur.2024.129789 / https://doi.org/10.1016/j.seppur.2024.129789 match the source metadata.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract explicitly describes PFAS desorption from anion exchange resins into regenerant brine/cosolvent mixtures and discusses regeneration efficacy, which is a separation of PFAS from the solid phase into a liquid phase rather than destruction, consistent with endpoint_type='separation' (S06-E06).\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The interpretation accurately restates that continuous-flow regeneration yielded near-complete PFAS desorption from regenerable AERs using 10 BVs of 70% methanolic brine and that PFAS-selective resins required 30 BVs of 90% MeOH or n-propanol brines, and that the endpoint is PFAS transfer from resin to regenerant (S06-E06).\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reported term paraphrases language in the abstract and results that discuss 'PFAS desorption' and regeneration efficacy (S06-E06, S06-E04).\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The statement infers that PFAS-selective resins requiring 30 BVs of high-cosolvent brine versus 10 BVs for regenerable AERs leads to larger regenerant volumes; this follows directly from the abstract and the resource recovery discussion describing 30 BVs regenerant vs 1 BV resin (S06-E06, S06-E08).\"},{\"field_path\":\"limitations[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E03 explicitly states that dissolved iron and manganese scaling may influence regenerability and that site-specific pilot testing is recommended to ensure optimum treatment and regeneration prior to full-scale implementation, matching the limitation text.\"},{\"field_path\":\"matrix\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E06 and S06-E05 state that both 'regenerable' and 'PFAS-selective' AERs were loaded during a pilot treatment study of PFAS-contaminated groundwater, and S06-E05 specifies AFFF-impacted groundwater and that both batch and continuous-flow regeneration experiments were conducted, consistent with the matrix description.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Figure 2 caption in S06-E04 specifies regeneration using 'a 70% MeOH, 1 wt% NaCl' solution, and the abstract refers to 70% methanolic brine, matching the described regenerant composition for regenerable AERs.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The field correctly leaves unit null because the value is a qualitative description of solution composition, not a single numeric with a physical unit; this is consistent with the source text in S06-E04 and S06-E06.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract states that continuous-flow regeneration experiments showed near-complete PFAS desorption from regenerable AERs using '10 bed volumes (BVs)' of 70% methanolic brine (S06-E06), matching the value '10'.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The unit 'bed volumes' corresponds directly to '10 bed volumes (BVs)' reported in the abstract (S06-E06).\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract states that PFAS-selective resins required brines with higher methanol content (90%) or a more hydrophobic cosolvent (n-propanol) (S06-E06), matching the described compositions.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Unit is correctly null because the field describes qualitative regenerant composition (90% MeOH or n-propanol brine) rather than a standalone numeric plus unit (S06-E06).\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E06 states that PFAS-selective resins required 'more bed volumes (30)' of the higher MeOH or n-propanol brines, matching the value of 30.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The unit 'bed volumes' is consistent with the source wording '30' bed volumes (BVs) in S06-E06.\"},{\"field_path\":\"operating_conditions[4].value\",\"status\":\"unsupported\",\"error_type\":\"other\",\"reason\":\"The qualifiers refer to the effect of increasing regenerant empty-bed contact time, which is supported by S06-E06 ('increasing regenerant empty-bed contact time had minimal effect on PFAS desorption'), but the value field is left as an empty string and does not capture any numeric EBCT or descriptive value from the source. Thus the value itself is not supported or meaningful.\"},{\"field_path\":\"operating_conditions[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Leaving unit null is appropriate because no EBCT magnitude is reported in the cited excerpt (S06-E06); only qualitative information about its effect is provided.\"},{\"field_path\":\"pfas_scope[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E05 states resins were loaded with a mixture of PFAS during an eight-month field pilot treating AFFF-impacted groundwater, and Figure 2 in S06-E04 breaks out 'Total PFAS, PFOS, Other PFSAs, PFCAs,' indicating that the mixture included PFOS, other perfluorosulfonic acids, and perfluorocarboxylic acids.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The supplied excerpts provide qualitative and relative descriptions of desorption performance (e.g., near-complete desorption, different required bed volumes and cosolvent fractions) but do not give a consistent set of quantitative desorption percentages or capacity recovery across all conditions (S06-E04, S06-E06). Classifying comparability as 'descriptive_only' is a reasonable inference from this information.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reason correctly explains that only qualitative/relative regeneration performance is available in the excerpts and cites specific examples such as differing BVs and cosolvent requirements, consistent with S06-E04 and S06-E06.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E08 notes that regeneration produces liquid wastes that are more plentiful than the single bed of solid resin (e.g., 30 BVs of PFAS-contaminated regenerant liquid vs 1 BV of PFAS-laden exhausted resin), and S06-E03 states that regeneration shifts PFAS concentrate waste from solid to liquid form enabling coupling with liquid-phase destruction technologies, matching the statement.\"},{\"field_path\":\"residuals_byproducts[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E03 lists emerging liquid-phase PFAS destruction technologies (HALT, ECO, plasma, SCWO), notes that their energy requirements are too high (e.g., >100 kWh/m3) for large throughputs, and explains that concentrating PFAS into a small waste volume (e.g., >100,000 BVs into <10 BVs still bottoms) is advantageous for destruction, matching the statement.\"},{\"field_path\":\"study_scale\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S06-E05 states that both batch and continuous-flow regeneration experiments were conducted with resins loaded during an eight-month field pilot treating AFFF-impacted groundwater. This supports that the regeneration tests were laboratory experiments using columns informed by a field pilot. However, the specific qualifier 'bench-scale' is not explicitly stated in the provided excerpts, though it is a reasonable inference; thus the field is partially supported.\"},{\"field_path\":\"study_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The article clearly describes batch and continuous-flow regeneration experiments with anion exchange resins (S06-E05, S06-E06), supporting classification as a primary experimental study.\"},{\"field_path\":\"treatment\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E06 and S06-E05 describe regeneration of PFAS-loaded AERs using combinations of salt brine and organic cosolvent in both batch and continuous-flow experiments, consistent with the treatment description focused on continuous-flow regeneration with brine/cosolvent mixtures.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements needed for synthesis\u2014source identity, matrix, PFAS scope, treatment description, operating conditions (regenerant type and bed volumes), endpoint type (separation via desorption), and residual waste characterization\u2014are well supported by the cited text. The only notable issue is an empty value field for EBCT, which affects a nonessential operating condition detail but does not misrepresent the study\u2019s main findings. Therefore the record is usable with minor correction or cautious handling of the EBCT field.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of the evidence needed to choose among regeneration, replacement, and end-of-life management for PFAS-loaded adsorption media.\",\"task_id\":\"RT03\",\"title\":\"Deciding whether to regenerate or replace PFAS adsorption media\"}\n\nTask-specific extraction objective:\nExtract adsorbent and PFAS identity, loading protocol, regeneration or disposal method, operating conditions, desorption or destruction endpoint, capacity recovery, cycle number, material change, residual streams, energy, chemicals, and cost.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Ellis, A.C.; Boyer, T.H.; Strathmann, T.J. Regeneration of conventional and emerging PFAS-selective anion exchange resins used to treat PFAS-contaminated waters. Sep. Purif. Technol. 2025, 355, 129789.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S06-E04\",\n      \"S06-E06\"\n    ],\n    \"reason\": \"The study reports qualitative or relative regeneration performance (e.g., near-complete PFAS desorption, more bed volumes required for PFAS-selective resins) under different regenerant compositions and bed volumes, but does not provide consistent quantitative desorption percentages or capacity recovery values in the supplied excerpts needed for direct comparison across conditions.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.seppur.2024.129789\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"separation\",\n      \"evidence_locator_ids\": [\n        \"S06-E06\",\n        \"S06-E04\"\n      ],\n      \"interpretation\": \"PFAS were desorbed from loaded anion exchange resins into regenerant brine/cosolvent solutions. Conventional regenerable AERs achieved near-complete PFAS desorption with 10 bed volumes of 70% methanolic brine, while PFAS-selective resins required 30 bed volumes of higher methanol content (90%) or more hydrophobic cosolvent (n-propanol) brines. The endpoint is PFAS transfer from solid resin to liquid regenerant, enabling resin reuse rather than PFAS destruction.\",\n      \"reported_term\": \"PFAS desorption and resin regeneration efficacy\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S06-E06\"\n      ],\n      \"statement\": \"Continuous-flow regeneration required substantially more bed volumes of regenerant for PFAS-selective resins (30 BVs of high-cosolvent brine) than for conventional regenerable AERs (10 BVs of 70% methanolic brine), which implies larger regenerant volumes and associated waste streams for PFAS-selective media.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S06-E03\"\n      ],\n      \"statement\": \"Site-specific pilot testing is recommended to ensure optimum PFAS treatment and regeneration performance prior to full-scale implementation, due to potential influences of matrix components such as dissolved iron and manganese scaling.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S06-E05\",\n      \"S06-E06\",\n      \"S06-E04\"\n    ],\n    \"value\": \"PFAS-loaded anion exchange resins (\\\"regenerable\\\" and PFAS-selective) previously used to treat PFAS-contaminated/AFFF-impacted groundwater; regeneration tested in continuous-flow columns.\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S06-E04\",\n        \"S06-E06\"\n      ],\n      \"name\": \"Regenerant composition (regenerable AERs)\",\n      \"qualifiers\": \"Applied to conventional \\\"regenerable\\\" AERs; used in continuous-flow regeneration columns.\",\n      \"unit\": null,\n      \"value\": \"70% methanol in water with 1 wt% NaCl (methanolic brine)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S06-E06\"\n      ],\n      \"name\": \"Regenerant bed volumes (regenerable AERs)\",\n      \"qualifiers\": \"Near-complete PFAS desorption achieved using 10 BVs of 70% methanolic brine.\",\n      \"unit\": \"bed volumes\",\n      \"value\": \"10\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S06-E06\"\n      ],\n      \"name\": \"Regenerant composition (PFAS-selective AERs)\",\n      \"qualifiers\": \"PFAS-selective resins required higher methanol content (90%) or use of n-propanol in brine for effective regeneration.\",\n      \"unit\": null,\n      \"value\": \"Brine with 90% methanol or brine with more hydrophobic cosolvent (n-propanol)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S06-E06\"\n      ],\n      \"name\": \"Regenerant bed volumes (PFAS-selective AERs)\",\n      \"qualifiers\": \"PFAS-selective resins required ~30 BVs of 90% methanolic brine or n-propanol brine for near-complete PFAS desorption.\",\n      \"unit\": \"bed volumes\",\n      \"value\": \"30\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S06-E06\"\n      ],\n      \"name\": \"Empty-bed contact time (EBCT)\",\n      \"qualifiers\": \"Increasing regenerant EBCT had minimal effect on PFAS desorption in continuous-flow regeneration experiments.\",\n      \"unit\": null,\n      \"value\": \"\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S06-E04\",\n        \"S06-E05\"\n      ],\n      \"value\": \"Mixture of PFAS from AFFF-impacted groundwater, including PFOS, other perfluorosulfonic acids (PFSAs), and perfluorocarboxylic acids (PFCAs).\"\n    }\n  ],\n  \"quantitative_findings\": [],\n  \"record_id\": \"RT03-bge_llm_local_rag-S06-R01\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S06-E03\",\n        \"S06-E06\",\n        \"S06-E08\"\n      ],\n      \"statement\": \"Regeneration of AERs generates liquid PFAS-containing waste streams (regenerant solutions) that are much larger in volume than the exhausted resin bed (e.g., up to ~30 bed volumes of PFAS-contaminated regenerant liquid vs 1 bed volume of PFAS-laden resin), shifting waste from solid to liquid form and enabling coupling with liquid-phase PFAS destruction technologies.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S06-E03\"\n      ],\n      \"statement\": \"Emerging liquid-phase PFAS destruction technologies such as hydrothermal alkaline treatment, electrochemical oxidation, plasma treatment, and supercritical water oxidation have high energy requirements (>100 kWh/m3), so concentrating PFAS into a small regenerant waste volume is advantageous before destruction.\"\n    }\n  ],\n  \"source_id\": \"S06\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S06-E05\",\n      \"S06-E06\"\n    ],\n    \"value\": \"Bench-scale continuous-flow column regeneration experiments with PFAS-loaded anion exchange resins from an eight-month field pilot treating PFAS-contaminated (AFFF-impacted) groundwater.\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S06-E05\",\n      \"S06-E06\"\n    ],\n    \"value\": \"Regeneration of PFAS-loaded anion exchange resins using aqueous salt brine/organic cosolvent mixtures in continuous-flow mode.\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 6,\n  \"bge_score\": 0.6283096671104431,\n  \"citation\": \"Ellis, A.C.; Boyer, T.H.; Strathmann, T.J. Regeneration of conventional and emerging PFAS-selective anion exchange resins used to treat PFAS-contaminated waters. Separation and Purification Technology 2025 355 129789. DOI: 10.1016/j.seppur.2024.129789.\",\n  \"doi\": \"10.1016/j.seppur.2024.129789\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.seppur.2024.129789\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 4,\n      \"locator_id\": \"S06-E01\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.26156193017959595,\n        \"RT03-C2\": 0.027681637555360794,\n        \"RT03-C3\": 0.0007281947182491422,\n        \"umbrella\": 0.32717621326446533\n      },\n      \"section\": \"introduction\",\n      \"text\": \"ment technologies. At present, remediation of PFAS plumes is most often accomplished via ex-situ treatment with granular activated carbon (GAC) adsorbents and anon exchange resins (AERs) [7] . While GAC adsorption is currently the dominant treatment technology, AERs are receiving increased attention due to their improved affinity and capacity for PFAS uptake [8,9] . Moreover, opportunities for resin regeneration upon PFAS breakthrough can significantly reduce media usage rates (MURs) and requirements for off-site disposal of exhausted media. Anion exchange resins are made of a polymeric backbone \\u2013 typically a hydrophobic polymer like polystyrene \\u2013 functionalized with special - ized cationic exchange sites and crosslinked with copolymer (usually divinylbenzene) to maintain structural integrity [10] . While the hy - drophobic polymer attracts the nonpolar fluoroalkyl tail of PFAS mol - ecules and the crosslinked porous structure allows water to pass through and swell the resins, the cationic functional groups allow for exchange of mobile anionic counterions with low resin affinity (e.g., chloride) for higher-affinity anions like perfluoroalkyl acids (PFAAs) [8] . These functional groups may be designed to attract specific contaminants, with PFAS-targeting strong base resins often relying on quaternary amine groups like trimethylamine or tributylamine to induce electrostatic attraction while increasing overall sorbent hydrophobicity [11] . Resin\"\n    },\n    {\n      \"corpus_chunk\": 2,\n      \"locator_id\": \"S06-E02\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.5712553262710571,\n        \"RT03-C2\": 0.02468445524573326,\n        \"RT03-C3\": 0.0004464238591026515,\n        \"umbrella\": 0.09510388970375061\n      },\n      \"section\": \"introduction\",\n      \"text\": \"contamination using distillation, leaving a minimal volume of a PFAS-concentrated still bottoms waste that may be further treated for PFAS destruction. Life cycle analyses revealed that groundwater treatment using PFAS- selective AERs operated in a regenerable mode have lower environmental impacts and costs than systems using conventional regenerable AERs, and lower treatment costs than systems operated using PFAS-selective resins in a single-use mode. Although counterintuitive, these findings stem from the fact that higher cosolvent requirements for regeneration of PFAS-selective resins lead to greater internal recycling of regenerant solutions and much lower volumes of residual waste still bottoms that require off-site incineration or disposal. 1. Introduction Per- and polyfluoroalkyl substances (PFAS) have emerged as prom - inent environmental contaminants and a serious public health concern due to their widespread use in industrial and consumer products [1] , documented ubiquity in water resources across the globe [2] , and adverse health effects [3] . While these synthetic surfactants are commonplace in everyday food packaging, clothing, furniture, and cookware, a major source of PFAS contamination is the release of aqueous film-forming foams (AFFF) during firefighting training activ - ities [4] . Decades of AFFF releases at training sites, particularly airports and military instillations, have generated large plumes of PFAS in the\"\n    },\n    {\n      \"corpus_chunk\": 57,\n      \"locator_id\": \"S06-E03\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.23053200542926788,\n        \"RT03-C2\": 0.3095892369747162,\n        \"RT03-C3\": 0.07847029715776443,\n        \"umbrella\": 0.1421223133802414\n      },\n      \"section\": \"methods\",\n      \"text\": \"dissolved iron and manganese may further influence regenerability, as precipitation of these ions on resins has been found to lead to scaling, which may physically clog resin pores or interfere with ion exchange processes. It follows that site-specific pilot testing is recommended to ensure both optimum treatment and regeneration prior to full-scale implementation. Regeneration of AERs not only benefits operators by enabling sor - bent reuse, thereby minimizing system costs and emissions, but shifting the nature of PFAS concentrate waste streams from solid to liquid form enables coupling of AER treatment with liquid-phase destruction tech - nologies. Emerging technologies for destruction of PFAS in liquid con - centrates include hydrothermal alkaline treatment (HALT; [43] , electrochemical oxidation (ECO; [44] ), plasma treatment [45] , and su - percritical water oxidation (SCWO; [46] . While energy requirements for these technologies are too high (e.g., > 100 kWh/m 3 ) to treat high throughputs of water with dilute PFAS contaminations, concentration of PFAS into a small volume waste stream (e.g., PFAS from > 100,000 BVs of contaminated groundwater treated by AER and concentrated into < 10 BVs of waste still bottoms) is ideal for PFAS destruction. Further research is needed to ascertain whether the high brine and residual\"\n    },\n    {\n      \"corpus_chunk\": 29,\n      \"locator_id\": \"S06-E04\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.018870463594794273,\n        \"RT03-C2\": 0.0072397892363369465,\n        \"RT03-C3\": 0.00029896918567828834,\n        \"umbrella\": 0.28080591559410095\n      },\n      \"section\": \"results\",\n      \"text\": \"S4.1 in the SI). Thus, it can be reasonably concluded that attempts to regenerate AERs 0 5 10 15 20 25 30 0 2 4 6 8 10 12 0 5 10 15 20 25 30 0 10 20 30 40 0 5 10 15 20 25 30 0% 20% 40% 60% 80% 100% 120% PFAS Desorbed (mg/BV) Bed Volumes (BVs) Total PFAS PFOS Other PFSAs PFCAs A) B) C) PFAS Desorbed (mg/BV) Bed Volumes (BVs) Total PFAS PFOS Other PFSAs PFCAs Cumulative PFAS Desorbed (%) Bed Volumes (BVs) A520E PFA694E Fig. 2. Temporal PFAS desorption from (A) PFA694E and (B) A520E using a 70% MeOH, 1 wt% NaCl, as well as (C) cumulative PFAS desorption percentage for both resins. A.C. Ellis et al. Separation and Puri\\u03e7cation Technology 355 (2025) 129789 6 0 5 10 15 20 25 30 0% 20% 40% 60% 80% 100% Cumulative PFAS Desorbed (%) Bed Volumes (BVs) PFA694E (90% MeOH) PFA694E (70% MeOH) PSR2+ (90% MeOH) PSR2+ (70% MeOH) CalRes 2301 (90% MeOH) CalRes 2301 (70% MeOH) Fig. 3.\"\n    },\n    {\n      \"corpus_chunk\": 9,\n      \"locator_id\": \"S06-E05\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.2807618975639343,\n        \"RT03-C2\": 0.04235393926501274,\n        \"RT03-C3\": 0.0022943452931940556,\n        \"umbrella\": 0.21345309913158417\n      },\n      \"section\": \"methods\",\n      \"text\": \"of the most common solvents used in regeneration \\u2013 has been docu - mented to be separable from aqueous brines via distillation for regen - erant reuse [28] , but little is still known regarding the efficiency of distillation from varied solution matrices or potential back- contamination of PFAS, some of which can volatilize [29] . This is crit - ical because life cycle assessment (LCA) of AER treatment systems revealed that cosolvent recovery and reuse can reduce environmental impacts by up to 90 % [27] . Not only does cosolvent recovery improve sustainability, but it also further reduces the volume of liquid waste byproduct stream that requires additional treatment, destruction, or off- site disposal (e.g., incineration or landfilling). The present contribution addresses critical knowledge gaps related to regeneration of AERs used for treatment of PFAS-contaminated wa - ters. This is accomplished through a comprehensive evaluation of factors controlling PFAS desorption from both regenerable and PFAS-selective AERs across a range of different salts, solvents, and solution composi - tions. Both batch and continuous-flow regeneration experiments were conducted with four commercially available AERs that were loaded with a mixture of PFAS during an eight-month field pilot study treating AFFF- impacted groundwater [14] . Both regenerable and PFAS-selective AERs\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S06-E06\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.2741469442844391,\n        \"RT03-C2\": 0.022322339937090874,\n        \"RT03-C3\": 0.0001449613191653043,\n        \"umbrella\": 0.17363996803760529\n      },\n      \"section\": \"abstract\",\n      \"text\": \"on the regenerability of both \\u2018regenerable \\u2019 and \\u2018PFAS-selective \\u2019 AERs that were loaded during a pilot treatment study of PFAS-contaminated groundwater. Batch screening of regenerant solution constituents found that both classes of resins may be effectively regenerated using combinations of salt brine and organic cosolvent, with high cosolvent fractions being necessary for PFAS-selective AERs. While neither brine-only nor solvent-only regen - erant solutions led to effective PFAS desorption, the efficacy of regeneration with brine/cosolvent mixtures varied with salt type and cosolvent composition. Chloride salts outperformed sulfate and bicarbonate salts, cosolvent efficacy depended on the volume fraction and type used, and highly non-polar solutions led to optimal PFAS desorption. Continuous-flow regeneration experiments showed near-complete PFAS desorption from regenerable AERs using 10 bed volumes (BVs) of 70 % methanolic brine solutions, whereas PFAS-selective resins required more bed volumes (30) of brines with higher methanol content (90 %) or a more hydrophobic cosolvent (n-propanol); increasing regenerant empty-bed contact time had minimal effect on PFAS desorption. > 90 % methanol recovery from the resulting waste regenerant mixtures was accomplished with negligible PFAS contamination using distillation, leaving a minimal volume of a PFAS-concentrated still bottoms waste that may be further treated for PFAS destruction.\"\n    },\n    {\n      \"corpus_chunk\": 0,\n      \"locator_id\": \"S06-E07\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.019952407106757164,\n        \"RT03-C2\": 0.0013702143914997578,\n        \"RT03-C3\": 0.0007892745779827237,\n        \"umbrella\": 0.2627221345901489\n      },\n      \"section\": \"abstract\",\n      \"text\": \"Regeneration of conventional and emerging PFAS-selective anion exchange resins used to treat PFAS-contaminated waters Anderson C. Ellis a , Treavor H. Boyer b , Timothy J. Strathmann a , * a Department of Civil and Environmental Engineering, Colorado School of Mines, Golden, CO 80401, United States b School of Sustainable Engineering and the Built Environment (SSEBE), Arizona State University (ASU), Tempe, AZ 85287, United States ARTICLE INFO Keywords: Anion exchange resin Regeneration PFAS Cosolvent distillation Resource recovery ABSTRACT Anion exchange resins (AERs) have emerged as a promising separation technology to remediate PFAS- contaminated waters due to their improved selectivities and capacities in comparison to legacy activated car - bon adsorbents. Presently, site managers choose between AER systems employing resins defined as being \\u2018regenerable \\u2019 with relatively low PFAS selectivity, and PFAS-selective resins that are marketed as \\u2018single-use \\u2019 media intended for disposal upon PFAS breakthrough. However, the potential for these highly-selective adsor - bents to be regenerated and/or reused remains poorly characterized. This study presents a comprehensive evaluation of the efficacy of various regenerant solution constituents, mixtures, and operational considerations on the regenerability of both \\u2018regenerable \\u2019 and \\u2018PFAS-selective \\u2019 AERs that were loaded during a pilot treatment study of PFAS-contaminated groundwater.\"\n    },\n    {\n      \"corpus_chunk\": 51,\n      \"locator_id\": \"S06-E08\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.20903487503528595,\n        \"RT03-C2\": 0.013935388065874577,\n        \"RT03-C3\": 0.000832775083836168,\n        \"umbrella\": 0.2544791102409363\n      },\n      \"section\": \"methods\",\n      \"text\": \"1 A and 1D). Because relative polarity decreases with increasing alcohol chain length [41] , it can be surmised that use of longer-chained alcohols leads to better PFAS desorption. While methanol is more polar than other alcohols, its use remains optimal because (1) it allows for NaCl solubility at higher cosolvent fractions than other alcohols, (2) it enables dissolution of brine salts at higher salt mass fractions than longer-chain alcohols, and (3) its greater volatility facilitates improved cosolvent distillation, recovery, and recycling ( Fig. 5 ). 4.3. Resource recovery and system sustainability Remediation of PFAS using anion exchange resins leads to numerous waste products expected to be regulated as hazardous [32] , particularly for sites that opt to regenerate resins upon breakthrough. While single- use adsorbent systems generate only a single bed of contaminated solid waste, liquid wastes associated with regeneration processes are far more plentiful due to the number of BVs required to fully regenerate AERs (e. g., 30 BVs for PFAS-contaminated regenerant liquid vs 1 BV of PFAS- laden exhausted resin). However, it should be noted that further research is needed into chemical byproduct formation during AER incineration, as the potential generation of toxic byproducts (e.g., ni - trosamines) from direct combustion of aminated polymers and their\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2025 - Ellis - Regeneration of conventional and emerging PFAS-selective anion exchange resins used to treat PFAS-contaminated waters.pdf\",\n  \"source_id\": \"S06\",\n  \"title\": \"Regeneration of conventional and emerging PFAS-selective anion exchange resins used to treat PFAS-contaminated waters\",\n  \"year\": \"2025\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "c24ea141c4b899a7c005c99efdd9648949dd46808b7fc76500b50ae76776dabf",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.04404925,
+    "finish_reason": "stop",
+    "input_tokens": 6521,
+    "latency_seconds": 43.98151691595558,
+    "output_tokens": 3705,
+    "reasoning_tokens": 1553,
+    "response_id": "chatcmpl-E9N5TFlfzpsZ1RQ6Du29tVoCBKpTy",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 10226,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "citation",
+        "reason": "The citation text matches the source article information, including authors, title, journal, year, volume, and article number as shown in the provided source metadata.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The DOI and URL 10.1016/j.seppur.2024.129789 / https://doi.org/10.1016/j.seppur.2024.129789 match the source metadata.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The abstract explicitly describes PFAS desorption from anion exchange resins into regenerant brine/cosolvent mixtures and discusses regeneration efficacy, which is a separation of PFAS from the solid phase into a liquid phase rather than destruction, consistent with endpoint_type='separation' (S06-E06).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "The interpretation accurately restates that continuous-flow regeneration yielded near-complete PFAS desorption from regenerable AERs using 10 BVs of 70% methanolic brine and that PFAS-selective resins required 30 BVs of 90% MeOH or n-propanol brines, and that the endpoint is PFAS transfer from resin to regenerant (S06-E06).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "The reported term paraphrases language in the abstract and results that discuss 'PFAS desorption' and regeneration efficacy (S06-E06, S06-E04).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "The statement infers that PFAS-selective resins requiring 30 BVs of high-cosolvent brine versus 10 BVs for regenerable AERs leads to larger regenerant volumes; this follows directly from the abstract and the resource recovery discussion describing 30 BVs regenerant vs 1 BV resin (S06-E06, S06-E08).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1]",
+        "reason": "S06-E03 explicitly states that dissolved iron and manganese scaling may influence regenerability and that site-specific pilot testing is recommended to ensure optimum treatment and regeneration prior to full-scale implementation, matching the limitation text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix",
+        "reason": "S06-E06 and S06-E05 state that both 'regenerable' and 'PFAS-selective' AERs were loaded during a pilot treatment study of PFAS-contaminated groundwater, and S06-E05 specifies AFFF-impacted groundwater and that both batch and continuous-flow regeneration experiments were conducted, consistent with the matrix description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "Figure 2 caption in S06-E04 specifies regeneration using 'a 70% MeOH, 1 wt% NaCl' solution, and the abstract refers to 70% methanolic brine, matching the described regenerant composition for regenerable AERs.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The field correctly leaves unit null because the value is a qualitative description of solution composition, not a single numeric with a physical unit; this is consistent with the source text in S06-E04 and S06-E06.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "The abstract states that continuous-flow regeneration experiments showed near-complete PFAS desorption from regenerable AERs using '10 bed volumes (BVs)' of 70% methanolic brine (S06-E06), matching the value '10'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The unit 'bed volumes' corresponds directly to '10 bed volumes (BVs)' reported in the abstract (S06-E06).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "The abstract states that PFAS-selective resins required brines with higher methanol content (90%) or a more hydrophobic cosolvent (n-propanol) (S06-E06), matching the described compositions.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "Unit is correctly null because the field describes qualitative regenerant composition (90% MeOH or n-propanol brine) rather than a standalone numeric plus unit (S06-E06).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "S06-E06 states that PFAS-selective resins required 'more bed volumes (30)' of the higher MeOH or n-propanol brines, matching the value of 30.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "The unit 'bed volumes' is consistent with the source wording '30' bed volumes (BVs) in S06-E06.",
+        "status": "supported"
+      },
+      {
+        "error_type": "other",
+        "field_path": "operating_conditions[4].value",
+        "reason": "The qualifiers refer to the effect of increasing regenerant empty-bed contact time, which is supported by S06-E06 ('increasing regenerant empty-bed contact time had minimal effect on PFAS desorption'), but the value field is left as an empty string and does not capture any numeric EBCT or descriptive value from the source. Thus the value itself is not supported or meaningful.",
+        "status": "unsupported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].unit",
+        "reason": "Leaving unit null is appropriate because no EBCT magnitude is reported in the cited excerpt (S06-E06); only qualitative information about its effect is provided.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0]",
+        "reason": "S06-E05 states resins were loaded with a mixture of PFAS during an eight-month field pilot treating AFFF-impacted groundwater, and Figure 2 in S06-E04 breaks out 'Total PFAS, PFOS, Other PFSAs, PFCAs,' indicating that the mixture included PFOS, other perfluorosulfonic acids, and perfluorocarboxylic acids.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The supplied excerpts provide qualitative and relative descriptions of desorption performance (e.g., near-complete desorption, different required bed volumes and cosolvent fractions) but do not give a consistent set of quantitative desorption percentages or capacity recovery across all conditions (S06-E04, S06-E06). Classifying comparability as 'descriptive_only' is a reasonable inference from this information.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The reason correctly explains that only qualitative/relative regeneration performance is available in the excerpts and cites specific examples such as differing BVs and cosolvent requirements, consistent with S06-E04 and S06-E06.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "S06-E08 notes that regeneration produces liquid wastes that are more plentiful than the single bed of solid resin (e.g., 30 BVs of PFAS-contaminated regenerant liquid vs 1 BV of PFAS-laden exhausted resin), and S06-E03 states that regeneration shifts PFAS concentrate waste from solid to liquid form enabling coupling with liquid-phase destruction technologies, matching the statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[1]",
+        "reason": "S06-E03 lists emerging liquid-phase PFAS destruction technologies (HALT, ECO, plasma, SCWO), notes that their energy requirements are too high (e.g., >100 kWh/m3) for large throughputs, and explains that concentrating PFAS into a small waste volume (e.g., >100,000 BVs into <10 BVs still bottoms) is advantageous for destruction, matching the statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "study_scale",
+        "reason": "S06-E05 states that both batch and continuous-flow regeneration experiments were conducted with resins loaded during an eight-month field pilot treating AFFF-impacted groundwater. This supports that the regeneration tests were laboratory experiments using columns informed by a field pilot. However, the specific qualifier 'bench-scale' is not explicitly stated in the provided excerpts, though it is a reasonable inference; thus the field is partially supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_type",
+        "reason": "The article clearly describes batch and continuous-flow regeneration experiments with anion exchange resins (S06-E05, S06-E06), supporting classification as a primary experimental study.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment",
+        "reason": "S06-E06 and S06-E05 describe regeneration of PFAS-loaded AERs using combinations of salt brine and organic cosolvent in both batch and continuous-flow experiments, consistent with the treatment description focused on continuous-flow regeneration with brine/cosolvent mixtures.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT03-bge_llm_local_rag-S06-R01",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements needed for synthesis\u2014source identity, matrix, PFAS scope, treatment description, operating conditions (regenerant type and bed volumes), endpoint type (separation via desorption), and residual waste characterization\u2014are well supported by the cited text. The only notable issue is an empty value field for EBCT, which affects a nonessential operating condition detail but does not misrepresent the study\u2019s main findings. Therefore the record is usable with minor correction or cautious handling of the EBCT field.",
+    "task_id": "RT03"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

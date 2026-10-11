@@ -1,0 +1,87 @@
+{
+  "protocol_id": "test40_multibase_direct_rag_v1",
+  "status": "complete",
+  "execution_date": "2026-07-30",
+  "question_count": 40,
+  "systems": [
+    "gpt51_direct",
+    "gpt51_rag",
+    "gemini31_pro_direct",
+    "gemini31_pro_rag",
+    "claude_sonnet5_direct",
+    "claude_sonnet5_rag"
+  ],
+  "validated_row_counts": {
+    "generated_answers": 240,
+    "l3_repeat_1_judgments": 240,
+    "l3_repeat_2_judgments": 240,
+    "l3_repeat_3_judgments": 240
+  },
+  "usage": {
+    "persisted_formal_calls": 960,
+    "tracked_tokens": 7313062,
+    "tracked_cost_usd": 23.956625,
+    "gemini_http_503_attempts_without_usage": 30,
+    "pre_amendment_claude_refusals_without_usage": 2,
+    "schema_invalid_l3_calls_without_usage": 4,
+    "estimated_bill_including_likely_paid_untracked_calls_usd": 24.06
+  },
+  "l3_primary": {
+    "metric": "component-balanced core reference-claim coverage",
+    "repeat_count": 3,
+    "aggregation": "equal mean of three repeat-specific system means",
+    "uncertainty": "sample standard deviation across repeat-specific system means",
+    "bootstrap": false,
+    "systems": {
+      "gpt51_direct": {
+        "mean": 0.36163194444444446,
+        "sample_sd": 0.019903285399047215
+      },
+      "gpt51_rag": {
+        "mean": 0.590625,
+        "sample_sd": 0.019453742816432515
+      },
+      "gemini31_pro_direct": {
+        "mean": 0.2989583333333333,
+        "sample_sd": 0.01676403847857404
+      },
+      "gemini31_pro_rag": {
+        "mean": 0.4530092592592592,
+        "sample_sd": 0.016346510258576447
+      },
+      "claude_sonnet5_direct": {
+        "mean": 0.3069444444444444,
+        "sample_sd": 0.006014065304058612
+      },
+      "claude_sonnet5_rag": {
+        "mean": 0.5328125,
+        "sample_sd": 0.011708135625060683
+      }
+    },
+    "within_model_effects": {
+      "gpt51": {
+        "mean_rag_minus_direct": 0.22899305555555555,
+        "sample_sd": 0.03256816732274545
+      },
+      "gemini31_pro": {
+        "mean_rag_minus_direct": 0.15405092592592592,
+        "sample_sd": 0.022508821715966226
+      },
+      "claude_sonnet5": {
+        "mean_rag_minus_direct": 0.22586805555555556,
+        "sample_sd": 0.0166775138312817
+      }
+    }
+  },
+  "key_sha256": {
+    "generation_completion_manifest": "32f9de8875158d820ee0333723dec64f2435bb423fa1edecab7279fd38589fbf",
+    "generation_usage_summary": "f4e792a0261ec63ec3ed152dcdf1a69fd8780c891f4860b253e67c24d478817e",
+    "l3_repeat_1_judgments": "22482f852b511cbd3e8ed318881d54c5d252f7c50b754fa052bda92c16caa62d",
+    "l3_repeat_2_judgments": "d342c90334219c53e3c03febfecca136af3ae3f905c3af15bbe222edf4e1ebd7",
+    "l3_repeat_3_judgments": "eb4b424a59cac1ea563ce64b1b5968f04f0b1530bd7032dd4cefd5a87ad88ee3",
+    "l3_system_three_repeat_summary": "b82c95278d168fd15a74acba415a6bdee4d8e8994bcd0fe40ce55301a82df1f8",
+    "l3_within_model_three_repeat_summary": "3c6af534ae29e948fa90cb39e6ad6a5aa1942e3284998f920a63c2a42dcc32e2",
+    "results_summary": "7399ac9a92859b3f3c76f3c4b94c61837e45b32597b0f259997732eecc4d6bf1"
+  },
+  "test_results_used_for_configuration": false
+}

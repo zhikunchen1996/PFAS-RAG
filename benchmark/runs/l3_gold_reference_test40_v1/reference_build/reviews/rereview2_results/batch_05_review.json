@@ -1,0 +1,137 @@
+{
+  "batch_id": "test40-rereview2-batch-05",
+  "batch_sha256": "ad247e5f442a1be692cde2fe1ff1f31acb718347f867b130930df0f1a0e74848",
+  "prompt_sha256": "bc7904e476fd67ebd0a410a32318efe13ee807e1e031944c11e245ffec8c2c15",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-rereview2-batch-05",
+    "reviews": [
+      {
+        "question_id": "NQ25",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "The four required repairs from the previous review (remove/rewrite the Freundlich/batch/solid-phase/bed-volume paragraph; remove the specific PFOA>PFHxA>PFPeA>PFBA and PFOS>PFHxS>PFBS... adsorption-order sentences; remove the Purolite A600 resin-chemistry sentence; remove the GAC effective-size/surface-area/iodine-number figures) have all been resolved: the current reference_answer no longer contains any of this unsupported content and is now consistent with the surviving claim groups and their exact_spans.",
+          "However, unresolved_or_unsupported item 6 ('Specific experimental and reporting choices such as Freundlich isotherm parameters, solid-phase concentrations, and bed volumes to breakthrough are discussed in the reference answer but are not explicitly present in the quoted exact_evidence_spans...') is now stale: this content was removed from the reference_answer during the repair, so the claim that it is 'discussed in the reference answer' is no longer accurate and should be corrected or removed to keep this field consistent with the repaired ledger."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ25-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ25-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ25-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ25-G05",
+            "verdict": "supported",
+            "issues": [
+              "The central_proposition asserts that Filtrasorb 400 and Norit 1240 W differ in 'preparation methods, pore structures, and surface properties,' but the approved exact_evidence_span/unit span for NQ25_MMG005 only states the preparation-route difference (steam-activated bituminous coal, pulverized and reagglomerated, vs. steam-activated coal); the pore-structure/surface-property characterization is an inference beyond the quoted span (surface-area/iodine-number figures appear only in the surrounding full_chunk_text, not the approved span). This is a minor overreach worth an author-audit note rather than a downgrade, since the material_qualifiers and full_rule are otherwise properly scoped to the approved span."
+            ],
+            "required_repairs": [
+              "Author-audit note: confirm whether the central_proposition's reference to 'pore structures and surface properties' should be trimmed to match the approved exact/unit span (preparation route only), or whether the unit span should be expanded to explicitly cover those properties."
+            ]
+          },
+          {
+            "claim_group_id": "NQ25-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Update or remove unresolved_or_unsupported item 6, which still claims that Freundlich isotherm parameters, solid-phase concentrations, and bed-volume/run-time reporting metrics are 'discussed in the reference answer'; this content was removed as part of the prior repair and the item text is now inaccurate."
+        ]
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 47906,
+    "num_turns": 4,
+    "stop_reason": "tool_use",
+    "session_id": "acce3d14-ab88-4804-994b-40a46689f875",
+    "total_cost_usd": 0.17193315,
+    "usage": {
+      "input_tokens": 4,
+      "cache_creation_input_tokens": 25565,
+      "cache_read_input_tokens": 24168,
+      "output_tokens": 4535,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 25565
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 3894,
+          "cache_read_input_tokens": 13097,
+          "cache_creation_input_tokens": 23539,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 23539,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 697,
+        "outputTokens": 16,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000777,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 4,
+        "outputTokens": 4535,
+        "cacheReadInputTokens": 24168,
+        "cacheCreationInputTokens": 25565,
+        "webSearchRequests": 0,
+        "costUSD": 0.17115615,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 6028,
+    "ttft_stream_ms": 892,
+    "time_to_request_ms": 40,
+    "type": "result",
+    "duration_ms": 47027,
+    "uuid": "d274aa61-ed3d-4661-8722-f710eda72991"
+  },
+  "candidate_test40_inputs_used": false
+}

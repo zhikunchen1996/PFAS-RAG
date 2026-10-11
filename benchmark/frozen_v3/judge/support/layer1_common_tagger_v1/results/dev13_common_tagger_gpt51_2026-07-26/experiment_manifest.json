@@ -1,0 +1,98 @@
+{
+  "status": "completed_dev13_layer1_common_tagger_generation",
+  "protocol": "benchmark/experiments/layer1_common_tagger_v1/protocol.json",
+  "source_freeze_id": "pfas_rag_frozen_v3_revision3_2026-07-26",
+  "source_freeze_content_commit": "3bc2ab5b7a42e33eef713c7dedd769bee65b0ed1",
+  "scope": "Dev13 only; no Test40 execution",
+  "systems": [
+    "hybrid",
+    "bge",
+    "bge_llm"
+  ],
+  "model": "gpt-5.1",
+  "temperature": 0,
+  "reasoning_effort": "provider_default_not_explicit",
+  "resume_enabled": false,
+  "common_tagger": true,
+  "common_answer_generator": true,
+  "api_call_schedule": "Question-major with deterministic rotation of system order; tagger stage completes before answer stage.",
+  "full_context_retained": true,
+  "chunk_order_retained": true,
+  "tagger_model_payload_contains_system_identity": false,
+  "tagger_model_payload_contains_gold_or_hidden_rubric": false,
+  "retrieval_metrics_computed_before_tagger": true,
+  "runtime_measurement": {
+    "per_call_latency": "Measured around each current-run API request.",
+    "system_latency": "Sum and mean of per-call latency, reported by system.",
+    "stage_wall_clock": "Observed elapsed time for the interleaved parallel stage.",
+    "inherited_retrieval_latency": "Read from the matched Frozen V3 runtime records."
+  },
+  "stage_wall_clock_seconds": {
+    "common_soft_tagger": 84.9782675000024,
+    "common_answer_generation": 79.47937837499194,
+    "current_run_total": 164.45764587499434
+  },
+  "input_files": {
+    "benchmark/frozen_v3/input/questions_dev13.csv": "d1506d0dfd6c342ee11273ba6e1e9a542a55b3dddd1fdfe2aa0261c35c209a91",
+    "benchmark/frozen_v3/prompts/evaluation/soft_eligibility_tagger_v3.txt": "fb6caabf327463abaf3e17b33486a5023c8787d6cf216d587659d6fe61c4d5cf",
+    "benchmark/frozen_v3/prompts/evaluation/rag_answer_prompt_soft_tags_v3.txt": "2fa26d15a272368ab5ddc5096d875ca9a40f66c853d6b683e9111bb969b4e158",
+    "benchmark/experiments/layer1_common_tagger_v1/protocol.json": "08381cd59050816a4763fcfe45fc5205efce8a19c99cd6d9840ed627ef27577a",
+    "benchmark/frozen_v3/freeze_manifest.json": "cc3d109e09b7b4cc30be59620b9fd5fe4e6b4ef577e6ef9be17835c083e38f80",
+    "benchmark/experiments/layer1_common_tagger_v1/scripts/run_dev13_common_tagger.py": "30099328a515bd0b8660fad4edea42af26132500564ec8f27b38b1bf7560a185",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/bge_llm_gpt51/token_cost_summary.csv": "63d3b4d7cb7eab1d47aca1cdab2b53b205de54192c3bcfa06e0da08351efced1",
+    "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/dev13_retrieval_budget_summary.csv": "0e6d4f011acfd3eb9e947cc11f00fef9324c62c03479f25a2150c09d7a953125"
+  },
+  "system_summaries": [
+    {
+      "system": "hybrid",
+      "config_name": "hybrid_top10_pool60_win0",
+      "retrieval_file": "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/retrieval_outputs/rag_outputs_hybrid_top10_pool60_win0.jsonl",
+      "retrieval_sha256": "daa3abb027a57e599b5921b63eb16ee2def5c7355b3cca689806c854b7cfa59c",
+      "question_count": 13,
+      "final_chunks_per_question": 10,
+      "tag_rows": 13,
+      "answer_rows": 13,
+      "selector_cost_usd": 0.0,
+      "tagger_cost_usd": 0.26372625,
+      "answer_cost_usd": 0.2180375,
+      "tagger_latency_seconds_sum": 160.0825170019816,
+      "tagger_latency_seconds_mean": 12.314039769383202,
+      "answer_latency_seconds_sum": 144.42075212602504,
+      "answer_latency_seconds_mean": 11.109288625078849
+    },
+    {
+      "system": "bge",
+      "config_name": "bge_base_top10_pool60_nodoccap",
+      "retrieval_file": "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/retrieval_outputs/rag_outputs_bge_base_top10_pool60_nodoccap.jsonl",
+      "retrieval_sha256": "5ac37ecbe265d9d5b54f4fd4b3d039d753c4a28512fb33a1da70d0ebf270304a",
+      "question_count": 13,
+      "final_chunks_per_question": 10,
+      "tag_rows": 13,
+      "answer_rows": 13,
+      "selector_cost_usd": 0.0,
+      "tagger_cost_usd": 0.2811275,
+      "answer_cost_usd": 0.21349375,
+      "tagger_latency_seconds_sum": 152.27194679201057,
+      "tagger_latency_seconds_mean": 11.713226676308505,
+      "answer_latency_seconds_sum": 147.07078037803876,
+      "answer_latency_seconds_mean": 11.313136952156828
+    },
+    {
+      "system": "bge_llm",
+      "config_name": "bge_llm_gpt51_pool60_bge30_llm10_fullchunk",
+      "retrieval_file": "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/bge_llm_gpt51/retrieval_outputs/rag_outputs_bge_llm_gpt51_pool60_bge30_llm10_fullchunk.jsonl",
+      "retrieval_sha256": "ecbb4a72d8717de66440fa788e7c41f59a87702c85a5ced1f8a2d02e2c8a5b70",
+      "question_count": 13,
+      "final_chunks_per_question": 10,
+      "tag_rows": 13,
+      "answer_rows": 13,
+      "selector_cost_usd": 0.265715,
+      "tagger_cost_usd": 0.2949025,
+      "answer_cost_usd": 0.24310625000000002,
+      "tagger_latency_seconds_sum": 181.92742029002693,
+      "tagger_latency_seconds_mean": 13.994416945386687,
+      "answer_latency_seconds_sum": 170.7368031260121,
+      "answer_latency_seconds_mean": 13.133600240462469
+    }
+  ]
+}

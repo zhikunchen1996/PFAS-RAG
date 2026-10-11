@@ -1,0 +1,6 @@
+stage,config_name,model,call_count,prompt_tokens_total,completion_tokens_total,total_tokens,tokens_per_call,estimated_usd,latency_seconds_sum,latency_seconds_mean,latency_provenance,note
+hybrid_candidate_retrieval,bge,,13,0,0,0,0.0,0.0,66.53861549999056,5.118355038460812,Inherited from the matched Frozen V3 retrieval run.,Dense and lexical candidate retrieval.
+bge_cross_encoder_rerank,bge,BAAI/bge-reranker-base,13,0,0,0,0.0,0.0,53.53746983300516,4.118266910231166,Inherited from the matched Frozen V3 BGE run.,Local cross-encoder reranking.
+retrieval_specific_llm_selector,bge,,0,0,0,0,0.0,0.0,0.0,0.0,not_applicable,No LLM selector in this retrieval system.
+common_soft_tagger,bge,gpt-5.1-2025-11-13,13,68622,19535,88157,6781.307692307692,0.2811275,152.27194679201057,11.713226676308505,Measured around each API request in this run.,Common downstream layer; visible question plus final top10 only.
+common_answer_generation,bge,gpt-5.1-2025-11-13,13,77979,11602,89581,6890.846153846154,0.21349375,147.07078037803876,11.313136952156828,Measured around each API request in this run.,Common answer model and prompt with full chunks plus advisory tags.

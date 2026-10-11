@@ -1,0 +1,1908 @@
+{
+  "deterministic_field_normalizations": [
+    {
+      "after": {
+        "evidence_locator_ids": [
+          "WEB11-E01"
+        ],
+        "name": "PFAS concentration in distilled still-bottom concentrate",
+        "qualifiers": "reported as approximately 640 mg/L total PFAS in 45 L of distilled PFAS concentrate (still bottom) recovered after IX media regeneration",
+        "unit": "mg/L",
+        "value": "~640",
+        "value_form": "approximate_numeric"
+      },
+      "before": {
+        "evidence_locator_ids": [
+          "WEB11-E01"
+        ],
+        "name": "PFAS concentration in distilled still-bottom concentrate",
+        "qualifiers": "reported as approximately 640 mg/L total PFAS in 45 L of distilled PFAS concentrate (still bottom) recovered after IX media regeneration",
+        "unit": "mg/L",
+        "value": "640",
+        "value_form": "approximate_numeric"
+      },
+      "field_path": "quantitative_findings[0]",
+      "reason": "added_declared_approximation_marker",
+      "record_id": "RT05-gpt51_web_search-WEB11-R01"
+    },
+    {
+      "after": {
+        "evidence_locator_ids": [
+          "WEB11-E02"
+        ],
+        "name": "Overall PFAS concentration factor from original water to still bottom",
+        "qualifiers": "reported as an overall concentration factor of about thirty thousand relative to the original PFAS-containing water",
+        "unit": "",
+        "value": "~30000",
+        "value_form": "approximate_numeric"
+      },
+      "before": {
+        "evidence_locator_ids": [
+          "WEB11-E02"
+        ],
+        "name": "Overall PFAS concentration factor from original water to still bottom",
+        "qualifiers": "reported as an overall concentration factor of about thirty thousand relative to the original PFAS-containing water",
+        "unit": "",
+        "value": "30000",
+        "value_form": "approximate_numeric"
+      },
+      "field_path": "quantitative_findings[2]",
+      "reason": "added_declared_approximation_marker",
+      "record_id": "RT05-gpt51_web_search-WEB11-R01"
+    }
+  ],
+  "deterministic_field_rejections": [],
+  "deterministic_preverification_rejections": [],
+  "records": [
+    {
+      "citation": "Fennell BD, Chavez S, McKay G. Destruction of Per- and Polyfluoroalkyl Substances in Reverse Osmosis Concentrate Using UV-Advanced Reduction Processes. ACS ES&T Water. 2024;4(11):4818-4827.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E02",
+          "WEB01-E03",
+          "WEB01-E04"
+        ],
+        "reason": "The study reports >90% PFAS defluorination in ROC using a specific UV/persulfate + UV/sulfite treatment sequence, but the abstract does not provide sufficient detail on PFAS concentrations, energy input, or reactor configuration to support normalized comparison with other PFAS residual-management technologies.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1021/acsestwater.4c00458",
+      "endpoints": [
+        {
+          "endpoint_type": "defluorination",
+          "evidence_locator_ids": [
+            "WEB01-E03"
+          ],
+          "interpretation": "Extent of PFAS defluorination in ROC after hardness removal and UV/persulfate preoxidation followed by 24 h of UV/sulfite treatment.",
+          "reported_term": ">90% PFAS defluorination"
+        },
+        {
+          "endpoint_type": "destruction",
+          "evidence_locator_ids": [
+            "WEB01-E03",
+            "WEB01-E04"
+          ],
+          "interpretation": "Authors frame UV/sulfite ARP performance as PFAS destruction in ROC; direct evidence provided in abstract is high defluorination percentage, which supports chemical bond cleavage but does not by itself establish full mineralization.",
+          "reported_term": "PFAS destruction using UV-ARP"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E04"
+          ],
+          "statement": "Results are based on treatment of a specific ROC matrix with high organic carbon, nitrate, and carbonate, which may limit direct transferability to other membrane concentrates or waste streams."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E03",
+            "WEB01-E04"
+          ],
+          "statement": "Only abstract-level information on ROC composition, operating conditions, and performance is available in the inspected source; detailed energy use, costs, and scale are not reported."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB01-E01"
+        ],
+        "value": "Reverse osmosis concentrate (ROC) containing high concentrations of dissolved organic carbon, nitrate, and carbonate species."
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E02"
+          ],
+          "name": "PFAS spike level",
+          "qualifiers": "ROC was spiked with mg/L concentrations of PFOS, PFBS, PFOA, and PFBA.",
+          "unit": null,
+          "value": "mg/L concentrations (exact values not reported in abstract)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E03"
+          ],
+          "name": "Pretreatment process",
+          "qualifiers": "Used for hardness removal and preoxidation of ROC prior to UV/sulfite.",
+          "unit": null,
+          "value": "UV/persulfate"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E03",
+            "WEB01-E04"
+          ],
+          "name": "Main destruction process",
+          "qualifiers": "Applied after UV/persulfate pretreatment to achieve PFAS defluorination in ROC.",
+          "unit": null,
+          "value": "UV/sulfite advanced reduction process"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E03"
+          ],
+          "name": "Reaction time for UV/sulfite after pretreatment",
+          "qualifiers": "More than 90% PFAS defluorination reported within 24 h of subsequent UV/sulfite treatment following UV/persulfate pretreatment.",
+          "unit": "h",
+          "value": "24"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "name": "Co-contaminants in ROC",
+          "qualifiers": "Identified as major matrix components of ROC targeted for treatment.",
+          "unit": null,
+          "value": "High dissolved organic carbon, nitrate, and carbonate species"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E02"
+          ],
+          "value": "PFOS (spiked at mg/L levels into ROC)."
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E02"
+          ],
+          "value": "PFBS (spiked at mg/L levels into ROC)."
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E02"
+          ],
+          "value": "PFOA (spiked at mg/L levels into ROC)."
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E02"
+          ],
+          "value": "PFBA (spiked at mg/L levels into ROC)."
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E03"
+          ],
+          "name": "PFAS defluorination after pretreatment + UV/sulfite",
+          "qualifiers": "More than 90% PFAS defluorination within 24 h of UV/sulfite treatment when ROC received hardness removal and UV/persulfate preoxidation.",
+          "unit": "% defluorination",
+          "value": ">90",
+          "value_form": "inequality"
+        }
+      ],
+      "record_id": "RT05-gpt51_web_search-WEB01-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB01-E03",
+            "WEB01-E04"
+          ],
+          "statement": "Hardness removal and ROC preoxidation with UV/persulfate were used as pretreatment steps prior to UV/sulfite; the abstract does not specify the composition or management of byproducts formed during these steps or during PFAS defluorination."
+        }
+      ],
+      "source_id": "WEB01",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E04"
+        ],
+        "value": "Not reported in the accessible abstract (likely bench-/lab-scale UV-ARP tests on ROC, but scale not explicitly stated)."
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E03",
+          "WEB01-E04"
+        ],
+        "value": "UV-advanced reduction process (UV/sulfite) applied to ROC, with hardness removal and preoxidation by UV/persulfate as pretreatment before UV/sulfite."
+      }
+    },
+    {
+      "citation": "Khodayari E, Juby G, Liu Y, et al. A Bioelectrochemical Approach for Brine Management in Water Reuse Plants: Pilot-Scale Evaluation of Microbial Fuel Cells for RO Concentrate Treatment and CEC and PFAS Removal. Sustainability. 2026;18(9):4540.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB02-E01",
+          "WEB02-E02",
+          "WEB02-E03",
+          "WEB02-E04"
+        ],
+        "reason": "Pilot-scale study of a single RO concentrate matrix with qualitative PFAS removal and power generation data but no reported recovery, concentration factor, energy use, or detailed PFAS fate; results are informative for process concept but not directly comparable on a quantitative basis with other treatment trains.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://www.mdpi.com/2071-1050/18/9/4540",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB02-E03",
+            "WEB02-E04"
+          ],
+          "interpretation": "Study reports that the microbial fuel cell achieved partial removal of selected PFAS from the RO concentrate; extent and mechanism (sorption vs transformation) are not quantified in the available text.",
+          "reported_term": "PFAS removal from RO concentrate"
+        },
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB02-E04"
+          ],
+          "interpretation": "Microbial fuel cell generated electrical power from organics in the RO concentrate while treating PFAS-containing brine; no quantitative power or energy metrics are available in the inspected text.",
+          "reported_term": "Electrical power generation"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB02-E04"
+          ],
+          "statement": "Full PDF access was rate-limited, so quantitative removal percentages for PFAS and detailed energy recovery metrics could not be verified from the available text."
+        },
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB02-E01",
+            "WEB02-E03"
+          ],
+          "statement": "Study evaluates only one municipal water-reuse RO concentrate with low ng/L PFAS levels, limiting generalizability to higher-strength concentrates or different matrices."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB02-E01",
+            "WEB02-E02"
+          ],
+          "statement": "Design focuses on a single bioelectrochemical treatment configuration (microbial fuel cell) receiving RO concentrate from a specific UF+CCRO train, without variation in membrane process conditions, recovery, or brine chemistry."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB02-E01",
+          "WEB02-E02"
+        ],
+        "value": "Reverse osmosis concentrate from a municipal water-reuse pilot (UF pretreatment + closed-circuit RO)"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E01",
+            "WEB02-E02"
+          ],
+          "name": "Process configuration",
+          "qualifiers": "",
+          "unit": null,
+          "value": "Microbial fuel cell receiving RO concentrate produced by UF pretreatment and closed-circuit RO (CCRO)"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "value": "PFOS"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "value": "PFOA"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "value": "PFHxA"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "value": "Other PFAS (not specified, below reporting limits in RO concentrate)"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "name": "PFOS concentration in RO concentrate (influent to MFC)",
+          "qualifiers": "Detected PFAS in the RO concentrate prior to microbial fuel cell treatment",
+          "unit": "ng/L",
+          "value": "31.7",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "name": "PFOA concentration in RO concentrate (influent to MFC)",
+          "qualifiers": "Detected PFAS in the RO concentrate prior to microbial fuel cell treatment",
+          "unit": "ng/L",
+          "value": "4.6",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "name": "PFHxA concentration in RO concentrate (influent to MFC)",
+          "qualifiers": "Detected PFAS in the RO concentrate prior to microbial fuel cell treatment",
+          "unit": "ng/L",
+          "value": "12.3",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "name": "Other PFAS in RO concentrate",
+          "qualifiers": "Other PFAS species reported as below reporting limits in the concentrate",
+          "unit": "ng/L",
+          "value": "ND",
+          "value_form": "not_detected"
+        }
+      ],
+      "record_id": "RT05-gpt51_web_search-WEB02-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB02-E03",
+            "WEB02-E04"
+          ],
+          "statement": "Microbial fuel cell treatment of RO concentrate resulted in partial removal of selected PFAS while generating electricity from concentrate organics; the fate of removed PFAS (sorption vs transformation) and any transformation byproducts are not specified in the available text."
+        }
+      ],
+      "source_id": "WEB02",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB02-E01",
+          "WEB02-E02"
+        ],
+        "value": "Pilot-scale microbial fuel cell treating reverse osmosis (RO) concentrate from a municipal water-reuse pilot train"
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB02-E01",
+          "WEB02-E04"
+        ],
+        "value": "Pilot-scale microbial fuel cell (bioelectrochemical system) for RO concentrate treatment and PFAS removal with concurrent power generation"
+      }
+    },
+    {
+      "citation": "Safulko A, Cath TY, Li F, et al. Rejection of Perfluoroalkyl Acids by Nanofiltration and Reverse Osmosis in a High-Recovery Closed-Circuit Membrane Filtration System. Sep Purif Technol. 2024 (in press).",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB03-E01",
+          "WEB03-E02",
+          "WEB03-E03",
+          "WEB03-E04",
+          "WEB03-E05"
+        ],
+        "reason": "Pilot-scale CCMF tests in dechlorinated tap water spiked with multiple PFAAs using NF/RO membranes operated to very high water recovery. Results are broadly comparable with other NF/RO separation studies under high-recovery conditions when matrices are similarly low in natural organic matter and when endpoints focus on rejection, concentrate composition, and specific energy, but they are not directly comparable to degradation or destruction studies.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://www.enviro.wiki/images/b/be/SafulkoEtAl2023.pdf",
+      "endpoints": [
+        {
+          "endpoint_type": "separation",
+          "evidence_locator_ids": [
+            "WEB03-E01",
+            "WEB03-E02",
+            "WEB03-E03",
+            "WEB03-E04"
+          ],
+          "interpretation": "Membranes primarily separate PFAAs from permeate, concentrating them in the feed-retentate loop; authors report overall rejection values and rising concentrate-side PFOS concentrations as recovery increases.",
+          "reported_term": "Rejection of PFAAs; PFAA separation in high-recovery CCMF"
+        },
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB03-E03"
+          ],
+          "interpretation": "Overall rejection >98.3% for NF90, CR100, and SW30 at 97% recovery indicates near-complete removal of PFAAs from the permeate stream but does not imply degradation or destruction.",
+          "reported_term": "Overall rejection; PFAA removal from permeate"
+        },
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB03-E05"
+          ],
+          "interpretation": "Specific energy used to produce treated water at 97% recovery was quantified for different membrane tightnesses, indicating energy implications of high-recovery NF/RO operation.",
+          "reported_term": "Specific energy consumption"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB03-E01"
+          ],
+          "statement": "Experiments used dechlorinated tap water spiked with PFAAs rather than PFAS-impacted groundwaters or wastewaters, which may limit direct transferability to more complex matrices."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB03-E02",
+            "WEB03-E04"
+          ],
+          "statement": "Study focuses on quantifying PFAA rejection and PFOS concentration in the feed-retentate but does not report any downstream treatment, destruction, or disposal of the generated PFAS concentrate."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB03-E01"
+        ],
+        "value": "Dechlorinated tap water spiked with nine perfluoroalkyl acids (PFAAs)"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB03-E02"
+          ],
+          "name": "Water recovery",
+          "qualifiers": "Closed-circuit sequences operated to high recovery to investigate effects of recovery (PFAA concentration) and ionic strength",
+          "unit": "%",
+          "value": "up to 97"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB03-E04"
+          ],
+          "name": "Water recovery (PFOS concentration example)",
+          "qualifiers": "Average PFOS concentration in feed-retentate reported at this recovery",
+          "unit": "%",
+          "value": "90"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB03-E02",
+            "WEB03-E04",
+            "WEB03-E05"
+          ],
+          "name": "Water recovery (maximum)",
+          "qualifiers": "Average PFOS concentration in feed-retentate and specific energy reported at this recovery",
+          "unit": "%",
+          "value": "97"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB03-E01",
+            "WEB03-E03",
+            "WEB03-E05"
+          ],
+          "name": "Membrane types",
+          "qualifiers": "Set of four spiral-wound modules; detailed properties not provided in excerpts",
+          "unit": null,
+          "value": "Loose NF to tight seawater RO; specific products NF90, CR100, SW30 mentioned among tested membranes"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB03-E01",
+            "WEB03-E04"
+          ],
+          "value": "Nine perfluoroalkyl acids (PFAAs) including PFOS (others not specified in supplied excerpts)"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB03-E03"
+          ],
+          "name": "PFAA overall rejection at 97% recovery (NF90, CR100, SW30)",
+          "qualifiers": "Reported as overall rejection values greater than 98.3% for the quantified PFAAs during CCMF sequences to 97% water recovery",
+          "unit": "%",
+          "value": ">98.3",
+          "value_form": "inequality"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB03-E04"
+          ],
+          "name": "PFOS concentration in feed-retentate at 90% recovery",
+          "qualifiers": "Average PFOS concentration in the feed-retentate side at 90% water recovery",
+          "unit": "mg/L",
+          "value": "0.132",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB03-E04"
+          ],
+          "name": "PFOS concentration in feed-retentate at 97% recovery",
+          "qualifiers": "Average PFOS concentration in the feed-retentate side at 97% water recovery; illustrates progressive concentration of PFOS as water recovery increases",
+          "unit": "mg/L",
+          "value": "0.382",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB03-E05"
+          ],
+          "name": "Specific energy consumption at 97% recovery (range across membranes)",
+          "qualifiers": "Specific energy for 97% recovery experiments ranged from 0.14 kWh/m3 for the loose NF membrane to 0.57 kWh/m3 for the tight RO membrane",
+          "unit": "kWh/m3",
+          "value": "0.14-0.57",
+          "value_form": "range"
+        }
+      ],
+      "record_id": "RT05-gpt51_web_search-WEB03-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB03-E02",
+            "WEB03-E04"
+          ],
+          "statement": "PFOS and other PFAAs are concentrated in the feed-retentate loop as water recovery increases, with PFOS reaching about 0.382 mg/L at 97% recovery; no transformation products or inorganic fluoride release are reported."
+        }
+      ],
+      "source_id": "WEB03",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB03-E01",
+          "WEB03-E02"
+        ],
+        "value": "Pilot-scale closed-circuit membrane filtration (CCMF) system using spiral-wound NF and RO elements"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB03-E01",
+          "WEB03-E03",
+          "WEB03-E05"
+        ],
+        "value": "High-recovery closed-circuit membrane filtration (CCMF) with four spiral-wound membranes spanning loose nanofiltration (NF) to seawater reverse osmosis (RO) products (including NF90, CR100, SW30)"
+      }
+    },
+    {
+      "citation": "American Membrane Technology Association (AMTA). Closed-Circuit High-Pressure Membrane Systems for the Separation of Per and Polyfluoroalkyl Substances. AMTA fact sheet; 2023.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB04-E01",
+          "WEB04-E02",
+          "WEB04-E03"
+        ],
+        "reason": "Pilot-scale closed-circuit NF/RO system treating water with PFAS, reporting recovery and PFAS concentration factor; although feed and concentrate compositions are not quantified, the membrane type, recovery, and concentration factor are clearly specified, allowing conditional comparison with other high-pressure membrane PFAS concentration studies that report similar metrics.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://www.amtaorg.com/closedcircuit-highpressure-membrane-systems-for-the-separation-of-per-and-polyfluoroalkyl-substances-2/",
+      "endpoints": [
+        {
+          "endpoint_type": "separation",
+          "evidence_locator_ids": [
+            "WEB04-E01",
+            "WEB04-E02",
+            "WEB04-E03"
+          ],
+          "interpretation": "High-pressure closed-circuit NF/RO system used to separate PFAS from water, generating a PFAS-enriched concentrate stream and low-PFAS permeate; performance characterized by recovery and concentration factor, with very low permeate PFAA concentrations (no numeric permeate values reported).",
+          "reported_term": "PFAS rejection performance; PFAA removal; concentrate factor"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB04-E01",
+            "WEB04-E02",
+            "WEB04-E03"
+          ],
+          "statement": "Fact sheet provides limited quantitative data on feed and concentrate PFAS concentrations, co-contaminants, and operating pressures."
+        },
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB04-E01",
+            "WEB04-E02",
+            "WEB04-E03"
+          ],
+          "statement": "Energy use, cost analysis, and downstream handling or destruction of the concentrated PFAS waste stream are not quantified and are at most qualitatively discussed."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB04-E01",
+            "WEB04-E02"
+          ],
+          "statement": "Study evidence is restricted to a desalination-type water matrix and a single high-recovery operating regime, limiting generalizability to other feed waters and recoveries."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB04-E01"
+        ],
+        "value": "Water in a desalination pilot system (exact feed composition not specified)"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "System recovery",
+          "qualifiers": "Closed-circuit high-pressure membrane pilot module",
+          "unit": "%",
+          "value": "97"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E01"
+          ],
+          "name": "Membrane types",
+          "qualifiers": "Four commercially available membranes investigated for PFAS rejection performance",
+          "unit": null,
+          "value": "NF270, NF90, CR100, SW30"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02",
+            "WEB04-E03"
+          ],
+          "value": "Perfluoroalkyl acids (PFAAs) and other PFAS (exact species not specified)"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "System recovery",
+          "qualifiers": "Pilot module operated at 97% recovery",
+          "unit": "%",
+          "value": "97",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E03"
+          ],
+          "name": "PFAS concentration factor in concentrate stream",
+          "qualifiers": "Tight NF and RO membranes used to concentrate PFAS streams by a factor of 33 at 97% recovery",
+          "unit": null,
+          "value": "33",
+          "value_form": "exact_numeric"
+        }
+      ],
+      "record_id": "RT05-gpt51_web_search-WEB04-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB04-E02",
+            "WEB04-E03"
+          ],
+          "statement": "Closed-circuit operation produced a PFAS-enriched concentrate stream with a reported concentration factor of 33 relative to the feed; specific concentrate volume, PFAS composition, and any downstream treatment or disposal approach were not reported."
+        }
+      ],
+      "source_id": "WEB04",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB04-E01"
+        ],
+        "value": "Full-scale closed-circuit desalination pilot module"
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB04-E01",
+          "WEB04-E03"
+        ],
+        "value": "Closed-circuit high-pressure membrane system using four commercially available tight NF and RO membranes (NF270, NF90, CR100, SW30) operated as a desalination pilot module"
+      }
+    },
+    {
+      "citation": "Author(s) not clearly visible. Investigation of PFAS Rejection by Closed-Circuit Reverse Osmosis and Nanofiltration and Sorption to Treatment Materials during Groundwater Treatment: A Pilot Demonstration. Sep Purif Technol. 2025;377:134308.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB05-E01",
+          "WEB05-E02"
+        ],
+        "reason": "Only summary rejection ranges and feed concentration are available from the abstract/highlights, with limited detail on membrane type, flux, pressure, and concentrate composition; results can inform general expectations for PFAS separation at high recovery but are not directly comparable on an equal basis with more fully specified studies.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1016/j.seppur.2025.134308",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "interpretation": "PFAS concentration in the permeate was reduced relative to the feed by 97.9\u201399% with nanofiltration; this represents phase separation/removal, not chemical transformation or destruction.",
+          "reported_term": "PFAS rejection by NF"
+        },
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "interpretation": "Reverse osmosis achieved >99% rejection of PFAS, indicating highly effective physical separation into the concentrate stream rather than degradation or destruction.",
+          "reported_term": "PFAS rejection by RO"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB05-E01",
+            "WEB05-E02"
+          ],
+          "statement": "Full text and detailed data on concentrate PFAS concentrations, volume reduction, co-contaminants, downstream handling, energy use, and cost were not available from the accessible abstract and highlights."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB05-E01",
+            "WEB05-E02"
+          ],
+          "statement": "Study as described focuses on PFAS rejection performance at high recoveries in a single AFFF-impaired groundwater matrix; behavior in other waters or at different operating conditions is not characterized in the accessible text."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB05-E01"
+        ],
+        "value": "Aqueous film-forming foam (AFFF) impaired groundwater"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E01"
+          ],
+          "name": "Recovery",
+          "qualifiers": "Closed-circuit membrane operation; also tested at 85% and 90% recovery",
+          "unit": "%",
+          "value": "80"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E01"
+          ],
+          "name": "Recovery",
+          "qualifiers": "Closed-circuit membrane operation; also tested at 80% and 90% recovery",
+          "unit": "%",
+          "value": "85"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E01"
+          ],
+          "name": "Recovery",
+          "qualifiers": "Closed-circuit membrane operation; also tested at 80% and 85% recovery",
+          "unit": "%",
+          "value": "90"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E01"
+          ],
+          "value": "Total PFAS (~14.3 \u00b5g/L in feed); individual PFAS not specified in accessible text"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E01"
+          ],
+          "name": "Total PFAS concentration in feed water",
+          "qualifiers": "AFFF-impaired groundwater; described as around 14.3 \u00b5g/L total PFAS",
+          "unit": "\u00b5g/L",
+          "value": "14.3",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "name": "NF PFAS rejection",
+          "qualifiers": "Rejection range depended on PFAS functional group and chain length",
+          "unit": "%",
+          "value": "97.9-99",
+          "value_form": "range"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "name": "RO PFAS rejection",
+          "qualifiers": "Rejection exceeded 99% for all PFAS",
+          "unit": "%",
+          "value": ">99",
+          "value_form": "inequality"
+        }
+      ],
+      "record_id": "RT05-gpt51_web_search-WEB05-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB05-E01",
+            "WEB05-E02"
+          ],
+          "statement": "PFAS are concentrated into the retained/concentrate stream by NF and RO, but no quantitative concentrate composition, volume, or downstream management strategy is reported in the accessible text."
+        }
+      ],
+      "source_id": "WEB05",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB05-E01"
+        ],
+        "value": "Pilot-scale closed-circuit NF/RO system for groundwater treatment"
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB05-E01",
+          "WEB05-E02"
+        ],
+        "value": "Closed-circuit nanofiltration (NF) and reverse osmosis (RO) membrane pilot system operated at multiple recoveries"
+      }
+    },
+    {
+      "citation": "Author(s) not clearly visible. Investigation of PFAS Rejection by Closed-Circuit Reverse Osmosis and Nanofiltration and Sorption to Treatment Materials during Groundwater Treatment: A Pilot Demonstration. Sep Purif Technol. 2025;377:134308.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB05-E03"
+        ],
+        "reason": "Only relative sorption contributions and qualitative comparisons among media are available, without standardized loading units or detailed operating conditions, limiting cross-study quantitative comparisons.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1016/j.seppur.2025.134308",
+      "endpoints": [
+        {
+          "endpoint_type": "sorption",
+          "evidence_locator_ids": [
+            "WEB05-E03"
+          ],
+          "interpretation": "Distribution of PFAS, especially PFOS, onto solid materials used in the pilot system was characterized as a fraction of total sorbed PFAS and relative loading on different media types.",
+          "reported_term": "PFAS sorption to treatment materials"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB05-E03"
+          ],
+          "statement": "The accessible text does not provide absolute PFAS mass or concentration on solid materials, identities of all media tested, or how these solids were or should be managed or disposed."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB05-E03"
+          ],
+          "statement": "Sorption characterization appears limited to the specific set of treatment materials in this pilot; extrapolation to other solids or full-scale systems is uncertain."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB05-E01",
+          "WEB05-E03"
+        ],
+        "value": "PFAS associated with solid treatment materials (e.g., 0.2 \u00b5m filters and other media) contacting AFFF-impaired groundwater or membrane streams"
+      },
+      "operating_conditions": [],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E03"
+          ],
+          "value": "PFOS and other PFAS present; PFOS contribution to sorbed PFAS quantified as a percentage of total sorbed PFAS"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E03"
+          ],
+          "name": "PFOS share of sorbed PFAS on treatment materials",
+          "qualifiers": "PFOS represented 60\u201385% of total PFAS sorbed across all evaluated treatment materials.",
+          "unit": "%",
+          "value": "60-85",
+          "value_form": "range"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E03"
+          ],
+          "name": "Relative PFAS loading on 0.2 \u00b5m filters",
+          "qualifiers": "Solid-phase PFAS concentration on 0.2 \u00b5m filters was roughly ten times greater than on any other evaluated media; no absolute concentration reported.",
+          "unit": "fold",
+          "value": "~10",
+          "value_form": "approximate_numeric"
+        }
+      ],
+      "record_id": "RT05-gpt51_web_search-WEB05-R02",
+      "residuals_byproducts": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB05-E03"
+          ],
+          "statement": "PFOS dominated the PFAS mass sorbed to treatment materials, accounting for 60\u201385% of sorbed PFAS, with 0.2 \u00b5m filters accumulating roughly an order of magnitude higher PFAS concentrations than other media, indicating these filters can act as significant PFAS residuals requiring management."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB05-E03"
+          ],
+          "statement": "No information in the accessible text on transformation products, defluorination, or destruction of PFAS on solids; solids act as sinks rather than treatment units."
+        }
+      ],
+      "source_id": "WEB05",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB05-E03"
+        ],
+        "value": "Pilot-scale groundwater treatment with multiple solid treatment materials (including 0.2 \u00b5m filters) in contact with PFAS-containing streams"
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB05-E03"
+        ],
+        "value": "Contact of PFAS-containing water with various treatment materials (including 0.2 \u00b5m filters and unspecified media) within a membrane-based pilot treatment train"
+      }
+    },
+    {
+      "citation": "U.S. Bureau of Reclamation. Enhancing Recovery for Potable Reuse: Pilot Evaluation of Closed Circuit Reverse Osmosis (CCRO) and Forward Osmosis (FO) Alternatives for Concentrate Treatment. Desalination and Water Purification Research Report No. 216. 2022.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB06-E01",
+          "WEB06-E02"
+        ],
+        "reason": "The inspected text provides only a high-level methods summary (technologies, matrices, analyte classes, and mention of different recovery conditions) without numerical PFAS concentrations, recoveries, concentration factors, energy use, or costs; thus the record can only be used to qualitatively indicate that PFAS and co-contaminants in RO concentrate were characterized in a pilot CCRO/FO context, not for quantitative comparison with other studies.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://www.usbr.gov/research/dwpr/reportpdfs/Final%20DWPR%20Report%20No%20216.pdf",
+      "endpoints": [
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E02"
+          ],
+          "interpretation": "Study collected water quality samples from RO concentrate and treated streams under different recovery conditions and analyzed PFAS (EPA Method 537.1) along with selected organic co-contaminants to characterize how CCRO and FO alternatives manage concentrate quality; specific removal or concentration factors for PFAS are not available in the inspected text.",
+          "reported_term": "water quality characterization of concentrate and treated streams for PFAS and co-contaminants"
+        }
+      ],
+      "limitations": [],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB06-E01",
+          "WEB06-E02"
+        ],
+        "value": "Reverse osmosis (RO) concentrate and treated streams within a potable reuse treatment train"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB06-E02"
+          ],
+          "name": "recovery conditions",
+          "qualifiers": "",
+          "unit": null,
+          "value": "different recovery conditions evaluated (details not visible in inspected excerpt)"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB06-E01"
+          ],
+          "value": "PFAS analyzed by EPA Method 537.1 (specific analytes not listed in inspected text)"
+        }
+      ],
+      "quantitative_findings": [],
+      "record_id": "RT05-gpt51_web_search-WEB06-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E02"
+          ],
+          "statement": "RO concentrate streams, representing PFAS-rich residuals from potable reuse treatment, were sampled and analyzed for PFAS together with ethylene glycol, semi-volatile organics, and priority pollutants to characterize residual composition before and/or after CCRO and FO-based treatment."
+        }
+      ],
+      "source_id": "WEB06",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB06-E01"
+        ],
+        "value": "Pilot-scale evaluation of CCRO and FO-based alternatives for RO concentrate management in a potable reuse context"
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB06-E01"
+        ],
+        "value": "Closed circuit reverse osmosis (CCRO) and forward osmosis (FO)-based alternatives for RO concentrate treatment"
+      }
+    },
+    {
+      "citation": "McDonough KM, et al. Validation of supercritical water oxidation to destroy perfluoroalkyl acids. Remediation Journal. 2022;32(3):285-300.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB07-E01",
+          "WEB07-E02",
+          "WEB07-E03"
+        ],
+        "reason": "The accessible text confirms field validation of SCWO on a concentrated PFAS waste stream and characterization of liquid and gaseous effluents, but it does not provide quantitative concentrations, removals, or operating conditions needed for numerical comparison with other PFAS residual management technologies.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1002/rem.21711",
+      "endpoints": [
+        {
+          "endpoint_type": "parent_compound_loss",
+          "evidence_locator_ids": [
+            "WEB07-E01",
+            "WEB07-E02"
+          ],
+          "interpretation": "PFAS in liquid and gaseous effluents were measured by USEPA Method 537.1 and Other Test Method 45 to assess loss of parent perfluoroalkyl acids during SCWO treatment; the available text indicates intent to evaluate destruction but does not provide quantified removal, defluorination, or mineralization data.",
+          "reported_term": "PFAS destruction"
+        },
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB07-E02"
+          ],
+          "interpretation": "Gaseous effluents were analyzed for PFAS to evaluate potential atmospheric releases from SCWO treatment of concentrated PFAS waste.",
+          "reported_term": "Potential atmospheric PFAS releases"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB07-E01",
+            "WEB07-E03"
+          ],
+          "statement": "The study evidence available here describes SCWO treatment of a concentrated PFAS waste stream but does not specify the origin of the concentrate (e.g., whether it was membrane-derived), limiting direct applicability to membrane treatment trains."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB07-E01",
+            "WEB07-E02"
+          ],
+          "statement": "Only qualitative information on PFAS analysis in liquid and gaseous effluents is available from the accessible text; quantitative influent/effluent concentrations, destruction efficiencies, and operating conditions cannot be extracted."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB07-E01",
+          "WEB07-E02"
+        ],
+        "value": "Concentrated waste stream containing PFAS (twelve perfluoroalkyl acids); liquid and gaseous effluents characterized after treatment"
+      },
+      "operating_conditions": [],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB07-E01"
+          ],
+          "value": "Twelve perfluoroalkyl acids (individual identities not specified in available text)"
+        }
+      ],
+      "quantitative_findings": [],
+      "record_id": "RT05-gpt51_web_search-WEB07-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB07-E02"
+          ],
+          "statement": "Liquid and gaseous effluents from SCWO treatment were characterized for PFAS to evaluate both residual PFAS in treated water and potential PFAS in off-gas (atmospheric releases)."
+        },
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB07-E03"
+          ],
+          "statement": "The discussion notes that an appropriate PFAS treatment strategy includes multiple technologies in series to concentrate PFAS into the smallest possible volume prior to energy-intensive destruction such as SCWO, implying that SCWO is intended as a terminal destruction step for concentrated PFAS residuals."
+        }
+      ],
+      "source_id": "WEB07",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB07-E01"
+        ],
+        "value": "Field-validated treatment of a concentrated PFAS waste stream using supercritical water oxidation"
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB07-E01"
+        ],
+        "value": "Supercritical water oxidation (SCWO) applied to a concentrated PFAS waste stream"
+      }
+    },
+    {
+      "citation": "Authors not fully visible. Supercritical Water Oxidation for the Destruction of Spent Media Wastes Generated from PFAS Treatment. Chemosphere. 2024; in press.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB08-E01",
+          "WEB08-E02"
+        ],
+        "reason": "The study demonstrates use of supercritical water oxidation for destruction of PFAS-laden GAC and AIX solids, but the accessible text does not report operating conditions, destruction efficiencies, or energy use, and the residuals originate from sorptive treatment rather than membrane concentrates.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://www.sciencedirect.com/science/article/pii/S0304389423015479",
+      "endpoints": [
+        {
+          "endpoint_type": "destruction",
+          "evidence_locator_ids": [
+            "WEB08-E01",
+            "WEB08-E02"
+          ],
+          "interpretation": "Supercritical water oxidation is used with the intent to destroy both the solid spent media (GAC and AIX) and the PFAS adsorbed onto them; the abstract does not report quantitative destruction efficiency or fluorine balance.",
+          "reported_term": "destroy PFAS and spent media"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB08-E01",
+            "WEB08-E02"
+          ],
+          "statement": "Only the abstract was accessible; influent PFAS loadings on spent media, SCWO operating conditions, destruction efficiencies, and byproduct characterization are not available."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB08-E01",
+            "WEB08-E02"
+          ],
+          "statement": "The spent media originate from sorptive treatment (GAC and AIX), not membrane concentrates, so results inform destruction options for solid PFAS residuals that could also arise downstream of membrane systems but are not membrane-specific."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB08-E01",
+          "WEB08-E02"
+        ],
+        "value": "Spent media (granular activated carbon and anion exchange resin) with PFAS adsorbed from prior treatment processes"
+      },
+      "operating_conditions": [],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB08-E01",
+            "WEB08-E02"
+          ],
+          "value": "PFAS captured on spent GAC"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB08-E01",
+            "WEB08-E02"
+          ],
+          "value": "PFAS captured on spent anion exchange resin (AIX)"
+        }
+      ],
+      "quantitative_findings": [],
+      "record_id": "RT05-gpt51_web_search-WEB08-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB08-E01",
+            "WEB08-E02"
+          ],
+          "statement": "SCWO is applied to destroy both the spent media and the PFAS adsorbed onto it, targeting conversion rather than long-term storage of PFAS-laden solids; the abstract does not describe specific transformation products or inorganic fluoride release."
+        }
+      ],
+      "source_id": "WEB08",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB08-E01"
+        ],
+        "value": "\"Project\" study on destruction of PFAS-laden spent media; specific experimental scale not reported in accessible abstract"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB08-E01",
+          "WEB08-E02"
+        ],
+        "value": "Supercritical water oxidation (SCWO) applied to destroy spent media and sorbed PFAS"
+      }
+    },
+    {
+      "citation": "PFOS destruction in a continuous supercritical water oxidation reactor. Chemical Engineering Journal. 2023.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB09-E02"
+        ],
+        "reason": "Accessible text only indicates that hydrothermal treatment and SCWO were investigated as effective PFOS destruction technologies without reporting operating conditions, influent concentrations, or quantitative destruction/defluorination performance, preventing comparison with other treatment-train studies.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://www.sciencedirect.com/science/article/pii/S1385894722045429",
+      "endpoints": [
+        {
+          "endpoint_type": "destruction",
+          "evidence_locator_ids": [
+            "WEB09-E02"
+          ],
+          "interpretation": "Study investigates hydrothermal treatment and supercritical water oxidation as destruction technologies for PFOS and other perfluorinated organic molecules; specific quantitative performance, defluorination extent, and operating parameters are not available in the accessible text.",
+          "reported_term": "PFOS destruction using supercritical water oxidation"
+        }
+      ],
+      "limitations": [],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB09-E02"
+        ],
+        "value": "Not specified in accessible text (PFOS-containing solution implied)"
+      },
+      "operating_conditions": [],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB09-E02"
+          ],
+          "value": "PFOS (perfluorooctane sulfonate)"
+        }
+      ],
+      "quantitative_findings": [],
+      "record_id": "RT05-gpt51_web_search-WEB09-R01",
+      "residuals_byproducts": [],
+      "source_id": "WEB09",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB09-E02"
+        ],
+        "value": "/"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB09-E02"
+        ],
+        "value": "Hydrothermal treatment using a continuous supercritical water oxidation (SCWO) reactor for PFOS destruction"
+      }
+    },
+    {
+      "citation": "Ekande OS, et al. Exploring Perfluoroalkyl and Polyfluoroalkyl Substance Presence and Potential Leaching from Reverse Osmosis Membranes: Implications for Drinking Water Treatment. Environ Sci Technol. 2024;58:15799\u201315806.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB10-E01",
+          "WEB10-E02",
+          "WEB10-E03"
+        ],
+        "reason": "Experiment characterizes PFAS leaching from membrane materials into Milli-Q water under accelerated sonication, without a conventional feed/concentrate flow, recovery, or energy use; results are useful for understanding residual PFAS loads in membranes but are not directly comparable to treatment performance metrics across membrane systems.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1021/acs.est.4c04743",
+      "endpoints": [
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB10-E01",
+            "WEB10-E02",
+            "WEB10-E03"
+          ],
+          "interpretation": "Surface-normalized PFAS mass leached from commercial RO membrane fragments into Milli-Q water after 48 h sonication; reflects PFAS load that can migrate from membrane material to water under accelerated conditions.",
+          "reported_term": "PFAS leaching from RO membrane"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB10-E01"
+          ],
+          "statement": "Study evaluates PFAS leaching from intact commercial RO elements rather than from membranes that have operated on PFAS-impacted water; actual PFAS loads on spent elements may be higher than those observed here."
+        },
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB10-E02"
+          ],
+          "statement": "Leaching tests used Milli-Q water and 48 h sonication as accelerated laboratory conditions; real system prewashing, cleaning practices, and concentrate-side exposures are not fully represented."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB10-E02"
+        ],
+        "value": "Milli-Q water leachate from RO membrane fragments"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB10-E02"
+          ],
+          "name": "number_of_fragments",
+          "qualifiers": "Forty membrane fragments used in each leaching test",
+          "unit": null,
+          "value": "40"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB10-E02"
+          ],
+          "name": "fragment_area",
+          "qualifiers": "Each fragment had an area of 1 cm2",
+          "unit": "cm2",
+          "value": "1"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB10-E02"
+          ],
+          "name": "total_membrane_area",
+          "qualifiers": "Calculated as 40 fragments \u00d7 1 cm2 each",
+          "unit": "cm2",
+          "value": "40"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB10-E02"
+          ],
+          "name": "leachate_volume",
+          "qualifiers": "Milli-Q water volume per vial",
+          "unit": "mL",
+          "value": "35"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB10-E02"
+          ],
+          "name": "contact_time",
+          "qualifiers": "Sonication duration for leaching",
+          "unit": "h",
+          "value": "48"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB10-E02"
+          ],
+          "name": "contact_medium",
+          "qualifiers": "Ultrapure water used as leaching solution",
+          "unit": null,
+          "value": "Milli-Q water"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB10-E02"
+          ],
+          "name": "extraction_and_analysis",
+          "qualifiers": "PFAS in leachate extracted and quantified by LC-HRMS",
+          "unit": null,
+          "value": "LC-HRMS"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB10-E03"
+          ],
+          "value": "Perfluorooctane sulfonate (PFOS)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB10-E03"
+          ],
+          "value": "Perfluorooctanoate (PFOA)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB10-E03"
+          ],
+          "value": "Several additional PFAS detected in leachate (not individually specified in the supplied text)"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB10-E03"
+          ],
+          "name": "surface-normalized PFAS leached mass",
+          "qualifiers": "Surface-normalized loads of several PFAS, including PFOS and PFOA, detected in the leaching experiment; exact compound-specific values not provided in the supplied text.",
+          "unit": "pg/cm2",
+          "value": "17-38",
+          "value_form": "range"
+        }
+      ],
+      "record_id": "RT05-gpt51_web_search-WEB10-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB10-E01",
+            "WEB10-E03"
+          ],
+          "statement": "Detection of PFOS, PFOA, and other PFAS in leachate indicates that commercial RO membranes themselves can act as a PFAS source term under certain conditions, contributing PFAS mass to water during storage, conditioning, or operation."
+        }
+      ],
+      "source_id": "WEB10",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB10-E01",
+          "WEB10-E02"
+        ],
+        "value": "Bench-scale leaching test using fragments of commercial reverse osmosis (RO) membranes"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB10-E01",
+          "WEB10-E02"
+        ],
+        "value": "Commercial reverse osmosis (RO) membrane material subjected to sonication-based leaching"
+      }
+    },
+    {
+      "citation": "Ekande OS, et al. Exploring Perfluoroalkyl and Polyfluoroalkyl Substance Presence and Potential Leaching from Reverse Osmosis Membranes: Implications for Drinking Water Treatment. Environ Sci Technol. 2024;58:15799\u201315806.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB10-E01",
+          "WEB10-E04"
+        ],
+        "reason": "Direct TOPA provides an analytical measure of oxidizable PFAS mass stored in membrane material rather than a treatment or removal performance metric; results inform PFAS inventory in residual membranes but are not directly comparable to membrane treatment train operating data.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1021/acs.est.4c04743",
+      "endpoints": [
+        {
+          "endpoint_type": "transformation",
+          "evidence_locator_ids": [
+            "WEB10-E01",
+            "WEB10-E04"
+          ],
+          "interpretation": "TOPA chemically oxidizes precursors and other oxidizable PFAS associated with the membrane into PFOS, enabling quantification of a broader total PFAS burden in the membrane polymer; endpoint is PFOS mass per area after oxidation compared to simple leaching.",
+          "reported_term": "Direct TOPA-derived PFOS mass from oxidizable PFAS associated with membrane"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB10-E01",
+            "WEB10-E04"
+          ],
+          "statement": "Direct TOPA indicates substantial precursor or non-leachable PFAS in the polymer matrix, but this assay does not represent in-situ operating conditions and instead reflects a worst-case oxidizable PFAS inventory."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB10-E01",
+          "WEB10-E04"
+        ],
+        "value": "RO membrane polymer matrix subjected directly to total oxidizable precursor assay (TOPA)"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB10-E01",
+            "WEB10-E04"
+          ],
+          "name": "assay_type",
+          "qualifiers": "TOPA conducted directly on membrane samples rather than on leachate to assess total oxidizable PFAS content",
+          "unit": null,
+          "value": "direct TOPA on membrane"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB10-E04"
+          ],
+          "value": "Perfluorooctane sulfonate (PFOS) quantified after oxidation of precursors"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB10-E04"
+          ],
+          "value": "PFAS precursors and non-leachable PFAS present within membrane polymer inferred from TOPA response"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB10-E04"
+          ],
+          "name": "PFOS mass per cm2 after TOPA relative to leaching",
+          "qualifiers": "Direct TOPA on membrane samples yielded up to sixteen times higher PFOS mass per cm2 than obtained by simple leaching of fragments into water; value represents maximum reported fold-increase (dimensionless).",
+          "unit": null,
+          "value": "16",
+          "value_form": "exact_numeric"
+        }
+      ],
+      "record_id": "RT05-gpt51_web_search-WEB10-R02",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB10-E01",
+            "WEB10-E04"
+          ],
+          "statement": "TOPA results reveal a much larger oxidizable PFAS inventory embedded within RO membrane polymers than is accessible by simple water leaching, implying that spent membranes may retain significant PFAS mass even after conventional rinsing."
+        }
+      ],
+      "source_id": "WEB10",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB10-E01",
+          "WEB10-E04"
+        ],
+        "value": "Bench-scale analytical assay (direct TOPA) on RO membrane fragments"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB10-E01",
+          "WEB10-E04"
+        ],
+        "value": "Direct total oxidizable precursor assay (TOPA) applied to RO membrane pieces to oxidize PFAS precursors to PFOS for quantification"
+      }
+    },
+    {
+      "citation": "Ekande OS, et al. Exploring Perfluoroalkyl and Polyfluoroalkyl Substance Presence and Potential Leaching from Reverse Osmosis Membranes: Implications for Drinking Water Treatment. Environ Sci Technol. 2024;58:15799\u201315806.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB10-E02",
+          "WEB10-E05"
+        ],
+        "reason": "Scenario analysis provides order-of-magnitude estimates of PFAS release from RO elements rather than measured treatment performance parameters (e.g., recovery, energy, cost); values depend on modeling assumptions and are not directly comparable across treatment technologies.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1021/acs.est.4c04743",
+      "endpoints": [
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB10-E05"
+          ],
+          "interpretation": "Using area-normalized PFAS masses measured in leaching tests, the authors estimate total \u03a3PFAS that could be released from a 40 m2 RO element during its operational lifetime, treating the membrane as a PFAS reservoir and potential residual waste stream.",
+          "reported_term": "Modeled potential \u03a3PFAS release from RO elements over lifetime"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB10-E02",
+            "WEB10-E05"
+          ],
+          "statement": "Scenario estimates of \u03a3PFAS release are based on extrapolation from lab leaching with Milli-Q water and simplified assumptions about realistic leaching conditions; actual system-specific releases may differ."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB10-E05"
+        ],
+        "value": "Modeled PFAS release from commercial RO membrane elements over operational lifetime"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB10-E05"
+          ],
+          "name": "membrane_area_per_element",
+          "qualifiers": "Scenario assumes a 40 m2 RO element when extrapolating PFAS release from area-normalized leaching data.",
+          "unit": "m2",
+          "value": "40"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB10-E05"
+          ],
+          "name": "assessment_scope",
+          "qualifiers": "Estimated potential \u03a3PFAS release over the service lifetime of an RO element under realistic leaching scenarios.",
+          "unit": null,
+          "value": "lifetime release"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB10-E05"
+          ],
+          "value": "\u03a3PFAS (sum of PFAS measured and modeled as potentially releasable from RO elements)"
+        }
+      ],
+      "quantitative_findings": [],
+      "record_id": "RT05-gpt51_web_search-WEB10-R03",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB10-E05"
+          ],
+          "statement": "Modeled \u03a3PFAS release on the order of tens of milligrams per 40 m2 RO element over its lifetime indicates that used RO elements may represent a non-negligible PFAS-containing residual that requires appropriate end-of-life management or disposal."
+        }
+      ],
+      "source_id": "WEB10",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB10-E05"
+        ],
+        "value": "Scenario-based extrapolation from bench-scale leaching data to full-size RO elements"
+      },
+      "study_type": "modeling_or_life_cycle_study",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB10-E05"
+        ],
+        "value": "Reverse osmosis elements in drinking water treatment, evaluated as potential long-term PFAS sources based on leaching-derived inventories"
+      }
+    },
+    {
+      "citation": "Huling SG, et al. PFAS Destruction in IX Still Bottoms with Plasma Vortex Technology. 2025.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB11-E01",
+          "WEB11-E02",
+          "WEB11-E03"
+        ],
+        "reason": "The study provides quantitative data on PFAS concentration and concentration factor in an ion exchange still-bottom concentrate and describes a plasma-plus-RO closed-loop management scheme, but lacks sufficient detail on membrane operating conditions, performance metrics, energy use, and destruction efficiency to allow quantitative comparison with other membrane residuals management studies.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://researchdiscovery.drexel.edu/esploro/outputs/journalArticle/PFAS-Destruction-in-IX-Still-Bottoms/991022047817604721",
+      "endpoints": [
+        {
+          "endpoint_type": "destruction",
+          "evidence_locator_ids": [
+            "WEB11-E01",
+            "WEB11-E03"
+          ],
+          "interpretation": "Study focuses on destruction of PFAS in a distilled ion-exchange still-bottom concentrate using plasma vortex technology; treated still bottom is further polished by reverse osmosis, and RO retentate is returned to the plasma system, forming a closed loop with no liquid discharge. Extent of destruction is not quantified in the provided text.",
+          "reported_term": "PFAS Destruction in IX Still Bottoms with Plasma Vortex Technology"
+        },
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB11-E03"
+          ],
+          "interpretation": "Reverse osmosis polishing of the treated still bottom, combined with recycling of RO retentate back to the plasma treatment unit, results in a treatment loop where there is no net liquid discharge from the concentrate management system.",
+          "reported_term": "closed loop with no liquid discharge"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB11-E01",
+            "WEB11-E03"
+          ],
+          "statement": "Concentrate originates from ion exchange media regeneration rather than directly from a membrane separation step; membrane involvement is limited to a reverse osmosis polishing step applied after plasma treatment."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB11-E01",
+            "WEB11-E02",
+            "WEB11-E03"
+          ],
+          "statement": "Energy consumption and cost for the plasma vortex destruction and reverse osmosis polishing steps are not reported in the provided material."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB11-E01",
+          "WEB11-E03"
+        ],
+        "value": "Distilled PFAS concentrate (ion exchange still bottom) subjected to plasma destruction and subsequent reverse osmosis polishing"
+      },
+      "operating_conditions": [],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB11-E01"
+          ],
+          "value": "Total PFAS (approximately 640 mg/L in still bottom concentrate)"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB11-E01"
+          ],
+          "name": "PFAS concentration in distilled still-bottom concentrate",
+          "qualifiers": "reported as approximately 640 mg/L total PFAS in 45 L of distilled PFAS concentrate (still bottom) recovered after IX media regeneration",
+          "unit": "mg/L",
+          "value": "~640",
+          "value_form": "approximate_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB11-E01"
+          ],
+          "name": "Volume of distilled PFAS still-bottom concentrate recovered",
+          "qualifiers": "forty-five liters of a distilled PFAS concentrate (still bottom) recovered after ion exchange media regeneration",
+          "unit": "L",
+          "value": "45",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB11-E02"
+          ],
+          "name": "Overall PFAS concentration factor from original water to still bottom",
+          "qualifiers": "reported as an overall concentration factor of about thirty thousand relative to the original PFAS-containing water",
+          "unit": "",
+          "value": "~30000",
+          "value_form": "approximate_numeric"
+        }
+      ],
+      "record_id": "RT05-gpt51_web_search-WEB11-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB11-E03"
+          ],
+          "statement": "Reverse osmosis retentate from polishing of the treated still bottom is returned to the plasma treatment system, forming a closed loop with no liquid discharge; residual liquid concentrates are thus internally recycled rather than discharged."
+        }
+      ],
+      "source_id": "WEB11",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB11-E01",
+          "WEB11-E02",
+          "WEB11-E03"
+        ],
+        "value": "not reported"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB11-E01",
+          "WEB11-E03"
+        ],
+        "value": "Plasma vortex destruction of PFAS in ion exchange still bottoms, followed by reverse osmosis polishing with RO retentate recycled to plasma system (closed-loop, no liquid discharge)"
+      }
+    },
+    {
+      "citation": "Authors not fully visible. PFAS Destruction Using Supercritical Water Oxidation (SCWO) at Peterson Space Force Base. Journal of Environmental Engineering. 2025.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB12-E01",
+          "WEB12-E02"
+        ],
+        "reason": "The record documents a field-scale RO+SCWO treatment train for PFAS-impacted water and highlights that RO concentration can lower SCWO energy and reactor volume requirements, but it does not report quantitative performance, recovery, concentration factors, or energy metrics. These data are therefore mainly useful to describe treatment-train configuration and conceptual management of membrane-derived PFAS concentrates rather than to support quantitative comparison with other technologies.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://www.sciencedirect.com/science/article/pii/S2666911025000164",
+      "endpoints": [
+        {
+          "endpoint_type": "separation",
+          "evidence_locator_ids": [
+            "WEB12-E01",
+            "WEB12-E02"
+          ],
+          "interpretation": "Reverse osmosis was used to separate and concentrate PFAS from PFAS-impacted aqueous streams into a smaller-volume concentrate stream prior to SCWO; this is a phase-separation/concentration step rather than destruction.",
+          "reported_term": "concentrate PFAS"
+        },
+        {
+          "endpoint_type": "destruction",
+          "evidence_locator_ids": [
+            "WEB12-E01",
+            "WEB12-E02"
+          ],
+          "interpretation": "Supercritical water oxidation was applied to the RO-concentrated PFAS stream with the stated purpose of PFAS destruction; accessible text emphasizes destruction intent and efficiency/energy considerations but does not report explicit numerical destruction efficiencies or defluorination metrics.",
+          "reported_term": "PFAS destruction using supercritical water oxidation"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB12-E01",
+            "WEB12-E02"
+          ],
+          "statement": "Evidence available is limited to high-level description of the treatment train (RO concentration followed by SCWO) with no reported numerical values for RO recovery, concentration factor, PFAS concentrations, SCWO destruction efficiency, energy use, or costs."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB12-E01"
+          ],
+          "statement": "The deployment is described only for PFAS-impacted aqueous streams at a single site (Peterson Space Force Base), so applicability to other water types or membrane concentrate compositions is not characterized in the accessible text."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB12-E01"
+        ],
+        "value": "PFAS-impacted aqueous streams (site waters) at Peterson Space Force Base; specific composition and PFAS species not detailed in accessible text."
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB12-E01",
+            "WEB12-E02"
+          ],
+          "name": "treatment_train_configuration",
+          "qualifiers": "",
+          "unit": null,
+          "value": "RO used as a concentration step prior to SCWO to increase PFAS concentration in a smaller volume stream and improve SCWO efficiency."
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB12-E02"
+          ],
+          "name": "process_rationale",
+          "qualifiers": "",
+          "unit": null,
+          "value": "Concentrating PFAS by RO prior to SCWO reduces overall SCWO energy use and reactor volume requirements."
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB12-E01"
+          ],
+          "value": "PFAS (unspecified mixtures in PFAS-impacted aqueous streams; individual compounds and concentrations not reported in accessible text)."
+        }
+      ],
+      "quantitative_findings": [],
+      "record_id": "RT05-gpt51_web_search-WEB12-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB12-E01",
+            "WEB12-E02"
+          ],
+          "statement": "RO generates a PFAS-enriched concentrate stream that is subsequently treated by SCWO; the study positions this as a way to manage membrane-derived PFAS concentrates by routing them to thermal-oxidative destruction under supercritical water conditions."
+        }
+      ],
+      "source_id": "WEB12",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB12-E01"
+        ],
+        "value": "Field deployment at Peterson Space Force Base using reverse osmosis (RO) followed by supercritical water oxidation (SCWO) for PFAS-impacted aqueous streams."
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB12-E01",
+          "WEB12-E02"
+        ],
+        "value": "Two-stage treatment train: reverse osmosis (RO) used to concentrate PFAS upstream, followed by supercritical water oxidation (SCWO) for PFAS destruction."
+      }
+    }
+  ],
+  "source_system": "gpt51_web_search",
+  "task_id": "RT05"
+}

@@ -1,0 +1,264 @@
+{
+  "batch_id": "test40-verbatim-review-batch-02",
+  "batch_sha256": "8fa7b242fc171ab433baa713e653b0ea6b249510e68d9140c33536098c9599ae",
+  "prompt_sha256": "77caaf6d224a0af070ec3bac7c71b2336488cf1c8cbfdab4d8658a20b0b58d3f",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-verbatim-review-batch-02",
+    "reviews": [
+      {
+        "question_id": "WF10_009",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Two exact_spans entries (in WF10_009-G02 and WF10_009-X01) reuse the identical quoted text from WF10_009_MMG002/WF10_009_MMG001 for a second 'supports' claim whose content is not actually present in that quoted span, rather than quoting the correct sentence from the approved full chunk that does support the claim.",
+          "The deterministic resolution for this question (whitespace restoration on WF10_009-G02/MMG003) is a non-substantive fix and does not address the mis-quoted spans described above, which predate this resolution round."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_009-G01",
+            "verdict": "supported",
+            "issues": [
+              "Central proposition partly rests on the phrase 'could reach up to 99%,' which appears only in the approved full_chunk_text for WF10_009_MMG001 and not in the listed exact_evidence_span; this is valid per the full-chunk verbatim rule but is already correctly flagged for project-author audit in the deterministic resolution."
+            ],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_009-G02",
+            "verdict": "partially_supported",
+            "issues": [
+              "The third exact_spans entry (evidence_id WF10_009_MMG002) duplicates the exact_evidence_span used for the pH claim ('elevating the pH from 3.2 to 9.5 ... 91.17% to 97.49%'), but its 'supports' text instead describes the Ca2+ claim ('97.10% to 99.40%'), which is a different sentence in the approved full chunk ('The concentration of Ca 2 + was increased from 0.1 mM to 2 mM, and the level of PFOS rejection was raised from 97.10 % to 99.40 %.'). The quoted span does not actually contain the Ca2+ statement it is attached to."
+            ],
+            "required_repairs": [
+              "Replace the mis-copied exact_evidence_span for the Ca2+ sub-claim with the correct verbatim sentence from the approved WF10_009_MMG002 full chunk ('The concentration of Ca 2 + was increased from 0.1 mM to 2 mM, and the level of PFOS rejection was raised from 97.10 % to 99.40 %.'), and flag it for project-author audit since it was not in the originally listed exact/unit spans."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_009-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_009-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_009-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_009-X01",
+            "verdict": "partially_supported",
+            "issues": [
+              "The second exact_spans entry (evidence_id WF10_009_MMG001) duplicates the exact_evidence_span used for the CCMF/98.3% claim, but its 'supports' text instead references the phrase 'could reach up to 99%,' which is a different sentence in the approved full chunk ('...exhibited a good PFAS rejection in water and wastewater with efficiencies that could reach up to 99 %.'). The quoted span does not contain that phrase."
+            ],
+            "required_repairs": [
+              "Replace the mis-copied exact_evidence_span with the correct verbatim sentence from the approved WF10_009_MMG001 full chunk containing 'could reach up to 99 %,' and flag it for project-author audit as a full-chunk-only span."
+            ]
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Correct the two mis-quoted exact_evidence_span entries in WF10_009-G02 and WF10_009-X01 so each quoted span actually contains the text it is claimed to support, sourcing the corrected quotes from the approved full chunks and flagging them for project-author audit per the full-chunk verbatim-span rule."
+        ]
+      },
+      {
+        "question_id": "WF10_010",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_010-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_010-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_010-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_010-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_010-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_010-G06",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_010-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_010-X02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_010-X03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "WF10_011",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Task component WF10_011-T02 (regeneration of the adsorbing/electrode surface under applied potential) has zero claim groups covering it; only constraint groups (all mapped to T01) exist. The approved full_chunk_text for WF10_011_MMG003 contains a directly on-topic, verbatim regeneration statement ('the bound PFOA could be effectively desorbed due to the charge repulsion when a negative bias was applied (e.g., regeneration of > 80 % at –1.5 V)') that was not selected as evidence, even though the prompt's rule explicitly allows using verbatim spans from an approved full chunk that were not separately listed as exact/unit spans. The draft_ledger's 'unresolved_or_unsupported' note that 'the citable evidence span available here does not explicitly cover regeneration behavior' is therefore inaccurate given the approved full chunk already in the packet.",
+          "The previously flagged and reportedly resolved WF10_011-G02 span-sufficiency issue (unvalidated '60-fold and 150-fold' continuation) is confirmed fixed: the current exact_evidence_span for WF10_011_MMG005 stops before that continuation and matches the reference_answer's more limited claim."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_011-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-X02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-X03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-X04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Add a claim group under task component WF10_011-T02 using the verbatim regeneration sentence available in the approved WF10_011_MMG003 full chunk (negative-bias-induced PFOA desorption, regeneration >80% at –1.5 V), flagged for project-author audit since it was not among the originally listed exact/unit spans, and revise the answerability_rationale and unresolved_or_unsupported notes to reflect that this regeneration evidence is in fact available rather than absent."
+        ]
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 125653,
+    "num_turns": 7,
+    "stop_reason": "tool_use",
+    "session_id": "065feac7-875c-4045-b59e-9d5d7b6772d4",
+    "total_cost_usd": 0.5829549,
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 89358,
+      "cache_read_input_tokens": 198468,
+      "output_tokens": 12488,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 89358
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 11231,
+          "cache_read_input_tokens": 85838,
+          "cache_creation_input_tokens": 8575,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 8575,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 867,
+        "outputTokens": 21,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000972,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 10,
+        "outputTokens": 12488,
+        "cacheReadInputTokens": 198468,
+        "cacheCreationInputTokens": 89358,
+        "webSearchRequests": 0,
+        "costUSD": 0.5819829,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 5442,
+    "ttft_stream_ms": 1010,
+    "time_to_request_ms": 59,
+    "type": "result",
+    "duration_ms": 125156,
+    "uuid": "a18ce361-9a32-4944-9bb3-f2593b230fec"
+  },
+  "candidate_test40_inputs_used": false
+}

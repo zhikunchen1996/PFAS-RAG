@@ -1,0 +1,648 @@
+{
+  "call_key": "RT02:bge_llm_local_rag:extraction:S11",
+  "created_at": "2026-08-05T03:23:59.842121+00:00",
+  "raw_response_text": "{\"task_id\":\"RT02\",\"source_system\":\"bge_llm_local_rag\",\"records\":[{\"record_id\":\"S11-R1\",\"source_id\":\"S11\",\"doi_or_stable_url\":\"https://doi.org/10.1016/j.jhazmat.2022.128804\",\"citation\":\"Croll, H.C.; Chow, S.; Ojeda, N.; Schwab, K.; Prasse, C.; Capelle, R.; Klamerus, J.; Oppenheimer, J.; Jacangelo, J.G. Adaptation of selected models for describing competitive per- and polyfluoroalkyl substances breakthrough curves in groundwater treated by granular activated carbon. Journal of Hazardous Materials. 2022, 433, 128804.\",\"study_type\":\"pilot_or_field_deployment\",\"study_scale\":{\"value\":\"Pilot-scale single-column GAC system treating contaminated municipal groundwater with historical industrial PFAS contamination\",\"evidence_locator_ids\":[\"S11-E01\",\"S11-E02\"]},\"matrix\":{\"value\":\"Groundwater / municipal drinking water supply with historical industrial PFAS contamination\",\"evidence_locator_ids\":[\"S11-E01\",\"S11-E05\"]},\"pfas_scope\":[{\"value\":\"Mixture of PFAS present in groundwater; 32 PFAS quantitatively screened in source water including C3-C14 perfluoroalkyl carboxylic acids (PFCA) and C3-C10 perfluoroalkyl sulfonic acids (PFSA); tentatively identified C2 PFSA perfluoroethane sulfonate (PFEtS) semi-quantitatively screened\",\"evidence_locator_ids\":[\"S11-E05\"]}],\"treatment\":{\"value\":\"Fixed-bed granular activated carbon (GAC) adsorption in a single column, following pretreatment with iron/manganese removal media (BIRM, later Filox-R) and a 1-micron cartridge filter\",\"evidence_locator_ids\":[\"S11-E01\"]},\"operating_conditions\":[{\"name\":\"Configuration\",\"value\":\"Continuous-flow, downflow single-column GAC system fed from three 3,785 L reservoirs supplied by a contaminated municipal well; water pretreated with BIRM iron removal media for GAC bed volumes 0-44,734 then Filox-R media for GAC bed volumes 44,734-84,249; followed by 1-micron cartridge filtration; GAC column fed by Seepex BW1 metering pump\",\"unit\":null,\"qualifiers\":\"Reduced empty-bed contact time (EBCT) used for accelerated data collection; exact EBCT, flow rate, and column dimensions not reported in the supplied excerpts\",\"evidence_locator_ids\":[\"S11-E01\"]},{\"name\":\"Empty-bed contact time (EBCT) - contextual (not specific to this pilot)\",\"value\":\"5-15\",\"unit\":\"min\",\"qualifiers\":\"Typical full-scale GAC design EBCT range described generically, not as the specific EBCT used in this pilot system\",\"evidence_locator_ids\":[\"S11-E03\"]},{\"name\":\"Pre-GAC bed volumes with BIRM pretreatment\",\"value\":\"0-44734\",\"unit\":\"bed volumes\",\"qualifiers\":\"Range of GAC bed volumes over which BIRM iron removal media was used upstream\",\"evidence_locator_ids\":[\"S11-E01\"]},{\"name\":\"Pre-GAC bed volumes with Filox-R pretreatment\",\"value\":\"44734-84249\",\"unit\":\"bed volumes\",\"qualifiers\":\"Range of GAC bed volumes over which Filox-R iron/manganese removal media was used upstream\",\"evidence_locator_ids\":[\"S11-E01\"]}],\"endpoints\":[{\"endpoint_type\":\"removal\",\"reported_term\":\"PFAS breakthrough curves, bed volumes to breakthrough, media life to predetermined breakthrough criteria\",\"interpretation\":\"PFAS removal performance was characterized via breakthrough curves (C/C0 vs. bed volumes) for multiple PFAS in a competitive system; media life was evaluated based on bed volumes to specified breakthrough criteria and via a composite health index (HI) that integrates multiple PFAS.\",\"evidence_locator_ids\":[\"S11-E02\",\"S11-E06\",\"S11-E07\",\"S11-E08\"]},{\"endpoint_type\":\"other\",\"reported_term\":\"Descriptive breakthrough model fit and adaptations (Yoon-Nelson, Clark, Dose-Response, Modified Dose-Response) including desorption\",\"interpretation\":\"Adapted descriptive models (especially Dose-Response and Modified Dose-Response) were fitted to pilot PFAS breakthrough data to account for competitive sorption and desorption (C/C0 > 1) and to describe both media life to breakthrough and maximum effluent concentrations during desorption.\",\"evidence_locator_ids\":[\"S11-E02\",\"S11-E07\",\"S11-E08\"]}],\"quantitative_findings\":[{\"name\":\"Typical full-scale EBCT (contextual)\",\"value\":\"5-15\",\"value_form\":\"range\",\"unit\":\"min\",\"qualifiers\":\"Described as traditional full-scale GAC design EBCT range; not necessarily the EBCT used in this pilot study\",\"evidence_locator_ids\":[\"S11-E03\"]},{\"name\":\"Pre-GAC pretreatment bed volumes with BIRM media\",\"value\":\"0-44734\",\"value_form\":\"range\",\"unit\":\"bed volumes\",\"qualifiers\":\"Range of GAC bed volumes over which BIRM iron removal media was used upstream of GAC\",\"evidence_locator_ids\":[\"S11-E01\"]},{\"name\":\"Pre-GAC pretreatment bed volumes with Filox-R media\",\"value\":\"44734-84249\",\"value_form\":\"range\",\"unit\":\"bed volumes\",\"qualifiers\":\"Range of GAC bed volumes over which Filox-R media was used upstream of GAC\",\"evidence_locator_ids\":[\"S11-E01\"]}],\"limitations\":[{\"statement\":\"Common descriptive fixed-bed breakthrough models (e.g., Yoon-Nelson, Clark, Dose-Response) traditionally assume monotonic adsorption with lim(BV\u2192\u221e) C/C0 = 1 and cannot describe chromatographic peaks where C/C0 > 1 caused by desorption and competitive displacement in multi-solute PFAS systems.\",\"basis\":\"author_reported\",\"evidence_locator_ids\":[\"S11-E07\",\"S11-E08\"]},{\"statement\":\"Desorption of PFAS (especially shorter-chain PFAS such as PFBA and some longer-chain PFCAs like PFOA) is well documented and can lead to effluent concentrations exceeding influent concentrations, which complicates the use of standard breakthrough models for full-scale design.\",\"basis\":\"author_reported\",\"evidence_locator_ids\":[\"S11-E06\",\"S11-E08\"]},{\"statement\":\"Further research is needed to determine the impact of a wider range of PFAS mixtures, background water qualities, sorbent types, and sorbent regeneration on the performance and applicability of the adapted descriptive models, which remain empirical (descriptive) in nature.\",\"basis\":\"author_reported\",\"evidence_locator_ids\":[\"S11-E07\"]},{\"statement\":\"Pilot results and model fits are specific to a particular groundwater quality and PFAS mixture, limiting direct generalization to other waters without additional validation.\",\"basis\":\"author_reported\",\"evidence_locator_ids\":[\"S11-E02\",\"S11-E07\"]},{\"statement\":\"Only column (fixed-bed) data were used; no batch isotherm or kinetic tests are reported in the supplied excerpts, so direct batch-to-column scale-up relationships are not established in this study.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"S11-E01\",\"S11-E02\",\"S11-E03\"]}],\"residuals_byproducts\":[{\"statement\":\"Desorption and chromatographic effects in the fixed-bed GAC system can cause effluent PFAS concentrations (particularly for shorter-chain PFAS) to exceed influent concentrations (C/C0 > 1), increasing consumer exposure during later stages of media operation.\",\"basis\":\"author_reported\",\"evidence_locator_ids\":[\"S11-E06\",\"S11-E08\"]}],\"comparability\":{\"status\":\"descriptive_only\",\"reason\":\"The study provides pilot-scale fixed-bed GAC breakthrough data and adapted descriptive models for a specific PFAS-contaminated groundwater and competitive multi-PFAS system, but key operating details (exact EBCT, flow rate, column dimensions, specific breakthrough criteria values, bed volumes to breakthrough, and capacities) are not available in the supplied excerpts. As such, the record is mainly useful for qualitative insights into competitive adsorption, desorption, and model-based media life estimation rather than for direct quantitative comparison with other batch or column studies.\",\"evidence_locator_ids\":[\"S11-E01\",\"S11-E02\",\"S11-E03\",\"S11-E06\",\"S11-E07\",\"S11-E08\"]}}],\"extraction_notes\":[\"Only partial sections of the Croll et al. (2022) article were available; numerical values for EBCT, flow rate, GAC properties, column dimensions, bed volumes to specific PFAS breakthrough criteria, and adsorption capacities were not present in the provided chunks and therefore were not extracted.\",\"The article focuses on pilot fixed-bed GAC breakthrough modeling for competitive PFAS mixtures and does not, in the supplied excerpts, report batch adsorption tests; thus no batch-to-column quantitative relationships could be extracted from this source.\"]}",
+  "request": {
+    "max_completion_tokens": 16000,
+    "messages": [
+      {
+        "content": "You are an evidence extraction specialist for PFAS treatment and remediation\nresearch. Build a structured study evidence table before any narrative review\nis written.\n\nExtract one record per primary-study experiment, modeled scenario, or field\ndeployment that contributes usable evidence to the review task. A paper may\nproduce more than one record only when materially different matrices,\ntechnologies, operating regimes, or endpoints would otherwise be conflated.\n\nReview articles and perspectives may help identify terminology or primary\nstudies, but they must not be used as the source of a quantitative study\nrecord. Never copy a review table as though it were a primary result.\n\nFor every populated source-dependent field:\n- preserve the PFAS identity or class, matrix, starting concentration or\n  loading, operating conditions, study scale, measured endpoint, value, unit,\n  and material qualifiers when reported;\n- attach only the field-level evidence locator identifiers that directly\n  support that specific value or statement;\n- use an empty string or empty array when the source does not report the\n  information; do not infer or estimate it;\n- do not turn the absence of information in the supplied packet into a study\n  finding, quantitative result, or author-reported limitation unless the source\n  explicitly states that absence;\n- distinguish removal, separation, sorption, parent-compound loss,\n  transformation, degradation, destruction, defluorination, mineralization,\n  total organofluorine change, and toxicity change;\n- classify endpoint_type from what was actually measured, not from the\n  authors' preferred label. Parent loss alone is not destruction. Phase\n  transfer is removal or separation, not degradation. Inorganic fluoride\n  release or fluorine-balance closure can establish defluorination but cannot\n  by itself establish mineralization. Use mineralization only when direct\n  carbon-fate evidence such as CO2/inorganic-carbon production or a carbon\n  balance is reported. Preserve a broader author term in reported_term and\n  explain any mismatch in interpretation;\n- do not normalize or compare values unless their units, denominators,\n  matrices, PFAS scope, operating conditions, and endpoints permit it.\n\nOnly populate quantitative_findings when the source reports an actual numeric\nvalue, inequality, approximate value, range, or explicit ND/not-detected\nresult. Put the number or censoring marker in value and the measurement unit in\nunit. Normalize Unicode inequality signs to ASCII >= or <= and range dashes to\nan ASCII hyphen while preserving the source wording in qualifiers. A unit or\norder-of-magnitude scale without a number is not a quantitative finding.\nQualitative parent loss, intermediate formation, or disappearance belongs in\nthe endpoint interpretation or residual/byproduct statements instead.\n\nSet value_form to exactly one of:\n- exact_numeric: a bare number such as `99.7` or `1.2e-3`;\n- approximate_numeric: `~` followed by a number;\n- inequality: `<`, `<=`, `>`, or `>=` followed by a number;\n- range: two numbers separated by `-` or `to`; or\n- not_detected: exactly `ND`, `N/D`, `not detected`,\n  `below detection limit`, or `below quantification limit`.\n\nPut uncertainty, denominators, fold-change wording, and explanatory text in\nqualifiers rather than value. A deterministic validator will remove malformed\nquantitative fields before source verification.\n\nFor limitations, use basis=author_reported only when the source states the\nlimitation. Use basis=design_inferred only for a constraint that follows\ndirectly from cited design evidence, such as one matrix, one compound, or\nbench-scale operation. Never label missing information in the supplied packet\nas a scientific limitation of the study.\n\nMark each record as comparable with conditions, descriptive only, or not\ncomparable. Comparability is an analyst inference rather than a quotation:\nattach locators for the matrix, scale, conditions, endpoint, and denominator\non which the inference rests, and explain the reason. Do not reward a study\nfor reporting a larger percentage when its endpoint or conditions differ.\n\nThe task was derived from a defining review that is held out from all\ncandidate retrieval systems. The supplied anchor identifiers are an exclusion\nlist, not evidence. Do not extract from the anchor, cite it, reconstruct its\nconclusions, or use its tables.\n\nReturn one JSON object that follows the supplied evidence-table schema exactly.\nDo not write the narrative review in this step.\n",
+        "role": "system"
+      },
+      {
+        "content": "Task:\n{\"review_brief\":\"Prepare a focused review of when batch adsorption results do and do not predict column, pilot, or full-scale PFAS treatment performance.\",\"task_id\":\"RT02\",\"title\":\"Translating PFAS adsorption results from batch tests to continuous treatment\"}\n\nTask-specific data extraction objective:\nExtract study scale, adsorbent, PFAS and matrix, batch or flow configuration, contact time, flow and bed properties, capacity definition, breakthrough criterion, bed volumes, media lifetime, and uncertainty or scale-up limitation.\n\nSource system (return this exact value):\nbge_llm_local_rag\n\nCandidate source identifier (all records must use this exact source_id):\nS11\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nCandidate local-corpus source documents and complete evidence chunks:\n{\n  \"bge_document_rank\": 13,\n  \"bge_score\": 0.28080323338508606,\n  \"citation\": \"Croll, H.C.; Chow, S.; Ojeda, N.; Schwab, K.; Prasse, C.; Capelle, R.; Klamerus, J.; Oppenheimer, J.; Jacangelo, J.G. Adaptation of selected models for describing competitive per- and polyfluoroalkyl substances breakthrough curves in groundwater treated by granular activated carbon. Journal of Hazardous Materials 2022 433 128804. DOI: 10.1016/j.jhazmat.2022.128804.\",\n  \"doi\": \"10.1016/j.jhazmat.2022.128804\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.jhazmat.2022.128804\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 10,\n      \"locator_id\": \"S11-E01\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0037748217582702637,\n        \"RT02-C2\": 0.01427644956856966,\n        \"RT02-C3\": 3.7353471270762384e-05,\n        \"umbrella\": 0.2862264811992645\n      },\n      \"section\": \"methods\",\n      \"text\": \"literature has found the pH PZC to be 9.7 ( Coelho et al., 2006 ). GAC with basic pH PZC has been shown to exhibit better PFAS removal performance than those with neutral pH PZC values ( Cantoni et al., 2021 ). 2.2. Pilot Study A pilot-scale facility was operated continuously to treat a ground - water supply with historical industrial PFAS contamination. The pilot evaluated a single-column GAC treatment with a reduced empty-bed contact time for an accelerated data collection timeline. A schematic of the pilot is shown in Fig. 1 , while operational details for the pilot are shown in Table 1 . The pilot employed three 3,785-liter reservoirs fed from a contami - nated municipal well to maintain continuous operation. Prior to entering the reservoirs, water was pretreated using BIRM \\u00ae iron removal media (Clack Corporation, Windsor, Wisconsin, United States) from GAC bed volumes of 0 \\u2013 44,734, which was later replaced with Filox-R \\u2122 media (Watts, North Andover, Massachusetts, United States) to provide iron and manganese removal from GAC bed volumes of 44,734 \\u2013 84,249. Following the reservoirs, the water passed through a 1-micron cartridge filter for further pretreatment. The GAC column was fed using a Seepex BW1 metering pump.\"\n    },\n    {\n      \"corpus_chunk\": 32,\n      \"locator_id\": \"S11-E02\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.2833576500415802,\n        \"RT02-C2\": 0.0036616467405110598,\n        \"RT02-C3\": 3.737028600880876e-05,\n        \"umbrella\": 0.10416204482316971\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"Notably, the HI value is not governed by any one PFAS curve, and only by calculating the change in the HI over the treated bed volumes can the overall media life be evaluated. While the implementation of this approach will change from case-to-case, modeling composite indices is anticipated to be a powerful tool for designing full-scale PFAS treatment systems. 4. Conclusions While the model fits described in this paper are specific to a partic - ular set of PFAS breakthrough curves for specific water quality condi - tions, this study provides a more perspicuous understanding of why certain models fit PFAS breakthrough better than others. More impor - tantly, the adaptation and implementation of descriptive breakthrough models described in this study can be employed by those conducting pilot studies of GAC for the purpose of generating full-scale design in - formation. Unlike previous descriptive models, the novel adaptations described in this study account for desorption within competitive PFAS removal systems, allowing end-users to more accurately describe Table 6 Difference in breakthrough fit of data up to 35% breakthrough and full data set. Bed Volumes to 50% Breakthrough Bed Volumes to 90% Breakthrough Compound 35% Data Fit Full Data Set Fit Error 35% Data Fit Full Data Set Fit Error\"\n    },\n    {\n      \"corpus_chunk\": 3,\n      \"locator_id\": \"S11-E03\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.07720217108726501,\n        \"RT02-C2\": 0.03902567923069,\n        \"RT02-C3\": 0.006340240128338337,\n        \"umbrella\": 0.0661255270242691\n      },\n      \"section\": \"introduction\",\n      \"text\": \"2015 ) and many utilities have installed GAC treatment facilities to remove PFAS from contaminated drinking water supplies ( Bartell et al., 2010; Belkouteb et al., 2020; Hohenstein and Bachmeier, 2015 ). The removal of PFAS by GAC can be explained by several mecha - nisms, including hydrophobic interactions, electrostatic attraction, and PFAS aggregation ( Du et al., 2014 ). PFAS compounds vary significantly in hydrophobicity: carbon chain length is proportional to hydropho - bicity, and perfluoroalkyl sulfonic acids (PFSA) demonstrate increased hydrophobicity as compared to perfluoroalkyl carboxylic acids (PFCA) with the same perfluorinated carbon chain length ( Park et al., 2020 ). As such, GAC treatment has been found to be more effective for removing longer-chain PFAS than shorter-chain ones, and more effective for removing PFSA than PFCA ( McCleaf et al., 2017; Westreich et al., 2018 ). Traditional full-scale GAC treatment facility design is typically based on empty bed contact time (EBCT) and media service-life, often described by the number of bed volumes (BVs) the system can treat until solute breakthrough ( Crittenden et al., 1987 ). EBCT, or the time during which the solution is in contact with the media column, is typically 5 \\u2013 15 min\"\n    },\n    {\n      \"corpus_chunk\": 0,\n      \"locator_id\": \"S11-E04\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.00017599326383788139,\n        \"RT02-C2\": 0.009662552736699581,\n        \"RT02-C3\": 3.7326124584069476e-05,\n        \"umbrella\": 0.17872822284698486\n      },\n      \"section\": \"unknown\",\n      \"text\": \"Journal of Hazardous Materials 433 (2022) 128804 Available online 28 March 2022 0304-3894/\\u00a9 2022 Elsevier B.V. All rights reserved. Adaptation of selected models for describing competitive per- and polyfluoroalkyl substances breakthrough curves in groundwater treated by granular activated carbon Henry C. Croll a , Steven Chow b , Nadezda Ojeda b , Kellogg Schwab b , Carsten Prasse b , Ryan Capelle c , Jamie Klamerus c , Joan Oppenheimer d , Joseph G. Jacangelo b , d , * a Institute for Water Technology and Policy, Stantec, Des Moines, IA 50322, USA b Department of Environmental Health and Engineering, Johns Hopkins Bloomberg School of Public Health, 615 North Wolfe Street, Baltimore, MD, 21205, USA c Stantec, Minneapolis, MN, 55402, USA d Institute for Water Technology and Policy, Stantec, Washington DC 20005, USA HIGHLIGHTS GRAPHICAL ABSTRACT \\u2022 Novel adaptations were made to com - mon empirical breakthrough models. \\u2022 Novel adaptations accounted for desorption of PFAS from granular acti - vated carbon. \\u2022 Models provide easy transition between single solute and health index-driven system. \\u2022 Models can be a useful tool for full-scale design applications. \\u2022 Descriptive models were evaluated in predictive applications. ARTICLE INFO Editor: Arturo J Hernandez-Maldonado Keywords: Drinking water Per- and polyfluoroalkyl substances (PFAS) Water treatment Adsorption\"\n    },\n    {\n      \"corpus_chunk\": 12,\n      \"locator_id\": \"S11-E05\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0004664039006456733,\n        \"RT02-C2\": 0.028036639094352722,\n        \"RT02-C3\": 3.729403033503331e-05,\n        \"umbrella\": 0.08863939344882965\n      },\n      \"section\": \"methods\",\n      \"text\": \"Hopkins University / Stantec Alliance Laboratory for analysis. PFAS extraction was conducted the day of receipt, typically completed within 24 h of sample collection. PFAS samples were spiked with an isotopically-labeled internal standard mixture and directly extracted from 250 mL PP sample bottles by weak anion exchange solid-phase extractions described by Chow et al. (2021) . Eluted methanolic sample extracts of 0.5 mL resulted in an effective 500-fold concentration of target analytes from the initial sampling. In addition to pilot samples, a laboratory blank (250 mL milli-Q water) and spiked recovery sample (250 mL milli-Q water spiked with 50 ng/L of each PFAS) were processed in the same manner for each sample batch. Samples were extracted and analyzed in batches of 24 or less (including QC samples). Samples were analyzed by liquid chromatography-tandem mass spectrometry (LC-MS/MS), as described previously by Chow et al. with modifications ( Chow et al., 2021 ). Thirty-two PFAS were initially quantitatively screened in the source water including C3-C14 PFCA and C3-C10 PFSA. Additionally, C2 PFSA perfluoroethane sulfonate (PFEtS) was tentatively identified in this study and semi-quantitatively screened using MS parameters described by Barzen-Hanson and Field (2015) and estimated quantitation linked to\"\n    },\n    {\n      \"corpus_chunk\": 8,\n      \"locator_id\": \"S11-E06\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0004036382888443768,\n        \"RT02-C2\": 0.027315285056829453,\n        \"RT02-C3\": 3.7295380025170743e-05,\n        \"umbrella\": 0.06387707591056824\n      },\n      \"section\": \"methods\",\n      \"text\": \"( Abdolali et al., 2017 ). As displacement of lower affinity compounds occurs, the compounds re-enter the liquid stream and effluent concen - trations may exceed the influent concentrations, leading to C/C 0 > 1, known as chromatographic effect, which cannot be taken into account by existing common descriptive models ( Benjamin and Lawler, 2013 ). Desorption most often applies to shorter chain PFAS, such as per - fluorobutanoic acid (PFBA), but it has also been observed in longer chain carboxylic acid PFAS compounds such as perfluorooctanoic acid (PFOA) ( McCleaf et al., 2017; Zaggia et al., 2016 ). Accounting for solute desorption is important in cases where the breakthrough models are used to inform full-scale system design. Media change-out at full-scale water treatment facilities is often based on longer-chain compounds, but those long run times can lead to desorp - tion of their shorter-chain homologs ( Belkouteb et al., 2020; Hohenstein and Bachmeier, 2015 ). Desorption also has critical implications for the levels of exposure to consumers, as effluent concentrations of certain compounds may be elevated above their influent concentrations, exposing consumers to even higher levels of some PFAS. Accurate full-scale system design needs to take these increased concentrations\"\n    },\n    {\n      \"corpus_chunk\": 34,\n      \"locator_id\": \"S11-E07\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.046298425644636154,\n        \"RT02-C2\": 0.01729866862297058,\n        \"RT02-C3\": 4.1105045966105536e-05,\n        \"umbrella\": 0.02116338536143303\n      },\n      \"section\": \"methods\",\n      \"text\": \"The novel adaptation to common descriptive models demonstrated in this study successfully accounts for desorption of PFAS compounds from fixed bed media and can describe both the media-life to pre - determined breakthrough criteria and maximum concentration observed during desorption. Of the three common descriptive models evaluated and adapted in this study, the Dose-Response and Modified Dose-Response models consistently provided best fits of experimental data. Further research is needed to determine the impact of a larger range of PFAS matrixes, background water qualities, sorbents, and sor - bent regeneration as the models are descriptive in nature. CRediT authorship contribution statement Henry C. Croll: Conceptualization, Investigation, Methodology, Formal analysis, Writing \\u2013 original draft, Writing \\u2013 review & editing. Steven Chow: Formal analysis, Data curation, Validation, Methodology, Writing \\u2013 review & editing. Nadezda Ojeda: Formal analysis, Data curation, Methodology. Kellogg Schwab: Supervision, Resources, Writing \\u2013 review & editing. Carsten Prasse: Supervision, Resources, Writing \\u2013 review & editing. Ryan Capelle: Funding acquisition, Project administration, Resource. Jamie Klamerus: Investigation, Writing \\u2013 review & editing. Joan Oppenheimer: Project administration, Writing \\u2013 review & editing. Joseph G. Jacangelo: Supervision, Resources, Project administration, Writing \\u2013 review & editing. Declaration of Competing Interest\"\n    },\n    {\n      \"corpus_chunk\": 7,\n      \"locator_id\": \"S11-E08\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.001022101379930973,\n        \"RT02-C2\": 0.015029431320726871,\n        \"RT02-C3\": 3.734182610060088e-05,\n        \"umbrella\": 0.03966877609491348\n      },\n      \"section\": \"methods\",\n      \"text\": \"this reason, this study was limited to the Yoon-Nelson, Clark, and Dose-Response models. The three selected models assume eventual exhaustion of sorptive bed capacity, resulting in a continuous increase in effluent concentrations ( C ) approaching influent concentrations ( C 0 ) as shown in Eq. 1 ( Hu et al., 2020 ). lim BV \\u2192\\u221e C C 0 = 1 (1) As a result, the application of these models is limited to the evalua - tion of adsorption curves that never exceed C/C 0 = 1. Under real-world conditions, however, solutes of varying affinity for the media compete for sorption sites, and solutes of higher affinity can displace solutes of lower affinity ( Belkouteb et al., 2020; Hohenstein and Bachmeier, 2015 ). Desorption of PFAS is well documented and is hypothesized to be caused by molecular displacement by compounds with greater sorptive affinity such as hydrophobic dissolved organic carbon fractions or other PFAS homologs ( Appleman et al., 2013; Hohenstein and Bachmeier, 2015; McCleaf et al., 2017 ). This case contrasts with single contaminant systems, such as adsorption of an isolated heavy metal, where desorp - tion is not a concern when developing system design parameters ( Abdolali et al., 2017 ). As displacement of lower affinity compounds\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2022 - Croll - Adaptation of selected models for describing competitive per- and polyfluoroalkyl substances breakthrough curves in groundwater treated by granular.pdf\",\n  \"source_id\": \"S11\",\n  \"title\": \"Adaptation of selected models for describing competitive per- and polyfluoroalkyl substances breakthrough curves in groundwater treated by granular activated carbon\",\n  \"year\": \"2022\"\n}\n\nAll anchor records should already have been removed by deterministic filtering.\nIf an anchor identifier is nevertheless present, omit it and report the\nviolation in extraction_notes. Extract at most three materially distinct\nrecords from this source, prioritizing records that answer the task components.\n\nUse only the supplied source documents. Extract primary-study evidence needed\nto answer the task and return the schema-constrained study evidence table.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_review_evidence_table",
+        "schema": {
+          "$defs": {
+            "endpoint": {
+              "additionalProperties": false,
+              "properties": {
+                "endpoint_type": {
+                  "enum": [
+                    "removal",
+                    "separation",
+                    "sorption",
+                    "parent_compound_loss",
+                    "transformation",
+                    "degradation",
+                    "destruction",
+                    "defluorination",
+                    "mineralization",
+                    "total_organofluorine_change",
+                    "toxicity_change",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "S11-E01",
+                      "S11-E02",
+                      "S11-E03",
+                      "S11-E04",
+                      "S11-E05",
+                      "S11-E06",
+                      "S11-E07",
+                      "S11-E08"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "interpretation": {
+                  "type": "string"
+                },
+                "reported_term": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "endpoint_type",
+                "reported_term",
+                "interpretation",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceRecord": {
+              "additionalProperties": false,
+              "properties": {
+                "citation": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "comparability": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_locator_ids": {
+                      "items": {
+                        "enum": [
+                          "S11-E01",
+                          "S11-E02",
+                          "S11-E03",
+                          "S11-E04",
+                          "S11-E05",
+                          "S11-E06",
+                          "S11-E07",
+                          "S11-E08"
+                        ],
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "type": "array"
+                    },
+                    "reason": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "enum": [
+                        "comparable_with_conditions",
+                        "descriptive_only",
+                        "not_comparable"
+                      ],
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "status",
+                    "reason",
+                    "evidence_locator_ids"
+                  ],
+                  "type": "object"
+                },
+                "doi_or_stable_url": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "endpoints": {
+                  "items": {
+                    "$ref": "#/$defs/endpoint"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "limitations": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "matrix": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "operating_conditions": {
+                  "items": {
+                    "$ref": "#/$defs/namedValue"
+                  },
+                  "type": "array"
+                },
+                "pfas_scope": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceText"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "quantitative_findings": {
+                  "items": {
+                    "$ref": "#/$defs/quantitativeValue"
+                  },
+                  "type": "array"
+                },
+                "record_id": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "residuals_byproducts": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "source_id": {
+                  "enum": [
+                    "S11"
+                  ],
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "study_scale": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "study_type": {
+                  "enum": [
+                    "primary_experiment",
+                    "pilot_or_field_deployment",
+                    "modeling_or_life_cycle_study",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "treatment": {
+                  "$ref": "#/$defs/evidenceText"
+                }
+              },
+              "required": [
+                "record_id",
+                "source_id",
+                "doi_or_stable_url",
+                "citation",
+                "study_type",
+                "study_scale",
+                "matrix",
+                "pfas_scope",
+                "treatment",
+                "operating_conditions",
+                "endpoints",
+                "quantitative_findings",
+                "limitations",
+                "residuals_byproducts",
+                "comparability"
+              ],
+              "type": "object"
+            },
+            "evidenceStatement": {
+              "additionalProperties": false,
+              "properties": {
+                "basis": {
+                  "enum": [
+                    "author_reported",
+                    "design_inferred"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "S11-E01",
+                      "S11-E02",
+                      "S11-E03",
+                      "S11-E04",
+                      "S11-E05",
+                      "S11-E06",
+                      "S11-E07",
+                      "S11-E08"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "statement": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "statement",
+                "basis",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceText": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "S11-E01",
+                      "S11-E02",
+                      "S11-E03",
+                      "S11-E04",
+                      "S11-E05",
+                      "S11-E06",
+                      "S11-E07",
+                      "S11-E08"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "namedValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "S11-E01",
+                      "S11-E02",
+                      "S11-E03",
+                      "S11-E04",
+                      "S11-E05",
+                      "S11-E06",
+                      "S11-E07",
+                      "S11-E08"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "quantitativeValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "S11-E01",
+                      "S11-E02",
+                      "S11-E03",
+                      "S11-E04",
+                      "S11-E05",
+                      "S11-E06",
+                      "S11-E07",
+                      "S11-E08"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "value_form": {
+                  "enum": [
+                    "exact_numeric",
+                    "approximate_numeric",
+                    "inequality",
+                    "range",
+                    "not_detected"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "value_form",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "properties": {
+            "extraction_notes": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "records": {
+              "items": {
+                "$ref": "#/$defs/evidenceRecord"
+              },
+              "maxItems": 3,
+              "type": "array"
+            },
+            "source_system": {
+              "enum": [
+                "bge_llm_local_rag"
+              ],
+              "type": "string"
+            },
+            "task_id": {
+              "enum": [
+                "RT02"
+              ],
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "source_system",
+            "records",
+            "extraction_notes"
+          ],
+          "title": "PFAS review study evidence table",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "b7ce205839589810398c32782af7fc2451c4d8015257740cb6d3c20b99bf493c",
+  "response_metadata": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.034715,
+    "finish_reason": "stop",
+    "input_tokens": 5924,
+    "latency_seconds": 19.066506708040833,
+    "output_tokens": 2731,
+    "reasoning_tokens": 831,
+    "response_id": "chatcmpl-E9MWDJbeLSxxUKxkMhyAOIotY6Zlm",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 8655,
+    "web_search_calls": 0
+  },
+  "result": {
+    "extraction_notes": [
+      "Only partial sections of the Croll et al. (2022) article were available; numerical values for EBCT, flow rate, GAC properties, column dimensions, bed volumes to specific PFAS breakthrough criteria, and adsorption capacities were not present in the provided chunks and therefore were not extracted.",
+      "The article focuses on pilot fixed-bed GAC breakthrough modeling for competitive PFAS mixtures and does not, in the supplied excerpts, report batch adsorption tests; thus no batch-to-column quantitative relationships could be extracted from this source."
+    ],
+    "records": [
+      {
+        "citation": "Croll, H.C.; Chow, S.; Ojeda, N.; Schwab, K.; Prasse, C.; Capelle, R.; Klamerus, J.; Oppenheimer, J.; Jacangelo, J.G. Adaptation of selected models for describing competitive per- and polyfluoroalkyl substances breakthrough curves in groundwater treated by granular activated carbon. Journal of Hazardous Materials. 2022, 433, 128804.",
+        "comparability": {
+          "evidence_locator_ids": [
+            "S11-E01",
+            "S11-E02",
+            "S11-E03",
+            "S11-E06",
+            "S11-E07",
+            "S11-E08"
+          ],
+          "reason": "The study provides pilot-scale fixed-bed GAC breakthrough data and adapted descriptive models for a specific PFAS-contaminated groundwater and competitive multi-PFAS system, but key operating details (exact EBCT, flow rate, column dimensions, specific breakthrough criteria values, bed volumes to breakthrough, and capacities) are not available in the supplied excerpts. As such, the record is mainly useful for qualitative insights into competitive adsorption, desorption, and model-based media life estimation rather than for direct quantitative comparison with other batch or column studies.",
+          "status": "descriptive_only"
+        },
+        "doi_or_stable_url": "https://doi.org/10.1016/j.jhazmat.2022.128804",
+        "endpoints": [
+          {
+            "endpoint_type": "removal",
+            "evidence_locator_ids": [
+              "S11-E02",
+              "S11-E06",
+              "S11-E07",
+              "S11-E08"
+            ],
+            "interpretation": "PFAS removal performance was characterized via breakthrough curves (C/C0 vs. bed volumes) for multiple PFAS in a competitive system; media life was evaluated based on bed volumes to specified breakthrough criteria and via a composite health index (HI) that integrates multiple PFAS.",
+            "reported_term": "PFAS breakthrough curves, bed volumes to breakthrough, media life to predetermined breakthrough criteria"
+          },
+          {
+            "endpoint_type": "other",
+            "evidence_locator_ids": [
+              "S11-E02",
+              "S11-E07",
+              "S11-E08"
+            ],
+            "interpretation": "Adapted descriptive models (especially Dose-Response and Modified Dose-Response) were fitted to pilot PFAS breakthrough data to account for competitive sorption and desorption (C/C0 > 1) and to describe both media life to breakthrough and maximum effluent concentrations during desorption.",
+            "reported_term": "Descriptive breakthrough model fit and adaptations (Yoon-Nelson, Clark, Dose-Response, Modified Dose-Response) including desorption"
+          }
+        ],
+        "limitations": [
+          {
+            "basis": "author_reported",
+            "evidence_locator_ids": [
+              "S11-E07",
+              "S11-E08"
+            ],
+            "statement": "Common descriptive fixed-bed breakthrough models (e.g., Yoon-Nelson, Clark, Dose-Response) traditionally assume monotonic adsorption with lim(BV\u2192\u221e) C/C0 = 1 and cannot describe chromatographic peaks where C/C0 > 1 caused by desorption and competitive displacement in multi-solute PFAS systems."
+          },
+          {
+            "basis": "author_reported",
+            "evidence_locator_ids": [
+              "S11-E06",
+              "S11-E08"
+            ],
+            "statement": "Desorption of PFAS (especially shorter-chain PFAS such as PFBA and some longer-chain PFCAs like PFOA) is well documented and can lead to effluent concentrations exceeding influent concentrations, which complicates the use of standard breakthrough models for full-scale design."
+          },
+          {
+            "basis": "author_reported",
+            "evidence_locator_ids": [
+              "S11-E07"
+            ],
+            "statement": "Further research is needed to determine the impact of a wider range of PFAS mixtures, background water qualities, sorbent types, and sorbent regeneration on the performance and applicability of the adapted descriptive models, which remain empirical (descriptive) in nature."
+          },
+          {
+            "basis": "author_reported",
+            "evidence_locator_ids": [
+              "S11-E02",
+              "S11-E07"
+            ],
+            "statement": "Pilot results and model fits are specific to a particular groundwater quality and PFAS mixture, limiting direct generalization to other waters without additional validation."
+          },
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "S11-E01",
+              "S11-E02",
+              "S11-E03"
+            ],
+            "statement": "Only column (fixed-bed) data were used; no batch isotherm or kinetic tests are reported in the supplied excerpts, so direct batch-to-column scale-up relationships are not established in this study."
+          }
+        ],
+        "matrix": {
+          "evidence_locator_ids": [
+            "S11-E01",
+            "S11-E05"
+          ],
+          "value": "Groundwater / municipal drinking water supply with historical industrial PFAS contamination"
+        },
+        "operating_conditions": [
+          {
+            "evidence_locator_ids": [
+              "S11-E01"
+            ],
+            "name": "Configuration",
+            "qualifiers": "Reduced empty-bed contact time (EBCT) used for accelerated data collection; exact EBCT, flow rate, and column dimensions not reported in the supplied excerpts",
+            "unit": null,
+            "value": "Continuous-flow, downflow single-column GAC system fed from three 3,785 L reservoirs supplied by a contaminated municipal well; water pretreated with BIRM iron removal media for GAC bed volumes 0-44,734 then Filox-R media for GAC bed volumes 44,734-84,249; followed by 1-micron cartridge filtration; GAC column fed by Seepex BW1 metering pump"
+          },
+          {
+            "evidence_locator_ids": [
+              "S11-E03"
+            ],
+            "name": "Empty-bed contact time (EBCT) - contextual (not specific to this pilot)",
+            "qualifiers": "Typical full-scale GAC design EBCT range described generically, not as the specific EBCT used in this pilot system",
+            "unit": "min",
+            "value": "5-15"
+          },
+          {
+            "evidence_locator_ids": [
+              "S11-E01"
+            ],
+            "name": "Pre-GAC bed volumes with BIRM pretreatment",
+            "qualifiers": "Range of GAC bed volumes over which BIRM iron removal media was used upstream",
+            "unit": "bed volumes",
+            "value": "0-44734"
+          },
+          {
+            "evidence_locator_ids": [
+              "S11-E01"
+            ],
+            "name": "Pre-GAC bed volumes with Filox-R pretreatment",
+            "qualifiers": "Range of GAC bed volumes over which Filox-R iron/manganese removal media was used upstream",
+            "unit": "bed volumes",
+            "value": "44734-84249"
+          }
+        ],
+        "pfas_scope": [
+          {
+            "evidence_locator_ids": [
+              "S11-E05"
+            ],
+            "value": "Mixture of PFAS present in groundwater; 32 PFAS quantitatively screened in source water including C3-C14 perfluoroalkyl carboxylic acids (PFCA) and C3-C10 perfluoroalkyl sulfonic acids (PFSA); tentatively identified C2 PFSA perfluoroethane sulfonate (PFEtS) semi-quantitatively screened"
+          }
+        ],
+        "quantitative_findings": [
+          {
+            "evidence_locator_ids": [
+              "S11-E03"
+            ],
+            "name": "Typical full-scale EBCT (contextual)",
+            "qualifiers": "Described as traditional full-scale GAC design EBCT range; not necessarily the EBCT used in this pilot study",
+            "unit": "min",
+            "value": "5-15",
+            "value_form": "range"
+          },
+          {
+            "evidence_locator_ids": [
+              "S11-E01"
+            ],
+            "name": "Pre-GAC pretreatment bed volumes with BIRM media",
+            "qualifiers": "Range of GAC bed volumes over which BIRM iron removal media was used upstream of GAC",
+            "unit": "bed volumes",
+            "value": "0-44734",
+            "value_form": "range"
+          },
+          {
+            "evidence_locator_ids": [
+              "S11-E01"
+            ],
+            "name": "Pre-GAC pretreatment bed volumes with Filox-R media",
+            "qualifiers": "Range of GAC bed volumes over which Filox-R media was used upstream of GAC",
+            "unit": "bed volumes",
+            "value": "44734-84249",
+            "value_form": "range"
+          }
+        ],
+        "record_id": "S11-R1",
+        "residuals_byproducts": [
+          {
+            "basis": "author_reported",
+            "evidence_locator_ids": [
+              "S11-E06",
+              "S11-E08"
+            ],
+            "statement": "Desorption and chromatographic effects in the fixed-bed GAC system can cause effluent PFAS concentrations (particularly for shorter-chain PFAS) to exceed influent concentrations (C/C0 > 1), increasing consumer exposure during later stages of media operation."
+          }
+        ],
+        "source_id": "S11",
+        "study_scale": {
+          "evidence_locator_ids": [
+            "S11-E01",
+            "S11-E02"
+          ],
+          "value": "Pilot-scale single-column GAC system treating contaminated municipal groundwater with historical industrial PFAS contamination"
+        },
+        "study_type": "pilot_or_field_deployment",
+        "treatment": {
+          "evidence_locator_ids": [
+            "S11-E01"
+          ],
+          "value": "Fixed-bed granular activated carbon (GAC) adsorption in a single column, following pretreatment with iron/manganese removal media (BIRM, later Filox-R) and a 1-micron cartridge filter"
+        }
+      }
+    ],
+    "source_system": "bge_llm_local_rag",
+    "task_id": "RT02"
+  },
+  "result_kind": "json",
+  "stage": "structured_extraction"
+}

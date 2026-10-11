@@ -1,0 +1,84 @@
+{
+  "protocol_id": "test40_multibase_direct_rag_v1",
+  "status": "preflight_only_no_paid_calls",
+  "date": "2026-07-30",
+  "scope": "Matched Direct-versus-BGE-LLM RAG Test40 comparison across three base models",
+  "question_count": 40,
+  "systems": [
+    "gpt51_direct",
+    "gpt51_rag",
+    "gemini31_pro_direct",
+    "gemini31_pro_rag",
+    "claude_sonnet5_direct",
+    "claude_sonnet5_rag"
+  ],
+  "generation_contract": {
+    "source": "Dev13 stage4_multibase_dev13_v1 transferred without modification",
+    "same_system_prompt": true,
+    "same_scientific_and_task_instructions": true,
+    "same_output_structure": true,
+    "answer_word_limit": null,
+    "max_completion_tokens": 5000,
+    "direct_has_retrieval": false,
+    "rag_retrieval": "frozen BGE-LLM top10",
+    "rag_soft_tags": "frozen common tagger output",
+    "rag_atomic_citations": true,
+    "retrieval_or_tagger_calls": 0
+  },
+  "providers": {
+    "gpt51": {
+      "request_model": "gpt-5.1",
+      "required_snapshot": "gpt-5.1-2025-11-13",
+      "reasoning_effort": "low",
+      "temperature": "provider_default_not_sent"
+    },
+    "gemini31_pro": {
+      "request_model": "gemini-3.1-pro-preview",
+      "thinking_level": "low",
+      "temperature": "provider_default_not_sent"
+    },
+    "claude_sonnet5": {
+      "request_model": "claude-sonnet-5",
+      "thinking": "adaptive",
+      "effort": "low",
+      "temperature": "provider_default_not_sent",
+      "formal_interface": "Anthropic Messages API"
+    }
+  },
+  "l3": {
+    "model": "gpt-5.1",
+    "required_snapshot": "gpt-5.1-2025-11-13",
+    "reasoning_effort": "low",
+    "temperature": "provider_default_not_sent",
+    "repeat_count": 3,
+    "claim_order": "canonical",
+    "one_anonymous_answer_per_request": true,
+    "primary_metric": "component-balanced core reference-claim coverage",
+    "aggregation": "equal mean across three complete repeat-specific system means",
+    "uncertainty": "sample standard deviation across three repeat-specific system means",
+    "bootstrap": false
+  },
+  "analysis": {
+    "primary_contrasts": "within-base-model RAG minus Direct",
+    "cross_model_scores": "descriptive secondary comparison on the common L3 scale",
+    "binary_pass": false
+  },
+  "execution_safety": {
+    "canonical_result_root": "benchmark/runs/test40_multibase_direct_rag_v1/results",
+    "automatic_sdk_retries": 0,
+    "resume_requires_exact_request_hash": true,
+    "successful_partial_calls_are_persisted": true,
+    "test_results_must_not_change_prompts_or_parameters": true
+  },
+  "terminal_refusal_policy": {
+    "status": "execution_amendment_1",
+    "rule": "A provider-level refusal is preserved as the model output and scored by L3 rather than retried until a substantive answer is obtained.",
+    "prompt_or_metric_change": false
+  },
+  "planned_paid_calls": {
+    "answer_generation": 240,
+    "l3": 720,
+    "total": 960
+  },
+  "test40_status_note": "This is a prespecified multibase extension transferred from Dev13 after the earlier Test40 retrieval-system experiment had opened Test40. No Test40 result was used to alter its prompts, models, metric, or aggregation."
+}

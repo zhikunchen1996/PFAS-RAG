@@ -1,0 +1,55 @@
+You are performing a citation-support sanity check for one
+literature-grounded PFAS answer.
+
+You receive:
+1. the visible question;
+2. the answer with [C#] citation markers; and
+3. all complete original final retrieved chunks used to generate the answer.
+
+Each [C#] marker maps to the final chunk whose rank equals #. Do not search for
+other evidence, use outside knowledge to repair a citation, evaluate retrieval
+recall, or compare the answer with gold evidence.
+
+Identify each material source-dependent scientific claim. Treat a sentence as
+more than one claim only when it contains genuinely separable scientific
+propositions. For each claim, evaluate its cited chunks together and assign one
+label:
+
+- supported: at least one cited chunk, or a combination of the cited chunks,
+  supports the material proposition and its necessary scope;
+- partially_supported: the central proposition is supported, but a secondary
+  qualifier, boundary, or detail is not established;
+- not_supported: the cited chunks do not support the material proposition;
+- contradicted: at least one supplied source directly contradicts the claim in
+  a way not acknowledged by the answer.
+
+This is a lenient claim-level sanity check, not an attachment-level citation
+precision test. Do not require every redundant citation attached to the same
+claim to independently entail the complete claim. Do not penalize citation
+style, citation count, wording, ordinary reasoning, synthesis, or clearly
+framed general background.
+
+Also list material source-dependent claims that have no citation. Do not
+invent missing claims, and do not treat ordinary interpretation as
+source-dependent merely because it is uncited.
+
+Return JSON only:
+{
+  "cited_claims": [
+    {
+      "claim_id": "S1",
+      "claim": "concise claim text",
+      "citation_ids": ["C1"],
+      "support": "supported | partially_supported | not_supported | contradicted",
+      "rationale": "one short sentence"
+    }
+  ],
+  "uncited_source_dependent_claims": [
+    {
+      "claim_id": "U1",
+      "claim": "concise claim text",
+      "support_in_supplied_context": "supported | partially_supported | not_supported | contradicted",
+      "rationale": "one short sentence"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "protocol_id": "l3_gold_reference_v3_continuous",
+  "status": "frozen_dev_continuous_only_before_test40",
+  "freeze_date": "2026-07-29",
+  "scope": "Dev13 scoring protocol; eligible for later Test40 use only after candidate-blind Test40 reference construction and freeze",
+  "supersedes": {
+    "protocol_id": "l3_gold_reference_dev13_v2",
+    "scope": "binary-threshold calibration plan only",
+    "reference_changed": false,
+    "judge_prompt_changed": false,
+    "continuous_score_changed": false
+  },
+  "frozen_reference": {
+    "path": "frozen/reference_claim_ledgers_v2.jsonl",
+    "sha256": "0ad2bbfae02c30433ab030c36ad2e95d1278d029f3378d7111e1df63e18c413a",
+    "question_count": 13,
+    "source": "project-author-approved repair7 Dev13 claim ledgers",
+    "gold_is_non_exhaustive": true
+  },
+  "judge": {
+    "prompt": "frozen/l3_gold_referenced_judge_v2.txt",
+    "model": "gpt-4.1-2025-04-14",
+    "reasoning_effort": "none",
+    "temperature": 0,
+    "anonymous": true,
+    "citation_blind": true,
+    "independent_per_answer": true,
+    "claim_scores": {
+      "full": 1.0,
+      "partial": 0.5,
+      "absent": 0.0,
+      "contradicted": 0.0
+    }
+  },
+  "primary_metric": {
+    "name": "mean_component_balanced_core_reference_claim_coverage",
+    "claim_order": "canonical",
+    "within_component": "mean over core required-content claim groups",
+    "within_question": "equal mean over frozen task components",
+    "system_level": "equal mean over questions",
+    "comparison": "paired system difference with question-clustered percentile bootstrap",
+    "bootstrap_iterations": 10000,
+    "bootstrap_seed": 20260729
+  },
+  "secondary_metrics": [
+    "mean_strict_core_reference_claim_coverage",
+    "mean_supplementary_reference_claim_coverage",
+    "boundary_compliance_rate",
+    "core_contradiction_rate",
+    "reference_anchored_material_error_rate",
+    "potential_external_error_flag_rate"
+  ],
+  "sensitivity_analysis": {
+    "claim_order": "reverse",
+    "role": "order-sensitivity analysis only",
+    "replacement_of_primary_allowed": false,
+    "required_reporting": [
+      "both system-level reverse-order scores",
+      "reverse-order paired difference and confidence interval",
+      "exact score agreement",
+      "mean and maximum absolute score differences",
+      "claim-status disagreement count",
+      "constraint, boundary, and error-flag disagreement counts"
+    ]
+  },
+  "binary_evaluation": {
+    "enabled": false,
+    "threshold": null,
+    "pass_rate": null,
+    "accuracy": null,
+    "sensitivity": null,
+    "specificity": null,
+    "human_candidate_adequacy_labels_collected": 0,
+    "human_candidate_adequacy_labels_used": false,
+    "machine_calibration_allowed": false,
+    "reason": "The project elected not to collect blinded human adequacy labels. A binary threshold would therefore be uncalibrated and is removed rather than selected from the same machine scores it would classify."
+  },
+  "outside_gold_policy": "Additional content is neutral unless it contradicts a frozen claim, violates a frozen material boundary, or contains a demonstrable reference-anchored material error.",
+  "development_boundary": {
+    "decision_made_on": "Dev13",
+    "decision_made_after_dev_continuous_scores_existed": true,
+    "change_effect": "Removal of the unexecuted human-label and binary-threshold plan; no change to reference, prompt, claim status scale, continuous aggregation, or observed scores",
+    "test40_l3_evaluated_before_freeze": false,
+    "test40_may_not_change_protocol": true
+  },
+  "dev13_results": {
+    "source": "../l3_gold_reference_dev13_v2/results/dev13_gpt51_direct_vs_bge_llm_rag_repair7",
+    "reuse_status": "continuous outputs inherited byte-for-byte and hash-locked; no API rerun",
+    "canonical_order_is_primary": true,
+    "reverse_order_is_sensitivity": true
+  }
+}

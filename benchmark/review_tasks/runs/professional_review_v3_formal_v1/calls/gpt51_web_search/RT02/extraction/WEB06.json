@@ -1,0 +1,606 @@
+{
+  "call_key": "RT02:gpt51_web_search:extraction:WEB06",
+  "created_at": "2026-08-05T03:24:52.222276+00:00",
+  "raw_response_text": "{\"task_id\":\"RT02\",\"source_system\":\"gpt51_web_search\",\"records\":[{\"record_id\":\"WEB06-R1\",\"source_id\":\"WEB06\",\"doi_or_stable_url\":\"https://doi.org/10.1002/wer.11035\",\"citation\":\"Pannu, M.W., Huang, A., Plumlee, M.H. (2024). Variable PFAS removal by adsorbent media with sufficient prediction of breakthrough despite reduced contact time at pilot scale. Water Environment Research, 96(5), e11035.\",\"study_type\":\"pilot_or_field_deployment\",\"study_scale\":{\"value\":\"Pilot-scale column study operated up to 19 months\",\"evidence_locator_ids\":[\"WEB06-E01\"]},\"matrix\":{\"value\":\"Groundwater (pilot feed water)\",\"evidence_locator_ids\":[\"WEB06-E01\",\"WEB06-E02\",\"WEB06-E03\"]},\"pfas_scope\":[{\"value\":\"Six detected PFAS in pilot feed water (specific compounds named: PFOA, PFOS, PFHxS, PFBS, PFPeA, PFBA)\",\"evidence_locator_ids\":[\"WEB06-E02\",\"WEB06-E03\"]},{\"value\":\"Perfluorooctanoic acid (PFOA)\",\"evidence_locator_ids\":[\"WEB06-E02\"]},{\"value\":\"Perfluorooctanesulfonic acid (PFOS)\",\"evidence_locator_ids\":[\"WEB06-E02\"]},{\"value\":\"Perfluorohexanesulfonic acid (PFHxS)\",\"evidence_locator_ids\":[\"WEB06-E02\"]},{\"value\":\"Perfluorobutanesulfonic acid (PFBS)\",\"evidence_locator_ids\":[\"WEB06-E03\"]},{\"value\":\"Perfluoropentanoic acid (PFPeA)\",\"evidence_locator_ids\":[\"WEB06-E03\"]},{\"value\":\"Perfluorobutanoic acid (PFBA)\",\"evidence_locator_ids\":[\"WEB06-E03\"]}],\"treatment\":{\"value\":\"One alternative adsorbent (AA) and five ion exchange (IX) resins in pilot-scale columns\",\"evidence_locator_ids\":[\"WEB06-E01\"]},\"operating_conditions\":[{\"name\":\"configuration\",\"value\":\"Pilot-scale fixed-bed columns treating groundwater\",\"unit\":null,\"qualifiers\":\"\",\"evidence_locator_ids\":[\"WEB06-E01\"]},{\"name\":\"EBCT\",\"value\":\"Representative of full-scale treatment (exact values not reported in inspected text)\",\"unit\":null,\"qualifiers\":\"Described qualitatively as empty bed contact times representative of full-scale treatment\",\"evidence_locator_ids\":[\"WEB06-E01\"]},{\"name\":\"operation_duration\",\"value\":\"up to 19\",\"unit\":\"months\",\"qualifiers\":\"Maximum pilot operation period reported\",\"evidence_locator_ids\":[\"WEB06-E01\"]}],\"endpoints\":[{\"endpoint_type\":\"removal\",\"reported_term\":\"removal\",\"interpretation\":\"Long-chain PFAS (PFOA, PFOS, PFHxS) were well removed by the adsorbent media in pilot-scale columns treating groundwater; PFBS was also well removed, whereas short-chain PFCAs (PFPeA and PFBA) were not removed (immediate breakthrough).\",\"evidence_locator_ids\":[\"WEB06-E02\",\"WEB06-E03\"]},{\"endpoint_type\":\"removal\",\"reported_term\":\"breakthrough\",\"interpretation\":\"For long-chain PFAS, only PFOA eventually broke through as the media became exhausted; other long-chain PFAS remained well removed over the pilot duration.\",\"evidence_locator_ids\":[\"WEB06-E02\"]},{\"endpoint_type\":\"removal\",\"reported_term\":\"initial breakthrough\",\"interpretation\":\"Authors note that other pilot-scale evaluations may only be operated until initial breakthrough of target PFAS to identify longest-lasting media, implying that this study considered longer-term performance beyond initial breakthrough.\",\"evidence_locator_ids\":[\"WEB06-E04\"]}],\"quantitative_findings\":[],\"limitations\":[{\"statement\":\"Pilot-scale evaluation used one alternative adsorbent and five IX resins at one groundwater site, limiting generalization to other media types (e.g., GAC) and other water matrices.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB06-E01\",\"WEB06-E02\",\"WEB06-E03\"]},{\"statement\":\"Text indicates that other pilot studies often stop at initial breakthrough, highlighting that extrapolating media lifetime from short pilot runs can be uncertain; this study\u2019s longer operation suggests scale-up predictions depend on extended breakthrough data.\",\"basis\":\"author_reported\",\"evidence_locator_ids\":[\"WEB06-E04\"]}],\"residuals_byproducts\":[{\"statement\":\"Short-chain PFCAs (PFPeA and PFBA) exhibited immediate breakthrough (not removed), indicating limited affinity of the tested adsorbent media for these compounds under the pilot conditions.\",\"basis\":\"author_reported\",\"evidence_locator_ids\":[\"WEB06-E03\"]},{\"statement\":\"Only PFOA among the long-chain PFAS eventually broke through as media became exhausted, suggesting differing exhaustion behavior and competitive adsorption among PFAS species.\",\"basis\":\"author_reported\",\"evidence_locator_ids\":[\"WEB06-E02\"]}],\"comparability\":{\"status\":\"descriptive_only\",\"reason\":\"The inspected text provides qualitative descriptions of PFAS removal and breakthrough in pilot-scale columns (e.g., \\\"well removed\\\", \\\"immediate breakthrough\\\") without numerical breakthrough concentrations, bed volumes, or EBCT values, so results cannot be quantitatively compared with other studies but do inform relative performance patterns of long- vs short-chain PFAS in continuous treatment.\",\"evidence_locator_ids\":[\"WEB06-E01\",\"WEB06-E02\",\"WEB06-E03\",\"WEB06-E04\"]}}],\"extraction_notes\":[\"Only abstract and limited text from the publisher page were available; detailed EBCT values, flow rates, bed depths, capacity definitions, breakthrough criteria, and bed volumes could not be extracted and are therefore left blank.\",\"No batch-adsorption results are described in the inspected excerpts; evidence relates solely to pilot-scale column performance, so translation between batch and column behavior cannot be directly quantified from this source packet.\",\"No held-out anchor DOI, title, or URL was triggered by this source (doi 10.1002/wer.11035 is distinct from the blocked anchor 10.1016/j.envpol.2023.121138).\"]}",
+  "request": {
+    "max_completion_tokens": 16000,
+    "messages": [
+      {
+        "content": "You are an evidence extraction specialist for PFAS treatment and remediation\nresearch. Build a structured study evidence table before any narrative review\nis written.\n\nExtract one record per primary-study experiment, modeled scenario, or field\ndeployment that contributes usable evidence to the review task. A paper may\nproduce more than one record only when materially different matrices,\ntechnologies, operating regimes, or endpoints would otherwise be conflated.\n\nReview articles and perspectives may help identify terminology or primary\nstudies, but they must not be used as the source of a quantitative study\nrecord. Never copy a review table as though it were a primary result.\n\nFor every populated source-dependent field:\n- preserve the PFAS identity or class, matrix, starting concentration or\n  loading, operating conditions, study scale, measured endpoint, value, unit,\n  and material qualifiers when reported;\n- attach only the field-level evidence locator identifiers that directly\n  support that specific value or statement;\n- use an empty string or empty array when the source does not report the\n  information; do not infer or estimate it;\n- do not turn the absence of information in the supplied packet into a study\n  finding, quantitative result, or author-reported limitation unless the source\n  explicitly states that absence;\n- distinguish removal, separation, sorption, parent-compound loss,\n  transformation, degradation, destruction, defluorination, mineralization,\n  total organofluorine change, and toxicity change;\n- classify endpoint_type from what was actually measured, not from the\n  authors' preferred label. Parent loss alone is not destruction. Phase\n  transfer is removal or separation, not degradation. Inorganic fluoride\n  release or fluorine-balance closure can establish defluorination but cannot\n  by itself establish mineralization. Use mineralization only when direct\n  carbon-fate evidence such as CO2/inorganic-carbon production or a carbon\n  balance is reported. Preserve a broader author term in reported_term and\n  explain any mismatch in interpretation;\n- do not normalize or compare values unless their units, denominators,\n  matrices, PFAS scope, operating conditions, and endpoints permit it.\n\nOnly populate quantitative_findings when the source reports an actual numeric\nvalue, inequality, approximate value, range, or explicit ND/not-detected\nresult. Put the number or censoring marker in value and the measurement unit in\nunit. Normalize Unicode inequality signs to ASCII >= or <= and range dashes to\nan ASCII hyphen while preserving the source wording in qualifiers. A unit or\norder-of-magnitude scale without a number is not a quantitative finding.\nQualitative parent loss, intermediate formation, or disappearance belongs in\nthe endpoint interpretation or residual/byproduct statements instead.\n\nSet value_form to exactly one of:\n- exact_numeric: a bare number such as `99.7` or `1.2e-3`;\n- approximate_numeric: `~` followed by a number;\n- inequality: `<`, `<=`, `>`, or `>=` followed by a number;\n- range: two numbers separated by `-` or `to`; or\n- not_detected: exactly `ND`, `N/D`, `not detected`,\n  `below detection limit`, or `below quantification limit`.\n\nPut uncertainty, denominators, fold-change wording, and explanatory text in\nqualifiers rather than value. A deterministic validator will remove malformed\nquantitative fields before source verification.\n\nFor limitations, use basis=author_reported only when the source states the\nlimitation. Use basis=design_inferred only for a constraint that follows\ndirectly from cited design evidence, such as one matrix, one compound, or\nbench-scale operation. Never label missing information in the supplied packet\nas a scientific limitation of the study.\n\nMark each record as comparable with conditions, descriptive only, or not\ncomparable. Comparability is an analyst inference rather than a quotation:\nattach locators for the matrix, scale, conditions, endpoint, and denominator\non which the inference rests, and explain the reason. Do not reward a study\nfor reporting a larger percentage when its endpoint or conditions differ.\n\nThe task was derived from a defining review that is held out from all\ncandidate retrieval systems. The supplied anchor identifiers are an exclusion\nlist, not evidence. Do not extract from the anchor, cite it, reconstruct its\nconclusions, or use its tables.\n\nReturn one JSON object that follows the supplied evidence-table schema exactly.\nDo not write the narrative review in this step.\n",
+        "role": "system"
+      },
+      {
+        "content": "Task:\n{\"review_brief\":\"Prepare a focused review of when batch adsorption results do and do not predict column, pilot, or full-scale PFAS treatment performance.\",\"task_id\":\"RT02\",\"title\":\"Translating PFAS adsorption results from batch tests to continuous treatment\"}\n\nTask-specific data extraction objective:\nExtract study scale, adsorbent, PFAS and matrix, batch or flow configuration, contact time, flow and bed properties, capacity definition, breakthrough criterion, bed volumes, media lifetime, and uncertainty or scale-up limitation.\n\nSource system (return this exact value):\ngpt51_web_search\n\nCandidate source identifier (all records must use this exact source_id):\nWEB06\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nFrozen inspected Web Search sources and evidence locators:\n{\n  \"access_scope\": \"publisher_page\",\n  \"capture_source_id\": \"WEB60\",\n  \"citation\": \"Pannu, M.W., Huang, A., Plumlee, M.H. (2024). Variable PFAS removal by adsorbent media with sufficient prediction of breakthrough despite reduced contact time at pilot scale. Water Environment Research, 96(5), e11035.\",\n  \"covered_component_ids\": [\n    \"RT02-C1\",\n    \"RT02-C2\",\n    \"RT02-C3\"\n  ],\n  \"doi\": \"10.1002/wer.11035\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1002/wer.11035\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB06-E01\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Abstract\",\n      \"text\": \"One alternative adsorbent (AA) and five ion exchange (IX) resins were tested for the removal of per- and polyfluoroalkyl substances (PFAS) from groundwater in pilot-scale columns for up to 19 months using empty bed contact times (EBCTs) representative of full-scale treatment.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB06-E02\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Abstract / results\",\n      \"text\": \"For the six detected PFAS in the pilot feed water, the long-chain PFAS (perfluorooctanoic acid [PFOA], perfluorooctanesulfonic acid [PFOS], and perfluorohexanesulfonic acid [PFHxS]) were well removed with only PFOA eventually breaking through as the media became exhausted.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB06-E03\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Results\",\n      \"text\": \"Perfluorobutanesulfonic acid (PFBS) was also well removed, whereas short-chain PFCAs (perfluoropentanoic acid [PFPeA] and perfluorobutanoic acid [PFBA]) were not removed (i.e., immediate breakthrough).\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB06-E04\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Discussion\",\n      \"text\": \"Other pilot-scale evaluations for PFAS treatment media may only be operated long enough to reach initial breakthrough of the target PFAS to identify longest-lasting media.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"pilot_or_field_deployment\",\n  \"source\": \"https://onlinelibrary.wiley.com/doi/10.1002/wer.11035\",\n  \"source_id\": \"WEB06\",\n  \"source_limitations\": [\n    \"Only abstract and limited text inspected; detailed EBCTs, flow rates, bed depths, and breakthrough criteria are in full article.\",\n    \"Work focuses on IX resins and a specific alternative adsorbent rather than conventional GAC.\",\n    \"Translation from site-specific pilot conditions to other groundwater matrices may require additional validation.\"\n  ],\n  \"title\": \"Variable PFAS removal by adsorbent media with sufficient prediction of breakthrough despite reduced contact time at pilot scale\",\n  \"year\": \"2024\"\n}\n\nDo not use search-result snippets as evidence. Use only the frozen inspected\nsource packet and preserve its declared access scope. Omit any source that\nresolves to a held-out anchor DOI, URL, or exact title and report the violation\nin extraction_notes. Extract at most three materially distinct records from\nthis source, prioritizing records that answer the task components.\n\nExtract primary-study evidence needed to answer the task and return the\nschema-constrained study evidence table.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_review_evidence_table",
+        "schema": {
+          "$defs": {
+            "endpoint": {
+              "additionalProperties": false,
+              "properties": {
+                "endpoint_type": {
+                  "enum": [
+                    "removal",
+                    "separation",
+                    "sorption",
+                    "parent_compound_loss",
+                    "transformation",
+                    "degradation",
+                    "destruction",
+                    "defluorination",
+                    "mineralization",
+                    "total_organofluorine_change",
+                    "toxicity_change",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB06-E01",
+                      "WEB06-E02",
+                      "WEB06-E03",
+                      "WEB06-E04"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "interpretation": {
+                  "type": "string"
+                },
+                "reported_term": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "endpoint_type",
+                "reported_term",
+                "interpretation",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceRecord": {
+              "additionalProperties": false,
+              "properties": {
+                "citation": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "comparability": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_locator_ids": {
+                      "items": {
+                        "enum": [
+                          "WEB06-E01",
+                          "WEB06-E02",
+                          "WEB06-E03",
+                          "WEB06-E04"
+                        ],
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "type": "array"
+                    },
+                    "reason": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "enum": [
+                        "comparable_with_conditions",
+                        "descriptive_only",
+                        "not_comparable"
+                      ],
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "status",
+                    "reason",
+                    "evidence_locator_ids"
+                  ],
+                  "type": "object"
+                },
+                "doi_or_stable_url": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "endpoints": {
+                  "items": {
+                    "$ref": "#/$defs/endpoint"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "limitations": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "matrix": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "operating_conditions": {
+                  "items": {
+                    "$ref": "#/$defs/namedValue"
+                  },
+                  "type": "array"
+                },
+                "pfas_scope": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceText"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "quantitative_findings": {
+                  "items": {
+                    "$ref": "#/$defs/quantitativeValue"
+                  },
+                  "type": "array"
+                },
+                "record_id": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "residuals_byproducts": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "source_id": {
+                  "enum": [
+                    "WEB06"
+                  ],
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "study_scale": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "study_type": {
+                  "enum": [
+                    "primary_experiment",
+                    "pilot_or_field_deployment",
+                    "modeling_or_life_cycle_study",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "treatment": {
+                  "$ref": "#/$defs/evidenceText"
+                }
+              },
+              "required": [
+                "record_id",
+                "source_id",
+                "doi_or_stable_url",
+                "citation",
+                "study_type",
+                "study_scale",
+                "matrix",
+                "pfas_scope",
+                "treatment",
+                "operating_conditions",
+                "endpoints",
+                "quantitative_findings",
+                "limitations",
+                "residuals_byproducts",
+                "comparability"
+              ],
+              "type": "object"
+            },
+            "evidenceStatement": {
+              "additionalProperties": false,
+              "properties": {
+                "basis": {
+                  "enum": [
+                    "author_reported",
+                    "design_inferred"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB06-E01",
+                      "WEB06-E02",
+                      "WEB06-E03",
+                      "WEB06-E04"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "statement": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "statement",
+                "basis",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceText": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB06-E01",
+                      "WEB06-E02",
+                      "WEB06-E03",
+                      "WEB06-E04"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "namedValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB06-E01",
+                      "WEB06-E02",
+                      "WEB06-E03",
+                      "WEB06-E04"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "quantitativeValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB06-E01",
+                      "WEB06-E02",
+                      "WEB06-E03",
+                      "WEB06-E04"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "value_form": {
+                  "enum": [
+                    "exact_numeric",
+                    "approximate_numeric",
+                    "inequality",
+                    "range",
+                    "not_detected"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "value_form",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "properties": {
+            "extraction_notes": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "records": {
+              "items": {
+                "$ref": "#/$defs/evidenceRecord"
+              },
+              "maxItems": 3,
+              "type": "array"
+            },
+            "source_system": {
+              "enum": [
+                "gpt51_web_search"
+              ],
+              "type": "string"
+            },
+            "task_id": {
+              "enum": [
+                "RT02"
+              ],
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "source_system",
+            "records",
+            "extraction_notes"
+          ],
+          "title": "PFAS review study evidence table",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "c19fee3ffe3af88f4bdd8ece2643a14b6658cfe2f032e9627e5040c5b408b7b6",
+  "response_metadata": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.01865375,
+    "finish_reason": "stop",
+    "input_tokens": 2947,
+    "latency_seconds": 12.058619957999326,
+    "output_tokens": 1497,
+    "reasoning_tokens": 199,
+    "response_id": "chatcmpl-E9MXAqDrCHpN3I526lxN2YoCtZ7fl",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 4444,
+    "web_search_calls": 0
+  },
+  "result": {
+    "extraction_notes": [
+      "Only abstract and limited text from the publisher page were available; detailed EBCT values, flow rates, bed depths, capacity definitions, breakthrough criteria, and bed volumes could not be extracted and are therefore left blank.",
+      "No batch-adsorption results are described in the inspected excerpts; evidence relates solely to pilot-scale column performance, so translation between batch and column behavior cannot be directly quantified from this source packet.",
+      "No held-out anchor DOI, title, or URL was triggered by this source (doi 10.1002/wer.11035 is distinct from the blocked anchor 10.1016/j.envpol.2023.121138)."
+    ],
+    "records": [
+      {
+        "citation": "Pannu, M.W., Huang, A., Plumlee, M.H. (2024). Variable PFAS removal by adsorbent media with sufficient prediction of breakthrough despite reduced contact time at pilot scale. Water Environment Research, 96(5), e11035.",
+        "comparability": {
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E02",
+            "WEB06-E03",
+            "WEB06-E04"
+          ],
+          "reason": "The inspected text provides qualitative descriptions of PFAS removal and breakthrough in pilot-scale columns (e.g., \"well removed\", \"immediate breakthrough\") without numerical breakthrough concentrations, bed volumes, or EBCT values, so results cannot be quantitatively compared with other studies but do inform relative performance patterns of long- vs short-chain PFAS in continuous treatment.",
+          "status": "descriptive_only"
+        },
+        "doi_or_stable_url": "https://doi.org/10.1002/wer.11035",
+        "endpoints": [
+          {
+            "endpoint_type": "removal",
+            "evidence_locator_ids": [
+              "WEB06-E02",
+              "WEB06-E03"
+            ],
+            "interpretation": "Long-chain PFAS (PFOA, PFOS, PFHxS) were well removed by the adsorbent media in pilot-scale columns treating groundwater; PFBS was also well removed, whereas short-chain PFCAs (PFPeA and PFBA) were not removed (immediate breakthrough).",
+            "reported_term": "removal"
+          },
+          {
+            "endpoint_type": "removal",
+            "evidence_locator_ids": [
+              "WEB06-E02"
+            ],
+            "interpretation": "For long-chain PFAS, only PFOA eventually broke through as the media became exhausted; other long-chain PFAS remained well removed over the pilot duration.",
+            "reported_term": "breakthrough"
+          },
+          {
+            "endpoint_type": "removal",
+            "evidence_locator_ids": [
+              "WEB06-E04"
+            ],
+            "interpretation": "Authors note that other pilot-scale evaluations may only be operated until initial breakthrough of target PFAS to identify longest-lasting media, implying that this study considered longer-term performance beyond initial breakthrough.",
+            "reported_term": "initial breakthrough"
+          }
+        ],
+        "limitations": [
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB06-E01",
+              "WEB06-E02",
+              "WEB06-E03"
+            ],
+            "statement": "Pilot-scale evaluation used one alternative adsorbent and five IX resins at one groundwater site, limiting generalization to other media types (e.g., GAC) and other water matrices."
+          },
+          {
+            "basis": "author_reported",
+            "evidence_locator_ids": [
+              "WEB06-E04"
+            ],
+            "statement": "Text indicates that other pilot studies often stop at initial breakthrough, highlighting that extrapolating media lifetime from short pilot runs can be uncertain; this study\u2019s longer operation suggests scale-up predictions depend on extended breakthrough data."
+          }
+        ],
+        "matrix": {
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E02",
+            "WEB06-E03"
+          ],
+          "value": "Groundwater (pilot feed water)"
+        },
+        "operating_conditions": [
+          {
+            "evidence_locator_ids": [
+              "WEB06-E01"
+            ],
+            "name": "configuration",
+            "qualifiers": "",
+            "unit": null,
+            "value": "Pilot-scale fixed-bed columns treating groundwater"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB06-E01"
+            ],
+            "name": "EBCT",
+            "qualifiers": "Described qualitatively as empty bed contact times representative of full-scale treatment",
+            "unit": null,
+            "value": "Representative of full-scale treatment (exact values not reported in inspected text)"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB06-E01"
+            ],
+            "name": "operation_duration",
+            "qualifiers": "Maximum pilot operation period reported",
+            "unit": "months",
+            "value": "up to 19"
+          }
+        ],
+        "pfas_scope": [
+          {
+            "evidence_locator_ids": [
+              "WEB06-E02",
+              "WEB06-E03"
+            ],
+            "value": "Six detected PFAS in pilot feed water (specific compounds named: PFOA, PFOS, PFHxS, PFBS, PFPeA, PFBA)"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB06-E02"
+            ],
+            "value": "Perfluorooctanoic acid (PFOA)"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB06-E02"
+            ],
+            "value": "Perfluorooctanesulfonic acid (PFOS)"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB06-E02"
+            ],
+            "value": "Perfluorohexanesulfonic acid (PFHxS)"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB06-E03"
+            ],
+            "value": "Perfluorobutanesulfonic acid (PFBS)"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB06-E03"
+            ],
+            "value": "Perfluoropentanoic acid (PFPeA)"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB06-E03"
+            ],
+            "value": "Perfluorobutanoic acid (PFBA)"
+          }
+        ],
+        "quantitative_findings": [],
+        "record_id": "WEB06-R1",
+        "residuals_byproducts": [
+          {
+            "basis": "author_reported",
+            "evidence_locator_ids": [
+              "WEB06-E03"
+            ],
+            "statement": "Short-chain PFCAs (PFPeA and PFBA) exhibited immediate breakthrough (not removed), indicating limited affinity of the tested adsorbent media for these compounds under the pilot conditions."
+          },
+          {
+            "basis": "author_reported",
+            "evidence_locator_ids": [
+              "WEB06-E02"
+            ],
+            "statement": "Only PFOA among the long-chain PFAS eventually broke through as media became exhausted, suggesting differing exhaustion behavior and competitive adsorption among PFAS species."
+          }
+        ],
+        "source_id": "WEB06",
+        "study_scale": {
+          "evidence_locator_ids": [
+            "WEB06-E01"
+          ],
+          "value": "Pilot-scale column study operated up to 19 months"
+        },
+        "study_type": "pilot_or_field_deployment",
+        "treatment": {
+          "evidence_locator_ids": [
+            "WEB06-E01"
+          ],
+          "value": "One alternative adsorbent (AA) and five ion exchange (IX) resins in pilot-scale columns"
+        }
+      }
+    ],
+    "source_system": "gpt51_web_search",
+    "task_id": "RT02"
+  },
+  "result_kind": "json",
+  "stage": "structured_extraction"
+}

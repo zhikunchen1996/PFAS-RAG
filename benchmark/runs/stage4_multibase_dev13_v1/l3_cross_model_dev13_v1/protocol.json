@@ -1,0 +1,32 @@
+{
+  "protocol_id": "pfas_rag_dev13_l3_cross_model_v1",
+  "status": "pre_analysis_frozen",
+  "analysis_type": "post-hoc local statistical analysis of already frozen L3 scores",
+  "systems": 6,
+  "questions": 13,
+  "pair_count": 15,
+  "primary_metric": "component_balanced_core_reference_claim_coverage",
+  "claim_orders": {
+    "primary": "canonical",
+    "sensitivity": "reverse"
+  },
+  "paired_analysis": {
+    "unit": "question",
+    "effect": "mean score difference, system_A minus system_B",
+    "bootstrap_attempts": 10000,
+    "bootstrap_seed": 20260729,
+    "confidence_interval": "paired question-level percentile 95%",
+    "permutation_test": "exact two-sided paired sign-flip test",
+    "permutation_count": 8192,
+    "multiple_comparison_adjustment": "Holm within each claim order across 15 pairs"
+  },
+  "interpretation": {
+    "canonical_pairwise_results": "primary",
+    "reverse_pairwise_results": "claim-order sensitivity",
+    "cross_order_direction": "reported for every pair",
+    "descriptive_system_order": "not a substitute for pairwise uncertainty"
+  },
+  "new_judge_calls": 0,
+  "new_api_calls": 0,
+  "held_out_test40_used": false
+}

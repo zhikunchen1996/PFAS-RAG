@@ -1,0 +1,398 @@
+{
+  "call_key": "RT01:bge_llm_local_rag:verify:RT01-bge_llm_local_rag-S09-R02",
+  "created_at": "2026-08-05T03:50:30.384919+00:00",
+  "raw_response_text": "{\"task_id\":\"RT01\",\"record_id\":\"RT01-bge_llm_local_rag-S09-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The DOI/URL exactly matches the citation in the provided source text (10.1016/j.jwpe.2023.104345; https://doi.org/10.1016/j.jwpe.2023.104345).\"},{\"field_path\":\"matrix\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The text states that there was \\\"an initial concentration in the canal water\\\" and that the column influent was not spiked with PFHpA (S09-E04), supporting \\\"canal water\\\" with native PFAS and not spiked for PFHpA. However, the term \\\"surface\\\" is not present in the cited snippets, so describing it explicitly as \\\"surface water\\\" is an extra qualifier not directly supported at this locator grain.\"},{\"field_path\":\"treatment\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The treatment is described as ZIPGEM, a Zero-Valent-Iron and Perlite-based Green Environmental Media comprising sand, clay, perlite, and zero-valent iron, mixed at specific ratios (S09-E08). The column-study context is corroborated by S09-E06. The field value matches this description.\"},{\"field_path\":\"study_scale\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S09-E06 notes CPS and ZIPGEM were used \\\"in a column study\\\" and S09-E08 describes ZIPGEM as a specialty sorption media; S09-E04 refers to canal water. This supports a column study using ZIPGEM treating canal water. However, the descriptor \\\"surface\\\" in \\\"canal surface water\\\" is not explicitly stated in the cited text, so that qualifier is only inferred.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E01 repeatedly refers to \\\"initial removal\\\" and \\\"removals\\\" of individual PFAS by ZIPGEM and CPS and reports them as percentages. S09-E04 also discusses \\\"removal\\\" and an order of \\\"adsorption\\\". Using endpoint_type=\\\"removal\\\" for this endpoint is consistent with the measured basis.\"},{\"field_path\":\"endpoints[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E01 provides approximate removal percentages for PFPeA, PFBS, PFBA, and PFOA by ZIPGEM and states that \\\"in general, the order of adsorption by CPS and ZIPGEM was PFOS > PFOA > PFHxS > PFHpA > PFHxA > PFPeA > PFBS > PFBA.\\\" S09-E04 repeats this order. The endpoint\u2019s interpretation and reported term as PFAS removal efficiency/adsorption preference after the initial 2-h run are directly supported.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"unsupported\",\"error_type\":\"endpoint_classification\",\"reason\":\"S09-E01 and S09-E07 discuss removal of PFAS primarily by adsorption and mention possible transformation of long-chain PFAS to short-chain PFAS as a hypothesized mechanism. They do not measure or report parent-compound loss in a way distinct from adsorption/removal; no mass balance or specific transformation products are quantified. Classifying this as endpoint_type=\\\"parent_compound_loss\\\" is not supported by the cited evidence; it more appropriately reflects removal/adsorption mechanism.\"},{\"field_path\":\"endpoints[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E01 states that \\\"Overall, adsorption was the dominant PFAS removal mechanism with some possible transformation of long-chain PFAS to short-chain PFAS when using CPS and ZIPGEM.\\\" S09-E07 further elaborates on concerns about desorption, potential transformation, and lists mechanisms such as hydrophobic interactions, hydrogen bonding, electrostatic interactions, and van der Waals forces. The endpoint interpretation as adsorption being dominant with possible transformation and these interaction mechanisms is supported by the cited text.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E01 refers to \\\"the initial 2-h run\\\" when reporting PFAS removals by CPS and ZIPGEM, matching the value of 2 for the initial contact time.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The phrase \\\"2-h run\\\" in S09-E01 clearly implies hours as the time unit; using \\\"h\\\" is appropriate and consistent.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E04 states that \\\"the adsorption of ZIPGEM continued up to 16 % at 48 h run time,\\\" supporting a run time value of 48.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"\\\"48 h run time\\\" in S09-E04 clearly uses hours; the unit \\\"h\\\" is correct.\"},{\"field_path\":\"operating_conditions[2]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S09-E06 notes that CPS and ZIPGEM were used \\\"in a column study,\\\" and S09-E04 mentions canal water, so a column configuration using ZIPGEM treating canal water is supported. However, the specific term \\\"packed-bed\\\" is not present in the provided excerpts, so that aspect of the configuration is inferred rather than directly supported.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E02 states that total nitrogen concentrations ranged from 0.94 to 1.33 mg\u00b7L\u22121 as N, matching the recorded value range.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E02 explicitly reports total nitrogen in \\\"mg\u00b7L\u22121 as N\\\"; the unit \\\"mg/L as N\\\" is an equivalent notation and appropriate.\"},{\"field_path\":\"operating_conditions[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E02 states that organic nitrogen concentrations ranged from 0.88 to 1.2 mg\u00b7L\u22121 as N, matching the recorded value range.\"},{\"field_path\":\"operating_conditions[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Organic nitrogen is reported in \\\"mg\u00b7L\u22121 as N\\\" in S09-E02; \\\"mg/L as N\\\" is consistent.\"},{\"field_path\":\"operating_conditions[5].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E02 reports total phosphorus concentrations ranged from 0.02 to 0.08 mg\u00b7L\u22121 as P, which matches the recorded range.\"},{\"field_path\":\"operating_conditions[5].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Total phosphorus is reported in \\\"mg\u00b7L\u22121 as P\\\" in S09-E02; the unit \\\"mg/L as P\\\" is correct.\"},{\"field_path\":\"operating_conditions[6].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E02 notes that calcium concentrations ranged from 39.9 to 99.3 mg\u00b7L\u22121; this matches the recorded value range.\"},{\"field_path\":\"operating_conditions[6].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Calcium is reported in \\\"mg\u00b7L\u22121\\\" in S09-E02; the unit \\\"mg/L\\\" is correct.\"},{\"field_path\":\"operating_conditions[7].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E05 states that \\\"The pH PZC of ZIPGEM (9.2) was higher than CPS (5.6)\\\"; the recorded pH_PZC value of 9.2 is accurate.\"},{\"field_path\":\"operating_conditions[7].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"pH PZC is dimensionless; leaving the unit as an empty string is acceptable and does not conflict with the source.\"},{\"field_path\":\"operating_conditions[8]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E05 indicates that ZIPGEM has higher density, BET surface area, saturated hydraulic conductivity, and porosity compared to CPS, attributable to ZVI inclusion. Describing its surface area and porosity qualitatively as \\\"higher than CPS\\\" is consistent with this text.\"},{\"field_path\":\"operating_conditions[9]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E08 explains that \\\"the ZIPGEM media mix comprises sand, clay, perlite, and zero-valent-iron (ZVI)... mixed at specific ratios.\\\" The recorded composition matches this description.\"},{\"field_path\":\"pfas_scope\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E01 lists PFOS, PFOA, PFPeA, PFBS, and PFBA; S09-E02 names the short-chain PFAS PFHpA, PFHxA, PFHxS, PFPeA, PFBA, and PFBS; S09-E04 references PFHpA, PFHxS, PFHxA, PFPeA, PFBS, PFBA, PFOS, and PFOA in the adsorption order. All PFAS listed in the pfas_scope field appear in the cited text with matching identities.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E01 states that CPS exhibited an initial removal of PFOA of approximately 91% compared to ZIPGEM (approximately 84%). This supports a value of about 84% removal by ZIPGEM. The use of \\\"~84\\\" with value_form \\\"approximate_numeric\\\" is consistent.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The removals are reported in percentages (\\\"approximately 84 %\\\") in S09-E01; the unit \\\"%\\\" is correct.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E01 reports that \\\"The removals of PFPeA, PFBS, and PFBA by ZIPGEM were approximately 42 %, 90 %, and 36 %, respectively.\\\" The value \\\"~42\\\"% for PFPeA removal is accurate and correctly marked as approximate.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The removals are expressed in percent in S09-E01; using \\\"%\\\" is appropriate.\"},{\"field_path\":\"quantitative_findings[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E01 reports PFBS removal by ZIPGEM as approximately 90%. The recorded value \\\"~90\\\" with an approximate designation matches this.\"},{\"field_path\":\"quantitative_findings[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFBS removal is reported in percent in S09-E01, so unit \\\"%\\\" is correct.\"},{\"field_path\":\"quantitative_findings[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E01 states PFBA removal by ZIPGEM was approximately 36%, matching the recorded \\\"~36\\\" value.\"},{\"field_path\":\"quantitative_findings[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFBA removal is expressed in percent in S09-E01; unit \\\"%\\\" is correct.\"},{\"field_path\":\"quantitative_findings[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E04 reports: \\\"PFHpA was detected after 2 h when using ZIPGEM, leading to 81.9 % removal,\\\" which directly supports the value 81.9% removal at 2 h.\"},{\"field_path\":\"quantitative_findings[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The PFHpA removal is given as a percentage in S09-E04; unit \\\"%\\\" is appropriate.\"},{\"field_path\":\"quantitative_findings[5].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E04 states that \\\"overall, the adsorption of ZIPGEM continued up to 16 % at 48 h run time.\\\" The recorded value of 16% at 48 h is consistent with this statement.\"},{\"field_path\":\"quantitative_findings[5].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The 16% change is expressed as a percentage in S09-E04; \\\"%\\\" is the correct unit.\"},{\"field_path\":\"quantitative_findings[6].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E02 notes: \\\"The short-chain PFAS including PFHpA, PFHxA, PFHxS, PFPeA, PFBA, and PFBS were also detected at concentrations ranging from 5.7 to 10.3 ng\u00b7L\u22121\\\". This matches the recorded range 5.7\u201310.3 for short-chain PFAS influent concentrations.\"},{\"field_path\":\"quantitative_findings[6].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The concentration unit in S09-E02 is \\\"ng\u00b7L\u22121\\\"; the recorded \\\"ng/L\\\" is equivalent and appropriate.\"},{\"field_path\":\"limitations[0]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S09-E07 explicitly states that \\\"The regeneration of the media was not explored in this study,\\\" supporting that part of the limitation. However, the supplied excerpts (S09-E06 and S09-E07) do not show a statement that results are based on a single surface-water source and one set of operating conditions, so that portion is not directly supported at this locator grain.\"},{\"field_path\":\"limitations[1]\",\"status\":\"unsupported\",\"error_type\":\"other\",\"reason\":\"The statement that there is \\\"Incomplete reporting of influent PFAS concentrations and hydraulic conditions\\\" is an interpretive design-inferred limitation. The cited snippets (S09-E01, S09-E02, S09-E04) provide some influent concentration information and qualitative operation descriptions, but they do not necessitate the conclusion of incomplete reporting. This limitation does not strictly follow from the cited facts alone.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E01 notes there was \\\"some possible transformation of long-chain PFAS to short-chain PFAS when using CPS and ZIPGEM.\\\" S09-E07 reiterates that this indicates \\\"some transformation from long-chain to short-chain PFAS in addition to media adsorption\\\" and discusses desorption concerns. The recorded statement accurately reflects these points.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S09-E01 compares CPS and ZIPGEM directly in terms of PFAS removal percentages over the initial 2-h run, indicating they were evaluated under a common experimental setup. S09-E06 refers to \\\"CPS and ZIPGEM in a column study\\\" as part of a treatment train. It is reasonable to judge these datasets as comparable with conditions across the same column configuration, matrix, and evaluation period.\"},{\"field_path\":\"comparability\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Given that CPS and ZIPGEM are tested in the same column study on the same canal water (S09-E01, S09-E04, S09-E06) with shared endpoints (removal efficiencies over time), the reasoning that ZIPGEM removal data are comparable to CPS under shared conditions is consistent with the evidence.\"}],\"record_usable\":true,\"record_usable_rationale\":\"The core elements\u2014source identity, treatment (ZIPGEM), water matrix (canal water), PFAS scope, operating conditions, and all quantitative findings on PFAS removal and influent concentrations\u2014are well supported and accurately transcribed. Some qualifiers (e.g., labeling the water explicitly as \\\"surface water\\\") and one design-inferred limitation go beyond the direct text, and one endpoint is misclassified as parent_compound_loss rather than a removal/adsorption-mechanism endpoint. These issues do not materially misrepresent the study\u2019s data for adsorption performance and can be corrected or ignored in synthesis, so the record remains usable.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused, data-grounded review explaining how an engineer should select an adsorption medium for a specified PFAS profile and water matrix.\",\"task_id\":\"RT01\",\"title\":\"Selecting an adsorption medium for a defined PFAS water-treatment application\"}\n\nTask-specific extraction objective:\nExtract adsorbent identity and properties, PFAS identity, water matrix, influent concentration, pH, co-constituents, dose or bed conditions, adsorption endpoint, quantitative result, and reported mechanism.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Valencia, A.; Ordonez, D.; Sadmani, A.A.; Reinhart, D.; Chang, N.B. Comparing the removal and fate of long and short chain per- and polyfluoroalkyl substances (PFAS) during surface water treatment via specialty adsorbents. J. Water Process Eng. 2023, 56, 104345.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S09-E01\",\n      \"S09-E02\",\n      \"S09-E04\",\n      \"S09-E08\"\n    ],\n    \"reason\": \"ZIPGEM column removal data are directly comparable to CPS under the shared canal-water matrix, column configuration, and 2-h evaluation period with the same removal endpoint.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.jwpe.2023.104345\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S09-E01\",\n        \"S09-E04\"\n      ],\n      \"interpretation\": \"Percentage removal of individual PFAS from canal water after 2 h of column operation with ZIPGEM; results show high removal for long-chain PFAS (PFOS, PFOA), strong removal of some short-chain PFAS (PFBS), and lower removal for others (PFBA, PFPeA). Overall adsorption preference order matches CPS: PFOS > PFOA > PFHxS > PFHpA > PFHxA > PFPeA > PFBS > PFBA.\",\n      \"reported_term\": \"PFAS removal efficiency / adsorption preference\"\n    },\n    {\n      \"endpoint_type\": \"parent_compound_loss\",\n      \"evidence_locator_ids\": [\n        \"S09-E01\",\n        \"S09-E05\",\n        \"S09-E07\",\n        \"S09-E08\"\n      ],\n      \"interpretation\": \"Adsorption was the dominant mechanism for PFAS removal on ZIPGEM with some possible transformation of long-chain PFAS to short-chain PFAS. Proposed interaction mechanisms include hydrophobic interactions, hydrogen bonding, electrostatic interactions, and van der Waals forces, influenced by the relatively high pH_PZC of ZIPGEM.\",\n      \"reported_term\": \"PFAS adsorption/removal mechanism\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S09-E06\",\n        \"S09-E07\"\n      ],\n      \"statement\": \"Bench-scale column results for ZIPGEM are based on a single surface-water source and one set of operating conditions; regeneration of the media was not explored.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S09-E01\",\n        \"S09-E02\",\n        \"S09-E04\"\n      ],\n      \"statement\": \"Incomplete reporting of influent PFAS concentrations and hydraulic conditions limits direct scale-up and design calculations for ZIPGEM columns.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S09-E02\",\n      \"S09-E04\"\n    ],\n    \"value\": \"Canal surface water (with native PFAS; not spiked for PFHpA)\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E01\",\n        \"S09-E04\"\n      ],\n      \"name\": \"contact_time_initial\",\n      \"qualifiers\": \"Initial run period for which percentage removals were reported\",\n      \"unit\": \"h\",\n      \"value\": \"2\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E04\"\n      ],\n      \"name\": \"run_time_late\",\n      \"qualifiers\": \"PFHpA adsorption by ZIPGEM discussed up to 48 h\",\n      \"unit\": \"h\",\n      \"value\": \"48\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E04\",\n        \"S09-E08\"\n      ],\n      \"name\": \"study_configuration\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"packed-bed column using ZIPGEM treating canal water\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E02\"\n      ],\n      \"name\": \"co-constituents_total_nitrogen\",\n      \"qualifiers\": \"Range in canal water during study\",\n      \"unit\": \"mg/L as N\",\n      \"value\": \"0.94-1.33\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E02\"\n      ],\n      \"name\": \"co-constituents_organic_nitrogen\",\n      \"qualifiers\": \"Range in canal water during study\",\n      \"unit\": \"mg/L as N\",\n      \"value\": \"0.88-1.2\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E02\"\n      ],\n      \"name\": \"co-constituents_total_phosphorus\",\n      \"qualifiers\": \"Range in canal water during study\",\n      \"unit\": \"mg/L as P\",\n      \"value\": \"0.02-0.08\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E02\"\n      ],\n      \"name\": \"co-constituents_calcium\",\n      \"qualifiers\": \"Range in canal water; authors note Ca can contribute to PFAS adsorption\",\n      \"unit\": \"mg/L\",\n      \"value\": \"39.9-99.3\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E05\"\n      ],\n      \"name\": \"adsorbent_PZC\",\n      \"qualifiers\": \"Point of zero charge (pH_PZC) of ZIPGEM; surface predominantly positively charged below this pH\",\n      \"unit\": \"\",\n      \"value\": \"9.2\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E05\"\n      ],\n      \"name\": \"adsorbent_surface_area_porosity\",\n      \"qualifiers\": \"ZIPGEM has higher BET surface area, porosity, density, and saturated hydraulic conductivity than CPS due to inclusion of ZVI\",\n      \"unit\": null,\n      \"value\": \"higher than CPS\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E08\"\n      ],\n      \"name\": \"adsorbent_composition\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"sand, clay, perlite, and zero-valent iron (ZVI) mixed at specific ratios\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E01\",\n        \"S09-E04\"\n      ],\n      \"value\": \"PFOS (perfluorooctane sulfonic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E01\",\n        \"S09-E04\"\n      ],\n      \"value\": \"PFOA (perfluorooctanoic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E01\",\n        \"S09-E04\"\n      ],\n      \"value\": \"PFPeA (perfluoropentanoic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E01\",\n        \"S09-E04\"\n      ],\n      \"value\": \"PFBS (perfluorobutanesulfonic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E01\",\n        \"S09-E04\"\n      ],\n      \"value\": \"PFBA (perfluorobutanoic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E04\"\n      ],\n      \"value\": \"PFHpA (perfluoroheptanoic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E04\"\n      ],\n      \"value\": \"PFHxA (perfluorohexanoic acid)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E02\",\n        \"S09-E04\"\n      ],\n      \"value\": \"PFHxS (perfluorohexane sulfonic acid)\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E01\"\n      ],\n      \"name\": \"PFOA removal by ZIPGEM at 2 h\",\n      \"qualifiers\": \"Approximately 84% initial removal during first 2 h of column operation\",\n      \"unit\": \"%\",\n      \"value\": \"~84\",\n      \"value_form\": \"approximate_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E01\"\n      ],\n      \"name\": \"PFPeA removal by ZIPGEM at 2 h\",\n      \"qualifiers\": \"Approximately 42% removal during initial 2-h run\",\n      \"unit\": \"%\",\n      \"value\": \"~42\",\n      \"value_form\": \"approximate_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E01\"\n      ],\n      \"name\": \"PFBS removal by ZIPGEM at 2 h\",\n      \"qualifiers\": \"Approximately 90% removal during initial 2-h run\",\n      \"unit\": \"%\",\n      \"value\": \"~90\",\n      \"value_form\": \"approximate_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E01\"\n      ],\n      \"name\": \"PFBA removal by ZIPGEM at 2 h\",\n      \"qualifiers\": \"Approximately 36% removal during initial 2-h run\",\n      \"unit\": \"%\",\n      \"value\": \"~36\",\n      \"value_form\": \"approximate_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E04\"\n      ],\n      \"name\": \"PFHpA removal by ZIPGEM at 2 h\",\n      \"qualifiers\": \"PFHpA (present natively in canal water) showed 81.9% removal at 2 h, even though influent was not spiked with PFHpA\",\n      \"unit\": \"%\",\n      \"value\": \"81.9\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E04\"\n      ],\n      \"name\": \"PFHpA adsorption by ZIPGEM up to 48 h\",\n      \"qualifiers\": \"Described as adsorption continued up to 16% at 48 h run time; treated as additional adsorption over later period, though wording is somewhat ambiguous.\",\n      \"unit\": \"%\",\n      \"value\": \"16\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S09-E02\"\n      ],\n      \"name\": \"short-chain PFAS influent concentration range (PFHpA, PFHxA, PFHxS, PFPeA, PFBA, PFBS)\",\n      \"qualifiers\": \"Detected concentrations of short-chain PFAS in canal water influent\",\n      \"unit\": \"ng/L\",\n      \"value\": \"5.7-10.3\",\n      \"value_form\": \"range\"\n    }\n  ],\n  \"record_id\": \"RT01-bge_llm_local_rag-S09-R02\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S09-E01\",\n        \"S09-E07\"\n      ],\n      \"statement\": \"Authors note possible transformation of long-chain PFAS to short-chain PFAS during ZIPGEM treatment in addition to adsorption, inferred from PFAS removal patterns and desorption concerns.\"\n    }\n  ],\n  \"source_id\": \"S09\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S09-E01\",\n      \"S09-E04\",\n      \"S09-E05\",\n      \"S09-E08\"\n    ],\n    \"value\": \"Column study using ZIPGEM (ZVI-Perlite-based) specialty sorption medium treating canal surface water\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S09-E01\",\n      \"S09-E05\",\n      \"S09-E08\"\n    ],\n    \"value\": \"ZIPGEM (Zero-Valent-Iron and Perlite-based Green Environmental Media) column, composed of sand, clay, perlite, and zero-valent iron\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 14,\n  \"bge_score\": 0.3636218011379242,\n  \"citation\": \"Valencia, A.; Ordonez, D.; Sadmani, A.A.; Reinhart, D.; Chang, N.B. Comparing the removal and fate of long and short chain per - and polyfluoroalkyl substances (PFAS) during surface water treatment via specialty adsorbents. Journal of Water Process Engineering 2023 56 104345. DOI: 10.1016/j.jwpe.2023.104345.\",\n  \"doi\": \"10.1016/j.jwpe.2023.104345\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.jwpe.2023.104345\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S09-E01\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.3548772633075714,\n        \"RT01-C2\": 0.0064061726443469524,\n        \"RT01-C3\": 3.731067408807576e-05,\n        \"umbrella\": 0.8023847937583923\n      },\n      \"section\": \"abstract\",\n      \"text\": \"perfluorooctane sulfonic acid (PFOS) by ZIPGEM was best explained by pseudo-second-order kinetics. The intraparticle diffusion model was a better fit for adsorption of perfluorooctanoic acid (PFOA) by both CPS and ZIPGEM. CPS exhibited a higher initial removal of PFOA (approximately 91 %) compared to that by ZIPGEM (approximately 84 %). During the initial 2-h run, the removals of perfluoropentanoic acid (PFPeA), per - fluorobutanesulfonic acid (PFBS), and perfluorobutanoic acid (PFBA) by CPS were approximately 82 %, 72 %, and 54 %, respectively. The removals of PFPeA, PFBS, and PFBA by ZIPGEM were approximately 42 %, 90 %, and 36 %, respectively. In general, the order of adsorption by CPS and ZIPGEM was PFOS > PFOA > PFHxS > PFHpA > PFHxA > PFPeA > PFBS > PFBA. The preference of adsorption generally follows the media affinity initially by adsorbing larger molecules with higher molecular weights, followed by short-chain per - fluorocarboxylic acids and perfluorosulfonic acids. Overall, adsorption was the dominant PFAS removal mech - anism with some possible transformation of long-chain PFAS to short-chain PFAS when using CPS and ZIPGEM. 1. Introduction Urbanization, population growth, and anthropogenic activities have substantially contributed to the newer and previously unrecognized and\"\n    },\n    {\n      \"corpus_chunk\": 18,\n      \"locator_id\": \"S09-E02\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.8036736249923706,\n        \"RT01-C2\": 0.0025249356403946877,\n        \"RT01-C3\": 4.696841642726213e-05,\n        \"umbrella\": 0.11396858841180801\n      },\n      \"section\": \"results\",\n      \"text\": \"\\u0000 1 , respectively ( Table 1 ). The short-chain PFAS including PFHpA, PFHxA, PFHxS, PFPeA, PFBA, and PFBS were also detected at concentrations ranging from 5.7 to 10.3 ng \\u22c5 L \\u0000 1 with PFHxS exhibiting the highest concentration among the short-chain PFAS. The concentra - tions of other water quality parameters, namely total nitrogen, organic nitrogen, and total phosphorus, ranged from 0.94 to 1.33 mg \\u22c5 L \\u0000 1 as N, 0.88 \\u2013 1.2 mg \\u22c5 L \\u0000 1 as N, and 0.02 \\u2013 0.08 mg \\u22c5 L \\u0000 1 as P, respectively [ 25 ]. The concentration of calcium, which can contribute to PFAS adsorption, ranged from 39.9 to 99.3 mg \\u22c5 L \\u0000 1 . A. Valencia et al. Journal of Water Process Engineering 56 (2023) 104345 4 3. Results and discussion 3.1. Material characteristics and specialty adsorbents composition The physical properties of CPS including bulk density (g \\u22c5 cm \\u0000 3 ), porosity (%), hydraulic conductivity (m \\u22c5 sec \\u0000 1 ), and BET surface area (m 2 \\u22c5 g \\u0000 1 ), analyzed in a recent study by Ordonez et al. [ 28 ], are sum -\"\n    },\n    {\n      \"corpus_chunk\": 25,\n      \"locator_id\": \"S09-E03\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.21744975447654724,\n        \"RT01-C2\": 0.14152489602565765,\n        \"RT01-C3\": 5.0512648158473894e-05,\n        \"umbrella\": 0.19827716052532196\n      },\n      \"section\": \"results\",\n      \"text\": \"[ 44 ]. The comparison between the filtration media explored in this study and the one investigated by Ordonez et al. [ 29 ] indicates that the PSO kinetic model generally best fits PFOS adsorption. The equilibrium PFOS adsorption capacities (q e ) of ZIPGEM (2.12 ng \\u22c5 g \\u0000 1 ), Advanced Green Environmental Media (AGEM-2) (2.30 ng \\u22c5 g \\u0000 1 ), CPS (0.87 ng \\u22c5 g \\u0000 1 ), and IFGEM-7 (0.80 ng \\u22c5 g \\u0000 1 ) were similar in range ( Table A2 in Appendix A ). However, for PFOA adsorption, there was no kinetic model that gener - ally best fit the data for the tested media, yet when comparing the performance of the media using PSO for describing PFOA removal, only ZIPGEM exhibited a positive equilibrium adsorption capacity between both the media investigated in this study ( Table 3 ). The negative adsorption capacity of CPS is consistent with the lack of fit of the experimental data to the PSO model (please see the low R 2 in Table 3 ). Hence, the influent PFAS concentration should be considered as a factor influencing the adsorption capacity and the fit of the kinetic models when comparing the 4 media because they are not the same for both the studies. 3.2.2.\"\n    },\n    {\n      \"corpus_chunk\": 29,\n      \"locator_id\": \"S09-E04\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.3428468406200409,\n        \"RT01-C2\": 0.022513529285788536,\n        \"RT01-C3\": 0.00036234609433449805,\n        \"umbrella\": 0.5542339086532593\n      },\n      \"section\": \"results\",\n      \"text\": \") till 2 h, and no removal was observed at 6 h. Although the column influent was not spiked with PFHpA, there was an initial con - centration in the canal water, allowing the estimation of removal of that compound. Additionally, PFHpA was detected after 2 h when using ZIPGEM, leading to 81.9 % removal, and overall, the adsorption of ZIPGEM continued up to 16 % at 48 h run time. Furthermore, higher removal obtained for PFHxS when compared to PFBS can be attributed to the molecular sizes of the compounds such that a higher molecular weight was preferred in the adsorption process [ 48 ]. In general, the order of adsorption by CPS and ZIPGEM was PFOS > PFOA > PFHxS > PFHpA > PFHxA > PFPeA > PFBS > PFBA. The preference of adsorption generally follows the media affinity initially by adsorbing larger mole - cules with higher molecular weights, followed by short-chain PFCAs (defined in Table 1 ) and PFASs ( Table 1 ). To comprehend the possible effect of individual media components such as perlite on PFAS removal efficiency, the sorption capacities of the specialty media were compared. The dynamic models provide a more realistic estimation of the media adsorption capacity in comparison to the kinetic models. Based on the experimental dynamic data, the Thomas model obtained high correlation coefficients (R 2\"\n    },\n    {\n      \"corpus_chunk\": 19,\n      \"locator_id\": \"S09-E05\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.7734276056289673,\n        \"RT01-C2\": 0.0022782678715884686,\n        \"RT01-C3\": 3.7348054320318624e-05,\n        \"umbrella\": 0.5051026344299316\n      },\n      \"section\": \"results\",\n      \"text\": \"), analyzed in a recent study by Ordonez et al. [ 28 ], are sum - marized in Table 2 for comparison with the physical characteristics of ZIPGEM used in the current study. ZIPGEM has a higher density, BET surface area, saturated hydraulic conductivity, and porosity when compared to CPS, attributable to the inclusion of ZVI in ZIPGEM. The iron filing base ZVI enhanced the surface area and porosity to ZIPGEM media. PFAS adsorption is governed by physicochemical properties of adsorbent material surfaces [ 42 , 43 ]. The pH PZC is an important parameter that can be linked to the adsorptive interactions driven by the surface charge of the adsorbent. The pH PZC of ZIPGEM (9.2) was higher than CPS (5.6) ( Fig. 1 ), indicating that the media possess predominantly positive surface charges in aqueous solutions below pHs of 9.2 and 5.6, respectively. Hence, covering greater pH range in water, ZIPGEM may be more advantageous for implementation of PFAS removal in various water matrices. When investigating PFAS adsorption of 12 PFAS com - pounds onto ferrihydrite, Campos-Pereira et al. [ 42 ] demonstrated that PFAS adsorption was inversely related to pH, attributed to the pH- dependent surface charge of ferrihydrite with lower pH contributing to positive surface charge of the particle.\"\n    },\n    {\n      \"corpus_chunk\": 41,\n      \"locator_id\": \"S09-E06\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.24191991984844208,\n        \"RT01-C2\": 0.0007306734914891422,\n        \"RT01-C3\": 3.7561720091616735e-05,\n        \"umbrella\": 0.6721897125244141\n      },\n      \"section\": \"references\",\n      \"text\": \"10 Due to the potential for our specialty sorption media to be scalable and versatile, the media may find their niche in full-scale PFAS removal applications including the remediation of contaminated surface waters, groundwaters, and landfill leachate. Adsorption is a diverse treatment that can be implemented as primary water treatment or as a pretreat - ment for further water polishing, thus contributing to engineering pro - cess design. For instance, Islam et al. [ 69 ] explored the complementary role of adsorption using green sorption media and nanofiltration to enhance the removal of both short- and long-chain PFAS while reducing membrane fouling. Where in a hybrid process, CPS and ZIPGEM in a column study were used as preliminary treatment for nanofiltration, demonstrating the contribution of the specialty adsorbents in membrane design by resulting in \\u205316 % more long-chain PFAS removal than nanofiltration alone. This is also demonstrated by the treatment capacity and lifespan of the media, specifically for PFOA, recalling that it reached exhaustion in comparison to PFOS. For instance, the LUB and BC of CPS were 68.63 cm and 53.76 cm, respectively, indicating that approximately 75 % of the bed capacity was unused at the time of breakthrough with a C b of 5.0 ng \\u22c5 g \\u0000 1 .\"\n    },\n    {\n      \"corpus_chunk\": 39,\n      \"locator_id\": \"S09-E07\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.6397521495819092,\n        \"RT01-C2\": 0.0012303171679377556,\n        \"RT01-C3\": 3.729175296030007e-05,\n        \"umbrella\": 0.3144318461418152\n      },\n      \"section\": \"references\",\n      \"text\": \"The regeneration of the media was not explored in this study, and considering this is a hindrance for achieving a more sus - tainable adsorption media, future work to investigate this niche is crucial. Other major concerns in PFAS removal include potential PFAS desorption from media and transport and mobility in the environment, which greatly affect water bodies and soil. The concerns pertaining to the current analysis of PFAS adsorption in literature have mainly been focused on PFAS removal efficiencies and mechanisms [ 5 ]. Most studies on PFAS desorption focus on the effect of PFAS desorption from sedi - ments and adsorptive membranes. For instance, Balgooyen and Remucal [ 64 ] investigated how desorption from riverbed sediments contributes to PFAS transport and mobility. The desorption of PFOS from estuarine sediments was found to be lower than that of PFOA and PFHxS [ 65 ]. This indicates some transformation from long-chain to short-chain PFAS in addition to media adsorption, serving as another possible explanation for the prolonged high removal of PFOS by CPS and ZIPGEM. Never - theless, further investigation is required to determine if the short-chain PFAS would show higher desorption than the long-chain PFAS. There are various mechanisms contributing to PFAS removal and adsorption as suggested in the literature, including hydrophobic in - teractions, hydrogen bonding, electrostatic interactions, and van der Waals forces.\"\n    },\n    {\n      \"corpus_chunk\": 5,\n      \"locator_id\": \"S09-E08\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.5370239615440369,\n        \"RT01-C2\": 0.0023999607656151056,\n        \"RT01-C3\": 3.754059434868395e-05,\n        \"umbrella\": 0.6395511031150818\n      },\n      \"section\": \"abstract\",\n      \"text\": \"[ 20 ], and reduction mineralization [ 21 ]. These technologies are limited by their high cost and the risk of formation of intermediate by-products that may be more toxic than their parent molecules. Shorter-chain perfluoroalkyl carboxylates that contain 2 \\u2013 6 carbons are driven by their high toxicity [ 22 ], while they are also more persistent and mobile and less degradable than the long-chain PFAS [ 15 ]. Specialty adsorbents are innovative sorption media with immense potential in water treatment applications due to their low cost, scalable treatment capacity, minimal maintenance, and prolonged service life. These sorption media can remove a variety of pollutants including nu - trients, metals, algal toxins, organic acids, pharmaceuticals, and other emerging contaminants simultaneously from aqueous solutions [ 23 \\u2013 27 ]. In this study, the efficiencies of 2 recently developed adsorp - tion media in removing long- and short-chain PFAS from water were evaluated, and the removal mechanisms were investigated. These spe - cialty adsorbents are Zero-Valent-Iron and Perlite-based Green Envi - ronmental Media (ZIPGEM) and Clay-Perlite and Sand sorption media (CPS). Whereas the ZIPGEM media mix comprises sand, clay, perlite, and zero-valent \\u2011 iron (ZVI), CPS contains sand, clay, and perlite, mixed at specific ratios.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2023 - Valencia - Comparing the removal and fate of long and short chain per - and polyfluoroalkyl substances (PFAS) during surface water treatment via specialty.pdf\",\n  \"source_id\": \"S09\",\n  \"title\": \"Comparing the removal and fate of long and short chain per - and polyfluoroalkyl substances (PFAS) during surface water treatment via specialty adsorbents\",\n  \"year\": \"2023\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "2616993fe18a47eeec63fe7ddf98a0ee53582568e871e2c4cb12d84dd7a8ee41",
+  "response_metadata": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.06122625,
+    "finish_reason": "stop",
+    "input_tokens": 7629,
+    "latency_seconds": 39.85419395798817,
+    "output_tokens": 5169,
+    "reasoning_tokens": 1662,
+    "response_id": "chatcmpl-E9MvW4LI10DUmNvPBABmoJvxkVC8s",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 12798,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The DOI/URL exactly matches the citation in the provided source text (10.1016/j.jwpe.2023.104345; https://doi.org/10.1016/j.jwpe.2023.104345).",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "matrix",
+        "reason": "The text states that there was \"an initial concentration in the canal water\" and that the column influent was not spiked with PFHpA (S09-E04), supporting \"canal water\" with native PFAS and not spiked for PFHpA. However, the term \"surface\" is not present in the cited snippets, so describing it explicitly as \"surface water\" is an extra qualifier not directly supported at this locator grain.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment",
+        "reason": "The treatment is described as ZIPGEM, a Zero-Valent-Iron and Perlite-based Green Environmental Media comprising sand, clay, perlite, and zero-valent iron, mixed at specific ratios (S09-E08). The column-study context is corroborated by S09-E06. The field value matches this description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "study_scale",
+        "reason": "S09-E06 notes CPS and ZIPGEM were used \"in a column study\" and S09-E08 describes ZIPGEM as a specialty sorption media; S09-E04 refers to canal water. This supports a column study using ZIPGEM treating canal water. However, the descriptor \"surface\" in \"canal surface water\" is not explicitly stated in the cited text, so that qualifier is only inferred.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "S09-E01 repeatedly refers to \"initial removal\" and \"removals\" of individual PFAS by ZIPGEM and CPS and reports them as percentages. S09-E04 also discusses \"removal\" and an order of \"adsorption\". Using endpoint_type=\"removal\" for this endpoint is consistent with the measured basis.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0]",
+        "reason": "S09-E01 provides approximate removal percentages for PFPeA, PFBS, PFBA, and PFOA by ZIPGEM and states that \"in general, the order of adsorption by CPS and ZIPGEM was PFOS > PFOA > PFHxS > PFHpA > PFHxA > PFPeA > PFBS > PFBA.\" S09-E04 repeats this order. The endpoint\u2019s interpretation and reported term as PFAS removal efficiency/adsorption preference after the initial 2-h run are directly supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "endpoint_classification",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "S09-E01 and S09-E07 discuss removal of PFAS primarily by adsorption and mention possible transformation of long-chain PFAS to short-chain PFAS as a hypothesized mechanism. They do not measure or report parent-compound loss in a way distinct from adsorption/removal; no mass balance or specific transformation products are quantified. Classifying this as endpoint_type=\"parent_compound_loss\" is not supported by the cited evidence; it more appropriately reflects removal/adsorption mechanism.",
+        "status": "unsupported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1]",
+        "reason": "S09-E01 states that \"Overall, adsorption was the dominant PFAS removal mechanism with some possible transformation of long-chain PFAS to short-chain PFAS when using CPS and ZIPGEM.\" S09-E07 further elaborates on concerns about desorption, potential transformation, and lists mechanisms such as hydrophobic interactions, hydrogen bonding, electrostatic interactions, and van der Waals forces. The endpoint interpretation as adsorption being dominant with possible transformation and these interaction mechanisms is supported by the cited text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "S09-E01 refers to \"the initial 2-h run\" when reporting PFAS removals by CPS and ZIPGEM, matching the value of 2 for the initial contact time.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The phrase \"2-h run\" in S09-E01 clearly implies hours as the time unit; using \"h\" is appropriate and consistent.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "S09-E04 states that \"the adsorption of ZIPGEM continued up to 16 % at 48 h run time,\" supporting a run time value of 48.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "\"48 h run time\" in S09-E04 clearly uses hours; the unit \"h\" is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "operating_conditions[2]",
+        "reason": "S09-E06 notes that CPS and ZIPGEM were used \"in a column study,\" and S09-E04 mentions canal water, so a column configuration using ZIPGEM treating canal water is supported. However, the specific term \"packed-bed\" is not present in the provided excerpts, so that aspect of the configuration is inferred rather than directly supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "S09-E02 states that total nitrogen concentrations ranged from 0.94 to 1.33 mg\u00b7L\u22121 as N, matching the recorded value range.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "S09-E02 explicitly reports total nitrogen in \"mg\u00b7L\u22121 as N\"; the unit \"mg/L as N\" is an equivalent notation and appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].value",
+        "reason": "S09-E02 states that organic nitrogen concentrations ranged from 0.88 to 1.2 mg\u00b7L\u22121 as N, matching the recorded value range.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].unit",
+        "reason": "Organic nitrogen is reported in \"mg\u00b7L\u22121 as N\" in S09-E02; \"mg/L as N\" is consistent.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[5].value",
+        "reason": "S09-E02 reports total phosphorus concentrations ranged from 0.02 to 0.08 mg\u00b7L\u22121 as P, which matches the recorded range.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[5].unit",
+        "reason": "Total phosphorus is reported in \"mg\u00b7L\u22121 as P\" in S09-E02; the unit \"mg/L as P\" is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[6].value",
+        "reason": "S09-E02 notes that calcium concentrations ranged from 39.9 to 99.3 mg\u00b7L\u22121; this matches the recorded value range.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[6].unit",
+        "reason": "Calcium is reported in \"mg\u00b7L\u22121\" in S09-E02; the unit \"mg/L\" is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[7].value",
+        "reason": "S09-E05 states that \"The pH PZC of ZIPGEM (9.2) was higher than CPS (5.6)\"; the recorded pH_PZC value of 9.2 is accurate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[7].unit",
+        "reason": "pH PZC is dimensionless; leaving the unit as an empty string is acceptable and does not conflict with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[8]",
+        "reason": "S09-E05 indicates that ZIPGEM has higher density, BET surface area, saturated hydraulic conductivity, and porosity compared to CPS, attributable to ZVI inclusion. Describing its surface area and porosity qualitatively as \"higher than CPS\" is consistent with this text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[9]",
+        "reason": "S09-E08 explains that \"the ZIPGEM media mix comprises sand, clay, perlite, and zero-valent-iron (ZVI)... mixed at specific ratios.\" The recorded composition matches this description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope",
+        "reason": "S09-E01 lists PFOS, PFOA, PFPeA, PFBS, and PFBA; S09-E02 names the short-chain PFAS PFHpA, PFHxA, PFHxS, PFPeA, PFBA, and PFBS; S09-E04 references PFHpA, PFHxS, PFHxA, PFPeA, PFBS, PFBA, PFOS, and PFOA in the adsorption order. All PFAS listed in the pfas_scope field appear in the cited text with matching identities.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "S09-E01 states that CPS exhibited an initial removal of PFOA of approximately 91% compared to ZIPGEM (approximately 84%). This supports a value of about 84% removal by ZIPGEM. The use of \"~84\" with value_form \"approximate_numeric\" is consistent.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The removals are reported in percentages (\"approximately 84 %\") in S09-E01; the unit \"%\" is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "S09-E01 reports that \"The removals of PFPeA, PFBS, and PFBA by ZIPGEM were approximately 42 %, 90 %, and 36 %, respectively.\" The value \"~42\"% for PFPeA removal is accurate and correctly marked as approximate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "The removals are expressed in percent in S09-E01; using \"%\" is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].value",
+        "reason": "S09-E01 reports PFBS removal by ZIPGEM as approximately 90%. The recorded value \"~90\" with an approximate designation matches this.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].unit",
+        "reason": "PFBS removal is reported in percent in S09-E01, so unit \"%\" is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].value",
+        "reason": "S09-E01 states PFBA removal by ZIPGEM was approximately 36%, matching the recorded \"~36\" value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].unit",
+        "reason": "PFBA removal is expressed in percent in S09-E01; unit \"%\" is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].value",
+        "reason": "S09-E04 reports: \"PFHpA was detected after 2 h when using ZIPGEM, leading to 81.9 % removal,\" which directly supports the value 81.9% removal at 2 h.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].unit",
+        "reason": "The PFHpA removal is given as a percentage in S09-E04; unit \"%\" is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[5].value",
+        "reason": "S09-E04 states that \"overall, the adsorption of ZIPGEM continued up to 16 % at 48 h run time.\" The recorded value of 16% at 48 h is consistent with this statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[5].unit",
+        "reason": "The 16% change is expressed as a percentage in S09-E04; \"%\" is the correct unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[6].value",
+        "reason": "S09-E02 notes: \"The short-chain PFAS including PFHpA, PFHxA, PFHxS, PFPeA, PFBA, and PFBS were also detected at concentrations ranging from 5.7 to 10.3 ng\u00b7L\u22121\". This matches the recorded range 5.7\u201310.3 for short-chain PFAS influent concentrations.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[6].unit",
+        "reason": "The concentration unit in S09-E02 is \"ng\u00b7L\u22121\"; the recorded \"ng/L\" is equivalent and appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "limitations[0]",
+        "reason": "S09-E07 explicitly states that \"The regeneration of the media was not explored in this study,\" supporting that part of the limitation. However, the supplied excerpts (S09-E06 and S09-E07) do not show a statement that results are based on a single surface-water source and one set of operating conditions, so that portion is not directly supported at this locator grain.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "other",
+        "field_path": "limitations[1]",
+        "reason": "The statement that there is \"Incomplete reporting of influent PFAS concentrations and hydraulic conditions\" is an interpretive design-inferred limitation. The cited snippets (S09-E01, S09-E02, S09-E04) provide some influent concentration information and qualitative operation descriptions, but they do not necessitate the conclusion of incomplete reporting. This limitation does not strictly follow from the cited facts alone.",
+        "status": "unsupported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "S09-E01 notes there was \"some possible transformation of long-chain PFAS to short-chain PFAS when using CPS and ZIPGEM.\" S09-E07 reiterates that this indicates \"some transformation from long-chain to short-chain PFAS in addition to media adsorption\" and discusses desorption concerns. The recorded statement accurately reflects these points.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "S09-E01 compares CPS and ZIPGEM directly in terms of PFAS removal percentages over the initial 2-h run, indicating they were evaluated under a common experimental setup. S09-E06 refers to \"CPS and ZIPGEM in a column study\" as part of a treatment train. It is reasonable to judge these datasets as comparable with conditions across the same column configuration, matrix, and evaluation period.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability",
+        "reason": "Given that CPS and ZIPGEM are tested in the same column study on the same canal water (S09-E01, S09-E04, S09-E06) with shared endpoints (removal efficiencies over time), the reasoning that ZIPGEM removal data are comparable to CPS under shared conditions is consistent with the evidence.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT01-bge_llm_local_rag-S09-R02",
+    "record_usable": true,
+    "record_usable_rationale": "The core elements\u2014source identity, treatment (ZIPGEM), water matrix (canal water), PFAS scope, operating conditions, and all quantitative findings on PFAS removal and influent concentrations\u2014are well supported and accurately transcribed. Some qualifiers (e.g., labeling the water explicitly as \"surface water\") and one design-inferred limitation go beyond the direct text, and one endpoint is misclassified as parent_compound_loss rather than a removal/adsorption-mechanism endpoint. These issues do not materially misrepresent the study\u2019s data for adsorption performance and can be corrected or ignored in synthesis, so the record remains usable.",
+    "task_id": "RT01"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

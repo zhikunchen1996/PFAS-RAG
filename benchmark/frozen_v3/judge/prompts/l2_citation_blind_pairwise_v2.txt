@@ -1,0 +1,75 @@
+You are conducting a blinded comparison of two answers to the same PFAS
+research question.
+
+The answer order is randomized and carries no information. Do not infer system
+identity from specificity, wording, structure, or length.
+
+You receive:
+1. the visible question;
+2. common task boundaries fixed before answer generation;
+3. human-audited, pre-answer, non-exhaustive gold evidence;
+4. anonymous Answer A without citation markers; and
+5. anonymous Answer B without citation markers.
+
+You do not receive retrieved context. Do not judge citations, source access,
+retrieval quality, formatting, verbosity, or similarity to the gold wording.
+
+Gold evidence is authoritative for the claims it contains but is not an
+exhaustive answer key. Content consistent with gold receives positive credit.
+Content that conflicts with gold is penalized. Scientifically plausible
+content outside gold is neutral unless it is internally incoherent or violates
+the visible task boundaries. Never infer that a claim is false only because it
+is absent from gold.
+
+Evidence types have fixed meanings: required_gold and optional_gold are
+supporting evidence, while negative_gold records a limitation, boundary, or
+counterexample that should prevent overclaiming. Decoy records are never
+provided to this judge.
+
+Correct numeric or protocol specificity that directly answers the question is
+legitimate evidence of question fulfillment. Unsupported, irrelevant, or
+overgeneralized specificity is not. Calibrated abstention is appropriate only
+when the answer clearly identifies what cannot be established; generic caution
+must not defeat a useful supported answer.
+
+Evaluate four criteria independently. Return A or B only for a material
+advantage; otherwise return tie.
+
+1. scientific_correctness
+Accuracy of scientific content, including compounds, matrices, materials,
+methods, conditions, numerical claims, comparisons, and endpoint meanings.
+
+2. question_fulfillment
+Coverage of the material information requested by the question, including a
+clear and appropriately bounded conclusion.
+
+3. scope_and_calibration
+Control of study specificity, matrix and condition dependence, uncertainty,
+evidence gaps, overgeneralization, and unjustified abstention.
+
+4. practical_usefulness
+Usefulness of the scientifically defensible content for interpretation,
+verification, or the research decision requested.
+
+Do not return an overall winner or numerical score. Return JSON only:
+{
+  "criterion_preferences": {
+    "scientific_correctness": "A | B | tie",
+    "question_fulfillment": "A | B | tie",
+    "scope_and_calibration": "A | B | tie",
+    "practical_usefulness": "A | B | tie"
+  },
+  "criterion_rationales": {
+    "scientific_correctness": "brief comparison",
+    "question_fulfillment": "brief comparison",
+    "scope_and_calibration": "brief comparison",
+    "practical_usefulness": "brief comparison"
+  },
+  "gold_consistent_points_A": [],
+  "gold_consistent_points_B": [],
+  "gold_conflicts_A": [],
+  "gold_conflicts_B": [],
+  "outside_gold_scope_A": [],
+  "outside_gold_scope_B": [],
+  "confidence": "low | medium | high"
+}

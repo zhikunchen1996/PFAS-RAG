@@ -1,0 +1,288 @@
+{
+  "batch_id": "test40-review-batch-01",
+  "batch_sha256": "7aabec03af25e06a8c05a4bcb8253fcccf46a5bedf6710b6d83a19c4c246dd04",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-review-batch-01",
+    "reviews": [
+      {
+        "question_id": "NQ01",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "The limitation content from NQ01_MMG004 ('predefined quantification targets... just a few dozen out of the thousands that may be present') is used as core required_content evidence in both NQ01-G01 and NQ01-G06, and is then reused again as the primary support for constraint NQ01-X02. This is the same underlying fact scored three separate times across two core groups and one constraint group, which overweights a single piece of evidence relative to the rest of the ledger rather than deduplicating it while preserving distinct content."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ01-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ01-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ01-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ01-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ01-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ01-G06",
+            "verdict": "duplicate_or_overweighted",
+            "issues": [
+              "Reuses the identical NQ01_MMG004 limitation span ('predefined quantification targets... few dozen out of the thousands') already scored as required_content in NQ01-G01, and again restated in constraint NQ01-X02. The distinctive, non-duplicated content of this group is only the direct-injection LC-MS Spain example; the limitation clause should not be independently re-credited here."
+            ],
+            "required_repairs": [
+              "Narrow NQ01-G06's canonical_proposition/full_rule to the direct-injection LC-MS Spain example itself, and drop or clearly subordinate the repeated 'few dozen out of thousands' limitation language so it is not double-scored against NQ01-G01 and NQ01-X02."
+            ]
+          },
+          {
+            "claim_group_id": "NQ01-G07",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ01-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ01-X02",
+            "verdict": "duplicate_or_overweighted",
+            "issues": [
+              "Restates the same NQ01_MMG004 'predefined targets/few dozen out of thousands' span already used as required_content in NQ01-G01 and NQ01-G06, so the constraint does not add distinct evidentiary content beyond what is already scored elsewhere; only the NQ01_MMG002 background-contamination span is genuinely new here."
+            ],
+            "required_repairs": [
+              "Either restrict NQ01-X02 to the background-contamination span (NQ01_MMG002) as its primary support, or explicitly note in the rule that the shared NQ01_MMG004 span is cross-referenced rather than independently scored, to avoid triple-counting the same underlying limitation fact."
+            ]
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Deduplicate the NQ01_MMG004 'predefined targets/few dozen out of thousands' limitation content so it functions as required_content in exactly one group (recommend keeping it in NQ01-G01) and is only cross-referenced, not independently re-scored, in NQ01-G06 and NQ01-X02."
+        ]
+      },
+      {
+        "question_id": "NQ02",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ02-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ02-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ02-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ02-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ02-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ02-G06",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ02-G07",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ02-G08",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ02-G09",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ02-G10",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ02-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "NQ04",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Two of the four required_gold evidence records supporting the numeric core of this question have exact_evidence_span/unit_exact_spans that are truncated or omit the specific sentence actually relied upon by the claim groups and reference answer. For NQ04_MMG002, the approved span only covers the LOD/LOQ calculation-method sentence, but the analyte-specific numeric range ('The LOQ of different PFAAs varied from 0.02 ng/L to 0.92 ng/L ... depending on the perfluoroalkyl chain length') — which is central to NQ04-G01, NQ04-G02, NQ04-X01, and is directly quoted with an [NQ04_MMG002] citation in the reference_answer — is present only in full_chunk_text and was never captured as its own reviewed unit_exact_span. For NQ04_MMG004, the approved span is truncated mid-sentence ('...according to EPA standard methods ( U.S.'), yet the reference_answer quotes the completed citation ('U.S. EPA, 2016') and an additional sentence about Table 2 that likewise falls outside the approved span."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ04-G01",
+            "verdict": "partially_supported",
+            "issues": [
+              "Full_rule and reference_answer rely on the NQ04_MMG002 analyte-specific LOQ range (0.02–0.92 ng/L) and chain-length dependence, but this sentence is not included in NQ04_MMG002's exact_evidence_span or unit_exact_spans, only in full_chunk_text.",
+              "Reference_answer also completes the truncated NQ04_MMG004 span ('U.S. EPA, 2016') and cites an extra sentence about Table 2 that is likewise outside the approved exact_evidence_span/unit_exact_spans for NQ04_MMG004."
+            ],
+            "required_repairs": [
+              "Add the LOQ-range sentence from NQ04_MMG002's full_chunk_text as an additional unit_exact_span (with author review sign-off) so the numeric claim has an approved span backing it.",
+              "Extend NQ04_MMG004's exact_evidence_span/unit_exact_spans to include the complete citation and, if relied upon, the Table 2 sentence, or trim the rule/reference_answer to only what the current truncated span supports."
+            ]
+          },
+          {
+            "claim_group_id": "NQ04-G02",
+            "verdict": "partially_supported",
+            "issues": [
+              "Same missing-span issue as NQ04-G01: the analyte-dependent LOQ range from NQ04_MMG002 is used as evidence but is not part of the approved exact/unit spans.",
+              "The exact_spans list contains two entries for NQ04_MMG002 with the identical exact_evidence_span text but different 'supports' descriptions, one of which describes content (the 0.02–0.92 ng/L range) not actually present in the quoted span — this is an internal inconsistency, not a true duplicate citation."
+            ],
+            "required_repairs": [
+              "Add the missing LOQ-range unit_exact_span to NQ04_MMG002 (see NQ04-G01 repair) so the second exact_spans entry accurately cites the text it claims to support.",
+              "Correct or split the two NQ04_MMG002 exact_spans entries so each 'supports' description matches text actually contained in its cited span."
+            ]
+          },
+          {
+            "claim_group_id": "NQ04-X01",
+            "verdict": "partially_supported",
+            "issues": [
+              "Constraint relies on the same NQ04_MMG002 analyte-dependent LOQ statement that is not present in the approved exact/unit spans, only in full_chunk_text."
+            ],
+            "required_repairs": [
+              "Once NQ04_MMG002's unit_exact_spans is extended to include the LOQ-range sentence, re-verify that NQ04-X01's exact_spans entry correctly cites that span."
+            ]
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Extend the approved exact_evidence_span/unit_exact_spans for NQ04_MMG002 (to include the 0.02–0.92 ng/L LOQ-range/chain-length sentence) and for NQ04_MMG004 (to include the full EPA citation and any relied-upon continuation) so that all quotes used in the claim groups and reference_answer are backed by explicitly approved, reviewed spans rather than only appearing in full_chunk_text."
+        ]
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 142715,
+    "num_turns": 8,
+    "stop_reason": "tool_use",
+    "session_id": "034f7f0d-5596-4955-808c-eaaaa9a49e44",
+    "total_cost_usd": 0.5917580500000001,
+    "usage": {
+      "input_tokens": 12,
+      "cache_creation_input_tokens": 83765,
+      "cache_read_input_tokens": 247701,
+      "output_tokens": 13505,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 83765
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 12137,
+          "cache_read_input_tokens": 73570,
+          "cache_creation_input_tokens": 15250,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 15250,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 628,
+        "outputTokens": 18,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000718,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 12,
+        "outputTokens": 13505,
+        "cacheReadInputTokens": 247701,
+        "cacheCreationInputTokens": 83765,
+        "webSearchRequests": 0,
+        "costUSD": 0.5910400499999999,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 5000,
+    "ttft_stream_ms": 888,
+    "time_to_request_ms": 61,
+    "type": "result",
+    "duration_ms": 142980,
+    "uuid": "1961e48a-f844-46b7-bae1-bfc1c06b492d"
+  },
+  "candidate_test40_inputs_used": false
+}

@@ -1,0 +1,102 @@
+{
+  "protocol_id": "test40_formal_v1_1",
+  "status": "preflight_only_no_paid_calls",
+  "date": "2026-07-30",
+  "scope": "Formal Test40 comparison of three frozen RAG retrieval systems",
+  "questions": 40,
+  "systems": [
+    "hybrid",
+    "bge",
+    "bge_llm"
+  ],
+  "retrieval": {
+    "hybrid": {
+      "initial_pool": 60,
+      "final_top_k": 10
+    },
+    "bge": {
+      "initial_pool": 60,
+      "cross_encoder": "BAAI/bge-reranker-base",
+      "cross_encoder_max_length": 512,
+      "candidate_text_max_chars": 1800,
+      "document_cap": null,
+      "final_top_k": 10
+    },
+    "bge_llm": {
+      "initial_pool": 60,
+      "bge_shortlist": 30,
+      "selector_model": "gpt-5.1",
+      "required_snapshot": "gpt-5.1-2025-11-13",
+      "selector_temperature": 0,
+      "selector_reasoning_effort": "provider_default_not_sent",
+      "full_candidate_chunks": true,
+      "final_top_k": 10
+    }
+  },
+  "l1": {
+    "timing": "before common tagger and answer generation",
+    "llm_judge": false,
+    "metrics": [
+      "MRR_required_gold",
+      "required_gold_recall@10",
+      "gold_doc_recall@10",
+      "negative_gold_recall@10"
+    ]
+  },
+  "common_generation": {
+    "model": "gpt-5.1",
+    "required_snapshot": "gpt-5.1-2025-11-13",
+    "temperature": 0,
+    "tagger_reasoning_effort": "provider_default_not_sent",
+    "same_tagger_and_answer_prompts_for_all_systems": true,
+    "tagger_sees_only_visible_question_and_final_top10": true,
+    "tagger_sees_system_identity": false,
+    "tagger_sees_gold_or_task_boundaries": false,
+    "full_context_retained": true,
+    "chunk_order_retained": true
+  },
+  "l15": {
+    "role": "supplementary citation-support sanity check",
+    "runs_per_candidate_answer": 1,
+    "model": "gpt-5.1",
+    "required_snapshot": "gpt-5.1-2025-11-13",
+    "reasoning_effort": "low",
+    "temperature": "provider_default_not_sent",
+    "gold_visible": false,
+    "post_hoc_retrieval": false
+  },
+  "l3": {
+    "role": "primary final-answer evaluation",
+    "reference": "candidate-blind Test40 scoring reference V2 successor",
+    "source_reference_release": "l3_test40_reference_v1_2026-07-29",
+    "scoring_reference_release": "test40_scoring_reference_v2_2026-07-29",
+    "model": "gpt-5.1",
+    "required_snapshot": "gpt-5.1-2025-11-13",
+    "reasoning_effort": "low",
+    "temperature": "provider_default_not_sent",
+    "claim_order": "canonical",
+    "repeat_count": 3,
+    "one_anonymous_answer_per_request": true,
+    "primary_metric": "component-balanced core reference-claim coverage",
+    "aggregation": "equal mean across three complete repeat-specific system means",
+    "uncertainty": "sample standard deviation across three repeat-specific system means",
+    "bootstrap": false
+  },
+  "execution_safety": {
+    "canonical_result_root": "benchmark/runs/test40_formal_v1/results",
+    "arbitrary_formal_output_paths_allowed": false,
+    "automatic_sdk_retries": 0,
+    "resume_requires_exact_request_hash": true,
+    "existing_paid_output_requires_explicit_resume": true,
+    "successful_partial_calls_are_persisted": true,
+    "test_results_must_not_change_prompts_or_parameters": true
+  },
+  "planned_paid_calls": {
+    "bge_llm_selector": 40,
+    "common_tagger": 120,
+    "answer_generation": 120,
+    "l15": 120,
+    "l3": 360,
+    "total": 760
+  }
+}

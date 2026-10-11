@@ -1,0 +1,212 @@
+{
+  "call_key": "RT08:gpt51_web_search:verify:RT08-gpt51_web_search-WEB02-R01",
+  "created_at": "2026-08-05T04:32:05.214219+00:00",
+  "raw_response_text": "{\"task_id\":\"RT08\",\"record_id\":\"RT08-gpt51_web_search-WEB02-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract states that the objectives were to compare degradation kinetics and energy consumption for PFOA and PFOS in synthetic solutions using a BDD flow-through cell, but provides no quantitative conditions or metrics. This supports classifying the record as descriptive_only for cross-study comparability.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source states that degradation kinetics for PFOA and PFOS in synthetic solutions were compared. Evaluating degradation kinetics necessarily involves following the loss of the parent compounds over time, so classifying the endpoint as parent_compound_loss is consistent with the text.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source explicitly mentions comparison of energy consumption for PFOA and PFOS. Treating this as an 'other' endpoint type with reported term 'energy consumption' is consistent with the text.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The text supports that degradation kinetics of PFOA and PFOS were evaluated in a BDD flow-through cell. It does not explicitly state that parent loss was the sole basis or address the absence of defluorination or mineralization measurements; these aspects are inferred. Thus, the core idea is supported but some interpretive qualifiers go beyond the cited text.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The abstract supports that energy consumption for electrochemical treatment of PFOA and PFOS in synthetic solutions was evaluated. However, the statement that it was 'likely normalized to treatment performance' and that specific metrics and values are not reported in the accessible text are inferences not grounded in the cited passage.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The cited passage states that the objectives were to compare degradation kinetics and energy consumption for PFOA and PFOS in synthetic solutions. From this, it is a reasonable design-inferred limitation to note that synthetic-solution tests focused only on PFOA and PFOS, implying limited PFAS structural diversity.\"},{\"field_path\":\"matrix.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The abstract mentions 'synthetic solutions' for PFOA and PFOS but does not explicitly state that they are aqueous, although this is a reasonable assumption. The presence of PFOA and PFOS in the synthetic solutions is supported; the qualifier 'aqueous' is inferred.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The passage explicitly mentions using a 'BDD flow-through cell' for the comparisons. Describing the reactor configuration as a 'BDD flow-through electrochemical cell' is consistent with this, since a BDD cell is an electrochemical reactor.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Reactor configuration is a descriptive condition, not a numeric quantity, so leaving the unit null is appropriate and consistent with the source.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The passage explicitly mentions PFOA among the substances whose degradation kinetics and energy consumption were compared in synthetic solutions.\"},{\"field_path\":\"pfas_scope[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The passage explicitly mentions PFOS among the substances whose degradation kinetics and energy consumption were compared in synthetic solutions.\"},{\"field_path\":\"study_scale.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The text confirms use of a BDD flow-through cell treating synthetic solutions containing PFOA and PFOS. However, it does not specify that the system is bench-scale; this is a reasonable inference but not explicitly stated in the cited passage.\"},{\"field_path\":\"treatment.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The cited passage mentions use of a BDD flow-through cell but does not explicitly use the term 'electrochemical oxidation' in the locator text. While a BDD cell is inherently an electrochemical oxidation technology, labeling it explicitly as 'electrochemical oxidation' goes slightly beyond the scoped passage and is therefore partly inferred.\"},{\"field_path\":\"comparability.reason\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The abstract indicates only that degradation kinetics and energy consumption were compared in a specific configuration, without reporting numerical conditions or metrics in the cited text. Inferring that the study is therefore descriptive-only is reasonable, but the explicit statement about lack of numeric conditions, kinetics, or energy metrics in the accessible text is meta-information not present in the source itself.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014technology (BDD flow-through cell), treatment type, PFAS scope (PFOA and PFOS), matrix (synthetic solutions), and endpoints (degradation kinetics based on parent-compound loss and energy consumption)\u2014are supported or only mildly qualified by inference. No quantitative findings are claimed. There are no contradictions or critical unsupported fields that would mislead synthesis, so the record is usable with attention to noted qualifiers.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of how electrochemical oxidation, non-thermal plasma, and sonolysis should be matched to a defined PFAS-rich liquid stream.\",\"task_id\":\"RT08\",\"title\":\"Matching a destructive technology to a PFAS-rich liquid stream\"}\n\nTask-specific extraction objective:\nExtract technology and reactor, feed matrix and PFAS loading, salinity and co-contaminants, operating conditions, kinetic basis, endpoint, energy metric, duration, scale, and stated implementation limitation.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.coche.2023.100944\"],\"all_blocked_titles\":[\"scaling up water treatment technologies for pfas destruction current status and potential for fit for purpose application\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.coche.2023.100944\"],\"anchor_id\":\"AR-BLOTEVOGEL-2023\",\"corpus_source\":\"2024 - Blotevogel - Scaling up water treatment technologies for PFAS destruction_ current status and potential for fit-for-purpose application.pdf\",\"doi\":\"10.1016/j.coche.2023.100944\",\"title\":\"Scaling up water treatment technologies for PFAS destruction: current status and potential for fit-for-purpose application\",\"url\":\"https://doi.org/10.1016/j.coche.2023.100944\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Bulusu S. et al., \\\"A flow-through cell for the electrochemical oxidation of perfluoroalkyl substances in landfill leachates,\\\" Journal of Water Process Engineering, 2021, 40, 101859.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB02-E01\"\n    ],\n    \"reason\": \"Available text indicates comparative evaluation of kinetics and energy consumption for PFOA and PFOS in a specific BDD flow-through configuration, but lacks numeric conditions, kinetics, or energy metrics needed for cross-study normalization.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.jwpe.2021.101859\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"parent_compound_loss\",\n      \"evidence_locator_ids\": [\n        \"WEB02-E01\"\n      ],\n      \"interpretation\": \"Study evaluated loss of PFOA and PFOS over time in the BDD flow-through cell to derive degradation kinetics; parent loss was the basis, with no explicit evidence here for defluorination or mineralization.\",\n      \"reported_term\": \"degradation kinetics of PFOA and PFOS\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"WEB02-E01\"\n      ],\n      \"interpretation\": \"Energy consumption for electrochemical oxidation of PFOA and PFOS in synthetic solutions was evaluated, likely normalized to treatment performance, but specific metric and values are not reported in the accessible text.\",\n      \"reported_term\": \"energy consumption\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB02-E01\"\n      ],\n      \"statement\": \"Synthetic-solution tests focused only on PFOA and PFOS, providing limited structural diversity of PFAS.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB02-E01\"\n    ],\n    \"value\": \"Synthetic aqueous solutions containing PFOA and PFOS\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB02-E01\"\n      ],\n      \"name\": \"Reactor configuration\",\n      \"qualifiers\": \"Used for kinetic and energy-consumption comparison on PFOA and PFOS in synthetic solutions\",\n      \"unit\": null,\n      \"value\": \"BDD flow-through electrochemical cell\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB02-E01\"\n      ],\n      \"value\": \"Perfluorooctanoic acid (PFOA)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB02-E01\"\n      ],\n      \"value\": \"Perfluorooctane sulfonate (PFOS)\"\n    }\n  ],\n  \"quantitative_findings\": [],\n  \"record_id\": \"RT08-gpt51_web_search-WEB02-R01\",\n  \"residuals_byproducts\": [],\n  \"source_id\": \"WEB02\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB02-E01\"\n    ],\n    \"value\": \"Bench-scale electrochemical flow-through cell treating synthetic PFAS solutions\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB02-E01\"\n    ],\n    \"value\": \"Electrochemical oxidation in a boron-doped diamond (BDD) flow-through cell\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"publisher_page\",\n  \"capture_source_id\": \"WEB11\",\n  \"citation\": \"Bulusu S. et al., Journal of Water Process Engineering, 2021, 40, 101859.\",\n  \"covered_component_ids\": [\n    \"RT08-C1\",\n    \"RT08-C2\",\n    \"RT08-C3\"\n  ],\n  \"doi\": \"10.1016/j.jwpe.2021.101859\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.jwpe.2021.101859\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB02-E01\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Article outline/Abstract\",\n      \"text\": \"Objectives were to compare degradation kinetics and energy consumption for PFOA and PFOS in synthetic solutions using a BDD flow-through cell, then assess PFAAs in real landfill leachates and evaluate effects of leachate composition.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB02-E02\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Methods\",\n      \"text\": \"Landfill leachates contaminated with multiple PFAAs were treated in a recirculating BDD flow-through reactor, enabling evaluation of treatment performance in a PFAS-rich, saline, organic-laden matrix.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://www.sciencedirect.com/science/article/pii/S221471442100297X\",\n  \"source_id\": \"WEB02\",\n  \"source_limitations\": [\n    \"Full text not directly accessible from inspected page; details inferred from abstract and article outline.\",\n    \"Focuses on PFOA/PFOS and total PFAA response; limited structural diversity.\",\n    \"Energy metrics and long-term electrode stability are only partially reported.\"\n  ],\n  \"title\": \"A flow-through cell for the electrochemical oxidation of perfluoroalkyl substances in landfill leachates\",\n  \"year\": \"2021\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "96747cb8e8ff71f6115e12b141a1bf3f380624211360575ba39a106edec36eab",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.026013,
+    "finish_reason": "stop",
+    "input_tokens": 2492,
+    "latency_seconds": 23.560917707975022,
+    "output_tokens": 2405,
+    "reasoning_tokens": 1241,
+    "response_id": "chatcmpl-E9Na1uFyQIDUAu40QUPxGjtZiKWZs",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 4897,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The abstract states that the objectives were to compare degradation kinetics and energy consumption for PFOA and PFOS in synthetic solutions using a BDD flow-through cell, but provides no quantitative conditions or metrics. This supports classifying the record as descriptive_only for cross-study comparability.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The source states that degradation kinetics for PFOA and PFOS in synthetic solutions were compared. Evaluating degradation kinetics necessarily involves following the loss of the parent compounds over time, so classifying the endpoint as parent_compound_loss is consistent with the text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "The source explicitly mentions comparison of energy consumption for PFOA and PFOS. Treating this as an 'other' endpoint type with reported term 'energy consumption' is consistent with the text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "The text supports that degradation kinetics of PFOA and PFOS were evaluated in a BDD flow-through cell. It does not explicitly state that parent loss was the sole basis or address the absence of defluorination or mineralization measurements; these aspects are inferred. Thus, the core idea is supported but some interpretive qualifiers go beyond the cited text.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "The abstract supports that energy consumption for electrochemical treatment of PFOA and PFOS in synthetic solutions was evaluated. However, the statement that it was 'likely normalized to treatment performance' and that specific metrics and values are not reported in the accessible text are inferences not grounded in the cited passage.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "The cited passage states that the objectives were to compare degradation kinetics and energy consumption for PFOA and PFOS in synthetic solutions. From this, it is a reasonable design-inferred limitation to note that synthetic-solution tests focused only on PFOA and PFOS, implying limited PFAS structural diversity.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "matrix.value",
+        "reason": "The abstract mentions 'synthetic solutions' for PFOA and PFOS but does not explicitly state that they are aqueous, although this is a reasonable assumption. The presence of PFOA and PFOS in the synthetic solutions is supported; the qualifier 'aqueous' is inferred.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "The passage explicitly mentions using a 'BDD flow-through cell' for the comparisons. Describing the reactor configuration as a 'BDD flow-through electrochemical cell' is consistent with this, since a BDD cell is an electrochemical reactor.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "Reactor configuration is a descriptive condition, not a numeric quantity, so leaving the unit null is appropriate and consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "The passage explicitly mentions PFOA among the substances whose degradation kinetics and energy consumption were compared in synthetic solutions.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1].value",
+        "reason": "The passage explicitly mentions PFOS among the substances whose degradation kinetics and energy consumption were compared in synthetic solutions.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "study_scale.value",
+        "reason": "The text confirms use of a BDD flow-through cell treating synthetic solutions containing PFOA and PFOS. However, it does not specify that the system is bench-scale; this is a reasonable inference but not explicitly stated in the cited passage.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "treatment.value",
+        "reason": "The cited passage mentions use of a BDD flow-through cell but does not explicitly use the term 'electrochemical oxidation' in the locator text. While a BDD cell is inherently an electrochemical oxidation technology, labeling it explicitly as 'electrochemical oxidation' goes slightly beyond the scoped passage and is therefore partly inferred.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "comparability.reason",
+        "reason": "The abstract indicates only that degradation kinetics and energy consumption were compared in a specific configuration, without reporting numerical conditions or metrics in the cited text. Inferring that the study is therefore descriptive-only is reasonable, but the explicit statement about lack of numeric conditions, kinetics, or energy metrics in the accessible text is meta-information not present in the source itself.",
+        "status": "partially_supported"
+      }
+    ],
+    "record_id": "RT08-gpt51_web_search-WEB02-R01",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014technology (BDD flow-through cell), treatment type, PFAS scope (PFOA and PFOS), matrix (synthetic solutions), and endpoints (degradation kinetics based on parent-compound loss and energy consumption)\u2014are supported or only mildly qualified by inference. No quantitative findings are claimed. There are no contradictions or critical unsupported fields that would mislead synthesis, so the record is usable with attention to noted qualifiers.",
+    "task_id": "RT08"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

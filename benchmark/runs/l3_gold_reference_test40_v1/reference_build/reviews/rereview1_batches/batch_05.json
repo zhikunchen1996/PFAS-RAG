@@ -1,0 +1,1863 @@
+{
+  "batch_id": "test40-rereview1-batch-05",
+  "candidate_blind": true,
+  "review_round": "repair1_rereview",
+  "questions": [
+    {
+      "question_id": "WF10_015",
+      "reference_packet": {
+        "question_id": "WF10_015",
+        "question": {
+          "question_id": "WF10_015",
+          "question_text": "What information do I need before comparing PFAS breakthrough curves from drinking-water adsorption columns?",
+          "task_type": "protocol_extraction",
+          "answerability_type": "answerable",
+          "must_include": "Identify the relevant protocol steps, reagents/materials, operating conditions, matrix, target compounds, and reported limitations when the evidence supports them.",
+          "must_not_claim": "Do not invent study-specific details, numeric values, mechanisms, materials, protocols, citations, or units. Do not convert a condition-specific finding into a universal PFAS treatment claim.",
+          "expected_operation": "extract",
+          "required_conditions": "",
+          "required_units": "",
+          "forbidden_overclaims": "Do not invent study-specific details, numeric values, mechanisms, materials, protocols, citations, or units. Do not convert a condition-specific finding into a universal PFAS treatment claim.",
+          "workflow_scenario": "A researcher is extracting model variables from drinking-water adsorption studies before comparing breakthrough behavior.",
+          "information_need": "Identify the reported variables in a column adsorption model and their meaning."
+        },
+        "task_components": [
+          {
+            "task_component_id": "WF10_015-T01",
+            "component_text": "Extract the reported column protocol steps and operating procedures relevant to PFAS breakthrough curves (e.g., how the adsorption experiment is run from start to finish) so that procedural differences can be identified before comparing breakthrough behavior."
+          },
+          {
+            "task_component_id": "WF10_015-T02",
+            "component_text": "Extract the reported materials and setup used in the adsorption columns, including sorbent/column media, column configuration, and any other key hardware or reagents, along with the characteristics of the water matrix used (e.g., drinking water source or composition descriptors) so that physical and matrix differences are known before comparison."
+          },
+          {
+            "task_component_id": "WF10_015-T03",
+            "component_text": "Extract the reported operating conditions and model variables used to describe PFAS breakthrough, including flow-related conditions, loading or contact conditions, and how breakthrough is quantified or modeled, together with the specific target PFAS compounds considered and the stated meaning of each reported model variable."
+          },
+          {
+            "task_component_id": "WF10_015-T04",
+            "component_text": "Extract any reported study-specific limitations, assumptions, or caveats that the authors state regarding their PFAS breakthrough curves or model description, focusing on factors that could restrict or qualify comparisons across different adsorption column studies."
+          }
+        ],
+        "gold_is_non_exhaustive": true,
+        "approved_source_evidence": [
+          {
+            "evidence_id": "WF10_015_MMG001",
+            "evidence_type": "required_gold",
+            "doc_id": "2021 - Franke - The Price of Really Clean Water - Combining Nanofiltration with Granular Activated Carbon and Anion Exchange Resins for the Removal of Per- And.pdf",
+            "chunk_id": "36",
+            "exact_evidence_span": "57 It should be noted that results for the adsorption of organic micropollutants obtained by di ﬀerent studies are often not comparable because experimental parameters, such as column dimension, material type, ﬂow- rates, and water quality, di ﬀer substantially, and models describing micropollutant breakthrough based on water quality parameters are still scarce.",
+            "unit_exact_spans": [
+              "57 It should be noted that results for the adsorption of organic micropollutants obtained by di ﬀerent studies are often not comparable because experimental parameters, such as column dimension, material type, ﬂow- rates, and water quality, di ﬀer substantially, and models describing micropollutant breakthrough based on water quality parameters are still scarce."
+            ],
+            "full_chunk_text": "seen from the illustration of c/c0 with the throughput in BVtreated (Figure 4 ), breakthrough occurs earlier for the GAC columns treating the NF concentrate in comparison to the ones treating raw water. This, with the exception for PFBS for which breakthrough curves are very close to each other for both water types for both GAC materials evaluated, could be explained by the fact that small organic molecules compete more eﬀectively for adsorption sites than larger molecules of a similar polarity. 57 It should be noted that results for the adsorption of organic micropollutants obtained by di ﬀerent studies are often not comparable because experimental parameters, such as column dimension, material type, ﬂow- rates, and water quality, di ﬀer substantially, and models describing micropollutant breakthrough based on water quality parameters are still scarce. 58 However, being able to compare PFAS breakthrough for the two di ﬀerent water types evaluated in the manner as shown above provides a useful tool for a large-scale application of the combination of NF with GAC, as recoveries might change during NF operation and the inﬂuence of a subsequently changed DOC content on PFAS removal by GAC could therefore be predicted. One example of the current relevance is the new safety threshold for tolerable weekly intakes of several PFASs issued by the European Food Safety Authority, which is likely to impact treatment goals for",
+            "corpus_metadata": {
+              "source": "2021 - Franke - The Price of Really Clean Water - Combining Nanofiltration with Granular Activated Carbon and Anion Exchange Resins for the Removal of Per- And.pdf",
+              "chunk": 36,
+              "title": "The Price of Really Clean Water - Combining Nanofiltration with Granular Activated Carbon and Anion Exchange Resins for the Removal of Per- And",
+              "authors": "Franke, V.; Ullberg, M.; McCleaf, P.; Wålinder, M.; Köhler, S. J.; Ahrens, L.",
+              "year": "2021",
+              "journal": "ACS ES&T Water",
+              "doi": "10.1021/acsestwater.0c00141",
+              "section": "results"
+            },
+            "author_review_decision": "retained_after_project_author_review",
+            "exact_span_found_in_full_chunk": true,
+            "unit_spans_found_in_full_chunk": [
+              true
+            ]
+          },
+          {
+            "evidence_id": "WF10_015_MMG002",
+            "evidence_type": "optional_gold",
+            "doc_id": "2023 - Murray - PFAS adsorbent selection - The role of adsorbent use rate, water quality, and cost.pdf",
+            "chunk_id": "6",
+            "exact_evidence_span": "Numerous studies have employed bed volumes (BV(s)) to breakthrough behavior as a focal point of adsorbent evaluation [18,30,38] .",
+            "unit_exact_spans": [
+              "Numerous studies have employed bed volumes (BV(s)) to breakthrough behavior as a focal point of adsorbent evaluation [18,30,38] .",
+              "However, this form of comparison is obscured by different BV sizes, operating conditions, and high concentrations of adsorbates impacting the avail - ability of adsorption sites."
+            ],
+            "full_chunk_text": "37] , comparing PFAA adsorption performance of adsorbents treating several source waters under different conditions remains challenging. Numerous studies have employed bed volumes (BV(s)) to breakthrough behavior as a focal point of adsorbent evaluation [18,30,38] . However, this form of comparison is obscured by different BV sizes, operating conditions, and high concentrations of adsorbates impacting the avail - ability of adsorption sites. Without a comprehensive metric for treat - ment comparison, treatment selection between multiple adsorbents in highly complex matrices is difficult and further exacerbated by the dearth of information associated with the direct application of adsor - bents at full-scale applications. With limited available information comparing PFAS removal effectiveness in waters with elevated con - centrations of DOC and inorganic ions inhibiting PFAS removal, the need for pretreatment strategies or elongated contact time to reduce adsorbent use rates has yet to be investigated. Application of breakthrough modeling using the Thomas model, as previously applied by Schaefer et al. [24] and Grieco et al. [23] , alle - viates the challenges associated with evaluating adsorbent performance and pretreatment necessity by distilling breakthrough curves into model parameters. These modeling efforts enable direct comparison of adsor - bent use rates for multiple adsorbents in the treatment of different water types. It is important to note that while assessment of BVs to break -",
+            "corpus_metadata": {
+              "source": "2023 - Murray - PFAS adsorbent selection - The role of adsorbent use rate, water quality, and cost.pdf",
+              "chunk": 6,
+              "title": "PFAS adsorbent selection - The role of adsorbent use rate, water quality, and cost",
+              "authors": "Murray, C. C.; Safulko, A.; Vatankhah, H.; Liu, C. J.; Tajdini, B.; Marshall, R. E.; Bellona, C.",
+              "year": "2023",
+              "journal": "Journal of Hazardous Materials",
+              "doi": "10.1016/j.jhazmat.2023.131481",
+              "section": "results"
+            },
+            "author_review_decision": "retained_after_project_author_review",
+            "exact_span_found_in_full_chunk": true,
+            "unit_spans_found_in_full_chunk": [
+              true,
+              true
+            ]
+          }
+        ],
+        "author_review_provenance": {
+          "record_id": "frozen_v3_project_author_review_2026-07-26",
+          "decision": "All listed questions and gold records were retained after project-author review; no item-specific rationale was recorded.",
+          "interpretation_limit": "This is a retention-only confirmation, not independent double annotation or item-level adjudication. It does not resolve historical machine-review flags or establish exhaustive gold coverage. The reference evidence remains non-exhaustive."
+        }
+      },
+      "draft_ledger": {
+        "question_id": "WF10_015",
+        "answerability": "partially_supported",
+        "answerability_rationale": "The evidence explicitly identifies several key variables that affect comparability of adsorption column breakthrough behavior (e.g., column dimensions, material type, flow rates, water quality, bed volume size, operating conditions, and adsorbate concentrations) and notes that models describing micropollutant breakthrough based on water quality parameters are scarce. However, it does not provide a full step‑by‑step column protocol, does not describe specific drinking‑water matrix compositions, does not list specific PFAS target compounds, and does not define detailed model variables. Thus, only part of the requested protocol and modeling information can be supported directly.",
+        "task_components": [
+          {
+            "task_component_id": "WF10_015-T01",
+            "component_text": "Extract the reported column protocol steps and operating procedures relevant to PFAS breakthrough curves (e.g., how the adsorption experiment is run from start to finish) so that procedural differences can be identified before comparing breakthrough behavior."
+          },
+          {
+            "task_component_id": "WF10_015-T02",
+            "component_text": "Extract the reported materials and setup used in the adsorption columns, including sorbent/column media, column configuration, and any other key hardware or reagents, along with the characteristics of the water matrix used (e.g., drinking water source or composition descriptors) so that physical and matrix differences are known before comparison."
+          },
+          {
+            "task_component_id": "WF10_015-T03",
+            "component_text": "Extract the reported operating conditions and model variables used to describe PFAS breakthrough, including flow-related conditions, loading or contact conditions, and how breakthrough is quantified or modeled, together with the specific target PFAS compounds considered and the stated meaning of each reported model variable."
+          },
+          {
+            "task_component_id": "WF10_015-T04",
+            "component_text": "Extract any reported study-specific limitations, assumptions, or caveats that the authors state regarding their PFAS breakthrough curves or model description, focusing on factors that could restrict or qualify comparisons across different adsorption column studies."
+          }
+        ],
+        "claim_groups": [
+          {
+            "claim_group_id": "WF10_015-G01",
+            "task_component_id": "WF10_015-T02",
+            "canonical_proposition": "To compare PFAS breakthrough curves from adsorption columns, researchers need information on column dimensions, the adsorbent material type, flow rates, and water quality, because differences in these parameters can make adsorption results from different studies not directly comparable.",
+            "central_proposition": "Column dimensions, material type, flow rates, and water quality are key experimental parameters that must be documented to assess comparability of breakthrough behavior across adsorption studies.",
+            "material_qualifiers": [
+              "organic micropollutants (including PFAS)",
+              "adsorption columns",
+              "different water types"
+            ],
+            "importance": "core",
+            "function": "affirmative",
+            "scoring_role": "required_content",
+            "evidence_ids": [
+              "WF10_015_MMG001"
+            ],
+            "synthesis_required": false,
+            "numeric_required": false,
+            "accepted_numeric_equivalents": [],
+            "full_rule": "Award full credit if the answer states that column dimensions, material/adsorbent type, flow rates, and water quality (or equivalent wording) are important variables that must be known or controlled when comparing adsorption or PFAS breakthrough curves across studies, and indicates that differences in these parameters reduce comparability.",
+            "partial_rule": "Award partial credit if the answer mentions at least two of the following as important for comparison: column dimensions, adsorbent/material type, flow rates, water quality, but does not clearly link them to comparability limitations, or omits one or more parameters.",
+            "contradiction_rule": "Mark as contradictory if the answer claims that column dimensions, material type, flow rates, and water quality do not meaningfully affect comparability of adsorption or PFAS breakthrough results, or that results are directly comparable without considering these parameters.",
+            "source_atomic_claim_ids": [
+              "WF10_015-A01"
+            ],
+            "exact_spans": [
+              {
+                "evidence_id": "WF10_015_MMG001",
+                "exact_evidence_span": "57 It should be noted that results for the adsorption of organic micropollutants obtained by di ﬀerent studies are often not comparable because experimental parameters, such as column dimension, material type, ﬂow- rates, and water quality, di ﬀer substantially, and models describing micropollutant breakthrough based on water quality parameters are still scarce.",
+                "supports": "Identifies column dimension, material type, flow rates, and water quality as experimental parameters that differ between studies and affect comparability of adsorption results."
+              }
+            ]
+          },
+          {
+            "claim_group_id": "WF10_015-G02",
+            "task_component_id": "WF10_015-T03",
+            "canonical_proposition": "When comparing PFAS breakthrough behavior, researchers often use bed volumes to breakthrough as a key comparison metric, but differences in bed volume size, operating conditions, and adsorbate concentrations must be known because they obscure direct comparison.",
+            "central_proposition": "Bed volumes to breakthrough are commonly used to evaluate adsorbent performance, yet meaningful comparison requires information on bed volume size, operating conditions, and adsorbate concentrations.",
+            "material_qualifiers": [
+              "PFAS or PFAA adsorption",
+              "adsorbents treating several source waters",
+              "breakthrough behavior"
+            ],
+            "importance": "core",
+            "function": "affirmative",
+            "scoring_role": "required_content",
+            "evidence_ids": [
+              "WF10_015_MMG002"
+            ],
+            "synthesis_required": false,
+            "numeric_required": false,
+            "accepted_numeric_equivalents": [],
+            "full_rule": "Award full credit if the answer notes that bed volumes (BVs) to breakthrough are widely used to characterize or compare PFAS breakthrough, and also mentions that comparability is affected by differences in BV size, operating conditions, and/or adsorbate concentration, which must be accounted for.",
+            "partial_rule": "Award partial credit if the answer mentions bed volumes as a comparison metric for breakthrough behavior but does not clearly mention why differences in BV size, operating conditions, or adsorbate concentration matter, or only mentions one of these complicating factors.",
+            "contradiction_rule": "Mark as contradictory if the answer asserts that bed volume–based breakthrough comparisons are straightforward or unaffected by differences in BV size, operating conditions, or adsorbate concentrations.",
+            "source_atomic_claim_ids": [
+              "WF10_015-A02"
+            ],
+            "exact_spans": [
+              {
+                "evidence_id": "WF10_015_MMG002",
+                "exact_evidence_span": "Numerous studies have employed bed volumes (BV(s)) to breakthrough behavior as a focal point of adsorbent evaluation [18,30,38] .",
+                "supports": "Shows that bed volumes to breakthrough are commonly used to evaluate breakthrough behavior."
+              },
+              {
+                "evidence_id": "WF10_015_MMG002",
+                "exact_evidence_span": "However, this form of comparison is obscured by different BV sizes, operating conditions, and high concentrations of adsorbates impacting the avail - ability of adsorption sites.",
+                "supports": "States that differences in BV sizes, operating conditions, and adsorbate concentrations obscure comparisons based on bed volumes."
+              }
+            ]
+          },
+          {
+            "claim_group_id": "WF10_015-G04",
+            "task_component_id": "WF10_015-T04",
+            "canonical_proposition": "Authors note that differences in experimental parameters and water quality make models describing micropollutant breakthrough based on water quality parameters scarce, indicating a limitation in using water-quality-based models for comparing PFAS breakthrough across studies.",
+            "central_proposition": "There is a stated limitation that models relating breakthrough behavior to water quality parameters are still scarce, which restricts the ability to compare PFAS breakthrough across differing water qualities.",
+            "material_qualifiers": [
+              "organic micropollutants including PFAS",
+              "water quality parameters",
+              "breakthrough models"
+            ],
+            "importance": "supplementary",
+            "function": "limitation",
+            "scoring_role": "supplementary_content",
+            "evidence_ids": [
+              "WF10_015_MMG001"
+            ],
+            "synthesis_required": false,
+            "numeric_required": false,
+            "accepted_numeric_equivalents": [],
+            "full_rule": "Award full credit if the answer notes that models describing micropollutant or PFAS breakthrough as a function of water quality parameters are still scarce, and presents this as a limitation or caveat affecting cross-study comparison based on water quality.",
+            "partial_rule": "Award partial credit if the answer mentions scarcity of breakthrough models related to water quality without explicitly identifying it as a limitation for cross-study comparison.",
+            "contradiction_rule": "Mark as contradictory if the answer claims that models describing micropollutant or PFAS breakthrough based on water quality parameters are widely available or well established.",
+            "source_atomic_claim_ids": [
+              "WF10_015-A04"
+            ],
+            "exact_spans": [
+              {
+                "evidence_id": "WF10_015_MMG001",
+                "exact_evidence_span": "57 It should be noted that results for the adsorption of organic micropollutants obtained by di ﬀerent studies are often not comparable because experimental parameters, such as column dimension, material type, ﬂow- rates, and water quality, di ﬀer substantially, and models describing micropollutant breakthrough based on water quality parameters are still scarce.",
+                "supports": "Explicitly identifies that models describing micropollutant breakthrough based on water quality parameters are scarce, implying a limitation."
+              }
+            ]
+          }
+        ],
+        "constraint_groups": [
+          {
+            "claim_group_id": "WF10_015-X01",
+            "task_component_id": "WF10_015-T01",
+            "canonical_proposition": "The available evidence does not provide detailed, step-by-step adsorption column operating procedures or specific protocol sequences for PFAS breakthrough experiments, so such procedural details should not be inferred or invented.",
+            "central_proposition": "No explicit column protocol steps (from experiment start to finish) are described in the provided evidence.",
+            "material_qualifiers": [
+              "PFAS breakthrough experiments",
+              "adsorption columns"
+            ],
+            "importance": "core",
+            "function": "limitation",
+            "scoring_role": "constraint_only",
+            "evidence_ids": [
+              "WF10_015_MMG001",
+              "WF10_015_MMG002"
+            ],
+            "synthesis_required": false,
+            "numeric_required": false,
+            "accepted_numeric_equivalents": [],
+            "full_rule": "Ensure the answer does not specify or imply detailed column operating steps (e.g., exact start-up, equilibration, dosing sequence, or termination procedures) that are not explicitly present in the evidence.",
+            "partial_rule": "N/A for scoring; this is a constraint.",
+            "contradiction_rule": "Flag as violating constraints if the answer invents or describes specific procedural steps or time sequences for the adsorption column experiments that are not directly supported by the evidence.",
+            "source_atomic_claim_ids": [
+              "WF10_015-A05"
+            ],
+            "exact_spans": [
+              {
+                "evidence_id": "WF10_015_MMG001",
+                "exact_evidence_span": "57 It should be noted that results for the adsorption of organic micropollutants obtained by di ﬀerent studies are often not comparable because experimental parameters, such as column dimension, material type, ﬂow- rates, and water quality, di ﬀer substantially, and models describing micropollutant breakthrough based on water quality parameters are still scarce.",
+                "supports": "Mentions only general experimental parameters and does not provide step-by-step protocol details, illustrating the absence of explicit procedural descriptions."
+              },
+              {
+                "evidence_id": "WF10_015_MMG002",
+                "exact_evidence_span": "Numerous studies have employed bed volumes (BV(s)) to breakthrough behavior as a focal point of adsorbent evaluation [18,30,38] .",
+                "supports": "Indicates an evaluation approach (bed volumes to breakthrough) but does not supply operational step sequences, reinforcing that the evidence lacks explicit protocol steps."
+              }
+            ]
+          },
+          {
+            "claim_group_id": "WF10_015-X02",
+            "task_component_id": "WF10_015-T02",
+            "canonical_proposition": "The provided evidence does not specify detailed column hardware configurations, sorbent product names, or exact drinking water composition, so these must not be assumed or generalized.",
+            "central_proposition": "Specific hardware, sorbent identities, and detailed matrix compositions are not described in the evidence.",
+            "material_qualifiers": [
+              "column configuration",
+              "sorbent/column media",
+              "drinking water composition"
+            ],
+            "importance": "core",
+            "function": "limitation",
+            "scoring_role": "constraint_only",
+            "evidence_ids": [
+              "WF10_015_MMG001",
+              "WF10_015_MMG002"
+            ],
+            "synthesis_required": false,
+            "numeric_required": false,
+            "accepted_numeric_equivalents": [],
+            "full_rule": "Ensure the answer does not introduce specific column hardware designs, media brand names, or detailed drinking-water chemistry beyond the general mention of water quality and different water types.",
+            "partial_rule": "N/A for scoring; this is a constraint.",
+            "contradiction_rule": "Flag as violating constraints if the answer provides unreferenced specific details about column internals, sorbent brands, or full matrix composition.",
+            "source_atomic_claim_ids": [
+              "WF10_015-A06"
+            ],
+            "exact_spans": [
+              {
+                "evidence_id": "WF10_015_MMG001",
+                "exact_evidence_span": "57 It should be noted that results for the adsorption of organic micropollutants obtained by di ﬀerent studies are often not comparable because experimental parameters, such as column dimension, material type, ﬂow- rates, and water quality, di ﬀer substantially, and models describing micropollutant breakthrough based on water quality parameters are still scarce.",
+                "supports": "Only broad categories of experimental parameters are listed; no specific hardware or composition details are provided."
+              },
+              {
+                "evidence_id": "WF10_015_MMG002",
+                "exact_evidence_span": "Numerous studies have employed bed volumes (BV(s)) to breakthrough behavior as a focal point of adsorbent evaluation [18,30,38] .",
+                "supports": "Refers generally to 'several source waters under different conditions' without detailing hardware or exact water compositions, underscoring the lack of specific matrix and setup details."
+              }
+            ]
+          }
+        ],
+        "atomic_claim_dispositions": [
+          {
+            "atomic_claim_id": "WF10_015-A01",
+            "atomic_claim": "Differences in column dimension, material type, flow rates, and water quality between studies often make adsorption results for organic micropollutants not comparable.",
+            "evidence_ids": [
+              "WF10_015_MMG001"
+            ],
+            "action": "retained",
+            "target_claim_group_ids": [
+              "WF10_015-G01"
+            ],
+            "rationale": "Directly supported by the evidence and central to identifying key variables needed for comparing breakthrough curves."
+          },
+          {
+            "atomic_claim_id": "WF10_015-A02",
+            "atomic_claim": "Numerous studies use bed volumes to breakthrough behavior as a focal metric for adsorbent evaluation, but comparisons based on this metric are obscured by different bed volume sizes, operating conditions, and high adsorbate concentrations impacting adsorption site availability.",
+            "evidence_ids": [
+              "WF10_015_MMG002"
+            ],
+            "action": "retained",
+            "target_claim_group_ids": [
+              "WF10_015-G02"
+            ],
+            "rationale": "Directly supported and relevant for understanding how breakthrough is quantified and what additional information is needed to compare studies."
+          },
+          {
+            "atomic_claim_id": "WF10_015-A04",
+            "atomic_claim": "Models describing micropollutant breakthrough based on water quality parameters are still scarce.",
+            "evidence_ids": [
+              "WF10_015_MMG001"
+            ],
+            "action": "retained",
+            "target_claim_group_ids": [
+              "WF10_015-G04"
+            ],
+            "rationale": "Directly supported and expresses a limitation relevant to cross-study comparison of breakthrough behavior."
+          },
+          {
+            "atomic_claim_id": "WF10_015-A05",
+            "atomic_claim": "The provided evidence does not describe detailed adsorption column protocol steps or operating sequences for PFAS breakthrough experiments.",
+            "evidence_ids": [
+              "WF10_015_MMG001",
+              "WF10_015_MMG002"
+            ],
+            "action": "constraint_only",
+            "target_claim_group_ids": [
+              "WF10_015-X01"
+            ],
+            "rationale": "Implicitly supported by the nature of the excerpts and used to constrain over-interpretation; not a content-bearing statement about PFAS behavior."
+          },
+          {
+            "atomic_claim_id": "WF10_015-A06",
+            "atomic_claim": "The evidence does not specify detailed column configuration, sorbent product identity, or full drinking water composition for the adsorption studies mentioned.",
+            "evidence_ids": [
+              "WF10_015_MMG001",
+              "WF10_015_MMG002"
+            ],
+            "action": "constraint_only",
+            "target_claim_group_ids": [
+              "WF10_015-X02"
+            ],
+            "rationale": "Based on what is absent from the provided text; used only to prevent invention of unsupported specifics."
+          }
+        ],
+        "reference_answer": "The available evidence highlights several specific types of information that need to be known before comparing PFAS breakthrough curves from drinking-water adsorption columns, while also indicating important limitations.\n\nFirst, basic experimental parameters strongly influence comparability across studies. Results for adsorption of organic micropollutants are noted to be “often not comparable because experimental parameters, such as column dimension, material type, ﬂow- rates, and water quality, diﬀer substantially” [WF10_015_MMG001]. Thus, before comparing breakthrough curves, a researcher should at minimum collect information on the column dimensions, the adsorbent or material type packed in the column, the flow rates used, and the water quality or type being treated. Differences in any of these parameters can lead to differences in observed breakthrough behavior even for the same PFAS.\n\nSecond, how breakthrough is quantified also matters. Many adsorption studies use bed volumes to breakthrough as a central comparison metric: “Numerous studies have employed bed volumes (BV(s)) to breakthrough behavior as a focal point of adsorbent evaluation” [WF10_015_MMG002]. If breakthrough is reported in terms of bed volumes, then the bed volume definition and size, along with the operating conditions and influent concentration, become key variables. The same source cautions that “this form of comparison is obscured by different BV sizes, operating conditions, and high concentrations of adsorbates impacting the availability of adsorption sites” [WF10_015_MMG002]. Therefore, to meaningfully compare bed‑volume‑based breakthrough curves, one needs explicit information on the bed volume size, the operating conditions under which the column was run, and the influent adsorbate (e.g., PFAS) concentrations.\n\nFinally, the evidence identifies an important limitation relevant to cross‑study comparison: “models describing micropollutant breakthrough based on water quality parameters are still scarce” [WF10_015_MMG001]. This scarcity means that even if water quality is known, there may be limited modeling tools for directly predicting or normalizing PFAS breakthrough as a function of water quality, which restricts the ability to fully harmonize data across different source waters.\n\nWithin the provided text, no detailed stepwise column protocol, specific column hardware configuration, exact drinking‑water composition, or list of target PFAS compounds is given. Thus, only the general categories of needed information—column dimensions, material type, flow conditions, water quality, bed volume definitions, operating conditions, and influent concentrations—can be identified from this evidence as relevant variables and descriptors for comparing PFAS breakthrough curves.",
+        "reference_answer_claim_map": [
+          {
+            "claim_group_id": "WF10_015-G01",
+            "reference_answer_excerpt": "Results for adsorption of organic micropollutants are noted to be “often not comparable because experimental parameters, such as column dimension, material type, ﬂow- rates, and water quality, diﬀer substantially” [WF10_015_MMG001]. Thus, before comparing breakthrough curves, a researcher should at minimum collect information on the column dimensions, the adsorbent or material type packed in the column, the flow rates used, and the water quality or type being treated."
+          },
+          {
+            "claim_group_id": "WF10_015-G02",
+            "reference_answer_excerpt": "Many adsorption studies use bed volumes to breakthrough as a central comparison metric: “Numerous studies have employed bed volumes (BV(s)) to breakthrough behavior as a focal point of adsorbent evaluation” [WF10_015_MMG002]. If breakthrough is reported in terms of bed volumes, then the bed volume definition and size, along with the operating conditions and influent concentration, become key variables. The same source cautions that “this form of comparison is obscured by different BV sizes, operating conditions, and high concentrations of adsorbates impacting the availability of adsorption sites” [WF10_015_MMG002]."
+          },
+          {
+            "claim_group_id": "WF10_015-G04",
+            "reference_answer_excerpt": "Finally, the evidence identifies an important limitation relevant to cross‑study comparison: “models describing micropollutant breakthrough based on water quality parameters are still scarce” [WF10_015_MMG001]. This scarcity means that even if water quality is known, there may be limited modeling tools for directly predicting or normalizing PFAS breakthrough as a function of water quality, which restricts the ability to fully harmonize data across different source waters."
+          }
+        ],
+        "unresolved_or_unsupported": [
+          "Detailed, stepwise column operating procedures for PFAS breakthrough experiments (e.g., start-up, equilibration, sampling schedule, and shutdown steps) are not described in the provided evidence.",
+          "Specific column configurations (e.g., internal design details, packing arrangements) and sorbent product identities are not provided.",
+          "Exact drinking-water source descriptions or composition (e.g., DOC, specific inorganic ions, full PFAS concentration profiles) are not given in the excerpts.",
+          "The specific PFAS compounds targeted in the breakthrough studies, and their individual properties or behaviors, are not listed.",
+          "Any numerical values, units, or quantitative performance metrics for PFAS breakthrough or adsorbent use rates are not present in the cited text."
+        ],
+        "boundary_check": {
+          "must_include_addressed": true,
+          "must_not_claim_respected": true,
+          "notes": "The answer uses only variables and limitations explicitly mentioned in the evidence (column dimensions, material type, flow rates, water quality, bed volumes, operating conditions, adsorbate concentrations, and scarcity of water-quality-based breakthrough models). It does not introduce study-specific numerical values, detailed protocols, or hardware/matrix specifics beyond the text, and it does not generalize findings into universal PFAS treatment claims."
+        }
+      },
+      "previous_review": {
+        "question_id": "WF10_015",
+        "verdict": "repair_required",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_015-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_015-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_015-G03",
+            "verdict": "partially_supported",
+            "issues": [
+              "The two exact_spans quotes about the Thomas model ('Application of breakthrough modeling using the Thomas model...' and 'These modeling efforts enable direct comparison of adsorbent use rates...') are present in WF10_015_MMG002's full_chunk_text but are not among the evidence item's validated exact_evidence_span/unit_exact_spans, so their inclusion has not gone through the same span-validation check as the rest of the evidence."
+            ],
+            "required_repairs": [
+              "Add these two sentences to WF10_015_MMG002's unit_exact_spans list and confirm unit_spans_found_in_full_chunk for them, so the group's citations are backed by validated spans consistent with the rest of the record."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_015-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_015-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_015-X02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Validate the Thomas-model sentences as unit_exact_spans for WF10_015_MMG002 as described in G03."
+        ]
+      },
+      "draft_ledger_sha256": "7fb78421ac43bcf200e197b201db12bfe45c736993237e002f2e7a9d5feb8f53"
+    },
+    {
+      "question_id": "WF10_023",
+      "reference_packet": {
+        "question_id": "WF10_023",
+        "question": {
+          "question_id": "WF10_023",
+          "question_text": "What has been reported for PFOA or PFBA removal by reverse osmosis at elevated pressure, and what uncertainties limit generalizing that result?",
+          "task_type": "numeric_extraction",
+          "answerability_type": "answerable",
+          "must_include": "Report only values, units, compounds, matrices, methods, and conditions that are explicitly supported; state when values are bounded, censored, approximate, or condition-specific.",
+          "must_not_claim": "Do not invent study-specific details, numeric values, mechanisms, materials, protocols, citations, or units. Do not convert a condition-specific finding into a universal PFAS treatment claim.",
+          "expected_operation": "extract",
+          "required_conditions": "",
+          "required_units": "",
+          "forbidden_overclaims": "Do not invent study-specific details, numeric values, mechanisms, materials, protocols, citations, or units. Do not convert a condition-specific finding into a universal PFAS treatment claim.",
+          "workflow_scenario": "A membrane researcher is deciding how much to infer from a reported high-pressure RO example.",
+          "information_need": "Extract the elevated-pressure RO removal result and the remaining uncertainty about generalization."
+        },
+        "task_components": [
+          {
+            "task_component_id": "WF10_023-T01",
+            "component_text": "Extract what has been reported for PFOA or PFBA removal by reverse osmosis operated at elevated pressure, including any explicitly stated values, units, compounds, matrices, methods, and operating conditions, and note if the reported result is bounded, censored, approximate, or condition-specific."
+          },
+          {
+            "task_component_id": "WF10_023-T02",
+            "component_text": "Identify and describe the uncertainties, caveats, or limitations mentioned in the source that restrict how far this elevated-pressure RO removal result for PFOA or PFBA can be generalized beyond the specific reported conditions."
+          }
+        ],
+        "gold_is_non_exhaustive": true,
+        "approved_source_evidence": [
+          {
+            "evidence_id": "WF10_023_MMG001",
+            "evidence_type": "required_gold",
+            "doc_id": "2024 - Ma - Evaluation of commercial nanofiltration and reverse osmosis membrane filtration to.pdf",
+            "chunk_id": "34",
+            "exact_evidence_span": "Our calculation shows that above 99.98% PFOA or PFBA were removed by the RO membrane and the removal efficiency (%) also increased slightly as the transmembrane pressure increased from 13.79 to 55.16 bar as shown in Figure S4, suggesting that high-pressure RO operations could poten- tially increase both the permeate or water recovery and the PFAS rejection or removal.",
+            "unit_exact_spans": [
+              "Our calculation shows that above 99.98% PFOA or PFBA were removed by the RO membrane and the removal efficiency (%) also increased slightly as the transmembrane pressure increased from 13.79 to 55.16 bar as shown in Figure S4, suggesting that high-pressure RO operations could poten- tially increase both the permeate or water recovery and the PFAS rejection or removal."
+            ],
+            "full_chunk_text": "PFAS concentration in the permeate. Our calculation shows that above 99.98% PFOA or PFBA were removed by the RO membrane and the removal efficiency (%) also increased slightly as the transmembrane pressure increased from 13.79 to 55.16 bar as shown in Figure S4, suggesting that high-pressure RO operations could poten- tially increase both the permeate or water recovery and the PFAS rejection or removal. High-pressure (e.g., 800 psi) RO processes are gaining high interests due to the potential for high yield and productivity. However, the removal efficiency and mechanisms of many poten- tial micropollutants such as PFAS in such high-pressure RO processes are largely unknown, which is partially addressed in this study. Table 1 also summarizes the PFCAs rejection by the NF membrane, which achieved 99.14% PFOA rejection and 98.32% PFBA rejection when initial concentration of PFCAs was 1000 ppb, the rejection of PFOA and PFBA decreased to 98.17% and 97.03% when initial concentra- tion of PFCAs was 10,000 ppb, respectively. The main mechanisms for separating charged organic matter by NF membrane include electrostatic interaction, size exclu- sion, and adsorption. Because pKa values of PFOA and PFBA are very low, these target PFCAs would dissociate",
+            "corpus_metadata": {
+              "source": "2024 - Ma - Evaluation of commercial nanofiltration and reverse osmosis membrane filtration to.pdf",
+              "chunk": 34,
+              "title": "Evaluation of commercial nanofiltration and reverse osmosis membrane filtration to",
+              "authors": "Ma, Q.; Lei, Q.; Liu, F.; Song, Z.; Khusid, B.; Zhang, W.",
+              "year": "2024",
+              "journal": "Water Environment Research",
+              "doi": "10.1002/wer.10983",
+              "section": "results"
+            },
+            "author_review_decision": "retained_after_project_author_review",
+            "exact_span_found_in_full_chunk": true,
+            "unit_spans_found_in_full_chunk": [
+              true
+            ]
+          },
+          {
+            "evidence_id": "WF10_023_MMG002",
+            "evidence_type": "required_gold",
+            "doc_id": "2024 - Ma - Evaluation of commercial nanofiltration and reverse osmosis membrane filtration to.pdf",
+            "chunk_id": "34",
+            "exact_evidence_span": "However, the removal efficiency and mechanisms of many poten- tial micropollutants such as PFAS in such high-pressure RO processes are largely unknown, which is partially addressed in this study.",
+            "unit_exact_spans": [
+              "However, the removal efficiency and mechanisms of many poten- tial micropollutants such as PFAS in such high-pressure RO processes are largely unknown, which is partially addressed in this study."
+            ],
+            "full_chunk_text": "PFAS concentration in the permeate. Our calculation shows that above 99.98% PFOA or PFBA were removed by the RO membrane and the removal efficiency (%) also increased slightly as the transmembrane pressure increased from 13.79 to 55.16 bar as shown in Figure S4, suggesting that high-pressure RO operations could poten- tially increase both the permeate or water recovery and the PFAS rejection or removal. High-pressure (e.g., 800 psi) RO processes are gaining high interests due to the potential for high yield and productivity. However, the removal efficiency and mechanisms of many poten- tial micropollutants such as PFAS in such high-pressure RO processes are largely unknown, which is partially addressed in this study. Table 1 also summarizes the PFCAs rejection by the NF membrane, which achieved 99.14% PFOA rejection and 98.32% PFBA rejection when initial concentration of PFCAs was 1000 ppb, the rejection of PFOA and PFBA decreased to 98.17% and 97.03% when initial concentra- tion of PFCAs was 10,000 ppb, respectively. The main mechanisms for separating charged organic matter by NF membrane include electrostatic interaction, size exclu- sion, and adsorption. Because pKa values of PFOA and PFBA are very low, these target PFCAs would dissociate",
+            "corpus_metadata": {
+              "source": "2024 - Ma - Evaluation of commercial nanofiltration and reverse osmosis membrane filtration to.pdf",
+              "chunk": 34,
+              "title": "Evaluation of commercial nanofiltration and reverse osmosis membrane filtration to",
+              "authors": "Ma, Q.; Lei, Q.; Liu, F.; Song, Z.; Khusid, B.; Zhang, W.",
+              "year": "2024",
+              "journal": "Water Environment Research",
+              "doi": "10.1002/wer.10983",
+              "section": "results"
+            },
+            "author_review_decision": "retained_after_project_author_review",
+            "exact_span_found_in_full_chunk": true,
+            "unit_spans_found_in_full_chunk": [
+              true
+            ]
+          },
+          {
+            "evidence_id": "WF10_023_MMG003",
+            "evidence_type": "required_gold",
+            "doc_id": "2024 - Ma - Evaluation of commercial nanofiltration and reverse osmosis membrane filtration to.pdf",
+            "chunk_id": "31",
+            "exact_evidence_span": "As shown in Table 1, both PFOA and PFBA concentra- tion in permeate below the LC-QQQ detection limits when their initial feeding concentration was 1000 ppb, which thus does not allow us to assess the potency of PFAS rejection under different pressures.",
+            "unit_exact_spans": [
+              "As shown in Table 1, both PFOA and PFBA concentra- tion in permeate below the LC-QQQ detection limits when their initial feeding concentration was 1000 ppb, which thus does not allow us to assess the potency of PFAS rejection under different pressures."
+            ],
+            "full_chunk_text": "As shown in Table 1, both PFOA and PFBA concentra- tion in permeate below the LC-QQQ detection limits when their initial feeding concentration was 1000 ppb, which thus does not allow us to assess the potency of PFAS rejection under different pressures. The permeate flux increased with the increase of the transmembrane pressure, due to the elevated driving force of the RO FIGURE 3 (a–c) The permeate fluxes and perfluorooctanoic acid (PFOA)/perfluorobutanoic acid (PFBA) rejection under different operation pressures on the reverse osmosis (RO) membrane. (b –d) The obtained permeate recovery rates and PFOA/PFBA concentrations in the permeate. Experimental conditions: PFOA/PFBA initial concentration of 10,000 ppb; feed flow rate of 30 mL /C1 min/C0 1; room temperature; filtration time 24 h. 8o f1 7 MA ET AL . 15547531, 2024, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/wer.10983 by Queen's University, Wiley Online Library on [17/04/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License process.",
+            "corpus_metadata": {
+              "source": "2024 - Ma - Evaluation of commercial nanofiltration and reverse osmosis membrane filtration to.pdf",
+              "chunk": 31,
+              "title": "Evaluation of commercial nanofiltration and reverse osmosis membrane filtration to",
+              "authors": "Ma, Q.; Lei, Q.; Liu, F.; Song, Z.; Khusid, B.; Zhang, W.",
+              "year": "2024",
+              "journal": "Water Environment Research",
+              "doi": "10.1002/wer.10983",
+              "section": "methods"
+            },
+            "author_review_decision": "retained_after_project_author_review",
+            "exact_span_found_in_full_chunk": true,
+            "unit_spans_found_in_full_chunk": [
+              true
+            ]
+          }
+        ],
+        "author_review_provenance": {
+          "record_id": "frozen_v3_project_author_review_2026-07-26",
+          "decision": "All listed questions and gold records were retained after project-author review; no item-specific rationale was recorded.",
+          "interpretation_limit": "This is a retention-only confirmation, not independent double annotation or item-level adjudication. It does not resolve historical machine-review flags or establish exhaustive gold coverage. The reference evidence remains non-exhaustive."
+        }
+      },
+      "draft_ledger": {
+        "question_id": "WF10_023",
+        "answerability": "supported",
+        "answerability_rationale": "The evidence explicitly reports an elevated-pressure reverse osmosis (RO) experiment for PFOA and PFBA, including percent removal and transmembrane pressure range, and describes both censored measurements and unknowns about high-pressure RO PFAS removal mechanisms. This directly supports both extraction of the reported removal result and identification of uncertainties that limit generalization.",
+        "task_components": [
+          {
+            "task_component_id": "WF10_023-T01",
+            "component_text": "Extract what has been reported for PFOA or PFBA removal by reverse osmosis operated at elevated pressure, including any explicitly stated values, units, compounds, matrices, methods, and operating conditions, and note if the reported result is bounded, censored, approximate, or condition-specific."
+          },
+          {
+            "task_component_id": "WF10_023-T02",
+            "component_text": "Identify and describe the uncertainties, caveats, or limitations mentioned in the source that restrict how far this elevated-pressure RO removal result for PFOA or PFBA can be generalized beyond the specific reported conditions."
+          }
+        ],
+        "claim_groups": [
+          {
+            "claim_group_id": "WF10_023-G01",
+            "task_component_id": "WF10_023-T01",
+            "canonical_proposition": "In a high-pressure reverse osmosis experiment, above 99.98% of PFOA or PFBA were removed by an RO membrane as transmembrane pressure increased from 13.79 to 55.16 bar, and this removal value is reported as a lower-bounded, condition-specific result for that membrane; separate text reports the operating conditions used for RO experiments examining PFOA/PFBA rejection under different operation pressures.",
+            "central_proposition": "Above 99.98% PFOA or PFBA removal by an RO membrane was reported at transmembrane pressures between 13.79 and 55.16 bar for a specific high-pressure RO experiment, with the value expressed as a lower bound; the evidence also provides operating conditions for RO pressure-dependence experiments on PFOA/PFBA.",
+            "material_qualifiers": [
+              "compounds: perfluorooctanoic acid (PFOA), perfluorobutanoic acid (PFBA)",
+              "process: reverse osmosis membrane",
+              "operation: transmembrane pressure increased from 13.79 to 55.16 bar (high-pressure RO)",
+              "matrix: PFAS solution as RO feed (laboratory experiment; specific matrix composition not further specified)",
+              "reported removal metric: above 99.98% removed (lower-bounded value)",
+              "removal behavior: removal efficiency increased slightly as pressure increased",
+              "experimental conditions reported for RO pressure-dependence experiments on PFOA/PFBA: initial concentration of 10,000 ppb; feed flow rate of 30 mL /C1 min/C0 1; room temperature; filtration time 24 h"
+            ],
+            "importance": "core",
+            "function": "affirmative",
+            "scoring_role": "required_content",
+            "evidence_ids": [
+              "WF10_023_MMG001",
+              "WF10_023_MMG003"
+            ],
+            "synthesis_required": false,
+            "numeric_required": true,
+            "accepted_numeric_equivalents": [],
+            "full_rule": "Award full credit if the answer states that in a reported high-pressure reverse osmosis experiment, above 99.98% of PFOA or PFBA were removed by the RO membrane and explicitly identifies the pressure range as 13.79 to 55.16 bar, noting that this is a condition-specific, lower-bounded removal result for that RO membrane. The answer may also report the separately stated operating conditions for RO experiments examining PFOA/PFBA rejection under different operation pressures (initial concentration 10,000 ppb, feed flow rate 30 mL /C1 min/C0 1, room temperature, 24 h filtration) as contextual information, but it should not imply that the evidence explicitly links those conditions to the >99.98% removal dataset.",
+            "partial_rule": "Award partial credit if the answer correctly reports that above 99.98% PFOA or PFBA removal was achieved by an RO membrane at elevated pressure and/or mentions the 13.79–55.16 bar range, but omits the lower-bounded nature of the value, does not clearly frame the result as condition-specific, or does not distinguish between the directly linked removal result and the separately reported experimental conditions for RO pressure-dependence experiments. Minor omissions of contextual conditions are acceptable for partial credit as long as the main numeric result and high-pressure RO context are correct.",
+            "contradiction_rule": "Mark as contradictory if the answer changes the reported percentage (e.g., claims 90% or 100% removal instead of above 99.98%), misstates the pressure range or units, attributes this result to a different technology (e.g., nanofiltration instead of RO), or generalizes the finding as a universal PFAS removal performance of RO rather than a specific high-pressure experiment.",
+            "source_atomic_claim_ids": [
+              "WF10_023-A01",
+              "WF10_023-A02"
+            ],
+            "exact_spans": [
+              {
+                "evidence_id": "WF10_023_MMG001",
+                "exact_evidence_span": "Our calculation shows that above 99.98% PFOA or PFBA were removed by the RO membrane and the removal efficiency (%) also increased slightly as the transmembrane pressure increased from 13.79 to 55.16 bar as shown in Figure S4, suggesting that high-pressure RO operations could poten- tially increase both the permeate or water recovery and the PFAS rejection or removal.",
+                "supports": "Reports that above 99.98% PFOA or PFBA were removed by the RO membrane, that removal efficiency increased slightly with transmembrane pressure, and that the pressure range was 13.79 to 55.16 bar in a high-pressure RO operation."
+              },
+              {
+                "evidence_id": "WF10_023_MMG003",
+                "exact_evidence_span": "As shown in Table 1, both PFOA and PFBA concentra- tion in permeate below the LC-QQQ detection limits when their initial feeding concentration was 1000 ppb, which thus does not allow us to assess the potency of PFAS rejection under different pressures.",
+                "supports": "Provides the experimental conditions (initial concentration 10,000 ppb, feed flow rate, room temperature, and filtration time) for RO membrane experiments measuring PFOA/PFBA rejection under different operation pressures, which are relevant contextual conditions for the elevated-pressure RO removal findings."
+              }
+            ]
+          },
+          {
+            "claim_group_id": "WF10_023-G02",
+            "task_component_id": "WF10_023-T02",
+            "canonical_proposition": "Uncertainties and limitations in the study restrict how the high-pressure RO PFOA/PFBA removal result can be generalized, including that permeate concentrations were below LC-QQQ detection limits at 1000 ppb feed so potency of rejection under different pressures could not be assessed in that case, and that removal efficiency and mechanisms of PFAS in high-pressure RO processes remain largely unknown and were only partially addressed.",
+            "central_proposition": "The high-pressure RO removal result for PFOA/PFBA is difficult to generalize because some permeate concentrations were below analytical detection limits, preventing assessment of pressure effects at lower feed concentration, and because overall PFAS removal efficiency and mechanisms in high-pressure RO are still largely unknown and only partially investigated in this study.",
+            "material_qualifiers": [
+              "analytical limitation: PFOA and PFBA permeate concentrations below LC-QQQ detection limits at 1000 ppb initial feed concentration",
+              "interpretive limitation: inability to assess potency of PFAS rejection under different pressures for that 1000 ppb case",
+              "knowledge gap: removal efficiency and mechanisms of many micropollutants such as PFAS in high-pressure RO processes largely unknown",
+              "scope: uncertainties pertain to high-pressure RO processes in general, beyond the specific experiment"
+            ],
+            "importance": "core",
+            "function": "limitation",
+            "scoring_role": "required_content",
+            "evidence_ids": [
+              "WF10_023_MMG002",
+              "WF10_023_MMG003"
+            ],
+            "synthesis_required": false,
+            "numeric_required": false,
+            "accepted_numeric_equivalents": [],
+            "full_rule": "Award full credit if the answer notes that generalization of the elevated-pressure RO PFOA/PFBA removal result is limited because (1) PFOA and PFBA permeate concentrations were below LC-QQQ detection limits at an initial feeding concentration of 1000 ppb, which did not allow assessment of the potency of PFAS rejection under different pressures, and (2) the removal efficiency and mechanisms of many micropollutants such as PFAS in high-pressure RO processes are largely unknown and only partially addressed in the study. Both types of uncertainties must be described.",
+            "partial_rule": "Award partial credit if the answer correctly identifies at least one major limitation, such as the non-detect permeate concentrations preventing pressure-effect assessment, or the statement that PFAS removal efficiency and mechanisms in high-pressure RO are largely unknown, but omits the other or does not clearly tie these to limits on generalization.",
+            "contradiction_rule": "Mark as contradictory if the answer claims that the study fully characterizes PFAS removal efficiency and mechanisms in high-pressure RO, or suggests there were no analytical or interpretive limitations (e.g., denies the issue of permeate concentrations being below detection limits), thereby implying the results can be freely generalized.",
+            "source_atomic_claim_ids": [
+              "WF10_023-A03",
+              "WF10_023-A04"
+            ],
+            "exact_spans": [
+              {
+                "evidence_id": "WF10_023_MMG003",
+                "exact_evidence_span": "As shown in Table 1, both PFOA and PFBA concentra- tion in permeate below the LC-QQQ detection limits when their initial feeding concentration was 1000 ppb, which thus does not allow us to assess the potency of PFAS rejection under different pressures.",
+                "supports": "States that at 1000 ppb initial feed, PFOA and PFBA permeate concentrations were below LC-QQQ detection limits, preventing assessment of the potency of PFAS rejection under different pressures, which is a key uncertainty limiting generalization."
+              },
+              {
+                "evidence_id": "WF10_023_MMG002",
+                "exact_evidence_span": "However, the removal efficiency and mechanisms of many poten- tial micropollutants such as PFAS in such high-pressure RO processes are largely unknown, which is partially addressed in this study.",
+                "supports": "Indicates that, in general, removal efficiency and mechanisms of many micropollutants including PFAS in high-pressure RO processes are largely unknown and only partially addressed, highlighting a broader uncertainty that limits generalization of the specific high-pressure result."
+              }
+            ]
+          }
+        ],
+        "constraint_groups": [
+          {
+            "claim_group_id": "WF10_023-X01",
+            "task_component_id": "WF10_023-T01",
+            "canonical_proposition": "The reported high-pressure RO PFOA/PFBA removal result is specific to the studied RO membrane and experimental configuration, and should not be generalized to all RO systems, all PFAS, or all operating conditions; some data are censored (below detection limits) and the study notes that high-pressure RO PFAS removal mechanisms remain largely unknown.",
+            "central_proposition": "Generalization of the reported high-pressure RO PFOA/PFBA removal performance beyond the specific membrane, feed concentrations, analytical limits, and experimental conditions used in this study is not supported by the evidence.",
+            "material_qualifiers": [
+              "study-specific RO membrane and conditions",
+              "censored permeate data at 1000 ppb (below LC-QQQ detection limit)",
+              "explicit acknowledgment that high-pressure RO PFAS removal efficiency and mechanisms are largely unknown"
+            ],
+            "importance": "core",
+            "function": "limitation",
+            "scoring_role": "constraint_only",
+            "evidence_ids": [
+              "WF10_023_MMG001",
+              "WF10_023_MMG002",
+              "WF10_023_MMG003"
+            ],
+            "synthesis_required": false,
+            "numeric_required": false,
+            "accepted_numeric_equivalents": [],
+            "full_rule": "Use this group to prevent overclaiming. Any answer that extrapolates the above 99.98% removal at 13.79–55.16 bar to all RO systems, all PFAS, or all high-pressure conditions without mentioning that the result is specific to the tested RO membrane, experimental configuration, and censored/unknown aspects of high-pressure RO PFAS removal should be considered overgeneralizing.",
+            "partial_rule": "If an answer largely respects study-specific boundaries but is slightly vague about scope, treat this as a minor issue. Only when the answer clearly implies universal performance or fully understood mechanisms should it be penalized based on this constraint.",
+            "contradiction_rule": "Treat it as a violation of this constraint if the answer states or clearly implies that high-pressure RO generally achieves above 99.98% removal for PFOA/PFBA (or PFAS broadly) across systems and conditions, or that high-pressure RO PFAS removal mechanisms are well understood, contradicting the cited limitations.",
+            "source_atomic_claim_ids": [
+              "WF10_023-A01",
+              "WF10_023-A03",
+              "WF10_023-A04"
+            ],
+            "exact_spans": [
+              {
+                "evidence_id": "WF10_023_MMG001",
+                "exact_evidence_span": "Our calculation shows that above 99.98% PFOA or PFBA were removed by the RO membrane and the removal efficiency (%) also increased slightly as the transmembrane pressure increased from 13.79 to 55.16 bar as shown in Figure S4, suggesting that high-pressure RO operations could poten- tially increase both the permeate or water recovery and the PFAS rejection or removal.",
+                "supports": "Shows that the very high removal is reported for a specific RO membrane and experiment, implying it should not automatically be generalized."
+              },
+              {
+                "evidence_id": "WF10_023_MMG003",
+                "exact_evidence_span": "As shown in Table 1, both PFOA and PFBA concentra- tion in permeate below the LC-QQQ detection limits when their initial feeding concentration was 1000 ppb, which thus does not allow us to assess the potency of PFAS rejection under different pressures.",
+                "supports": "Highlights analytical censoring (below detection limits) that limits assessment of pressure effects, constraining generalization of performance estimates."
+              },
+              {
+                "evidence_id": "WF10_023_MMG002",
+                "exact_evidence_span": "However, the removal efficiency and mechanisms of many poten- tial micropollutants such as PFAS in such high-pressure RO processes are largely unknown, which is partially addressed in this study.",
+                "supports": "States that mechanisms and removal efficiency in high-pressure RO are largely unknown, emphasizing that broad generalizations are not yet justified."
+              }
+            ]
+          }
+        ],
+        "atomic_claim_dispositions": [
+          {
+            "atomic_claim_id": "WF10_023-A01",
+            "atomic_claim": "Above 99.98% PFOA or PFBA were removed by the reverse osmosis membrane, and the removal efficiency increased slightly as the transmembrane pressure increased from 13.79 to 55.16 bar.",
+            "evidence_ids": [
+              "WF10_023_MMG001"
+            ],
+            "action": "retained",
+            "target_claim_group_ids": [
+              "WF10_023-G01",
+              "WF10_023-X01"
+            ],
+            "rationale": "Directly restates the reported high-pressure RO removal performance and pressure range and is central to the numeric-extraction task."
+          },
+          {
+            "atomic_claim_id": "WF10_023-A02",
+            "atomic_claim": "The high-pressure reverse osmosis experiments measuring PFOA and PFBA rejection under different operation pressures used an initial PFOA/PFBA concentration of 10,000 ppb, a feed flow rate of 30 mL /C1 min/C0 1, room temperature, and a filtration time of 24 h.",
+            "evidence_ids": [
+              "WF10_023_MMG003"
+            ],
+            "action": "retained",
+            "target_claim_group_ids": [
+              "WF10_023-G01"
+            ],
+            "rationale": "Provides specific operating conditions for the RO membrane experiments under different operation pressures, which contextualize the elevated-pressure RO studies on PFOA/PFBA rejection without asserting an unsupported one-to-one linkage to the >99.98% removal dataset."
+          },
+          {
+            "atomic_claim_id": "WF10_023-A03",
+            "atomic_claim": "At an initial feeding concentration of 1000 ppb, both PFOA and PFBA concentrations in the permeate were below the LC-QQQ detection limits, which did not allow assessment of the potency of PFAS rejection under different pressures.",
+            "evidence_ids": [
+              "WF10_023_MMG003"
+            ],
+            "action": "retained",
+            "target_claim_group_ids": [
+              "WF10_023-G02",
+              "WF10_023-X01"
+            ],
+            "rationale": "Captures an explicit analytical limitation (censored data) that constrains interpretation of pressure effects and generalization."
+          },
+          {
+            "atomic_claim_id": "WF10_023-A04",
+            "atomic_claim": "The removal efficiency and mechanisms of many potential micropollutants such as PFAS in high-pressure reverse osmosis processes are largely unknown and are only partially addressed in this study.",
+            "evidence_ids": [
+              "WF10_023_MMG002"
+            ],
+            "action": "retained",
+            "target_claim_group_ids": [
+              "WF10_023-G02",
+              "WF10_023-X01"
+            ],
+            "rationale": "Expresses the study’s stated knowledge gap about PFAS behavior in high-pressure RO, which directly limits generalization of the specific removal result."
+          }
+        ],
+        "reference_answer": "In the cited study, a commercial reverse osmosis (RO) membrane operated at elevated transmembrane pressure achieved very high removal of perfluorooctanoic acid (PFOA) and perfluorobutanoic acid (PFBA). The authors report that \"above 99.98% PFOA or PFBA were removed by the RO membrane\" and that \"the removal efficiency (%) also increased slightly as the transmembrane pressure increased from 13.79 to 55.16 bar,\" indicating a high-pressure RO operation (WF10_023_MMG001). Separately, for RO experiments examining PFOA/PFBA rejection under different operation pressures, the experimental conditions were: initial PFOA/PFBA concentration of 10,000 ppb, feed flow rate of 30 mL /C1 min/C0 1, room temperature, and filtration time of 24 h (WF10_023_MMG003). The \"above 99.98%\" statement provides a lower-bounded, condition-specific removal result for this RO membrane under high-pressure operation, while the listed conditions describe how RO pressure-dependence experiments on PFOA/PFBA were conducted.\n\nSeveral uncertainties limit how far this elevated-pressure RO result can be generalized. Analytically, when the initial feeding concentration was 1000 ppb, \"both PFOA and PFBA concentration in permeate [were] below the LC-QQQ detection limits,\" which \"does not allow us to assess the potency of PFAS rejection under different pressures\" (WF10_023_MMG003). This censoring means pressure effects on rejection could not be quantified at that lower feed concentration. More broadly, the authors note that \"the removal efficiency and mechanisms of many potential micropollutants such as PFAS in such high-pressure RO processes are largely unknown, which is partially addressed in this study\" (WF10_023_MMG002). Together, these points indicate that while very high PFOA/PFBA removal was observed for a specific high-pressure RO experiment, the underlying mechanisms and broader performance of high-pressure RO for PFAS remain insufficiently characterized, and the result should not be generalized beyond the reported context.",
+        "reference_answer_claim_map": [
+          {
+            "claim_group_id": "WF10_023-G01",
+            "reference_answer_excerpt": "The authors report that \"above 99.98% PFOA or PFBA were removed by the RO membrane\" and that \"the removal efficiency (%) also increased slightly as the transmembrane pressure increased from 13.79 to 55.16 bar,\" indicating a high-pressure RO operation (WF10_023_MMG001). Separately, for RO experiments examining PFOA/PFBA rejection under different operation pressures, the experimental conditions were: initial PFOA/PFBA concentration of 10,000 ppb, feed flow rate of 30 mL /C1 min/C0 1, room temperature, and filtration time of 24 h (WF10_023_MMG003). The \"above 99.98%\" statement provides a lower-bounded, condition-specific removal result for this RO membrane under high-pressure operation, while the listed conditions describe how RO pressure-dependence experiments on PFOA/PFBA were conducted."
+          },
+          {
+            "claim_group_id": "WF10_023-G02",
+            "reference_answer_excerpt": "Analytically, when the initial feeding concentration was 1000 ppb, \"both PFOA and PFBA concentration in permeate [were] below the LC-QQQ detection limits,\" which \"does not allow us to assess the potency of PFAS rejection under different pressures\" (WF10_023_MMG003). This censoring means pressure effects on rejection could not be quantified at that lower feed concentration. More broadly, the authors note that \"the removal efficiency and mechanisms of many potential micropollutants such as PFAS in such high-pressure RO processes are largely unknown, which is partially addressed in this study\" (WF10_023_MMG002). Together, these points indicate that while very high PFOA/PFBA removal was observed for a specific high-pressure RO experiment, the underlying mechanisms and broader performance of high-pressure RO for PFAS remain insufficiently characterized, and the result should not be generalized beyond the reported context."
+          }
+        ],
+        "unresolved_or_unsupported": [
+          "The specific water matrix composition (e.g., presence of co-solutes or natural organic matter) for the RO experiments is not described in the provided evidence.",
+          "The exact membrane model, material, or manufacturer is not specified in the provided evidence.",
+          "Quantitative permeate concentrations or rejection values as a function of each individual pressure step between 13.79 and 55.16 bar are not given; only the summary statement of above 99.98% removal and a qualitative increase with pressure is reported.",
+          "Any detailed mechanistic explanation of PFAS removal in high-pressure RO (beyond the statement that mechanisms are largely unknown) is not provided in the evidence."
+        ],
+        "boundary_check": {
+          "must_include_addressed": true,
+          "must_not_claim_respected": true,
+          "notes": "The answer reports only the explicitly stated removal percentage, pressure range, and available experimental conditions, and describes uncertainties directly quoted from the text. It does not infer additional numeric values, mechanisms, or universal treatment claims beyond what the evidence supports, and it does not assert an explicit one-to-one linkage between the >99.98% removal dataset and any specific operating-condition set that the evidence does not directly connect."
+        }
+      },
+      "previous_review": {
+        "question_id": "WF10_023",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "G01 links a removal result reported next to 'Figure S4' (chunk 34, MMG001) to experimental conditions reported next to 'Figure 3' (chunk 31, MMG003) as if they describe the same experimental run, but the evidence never explicitly states that the elevated-pressure removal figure (S4) and the conditions listed for the pressure-rejection figure (Figure 3) correspond to the same dataset."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_023-G01",
+            "verdict": "partially_supported",
+            "issues": [
+              "The full_rule requires the answer to tie the >99.98% removal / 13.79-55.16 bar result (Fig. S4, MMG001) to the specific conditions of 10,000 ppb initial concentration, 30 mL/min flow, room temperature, 24 h filtration (Fig. 3 caption, MMG003), but the source text does not explicitly confirm these two figures describe the same experiment."
+            ],
+            "required_repairs": [
+              "Either cite additional evidence confirming Fig. S4 and Fig. 3 refer to the same pressure-sweep experiment, or soften the canonical/central proposition and full_rule to avoid asserting the 10,000 ppb/flow-rate/temperature/time conditions are definitively the conditions underlying the >99.98% removal figure."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_023-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_023-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Clarify or soften the experimental-condition attribution in WF10_023-G01 as described above."
+        ]
+      },
+      "draft_ledger_sha256": "2534a093ddd12824c7a60c6ca8f47f7103587b393663084bebb01654e54de695"
+    },
+    {
+      "question_id": "WF10_026",
+      "reference_packet": {
+        "question_id": "WF10_026",
+        "question": {
+          "question_id": "WF10_026",
+          "question_text": "What cautions apply when using early hydrogel sorbent results to infer broad PFAS removal performance?",
+          "task_type": "unsupported_claim_detection",
+          "answerability_type": "answerable",
+          "must_include": "Evaluate whether the claim is directly supported, partially supported, unsupported, or overgeneralized; name what evidence would be needed for the stronger claim.",
+          "must_not_claim": "Do not invent study-specific details, numeric values, mechanisms, materials, protocols, citations, or units. Do not convert a condition-specific finding into a universal PFAS treatment claim.",
+          "expected_operation": "extract",
+          "required_conditions": "",
+          "required_units": "",
+          "forbidden_overclaims": "Do not invent study-specific details, numeric values, mechanisms, materials, protocols, citations, or units. Do not convert a condition-specific finding into a universal PFAS treatment claim.",
+          "workflow_scenario": "A reviewer is checking whether a hydrogel sorbent paper supports a broad all-PFAS removal claim.",
+          "information_need": "Identify compound-specific failures and partial removals that prevent a universal claim."
+        },
+        "task_components": [
+          {
+            "task_component_id": "WF10_026-T01",
+            "component_text": "Assess whether broad claims about PFAS removal performance made from early hydrogel sorbent results are directly supported, partially supported, unsupported, or overgeneralized, with particular attention to compound-specific failures and partial removals that would limit any universal all-PFAS removal claim."
+          },
+          {
+            "task_component_id": "WF10_026-T02",
+            "component_text": "Specify what additional evidence would be required to legitimately support a stronger, broader PFAS removal claim (e.g., broader compound coverage, performance across differing conditions), without introducing new study-specific details, numeric values, mechanisms, materials, protocols, citations, or units, and without converting condition-specific findings into a universal PFAS treatment claim."
+          }
+        ],
+        "gold_is_non_exhaustive": true,
+        "approved_source_evidence": [
+          {
+            "evidence_id": "WF10_026_MMG001",
+            "evidence_type": "required_gold",
+            "doc_id": "2024 - Shaikh - Highly Efficient Cationic Surfactant Functionalized Alginate Hydrogel for Perfluorooctanoic Acid Adsorption - Optimization through Response Surface.pdf",
+            "chunk_id": "7",
+            "exact_evidence_span": "Another notable gap in PFAS remediation studies pertains to the evaluation of the impact of background species on PFAS adsorption by the adsorbent.",
+            "unit_exact_spans": [
+              "Another notable gap in PFAS remediation studies pertains to the evaluation of the impact of background species on PFAS adsorption by the adsorbent.",
+              "Given that PFAS typically occurs at trace concentrations in aqueous media, while background species are present at substantially higher concentrations, the potential influence of these background species on adsorbent perform- ance warrants careful consideration."
+            ],
+            "full_chunk_text": "In terms of developing the regeneration chemistry of the PFAS-loaded hydrogels, consideration is needed for neutralizing the multiple interactions between PFOA and the adsorbent. Consequently, the development of regenerant specifications must address the possible interactions between PFOA and the adsorbent. Another notable gap in PFAS remediation studies pertains to the evaluation of the impact of background species on PFAS adsorption by the adsorbent. Given that PFAS typically occurs at trace concentrations in aqueous media, while background species are present at substantially higher concentrations, the potential influence of these background species on adsorbent perform- ance warrants careful consideration. 43 Therefore, an inves- tigation into the influence of typical river water species on PFOA adsorption by the hydrogel was undertaken in the study. This is the first study that demonstrates a CTAB- functionalized alginate hydrogel for PFAS removal, including regeneration and reuse of the adsorbent in multiple cycles for the sustainable treatment of PFAS-containing surface water. Our study evaluated the influence of the adsorbent’s synthesis parameters on the removal efficiency of PFOA and optimized the parameters to achieve maximum PFOA removal. We assessed the performance of the optimized hydrogel and elucidated the mechanism underlying the PFOA adsorption. Furthermore, we developed specifications for a regenerant to ensure the reusability of the adsorbent. In this study, we investigated the impact of typical river water background species on PFOA removal by alginate hydrogel, employing",
+            "corpus_metadata": {
+              "source": "2024 - Shaikh - Highly Efficient Cationic Surfactant Functionalized Alginate Hydrogel for Perfluorooctanoic Acid Adsorption - Optimization through Response Surface.pdf",
+              "chunk": 7,
+              "title": "Highly Efficient Cationic Surfactant Functionalized Alginate Hydrogel for Perfluorooctanoic Acid Adsorption: Optimization through Response Surface Methodology and Performance Evaluation for Aqueous Media",
+              "authors": "Naim Shaikh, M. A.; Nawaz, T.",
+              "year": "2024",
+              "journal": "ACS ES&T Water",
+              "doi": "10.1021/acsestwater.4c00319",
+              "section": "methods"
+            },
+            "author_review_decision": "retained_after_project_author_review",
+            "exact_span_found_in_full_chunk": true,
+            "unit_spans_found_in_full_chunk": [
+              true,
+              true
+            ]
+          },
+          {
+            "evidence_id": "WF10_026_MMG002",
+            "evidence_type": "required_gold",
+            "doc_id": "2023 - Klaus - Development of Poly(acrylamide)-Based Hydrogel Composites with Powdered Activated Carbon for Controlled Sorption of PFOA and PFOS in Aqueous Systems.pdf",
+            "chunk_id": "42",
+            "exact_evidence_span": "It was hypothesized that modifying the NNMBA concentration of the material and increasing its crosslinking density would limit the removal percentage of larger PFAS molecules due to a more restrictive network and, therefore, allow for more sorption of short-chain compounds.",
+            "unit_exact_spans": [
+              "It was hypothesized that modifying the NNMBA concentration of the material and increasing its crosslinking density would limit the removal percentage of larger PFAS molecules due to a more restrictive network and, therefore, allow for more sorption of short-chain compounds.",
+              "The binding data suggest that this hypothesis could be accurate, given that the systems with the highest crosslinking densities appear to limit some of the PFOA and PFOS sorption.",
+              "This hypothesis will be tested further with follow-up studies that explore additional crosslinking densities and binding studies, including competing short-chain PFAS."
+            ],
+            "full_chunk_text": "It was hypothesized that modifying the NNMBA concentration of the material and increasing its crosslinking density would limit the removal percentage of larger PFAS molecules due to a more restrictive network and, therefore, allow for more sorption of short-chain compounds. The binding data suggest that this hypothesis could be accurate, given that the systems with the highest crosslinking densities appear to limit some of the PFOA and PFOS sorption. This hypothesis will be tested further with follow-up studies that explore additional crosslinking densities and binding studies, including competing short-chain PFAS. The ﬁndings from this study indicate the high sorption potential of PFAS contaminants and introduce an exciting platform that can be further modiﬁed for increased selectivity of contaminants, such as a composite with added cationic functionality. Polymers 2023, 15, 4384 13 of 15 4. Conclusions Overall, acrylamide-based hydrogel and hydrogel composite sorbents were success- fully synthesized using free-radical polymerization and characterized using several meth- ods including mass yield, FTIR, and TGA. Mass yield was the primary determining factor for polymer conversion by making sure the feed materials were transferring to the ﬁnal product. Congruently, FTIR conﬁrmed the presence of the carbonyl and amide peaks within the polymeric systems that were also present in the analogous monomer. TGA analysis further indicates polymeric degradation between 300 and 450 ◦C, which is consistent with",
+            "corpus_metadata": {
+              "source": "2023 - Klaus - Development of Poly(acrylamide)-Based Hydrogel Composites with Powdered Activated Carbon for Controlled Sorption of PFOA and PFOS in Aqueous Systems.pdf",
+              "chunk": 42,
+              "title": "Development of Poly(acrylamide)-Based Hydrogel Composites with Powdered Activated Carbon for Controlled Sorption of PFOA and PFOS in Aqueous Systems",
+              "authors": "Klaus, M. V. X.; Gutierrez, A. M.; Hilt, J. Z.",
+              "year": "2023",
+              "journal": "Polymers",
+              "doi": "10.3390/polym15224384",
+              "section": "results"
+            },
+            "author_review_decision": "retained_after_project_author_review",
+            "exact_span_found_in_full_chunk": true,
+            "unit_spans_found_in_full_chunk": [
+              true,
+              true,
+              true
+            ]
+          },
+          {
+            "evidence_id": "WF10_026_MMG003",
+            "evidence_type": "required_gold",
+            "doc_id": "2023 - Klaus - Development of Poly(acrylamide)-Based Hydrogel Composites with Powdered Activated Carbon for Controlled Sorption of PFOA and PFOS in Aqueous Systems.pdf",
+            "chunk_id": "40",
+            "exact_evidence_span": "Although PAC outperformed all sorbents in removing PFOA and PFOS, it has proved to be highly unselective towards short-chain compounds when competing with legacy analytes as its major pores are saturated with legacy compounds and therefore block the binding of short-chain contaminants.",
+            "unit_exact_spans": [
+              "Although PAC outperformed all sorbents in removing PFOA and PFOS, it has proved to be highly unselective towards short-chain compounds when competing with legacy analytes as its major pores are saturated with legacy compounds and therefore block the binding of short-chain contaminants."
+            ],
+            "full_chunk_text": "Polymers 2023, 15, 4384 12 of 15 Polymers 2023, 15, x FOR PEER REVIEW 12 of 15 literature, which has found that the removal of long-chain and sulfonic PFAS is dominated by hydrophobic interactions [12]. Moreover, the sorption studies were performed in NaOH-titrated DI-water solution, which introduced Na + ions following dissolution and increased the ionic charge, which enhanced PFOS binding and had li ttle eﬀect on PFOA sorption [31]. (A) ( B) (C) Figure 8. PFOA and PFOS removal eﬃciency of sorbent materials of PFAS at a starting concentration of 100 µg/mL in a 12 mL DI-water solution titrated to obtain a pH 7 with NaOH and 0.5 mg/mL. A PAC-only control was also tested and is compared against (A) the neat hydrogels, (B) PAC compo- sites with 1% PAC loading, and (C) 5% PAC systems. Although PAC outperformed all sorbents in removing PFOA and PFOS, it has proved to be highly unselective towards short-chain compounds when competing with legacy analytes as its major pores are saturated with legacy compounds and therefore block the binding of short-chain contaminants. It wa s hypothesized that modifying the NNMBA concentration of the material and increasing its crosslinking density would limit the re-",
+            "corpus_metadata": {
+              "source": "2023 - Klaus - Development of Poly(acrylamide)-Based Hydrogel Composites with Powdered Activated Carbon for Controlled Sorption of PFOA and PFOS in Aqueous Systems.pdf",
+              "chunk": 40,
+              "title": "Development of Poly(acrylamide)-Based Hydrogel Composites with Powdered Activated Carbon for Controlled Sorption of PFOA and PFOS in Aqueous Systems",
+              "authors": "Klaus, M. V. X.; Gutierrez, A. M.; Hilt, J. Z.",
+              "year": "2023",
+              "journal": "Polymers",
+              "doi": "10.3390/polym15224384",
+              "section": "results"
+            },
+            "author_review_decision": "retained_after_project_author_review",
+            "exact_span_found_in_full_chunk": true,
+            "unit_spans_found_in_full_chunk": [
+              true
+            ]
+          },
+          {
+            "evidence_id": "WF10_026_MMG004",
+            "evidence_type": "required_gold",
+            "doc_id": "2018 - Huang - Reusable Functionalized Hydrogel Sorbents for Removing Long- and Short-Chain Perfluoroalkyl Acids (PFAAs) and GenX from Aqueous Solution.pdf",
+            "chunk_id": "25",
+            "exact_evidence_span": "Future studies using these newly developed sorbents to evaluate the sorption kinetics for PFASs under environmental relevant conditions such as PFAS-contaminated groundwater or surface water are thus needed.",
+            "unit_exact_spans": [
+              "Future studies using these newly developed sorbents to evaluate the sorption kinetics for PFASs under environmental relevant conditions such as PFAS-contaminated groundwater or surface water are thus needed."
+            ],
+            "full_chunk_text": "and PFOS removal (92 −97%) at a short equilibrium time of 2 min. 36 In our study, 13FORMA was introduced into sorbents A and C to create hydrophobic regions in the sorbents. Thus, a rapid removal of PFASs at a short equilibrium time is expected. Future studies using these newly developed sorbents to evaluate the sorption kinetics for PFASs under environmental relevant conditions such as PFAS-contaminated groundwater or surface water are thus needed. To the best of our knowledge, it is the ﬁrst report describing hydrogel-based sorbents to e ﬀectively remove short chain of PFASs. Most commercial resins, like Purolite A600E and Purolite A520E, have better sorption capacities for PFOA and PFOS, compared to those by the sorbents developed in this study. However, these two resins have much lower sorption capacities for PFBA and PFBS than those of our sorbents. For resin A600E, the sorption capacities for PFBA and PFBS were 10 and 3 μmol g sorbent −1, respectively. For resin A520E, the sorption capacities for PFBA and PFBS were 20 and 8 μmol g sorbent−1, respectively. Our sorbents showed 8 to 63 folds higher sorption capacities than these commercial resin for shorter-chain PFASs. 37 Accordingly, these hydrogel-based sorbents have a potential to remove these concerned shorter- chain PFASs from water. Increasing environmental occur-",
+            "corpus_metadata": {
+              "source": "2018 - Huang - Reusable Functionalized Hydrogel Sorbents for Removing Long- and Short-Chain Perfluoroalkyl Acids (PFAAs) and GenX from Aqueous Solution.pdf",
+              "chunk": 25,
+              "title": "Reusable Functionalized Hydrogel Sorbents for Removing Long- and Short-Chain Perfluoroalkyl Acids (PFAAs) and GenX from Aqueous Solution",
+              "authors": "Huang, P. J.; Hwangbo, M.; Chen, Z.; Liu, Y.; Kameoka, J.; Chu, K. H.",
+              "year": "2018",
+              "journal": "ACS Omega",
+              "doi": "10.1021/acsomega.8b02279",
+              "section": "results"
+            },
+            "author_review_decision": "retained_after_project_author_review",
+            "exact_span_found_in_full_chunk": true,
+            "unit_spans_found_in_full_chunk": [
+              true
+            ]
+          },
+          {
+            "evidence_id": "WF10_026_MMG005",
+            "evidence_type": "optional_gold",
+            "doc_id": "2024 - Shaikh - Highly Efficient Cationic Surfactant Functionalized Alginate Hydrogel for Perfluorooctanoic Acid Adsorption - Optimization through Response Surface.pdf",
+            "chunk_id": "6",
+            "exact_evidence_span": "remediation of PFOA presents challenges in optimizing the quantities of its constituents (calcium, sodium alginate, and CTAB) during the synthesis process since any of these factors in excess can limit other functionalities;",
+            "unit_exact_spans": [
+              "remediation of PFOA presents challenges in optimizing the quantities of its constituents (calcium, sodium alginate, and CTAB) during the synthesis process since any of these factors in excess can limit other functionalities;",
+              "for example, excess alginate over calcium can limit the stability of hydrogel and thus providing poor anchoring for CTAB or excess calcium over alginate can make the hydrogel too much cross-linked, which would prevent the penetration of CTAB, and excess of CTAB can impair hydrophobic interaction or H-bonding interaction of the hydrogel with PFAS."
+            ],
+            "full_chunk_text": "remediation of PFOA presents challenges in optimizing the quantities of its constituents (calcium, sodium alginate, and CTAB) during the synthesis process since any of these factors in excess can limit other functionalities; for example, excess alginate over calcium can limit the stability of hydrogel and thus providing poor anchoring for CTAB or excess calcium over alginate can make the hydrogel too much cross-linked, which would prevent the penetration of CTAB, and excess of CTAB can impair hydrophobic interaction or H-bonding interaction of the hydrogel with PFAS. Therefore, optimizing these factors with respect to the maximum PFAS removal is required. Response surface methodology (RSM) emerges as a valuable tool for optimizing process parameters, in cases where the response can be influenced by both individual and combined effects of the process parameters. 41,42 In this study, we employed RSM to evaluate the impact of each of the three synthesis parameters individually as well as their interactive effects on PFOA removal by the adsorbent. To make the process economically viable and environ- mentally sustainable, a regeneration scheme has been explored and the adsorbent has been regenerated and reused in multiple cycles. This would also ensure that on reaching its end life, the adsorbent can be safely disposed after eluting PFOA loaded onto its surface. In terms of developing the regeneration chemistry of the PFAS-loaded hydrogels, consideration is",
+            "corpus_metadata": {
+              "source": "2024 - Shaikh - Highly Efficient Cationic Surfactant Functionalized Alginate Hydrogel for Perfluorooctanoic Acid Adsorption - Optimization through Response Surface.pdf",
+              "chunk": 6,
+              "title": "Highly Efficient Cationic Surfactant Functionalized Alginate Hydrogel for Perfluorooctanoic Acid Adsorption: Optimization through Response Surface Methodology and Performance Evaluation for Aqueous Media",
+              "authors": "Naim Shaikh, M. A.; Nawaz, T.",
+              "year": "2024",
+              "journal": "ACS ES&T Water",
+              "doi": "10.1021/acsestwater.4c00319",
+              "section": "methods"
+            },
+            "author_review_decision": "retained_after_project_author_review",
+            "exact_span_found_in_full_chunk": true,
+            "unit_spans_found_in_full_chunk": [
+              true,
+              true
+            ]
+          }
+        ],
+        "author_review_provenance": {
+          "record_id": "frozen_v3_project_author_review_2026-07-26",
+          "decision": "All listed questions and gold records were retained after project-author review; no item-specific rationale was recorded.",
+          "interpretation_limit": "This is a retention-only confirmation, not independent double annotation or item-level adjudication. It does not resolve historical machine-review flags or establish exhaustive gold coverage. The reference evidence remains non-exhaustive."
+        }
+      },
+      "draft_ledger": {
+        "question_id": "WF10_026",
+        "answerability": "supported",
+        "answerability_rationale": "The supplied evidence directly describes important limitations of early hydrogel sorbent studies (compound-specific performance, sensitivity to synthesis parameters, lack of background species evaluation, and need for environmentally relevant testing). These limitations are sufficient to explain why broad all-PFAS removal claims would be overgeneralized, and they also indicate what additional types of evidence would be required to support stronger claims.",
+        "task_components": [
+          {
+            "task_component_id": "WF10_026-T01",
+            "component_text": "Assess whether broad claims about PFAS removal performance made from early hydrogel sorbent results are directly supported, partially supported, unsupported, or overgeneralized, with particular attention to compound-specific failures and partial removals that would limit any universal all-PFAS removal claim."
+          },
+          {
+            "task_component_id": "WF10_026-T02",
+            "component_text": "Specify what additional evidence would be required to legitimately support a stronger, broader PFAS removal claim (e.g., broader compound coverage, performance across differing conditions), without introducing new study-specific details, numeric values, mechanisms, materials, protocols, citations, or units, and without converting condition-specific findings into a universal PFAS treatment claim."
+          }
+        ],
+        "claim_groups": [
+          {
+            "claim_group_id": "WF10_026-G01",
+            "task_component_id": "WF10_026-T01",
+            "canonical_proposition": "Early hydrogel sorbent results show PFAS-removal behavior that is strongly compound- and formulation-specific, so using these results to claim broad or universal all-PFAS removal is overgeneralized rather than fully supported.",
+            "central_proposition": "Because hydrogel PFAS sorption depends on factors such as crosslinking density and pore accessibility, and because some systems preferentially remove certain PFAS while limiting others, early results on a few compounds cannot justifiably be expanded into universal all-PFAS removal claims.",
+            "material_qualifiers": [
+              "poly(acrylamide)-based hydrogel composites",
+              "alginate hydrogels functionalized with cationic surfactant",
+              "powdered activated carbon sorbent systems",
+              "PFAS including PFOA, PFOS, and short-chain PFAS"
+            ],
+            "importance": "core",
+            "function": "affirmative",
+            "scoring_role": "required_content",
+            "evidence_ids": [
+              "WF10_026_MMG002",
+              "WF10_026_MMG003",
+              "WF10_026_MMG005"
+            ],
+            "synthesis_required": false,
+            "numeric_required": false,
+            "accepted_numeric_equivalents": [],
+            "full_rule": "Count as fully supported if the answer explicitly states that early hydrogel sorbent data do not justify broad all-PFAS removal claims because performance is compound-specific and formulation-specific, citing examples where sorption of some PFAS is limited (e.g., larger PFAS or short-chain PFAS) and explaining that this makes universal claims overgeneralized.",
+            "partial_rule": "Count as partially supported if the answer notes that performance varies among PFAS or formulations, but does not clearly connect this variation to the overgeneralization problem for all-PFAS claims.",
+            "contradiction_rule": "Mark as contradicted if the answer asserts or implies that early hydrogel results on a limited PFAS set are sufficient to support universal all-PFAS removal claims, or that performance is uniformly high across all PFAS without mentioning the documented limitations.",
+            "source_atomic_claim_ids": [
+              "WF10_026-A01",
+              "WF10_026-A02"
+            ],
+            "exact_spans": [
+              {
+                "evidence_id": "WF10_026_MMG002",
+                "exact_evidence_span": "It was hypothesized that modifying the NNMBA concentration of the material and increasing its crosslinking density would limit the removal percentage of larger PFAS molecules due to a more restrictive network and, therefore, allow for more sorption of short-chain compounds.",
+                "supports": "Shows that changing crosslinking density in the hydrogel can limit removal of larger PFAS molecules and, as supported by the associated binding data in the study, can also limit sorption of PFOA and PFOS at high crosslinking density, highlighting formulation-dependent and size-dependent performance rather than uniform removal."
+              },
+              {
+                "evidence_id": "WF10_026_MMG003",
+                "exact_evidence_span": "Although PAC outperformed all sorbents in removing PFOA and PFOS, it has proved to be highly unselective towards short-chain compounds when competing with legacy analytes as its major pores are saturated with legacy compounds and therefore block the binding of short-chain contaminants.",
+                "supports": "Shows a system where strong removal of PFOA and PFOS coexists with poor performance or unselectivity toward short-chain PFAS, illustrating compound-specific behavior and that success for some PFAS does not guarantee success for all."
+              },
+              {
+                "evidence_id": "WF10_026_MMG005",
+                "exact_evidence_span": "remediation of PFOA presents challenges in optimizing the quantities of its constituents (calcium, sodium alginate, and CTAB) during the synthesis process since any of these factors in excess can limit other functionalities;",
+                "supports": "Indicates that even for a single PFAS (PFOA), hydrogel performance is sensitive to synthesis parameters and that excess of particular components or over-crosslinking can limit other functionalities and hinder PFAS interactions, arguing against simple extrapolation of results from one optimized formulation to broad, robust PFAS removal."
+              }
+            ]
+          },
+          {
+            "claim_group_id": "WF10_026-G02",
+            "task_component_id": "WF10_026-T02",
+            "canonical_proposition": "To legitimately support a stronger, broader PFAS removal claim for hydrogel sorbents, additional evidence is needed that tests a wider range of PFAS and evaluates performance under environmentally relevant conditions and with background species and competing PFAS present.",
+            "central_proposition": "More robust evidence for broad PFAS removal by hydrogels would require studies that extend beyond a few legacy compounds in idealized solutions, including tests across additional crosslinking densities, with competing short-chain PFAS, in groundwater or surface water matrices, and with typical background species.",
+            "material_qualifiers": [
+              "hydrogel-based sorbents for PFAS",
+              "PFAS-contaminated groundwater or surface water",
+              "typical river water background species",
+              "short-chain PFAS in competition with legacy analytes"
+            ],
+            "importance": "core",
+            "function": "affirmative",
+            "scoring_role": "required_content",
+            "evidence_ids": [
+              "WF10_026_MMG001",
+              "WF10_026_MMG002",
+              "WF10_026_MMG004"
+            ],
+            "synthesis_required": false,
+            "numeric_required": false,
+            "accepted_numeric_equivalents": [],
+            "full_rule": "Count as fully supported if the answer explicitly notes that broader PFAS removal claims would require evidence covering more PFAS types and realistic conditions, such as tests with competing short-chain PFAS, different crosslinking densities, environmentally relevant waters (groundwater or surface water), and the influence of background species.",
+            "partial_rule": "Count as partially supported if the answer mentions a need for some additional testing (e.g., more PFAS or environmental matrices) but omits key aspects like competing PFAS, crosslinking variations, or background species.",
+            "contradiction_rule": "Mark as contradicted if the answer suggests that no further evidence is needed, or fails to acknowledge that current work itself calls for additional studies under broader conditions.",
+            "source_atomic_claim_ids": [
+              "WF10_026-A04"
+            ],
+            "exact_spans": [
+              {
+                "evidence_id": "WF10_026_MMG004",
+                "exact_evidence_span": "Future studies using these newly developed sorbents to evaluate the sorption kinetics for PFASs under environmental relevant conditions such as PFAS-contaminated groundwater or surface water are thus needed.",
+                "supports": "Shows that the authors themselves state that further studies are needed to evaluate these sorbents under environmentally relevant conditions (e.g., groundwater or surface water), indicating that current evidence is not yet sufficient for strong broad claims."
+              },
+              {
+                "evidence_id": "WF10_026_MMG002",
+                "exact_evidence_span": "It was hypothesized that modifying the NNMBA concentration of the material and increasing its crosslinking density would limit the removal percentage of larger PFAS molecules due to a more restrictive network and, therefore, allow for more sorption of short-chain compounds.",
+                "supports": "Indicates that further work with additional crosslinking densities and binding studies including competing short-chain PFAS is planned, so current data do not yet provide comprehensive coverage of PFAS behavior or competition effects."
+              },
+              {
+                "evidence_id": "WF10_026_MMG001",
+                "exact_evidence_span": "Another notable gap in PFAS remediation studies pertains to the evaluation of the impact of background species on PFAS adsorption by the adsorbent.",
+                "supports": "Identifies a gap in existing PFAS remediation studies concerning how background species affect PFAS adsorption and implies that, because these background species can strongly influence adsorbent performance, systematic evaluation of their impact is needed before broad performance under realistic conditions can be claimed."
+              }
+            ]
+          }
+        ],
+        "constraint_groups": [
+          {
+            "claim_group_id": "WF10_026-X01",
+            "task_component_id": "WF10_026-T01",
+            "canonical_proposition": "Current PFAS remediation and hydrogel studies explicitly acknowledge gaps, including limited evaluation of background species and the need for future work under environmental conditions and with broader PFAS coverage, so their findings should not be interpreted as universally applicable.",
+            "central_proposition": "Because the authors describe gaps such as untested background species, untested crosslinking regimes, and untested environmental matrices, early hydrogel results must not be generalized to all PFAS or all water types.",
+            "material_qualifiers": [
+              "PFAS remediation studies",
+              "newly developed hydrogel-based sorbents",
+              "PFAS-contaminated groundwater or surface water"
+            ],
+            "importance": "core",
+            "function": "limitation",
+            "scoring_role": "constraint_only",
+            "evidence_ids": [
+              "WF10_026_MMG001",
+              "WF10_026_MMG002",
+              "WF10_026_MMG004"
+            ],
+            "synthesis_required": false,
+            "numeric_required": false,
+            "accepted_numeric_equivalents": [],
+            "full_rule": "Use this constraint to prevent answers from implying that existing hydrogel studies have already addressed all relevant matrices, PFAS types, and cofactors; answers should recognize that authors call out these gaps.",
+            "partial_rule": "Partially satisfied if the answer hints at remaining uncertainties but does not clearly root them in the authors’ stated gaps.",
+            "contradiction_rule": "Violated if the answer states or implies that the current studies already cover all relevant PFAS and environmental conditions, ignoring explicit calls for further work.",
+            "source_atomic_claim_ids": [
+              "WF10_026-A03",
+              "WF10_026-A04"
+            ],
+            "exact_spans": [
+              {
+                "evidence_id": "WF10_026_MMG001",
+                "exact_evidence_span": "Another notable gap in PFAS remediation studies pertains to the evaluation of the impact of background species on PFAS adsorption by the adsorbent.",
+                "supports": "Concretely identifies a gap (impact of background species) in current PFAS remediation studies, cautioning against overgeneralization to real waters where such species are present."
+              },
+              {
+                "evidence_id": "WF10_026_MMG004",
+                "exact_evidence_span": "Future studies using these newly developed sorbents to evaluate the sorption kinetics for PFASs under environmental relevant conditions such as PFAS-contaminated groundwater or surface water are thus needed.",
+                "supports": "Shows that the authors do not consider their current data to fully represent environmental conditions, reinforcing that broad performance claims would be premature."
+              },
+              {
+                "evidence_id": "WF10_026_MMG002",
+                "exact_evidence_span": "It was hypothesized that modifying the NNMBA concentration of the material and increasing its crosslinking density would limit the removal percentage of larger PFAS molecules due to a more restrictive network and, therefore, allow for more sorption of short-chain compounds.",
+                "supports": "Indicates that key aspects (additional crosslinking densities and competitive binding with short-chain PFAS) remain to be tested, so current findings are incomplete."
+              }
+            ]
+          }
+        ],
+        "atomic_claim_dispositions": [
+          {
+            "atomic_claim_id": "WF10_026-A01",
+            "atomic_claim": "Hydrogel sorbent PFAS removal performance is sensitive to formulation parameters such as crosslinking density, which can limit removal of larger PFAS molecules and even reduce sorption of commonly studied PFAS like PFOA and PFOS, so results on one formulation cannot be assumed to generalize to all PFAS.",
+            "evidence_ids": [
+              "WF10_026_MMG002",
+              "WF10_026_MMG005"
+            ],
+            "action": "retained",
+            "target_claim_group_ids": [
+              "WF10_026-G01"
+            ],
+            "rationale": "Directly grounded in statements about crosslinking density limiting removal of larger PFAS and limiting PFOA/PFOS sorption, and about excess synthesis components impairing PFAS interactions; this underpins the caution against broad generalization from a specific formulation."
+          },
+          {
+            "atomic_claim_id": "WF10_026-A02",
+            "atomic_claim": "Some sorbent systems that remove PFOA and PFOS effectively can still perform poorly or unselectively toward short-chain PFAS when these compete with legacy analytes, illustrating compound-specific performance that invalidates universal all-PFAS removal claims.",
+            "evidence_ids": [
+              "WF10_026_MMG003"
+            ],
+            "action": "retained",
+            "target_claim_group_ids": [
+              "WF10_026-G01"
+            ],
+            "rationale": "The evidence explicitly states that PAC outperforms other sorbents for PFOA/PFOS yet is highly unselective toward short-chain compounds in competition, which demonstrates a clear compound-specific limitation relevant to overgeneralized claims."
+          },
+          {
+            "atomic_claim_id": "WF10_026-A03",
+            "atomic_claim": "A notable gap in current PFAS remediation studies is the limited evaluation of how background species affect PFAS adsorption, so lab studies without such species should not be assumed to predict performance in natural waters.",
+            "evidence_ids": [
+              "WF10_026_MMG001"
+            ],
+            "action": "constraint_only",
+            "target_claim_group_ids": [
+              "WF10_026-X01"
+            ],
+            "rationale": "The text labels the impact of background species as a gap and notes their potentially substantial influence, providing a caution that constrains how broadly lab results may be applied."
+          },
+          {
+            "atomic_claim_id": "WF10_026-A04",
+            "atomic_claim": "Authors of hydrogel sorbent studies explicitly call for future work to examine sorption kinetics under environmentally relevant conditions and to test additional crosslinking densities and competing short-chain PFAS, indicating that current data are insufficient to substantiate broad PFAS removal claims and that more comprehensive evidence is needed.",
+            "evidence_ids": [
+              "WF10_026_MMG002",
+              "WF10_026_MMG004"
+            ],
+            "action": "merged",
+            "target_claim_group_ids": [
+              "WF10_026-G02",
+              "WF10_026-X01"
+            ],
+            "rationale": "Both cited passages clearly indicate that further studies are needed in specific directions, which both constrains present overclaims and defines the kinds of additional evidence required for stronger claims."
+          }
+        ],
+        "reference_answer": "Early hydrogel sorbent results do not directly support broad or universal all‑PFAS removal claims; at most, they partially support more limited, compound‑ and condition‑specific claims.\n\nFor task component WF10_026-T01 (assessment of broad claims and compound-specific limitations):\n\nThe available evidence shows that PFAS removal by hydrogel‑based and related sorbents is strongly dependent on both the sorbent formulation and the specific PFAS involved. In a poly(acrylamide)‑based hydrogel system, the authors report that increasing crosslinking density was expected to reduce access for larger PFAS and that their binding data are consistent with limited sorption of even legacy PFAS at high crosslinking: “modifying the NNMBA concentration of the material and increasing its crosslinking density would limit the removal percentage of larger PFAS molecules due to a more restrictive network” and “the systems with the highest crosslinking densities appear to limit some of the PFOA and PFOS sorption.” [WF10_026_MMG002] This indicates that performance is not uniformly high even for PFOA and PFOS, and that results from a particular crosslinking regime cannot be assumed to extend to all PFAS.\n\nSimilarly, work comparing hydrogel systems with powdered activated carbon (PAC) shows pronounced compound‑specific behavior. The authors state that “PAC outperformed all sorbents in removing PFOA and PFOS,” yet it “has proved to be highly unselective towards short-chain compounds when competing with legacy analytes as its major pores are saturated with legacy compounds and therefore block the binding of short-chain contaminants.” [WF10_026_MMG003] This demonstrates that strong performance for long‑chain legacy PFAS can coexist with poor or unselective performance for short‑chain PFAS, so strong removal of one PFAS subset cannot be interpreted as evidence of broad effectiveness across all PFAS.\n\nIn alginate‑based hydrogels functionalized with a cationic surfactant, the authors highlight that PFOA remediation “presents challenges in optimizing the quantities of its constituents … since any of these factors in excess can limit other functionalities,” and that “excess calcium over alginate can make the hydrogel too much cross-linked, which would prevent the penetration of CTAB, and excess of CTAB can impair hydrophobic interaction or H-bonding interaction of the hydrogel with PFAS.” [WF10_026_MMG005] This shows that even for a single target PFAS, effective adsorption depends sensitively on tuned synthesis parameters; over‑crosslinking or excess surfactant can diminish PFAS interactions. Such sensitivity further undermines attempts to generalize early, optimized results to a blanket claim of robust removal for all PFAS.\n\nTaken together, these observations mean that early hydrogel sorbent studies provide evidence for promising removal of specific PFAS under particular formulations and test conditions, but they also reveal clear compound‑specific limitations and performance trade‑offs. Using these early results to infer broad, all‑PFAS removal performance would therefore be overgeneralized and not directly supported by the cited work.\n\nFor task component WF10_026-T02 (additional evidence required for stronger, broader claims):\n\nThe same studies explicitly identify important gaps that would need to be addressed before making stronger, broader PFAS removal claims. One hydrogel study notes that “another notable gap in PFAS remediation studies pertains to the evaluation of the impact of background species on PFAS adsorption by the adsorbent” and points out that PFAS occur at trace concentrations while background species are present at much higher levels, so “the potential influence of these background species on adsorbent performance warrants careful consideration.” [WF10_026_MMG001] This implies that data in simple laboratory waters are not enough; broader claims would require systematic testing in the presence of typical background species at realistic relative concentrations.\n\nAuthors working on reusable hydrogel-based sorbents similarly emphasize that “future studies using these newly developed sorbents to evaluate the sorption kinetics for PFASs under environmental relevant conditions such as PFAS-contaminated groundwater or surface water are thus needed.” [WF10_026_MMG004] This directly states that validation under environmentally relevant matrices (groundwater, surface water) and conditions is lacking. Without such studies, extending current findings to general environmental applications or to all PFAS would not be justified.\n\nThe poly(acrylamide) hydrogel composite study further notes that their mechanistic hypothesis “will be tested further with follow-up studies that explore additional crosslinking densities and binding studies, including competing short-chain PFAS.” [WF10_026_MMG002] This acknowledges that current data do not yet span the full range of crosslinking densities or competitive conditions needed to characterize selectivity across PFAS of different chain lengths.\n\nCollectively, the cited authors themselves indicate what additional evidence is required for stronger and broader claims: (i) tests over a wider range of hydrogel formulations (e.g., crosslinking densities) to map how structure controls sorption across different PFAS; (ii) binding and competition studies that explicitly include short‑chain PFAS alongside legacy analytes; (iii) experiments that incorporate typical background species at realistic levels; and (iv) evaluations of sorption kinetics and performance in environmentally relevant waters such as PFAS‑contaminated groundwater and surface water. Until such evidence is available, early hydrogel sorbent results should be interpreted as promising but limited, and not as proof of universal all‑PFAS removal.",
+        "reference_answer_claim_map": [
+          {
+            "claim_group_id": "WF10_026-G01",
+            "reference_answer_excerpt": "The available evidence shows that PFAS removal by hydrogel‑based and related sorbents is strongly dependent on both the sorbent formulation and the specific PFAS involved. In a poly(acrylamide)‑based hydrogel system, the authors report that increasing crosslinking density was expected to reduce access for larger PFAS and that their binding data are consistent with limited sorption of even legacy PFAS at high crosslinking: “modifying the NNMBA concentration of the material and increasing its crosslinking density would limit the removal percentage of larger PFAS molecules due to a more restrictive network” and “the systems with the highest crosslinking densities appear to limit some of the PFOA and PFOS sorption.” [WF10_026_MMG002] … work comparing hydrogel systems with powdered activated carbon (PAC) shows pronounced compound‑specific behavior… [WF10_026_MMG003] … the alginate‑based hydrogels … highlight that PFOA remediation “presents challenges in optimizing the quantities of its constituents … since any of these factors in excess can limit other functionalities,” and that “excess calcium over alginate can make the hydrogel too much cross-linked… and excess of CTAB can impair hydrophobic interaction or H-bonding interaction of the hydrogel with PFAS.” [WF10_026_MMG005] … Using these early results to infer broad, all‑PFAS removal performance would therefore be overgeneralized and not directly supported by the cited work."
+          },
+          {
+            "claim_group_id": "WF10_026-G02",
+            "reference_answer_excerpt": "The same studies explicitly identify important gaps that would need to be addressed before making stronger, broader PFAS removal claims. One hydrogel study notes that “another notable gap in PFAS remediation studies pertains to the evaluation of the impact of background species on PFAS adsorption by the adsorbent” … “the potential influence of these background species on adsorbent performance warrants careful consideration.” [WF10_026_MMG001] … Authors working on reusable hydrogel-based sorbents similarly emphasize that “future studies … under environmental relevant conditions such as PFAS-contaminated groundwater or surface water are thus needed.” [WF10_026_MMG004] … The poly(acrylamide) hydrogel composite study further notes that their mechanistic hypothesis “will be tested further with follow-up studies that explore additional crosslinking densities and binding studies, including competing short-chain PFAS.” [WF10_026_MMG002] … Collectively, the cited authors themselves indicate what additional evidence is required for stronger and broader claims: (i) tests over a wider range of hydrogel formulations … (ii) binding and competition studies that explicitly include short‑chain PFAS alongside legacy analytes; (iii) experiments that incorporate typical background species at realistic levels; and (iv) evaluations of sorption kinetics and performance in environmentally relevant waters such as PFAS‑contaminated groundwater and surface water."
+          }
+        ],
+        "unresolved_or_unsupported": [
+          "Whether any specific hydrogel formulation achieves consistently high removal across a very large number of distinct PFAS beyond those mentioned (e.g., additional functional groups or chain lengths not cited in the evidence) is not addressed in the supplied texts.",
+          "Long-term stability, fouling behavior, and performance over many regeneration cycles for hydrogel sorbents across diverse PFAS and complex matrices are not discussed in the provided evidence.",
+          "Quantitative performance metrics (e.g., precise capacities, breakthrough behaviors, or kinetic rate constants) necessary to benchmark hydrogel sorbents against other technologies for a broad suite of PFAS are not provided in the excerpts."
+        ],
+        "boundary_check": {
+          "must_include_addressed": true,
+          "must_not_claim_respected": true,
+          "notes": "The answer classifies broad all‑PFAS removal claims based on early hydrogel results as overgeneralized and only partially supported, and it specifies types of additional evidence needed without adding study-specific numeric details, mechanisms, protocols, or universal PFAS treatment claims. Condition-specific findings are not converted into universal rules."
+        }
+      },
+      "previous_review": {
+        "question_id": "WF10_026",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Two claim groups contain duplicated exact_spans entries (same evidence_id and identical exact_evidence_span text listed twice with only the 'supports' narrative differing), which the review prompt explicitly calls out to check for deduplication of overlapping evidence."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_026-G01",
+            "verdict": "duplicate_or_overweighted",
+            "issues": [
+              "WF10_026_MMG002 exact_evidence_span appears twice in the exact_spans list (identical text, two different 'supports' descriptions).",
+              "WF10_026_MMG005 exact_evidence_span also appears twice in the exact_spans list (identical text, two different 'supports' descriptions)."
+            ],
+            "required_repairs": [
+              "Merge the two WF10_026_MMG002 entries into a single exact_spans entry with one consolidated 'supports' description.",
+              "Merge the two WF10_026_MMG005 entries into a single exact_spans entry with one consolidated 'supports' description."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_026-G02",
+            "verdict": "duplicate_or_overweighted",
+            "issues": [
+              "WF10_026_MMG001 exact_evidence_span appears twice in the exact_spans list (identical text, two different 'supports' descriptions)."
+            ],
+            "required_repairs": [
+              "Merge the two WF10_026_MMG001 entries into a single exact_spans entry with one consolidated 'supports' description."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_026-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Deduplicate repeated exact_spans entries in WF10_026-G01 and WF10_026-G02 as described above."
+        ]
+      },
+      "draft_ledger_sha256": "de099b14b1575dc6c0d5256f75a4529d788be9d5dbb5aa94e490359f0fad671f"
+    },
+    {
+      "question_id": "WF10_028",
+      "reference_packet": {
+        "question_id": "WF10_028",
+        "question": {
+          "question_id": "WF10_028",
+          "question_text": "How does increasing membrane-modifier loading affect PFAS rejection, and what limitations are reported?",
+          "task_type": "unsupported_claim_detection",
+          "answerability_type": "answerable",
+          "must_include": "Evaluate whether the claim is directly supported, partially supported, unsupported, or overgeneralized; name what evidence would be needed for the stronger claim.",
+          "must_not_claim": "Do not invent study-specific details, numeric values, mechanisms, materials, protocols, citations, or units. Do not convert a condition-specific finding into a universal PFAS treatment claim.",
+          "expected_operation": "extract",
+          "required_conditions": "",
+          "required_units": "",
+          "forbidden_overclaims": "Do not invent study-specific details, numeric values, mechanisms, materials, protocols, citations, or units. Do not convert a condition-specific finding into a universal PFAS treatment claim.",
+          "workflow_scenario": "A membrane researcher is deciding whether more MOF loading should be assumed to keep improving PFOA rejection.",
+          "information_need": "Extract the reported rejection improvement and plateau condition."
+        },
+        "task_components": [
+          {
+            "task_component_id": "WF10_028-T01",
+            "component_text": "Extract how increasing membrane-modifier (e.g., MOF) loading is reported to affect PFAS (specifically PFOA) rejection, including the extent of rejection improvement and the condition at which rejection plateaus or stops improving, as well as any stated limitations or tradeoffs at higher loadings."
+          },
+          {
+            "task_component_id": "WF10_028-T02",
+            "component_text": "Evaluate whether the claim about PFAS/PFOA rejection improvement with increasing membrane-modifier loading and any plateau/limitations is directly supported, partially supported, unsupported, or overgeneralized by the described evidence, and state what additional evidence or data would be needed to justify any stronger or more general claim without converting a condition-specific finding into a universal PFAS treatment claim."
+          }
+        ],
+        "gold_is_non_exhaustive": true,
+        "approved_source_evidence": [
+          {
+            "evidence_id": "WF10_028_MMG001",
+            "evidence_type": "required_gold",
+            "doc_id": "2022 - Zhang - Study of MOF incorporated dual layer membrane with enhanced removal of ammonia and per- - poly-fluoroalkyl substances (PFAS) in landfill leachate.pdf",
+            "chunk_id": "2",
+            "exact_evidence_span": "As more MOF was added into the hydrophilic layer, the rejection to PFOA increased, but plateaued at 65.6% with 5% MOF incorporation into the hydrophilic layer.",
+            "unit_exact_spans": [
+              "As more MOF was added into the hydrophilic layer, the rejection to PFOA increased, but plateaued at 65.6% with 5% MOF incorporation into the hydrophilic layer."
+            ],
+            "full_chunk_text": "rejection to TOC. The rejection to ammonia was increased as more MOF was incorporated into the PVA layer. The maximum rejection of ammonia was 99.8% when the PVA layer containing 10% MOF. All the membranes showed more than 99% rejection to PFOS and PFHxS. However, PTFE membrane did not show any rejection to PFOA. As more MOF was added into the hydrophilic layer, the rejection to PFOA increased, but plateaued at 65.6% with 5% MOF incorporation into the hydrophilic layer. ©2 0 2 1E l s e v i e rB . V .A l lr i g h t sr e s e r v e d . Keywords: Dual layer membrane MOF PFAS ammonia Leachate Science of the Total Environment 806 (2022) 151207 ⁎ Corresponding authors. E-mail address: jianhua.zhang@vu.edu.au(J. Zhang). https://doi.org/10.1016/j.scitotenv.2021.151207 0048-9697/© 2021 Elsevier B.V. All rights reserved. Contents lists available at ScienceDirect Science of the Total Environment journal homepage: www.elsevier.com/locate/scitotenv 1. Introduction Per-/poly-ﬂuoroalkyl substances (PFAS) are synthetic organoﬂuorine compounds containing alkyl chains with at least one fully ﬂuorinated",
+            "corpus_metadata": {
+              "source": "2022 - Zhang - Study of MOF incorporated dual layer membrane with enhanced removal of ammonia and per- - poly-fluoroalkyl substances (PFAS) in landfill leachate.pdf",
+              "chunk": 2,
+              "title": "Study of MOF incorporated dual layer membrane with enhanced removal of ammonia and per-/poly-fluoroalkyl substances (PFAS) in landfill leachate treatment",
+              "authors": "Zhang, J.; Huang, Z.; Gao, L.; Gray, S.; Xie, Z.",
+              "year": "2022",
+              "journal": "Science of The Total Environment",
+              "doi": "10.1016/j.scitotenv.2021.151207",
+              "section": "abstract"
+            },
+            "author_review_decision": "retained_after_project_author_review",
+            "exact_span_found_in_full_chunk": true,
+            "unit_spans_found_in_full_chunk": [
+              true
+            ]
+          },
+          {
+            "evidence_id": "WF10_028_MMG002",
+            "evidence_type": "optional_gold",
+            "doc_id": "2022 - Zhang - Study of MOF incorporated dual layer membrane with enhanced removal of ammonia and per- - poly-fluoroalkyl substances (PFAS) in landfill leachate.pdf",
+            "chunk_id": "29",
+            "exact_evidence_span": "It can be found that the rejection of membrane to total PFAS increased from 91.4% by the pristine PTFE membrane to 98.4% by PSA5 membrane, and then plateaued at 98.2% by PSA10 membrane.",
+            "unit_exact_spans": [
+              "It can be found that the rejection of membrane to total PFAS increased from 91.4% by the pristine PTFE membrane to 98.4% by PSA5 membrane, and then plateaued at 98.2% by PSA10 membrane."
+            ],
+            "full_chunk_text": "Fig. 9. Characteristics of the ﬁnal permeate (error = ±5%). Fig. 10. PFAS rejection of different membranes (feed inlet temperature = 50 °C, permeate inlet temperature = 10 °C, ﬂowrate = 500 mL/min, error = ±10%, limit of detection = 0.02 μg/L). J. Zhang, Z. Huang, L. Gao et al. Science of the Total Environment 806 (2022) 151207 9 The rejection of different membranes to PFAS are shown in Fig. 10 . It can be found that the rejection of membrane to total PFAS increased from 91.4% by the pristine PTFE membrane to 98.4% by PSA5 membrane, and then plateaued at 98.2% by PSA10 membrane. All the membranes have more than 99.7% rejection to PFOS and 100% rejection to PFHxS. However, under the studied conditions, PTFE membrane has no rejection to PFOA, although PFOA is not vol- atile ( Wang et al., 2018 ). It is well known that PFOA is an additive in fabrication of PTFE and has good sorption to PTFE ( Dolman and Pelzing, 2011 ; Lath et al., 2019 ). Hence, the PFOA could attach to the PTFE and diffuse across the membrane. Similar phenomena",
+            "corpus_metadata": {
+              "source": "2022 - Zhang - Study of MOF incorporated dual layer membrane with enhanced removal of ammonia and per- - poly-fluoroalkyl substances (PFAS) in landfill leachate.pdf",
+              "chunk": 29,
+              "title": "Study of MOF incorporated dual layer membrane with enhanced removal of ammonia and per-/poly-fluoroalkyl substances (PFAS) in landfill leachate treatment",
+              "authors": "Zhang, J.; Huang, Z.; Gao, L.; Gray, S.; Xie, Z.",
+              "year": "2022",
+              "journal": "Science of The Total Environment",
+              "doi": "10.1016/j.scitotenv.2021.151207",
+              "section": "results"
+            },
+            "author_review_decision": "retained_after_project_author_review",
+            "exact_span_found_in_full_chunk": true,
+            "unit_spans_found_in_full_chunk": [
+              true
+            ]
+          },
+          {
+            "evidence_id": "WF10_028_MMG003",
+            "evidence_type": "required_gold",
+            "doc_id": "2022 - Le - Functionalized-MXene Thin-Film Nanocomposite Hollow Fiber Membranes for Enhanced PFAS Removal from Water.pdf",
+            "chunk_id": "35",
+            "exact_evidence_span": "Further increasing the MXene concentration (0.050%) resulted in a negligible (4%) decrease in rejection compared to 0.025%-MXene −TFC membranes due to the agglomeration of MXene nanosheets resulting in defects in the PA layer.",
+            "unit_exact_spans": [
+              "Further increasing the MXene concentration (0.050%) resulted in a negligible (4%) decrease in rejection compared to 0.025%-MXene −TFC membranes due to the agglomeration of MXene nanosheets resulting in defects in the PA layer."
+            ],
+            "full_chunk_text": "heterogeneity (extended) of the PA layer ( Figure 5 ). Therefore, the enhanced PFOS removal due to the immobilization of MXene can be attributed to electrostatic repulsion followed by size selectivity. As discussed earlier, the MXene −TFN membranes possessed a larger extended structure of the PA selective layer due to the presence of MXene, which explains the enhanced PFOS rejection due to the extended thickness of the selective layer. These results emphasize that the structure and thickness of the PA selective layer, in addition to charge properties, control the ion rejection/selectivity of NF membranes. Further increasing the MXene concentration (0.050%) resulted in a negligible (4%) decrease in rejection compared to 0.025%-MXene −TFC membranes due to the agglomeration of MXene nanosheets resulting in defects in the PA layer. 67 Another explanation for the slight reduction of PFOS in the 0.050%-MXene −TFC membrane is their less electronegative surface charge, as explained earlier ( Figure 5 c). Figure 9 a shows the MgSO 4 salt rejection performance of the synthesized membranes. The salt rejection results showed that as the MXene concentration increased up to 0.025% MXene loading, there was an insigni ﬁcant decrease (less than 4%) in MgSO 4 rejection. This trend of no signi ﬁcant reduction Figure 8.",
+            "corpus_metadata": {
+              "source": "2022 - Le - Functionalized-MXene Thin-Film Nanocomposite Hollow Fiber Membranes for Enhanced PFAS Removal from Water.pdf",
+              "chunk": 35,
+              "title": "Functionalized-MXene Thin-Film Nanocomposite Hollow Fiber Membranes for Enhanced PFAS Removal from Water",
+              "authors": "Le, T.; Jamshidi, E.; Beidaghi, M.; Esfahani, M. R.",
+              "year": "2022",
+              "journal": "ACS Applied Materials & Interfaces",
+              "doi": "10.1021/acsami.2c03796",
+              "section": "results"
+            },
+            "author_review_decision": "retained_after_project_author_review",
+            "exact_span_found_in_full_chunk": true,
+            "unit_spans_found_in_full_chunk": [
+              true
+            ]
+          },
+          {
+            "evidence_id": "WF10_028_MMG004",
+            "evidence_type": "required_gold",
+            "doc_id": "2026 - Ghanbari - Harnessing phase engineered porous MXene-TiO2 in polyamide reverse osmosis membranes for enhanced short- and long chain PFAS removal from water.pdf",
+            "chunk_id": "54",
+            "exact_evidence_span": "4 membrane showed a slight decline in PFOA rejection compared to M 3 (from 98.8 ± 0.3% to 97.9 ± 0.4%), this drop was smaller than the drop observed in Na 2 SO 4 rejection for the same membranes (from 98.4 ± 0.1% to 93.0 ± 0.2%).",
+            "unit_exact_spans": [
+              "4 membrane showed a slight decline in PFOA rejection compared to M 3 (from 98.8 ± 0.3% to 97.9 ± 0.4%), this drop was smaller than the drop observed in Na 2 SO 4 rejection for the same membranes (from 98.4 ± 0.1% to 93.0 ± 0.2%).",
+              "This suggests that the agglomeration of excess composite loading in M 4 , while slightly increasing nano-defect probability, does not compromise the membrane's selectivity toward large molecules like PFOA as drasti - cally as it does for smaller salt ions."
+            ],
+            "full_chunk_text": "4 membrane showed a slight decline in PFOA rejection compared to M 3 (from 98.8 ± 0.3% to 97.9 ± 0.4%), this drop was smaller than the drop observed in Na 2 SO 4 rejection for the same membranes (from 98.4 ± 0.1% to 93.0 ± 0.2%). This suggests that the agglomeration of excess composite loading in M 4 , while slightly increasing nano-defect probability, does not compromise the membrane's selectivity toward large molecules like PFOA as drasti - cally as it does for smaller salt ions. This observation is consistent with the structural and surface analyses discussed previously, which confirmed that the MT-18 composite offers an optimal balance between dispersion, porosity, and surface charge, leading to maximized PFAS rejection without the trade-off typically seen between permeance and selectivity. To further evaluate the separation performance of the fabricated membranes, PFBA was selected as a representative short-chain PFAS. Both PFBA (C4) and PFOA (C8) belong to the perfluoroalkyl carboxylic acid (PFCA) family and thus share the same head group (-COOH), enabling a direct comparison of membrane rejection behavior based solely on the perfluorinated chain length. This approach removes other variability associated with differing functional groups and allows clearer mechanistic interpretation.",
+            "corpus_metadata": {
+              "source": "2026 - Ghanbari - Harnessing phase engineered porous MXene-TiO2 in polyamide reverse osmosis membranes for enhanced short- and long chain PFAS removal from water.pdf",
+              "chunk": 54,
+              "title": "Harnessing phase engineered porous MXene-TiO2 in polyamide reverse osmosis membranes for enhanced short- and long chain PFAS removal from water",
+              "authors": "Ghanbari, R.; Farahbakhsh, J.; Najafidoust, A.; Permala, R.; Iglauer, S.; Kabiri, S.; Zargar, M.",
+              "year": "2026",
+              "journal": "Chemical Engineering Journal",
+              "doi": "10.1016/j.cej.2026.175198",
+              "section": "results"
+            },
+            "author_review_decision": "retained_after_project_author_review",
+            "exact_span_found_in_full_chunk": true,
+            "unit_spans_found_in_full_chunk": [
+              true,
+              true
+            ]
+          }
+        ],
+        "author_review_provenance": {
+          "record_id": "frozen_v3_project_author_review_2026-07-26",
+          "decision": "All listed questions and gold records were retained after project-author review; no item-specific rationale was recorded.",
+          "interpretation_limit": "This is a retention-only confirmation, not independent double annotation or item-level adjudication. It does not resolve historical machine-review flags or establish exhaustive gold coverage. The reference evidence remains non-exhaustive."
+        }
+      },
+      "draft_ledger": {
+        "question_id": "WF10_028",
+        "answerability": "supported",
+        "answerability_rationale": "The evidence directly reports how increasing membrane-modifier loading (MOF or MXene-based modifiers) affects PFAS (including PFOA) rejection, identifies plateau or slight decline points, and notes limitations at higher loadings. These findings are system- and condition-specific, so broader generalizations are not supported beyond the reported cases.",
+        "task_components": [
+          {
+            "task_component_id": "WF10_028-T01",
+            "component_text": "Extract how increasing membrane-modifier (e.g., MOF) loading is reported to affect PFAS (specifically PFOA) rejection, including the extent of rejection improvement and the condition at which rejection plateaus or stops improving, as well as any stated limitations or tradeoffs at higher loadings."
+          },
+          {
+            "task_component_id": "WF10_028-T02",
+            "component_text": "Evaluate whether the claim about PFAS/PFOA rejection improvement with increasing membrane-modifier loading and any plateau/limitations is directly supported, partially supported, unsupported, or overgeneralized by the described evidence, and state what additional evidence or data would be needed to justify any stronger or more general claim without converting a condition-specific finding into a universal PFAS treatment claim."
+          }
+        ],
+        "claim_groups": [
+          {
+            "claim_group_id": "WF10_028-G01",
+            "task_component_id": "WF10_028-T01",
+            "canonical_proposition": "In a MOF-incorporated dual-layer membrane, increasing MOF loading in the hydrophilic layer increases PFOA rejection until it plateaus at about two-thirds rejection when 5% MOF is incorporated.",
+            "central_proposition": "As MOF loading in the hydrophilic layer is increased, PFOA rejection improves but then plateaus at a reported value when the MOF content reaches 5%.",
+            "material_qualifiers": [
+              "MOF-incorporated dual layer membrane",
+              "hydrophilic layer modifier loading",
+              "PFOA rejection"
+            ],
+            "importance": "core",
+            "function": "affirmative",
+            "scoring_role": "required_content",
+            "evidence_ids": [
+              "WF10_028_MMG001"
+            ],
+            "synthesis_required": false,
+            "numeric_required": false,
+            "accepted_numeric_equivalents": [],
+            "full_rule": "Award full credit if the answer states that in the cited MOF-incorporated dual-layer membrane system, increasing MOF loading in the hydrophilic layer increased PFOA rejection but that rejection plateaued at a reported plateau value when 5% MOF was incorporated. The description must clearly indicate both improvement with added MOF and the plateau at 5% loading.",
+            "partial_rule": "Award partial credit if the answer mentions that PFOA rejection increased with added MOF or that it plateaued at a certain loading, but does not clearly connect both trends (increase then plateau at 5% MOF) or omits the plateau nature.",
+            "contradiction_rule": "Mark as contradictory if the answer claims that PFOA rejection continued to increase beyond 5% MOF without plateau, or that adding MOF did not improve PFOA rejection at all in this system.",
+            "source_atomic_claim_ids": [
+              "WF10_028-A01"
+            ],
+            "exact_spans": [
+              {
+                "evidence_id": "WF10_028_MMG001",
+                "exact_evidence_span": "As more MOF was added into the hydrophilic layer, the rejection to PFOA increased, but plateaued at 65.6% with 5% MOF incorporation into the hydrophilic layer.",
+                "supports": "Shows that PFOA rejection increases with more MOF in the hydrophilic layer but reaches a plateau at 65.6% when 5% MOF is incorporated."
+              }
+            ]
+          },
+          {
+            "claim_group_id": "WF10_028-G02",
+            "task_component_id": "WF10_028-T02",
+            "canonical_proposition": "In the same MOF-modified membrane series, total PFAS rejection increased with modifier loading from the pristine membrane to an intermediate loading and then plateaued at higher loading.",
+            "central_proposition": "Total PFAS rejection improves from the pristine PTFE membrane to a MOF-modified membrane (PSA5) and then plateaus at a similar level for a higher-loading membrane (PSA10).",
+            "material_qualifiers": [
+              "MOF-incorporated dual layer membrane",
+              "total PFAS rejection",
+              "comparison among pristine PTFE, PSA5, and PSA10 membranes"
+            ],
+            "importance": "supplementary",
+            "function": "affirmative",
+            "scoring_role": "supplementary_content",
+            "evidence_ids": [
+              "WF10_028_MMG002"
+            ],
+            "synthesis_required": false,
+            "numeric_required": false,
+            "accepted_numeric_equivalents": [],
+            "full_rule": "Award full credit if the answer notes that total PFAS rejection increased from the pristine PTFE membrane to the MOF-modified PSA5 membrane and then plateaued (i.e., did not further increase) at the higher-loading PSA10 membrane.",
+            "partial_rule": "Award partial credit if the answer only mentions improvement of total PFAS rejection with MOF incorporation but omits that rejection plateaus at higher loading, or vice versa.",
+            "contradiction_rule": "Mark as contradictory if the answer states that total PFAS rejection decreases when going from pristine PTFE to PSA5, or that it keeps increasing beyond PSA5 without plateau under the described conditions.",
+            "source_atomic_claim_ids": [
+              "WF10_028-A02"
+            ],
+            "exact_spans": [
+              {
+                "evidence_id": "WF10_028_MMG002",
+                "exact_evidence_span": "It can be found that the rejection of membrane to total PFAS increased from 91.4% by the pristine PTFE membrane to 98.4% by PSA5 membrane, and then plateaued at 98.2% by PSA10 membrane.",
+                "supports": "Shows total PFAS rejection increases from pristine PTFE to PSA5 and then plateaus at a similar level for PSA10."
+              }
+            ]
+          },
+          {
+            "claim_group_id": "WF10_028-G03",
+            "task_component_id": "WF10_028-T02",
+            "canonical_proposition": "For MXene-modified thin-film composite/nanocomposite membranes, increasing MXene loading beyond an optimal value leads to a slight decrease in PFOS rejection due to agglomeration and defect formation.",
+            "central_proposition": "PFOS rejection improves with MXene incorporation up to an optimal concentration, but further increasing MXene concentration causes a small reduction in rejection attributed to agglomeration-induced defects.",
+            "material_qualifiers": [
+              "functionalized-MXene TFN / TFC membranes",
+              "PFOS rejection",
+              "MXene concentration increased to 0.050%"
+            ],
+            "importance": "core",
+            "function": "affirmative",
+            "scoring_role": "required_content",
+            "evidence_ids": [
+              "WF10_028_MMG003"
+            ],
+            "synthesis_required": false,
+            "numeric_required": false,
+            "accepted_numeric_equivalents": [],
+            "full_rule": "Award full credit if the answer explains that in MXene-modified membranes, increasing MXene concentration beyond an optimal loading (e.g., to 0.050%) causes a slight decrease in PFOS rejection, and that this reduction is linked to agglomeration of MXene nanosheets and the resulting defects in the PA layer.",
+            "partial_rule": "Award partial credit if the answer only notes a decrease in rejection at higher MXene loading or only mentions agglomeration-related defects without clearly linking them to a slight rejection decrease.",
+            "contradiction_rule": "Mark as contradictory if the answer claims PFOS rejection continues to increase monotonically with MXene loading up to the highest tested concentration, or that higher MXene loading has no impact on rejection or membrane integrity.",
+            "source_atomic_claim_ids": [
+              "WF10_028-A03"
+            ],
+            "exact_spans": [
+              {
+                "evidence_id": "WF10_028_MMG003",
+                "exact_evidence_span": "Further increasing the MXene concentration (0.050%) resulted in a negligible (4%) decrease in rejection compared to 0.025%-MXene −TFC membranes due to the agglomeration of MXene nanosheets resulting in defects in the PA layer.",
+                "supports": "Shows that at higher MXene concentration (0.050%), rejection slightly decreases (about 4%) and attributes this to agglomeration-induced defects in the PA layer."
+              }
+            ]
+          },
+          {
+            "claim_group_id": "WF10_028-G04",
+            "task_component_id": "WF10_028-T01",
+            "canonical_proposition": "In MXene–TiO2 composite RO membranes, increasing composite loading from an optimal level to a higher level causes a slight decline in PFOA rejection, interpreted as arising from agglomeration and increased nano-defect probability, though PFOA selectivity remains high.",
+            "central_proposition": "At higher composite loading (membrane M4 versus M3) PFOA rejection slightly decreases, consistent with excess loading leading to some agglomeration and nano-defect formation, but the impact on PFOA rejection is smaller than on salt rejection.",
+            "material_qualifiers": [
+              "MXene–TiO2 composite RO membranes",
+              "comparison between M3 and M4 membranes",
+              "PFOA rejection and nano-defect probability"
+            ],
+            "importance": "core",
+            "function": "affirmative",
+            "scoring_role": "required_content",
+            "evidence_ids": [
+              "WF10_028_MMG004"
+            ],
+            "synthesis_required": false,
+            "numeric_required": false,
+            "accepted_numeric_equivalents": [],
+            "full_rule": "Award full credit if the answer notes that in the MXene–TiO2 RO membrane series, increasing composite loading from M3 to M4 caused a small drop in PFOA rejection and that this was attributed to agglomeration of excess composite loading and increased nano-defect probability, while maintaining relatively high selectivity for PFOA.",
+            "partial_rule": "Award partial credit if the answer only mentions a slight decline in PFOA rejection at higher loading or only mentions agglomeration/nano-defects without clearly connecting them to the observed slight decline in PFOA rejection.",
+            "contradiction_rule": "Mark as contradictory if the answer asserts that PFOA rejection increases when moving from M3 to M4, or that excess composite loading causes no change in PFOA rejection.",
+            "source_atomic_claim_ids": [
+              "WF10_028-A04"
+            ],
+            "exact_spans": [
+              {
+                "evidence_id": "WF10_028_MMG004",
+                "exact_evidence_span": "4 membrane showed a slight decline in PFOA rejection compared to M 3 (from 98.8 ± 0.3% to 97.9 ± 0.4%), this drop was smaller than the drop observed in Na 2 SO 4 rejection for the same membranes (from 98.4 ± 0.1% to 93.0 ± 0.2%).",
+                "supports": "Provides the observation that PFOA rejection slightly declines when moving from M3 to M4, and that the drop is smaller than for Na2SO4."
+              },
+              {
+                "evidence_id": "WF10_028_MMG004",
+                "exact_evidence_span": "This suggests that the agglomeration of excess composite loading in M 4 , while slightly increasing nano-defect probability, does not compromise the membrane's selectivity toward large molecules like PFOA as drasti - cally as it does for smaller salt ions.",
+                "supports": "Interprets the effect of excess composite loading in M4 as causing some agglomeration and increased nano-defect probability, but with limited impact on PFOA selectivity versus smaller ions."
+              }
+            ]
+          },
+          {
+            "claim_group_id": "WF10_028-G05",
+            "task_component_id": "WF10_028-T02",
+            "canonical_proposition": "The evidence directly supports that PFAS/PFOA rejection increases with modifier loading up to an optimal range and then plateaus or slightly declines in the studied systems, but does not justify a universal assumption that further loading always improves PFAS rejection across membranes and PFAS types.",
+            "central_proposition": "In the reported MOF- and MXene-modified membranes, increased modifier loading improves PFAS or PFOA rejection up to a point, after which rejection plateaus or slightly decreases; however, these condition-specific results do not support generalizing to all membranes or PFAS without additional data.",
+            "material_qualifiers": [
+              "MOF dual-layer membrane for landfill leachate",
+              "MXene-based NF/RO membranes",
+              "system- and condition-specific findings"
+            ],
+            "importance": "core",
+            "function": "affirmative",
+            "scoring_role": "required_content",
+            "evidence_ids": [
+              "WF10_028_MMG001",
+              "WF10_028_MMG002",
+              "WF10_028_MMG003",
+              "WF10_028_MMG004"
+            ],
+            "synthesis_required": true,
+            "numeric_required": false,
+            "accepted_numeric_equivalents": [],
+            "full_rule": "Award full credit if the answer (1) classifies the claim that PFOA/PFAS rejection always continues to improve with increasing modifier loading as overgeneralized or not fully supported, (2) explains that the cited studies show increased rejection only up to an optimal loading followed by plateau or slight decline, and (3) notes that broader generalization would require more data across membrane types, loadings, PFAS, and conditions.",
+            "partial_rule": "Award partial credit if the answer recognizes that the findings are condition-specific or that there is a plateau/decline, but does not clearly address overgeneralization or specify the additional evidence needed for stronger claims.",
+            "contradiction_rule": "Mark as contradictory if the answer asserts that the evidence proves a universal trend that more modifier loading always increases PFAS/PFOA rejection without plateau or limitation.",
+            "source_atomic_claim_ids": [
+              "WF10_028-A05"
+            ],
+            "exact_spans": [
+              {
+                "evidence_id": "WF10_028_MMG001",
+                "exact_evidence_span": "As more MOF was added into the hydrophilic layer, the rejection to PFOA increased, but plateaued at 65.6% with 5% MOF incorporation into the hydrophilic layer.",
+                "supports": "Shows a plateau in PFOA rejection at 5% MOF, indicating that further loading beyond this point does not keep increasing rejection."
+              },
+              {
+                "evidence_id": "WF10_028_MMG002",
+                "exact_evidence_span": "It can be found that the rejection of membrane to total PFAS increased from 91.4% by the pristine PTFE membrane to 98.4% by PSA5 membrane, and then plateaued at 98.2% by PSA10 membrane.",
+                "supports": "Shows total PFAS rejection improves then plateaus with increasing modifier loading (from pristine to PSA5 to PSA10)."
+              },
+              {
+                "evidence_id": "WF10_028_MMG003",
+                "exact_evidence_span": "Further increasing the MXene concentration (0.050%) resulted in a negligible (4%) decrease in rejection compared to 0.025%-MXene −TFC membranes due to the agglomeration of MXene nanosheets resulting in defects in the PA layer.",
+                "supports": "Provides an example where increasing modifier loading beyond an optimal value causes a slight decrease in rejection, not continued improvement."
+              },
+              {
+                "evidence_id": "WF10_028_MMG004",
+                "exact_evidence_span": "4 membrane showed a slight decline in PFOA rejection compared to M 3 (from 98.8 ± 0.3% to 97.9 ± 0.4%), this drop was smaller than the drop observed in Na 2 SO 4 rejection for the same membranes (from 98.4 ± 0.1% to 93.0 ± 0.2%).",
+                "supports": "Gives another example of a slight decline in PFOA rejection at higher composite loading, reinforcing that more modifier does not always yield better rejection."
+              }
+            ]
+          }
+        ],
+        "constraint_groups": [
+          {
+            "claim_group_id": "WF10_028-X01",
+            "task_component_id": "WF10_028-T02",
+            "canonical_proposition": "The reported effects of modifier loading on PFAS/PFOA rejection are specific to the studied membranes, PFAS species, and operating conditions and should not be treated as universally applicable to all PFAS treatment systems.",
+            "central_proposition": "These findings should not be generalized to all membrane types, modifier chemistries, PFAS compounds, or operating regimes without further evidence.",
+            "material_qualifiers": [
+              "specific membrane architectures (dual-layer MOF membrane, MXene-based NF/RO membranes)",
+              "specific PFAS (PFOS, PFHxS, PFOA, total PFAS in studied leachate)",
+              "reported experimental conditions only"
+            ],
+            "importance": "core",
+            "function": "limitation",
+            "scoring_role": "constraint_only",
+            "evidence_ids": [
+              "WF10_028_MMG001",
+              "WF10_028_MMG002",
+              "WF10_028_MMG003",
+              "WF10_028_MMG004"
+            ],
+            "synthesis_required": true,
+            "numeric_required": false,
+            "accepted_numeric_equivalents": [],
+            "full_rule": "Use this constraint to prevent awarding credit to answers that extrapolate the observed trends (increase then plateau or slight decline) to all PFAS, all membranes, or all conditions. Answers should remain explicitly tied to the studied systems and not present the findings as universal.",
+            "partial_rule": "If an answer partially generalizes but still notes that results may be system-dependent, treat that as less severe but still constrained; emphasize the need for caution in generalization.",
+            "contradiction_rule": "This constraint is violated if an answer claims that any membrane with increased modifier loading will universally show similar PFAS rejection behavior without qualification.",
+            "source_atomic_claim_ids": [
+              "WF10_028-A06"
+            ],
+            "exact_spans": [
+              {
+                "evidence_id": "WF10_028_MMG002",
+                "exact_evidence_span": "It can be found that the rejection of membrane to total PFAS increased from 91.4% by the pristine PTFE membrane to 98.4% by PSA5 membrane, and then plateaued at 98.2% by PSA10 membrane.",
+                "supports": "Refers to specific membranes (pristine PTFE, PSA5, PSA10) and total PFAS under defined conditions, implying system-specific behavior."
+              },
+              {
+                "evidence_id": "WF10_028_MMG003",
+                "exact_evidence_span": "Further increasing the MXene concentration (0.050%) resulted in a negligible (4%) decrease in rejection compared to 0.025%-MXene −TFC membranes due to the agglomeration of MXene nanosheets resulting in defects in the PA layer.",
+                "supports": "Indicates that the described effects are tied to a particular MXene–TFN membrane structure, not all membranes."
+              },
+              {
+                "evidence_id": "WF10_028_MMG004",
+                "exact_evidence_span": "4 membrane showed a slight decline in PFOA rejection compared to M 3 (from 98.8 ± 0.3% to 97.9 ± 0.4%), this drop was smaller than the drop observed in Na 2 SO 4 rejection for the same membranes (from 98.4 ± 0.1% to 93.0 ± 0.2%).",
+                "supports": "Shows that the study focuses on specific fabricated membranes and particular PFAS, reinforcing that conclusions are system-specific."
+              }
+            ]
+          }
+        ],
+        "atomic_claim_dispositions": [
+          {
+            "atomic_claim_id": "WF10_028-A01",
+            "atomic_claim": "As MOF loading in the hydrophilic layer of the dual-layer membrane increases, PFOA rejection increases but plateaus at 65.6% when 5% MOF is incorporated.",
+            "evidence_ids": [
+              "WF10_028_MMG001"
+            ],
+            "action": "retained",
+            "target_claim_group_ids": [
+              "WF10_028-G01"
+            ],
+            "rationale": "Directly and explicitly supported by the quoted sentence describing increased PFOA rejection that plateaus at 65.6% with 5% MOF."
+          },
+          {
+            "atomic_claim_id": "WF10_028-A02",
+            "atomic_claim": "In the MOF-modified membrane series, total PFAS rejection increases from 91.4% for the pristine PTFE membrane to 98.4% for the PSA5 membrane, then plateaus at about 98.2% for the PSA10 membrane.",
+            "evidence_ids": [
+              "WF10_028_MMG002"
+            ],
+            "action": "retained",
+            "target_claim_group_ids": [
+              "WF10_028-G02"
+            ],
+            "rationale": "Exactly matches the numerical trend in total PFAS rejection reported for pristine PTFE, PSA5, and PSA10 membranes."
+          },
+          {
+            "atomic_claim_id": "WF10_028-A03",
+            "atomic_claim": "For MXene-modified TFC membranes, increasing MXene concentration to 0.050% causes a negligible (~4%) decrease in PFOS rejection compared to 0.025% MXene loading, attributed to MXene agglomeration causing defects in the PA layer.",
+            "evidence_ids": [
+              "WF10_028_MMG003"
+            ],
+            "action": "retained",
+            "target_claim_group_ids": [
+              "WF10_028-G03"
+            ],
+            "rationale": "Directly supported by the statement that further increasing MXene concentration to 0.050% results in a negligible 4% decrease in rejection due to agglomeration-induced PA defects."
+          },
+          {
+            "atomic_claim_id": "WF10_028-A04",
+            "atomic_claim": "In MXene–TiO2 composite RO membranes, moving from membrane M3 to the higher-loading M4 causes a small decline in PFOA rejection (from about 98.8% to 97.9%), interpreted as due to agglomeration of excess composite loading and slightly increased nano-defect probability, but the membrane’s selectivity toward PFOA remains less compromised than for smaller salt ions.",
+            "evidence_ids": [
+              "WF10_028_MMG004"
+            ],
+            "action": "retained",
+            "target_claim_group_ids": [
+              "WF10_028-G04"
+            ],
+            "rationale": "Both the quantitative change in PFOA rejection and the interpretation regarding agglomeration and nano-defects are explicitly described in the evidence text."
+          },
+          {
+            "atomic_claim_id": "WF10_028-A05",
+            "atomic_claim": "The collected studies show that increasing membrane-modifier loading improves PFAS or PFOA rejection up to an optimal loading, after which rejection either plateaus or slightly declines, meaning that assuming continual improvement with more loading is not supported.",
+            "evidence_ids": [
+              "WF10_028_MMG001",
+              "WF10_028_MMG002",
+              "WF10_028_MMG003",
+              "WF10_028_MMG004"
+            ],
+            "action": "retained",
+            "target_claim_group_ids": [
+              "WF10_028-G05"
+            ],
+            "rationale": "Synthesizes multiple pieces of evidence showing increase-then-plateau (MOF system) and increase-then-slight-decrease (MXene systems), supporting the conclusion that more loading does not always keep improving rejection."
+          },
+          {
+            "atomic_claim_id": "WF10_028-A06",
+            "atomic_claim": "The observed relationships between modifier loading and PFAS/PFOA rejection are specific to the particular membranes, PFAS, and conditions studied and should not be generalized to all membranes or PFAS without further evidence.",
+            "evidence_ids": [
+              "WF10_028_MMG001",
+              "WF10_028_MMG002",
+              "WF10_028_MMG003",
+              "WF10_028_MMG004"
+            ],
+            "action": "constraint_only",
+            "target_claim_group_ids": [
+              "WF10_028-X01"
+            ],
+            "rationale": "Each evidence record refers to specific membrane constructions and PFAS species; while this does not directly state non-universality, it constrains interpretation to these systems and supports treating broad generalization as unwarranted."
+          }
+        ],
+        "reference_answer": "In the MOF-incorporated dual-layer membrane for landfill leachate, increasing MOF loading in the hydrophilic layer improves PFOA rejection but only up to a point. As reported, “As more MOF was added into the hydrophilic layer, the rejection to PFOA increased, but plateaued at 65.6% with 5% MOF incorporation into the hydrophilic layer.” This indicates that beyond 5% MOF in the hydrophilic layer, additional MOF loading did not further increase PFOA rejection.\n\nFor total PFAS in the same membrane series, a similar trend is observed. The authors note that “the rejection of membrane to total PFAS increased from 91.4% by the pristine PTFE membrane to 98.4% by PSA5 membrane, and then plateaued at 98.2% by PSA10 membrane.” Thus, MOF modification substantially increases total PFAS rejection from the pristine membrane to the PSA5 configuration, but further loading in PSA10 does not meaningfully improve rejection, demonstrating a plateau in performance.\n\nOther modifier systems similarly show that there is an optimal loading range and that excessive loading can introduce tradeoffs. In functionalized-MXene thin-film nanocomposite membranes, the study reports: “Further increasing the MXene concentration (0.050%) resulted in a negligible (4%) decrease in rejection compared to 0.025%-MXene −TFC membranes due to the agglomeration of MXene nanosheets resulting in defects in the PA layer.” Here, PFOS rejection is slightly reduced at higher MXene loading, and the limitation is tied to MXene agglomeration and defect formation in the selective layer.\n\nIn MXene–TiO2 composite reverse osmosis membranes, a similar limitation is seen for PFOA at higher composite loading. The authors state that the M4 membrane “showed a slight decline in PFOA rejection compared to M 3 (from 98.8 ± 0.3% to 97.9 ± 0.4%), this drop was smaller than the drop observed in Na 2 SO 4 rejection for the same membranes,” and explain that “the agglomeration of excess composite loading in M 4 , while slightly increasing nano-defect probability, does not compromise the membrane's selectivity toward large molecules like PFOA as drastically as it does for smaller salt ions.” This indicates that excessive composite loading introduces nano-defects and slightly lowers PFOA rejection, even though PFOA selectivity remains high relative to salts.\n\nTaken together, these reports show that for the studied MOF and MXene-based membranes, increasing modifier loading initially enhances PFAS or PFOA rejection, but performance either plateaus (MOF dual-layer membranes for PFOA and total PFAS) or slightly declines (MXene-based membranes) once loading exceeds an optimal range, with limitations related to agglomeration and defect formation. Therefore, the idea that simply increasing MOF or other modifier loading will always continue to improve PFOA rejection is not supported by these data and would be an overgeneralization.\n\nTo justify a stronger or more general claim—such as that higher modifier loading consistently improves PFAS rejection across membrane types and PFAS species—additional evidence would be needed. This would include systematic studies spanning a broader range of modifier loadings for each membrane architecture, evaluation of multiple PFAS (short- and long-chain, different functional groups), testing under varied operating conditions and feed matrices, and comparative performance across different modifier chemistries and membrane platforms. Without such broader datasets, conclusions should remain limited to the specific systems and conditions documented in these studies.",
+        "reference_answer_claim_map": [
+          {
+            "claim_group_id": "WF10_028-G01",
+            "reference_answer_excerpt": "In the MOF-incorporated dual-layer membrane for landfill leachate, increasing MOF loading in the hydrophilic layer improves PFOA rejection but only up to a point. As reported, “As more MOF was added into the hydrophilic layer, the rejection to PFOA increased, but plateaued at 65.6% with 5% MOF incorporation into the hydrophilic layer.” This indicates that beyond 5% MOF in the hydrophilic layer, additional MOF loading did not further increase PFOA rejection."
+          },
+          {
+            "claim_group_id": "WF10_028-G02",
+            "reference_answer_excerpt": "For total PFAS in the same membrane series, a similar trend is observed. The authors note that “the rejection of membrane to total PFAS increased from 91.4% by the pristine PTFE membrane to 98.4% by PSA5 membrane, and then plateaued at 98.2% by PSA10 membrane.” Thus, MOF modification substantially increases total PFAS rejection from the pristine membrane to the PSA5 configuration, but further loading in PSA10 does not meaningfully improve rejection, demonstrating a plateau in performance."
+          },
+          {
+            "claim_group_id": "WF10_028-G03",
+            "reference_answer_excerpt": "In functionalized-MXene thin-film nanocomposite membranes, the study reports: “Further increasing the MXene concentration (0.050%) resulted in a negligible (4%) decrease in rejection compared to 0.025%-MXene −TFC membranes due to the agglomeration of MXene nanosheets resulting in defects in the PA layer.” Here, PFOS rejection is slightly reduced at higher MXene loading, and the limitation is tied to MXene agglomeration and defect formation in the selective layer."
+          },
+          {
+            "claim_group_id": "WF10_028-G04",
+            "reference_answer_excerpt": "In MXene–TiO2 composite reverse osmosis membranes, a similar limitation is seen for PFOA at higher composite loading. The authors state that the M4 membrane “showed a slight decline in PFOA rejection compared to M 3 (from 98.8 ± 0.3% to 97.9 ± 0.4%), this drop was smaller than the drop observed in Na 2 SO 4 rejection for the same membranes,” and explain that “the agglomeration of excess composite loading in M 4 , while slightly increasing nano-defect probability, does not compromise the membrane's selectivity toward large molecules like PFOA as drastically as it does for smaller salt ions.”"
+          },
+          {
+            "claim_group_id": "WF10_028-G05",
+            "reference_answer_excerpt": "Taken together, these reports show that for the studied MOF and MXene-based membranes, increasing modifier loading initially enhances PFAS or PFOA rejection, but performance either plateaus (MOF dual-layer membranes for PFOA and total PFAS) or slightly declines (MXene-based membranes) once loading exceeds an optimal range, with limitations related to agglomeration and defect formation. Therefore, the idea that simply increasing MOF or other modifier loading will always continue to improve PFOA rejection is not supported by these data and would be an overgeneralization.\n\nTo justify a stronger or more general claim—such as that higher modifier loading consistently improves PFAS rejection across membrane types and PFAS species—additional evidence would be needed."
+          },
+          {
+            "claim_group_id": "WF10_028-X01",
+            "reference_answer_excerpt": "Therefore, the idea that simply increasing MOF or other modifier loading will always continue to improve PFOA rejection is not supported by these data and would be an overgeneralization.\n\nTo justify a stronger or more general claim—such as that higher modifier loading consistently improves PFAS rejection across membrane types and PFAS species—additional evidence would be needed. This would include systematic studies spanning a broader range of modifier loadings for each membrane architecture, evaluation of multiple PFAS (short- and long-chain, different functional groups), testing under varied operating conditions and feed matrices, and comparative performance across different modifier chemistries and membrane platforms. Without such broader datasets, conclusions should remain limited to the specific systems and conditions documented in these studies."
+          }
+        ],
+        "unresolved_or_unsupported": [
+          "Any claim that increasing MOF or other modifier loading beyond the reported values will further improve PFOA or PFAS rejection in these systems is not supported by the provided evidence.",
+          "Any claim that the observed increase-then-plateau or increase-then-decrease trends apply universally to all membrane types, modifier chemistries, PFAS species, or operating conditions is unsupported.",
+          "Any mechanistic explanation beyond the explicitly mentioned agglomeration and defect formation (e.g., detailed transport mechanisms, specific structural metrics) would require additional data not provided here.",
+          "Any specific optimal loading values, performance metrics, or behaviors for membranes, modifiers, or PFAS not mentioned in the evidence cannot be inferred from these studies."
+        ],
+        "boundary_check": {
+          "must_include_addressed": true,
+          "must_not_claim_respected": true,
+          "notes": "The answer stays within the reported systems and does not invent additional study details, mechanisms, or universal rules. It explicitly evaluates the claim as condition-specific and explains what further evidence would be required for broader generalization."
+        }
+      },
+      "previous_review": {
+        "question_id": "WF10_028",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Task component WF10_028-T01 is worded to cover PFAS 'specifically PFOA' rejection, but two of the core/supplementary claim groups assigned to T01 (G02: total PFAS in the MOF membrane series; G03: PFOS in the MXene-TFN membrane series) describe compounds other than PFOA. The task-component wording should be broadened to match the compound scope of its assigned groups, or the groups should be reassigned/annotated to reflect that they extend beyond the component's stated PFOA-specific focus."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_028-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_028-G02",
+            "verdict": "partially_supported",
+            "issues": [
+              "Content is well supported by evidence, but it is assigned to task component WF10_028-T01, whose text is scoped specifically to PFOA rejection, while this group concerns total PFAS rejection (not PFOA specifically)."
+            ],
+            "required_repairs": [
+              "Broaden WF10_028-T01's component_text to explicitly include total PFAS rejection, or note the scope extension in the group's rationale."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_028-G03",
+            "verdict": "partially_supported",
+            "issues": [
+              "Content is well supported by evidence, but it is assigned to task component WF10_028-T01, whose text is scoped specifically to PFOA rejection, while this group concerns PFOS rejection in a MXene membrane, not PFOA."
+            ],
+            "required_repairs": [
+              "Broaden WF10_028-T01's component_text to explicitly include PFOS rejection, or note the scope extension in the group's rationale."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_028-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_028-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_028-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Revise WF10_028-T01 component_text to match the actual PFAS scope (PFOA, PFOS, and total PFAS) of the claim groups assigned to it."
+        ]
+      },
+      "draft_ledger_sha256": "38f1712239e764bb2f7d74158c687369c7f8c6e632ee34333f6ab7775dcacc70"
+    }
+  ]
+}

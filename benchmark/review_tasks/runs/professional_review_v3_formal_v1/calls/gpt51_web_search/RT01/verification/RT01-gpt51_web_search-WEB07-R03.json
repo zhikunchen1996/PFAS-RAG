@@ -1,0 +1,272 @@
+{
+  "call_key": "RT01:gpt51_web_search:verify:RT01-gpt51_web_search-WEB07-R03",
+  "created_at": "2026-08-05T03:53:16.570646+00:00",
+  "raw_response_text": "{\"task_id\":\"RT01\",\"record_id\":\"RT01-gpt51_web_search-WEB07-R03\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"citation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Citation details (authors, title, journal, year) match the provided source metadata.\"},{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The DOI/URL exactly matches the source metadata (10.1038/s41598-026-41388-4).\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source describes adsorption of PFOS and PFBS in a fixed-bed configuration and regeneration with losses in adsorption performance (WEB07-E01, WEB07-E03). This clearly refers to removal by adsorption, not transformation or destruction, so endpoint_type='removal' is appropriate.\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The term 'adsorption performance over regeneration cycles' accurately reflects the source statement that regeneration tests over five sorption\u2013desorption cycles showed modest losses in capacity (WEB07-E03).\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The interpretation that performance decreases over cycles indicate some capacity loss but continued adsorption-based removal is a reasonable and conservative inference from the reported modest losses in capacity over five cycles (WEB07-E03). It does not introduce conflicting claims about degradation.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB07-E03 states that regeneration tests were conducted over five sorption\u2013desorption cycles. Inferring that this limits assessment to those cycles and not beyond five is a valid design-inferred limitation.\"},{\"field_path\":\"limitations[1].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB07-E01 and WEB07-E03 show that only PFOS and PFBS were tested, in aqueous solution, using APTES-DE granules. It is a reasonable design-inferred limitation that these findings may not translate to other PFAS, matrices, or adsorbents.\"},{\"field_path\":\"matrix.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB07-E01 describes adsorption of PFOS and PFBS 'from aqueous solution.' The record\u2019s mention of 'aqueous solution' is supported, but the qualifier 'synthetic water' is not explicitly stated in the cited locators (WEB07-E01, WEB07-E03); that detail comes only from uncited source_limitations text. Thus the core is supported but the 'synthetic' qualifier is not.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB07-E01 states tests were done in a fixed-bed configuration, and WEB07-E03 mentions five sorption\u2013desorption cycles. Together they support 'fixed-bed configuration with repeated sorption\u2013desorption cycles' as the reactor configuration description.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The field describes a configuration, not a numeric quantity, so leaving unit as null is appropriate and consistent with the qualitative nature of the information.\"},{\"field_path\":\"operating_conditions[0].qualifiers\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB07-E03 explicitly states regeneration tests were conducted over five sorption\u2013desorption cycles, matching the qualifier text.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB07-E01 directly identifies PFOS (perfluorooctane sulfonate) as one of the target PFAS.\"},{\"field_path\":\"pfas_scope[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB07-E01 directly identifies PFBS (perfluorobutane sulfonic acid) as one of the target PFAS.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB07-E03 states that adsorption performance decreased by roughly 4.6% for PFOS after the fifth cycle. The recorded value '~4.6' with value_form 'approximate_numeric' accurately reflects this.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB07-E03 reports the decrease in adsorption performance in percent; using '%' as the unit is correct.\"},{\"field_path\":\"quantitative_findings[0].qualifiers\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The qualifier text that the decrease is relative to the initial cycle and occurs after the fifth sorption\u2013desorption cycle is consistent with WEB07-E03, which notes performance decrease after the fifth cycle.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB07-E03 states that adsorption performance decreased by roughly 3.6% for PFBS after the fifth cycle. The recorded value '~3.6' with value_form 'approximate_numeric' matches this.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB07-E03 reports the PFBS performance decrease in percent; '%' as the unit is correct.\"},{\"field_path\":\"quantitative_findings[1].qualifiers\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The qualifier that the loss is relative to the initial cycle and measured after the fifth sorption\u2013desorption cycle is consistent with WEB07-E03.\"},{\"field_path\":\"residuals_byproducts[0].statement\",\"status\":\"unsupported\",\"error_type\":\"other\",\"reason\":\"Neither WEB07-E01 nor WEB07-E03 mentions PFAS transformation byproducts or inorganic fluoride release. The statement infers absence of byproducts from lack of reporting, which is not strictly supported by the cited passages and does not necessarily follow from the design description alone.\"},{\"field_path\":\"study_scale.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB07-E01 indicates a fixed-bed configuration using aqueous PFAS solutions, which supports a bench-scale interpretation, but the word 'column' is not present in the cited text. Thus 'bench-scale fixed-bed adsorption with aqueous PFAS solutions' is supported, while the specific 'column' descriptor is not directly evidenced by WEB07-E01 or WEB07-E03.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB07-E01 shows diatomaceous earth granules functionalized with APTES (APTES-DE) tested in fixed-bed configuration; WEB07-E03 shows five sorption\u2013desorption cycles. Together they support 'APTES-functionalized diatomite granules operated in fixed-bed configuration and subjected to five adsorption\u2013desorption regeneration cycles.'\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record labels comparability as 'descriptive_only' because regeneration results are expressed as relative losses without detailed operating conditions. Given that the cited text only reports percent decrease over five cycles (WEB07-E03) and lacks flow rates, influent concentrations, and other details, this is a reasonable and conservative comparability judgment.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The explanation that missing influent concentrations, loading rates, and detailed regeneration conditions limit direct quantitative comparison is consistent with the nature of the data in WEB07-E01 and WEB07-E03, which provide only qualitative configuration and relative performance over cycles.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014source identity, matrix as aqueous solution, PFOS and PFBS as target PFAS, APTES-functionalized diatomite fixed-bed treatment, removal endpoint, and quantitative decreases in adsorption performance over five regeneration cycles\u2014are well supported. Some qualifiers (synthetic water, column terminology) and the residuals/byproducts inference are unsupported or only partially supported, but these do not compromise use of the main adsorption-regeneration findings in synthesis.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused, data-grounded review explaining how an engineer should select an adsorption medium for a specified PFAS profile and water matrix.\",\"task_id\":\"RT01\",\"title\":\"Selecting an adsorption medium for a defined PFAS water-treatment application\"}\n\nTask-specific extraction objective:\nExtract adsorbent identity and properties, PFAS identity, water matrix, influent concentration, pH, co-constituents, dose or bed conditions, adsorption endpoint, quantitative result, and reported mechanism.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Bano A, Prasad B, Dave H, Prasad KS. Efficient adsorption of perfluorooctane sulfonate and perfluorobutane sulfonic acid from aqueous solution onto amine-functionalized diatomite granules. Sci Rep. 2026;16:10368.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB07-E01\",\n      \"WEB07-E03\"\n    ],\n    \"reason\": \"The regeneration results describe relative losses in adsorption performance over cycles without specifying influent concentrations, loading rates, or detailed regeneration conditions, limiting direct quantitative comparison with other regeneration studies.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1038/s41598-026-41388-4\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"WEB07-E01\",\n        \"WEB07-E03\"\n      ],\n      \"interpretation\": \"Adsorption-based removal of PFOS and PFBS from aqueous solution on APTES-DE granules was evaluated over multiple sorption\\u2013desorption cycles. The modest decrease in removal performance over five cycles reflects loss of adsorption capacity or incomplete regeneration, but still indicates primarily reversible adsorption rather than degradation or destruction.\",\n      \"reported_term\": \"adsorption performance over regeneration cycles\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB07-E03\"\n      ],\n      \"statement\": \"Regeneration and durability assessment was limited to five adsorption\\u2013desorption cycles; longer-term stability and performance loss beyond five cycles were not evaluated in the provided material.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB07-E01\",\n        \"WEB07-E03\"\n      ],\n      \"statement\": \"Regeneration behavior was assessed only for PFOS and PFBS in synthetic aqueous solutions with a single amine-functionalized diatomite adsorbent; results may not translate directly to other PFAS, matrices, or adsorbents.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB07-E01\",\n      \"WEB07-E03\"\n    ],\n    \"value\": \"Aqueous solution (synthetic water) containing PFOS or PFBS during repeated adsorption\\u2013desorption cycles\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB07-E01\",\n        \"WEB07-E03\"\n      ],\n      \"name\": \"reactor_configuration\",\n      \"qualifiers\": \"Five sorption\\u2013desorption cycles were performed for regeneration testing.\",\n      \"unit\": null,\n      \"value\": \"fixed-bed configuration with repeated sorption\\u2013desorption cycles\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB07-E01\",\n        \"WEB07-E03\"\n      ],\n      \"value\": \"Perfluorooctane sulfonate (PFOS)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB07-E01\",\n        \"WEB07-E03\"\n      ],\n      \"value\": \"Perfluorobutane sulfonic acid (PFBS)\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB07-E03\"\n      ],\n      \"name\": \"Decrease in PFOS adsorption performance after fifth regeneration cycle\",\n      \"qualifiers\": \"Adsorption performance decreased by roughly 4.6% for PFOS after the fifth sorption\\u2013desorption cycle relative to the initial cycle.\",\n      \"unit\": \"%\",\n      \"value\": \"~4.6\",\n      \"value_form\": \"approximate_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB07-E03\"\n      ],\n      \"name\": \"Decrease in PFBS adsorption performance after fifth regeneration cycle\",\n      \"qualifiers\": \"Adsorption performance decreased by roughly 3.6% for PFBS after the fifth sorption\\u2013desorption cycle relative to the initial cycle.\",\n      \"unit\": \"%\",\n      \"value\": \"~3.6\",\n      \"value_form\": \"approximate_numeric\"\n    }\n  ],\n  \"record_id\": \"RT01-gpt51_web_search-WEB07-R03\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB07-E01\",\n        \"WEB07-E03\"\n      ],\n      \"statement\": \"The provided material does not report formation of PFAS transformation byproducts or inorganic fluoride release during adsorption or regeneration, consistent with adsorption-driven removal rather than chemical degradation.\"\n    }\n  ],\n  \"source_id\": \"WEB07\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB07-E01\",\n      \"WEB07-E03\"\n    ],\n    \"value\": \"Bench-scale fixed-bed column adsorption with repeated sorption\\u2013desorption regeneration cycles using aqueous PFAS solutions\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB07-E01\",\n      \"WEB07-E03\"\n    ],\n    \"value\": \"APTES-functionalized diatomite granules operated in fixed-bed configuration and subjected to five adsorption\\u2013desorption regeneration cycles\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"full_text\",\n  \"capture_source_id\": \"WEB17\",\n  \"citation\": \"Bano A, Prasad B, Dave H, Prasad KS. Efficient adsorption of perfluorooctane sulfonate and perfluorobutane sulfonic acid from aqueous solution onto amine-functionalized diatomite granules. Scientific Reports. 2026;16:10368.\",\n  \"covered_component_ids\": [\n    \"RT01-C1\",\n    \"RT01-C2\",\n    \"RT01-C3\"\n  ],\n  \"doi\": \"10.1038/s41598-026-41388-4\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1038/s41598-026-41388-4\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB07-E01\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Introduction/Methods \\u2013 Adsorbent and target PFAS (HTML p.1\\u20132, lines 42\\u201345, 80\\u201383)\",\n      \"text\": \"Granules of diatomaceous earth functionalized with (3-aminopropyl)triethoxysilane (APTES-DE) were synthesized and tested in fixed-bed configuration for adsorption of PFOS (long-chain PFSA) and PFBS (short-chain PFSA) from aqueous solution.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB07-E02\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract/Results summary (HTML p.1\\u20132, lines 42\\u201343)\",\n      \"text\": \"Maximum removal efficiencies reached about 92.4% for PFOS and 89.9% for PFBS under optimized conditions, with Freundlich isotherms providing the best fit and indicating multilayer adsorption on heterogeneous surfaces.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB07-E03\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract/Results summary (HTML p.1\\u20132, lines 42\\u201343)\",\n      \"text\": \"Regeneration tests over five sorption\\u2013desorption cycles showed only modest losses in capacity, with adsorption performance decreasing by roughly 4.6% for PFOS and 3.6% for PFBS after the fifth cycle.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB07-E04\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Introduction/Discussion \\u2013 Mechanism (HTML p.2, lines 78\\u201382)\",\n      \"text\": \"The authors attribute high performance of APTES-DE to positively charged amine groups providing strong electrostatic interactions with anionic PFAS, supplemented by hydrophobic interactions for longer-chain PFOS.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://www.nature.com/articles/s41598-026-41388-4\",\n  \"source_id\": \"WEB07\",\n  \"source_limitations\": [\n    \"Full numerical isotherm parameters, flow rates, and influent PFAS concentrations are not fully captured here.\",\n    \"Study uses synthetic solutions; effects of NOM, competing inorganic ions, and complex wastewaters are only discussed qualitatively.\",\n    \"Focus is limited to two PFSAs (PFOS, PFBS); PFCAs and precursors are not tested.\"\n  ],\n  \"title\": \"Efficient adsorption of perfluorooctane sulfonate and perfluorobutane sulfonic acid from aqueous solution onto amine-functionalized diatomite granules\",\n  \"year\": \"2026\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "f6849baca8bf73ae0f31521950f234746d414f86481829896156e40927a5d37c",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.0273205,
+    "finish_reason": "stop",
+    "input_tokens": 3250,
+    "latency_seconds": 15.52044195891358,
+    "output_tokens": 2441,
+    "reasoning_tokens": 715,
+    "response_id": "chatcmpl-E9MybiOU92dwwXPB9HajI5oSyd2sR",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 5691,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "citation",
+        "reason": "Citation details (authors, title, journal, year) match the provided source metadata.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The DOI/URL exactly matches the source metadata (10.1038/s41598-026-41388-4).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The source describes adsorption of PFOS and PFBS in a fixed-bed configuration and regeneration with losses in adsorption performance (WEB07-E01, WEB07-E03). This clearly refers to removal by adsorption, not transformation or destruction, so endpoint_type='removal' is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "The term 'adsorption performance over regeneration cycles' accurately reflects the source statement that regeneration tests over five sorption\u2013desorption cycles showed modest losses in capacity (WEB07-E03).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "The interpretation that performance decreases over cycles indicate some capacity loss but continued adsorption-based removal is a reasonable and conservative inference from the reported modest losses in capacity over five cycles (WEB07-E03). It does not introduce conflicting claims about degradation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].statement",
+        "reason": "WEB07-E03 states that regeneration tests were conducted over five sorption\u2013desorption cycles. Inferring that this limits assessment to those cycles and not beyond five is a valid design-inferred limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1].statement",
+        "reason": "WEB07-E01 and WEB07-E03 show that only PFOS and PFBS were tested, in aqueous solution, using APTES-DE granules. It is a reasonable design-inferred limitation that these findings may not translate to other PFAS, matrices, or adsorbents.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "matrix.value",
+        "reason": "WEB07-E01 describes adsorption of PFOS and PFBS 'from aqueous solution.' The record\u2019s mention of 'aqueous solution' is supported, but the qualifier 'synthetic water' is not explicitly stated in the cited locators (WEB07-E01, WEB07-E03); that detail comes only from uncited source_limitations text. Thus the core is supported but the 'synthetic' qualifier is not.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "WEB07-E01 states tests were done in a fixed-bed configuration, and WEB07-E03 mentions five sorption\u2013desorption cycles. Together they support 'fixed-bed configuration with repeated sorption\u2013desorption cycles' as the reactor configuration description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The field describes a configuration, not a numeric quantity, so leaving unit as null is appropriate and consistent with the qualitative nature of the information.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].qualifiers",
+        "reason": "WEB07-E03 explicitly states regeneration tests were conducted over five sorption\u2013desorption cycles, matching the qualifier text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "WEB07-E01 directly identifies PFOS (perfluorooctane sulfonate) as one of the target PFAS.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1].value",
+        "reason": "WEB07-E01 directly identifies PFBS (perfluorobutane sulfonic acid) as one of the target PFAS.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "WEB07-E03 states that adsorption performance decreased by roughly 4.6% for PFOS after the fifth cycle. The recorded value '~4.6' with value_form 'approximate_numeric' accurately reflects this.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "WEB07-E03 reports the decrease in adsorption performance in percent; using '%' as the unit is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].qualifiers",
+        "reason": "The qualifier text that the decrease is relative to the initial cycle and occurs after the fifth sorption\u2013desorption cycle is consistent with WEB07-E03, which notes performance decrease after the fifth cycle.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "WEB07-E03 states that adsorption performance decreased by roughly 3.6% for PFBS after the fifth cycle. The recorded value '~3.6' with value_form 'approximate_numeric' matches this.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "WEB07-E03 reports the PFBS performance decrease in percent; '%' as the unit is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].qualifiers",
+        "reason": "The qualifier that the loss is relative to the initial cycle and measured after the fifth sorption\u2013desorption cycle is consistent with WEB07-E03.",
+        "status": "supported"
+      },
+      {
+        "error_type": "other",
+        "field_path": "residuals_byproducts[0].statement",
+        "reason": "Neither WEB07-E01 nor WEB07-E03 mentions PFAS transformation byproducts or inorganic fluoride release. The statement infers absence of byproducts from lack of reporting, which is not strictly supported by the cited passages and does not necessarily follow from the design description alone.",
+        "status": "unsupported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "study_scale.value",
+        "reason": "WEB07-E01 indicates a fixed-bed configuration using aqueous PFAS solutions, which supports a bench-scale interpretation, but the word 'column' is not present in the cited text. Thus 'bench-scale fixed-bed adsorption with aqueous PFAS solutions' is supported, while the specific 'column' descriptor is not directly evidenced by WEB07-E01 or WEB07-E03.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "WEB07-E01 shows diatomaceous earth granules functionalized with APTES (APTES-DE) tested in fixed-bed configuration; WEB07-E03 shows five sorption\u2013desorption cycles. Together they support 'APTES-functionalized diatomite granules operated in fixed-bed configuration and subjected to five adsorption\u2013desorption regeneration cycles.'",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The record labels comparability as 'descriptive_only' because regeneration results are expressed as relative losses without detailed operating conditions. Given that the cited text only reports percent decrease over five cycles (WEB07-E03) and lacks flow rates, influent concentrations, and other details, this is a reasonable and conservative comparability judgment.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The explanation that missing influent concentrations, loading rates, and detailed regeneration conditions limit direct quantitative comparison is consistent with the nature of the data in WEB07-E01 and WEB07-E03, which provide only qualitative configuration and relative performance over cycles.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT01-gpt51_web_search-WEB07-R03",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014source identity, matrix as aqueous solution, PFOS and PFBS as target PFAS, APTES-functionalized diatomite fixed-bed treatment, removal endpoint, and quantitative decreases in adsorption performance over five regeneration cycles\u2014are well supported. Some qualifiers (synthetic water, column terminology) and the residuals/byproducts inference are unsupported or only partially supported, but these do not compromise use of the main adsorption-regeneration findings in synthesis.",
+    "task_id": "RT01"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

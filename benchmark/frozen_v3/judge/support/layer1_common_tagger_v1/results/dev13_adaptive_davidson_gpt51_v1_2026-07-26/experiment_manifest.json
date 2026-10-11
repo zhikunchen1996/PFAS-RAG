@@ -1,0 +1,63 @@
+{
+  "status": "completed_dev13_adaptive_davidson_pairwise_v1",
+  "scope": "Dev13 only; no Test40 execution",
+  "systems": [
+    "hybrid",
+    "bge",
+    "bge_llm"
+  ],
+  "judge_model": "gpt-5.1",
+  "temperature": 0,
+  "initial_mirrored_calls_per_pair_question": 2,
+  "discordant_mirrors_receive_second_mirrored_pair": true,
+  "question_pair_units": 39,
+  "judge_call_count": 96,
+  "initial_mirror_agreement_rate": 0.7692307692307693,
+  "units_requiring_second_mirrored_pair": 9,
+  "final_tie_count": 5,
+  "position_diagnostic": {
+    "answer_A_selected": 35,
+    "answer_B_selected": 44,
+    "tie_selected": 17,
+    "answer_A_share_among_decisive": 0.4430379746835443,
+    "two_sided_binomial_p_against_0_5": 0.3681876338306311
+  },
+  "davidson_fit": {
+    "theta": {
+      "hybrid": -1.3014792795533692,
+      "bge": 0.23739438417373193,
+      "bge_llm": 1.0640848953796376
+    },
+    "normalized_ability": {
+      "hybrid": 6.131439067045739,
+      "bge": 28.56845520368771,
+      "bge_llm": 65.30010572926656
+    },
+    "tie_parameter_nu": 0.1976685137171188,
+    "objective": 30.301952965037902,
+    "optimizer_success": true
+  },
+  "bootstrap": {
+    "cluster": "question_id",
+    "repetitions": 2000,
+    "seed": 20260726,
+    "interval": "95% percentile"
+  },
+  "tokens": {
+    "prompt": 1140544,
+    "completion": 38572,
+    "total": 1179116,
+    "estimated_usd": 1.8114
+  },
+  "latency": {
+    "judge_request_seconds_sum": 542.273792337015,
+    "judge_request_seconds_mean": 5.648685336843907,
+    "judge_stage_wall_clock_seconds": 94.4339530839934
+  },
+  "inputs": {
+    "benchmark/frozen_v3/input/questions_dev13.csv": "d1506d0dfd6c342ee11273ba6e1e9a542a55b3dddd1fdfe2aa0261c35c209a91",
+    "benchmark/frozen_v3/gold/chunk_based_gold.jsonl": "7e2b27cbbf18fc6b91a07d06035051df2d2a15fd8485525d0f323b88c8a00f72",
+    "benchmark/experiments/layer1_common_tagger_v1/prompts/adaptive_pairwise_davidson_judge_v1.txt": "9cc6a1f2ffd98b70239345a7f6c0113f168722a2779ebb03cfd4c23b37d6b8eb",
+    "benchmark/experiments/layer1_common_tagger_v1/results/dev13_common_tagger_gpt51_2026-07-26/experiment_manifest.json": "3e3a8427d1dfeb17e6ae39bf93c51f6525026f91cf90a206543a2970a73a12db"
+  }
+}

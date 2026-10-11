@@ -1,0 +1,1669 @@
+{
+  "deterministic_field_normalizations": [],
+  "deterministic_field_rejections": [
+    {
+      "field_path": "quantitative_findings[0]",
+      "finding": {
+        "evidence_locator_ids": [
+          "WEB04-E04"
+        ],
+        "name": "Initial PFAS concentration range (high) in synthetic groundwater",
+        "qualifiers": "Table S2 includes experimental sets with PFBA, PFBS, PFOA, and PFOS each present at approximately 40,000\u201350,000 ng/L to study concentration effects.",
+        "unit": "ng/L",
+        "value": "~40000-50000",
+        "value_form": "range"
+      },
+      "reason": "invalid_value_for_declared_value_form",
+      "record_id": "RT06-gpt51_web_search-WEB04-R01"
+    },
+    {
+      "field_path": "quantitative_findings[1]",
+      "finding": {
+        "evidence_locator_ids": [
+          "WEB04-E04"
+        ],
+        "name": "Initial PFAS concentration range (low) in synthetic groundwater",
+        "qualifiers": "Other experimental sets in Table S2 include lower initial PFAS concentrations down to a few hundred ng/L.",
+        "unit": "ng/L",
+        "value": "~100-999",
+        "value_form": "range"
+      },
+      "reason": "invalid_value_for_declared_value_form",
+      "record_id": "RT06-gpt51_web_search-WEB04-R01"
+    },
+    {
+      "field_path": "quantitative_findings[0]",
+      "finding": {
+        "evidence_locator_ids": [
+          "WEB04-E05"
+        ],
+        "name": "PFOS and PFHxS concentration level in AFB and MI groundwater",
+        "qualifiers": "Table S3 indicates PFOS and PFHxS are in the low \u00b5g/L range in AFB and MI groundwater; exact values are not given in the excerpt.",
+        "unit": "ug/L",
+        "value": "~1-9",
+        "value_form": "range"
+      },
+      "reason": "invalid_value_for_declared_value_form",
+      "record_id": "RT06-gpt51_web_search-WEB04-R02"
+    },
+    {
+      "field_path": "quantitative_findings[1]",
+      "finding": {
+        "evidence_locator_ids": [
+          "WEB04-E05"
+        ],
+        "name": "Short-chain PFAA concentrations in AFB and MI groundwater",
+        "qualifiers": "Table S3 notes that short-chain PFAAs (e.g., PFBA, PFPeA, PFHxA) are present in the hundreds of ng/L.",
+        "unit": "ng/L",
+        "value": "~100-999",
+        "value_form": "range"
+      },
+      "reason": "invalid_value_for_declared_value_form",
+      "record_id": "RT06-gpt51_web_search-WEB04-R02"
+    }
+  ],
+  "deterministic_preverification_rejections": [],
+  "records": [
+    {
+      "citation": "Burns DJ, Stevenson P, Murphy PJC. PFAS removal from groundwaters using Surface-Active Foam Fractionation. Remediation. 2021;1\u201315.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E02",
+          "WEB01-E03",
+          "WEB01-E04",
+          "WEB01-E05",
+          "WEB01-E06"
+        ],
+        "reason": "The record reports aggregate PFAS removal in a specific full-scale SAFF field deployment without sufficient detail on reactor geometry, gas flow, bubble size, residence time, foamate volume, or mass balance to support direct quantitative comparison of operating-condition effects across studies. It remains useful qualitatively for understanding the role of adsorption coefficient and water hardness on SAFF performance.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1002/rem.21694",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "interpretation": "Overall removal of aggregate PFOS+PFHxS+PFOA from groundwater across the SAFF-based treatment system, primarily via separation and concentration into foamate",
+          "reported_term": "PFAS removal (aggregate)"
+        },
+        {
+          "endpoint_type": "separation",
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E05"
+          ],
+          "interpretation": "SAFF removes PFAS from bulk groundwater by adsorption at gas\u2013liquid interface and transfer into a foamate phase enriched in PFAS; residual treated water is depleted",
+          "reported_term": "Separation and concentration by SAFF"
+        },
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB01-E03"
+          ],
+          "interpretation": "Extent of PFAS separation by SAFF is closely correlated with PFAS adsorption coefficient at the gas\u2013liquid interface; species with adsorption coefficient > ~1.0\u00d710^-6 m were practically completely removed",
+          "reported_term": "Correlation of PFAS removal with adsorption coefficient at gas\u2013liquid interface"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E02",
+            "WEB01-E04"
+          ],
+          "statement": "Study is a single-site field trial in hard groundwater with relatively low initial PFOS, PFHxS, and PFOA concentrations; behavior for other matrices, PFAS species, and operating regimes may differ."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB01-E03",
+            "WEB01-E05",
+            "WEB01-E06"
+          ],
+          "statement": "Data provided emphasize aggregate PFAS removal and correlation with adsorption coefficient, with limited quantitative reporting of gas flow rate, bubble size distribution, foamate volume, residence time, or detailed mass balance."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB01-E02",
+          "WEB01-E04"
+        ],
+        "value": "PFAS-contaminated groundwater classified as hard (dissolved electrolytes present)"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E05"
+          ],
+          "name": "Gas type",
+          "qualifiers": "Generic process description; specific gas for this plant not explicitly named but inferred as air in context of foam fractionation description",
+          "unit": null,
+          "value": "Air (typical gas in foam fractionation; the process description notes gas is typically air)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E06"
+          ],
+          "name": "Gas flow considerations",
+          "qualifiers": "Qualitative statement on importance of gas flow and bubble size; no numeric values reported",
+          "unit": null,
+          "value": "Gas flow rate and bubble size dictate hydrodynamic condition of the foam"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E06"
+          ],
+          "name": "Bubble production method",
+          "qualifiers": "General design information; specific device or bubble size distribution not reported for this trial",
+          "unit": null,
+          "value": "Method of bubble production is a key design variable in practical commercial foam fractionation implementation"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E06"
+          ],
+          "name": "Foamate management",
+          "qualifiers": "No quantitative foamate volume or handling details reported in the provided text",
+          "unit": null,
+          "value": "Foamate management identified as an important aspect of practical implementation"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E04"
+          ],
+          "name": "Water hardness / electrolytes",
+          "qualifiers": "Implication that higher ionic strength (brackish, saline, RO reject) may further improve SAFF performance",
+          "unit": null,
+          "value": "Groundwater described as hard with dissolved electrolytes, believed to enhance PFAS adsorption coefficients"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E02"
+          ],
+          "name": "Process configuration",
+          "qualifiers": "SAFF provides bulk PFAS removal; AIX used as polishing step",
+          "unit": null,
+          "value": "Lead SAFF separation and concentration step, followed by AIX polishing to meet water quality criteria"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E02"
+          ],
+          "value": "Perfluorooctane sulfonate (PFOS) (part of aggregate PFOS+PFHxS in feed)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E02"
+          ],
+          "value": "Perfluorohexane sulfonate (PFHxS) (part of aggregate PFOS+PFHxS in feed)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E02"
+          ],
+          "value": "Perfluorooctanoic acid (PFOA)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E03"
+          ],
+          "value": "Longer-chain PFAS species with reported adsorption coefficient >1.0 \u00d7 10^-6 m (not individually specified)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E03"
+          ],
+          "value": "Shorter-chain PFAS species with lower adsorption coefficient values (not individually specified)"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "name": "Aggregate PFOS+PFHxS+PFOA removal by SAFF-based system",
+          "qualifiers": "\"Effective in removing >=99.5% of the aggregate of PFOS, PFHxS, and PFOA\" in PFAS-contaminated groundwater over a 12-month field trial; primary removal attributed to SAFF separation and concentration",
+          "unit": "%",
+          "value": ">=99.5",
+          "value_form": "inequality"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E02"
+          ],
+          "name": "PFOS+PFHxS aggregate feed concentration",
+          "qualifiers": "Average aggregate concentration of PFOS and PFHxS in groundwater feed to the SAFF process",
+          "unit": "ug/L",
+          "value": "3.81",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E02"
+          ],
+          "name": "PFOA feed concentration",
+          "qualifiers": "Average concentration of PFOA in groundwater feed to the SAFF process",
+          "unit": "ug/L",
+          "value": "0.48",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E03"
+          ],
+          "name": "Adsorption coefficient threshold for practical SAFF removal",
+          "qualifiers": "When reported PFAS adsorption coefficient at gas\u2013liquid interface is greater than approximately 1.0\u00d710^-6 m, practically all of the PFAS species were removed by SAFF",
+          "unit": "m",
+          "value": "1.0e-6",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "name": "Regulatory performance margin",
+          "qualifiers": "Treated water consistently achieved Australian PFAS National Environmental Management Plan water quality criteria for PFOS, PFHxS and PFOA and exceeded such criteria by a factor of 3.3 over the 12-month study period",
+          "unit": null,
+          "value": "3.3",
+          "value_form": "exact_numeric"
+        }
+      ],
+      "record_id": "RT06-gpt51_web_search-WEB01-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "statement": "Residual treated water after SAFF (and AIX polishing) consistently met and exceeded regulatory criteria for PFOS, PFHxS, and PFOA; specific concentrations in residual water and foamate are not given in the provided text."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB01-E05"
+          ],
+          "statement": "Foamate is described as enriched in amphiphiles (including PFAS) relative to bulk solution, but no quantitative enrichment factor or mass balance closure is reported in the provided excerpts."
+        }
+      ],
+      "source_id": "WEB01",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E02"
+        ],
+        "value": "Full-scale or near-full-scale field trial of SAFF-based groundwater treatment plant at Army Aviation Centre Oakey (AACO), Australia"
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E02",
+          "WEB01-E05",
+          "WEB01-E06"
+        ],
+        "value": "Surface-Active Foam Fractionation (SAFF) as lead process followed by anion exchange (AIX) resin polishing in a groundwater treatment plant"
+      }
+    },
+    {
+      "citation": "Smith SJ, Wiberg K, McCleaf P, Ahrens L. Pilot-Scale Continuous Foam Fractionation for the Removal of Per- and Polyfluoroalkyl Substances (PFAS) from Landfill Leachate. ACS ES&T Water. 2022;2:841\u2013851.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB02-E01",
+          "WEB02-E02",
+          "WEB02-E04"
+        ],
+        "reason": "The available text confirms pilot-scale continuous foam fractionation on landfill leachate with variable air flow, contact time, and foam fraction, but does not provide specific numerical operating conditions (e.g., gas rate, residence time, foamate:feed ratio) or compound-resolved removal values needed to make conditions-normalized comparisons with other studies.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1021/acsestwater.2c00032",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB02-E02",
+            "WEB02-E04"
+          ],
+          "interpretation": "PFAS removal from landfill leachate was evaluated for multiple PFAS classes under different operating conditions (air flow rate, contact time, foam fraction). The study assessed how these parameters influenced removal, but specific numerical removals are not available in the present text packet.",
+          "reported_term": "PFAS removal efficiency"
+        },
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "interpretation": "Mass balance closure for PFAS across the continuous foam fractionation system was evaluated by comparing total PFAS mass in influent and combined effluent streams, indicating generally acceptable mass closure with some variability.",
+          "reported_term": "PFAS mass balance closure"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "statement": "Mass balance closure for continuous foam fractionation varied between roughly two-thirds and complete closure, suggesting uncertainties due to PFAS accumulation within the foam column and/or aerosol losses."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB02-E02",
+            "WEB02-E04"
+          ],
+          "statement": "Evidence is based on pilot-scale operation at a single landfill leachate site, limiting direct generalization to other aqueous matrices with different organic matter and co-surfactant characteristics."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB02-E02",
+          "WEB02-E04"
+        ],
+        "value": "Real landfill leachate (complex, saline matrix) treated on-site to avoid PFAS speciation changes during transport."
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E01",
+            "WEB02-E02"
+          ],
+          "name": "Reactor operation mode",
+          "qualifiers": "",
+          "unit": null,
+          "value": "Continuous foam fractionation with separate bottom and foamate outlets."
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E02"
+          ],
+          "name": "Gas phase",
+          "qualifiers": "Air flow rate systematically varied as an operating parameter.",
+          "unit": null,
+          "value": "Air sparging to generate foam within the column."
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E02"
+          ],
+          "name": "Contact time",
+          "qualifiers": "Liquid\u2013gas contact time (hydraulic residence time) systematically varied as an operating parameter.",
+          "unit": null,
+          "value": "Varied"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E02"
+          ],
+          "name": "Foam fraction",
+          "qualifiers": "Foam fraction (ratio of foamate to feed) systematically varied as an operating parameter.",
+          "unit": null,
+          "value": "Varied"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E02",
+            "WEB02-E04"
+          ],
+          "value": "Multiple PFAS classes including perfluoroalkyl carboxylic acids (PFCAs)."
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E02",
+            "WEB02-E04"
+          ],
+          "value": "Multiple PFAS classes including perfluoroalkyl sulfonates (PFSAs)."
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "name": "PFAS mass balance closure (continuous runs)",
+          "qualifiers": "Approximate range in PFAS mass balance closure for continuous foam fractionation experiments; reported as about two-thirds to near complete closure depending on experiment.",
+          "unit": "%",
+          "value": "66-104",
+          "value_form": "range"
+        }
+      ],
+      "record_id": "RT06-gpt51_web_search-WEB02-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "statement": "Incomplete mass balance closure indicates PFAS accumulation within the foam column and potential PFAS losses via aerosols leaving the system."
+        }
+      ],
+      "source_id": "WEB02",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB02-E01",
+          "WEB02-E02",
+          "WEB02-E04"
+        ],
+        "value": "Pilot-scale continuous foam fractionation system operated on-site at a landfill leachate treatment facility."
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB02-E01",
+          "WEB02-E02",
+          "WEB02-E04"
+        ],
+        "value": "Pilot-scale continuous foam fractionation in a vertical foam column treating landfill leachate."
+      }
+    },
+    {
+      "citation": "Smith SJ, Wiberg K, McCleaf P, Ahrens L. Pilot-Scale Continuous Foam Fractionation for the Removal of Per- and Polyfluoroalkyl Substances (PFAS) from Landfill Leachate. ACS ES&T Water. 2022;2:841\u2013851.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB02-E03"
+        ],
+        "reason": "Only mass-balance closure is quantitatively reported for the batch test in the available text, without specific operating conditions or compound-resolved removals, limiting comparison with continuous runs and other studies.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1021/acsestwater.2c00032",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "interpretation": "PFAS removal from landfill leachate was evaluated under batch operation of the foam column; detailed removal percentages and their dependence on operating conditions are not available in the present text packet.",
+          "reported_term": "PFAS removal in batch foam fractionation"
+        },
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "interpretation": "Mass balance closure for PFAS during the batch experiment was evaluated using top and bottom effluent samples; the mass balance closed only to about half, indicating considerable PFAS retention in the column or losses from the sampled streams.",
+          "reported_term": "PFAS mass balance closure (batch)"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "statement": "Poor PFAS mass balance closure (approximately 50%) in the batch experiment indicates limitations due to PFAS accumulation in the foam column and/or aerosol losses, complicating quantitative interpretation of batch removal performance."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB02-E03"
+        ],
+        "value": "Landfill leachate from the same site as the continuous pilot runs."
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "name": "Reactor operation mode",
+          "qualifiers": "",
+          "unit": null,
+          "value": "Batch foam fractionation using the same pilot column equipment that was also used for continuous tests."
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E03",
+            "WEB02-E04"
+          ],
+          "value": "PFAS measured as in continuous runs (perfluoroalkyl carboxylic acids and sulfonates)."
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "name": "PFAS mass balance closure (batch run)",
+          "qualifiers": "Mass balance closed only to about half when considering either bottom or top effluent samples.",
+          "unit": "%",
+          "value": "~50",
+          "value_form": "approximate_numeric"
+        }
+      ],
+      "record_id": "RT06-gpt51_web_search-WEB02-R02",
+      "residuals_byproducts": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "statement": "PFAS accumulation within the foam column and possible aerosol losses were inferred from the incomplete mass balance in the batch experiment."
+        }
+      ],
+      "source_id": "WEB02",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB02-E03"
+        ],
+        "value": "Associated batch foam fractionation experiment conducted with the pilot foam column system to compare with continuous operation."
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB02-E03"
+        ],
+        "value": "Batch-mode foam fractionation using the pilot-scale foam column configuration."
+      }
+    },
+    {
+      "citation": "Smith SJ, Lewis JF, Wiberg K, Ahrens L. Foam fractionation for removal of per- and polyfluoroalkyl substances: Towards closing the mass balance. Sci Total Environ. 2023;871:162080.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB03-E01",
+          "WEB03-E02",
+          "WEB03-E03",
+          "WEB03-E04"
+        ],
+        "reason": "The study qualitatively reports high removal of many long-chain PFAS and discusses PFAS distribution and mass balance across influent, foamate, effluent, and upper water layers in a pilot-scale industrial water system, but the available text does not provide specific operating conditions (e.g., gas flow rate, bubble size, residence time, recycle) or quantitative removal/enrichment values necessary to align it on a common performance denominator with other studies.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1016/j.scitotenv.2023.162080",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB03-E02",
+            "WEB03-E03"
+          ],
+          "interpretation": "Removal of dissolved PFAS from the bulk water phase by foam fractionation, evaluated by comparing influent and effluent/intermediate water concentrations; many long-chain PFAS exhibited high removal from the water phase.",
+          "reported_term": "removal efficiencies from the water phase"
+        },
+        {
+          "endpoint_type": "separation",
+          "evidence_locator_ids": [
+            "WEB03-E02",
+            "WEB03-E03"
+          ],
+          "interpretation": "Phase distribution of PFAS among influent, collected foamate, treated effluent, and an upper water layer within the column was quantified to assess how much PFAS was transferred into foam versus retained in internal water layers or effluent.",
+          "reported_term": "PFAS distribution between influent, foamate, effluent, and intermediate water layers"
+        },
+        {
+          "endpoint_type": "total_organofluorine_change",
+          "evidence_locator_ids": [
+            "WEB03-E02",
+            "WEB03-E03",
+            "WEB03-E04"
+          ],
+          "interpretation": "Overall PFAS mass balance was assessed by summing PFAS masses in influent, foamate, effluent, and internal water layers; incomplete closure indicated that some PFAS mass was not accounted for, highlighting potential additional sinks or losses.",
+          "reported_term": "mass balance closure / PFAS inventories in all phases"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB03-E03"
+          ],
+          "statement": "Even when high removal of long-chain PFAS from the water phase was achieved, a portion of PFAS accumulated in the upper water layer of the column rather than being collected in the foamate, and some PFAS mass could not be accounted for in the quantified phases, leading to imperfect mass balance closure."
+        },
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB03-E04"
+          ],
+          "statement": "Common performance indicators such as percentage removal of dissolved PFAS and foamate enrichment may be misleading if the PFAS mass balance is not well closed, so evaluation based solely on influent\u2013effluent comparisons or foamate enrichment is limited."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB03-E02"
+          ],
+          "statement": "Findings are specific to an industrial water matrix and may not directly generalize to other matrices such as low-organic groundwater or municipal wastewater."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB03-E02",
+          "WEB03-E03"
+        ],
+        "value": "PFAS-contaminated industrial water (reported as industrial water; likely complex matrix)"
+      },
+      "operating_conditions": [],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB03-E02",
+            "WEB03-E03"
+          ],
+          "value": "Per- and polyfluoroalkyl substances (PFAS), with focus on many long-chain PFAS"
+        }
+      ],
+      "quantitative_findings": [],
+      "record_id": "RT06-gpt51_web_search-WEB03-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB03-E02",
+            "WEB03-E03"
+          ],
+          "statement": "A fraction of PFAS remained in or accumulated within the upper water layer of the foam fractionation column, and some PFAS remained in the effluent, indicating that not all PFAS were captured in the collected foamate phase."
+        }
+      ],
+      "source_id": "WEB03",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB03-E02"
+        ],
+        "value": "Pilot-scale foam fractionation treating PFAS-contaminated industrial water"
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB03-E02",
+          "WEB03-E03"
+        ],
+        "value": "Foam fractionation in a column system with collection of foamate, effluent, and intermediate/upper water layers"
+      }
+    },
+    {
+      "citation": "Klevan C, Van Allen O, Mukai K, Gomes A, Xia S, Caines S, Woodcock MJ, Pennell KD. Removal of Long- and Short-Chain PFAS from Groundwater by Foam Fractionation. Environ Sci: Water Res Technol. 2025;11:2295\u20132307.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB04-E02",
+          "WEB04-E03",
+          "WEB04-E04"
+        ],
+        "reason": "Bench-scale foam-fractionation column with clearly specified geometry, air flow, and diffuser characteristics treating a defined synthetic groundwater mixture of four PFAS at controlled initial concentrations; endpoints focus on physical removal and enrichment, which are comparable to other foam-fractionation studies under similar operating conditions.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1039/d5ew00440c",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB04-E03",
+            "WEB04-E04"
+          ],
+          "interpretation": "Experiments were designed to evaluate how initial PFAS concentration in synthetic groundwater affects removal and enrichment of both long-chain (PFOA, PFOS) and short-chain (PFBA, PFBS) PFAS, but specific removal percentages are not reported in the provided excerpt.",
+          "reported_term": "PFAS removal from synthetic groundwater by foam fractionation"
+        },
+        {
+          "endpoint_type": "separation",
+          "evidence_locator_ids": [
+            "WEB04-E04"
+          ],
+          "interpretation": "Foam fractionation was used to concentrate PFAS into a foamate stream; enrichment factors and volume reduction are mentioned conceptually but no numeric values are given in the supplied text.",
+          "reported_term": "PFAS enrichment in foamate and volume reduction factor (VRF)"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "statement": "Bench-scale column with a single geometry and gas flow configuration limits generalization to other reactor designs or scales."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB04-E03",
+            "WEB04-E04"
+          ],
+          "statement": "Only four PFAS (two long-chain, two short-chain) in synthetic groundwater were evaluated in this experimental subset, which constrains assessment of broader PFAS mixtures."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB04-E03",
+          "WEB04-E04"
+        ],
+        "value": "Synthetic groundwater containing mixtures of PFBA, PFBS, PFOA, and PFOS"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Column height",
+          "qualifiers": "",
+          "unit": "cm",
+          "value": "60"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Column inner diameter",
+          "qualifiers": "",
+          "unit": "cm",
+          "value": "5"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Solution fill height",
+          "qualifiers": "",
+          "unit": "cm",
+          "value": "55"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Air flow rate",
+          "qualifiers": "",
+          "unit": "L/min",
+          "value": "0.47"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Air pressure",
+          "qualifiers": "",
+          "unit": "kPa",
+          "value": "19.4"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Vacuum pressure",
+          "qualifiers": "",
+          "unit": "kPa",
+          "value": "18.6"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Diffuser pore size",
+          "qualifiers": "Diffusion stone pore size",
+          "unit": "micron",
+          "value": "0.5"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E03",
+            "WEB04-E04"
+          ],
+          "value": "Perfluorobutanoic acid (PFBA)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E03",
+            "WEB04-E04"
+          ],
+          "value": "Perfluorobutanesulfonic acid potassium salt (K-PFBS)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E03",
+            "WEB04-E04"
+          ],
+          "value": "Perfluorooctanoic acid (PFOA)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E03",
+            "WEB04-E04"
+          ],
+          "value": "Perfluorooctanesulfonic acid potassium salt (K-PFOS)"
+        }
+      ],
+      "quantitative_findings": [],
+      "record_id": "RT06-gpt51_web_search-WEB04-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB04-E02",
+            "WEB04-E03",
+            "WEB04-E04"
+          ],
+          "statement": "No PFAS transformation products, inorganic fluoride release, or mineralization data are described in the provided supplementary information excerpt for the synthetic groundwater experiments; the process is used as a physical separation (foam fractionation)."
+        }
+      ],
+      "source_id": "WEB04",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB04-E01",
+          "WEB04-E02",
+          "WEB04-E03",
+          "WEB04-E04"
+        ],
+        "value": "Bench-scale foam-fractionation column experiments with synthetic groundwater"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB04-E01",
+          "WEB04-E02",
+          "WEB04-E03",
+          "WEB04-E04"
+        ],
+        "value": "Air-sparged foam fractionation in a vertical column without added co-surfactant (base case synthetic groundwater experiments)"
+      }
+    },
+    {
+      "citation": "Klevan C, Van Allen O, Mukai K, Gomes A, Xia S, Caines S, Woodcock MJ, Pennell KD. Removal of Long- and Short-Chain PFAS from Groundwater by Foam Fractionation. Environ Sci: Water Res Technol. 2025;11:2295\u20132307.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB04-E02",
+          "WEB04-E05",
+          "WEB04-E06"
+        ],
+        "reason": "Uses the same well-characterized bench-scale foam-fractionation column and operating conditions as the synthetic groundwater experiments, with additional reporting of groundwater chemistry (pH, conductivity, salinity) and a defined PFAS mixture; this supports conditional comparison with other foam-fractionation studies treating real groundwater.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1039/d5ew00440c",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB04-E05",
+            "WEB04-E06"
+          ],
+          "interpretation": "Foam fractionation was applied to AFB and MI groundwater to evaluate how differing pH, conductivity, and salinity impact removal and enrichment of a broad PFAS mixture; specific removal efficiencies are not included in the provided excerpt.",
+          "reported_term": "PFAS removal from contaminated groundwater by foam fractionation"
+        },
+        {
+          "endpoint_type": "separation",
+          "evidence_locator_ids": [
+            "WEB04-E05",
+            "WEB04-E06"
+          ],
+          "interpretation": "The experiments were designed to concentrate PFAS from real groundwater into a foamate stream using foam fractionation; enrichment factors are not quantified in the supplied text.",
+          "reported_term": "PFAS enrichment and concentration in foamate"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "statement": "Bench-scale column configuration with a single set of gas flow and geometry conditions may not capture performance variations across other reactor designs."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB04-E05",
+            "WEB04-E06"
+          ],
+          "statement": "Only two groundwater sources with modestly different pH, conductivity, and salinity were examined, which limits the ability to generalize water-chemistry effects across broader hydrogeochemical conditions."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB04-E05",
+          "WEB04-E06"
+        ],
+        "value": "Groundwater from former Loring Air Force Base (AFB) and a military installation (MI) in the eastern United States, with differing pH, conductivity, and salinity"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Column height",
+          "qualifiers": "",
+          "unit": "cm",
+          "value": "60"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Column inner diameter",
+          "qualifiers": "",
+          "unit": "cm",
+          "value": "5"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Solution fill height",
+          "qualifiers": "",
+          "unit": "cm",
+          "value": "55"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Air flow rate",
+          "qualifiers": "",
+          "unit": "L/min",
+          "value": "0.47"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Air pressure",
+          "qualifiers": "",
+          "unit": "kPa",
+          "value": "19.4"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Vacuum pressure",
+          "qualifiers": "",
+          "unit": "kPa",
+          "value": "18.6"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Diffuser pore size",
+          "qualifiers": "Diffusion stone pore size",
+          "unit": "micron",
+          "value": "0.5"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E06"
+          ],
+          "name": "AFB groundwater pH",
+          "qualifiers": "",
+          "unit": "",
+          "value": "8.17"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E06"
+          ],
+          "name": "MI groundwater pH",
+          "qualifiers": "",
+          "unit": "",
+          "value": "5.65"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E06"
+          ],
+          "name": "AFB groundwater conductivity",
+          "qualifiers": "",
+          "unit": "mS/cm",
+          "value": "0.168"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E06"
+          ],
+          "name": "MI groundwater conductivity",
+          "qualifiers": "",
+          "unit": "mS/cm",
+          "value": "0.109"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E06"
+          ],
+          "name": "AFB groundwater salinity",
+          "qualifiers": "",
+          "unit": "ppt",
+          "value": "0.02"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E06"
+          ],
+          "name": "MI groundwater salinity",
+          "qualifiers": "",
+          "unit": "ppt",
+          "value": "0.05"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E05"
+          ],
+          "value": "Perfluorobutanoic acid (PFBA)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E05"
+          ],
+          "value": "Perfluoropentanoic acid (PFPeA)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E05"
+          ],
+          "value": "Perfluorohexanoic acid (PFHxA)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E05"
+          ],
+          "value": "Perfluoroheptanoic acid (PFHpA)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E05"
+          ],
+          "value": "Perfluorooctanoic acid (PFOA)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E05"
+          ],
+          "value": "Perfluorononanoic acid (PFNA)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E05"
+          ],
+          "value": "Perfluorobutanesulfonic acid (PFBS)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E05"
+          ],
+          "value": "Perfluorohexanesulfonic acid (PFHxS)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E05"
+          ],
+          "value": "Perfluoroheptanesulfonic acid (PFHpS)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E05"
+          ],
+          "value": "Perfluorooctanesulfonic acid (PFOS)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E05"
+          ],
+          "value": "6:2 fluorotelomer sulfonate (6:2 FTS)"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E06"
+          ],
+          "name": "AFB groundwater pH",
+          "qualifiers": "",
+          "unit": "",
+          "value": "8.17",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E06"
+          ],
+          "name": "MI groundwater pH",
+          "qualifiers": "",
+          "unit": "",
+          "value": "5.65",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E06"
+          ],
+          "name": "AFB groundwater conductivity",
+          "qualifiers": "",
+          "unit": "mS/cm",
+          "value": "0.168",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E06"
+          ],
+          "name": "MI groundwater conductivity",
+          "qualifiers": "",
+          "unit": "mS/cm",
+          "value": "0.109",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E06"
+          ],
+          "name": "AFB groundwater salinity",
+          "qualifiers": "",
+          "unit": "ppt",
+          "value": "0.02",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E06"
+          ],
+          "name": "MI groundwater salinity",
+          "qualifiers": "",
+          "unit": "ppt",
+          "value": "0.05",
+          "value_form": "exact_numeric"
+        }
+      ],
+      "record_id": "RT06-gpt51_web_search-WEB04-R02",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB04-E05",
+            "WEB04-E06"
+          ],
+          "statement": "No measurements of transformation products, inorganic fluoride, or mineralization are reported in the excerpt for AFB and MI groundwater; foam fractionation is used as a separation process to transfer PFAS from bulk water to foamate."
+        }
+      ],
+      "source_id": "WEB04",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB04-E01",
+          "WEB04-E02",
+          "WEB04-E05",
+          "WEB04-E06"
+        ],
+        "value": "Bench-scale foam-fractionation column experiments with contaminated groundwater from two field sites (former Loring AFB and a military installation in the eastern United States)"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB04-E01",
+          "WEB04-E02",
+          "WEB04-E05",
+          "WEB04-E06"
+        ],
+        "value": "Air-sparged foam fractionation in the same vertical column configuration used for synthetic groundwater, applied to AFB and MI groundwater to assess water-chemistry impacts on PFAS removal and enrichment."
+      }
+    },
+    {
+      "citation": "Klevan C, Van Allen O, Mukai K, Gomes A, Xia S, Caines S, Woodcock MJ, Pennell KD. Removal of Long- and Short-Chain PFAS from Groundwater by Foam Fractionation. Environ Sci: Water Res Technol. 2025;11:2295\u20132307.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB04-E02",
+          "WEB04-E07"
+        ],
+        "reason": "While reactor geometry and gas flow are specified and consistent with other experiments, the lack of quantitative data for bubble size, VRF, and PFAS enrichment in the excerpt prevents direct numerical comparison; this record is primarily useful qualitatively for understanding operational controls (co-surfactant selection) on foam fractionation performance.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1039/d5ew00440c",
+      "endpoints": [
+        {
+          "endpoint_type": "separation",
+          "evidence_locator_ids": [
+            "WEB04-E07"
+          ],
+          "interpretation": "Experiments examined how co-surfactant type and dosing affected foamate volume, volume reduction factor, and PFAS enrichment; the excerpt describes qualitative impacts but does not provide numeric VRF or enrichment values.",
+          "reported_term": "PFAS enrichment and volume reduction factor (VRF) with co-surfactants"
+        },
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB04-E07"
+          ],
+          "interpretation": "Sauter mean bubble diameter and foam stability were measured over time to assess the effect of co-surfactant choice on column hydrodynamics and separation performance.",
+          "reported_term": "Bubble size and foam stability"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB04-E07"
+          ],
+          "statement": "The supplementary information excerpt notes co-surfactant experiments but does not provide explicit numerical values for bubble size, VRF, or PFAS enrichment, limiting quantitative assessment of co-surfactant effects."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB04-E07"
+          ],
+          "statement": "Only a limited set of cationic co-surfactants (CTAB, DTAB, Polyquaternium-10) were investigated, which may not represent the full range of possible surfactant modifiers for PFAS foam fractionation."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB04-E03",
+          "WEB04-E05",
+          "WEB04-E07"
+        ],
+        "value": "PFAS-contaminated groundwater (synthetic or site water not specified in the excerpt) subjected to foam fractionation with co-injected cationic surfactants"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Column height",
+          "qualifiers": "",
+          "unit": "cm",
+          "value": "60"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Column inner diameter",
+          "qualifiers": "",
+          "unit": "cm",
+          "value": "5"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Solution fill height",
+          "qualifiers": "",
+          "unit": "cm",
+          "value": "55"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Air flow rate",
+          "qualifiers": "",
+          "unit": "L/min",
+          "value": "0.47"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Air pressure",
+          "qualifiers": "",
+          "unit": "kPa",
+          "value": "19.4"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Vacuum pressure",
+          "qualifiers": "",
+          "unit": "kPa",
+          "value": "18.6"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "Diffuser pore size",
+          "qualifiers": "Diffusion stone pore size",
+          "unit": "micron",
+          "value": "0.5"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E07"
+          ],
+          "name": "Co-surfactants used",
+          "qualifiers": "Cationic co-surfactants injected at controlled mass flow rates into the foam fractionation column; exact dosages not specified in the excerpt.",
+          "unit": null,
+          "value": "CTAB, DTAB, Polyquaternium-10"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E03",
+            "WEB04-E07"
+          ],
+          "value": "Mixtures including both long- and short-chain PFAS (e.g., PFBA, PFBS, PFOA, PFOS) as in other experiments within the same study; specific composition for the co-surfactant subset is not detailed in the excerpt."
+        }
+      ],
+      "quantitative_findings": [],
+      "record_id": "RT06-gpt51_web_search-WEB04-R03",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB04-E07"
+          ],
+          "statement": "No information is provided in the excerpt on fate or transformation of co-surfactants or PFAS beyond physical separation; the focus is on bubble hydrodynamics, foam volume, and PFAS enrichment."
+        }
+      ],
+      "source_id": "WEB04",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB04-E01",
+          "WEB04-E02",
+          "WEB04-E07"
+        ],
+        "value": "Bench-scale foam-fractionation column experiments with PFAS-containing groundwater and added cationic co-surfactants"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB04-E02",
+          "WEB04-E07"
+        ],
+        "value": "Foam fractionation in the same bench-scale column with continuous injection of cationic co-surfactants (e.g., CTAB, DTAB, Polyquaternium-10) to modify bubble properties, foam stability, and PFAS enrichment."
+      }
+    },
+    {
+      "citation": "Lee YC, Wang PY, Lo SL, Huang CP. Recovery of perfluorooctane sulfonate (PFOS) and perfluorooctanoate (PFOA) from dilute water solution by foam flotation. Sep Purif Technol. 2017;173:280\u2013285.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB05-E01",
+          "WEB05-E02",
+          "WEB05-E03"
+        ],
+        "reason": "Study reports percent removal and recovery of PFOS and PFOA from dilute aqueous solution using foam flotation with Fe(III) activator, under specified pH, Fe(III) dose, and contact time. Although reactor geometry and gas flow are not provided, the endpoints (aqueous removal and recovery as % of initial PFAS) and the simple water matrix make the results broadly comparable\u2014under noted conditions\u2014to other bench-scale foam fractionation studies.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1016/j.seppur.2016.09.012",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB05-E01",
+            "WEB05-E02"
+          ],
+          "interpretation": "Aqueous-phase removal of PFOS and PFOA from dilute water solution by foam flotation with Fe(III) activator; removal reflects transfer from bulk solution into foam/concentrate, not chemical transformation.",
+          "reported_term": "removal efficiency"
+        },
+        {
+          "endpoint_type": "separation",
+          "evidence_locator_ids": [
+            "WEB05-E01",
+            "WEB05-E03"
+          ],
+          "interpretation": "Physical separation and recovery of PFOS and PFOA from concentrate scum after foam flotation, quantified as percentage of PFAS recovered upon pH adjustment of scum.",
+          "reported_term": "separation and recovery"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB05-E01"
+          ],
+          "statement": "Experiments were performed only in dilute water solutions with added metallic activators and only for two long-chain PFAS (PFOS and PFOA); behavior in other water matrices, with other PFAS, or without activators was not evaluated in the abstract-accessible information."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB05-E01",
+            "WEB05-E02",
+            "WEB05-E03"
+          ],
+          "statement": "Detailed reactor geometry, gas flow rate, bubble size, residence time distribution, recycle configuration, and feed/foamate volume ratios are not reported in the accessible abstract, limiting mechanistic interpretation of foam-fractionation performance controls."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB05-E01"
+        ],
+        "value": "dilute water solution (aqueous PFOS and PFOA)"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E01"
+          ],
+          "name": "Metallic activators screened",
+          "qualifiers": "PFOS removal followed order: Fe(III) \u2248 La(III) > Al(III) > Ca(II) > Fe(II) > K(I)",
+          "unit": null,
+          "value": "Al(III), Fe(III), La(III), Ca(II), Fe(II), K(I)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E01"
+          ],
+          "name": "Fe(III) dose",
+          "qualifiers": "Both PFOS and PFOA achieved >99% removal in 5 min at this Fe(III) concentration",
+          "unit": "mM",
+          "value": "11.5"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E01"
+          ],
+          "name": "Contact time",
+          "qualifiers": "Time needed to reach >99% removal for PFOS and PFOA at 11.5 mM Fe(III)",
+          "unit": "min",
+          "value": "5"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "name": "pH (feed)",
+          "qualifiers": "Lowest pH studied; PFOS and PFOA removal increased with decreasing pH and was maximal at pH 2.3",
+          "unit": "",
+          "value": "2.3"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "name": "pH (feed)",
+          "qualifiers": "No significant PFOS or PFOA removal observed at pH >= 6 (upper end of studied range)",
+          "unit": "",
+          "value": "6"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "name": "Effect of Fe(III) dose",
+          "qualifiers": "High Fe(III) dose enhanced PFOS and PFOA removal",
+          "unit": null,
+          "value": ""
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "name": "Effect of initial PFAS concentration",
+          "qualifiers": "Elevated initial PFOS and PFOA concentrations enhanced surfactant removal",
+          "unit": null,
+          "value": ""
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E03"
+          ],
+          "name": "pH of concentrate scum during recovery",
+          "qualifiers": "Adjusted to neutral pH to recover PFOS and PFOA from concentrate scum",
+          "unit": "",
+          "value": "7.0"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E01"
+          ],
+          "value": "Perfluorooctane sulfonate (PFOS)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E01"
+          ],
+          "value": "Perfluorooctanoate (PFOA)"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E01"
+          ],
+          "name": "PFOS removal efficiency at 11.5 mM Fe(III), 5 min",
+          "qualifiers": "PFOS in dilute water solution; foam flotation with Fe(III) activator",
+          "unit": "%",
+          "value": ">99",
+          "value_form": "inequality"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E01"
+          ],
+          "name": "PFOA removal efficiency at 11.5 mM Fe(III), 5 min",
+          "qualifiers": "PFOA in dilute water solution; foam flotation with Fe(III) activator",
+          "unit": "%",
+          "value": ">99",
+          "value_form": "inequality"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E03"
+          ],
+          "name": "PFOS and PFOA recovery from concentrate scum after pH adjustment to 7.0",
+          "qualifiers": "Approximate range; combined statement for both PFOS and PFOA in concentrate scum",
+          "unit": "%",
+          "value": "84-91",
+          "value_form": "range"
+        }
+      ],
+      "record_id": "RT06-gpt51_web_search-WEB05-R01",
+      "residuals_byproducts": [],
+      "source_id": "WEB05",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB05-E01"
+        ],
+        "value": "not reported (appears to be laboratory foam flotation in dilute aqueous solutions; scale not specified in abstract)"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB05-E01",
+          "WEB05-E03"
+        ],
+        "value": "Foam flotation process aided by metallic activators (Al(III), Fe(III), La(III), Ca(II), Fe(II), K(I)); ferric ion (Fe(III)) used as primary activator for high-efficiency PFOS and PFOA separation and recovery"
+      }
+    },
+    {
+      "citation": "SERDP/ESTCP. Low-Cost, Passive In Situ Treatment of PFAS-Impacted Groundwater Using Foam Fractionation in an Air Sparge Trench. SERDP-ESTCP project description page, accessed 2026.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB06-E01",
+          "WEB06-E02",
+          "WEB06-E03"
+        ],
+        "reason": "Field-scale in situ sparge trench foam fractionation is described conceptually, with qualitative removal performance and a typical volume-based concentration factor, but without specific PFAS species, concentrations, gas flow rates, residence times, or mass-balance closure; thus results cannot be quantitatively compared to more fully specified foam-fractionation systems.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://serdp-estcp.mil/projects/details/16be299f-d3d4-49b7-91d5-67f82f00058f",
+      "endpoints": [
+        {
+          "endpoint_type": "separation",
+          "evidence_locator_ids": [
+            "WEB06-E03"
+          ],
+          "interpretation": "Phase separation and enrichment of PFAS from bulk groundwater into a small volume of reconstituted foam, expressed as a groundwater-to-foam volume ratio (concentration factor).",
+          "reported_term": "PFAS concentration factors"
+        },
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB06-E02"
+          ],
+          "interpretation": "Decreased PFAS concentrations in groundwater due to foam-fractionation-driven transfer of surface-active PFAS to the foam phase; described qualitatively as orders-of-magnitude reduction without numerical values.",
+          "reported_term": "orders of magnitude decreases in bulk groundwater PFAS concentrations"
+        }
+      ],
+      "limitations": [],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB06-E01",
+          "WEB06-E02"
+        ],
+        "value": "PFAS-impacted groundwater (shallow plume intercepted by sparge trench)"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB06-E02"
+          ],
+          "name": "Reactor configuration",
+          "qualifiers": "",
+          "unit": null,
+          "value": "Conventional air sparge trench forming foam at groundwater surface, with vacuum and/or skimming system for foam removal"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E02",
+            "WEB06-E03"
+          ],
+          "name": "Operation mode",
+          "qualifiers": "",
+          "unit": null,
+          "value": "Passive in situ groundwater treatment; air sparging provides bubbles, foam skimmed and reconstituted to low-volume concentrate"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E02"
+          ],
+          "value": "Per- and polyfluoroalkyl substances (PFAS), unspecified mixture in groundwater"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB06-E03"
+          ],
+          "name": "PFAS concentration factor (groundwater volume per reconstituted foam volume)",
+          "qualifiers": "Described as: \"PFAS concentration factors are typically in the range of 1-L of reconstituted foam to 5000-L of groundwater\"; interpreted as ~5000:1 groundwater:foam volume ratio.",
+          "unit": null,
+          "value": "5000",
+          "value_form": "exact_numeric"
+        }
+      ],
+      "record_id": "RT06-gpt51_web_search-WEB06-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB06-E03"
+          ],
+          "statement": "Recovered low-volume, high-concentration PFAS foamate is intended for subsequent destructive treatment (e.g., high temperature incineration, electrochemical oxidation, enhanced contact plasma), indicating that the foam fractionation step performs separation/enrichment but not PFAS destruction."
+        }
+      ],
+      "source_id": "WEB06",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB06-E01",
+          "WEB06-E02"
+        ],
+        "value": "Field-scale in situ treatment using an air sparge trench to intercept a shallow PFAS-impacted groundwater plume"
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB06-E01",
+          "WEB06-E02"
+        ],
+        "value": "Conventional air sparge trench coupled with foam fractionation and foam recovery/reconstitution for passive in situ PFAS treatment"
+      }
+    }
+  ],
+  "source_system": "gpt51_web_search",
+  "task_id": "RT06"
+}

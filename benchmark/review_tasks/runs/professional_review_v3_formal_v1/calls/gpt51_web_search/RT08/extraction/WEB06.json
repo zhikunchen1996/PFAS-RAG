@@ -1,0 +1,558 @@
+{
+  "call_key": "RT08:gpt51_web_search:extraction:WEB06",
+  "created_at": "2026-08-05T03:40:51.401932+00:00",
+  "raw_response_text": "{\"task_id\":\"RT08\",\"source_system\":\"gpt51_web_search\",\"records\":[{\"record_id\":\"WEB06-R1\",\"source_id\":\"WEB06\",\"doi_or_stable_url\":\"https://doi.org/10.1016/j.jelechem.2023.117145\",\"citation\":\"Smith S.J. et al., \\\"Electrochemical degradation of per- and poly-fluoroalkyl substances in the presence of natural organic matter,\\\" Journal of Electroanalytical Chemistry, 2024.\",\"study_type\":\"primary_experiment\",\"study_scale\":{\"value\":\"Bench-scale electrochemical recirculation cell study\",\"evidence_locator_ids\":[\"WEB06-E01\"]},\"matrix\":{\"value\":\"Simulated environmental water with added natural organic matter (NOM) and dissolved organic carbon (DOC) to represent environmental waters\",\"evidence_locator_ids\":[\"WEB06-E01\"]},\"pfas_scope\":[{\"value\":\"Per- and polyfluoroalkyl substances (PFAS), specific compounds not specified in abstract\",\"evidence_locator_ids\":[\"WEB06-E01\"]}],\"treatment\":{\"value\":\"Electrochemical oxidation in a recirculation cell using plate and mesh boron-doped diamond (BDD) electrodes\",\"evidence_locator_ids\":[\"WEB06-E01\"]},\"operating_conditions\":[{\"name\":\"Reactor configuration\",\"value\":\"Recirculation cell\",\"unit\":null,\"qualifiers\":\"\",\"evidence_locator_ids\":[\"WEB06-E01\"]},{\"name\":\"Anode/cathode material\",\"value\":\"Plate and mesh boron-doped diamond (BDD) electrodes\",\"unit\":null,\"qualifiers\":\"\",\"evidence_locator_ids\":[\"WEB06-E01\"]},{\"name\":\"Water matrix modifiers\",\"value\":\"Natural organic matter and dissolved organic carbon added\",\"unit\":null,\"qualifiers\":\"Used to simulate environmental waters\",\"evidence_locator_ids\":[\"WEB06-E01\"]}],\"endpoints\":[{\"endpoint_type\":\"degradation\",\"reported_term\":\"PFAS electrochemical degradation\",\"interpretation\":\"Loss of parent PFAS during electrochemical treatment in the recirculation cell; abstract does not specify extent or kinetics.\",\"evidence_locator_ids\":[\"WEB06-E01\"]},{\"endpoint_type\":\"defluorination\",\"reported_term\":\"Carbon and fluorine molar balance analyses\",\"interpretation\":\"Carbon and fluorine molar balances used to infer that missing intermediates did not contain fluorine, indicating cleavage of C\u2013F bonds and formation of non-fluorinated organics.\",\"evidence_locator_ids\":[\"WEB06-E02\"]},{\"endpoint_type\":\"mineralization\",\"reported_term\":\"Partial mineralization\",\"interpretation\":\"Carbon and fluorine molar balance suggested that part of the PFAS carbon was converted toward inorganic or low-molecular-weight products, interpreted by authors as partial mineralization, alongside formation of non-fluorinated organics.\",\"evidence_locator_ids\":[\"WEB06-E02\"]},{\"endpoint_type\":\"total_organofluorine_change\",\"reported_term\":\"Fluorine molar balance\",\"interpretation\":\"Fluorine molar balance used to track fate of organofluorine and confirm that undetected intermediates were not fluorinated.\",\"evidence_locator_ids\":[\"WEB06-E02\"]}],\"quantitative_findings\":[],\"limitations\":[{\"statement\":\"Only abstract-level information was accessible from the source packet, so specific PFAS identities, concentrations, operating conditions (current density, potential, flow rate), energy metrics, and treatment durations are not reported.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB06-E01\"]},{\"statement\":\"The water matrix was a simulated environmental water prepared by adding NOM and DOC, rather than a complex industrial or municipal PFAS waste stream, which may limit direct applicability to PFAS-rich concentrates or leachates.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB06-E01\"]},{\"statement\":\"The study focused on PFAS behavior in the presence of natural organic matter, so implications for other co-contaminants (e.g., high salinity, surfactants, metals) common in PFAS-rich industrial streams are not addressed in the abstract.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB06-E01\"]}],\"residuals_byproducts\":[{\"statement\":\"Carbon and fluorine molar balances indicated that missing intermediates did not contain fluorine, implying formation of non-fluorinated organic byproducts alongside partial mineralization.\",\"basis\":\"author_reported\",\"evidence_locator_ids\":[\"WEB06-E02\"]}],\"comparability\":{\"status\":\"descriptive_only\",\"reason\":\"The abstract does not report PFAS identities, initial concentrations, current densities, treatment times, or energy metrics, so the electrochemical degradation and partial mineralization outcomes cannot be normalized or directly compared with other technologies or studies; the record is usable only for qualitative evidence that BDD electrooxidation in a recirculation cell can achieve PFAS degradation, defluorination, and partial mineralization in NOM-containing waters.\",\"evidence_locator_ids\":[\"WEB06-E01\",\"WEB06-E02\"]}}],\"extraction_notes\":[\"Only abstract-level paraphrased content (WEB06-E01, WEB06-E02) was available; no numerical performance, kinetic, or energy data could be extracted.\",\"The study does not specify PFAS species, initial loading, salinity, or detailed co-contaminants in the accessible text, limiting alignment with the task\u2019s request for matrix and operating-condition detail.\",\"No held-out anchor DOI, URL, or title was encountered for this source (WEB06).\"]}",
+  "request": {
+    "max_completion_tokens": 16000,
+    "messages": [
+      {
+        "content": "You are an evidence extraction specialist for PFAS treatment and remediation\nresearch. Build a structured study evidence table before any narrative review\nis written.\n\nExtract one record per primary-study experiment, modeled scenario, or field\ndeployment that contributes usable evidence to the review task. A paper may\nproduce more than one record only when materially different matrices,\ntechnologies, operating regimes, or endpoints would otherwise be conflated.\n\nReview articles and perspectives may help identify terminology or primary\nstudies, but they must not be used as the source of a quantitative study\nrecord. Never copy a review table as though it were a primary result.\n\nFor every populated source-dependent field:\n- preserve the PFAS identity or class, matrix, starting concentration or\n  loading, operating conditions, study scale, measured endpoint, value, unit,\n  and material qualifiers when reported;\n- attach only the field-level evidence locator identifiers that directly\n  support that specific value or statement;\n- use an empty string or empty array when the source does not report the\n  information; do not infer or estimate it;\n- do not turn the absence of information in the supplied packet into a study\n  finding, quantitative result, or author-reported limitation unless the source\n  explicitly states that absence;\n- distinguish removal, separation, sorption, parent-compound loss,\n  transformation, degradation, destruction, defluorination, mineralization,\n  total organofluorine change, and toxicity change;\n- classify endpoint_type from what was actually measured, not from the\n  authors' preferred label. Parent loss alone is not destruction. Phase\n  transfer is removal or separation, not degradation. Inorganic fluoride\n  release or fluorine-balance closure can establish defluorination but cannot\n  by itself establish mineralization. Use mineralization only when direct\n  carbon-fate evidence such as CO2/inorganic-carbon production or a carbon\n  balance is reported. Preserve a broader author term in reported_term and\n  explain any mismatch in interpretation;\n- do not normalize or compare values unless their units, denominators,\n  matrices, PFAS scope, operating conditions, and endpoints permit it.\n\nOnly populate quantitative_findings when the source reports an actual numeric\nvalue, inequality, approximate value, range, or explicit ND/not-detected\nresult. Put the number or censoring marker in value and the measurement unit in\nunit. Normalize Unicode inequality signs to ASCII >= or <= and range dashes to\nan ASCII hyphen while preserving the source wording in qualifiers. A unit or\norder-of-magnitude scale without a number is not a quantitative finding.\nQualitative parent loss, intermediate formation, or disappearance belongs in\nthe endpoint interpretation or residual/byproduct statements instead.\n\nSet value_form to exactly one of:\n- exact_numeric: a bare number such as `99.7` or `1.2e-3`;\n- approximate_numeric: `~` followed by a number;\n- inequality: `<`, `<=`, `>`, or `>=` followed by a number;\n- range: two numbers separated by `-` or `to`; or\n- not_detected: exactly `ND`, `N/D`, `not detected`,\n  `below detection limit`, or `below quantification limit`.\n\nPut uncertainty, denominators, fold-change wording, and explanatory text in\nqualifiers rather than value. A deterministic validator will remove malformed\nquantitative fields before source verification.\n\nFor limitations, use basis=author_reported only when the source states the\nlimitation. Use basis=design_inferred only for a constraint that follows\ndirectly from cited design evidence, such as one matrix, one compound, or\nbench-scale operation. Never label missing information in the supplied packet\nas a scientific limitation of the study.\n\nMark each record as comparable with conditions, descriptive only, or not\ncomparable. Comparability is an analyst inference rather than a quotation:\nattach locators for the matrix, scale, conditions, endpoint, and denominator\non which the inference rests, and explain the reason. Do not reward a study\nfor reporting a larger percentage when its endpoint or conditions differ.\n\nThe task was derived from a defining review that is held out from all\ncandidate retrieval systems. The supplied anchor identifiers are an exclusion\nlist, not evidence. Do not extract from the anchor, cite it, reconstruct its\nconclusions, or use its tables.\n\nReturn one JSON object that follows the supplied evidence-table schema exactly.\nDo not write the narrative review in this step.\n",
+        "role": "system"
+      },
+      {
+        "content": "Task:\n{\"review_brief\":\"Prepare a focused review of how electrochemical oxidation, non-thermal plasma, and sonolysis should be matched to a defined PFAS-rich liquid stream.\",\"task_id\":\"RT08\",\"title\":\"Matching a destructive technology to a PFAS-rich liquid stream\"}\n\nTask-specific data extraction objective:\nExtract technology and reactor, feed matrix and PFAS loading, salinity and co-contaminants, operating conditions, kinetic basis, endpoint, energy metric, duration, scale, and stated implementation limitation.\n\nSource system (return this exact value):\ngpt51_web_search\n\nCandidate source identifier (all records must use this exact source_id):\nWEB06\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.coche.2023.100944\"],\"all_blocked_titles\":[\"scaling up water treatment technologies for pfas destruction current status and potential for fit for purpose application\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.coche.2023.100944\"],\"anchor_id\":\"AR-BLOTEVOGEL-2023\",\"corpus_source\":\"2024 - Blotevogel - Scaling up water treatment technologies for PFAS destruction_ current status and potential for fit-for-purpose application.pdf\",\"doi\":\"10.1016/j.coche.2023.100944\",\"title\":\"Scaling up water treatment technologies for PFAS destruction: current status and potential for fit-for-purpose application\",\"url\":\"https://doi.org/10.1016/j.coche.2023.100944\"}\n\nFrozen inspected Web Search sources and evidence locators:\n{\n  \"access_scope\": \"abstract\",\n  \"capture_source_id\": \"WEB15\",\n  \"citation\": \"Smith S.J. et al., Journal of Electroanalytical Chemistry, 2024.\",\n  \"covered_component_ids\": [\n    \"RT08-C1\",\n    \"RT08-C2\"\n  ],\n  \"doi\": \"10.1016/j.jelechem.2023.117145\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.jelechem.2023.117145\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB06-E01\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract\",\n      \"text\": \"PFAS electrochemical degradation was investigated in a recirculation cell using plate and mesh BDD electrodes, with natural organic matter and dissolved organic carbon added to simulate environmental waters.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB06-E02\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract\",\n      \"text\": \"Carbon and fluorine molar balance analyses showed that missing intermediates did not contain fluorine, indicating partial mineralization and formation of non\\u2011fluorinated organics.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://www.sciencedirect.com/science/article/abs/pii/S1383586623015472\",\n  \"source_id\": \"WEB06\",\n  \"source_limitations\": [\n    \"Only abstract-level information was accessible; detailed operating conditions and energy metrics are not visible.\",\n    \"Study focuses on NOM effects rather than complex industrial leachates or concentrates.\",\n    \"Technology-selection guidance must be inferred cautiously without full matrix characterization.\"\n  ],\n  \"title\": \"Electrochemical degradation of per- and poly-fluoroalkyl substances in the presence of natural organic matter\",\n  \"year\": \"2024\"\n}\n\nDo not use search-result snippets as evidence. Use only the frozen inspected\nsource packet and preserve its declared access scope. Omit any source that\nresolves to a held-out anchor DOI, URL, or exact title and report the violation\nin extraction_notes. Extract at most three materially distinct records from\nthis source, prioritizing records that answer the task components.\n\nExtract primary-study evidence needed to answer the task and return the\nschema-constrained study evidence table.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_review_evidence_table",
+        "schema": {
+          "$defs": {
+            "endpoint": {
+              "additionalProperties": false,
+              "properties": {
+                "endpoint_type": {
+                  "enum": [
+                    "removal",
+                    "separation",
+                    "sorption",
+                    "parent_compound_loss",
+                    "transformation",
+                    "degradation",
+                    "destruction",
+                    "defluorination",
+                    "mineralization",
+                    "total_organofluorine_change",
+                    "toxicity_change",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB06-E01",
+                      "WEB06-E02"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "interpretation": {
+                  "type": "string"
+                },
+                "reported_term": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "endpoint_type",
+                "reported_term",
+                "interpretation",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceRecord": {
+              "additionalProperties": false,
+              "properties": {
+                "citation": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "comparability": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_locator_ids": {
+                      "items": {
+                        "enum": [
+                          "WEB06-E01",
+                          "WEB06-E02"
+                        ],
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "type": "array"
+                    },
+                    "reason": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "enum": [
+                        "comparable_with_conditions",
+                        "descriptive_only",
+                        "not_comparable"
+                      ],
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "status",
+                    "reason",
+                    "evidence_locator_ids"
+                  ],
+                  "type": "object"
+                },
+                "doi_or_stable_url": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "endpoints": {
+                  "items": {
+                    "$ref": "#/$defs/endpoint"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "limitations": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "matrix": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "operating_conditions": {
+                  "items": {
+                    "$ref": "#/$defs/namedValue"
+                  },
+                  "type": "array"
+                },
+                "pfas_scope": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceText"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "quantitative_findings": {
+                  "items": {
+                    "$ref": "#/$defs/quantitativeValue"
+                  },
+                  "type": "array"
+                },
+                "record_id": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "residuals_byproducts": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "source_id": {
+                  "enum": [
+                    "WEB06"
+                  ],
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "study_scale": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "study_type": {
+                  "enum": [
+                    "primary_experiment",
+                    "pilot_or_field_deployment",
+                    "modeling_or_life_cycle_study",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "treatment": {
+                  "$ref": "#/$defs/evidenceText"
+                }
+              },
+              "required": [
+                "record_id",
+                "source_id",
+                "doi_or_stable_url",
+                "citation",
+                "study_type",
+                "study_scale",
+                "matrix",
+                "pfas_scope",
+                "treatment",
+                "operating_conditions",
+                "endpoints",
+                "quantitative_findings",
+                "limitations",
+                "residuals_byproducts",
+                "comparability"
+              ],
+              "type": "object"
+            },
+            "evidenceStatement": {
+              "additionalProperties": false,
+              "properties": {
+                "basis": {
+                  "enum": [
+                    "author_reported",
+                    "design_inferred"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB06-E01",
+                      "WEB06-E02"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "statement": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "statement",
+                "basis",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceText": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB06-E01",
+                      "WEB06-E02"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "namedValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB06-E01",
+                      "WEB06-E02"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "quantitativeValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB06-E01",
+                      "WEB06-E02"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "value_form": {
+                  "enum": [
+                    "exact_numeric",
+                    "approximate_numeric",
+                    "inequality",
+                    "range",
+                    "not_detected"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "value_form",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "properties": {
+            "extraction_notes": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "records": {
+              "items": {
+                "$ref": "#/$defs/evidenceRecord"
+              },
+              "maxItems": 3,
+              "type": "array"
+            },
+            "source_system": {
+              "enum": [
+                "gpt51_web_search"
+              ],
+              "type": "string"
+            },
+            "task_id": {
+              "enum": [
+                "RT08"
+              ],
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "source_system",
+            "records",
+            "extraction_notes"
+          ],
+          "title": "PFAS review study evidence table",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "fb311e07fe7e48580edca30d2532bb43e1ab34943ab1573d6caadcd6dea92e57",
+  "response_metadata": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.01765,
+    "finish_reason": "stop",
+    "input_tokens": 2592,
+    "latency_seconds": 11.664422582951374,
+    "output_tokens": 1441,
+    "reasoning_tokens": 308,
+    "response_id": "chatcmpl-E9MmemGiFNEuEzSkfFjztTayE2kZ0",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 4033,
+    "web_search_calls": 0
+  },
+  "result": {
+    "extraction_notes": [
+      "Only abstract-level paraphrased content (WEB06-E01, WEB06-E02) was available; no numerical performance, kinetic, or energy data could be extracted.",
+      "The study does not specify PFAS species, initial loading, salinity, or detailed co-contaminants in the accessible text, limiting alignment with the task\u2019s request for matrix and operating-condition detail.",
+      "No held-out anchor DOI, URL, or title was encountered for this source (WEB06)."
+    ],
+    "records": [
+      {
+        "citation": "Smith S.J. et al., \"Electrochemical degradation of per- and poly-fluoroalkyl substances in the presence of natural organic matter,\" Journal of Electroanalytical Chemistry, 2024.",
+        "comparability": {
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E02"
+          ],
+          "reason": "The abstract does not report PFAS identities, initial concentrations, current densities, treatment times, or energy metrics, so the electrochemical degradation and partial mineralization outcomes cannot be normalized or directly compared with other technologies or studies; the record is usable only for qualitative evidence that BDD electrooxidation in a recirculation cell can achieve PFAS degradation, defluorination, and partial mineralization in NOM-containing waters.",
+          "status": "descriptive_only"
+        },
+        "doi_or_stable_url": "https://doi.org/10.1016/j.jelechem.2023.117145",
+        "endpoints": [
+          {
+            "endpoint_type": "degradation",
+            "evidence_locator_ids": [
+              "WEB06-E01"
+            ],
+            "interpretation": "Loss of parent PFAS during electrochemical treatment in the recirculation cell; abstract does not specify extent or kinetics.",
+            "reported_term": "PFAS electrochemical degradation"
+          },
+          {
+            "endpoint_type": "defluorination",
+            "evidence_locator_ids": [
+              "WEB06-E02"
+            ],
+            "interpretation": "Carbon and fluorine molar balances used to infer that missing intermediates did not contain fluorine, indicating cleavage of C\u2013F bonds and formation of non-fluorinated organics.",
+            "reported_term": "Carbon and fluorine molar balance analyses"
+          },
+          {
+            "endpoint_type": "mineralization",
+            "evidence_locator_ids": [
+              "WEB06-E02"
+            ],
+            "interpretation": "Carbon and fluorine molar balance suggested that part of the PFAS carbon was converted toward inorganic or low-molecular-weight products, interpreted by authors as partial mineralization, alongside formation of non-fluorinated organics.",
+            "reported_term": "Partial mineralization"
+          },
+          {
+            "endpoint_type": "total_organofluorine_change",
+            "evidence_locator_ids": [
+              "WEB06-E02"
+            ],
+            "interpretation": "Fluorine molar balance used to track fate of organofluorine and confirm that undetected intermediates were not fluorinated.",
+            "reported_term": "Fluorine molar balance"
+          }
+        ],
+        "limitations": [
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB06-E01"
+            ],
+            "statement": "Only abstract-level information was accessible from the source packet, so specific PFAS identities, concentrations, operating conditions (current density, potential, flow rate), energy metrics, and treatment durations are not reported."
+          },
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB06-E01"
+            ],
+            "statement": "The water matrix was a simulated environmental water prepared by adding NOM and DOC, rather than a complex industrial or municipal PFAS waste stream, which may limit direct applicability to PFAS-rich concentrates or leachates."
+          },
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB06-E01"
+            ],
+            "statement": "The study focused on PFAS behavior in the presence of natural organic matter, so implications for other co-contaminants (e.g., high salinity, surfactants, metals) common in PFAS-rich industrial streams are not addressed in the abstract."
+          }
+        ],
+        "matrix": {
+          "evidence_locator_ids": [
+            "WEB06-E01"
+          ],
+          "value": "Simulated environmental water with added natural organic matter (NOM) and dissolved organic carbon (DOC) to represent environmental waters"
+        },
+        "operating_conditions": [
+          {
+            "evidence_locator_ids": [
+              "WEB06-E01"
+            ],
+            "name": "Reactor configuration",
+            "qualifiers": "",
+            "unit": null,
+            "value": "Recirculation cell"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB06-E01"
+            ],
+            "name": "Anode/cathode material",
+            "qualifiers": "",
+            "unit": null,
+            "value": "Plate and mesh boron-doped diamond (BDD) electrodes"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB06-E01"
+            ],
+            "name": "Water matrix modifiers",
+            "qualifiers": "Used to simulate environmental waters",
+            "unit": null,
+            "value": "Natural organic matter and dissolved organic carbon added"
+          }
+        ],
+        "pfas_scope": [
+          {
+            "evidence_locator_ids": [
+              "WEB06-E01"
+            ],
+            "value": "Per- and polyfluoroalkyl substances (PFAS), specific compounds not specified in abstract"
+          }
+        ],
+        "quantitative_findings": [],
+        "record_id": "WEB06-R1",
+        "residuals_byproducts": [
+          {
+            "basis": "author_reported",
+            "evidence_locator_ids": [
+              "WEB06-E02"
+            ],
+            "statement": "Carbon and fluorine molar balances indicated that missing intermediates did not contain fluorine, implying formation of non-fluorinated organic byproducts alongside partial mineralization."
+          }
+        ],
+        "source_id": "WEB06",
+        "study_scale": {
+          "evidence_locator_ids": [
+            "WEB06-E01"
+          ],
+          "value": "Bench-scale electrochemical recirculation cell study"
+        },
+        "study_type": "primary_experiment",
+        "treatment": {
+          "evidence_locator_ids": [
+            "WEB06-E01"
+          ],
+          "value": "Electrochemical oxidation in a recirculation cell using plate and mesh boron-doped diamond (BDD) electrodes"
+        }
+      }
+    ],
+    "source_system": "gpt51_web_search",
+    "task_id": "RT08"
+  },
+  "result_kind": "json",
+  "stage": "structured_extraction"
+}

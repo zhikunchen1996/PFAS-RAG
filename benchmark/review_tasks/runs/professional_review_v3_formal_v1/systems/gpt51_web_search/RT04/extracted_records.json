@@ -1,0 +1,1811 @@
+{
+  "deterministic_field_normalizations": [
+    {
+      "after": {
+        "evidence_locator_ids": [
+          "WEB01-E04"
+        ],
+        "name": "Combined PFOA+PFOS influent concentration",
+        "qualifiers": "\"About\" 1 \u00b5g/L combined influent concentration; exact split between PFOA and PFOS not specified in provided passage.",
+        "unit": "\u00b5g/L",
+        "value": "~1",
+        "value_form": "approximate_numeric"
+      },
+      "before": {
+        "evidence_locator_ids": [
+          "WEB01-E04"
+        ],
+        "name": "Combined PFOA+PFOS influent concentration",
+        "qualifiers": "\"About\" 1 \u00b5g/L combined influent concentration; exact split between PFOA and PFOS not specified in provided passage.",
+        "unit": "\u00b5g/L",
+        "value": "1",
+        "value_form": "approximate_numeric"
+      },
+      "field_path": "quantitative_findings[2]",
+      "reason": "added_declared_approximation_marker",
+      "record_id": "RT04-gpt51_web_search-WEB01-R03"
+    },
+    {
+      "after": {
+        "evidence_locator_ids": [
+          "WEB05-E03"
+        ],
+        "name": "PFOA removal with nanofiltration alone (no electric field)",
+        "qualifiers": "Described as \"about 45% removal\" for filtration alone under otherwise similar conditions but without applied electric field",
+        "unit": "%",
+        "value": "~45",
+        "value_form": "approximate_numeric"
+      },
+      "before": {
+        "evidence_locator_ids": [
+          "WEB05-E03"
+        ],
+        "name": "PFOA removal with nanofiltration alone (no electric field)",
+        "qualifiers": "Described as \"about 45% removal\" for filtration alone under otherwise similar conditions but without applied electric field",
+        "unit": "%",
+        "value": "45",
+        "value_form": "approximate_numeric"
+      },
+      "field_path": "quantitative_findings[1]",
+      "reason": "added_declared_approximation_marker",
+      "record_id": "RT04-gpt51_web_search-WEB05-R01"
+    }
+  ],
+  "deterministic_field_rejections": [],
+  "deterministic_preverification_rejections": [],
+  "records": [
+    {
+      "citation": "Johnson JK, Salerno KM, Schlesinger DR, Le NQ, Ko JS, Xia Z. Removing forever chemicals via amphiphilic functionalized membranes. npj Clean Water. 2022;5:55.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E02",
+          "WEB01-E05"
+        ],
+        "reason": "Bench-scale dynamic filtration in a simple deionized-water matrix with a defined PFAS mixture and clearly stated feed concentration and removal endpoint allows comparison to other adsorption-based membrane or sorbent studies using similar matrices and concentration ranges, while noting that mechanism is adsorption rather than size exclusion.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1038/s41545-022-00193-y",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB01-E02",
+            "WEB01-E05"
+          ],
+          "interpretation": "Measured as percent removal of each PFAS from the feed during dynamic filtration; primarily due to sorptive interactions with the amphiphilic silane coating rather than size exclusion.",
+          "reported_term": "PFAS removal efficiency"
+        },
+        {
+          "endpoint_type": "sorption",
+          "evidence_locator_ids": [
+            "WEB01-E05"
+          ],
+          "interpretation": "Authors attribute removal to fluorophilic C\u2013F\u2026F\u2013C and hydrophobic interactions between PFAS and amphiphilic silane coatings on the ceramic support, indicating adsorption-driven separation.",
+          "reported_term": "Fluorophilic and hydrophobic adsorption"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB01-E05"
+          ],
+          "statement": "Ceramic \u03b3-AlOOH support with amphiphilic silane coatings differs from conventional polymeric NF/RO membranes, so hydraulic and fouling behavior may not be directly transferable to typical pressure-driven membrane systems."
+        },
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "statement": "Experiments used deionized water challenge solutions rather than natural waters containing organic matter and competing ions, limiting direct applicability to full-scale drinking water matrices."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB01-E01"
+        ],
+        "value": "Deionized water spiked with a mixture of 18 PFAS (EPA Method 537.1)"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "name": "PFAS feed concentration",
+          "qualifiers": "Mixture of 18 PFAS, each at 100 ppt in deionized water",
+          "unit": "ppt per PFAS",
+          "value": "100"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "value": "Mixture of 18 PFAS from EPA Method 537.1 including PFHxA, PFHpA, PFOA, PFNA, PFDA, PFTeDA, PFBS, PFHxS, PFOS, HFPODA, DONA, and several chlorinated ether acids"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E02"
+          ],
+          "name": "PFAS removal (F16\u20134PEG and H16\u20134PEG filters, 10 of 18 PFAS)",
+          "qualifiers": "Complete removal defined as >99.5% for ten of the eighteen PFAS at 100 ppt per compound in deionized water under dynamic filtration",
+          "unit": "%",
+          "value": ">99.5",
+          "value_form": "inequality"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "name": "PFAS feed concentration",
+          "qualifiers": "Challenge solution with 100 ppt each of 18 PFAS in deionized water",
+          "unit": "ppt per PFAS",
+          "value": "100",
+          "value_form": "exact_numeric"
+        }
+      ],
+      "record_id": "RT04-gpt51_web_search-WEB01-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB01-E02",
+            "WEB01-E05"
+          ],
+          "statement": "PFAS were removed primarily by adsorption to the amphiphilic coating; no transformation, degradation, or defluorination products were described in the reported passages."
+        }
+      ],
+      "source_id": "WEB01",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E02"
+        ],
+        "value": "Bench-scale dynamic filtration tests with functionalized \u03b3-AlOOH ceramic filters"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E02",
+          "WEB01-E05"
+        ],
+        "value": "Dynamic filtration through amphiphilic silane-functionalized \u03b3-AlOOH ceramic filters (F16\u20134PEG and H16\u20134PEG coatings)"
+      }
+    },
+    {
+      "citation": "Johnson JK, Salerno KM, Schlesinger DR, Le NQ, Ko JS, Xia Z. Removing forever chemicals via amphiphilic functionalized membranes. npj Clean Water. 2022;5:55.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E03",
+          "WEB01-E05"
+        ],
+        "reason": "Bench-scale dynamic filtration with defined PFAS mixture and feed concentration, adsorption-driven removal endpoint, and deionized-water matrix can be compared to other PFAS adsorption or membrane studies operating at similar concentration ranges, while conditions differ from natural waters.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1038/s41545-022-00193-y",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB01-E03",
+            "WEB01-E05"
+          ],
+          "interpretation": "Percent removal of each PFAS from the feed under dynamic filtration at 750 ppt per PFAS; removal primarily governed by sorptive interactions with the amphiphilic coating.",
+          "reported_term": "PFAS removal efficiency at elevated feed concentration"
+        },
+        {
+          "endpoint_type": "sorption",
+          "evidence_locator_ids": [
+            "WEB01-E03",
+            "WEB01-E05"
+          ],
+          "interpretation": "Highly efficient uptake of long-chain PFCAs and PFSAs consistent with fluorophilic and hydrophobic adsorption onto the amphiphilic silane layer rather than size exclusion.",
+          "reported_term": "Adsorptive PFAS uptake by F16\u20134PEG coating"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "statement": "Use of deionized water and model PFAS mixtures may underestimate competition effects and fouling found in natural waters."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB01-E03",
+            "WEB01-E05"
+          ],
+          "statement": "Separation is adsorption-based; performance at higher concentrations reflects sorption capacity and kinetics rather than membrane sieving, which limits comparability to size-exclusion-driven NF/RO."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E03"
+        ],
+        "value": "Deionized water spiked with mixture of 18 PFAS (EPA Method 537.1)"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E03"
+          ],
+          "name": "PFAS feed concentration",
+          "qualifiers": "Higher challenge concentration of 750 ppt per compound in deionized water",
+          "unit": "ppt per PFAS",
+          "value": "750"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E03"
+          ],
+          "value": "Mixture of 18 PFAS from EPA Method 537.1 including PFHxA, PFHpA, PFOA, PFNA, PFDA, PFTeDA, PFBS, PFHxS, PFOS, HFPODA, DONA, and several chlorinated ether acids"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E03"
+          ],
+          "name": "PFAS removal (all PFAS except HFPODA)",
+          "qualifiers": "F16\u20134PEG functionalized filter at 750 ppt per PFAS showed >95% removal for all PFAS except HFPODA; long-chain PFCAs and PFSAs showed particularly high removal efficiencies.",
+          "unit": "%",
+          "value": ">95",
+          "value_form": "inequality"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E03"
+          ],
+          "name": "PFAS feed concentration",
+          "qualifiers": "Higher challenge concentration per compound in deionized water",
+          "unit": "ppt per PFAS",
+          "value": "750",
+          "value_form": "exact_numeric"
+        }
+      ],
+      "record_id": "RT04-gpt51_web_search-WEB01-R02",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB01-E03",
+            "WEB01-E05"
+          ],
+          "statement": "No PFAS transformation products or defluorination were reported in conjunction with the high-removal tests; endpoint is removal via sorption only."
+        }
+      ],
+      "source_id": "WEB01",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB01-E03"
+        ],
+        "value": "Bench-scale dynamic filtration tests at elevated PFAS concentration with F16\u20134PEG-functionalized ceramic filters"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB01-E03",
+          "WEB01-E05"
+        ],
+        "value": "Dynamic filtration through F16\u20134PEG amphiphilic silane-functionalized \u03b3-AlOOH ceramic filters"
+      }
+    },
+    {
+      "citation": "Johnson JK, Salerno KM, Schlesinger DR, Le NQ, Ko JS, Xia Z. Removing forever chemicals via amphiphilic functionalized membranes. npj Clean Water. 2022;5:55.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB01-E04",
+          "WEB01-E05"
+        ],
+        "reason": "The primary quantitative comparison is a fold-difference in breakthrough volume between amphiphilic filters and GAC at a single, relatively high flux and simplified matrix; these data are useful for relative capacity ranking but not directly comparable to conventional membrane performance metrics such as pressure-normalized permeability or energy use.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1038/s41545-022-00193-y",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB01-E04",
+            "WEB01-E05"
+          ],
+          "interpretation": "Breakthrough volume used as a surrogate for adsorption capacity; removal driven by sorption to the amphiphilic coating. Comparison made to Filtrasorb 300 GAC under identical flux and influent conditions.",
+          "reported_term": "Breakthrough volume / capacity for PFOA and PFOS removal"
+        },
+        {
+          "endpoint_type": "sorption",
+          "evidence_locator_ids": [
+            "WEB01-E04",
+            "WEB01-E05"
+          ],
+          "interpretation": "Higher breakthrough volume for amphiphilic filters indicates greater sorption capacity for PFOA compared to GAC at the tested conditions.",
+          "reported_term": "Relative adsorption capacity (breakthrough volume)"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB01-E04"
+          ],
+          "statement": "Breakthrough tests conducted at high flux (~1223 L m-2 h-1) may not represent typical full-scale drinking-water membrane operating conditions."
+        },
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB01-E04"
+          ],
+          "statement": "Study did not provide detailed energy consumption or headloss data for these breakthrough experiments, limiting process-level energy comparison."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB01-E04"
+          ],
+          "statement": "Matrix is a simplified laboratory solution without natural organic matter, so competitive adsorption and fouling effects relevant to field waters are not captured."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB01-E04"
+        ],
+        "value": "Aqueous solution (laboratory challenge water) containing PFOA and PFOS at combined influent concentration ~1 \u00b5g/L"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E04"
+          ],
+          "name": "Combined PFOA + PFOS influent concentration",
+          "qualifiers": "Approximate combined influent concentration of PFOA and PFOS",
+          "unit": "\u00b5g/L",
+          "value": "1"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E04"
+          ],
+          "name": "Permeate flux",
+          "qualifiers": "Flux during breakthrough experiments for amphiphilic silane-functionalized filters and Filtrasorb 300 GAC",
+          "unit": "L m-2 h-1",
+          "value": "1223"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E04"
+          ],
+          "value": "PFOA"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E04"
+          ],
+          "value": "PFOS"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E04"
+          ],
+          "name": "Permeate flux during breakthrough tests",
+          "qualifiers": "Flux used in PFOA/PFOS breakthrough experiments for both amphiphilic filters and Filtrasorb 300 GAC",
+          "unit": "L m-2 h-1",
+          "value": "1223",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E04"
+          ],
+          "name": "Relative PFOA breakthrough volume (functionalized filter vs GAC)",
+          "qualifiers": "Amphiphilic silane-functionalized filters had 30\u201380 times greater PFOA breakthrough volume than Filtrasorb 300 GAC under the same influent concentration and flux.",
+          "unit": "fold",
+          "value": "30-80",
+          "value_form": "range"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E04"
+          ],
+          "name": "Combined PFOA+PFOS influent concentration",
+          "qualifiers": "\"About\" 1 \u00b5g/L combined influent concentration; exact split between PFOA and PFOS not specified in provided passage.",
+          "unit": "\u00b5g/L",
+          "value": "~1",
+          "value_form": "approximate_numeric"
+        }
+      ],
+      "record_id": "RT04-gpt51_web_search-WEB01-R03",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB01-E04",
+            "WEB01-E05"
+          ],
+          "statement": "Endpoint is PFAS breakthrough/removal; no formation of degradation products or inorganic fluoride was discussed in the provided passages."
+        }
+      ],
+      "source_id": "WEB01",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB01-E04"
+        ],
+        "value": "Bench-scale dynamic breakthrough experiments with functionalized filters compared to GAC"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB01-E04",
+          "WEB01-E05"
+        ],
+        "value": "Dynamic filtration through amphiphilic silane-functionalized \u03b3-AlOOH ceramic filters; comparison to Filtrasorb 300 granular activated carbon under the same conditions"
+      }
+    },
+    {
+      "citation": "Liu CJ, McKay G, Jiang D, Tenorio R, Cath JT, Amador C, Murray CC, Brown JB, Wright HB, Schaefer C, Higgins CP, Bellona C, Strathmann TJ. Pilot-scale field demonstration of a hybrid nanofiltration and UV-sulfite treatment train for groundwater contaminated by per- and polyfluoroalkyl substances (PFASs). Water Res. 2021;205:117677.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB02-E01",
+          "WEB02-E02",
+          "WEB02-E05",
+          "WEB02-E07"
+        ],
+        "reason": "Rejection data are reported for a defined groundwater matrix at 90% recovery over a 30-day pilot trial. While pressure and membrane material are not reported, the clearly defined recovery and field operation make these data conditionally comparable to other NF pilot studies in similar groundwater matrices, provided differences in matrix, PFAS mixture, and recovery are accounted for.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1016/j.watres.2021.117677",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB02-E02"
+          ],
+          "interpretation": "NF removed PFAS from groundwater by rejecting them to the concentrate; for most detected PFAS, rejection was consistently high (>=95%) at 90% recovery, but rejection of short-chain PFSAs decreased when recovery increased from 90 to 97%.",
+          "reported_term": "PFAS rejection"
+        },
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB02-E07"
+          ],
+          "interpretation": "High PFAS rejection by NF attributed to electrostatic repulsion between negatively charged membrane polymers at groundwater pH ~7.3 and size exclusion of anionic PFAS species.",
+          "reported_term": "rejection mechanisms"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB02-E01",
+            "WEB02-E02",
+            "WEB02-E05"
+          ],
+          "statement": "NF module characteristics (membrane material, manufacturer, surface charge, nominal MWCO) and operating pressure are not fully specified in the excerpt, limiting transferability of permeability and energy estimates."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB02-E01"
+          ],
+          "statement": "Results are specific to AFFF-impacted groundwater with 12 detected PFAS and may not represent other PFAS mixtures or matrices (e.g., municipal wastewater, surface water)."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB02-E01"
+        ],
+        "value": "AFFF-impacted groundwater at a U.S. Department of Defense installation"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E05"
+          ],
+          "name": "operation_mode",
+          "qualifiers": "",
+          "unit": null,
+          "value": "Recirculating semi-batch NF"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E02",
+            "WEB02-E05"
+          ],
+          "name": "total_permeate_recovery",
+          "qualifiers": "NF system operated to 90% total water recovery, producing 10% reject stream for downstream UV-sulfite treatment",
+          "unit": "%",
+          "value": "90"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E02"
+          ],
+          "name": "field_trial_duration",
+          "qualifiers": "NF rejection performance reported over a 30-day field trial",
+          "unit": "days",
+          "value": "30"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E01"
+          ],
+          "value": "12 PFAS detected in AFFF-impacted groundwater (specific identities not all listed in excerpt)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E02"
+          ],
+          "value": "Short-chain perfluoroalkyl sulfonates (short-chain PFSAs) noted as having lower rejection at higher recovery"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E02"
+          ],
+          "name": "PFAS rejection by NF at 90% recovery",
+          "qualifiers": "For most detected PFAS, rejection was consistently >=95% over a 30-day field trial when operating at 90% total permeate recovery.",
+          "unit": "%",
+          "value": ">=95",
+          "value_form": "inequality"
+        }
+      ],
+      "record_id": "RT04-gpt51_web_search-WEB02-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB02-E02",
+            "WEB02-E05"
+          ],
+          "statement": "NF produced a 10% volumetric reject stream enriched in PFAS that required further treatment via UV-sulfite; NF alone did not destroy PFAS but transferred them to the concentrate."
+        }
+      ],
+      "source_id": "WEB02",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB02-E01",
+          "WEB02-E02"
+        ],
+        "value": "Pilot-scale field NF treatment of AFFF-impacted groundwater over 30-day trial"
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB02-E01",
+          "WEB02-E05"
+        ],
+        "value": "Nanofiltration (NF) as part of a hybrid NF + UV-sulfite treatment train"
+      }
+    },
+    {
+      "citation": "Liu CJ, McKay G, Jiang D, Tenorio R, Cath JT, Amador C, Murray CC, Brown JB, Wright HB, Schaefer C, Higgins CP, Bellona C, Strathmann TJ. Pilot-scale field demonstration of a hybrid nanofiltration and UV-sulfite treatment train for groundwater contaminated by per- and polyfluoroalkyl substances (PFASs). Water Res. 2021;205:117677.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB02-E02",
+          "WEB02-E03",
+          "WEB02-E04",
+          "WEB02-E07"
+        ],
+        "reason": "NF and RO were operated at identical permeate flux (18.8 LMH) and reject flow (6.2 L/min), with the same groundwater matrix and spiked PFAS, enabling direct comparison of PFAS rejection versus recovery between the two membrane types. Comparisons to other studies still require accounting for differences in PFAS mixture, recovery range, and feed water chemistry.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1016/j.watres.2021.117677",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB02-E02"
+          ],
+          "interpretation": "NF rejection of PFAS decreased for short-chain PFSAs as permeate recovery increased from 90 to 97%, illustrating a tradeoff between recovery and PFAS removal performance.",
+          "reported_term": "NF rejection"
+        },
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB02-E03",
+            "WEB02-E04"
+          ],
+          "interpretation": "RO showed superior PFAS rejection compared to NF under matched hydraulic conditions, with rejection >99% for five tested PFAS at all recoveries.",
+          "reported_term": "RO rejection"
+        },
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB02-E07"
+          ],
+          "interpretation": "High PFAS rejection by both NF and RO attributed to electrostatic repulsion from negatively charged membrane polymers and size exclusion of anionic PFAS at groundwater pH ~7.3.",
+          "reported_term": "rejection mechanisms"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB02-E03",
+            "WEB02-E04"
+          ],
+          "statement": "Exact NF and RO membrane types, materials, and operating pressures are not provided in the excerpt, limiting interpretation of permeability and energy use."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB02-E01",
+            "WEB02-E03"
+          ],
+          "statement": "The recovery-dependent rejection data are specific to AFFF-impacted groundwater and a limited set of PFAS (primarily PFHxA, PFOA, PFBS, PFHxS, PFOS); behavior for other PFAS or matrices may differ."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB02-E01",
+          "WEB02-E03"
+        ],
+        "value": "AFFF-impacted groundwater spiked with selected PFAS for controlled NF/RO rejection comparison"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E04"
+          ],
+          "name": "permeate_flux",
+          "qualifiers": "Both NF and RO membranes operated at 18.8 LMH during recovery-dependent rejection experiments.",
+          "unit": "LMH",
+          "value": "18.8"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E04"
+          ],
+          "name": "reject_flow_rate",
+          "qualifiers": "Both NF and RO operated at 6.2 L/min reject flow for direct comparison.",
+          "unit": "L/min",
+          "value": "6.2"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "name": "PFAS_spike_concentration",
+          "qualifiers": "Five PFAS (PFHxA, PFOA, PFBS, PFHxS, PFOS) each spiked at 0.5 \u00b5g/L into groundwater for RO rejection experiments.",
+          "unit": "\u00b5g/L",
+          "value": "0.5"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E02",
+            "WEB02-E03"
+          ],
+          "name": "recovery_range",
+          "qualifiers": "Rejection of short-chain PFSAs by NF decreased when recovery increased from 90 to 97%; RO rejection of the spiked PFAS exceeded 99% at all tested recoveries (exact recoveries not otherwise specified in excerpt).",
+          "unit": null,
+          "value": ""
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "value": "PFHxA, PFOA, PFBS, PFHxS, PFOS each spiked at 0.5 \u00b5g/L into groundwater for RO experiments; same PFAS considered for NF vs RO rejection comparison."
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E03",
+            "WEB02-E04"
+          ],
+          "name": "RO rejection of PFHxA, PFOA, PFBS, PFHxS, PFOS",
+          "qualifiers": "When each PFAS was spiked at 0.5 \u00b5g/L into groundwater, RO rejection exceeded 99% at all tested recoveries, under 18.8 LMH flux and 6.2 L/min reject flow.",
+          "unit": "%",
+          "value": ">99",
+          "value_form": "inequality"
+        }
+      ],
+      "record_id": "RT04-gpt51_web_search-WEB02-R02",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB02-E02",
+            "WEB02-E03",
+            "WEB02-E04"
+          ],
+          "statement": "NF and RO primarily act as separation processes concentrating PFAS in the reject stream; no PFAS destruction was reported for these membrane steps in the excerpt."
+        }
+      ],
+      "source_id": "WEB02",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB02-E03",
+          "WEB02-E04"
+        ],
+        "value": "Pilot-associated NF and RO recovery-dependent rejection experiments under controlled hydraulic conditions"
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB02-E02",
+          "WEB02-E03",
+          "WEB02-E04"
+        ],
+        "value": "Comparison of nanofiltration (NF) and reverse osmosis (RO) membranes operated at matched flux and reject flow to assess PFAS rejection as a function of water recovery."
+      }
+    },
+    {
+      "citation": "Liu CJ, McKay G, Jiang D, Tenorio R, Cath JT, Amador C, Murray CC, Brown JB, Wright HB, Schaefer C, Higgins CP, Bellona C, Strathmann TJ. Pilot-scale field demonstration of a hybrid nanofiltration and UV-sulfite treatment train for groundwater contaminated by per- and polyfluoroalkyl substances (PFASs). Water Res. 2021;205:117677.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB02-E05",
+          "WEB02-E06"
+        ],
+        "reason": "UV-sulfite treatment conditions (10 mM sulfite, pH 11.2, up to 8 h irradiation) and reported EE/O values are specific to this pilot system and NF reject composition. Differences in reactor design, lamp type, and NF concentrate composition in other studies limit direct quantitative comparison, so these data are best used qualitatively for benchmarking.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1016/j.watres.2021.117677",
+      "endpoints": [
+        {
+          "endpoint_type": "destruction",
+          "evidence_locator_ids": [
+            "WEB02-E06"
+          ],
+          "interpretation": "The UV-sulfite process decreased PFAS parent mass in the NF reject, with >75% mass destroyed after 4 h and >90% after 8 h, based on measured PFAS concentrations. Parent loss was interpreted as PFAS destruction, although formation of transformation products is not detailed in the excerpt.",
+          "reported_term": "PFAS mass destroyed"
+        },
+        {
+          "endpoint_type": "defluorination",
+          "evidence_locator_ids": [
+            "WEB02-E06"
+          ],
+          "interpretation": "Energy per order values were calculated for removal of PFCAs and PFOS, and were relatively low (<=13.1\u201314.1 kWh/m3), whereas some short-chain PFSAs required >100 kWh/m3 for equivalent removal, indicating more energy-intensive treatment for short-chain sulfonates.",
+          "reported_term": "energy per order (EE/O) for PFAS removal"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB02-E06"
+          ],
+          "statement": "The excerpt does not provide direct measurements of inorganic fluoride or total organofluorine, so the extent of defluorination and mineralization cannot be confirmed."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB02-E06"
+          ],
+          "statement": "EE/O values include contributions from both UV reactor and associated systems; membrane-only energy contributions are not isolated, limiting attribution within the treatment train."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB02-E01",
+          "WEB02-E05"
+        ],
+        "value": "NF reject (10% of feed volume) from AFFF-impacted groundwater"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E05"
+          ],
+          "name": "sulfite_concentration",
+          "qualifiers": "Sulfite amended to NF reject at 10 mM for UV treatment.",
+          "unit": "mM",
+          "value": "10"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E05"
+          ],
+          "name": "pH",
+          "qualifiers": "UV reactor operated at pH 11.2 during sulfite treatment.",
+          "unit": "",
+          "value": "11.2"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E05",
+            "WEB02-E06"
+          ],
+          "name": "treatment_time",
+          "qualifiers": "NF reject treated in UV reactor for up to 8 h; PFAS destruction evaluated at 4 and 8 h.",
+          "unit": "h",
+          "value": "0-8"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E01",
+            "WEB02-E06"
+          ],
+          "value": "PFAS present in NF reject derived from 12 PFAS detected in AFFF-impacted groundwater; results differentiated for PFCAs, PFOS, and some short-chain PFSAs."
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E06"
+          ],
+          "name": "PFAS mass destroyed after 4 h UV-sulfite",
+          "qualifiers": "More than 75% of the detected PFAS mass in NF reject was destroyed after 4 h of UV treatment with 10 mM sulfite at pH 11.2.",
+          "unit": "%",
+          "value": ">=75",
+          "value_form": "inequality"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E06"
+          ],
+          "name": "PFAS mass destroyed after 8 h UV-sulfite",
+          "qualifiers": "PFAS mass destruction increased to over 90% after 8 h UV treatment under the same conditions.",
+          "unit": "%",
+          "value": ">=90",
+          "value_form": "inequality"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E06"
+          ],
+          "name": "EE/O for PFCAs",
+          "qualifiers": "Energy per order (EE/O) for PFCAs during UV-sulfite treatment was reported as <=13.1 kWh/m3.",
+          "unit": "kWh/m3",
+          "value": "<=13.1",
+          "value_form": "inequality"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E06"
+          ],
+          "name": "EE/O for PFOS",
+          "qualifiers": "Energy per order (EE/O) for PFOS was 14.1 kWh/m3.",
+          "unit": "kWh/m3",
+          "value": "14.1",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E06"
+          ],
+          "name": "EE/O for some short-chain PFSAs",
+          "qualifiers": "For some short-chain PFSAs, EE/O exceeded 100 kWh/m3, indicating much higher energy demand for their removal.",
+          "unit": "kWh/m3",
+          "value": ">100",
+          "value_form": "inequality"
+        }
+      ],
+      "record_id": "RT04-gpt51_web_search-WEB02-R03",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB02-E06"
+          ],
+          "statement": "While PFAS parent mass was substantially reduced (>90% after 8 h), the excerpt does not specify the identity or concentrations of transformation products or released inorganic fluoride, leaving uncertainty about byproduct formation and final fluorine speciation."
+        }
+      ],
+      "source_id": "WEB02",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB02-E01",
+          "WEB02-E05",
+          "WEB02-E06"
+        ],
+        "value": "Pilot-scale UV-sulfite treatment of NF reject from AFFF-impacted groundwater"
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB02-E05",
+          "WEB02-E06"
+        ],
+        "value": "UV-sulfite advanced reduction process treating NF reject, with sulfite amendment at alkaline pH."
+      }
+    },
+    {
+      "citation": "Appleman TD, Dickenson ERV, Bellona C, Higgins CP. Removal of Per- and Polyfluoroalkyl Substances with Nanofiltration. In: A10 Pump and Treat for PFAS Remediation, Paper 645. Battelle Chlorinated Conference Proceedings; 2018.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB03-E01",
+          "WEB03-E02",
+          "WEB03-E03",
+          "WEB03-E04"
+        ],
+        "reason": "The study reports qualitative and limited quantitative PFAS rejection results (>90% for common PFAS in spiked AFFF experiments) without specifying membrane properties, operating pressures, fluxes, recoveries, or influent PFAS concentrations. This allows only high-level confirmation that NF can effectively remove PFAS from AFFF-related matrices, but does not support detailed quantitative comparison of performance across membrane technologies or operating regimes.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://www.battelle.org/docs/default-source/conferences/chlorinated-conference-proceedings/2018-chlorinated-conference-proceedings/a10-pump-and-treat-for-pfas-remediation/645.pdf?sfvrsn=23188188_0",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB03-E02",
+            "WEB03-E03",
+            "WEB03-E04"
+          ],
+          "interpretation": "PFAS rejection by NF membranes, quantified as percentage of PFAS retained by the membrane (i.e., removal from permeate) with no evidence of PFAS transformation or destruction; authors describe this as rejection/removal rather than degradation.",
+          "reported_term": "PFAS rejection"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB03-E02",
+            "WEB03-E04"
+          ],
+          "statement": "Conference abstract format provides only preliminary results with limited quantitative detail on membrane properties, operating conditions (pressure, flux, recovery), and performance metrics such as permeability, fouling, and energy consumption."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB03-E03"
+          ],
+          "statement": "Experiments focus on PFAS mixtures associated with AFFF (spiked formulation and AFFF-impacted groundwaters), which may limit generalizability to other PFAS compositions or lower-concentration drinking water matrices."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB03-E01",
+            "WEB03-E02"
+          ],
+          "statement": "Specific nanofiltration membrane types and material properties are not specified in the abstract, constraining mechanistic interpretation and comparison across membrane processes."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB03-E03"
+        ],
+        "value": "Spiked aqueous film-forming foam (AFFF) formulation and AFFF-impacted groundwater from a Department of Defense site and an affected community"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB03-E01",
+            "WEB03-E02"
+          ],
+          "name": "Membrane process type",
+          "qualifiers": "Used to remove PFAS; evaluated in both laboratory and pilot-scale studies",
+          "unit": null,
+          "value": "Nanofiltration (NF)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB03-E01"
+          ],
+          "name": "Energy comparison",
+          "qualifiers": "Qualitative comparison noted in abstract; no specific energy values reported",
+          "unit": null,
+          "value": "NF lower energy cost than RO"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB03-E02",
+            "WEB03-E03",
+            "WEB03-E04"
+          ],
+          "value": "Wide range of PFAS present in an AFFF formulation (\"common PFAS compounds\"), including mixtures in AFFF-impacted groundwaters"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB03-E04"
+          ],
+          "name": "PFAS rejection (common PFAS compounds in spiked experiments)",
+          "qualifiers": "Preliminary laboratory results for common PFAS compounds in spiked AFFF experiments; exact PFAS identities, membrane properties, pressures, fluxes, and recoveries not reported.",
+          "unit": "%",
+          "value": ">90",
+          "value_form": "inequality"
+        }
+      ],
+      "record_id": "RT04-gpt51_web_search-WEB03-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB03-E01",
+            "WEB03-E04"
+          ],
+          "statement": "The abstract does not report measurements of PFAS transformation products, inorganic fluoride, or other byproducts, implying that the NF process is evaluated solely as a separation technology without claimed PFAS degradation or destruction."
+        }
+      ],
+      "source_id": "WEB03",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB03-E02",
+          "WEB03-E03"
+        ],
+        "value": "Laboratory- and pilot-scale nanofiltration experiments and pilot studies for PFAS removal"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB03-E01",
+          "WEB03-E02"
+        ],
+        "value": "Pressure-driven nanofiltration (NF) membrane process for PFAS removal; reverse osmosis (RO) discussed comparatively as higher-energy alternative but not the primary focus of experiments"
+      }
+    },
+    {
+      "citation": "Shi CY, Chen G, Dum\u00e9e LF. Perfluoroalkyl substances concentration from groundwater via direct contact membrane distillation. npj Clean Water. 2024;7:115.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB04-E01",
+          "WEB04-E02",
+          "WEB04-E03",
+          "WEB04-E05"
+        ],
+        "reason": "PVDF DCMD experiments use the same PFAS (PFOA), similar 10 mg/L feed concentration in model groundwater, and the same DCMD configuration and operating temperature as the PTFE experiments, differing primarily in membrane material and resulting flux decline; this supports direct comparison of fouling/flux decline between the two membranes under matched conditions.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1038/s41545-024-00414-6",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB04-E01",
+            "WEB04-E05"
+          ],
+          "interpretation": "DCMD with a hydrophobic PVDF membrane was used to concentrate and remove PFOA from contaminated model groundwater over long-term operation; detailed rejection factors are not provided in the extracted text but the study links PFAS removal to membrane surface chemistry and PFAS\u2013polymer interactions.",
+          "reported_term": "PFAS removal and concentration"
+        },
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB04-E03"
+          ],
+          "interpretation": "Over 120 h of DCMD operation at 60 \u00b0C feed temperature with 10 mg/L PFOA model groundwater, the PVDF membrane exhibited about 15% flux decline, indicating relatively low fouling propensity compared with PTFE.",
+          "reported_term": "Flux decline / fouling behaviour"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB04-E04"
+          ],
+          "statement": "As a thermal DCMD process, the PVDF membrane experiments are not directly comparable on an energy basis with pressure-driven NF and RO membranes; the paper notes that NF/RO can experience up to 60% flux decline in high-salinity and high-organic matrices, whereas MD is less sensitive to such fouling."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB04-E02"
+        ],
+        "value": "Model groundwater spiked with 10 mg/L PFOA, prepared in deionized water and in synthetic groundwater (NaHCO3, CaCl2, KCl) to represent ionic strength and hardness"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E01"
+          ],
+          "name": "process type",
+          "qualifiers": "",
+          "unit": null,
+          "value": "Direct contact membrane distillation (DCMD)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E01",
+            "WEB04-E05"
+          ],
+          "name": "membrane material",
+          "qualifiers": "",
+          "unit": null,
+          "value": "PVDF (hydrophobic flat-sheet)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E05"
+          ],
+          "name": "average membrane pore size",
+          "qualifiers": "Commercial hydrophobic PVDF flat-sheet membrane",
+          "unit": "\u00b5m",
+          "value": "0.20"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "feed PFAS concentration",
+          "qualifiers": "PFOA in deionized water and synthetic groundwater matrices",
+          "unit": "mg/L",
+          "value": "10"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E03"
+          ],
+          "name": "feed temperature",
+          "qualifiers": "DCMD operation for 120 h with 10 mg/L PFOA-contaminated model groundwater",
+          "unit": "\u00b0C",
+          "value": "60"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E03"
+          ],
+          "name": "operation time",
+          "qualifiers": "Continuous DCMD run evaluating PFOA removal and flux decline",
+          "unit": "h",
+          "value": "120"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E01",
+            "WEB04-E02"
+          ],
+          "value": "Perfluorooctanoic acid (PFOA) at 10 mg/L in model groundwater"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "PFOA feed concentration",
+          "qualifiers": "Model groundwater prepared with 10 mg/L PFOA in deionized water and synthetic groundwater containing NaHCO3, CaCl2, and KCl",
+          "unit": "mg/L",
+          "value": "10",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E03"
+          ],
+          "name": "flux decline over 120 h",
+          "qualifiers": "Approximate flux decline for PVDF DCMD membrane after 120 h operation at 60 \u00b0C treating 10 mg/L PFOA-contaminated model groundwater",
+          "unit": "%",
+          "value": "15",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E05"
+          ],
+          "name": "membrane pore size",
+          "qualifiers": "Average pore size of hydrophobic PVDF flat-sheet membrane used for DCMD",
+          "unit": "\u00b5m",
+          "value": "0.20",
+          "value_form": "exact_numeric"
+        }
+      ],
+      "record_id": "RT04-gpt51_web_search-WEB04-R01",
+      "residuals_byproducts": [],
+      "source_id": "WEB04",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB04-E01",
+          "WEB04-E05"
+        ],
+        "value": "Bench-scale direct contact membrane distillation (DCMD) cell with hydrophobic PVDF flat-sheet membrane"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB04-E01",
+          "WEB04-E05"
+        ],
+        "value": "Direct contact membrane distillation (DCMD) using a hydrophobic PVDF flat-sheet membrane (average pore size 0.20 \u00b5m) to concentrate and remove PFOA from contaminated groundwater"
+      }
+    },
+    {
+      "citation": "Shi CY, Chen G, Dum\u00e9e LF. Perfluoroalkyl substances concentration from groundwater via direct contact membrane distillation. npj Clean Water. 2024;7:115.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB04-E01",
+          "WEB04-E02",
+          "WEB04-E03",
+          "WEB04-E05"
+        ],
+        "reason": "PTFE DCMD experiments use the same PFAS (PFOA), 10 mg/L feed concentration in model groundwater, DCMD configuration, and operating temperature as the PVDF experiments, differing mainly in membrane material and exhibiting a larger flux decline (43% vs 15%), which supports direct comparison of relative fouling and flux performance between the two membranes.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1038/s41545-024-00414-6",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB04-E01",
+            "WEB04-E05"
+          ],
+          "interpretation": "DCMD with a hydrophobic PTFE membrane was used alongside PVDF to concentrate and remove PFOA from contaminated model groundwater; detailed rejection factors are not provided in the extracted text.",
+          "reported_term": "PFAS removal and concentration"
+        },
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB04-E03"
+          ],
+          "interpretation": "Over 120 h of DCMD operation at 60 \u00b0C feed temperature with 10 mg/L PFOA model groundwater, the PTFE membrane exhibited about 43% flux decline, indicating substantially higher fouling propensity than the PVDF membrane under the same conditions.",
+          "reported_term": "Flux decline / fouling behaviour"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB04-E04"
+          ],
+          "statement": "As a thermal DCMD process, the PTFE membrane experiments are not directly comparable on an energy basis with pressure-driven NF and RO membranes; the paper notes that NF/RO can experience up to 60% flux decline in high-salinity and high-organic matrices, whereas MD is less sensitive to such fouling."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB04-E02"
+        ],
+        "value": "Model groundwater spiked with 10 mg/L PFOA, prepared in deionized water and in synthetic groundwater (NaHCO3, CaCl2, KCl) to represent ionic strength and hardness"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E01"
+          ],
+          "name": "process type",
+          "qualifiers": "",
+          "unit": null,
+          "value": "Direct contact membrane distillation (DCMD)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E01",
+            "WEB04-E05"
+          ],
+          "name": "membrane material",
+          "qualifiers": "",
+          "unit": null,
+          "value": "PTFE (hydrophobic flat-sheet)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E05"
+          ],
+          "name": "average membrane pore size",
+          "qualifiers": "Commercial hydrophobic PTFE flat-sheet membrane",
+          "unit": "\u00b5m",
+          "value": "0.20"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "feed PFAS concentration",
+          "qualifiers": "PFOA in deionized water and synthetic groundwater matrices",
+          "unit": "mg/L",
+          "value": "10"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E03"
+          ],
+          "name": "feed temperature",
+          "qualifiers": "DCMD operation for 120 h with 10 mg/L PFOA-contaminated model groundwater",
+          "unit": "\u00b0C",
+          "value": "60"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E03"
+          ],
+          "name": "operation time",
+          "qualifiers": "Continuous DCMD run evaluating PFOA removal and flux decline",
+          "unit": "h",
+          "value": "120"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E01",
+            "WEB04-E02"
+          ],
+          "value": "Perfluorooctanoic acid (PFOA) at 10 mg/L in model groundwater"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "PFOA feed concentration",
+          "qualifiers": "Model groundwater prepared with 10 mg/L PFOA in deionized water and synthetic groundwater containing NaHCO3, CaCl2, and KCl",
+          "unit": "mg/L",
+          "value": "10",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E03"
+          ],
+          "name": "flux decline over 120 h",
+          "qualifiers": "Approximate flux decline for PTFE DCMD membrane after 120 h operation at 60 \u00b0C treating 10 mg/L PFOA-contaminated model groundwater",
+          "unit": "%",
+          "value": "43",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E05"
+          ],
+          "name": "membrane pore size",
+          "qualifiers": "Average pore size of hydrophobic PTFE flat-sheet membrane used for DCMD",
+          "unit": "\u00b5m",
+          "value": "0.20",
+          "value_form": "exact_numeric"
+        }
+      ],
+      "record_id": "RT04-gpt51_web_search-WEB04-R02",
+      "residuals_byproducts": [],
+      "source_id": "WEB04",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB04-E01",
+          "WEB04-E05"
+        ],
+        "value": "Bench-scale direct contact membrane distillation (DCMD) cell with hydrophobic PTFE flat-sheet membrane"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB04-E01",
+          "WEB04-E05"
+        ],
+        "value": "Direct contact membrane distillation (DCMD) using a hydrophobic PTFE flat-sheet membrane (average pore size 0.20 \u00b5m) to concentrate and remove PFOA from contaminated groundwater"
+      }
+    },
+    {
+      "citation": "Choi YJ, Fang Y, Ji Y, Lee LS, Niu J, Nou A, Pham HS, Warsinger DEM. Electric Field-Assisted Nanofiltration. Purdue Research Foundation; technology brief 2024-JI-70364.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB05-E01",
+          "WEB05-E02",
+          "WEB05-E03"
+        ],
+        "reason": "The study provides overall percentage removal of PFOA at a stated flux and applied voltage, but lacks membrane properties, pressure, recovery, and water chemistry details. The destruction component is not quantified separately from removal, limiting direct quantitative comparison with conventional nanofiltration or reverse osmosis studies focused solely on separation performance.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://licensing.prf.org/product/electric-field-assisted-nanofiltration/print",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB05-E02",
+            "WEB05-E03"
+          ],
+          "interpretation": "Percentage of PFOA removed from the flowing water sample; authors state that removal with electric field assistance includes concentration at the membrane and subsequent electrochemical destruction near the anode, while filtration alone represents nanofiltration without electric field.",
+          "reported_term": "PFAS removal and destruction efficiency"
+        },
+        {
+          "endpoint_type": "destruction",
+          "evidence_locator_ids": [
+            "WEB05-E01",
+            "WEB05-E02"
+          ],
+          "interpretation": "Authors claim that a substantial fraction of the PFOA removed in the electric field-assisted configuration is actually destroyed at or near the reactive anode, but no separate numeric destruction or defluorination metric is reported beyond the combined 97% loss of parent compound.",
+          "reported_term": "PFAS removal and destruction efficiency"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB05-E01",
+            "WEB05-E02",
+            "WEB05-E03"
+          ],
+          "statement": "Technology brief is not a full peer-reviewed article; key experimental details such as membrane material, pore size or MWCO, module configuration, hydraulic pressure, recovery, and water chemistry are not reported."
+        },
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB05-E02",
+            "WEB05-E04"
+          ],
+          "statement": "Validation appears focused on PFOA in model water; performance for other PFAS chemistries (e.g., short-chain PFAS, PFEAs, fluorotelomer sulfonates) is not described."
+        },
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "statement": "Energy comparison is qualitative, claiming orders of magnitude less electrical energy than alternative destruction technologies without providing a full accounting of hydraulic and electrochemical energy inputs."
+        },
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB05-E04"
+          ],
+          "statement": "Long-term operation aspects such as membrane fouling, electrode stability, and management of any concentrated PFAS streams are not characterized in the brief."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB05-E01",
+            "WEB05-E02",
+            "WEB05-E03"
+          ],
+          "statement": "Because pressure, recovery, feed chemistry, and membrane properties are not specified, results are difficult to generalize or directly compare to other membrane PFAS treatment studies."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB05-E01",
+          "WEB05-E02"
+        ],
+        "value": "water sample containing PFOA (specific water chemistry and background constituents not reported)"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E03"
+          ],
+          "name": "applied_voltage",
+          "qualifiers": "Electric field applied across nanofiltration system to assist PFAS concentration and destruction",
+          "unit": "V",
+          "value": "30"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "name": "permeate_flux",
+          "qualifiers": "Flux during experiment reporting 97% PFOA removal and destruction",
+          "unit": "L m^-2 h^-1",
+          "value": "68.4"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E02",
+            "WEB05-E03"
+          ],
+          "value": "perfluorooctanoic acid (PFOA)"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E02",
+            "WEB05-E03"
+          ],
+          "name": "PFOA removal with electric field-assisted nanofiltration",
+          "qualifiers": "Reported as combined removal and destruction of PFOA in a flowing water sample at 68.4 L m^-2 h^-1 and 30 V applied electric field",
+          "unit": "%",
+          "value": "97",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E03"
+          ],
+          "name": "PFOA removal with nanofiltration alone (no electric field)",
+          "qualifiers": "Described as \"about 45% removal\" for filtration alone under otherwise similar conditions but without applied electric field",
+          "unit": "%",
+          "value": "~45",
+          "value_form": "approximate_numeric"
+        }
+      ],
+      "record_id": "RT04-gpt51_web_search-WEB05-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB05-E01",
+            "WEB05-E02"
+          ],
+          "statement": "The brief states that PFOA is destroyed near the reactive anode, implying transformation of concentrated PFAS, but it does not report quantitative data on inorganic fluoride release, transformation products, or total organofluorine balance."
+        }
+      ],
+      "source_id": "WEB05",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB05-E01",
+          "WEB05-E02",
+          "WEB05-E03"
+        ],
+        "value": "not reported (technology brief describes experimental validation but does not specify scale or reactor dimensions)"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB05-E01",
+          "WEB05-E03"
+        ],
+        "value": "electric field-assisted nanofiltration with a nanofiltration membrane positioned near a reactive anode; comparison to nanofiltration without applied electric field"
+      }
+    },
+    {
+      "citation": "TZW: DVGW \u2013 Technologiezentrum Wasser. PFAS removal using nanofiltration (KapillO-PFAS). Project description W 202304; 2023\u20132025.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB06-E01",
+          "WEB06-E02",
+          "WEB06-E04",
+          "WEB06-E05"
+        ],
+        "reason": "The pilot demonstrates that hollow-fiber NF can meet PFAS-20 and PFAS-4 regulatory limits in groundwater at multiple sites and offers qualitative information on stability and scaling control, but absence of numeric flux, pressure, recovery, PFAS concentrations, and ion rejection data prevents quantitative comparison with other membrane processes.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://tzw.de/en/projects/project-details/detail/projekte/hollow-fiber-nanofiltration",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E04"
+          ],
+          "interpretation": "PFAS-20 and PFAS-4 sum concentrations in treated water were reduced below the limits in the German Drinking Water Ordinance under all tested pilot operating settings.",
+          "reported_term": "PFAS removal to below regulatory limits"
+        },
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB06-E05"
+          ],
+          "interpretation": "Hollow-fiber NF provided higher retention of divalent ions and higher-molecular organic substances in addition to PFAS removal, contributing to overall water quality improvement.",
+          "reported_term": "Retention of divalent ions and higher-molecular organic substances"
+        },
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB06-E04"
+          ],
+          "interpretation": "Pilot plant operation was stable without loss of permeability and without antiscalant use; calcium carbonate scaling in mineralized waters could be controlled by pH adjustment.",
+          "reported_term": "Stable operation and fouling/scaling behavior"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E02",
+            "WEB06-E04"
+          ],
+          "statement": "Project description does not report numerical PFAS influent concentrations, individual compound rejections, flux, recovery, pressure, or energy data, limiting quantitative comparison with other membrane systems."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E04"
+          ],
+          "statement": "PFAS removal is documented only for regulatory PFAS-20 and PFAS-4 sums, so behavior of individual short-chain and long-chain PFAS cannot be distinguished."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB06-E02",
+            "WEB06-E05"
+          ],
+          "statement": "Membrane material properties and detailed module hydraulics are not specified in the project description, constraining assessment of how findings generalize to other hollow-fiber NF products."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB06-E01",
+          "WEB06-E02"
+        ],
+        "value": "Groundwater at four waterworks with differing raw water compositions"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB06-E02"
+          ],
+          "name": "module_type",
+          "qualifiers": "",
+          "unit": null,
+          "value": "Full-scale hollow-fiber nanofiltration module"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB06-E02"
+          ],
+          "name": "operation_duration_per_site",
+          "qualifiers": "Pilot plant operated for three months at each of four waterworks",
+          "unit": null,
+          "value": "three months"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB06-E04"
+          ],
+          "name": "scaling_control_strategy",
+          "qualifiers": "Stable operation without antiscalant; pH control needed in mineralized waters to manage CaCO3 scaling",
+          "unit": null,
+          "value": "pH control for calcium carbonate scaling; no antiscalant dosing"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB06-E04"
+          ],
+          "name": "operating_regime_descriptor",
+          "qualifiers": "Stable operation achieved without loss of permeability",
+          "unit": null,
+          "value": "Conditions typical of large-scale NF systems"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E04"
+          ],
+          "value": "PFAS-20 sum (as defined in German Drinking Water Ordinance)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E04"
+          ],
+          "value": "PFAS-4 sum (as defined in German Drinking Water Ordinance)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E04"
+          ],
+          "value": "Unspecified individual PFAS contributing to PFAS-20 and PFAS-4 sums"
+        }
+      ],
+      "quantitative_findings": [],
+      "record_id": "RT04-gpt51_web_search-WEB06-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB06-E04",
+            "WEB06-E05"
+          ],
+          "statement": "Calcium carbonate scaling occurred in mineralized groundwater and was managed by pH control; no information is provided on other fouling layers or concentrate management byproducts."
+        }
+      ],
+      "source_id": "WEB06",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB06-E01",
+          "WEB06-E02"
+        ],
+        "value": "Pilot plant using a full-scale hollow-fiber nanofiltration module operated at four waterworks"
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB06-E01",
+          "WEB06-E02",
+          "WEB06-E04"
+        ],
+        "value": "Hollow-fiber nanofiltration membrane process operated at conditions typical of large-scale systems"
+      }
+    },
+    {
+      "citation": "TZW: DVGW \u2013 Technologiezentrum Wasser. PFAS removal using nanofiltration (KapillO-PFAS). Project description W 202304; 2023\u20132025.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB06-E03"
+        ],
+        "reason": "Only the existence and focus of the laboratory comparison (salt and PFAS retention) are described; lack of numeric operating conditions and performance data precludes quantitative comparison across membrane types or with other studies.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://tzw.de/en/projects/project-details/detail/projekte/hollow-fiber-nanofiltration",
+      "endpoints": [
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB06-E03"
+          ],
+          "interpretation": "Laboratory tests evaluated salt retention as a benchmark to compare hollow-fiber NF with flat-sheet high-pressure membranes; no numerical rejection values are given in the project description.",
+          "reported_term": "Salt retention"
+        },
+        {
+          "endpoint_type": "removal",
+          "evidence_locator_ids": [
+            "WEB06-E03"
+          ],
+          "interpretation": "PFAS retention was studied in laboratory-scale experiments to benchmark hollow-fiber NF against flat-sheet high-pressure membranes; the description does not report compound-specific rejection values.",
+          "reported_term": "PFAS retention"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB06-E03"
+          ],
+          "statement": "The project description notes laboratory comparison of PFAS and salt retention but does not provide numerical retention values, operating pressures, fluxes, or recovery, limiting utility for quantitative benchmarking."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB06-E03"
+          ],
+          "statement": "PFAS identities, feed concentrations, and water matrix for the laboratory tests are not specified, constraining interpretation of selectivity and applicability to environmental waters."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB06-E03"
+          ],
+          "statement": "Membrane material properties and pore-size or molecular-weight cutoff data for the hollow-fiber and flat-sheet membranes are not given, preventing mechanistic comparison across configurations."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB06-E03"
+        ],
+        "value": "Not specified laboratory feed water (used for salt and PFAS retention tests)"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB06-E03"
+          ],
+          "name": "membrane_configurations_compared",
+          "qualifiers": "Flat-sheet membranes are commonly used in spiral-wound high-pressure elements; specific products and properties not given.",
+          "unit": null,
+          "value": "Hollow-fiber NF vs two flat-sheet membranes (spiral-wound type)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB06-E03"
+          ],
+          "name": "comparison_focus",
+          "qualifiers": "Experiments benchmarked hollow-fiber performance against conventional high-pressure membranes based on salt and PFAS retention.",
+          "unit": null,
+          "value": "Salt and PFAS retention benchmarking"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB06-E03"
+          ],
+          "value": "Unspecified PFAS used to evaluate retention in laboratory membrane comparison tests"
+        }
+      ],
+      "quantitative_findings": [],
+      "record_id": "RT04-gpt51_web_search-WEB06-R02",
+      "residuals_byproducts": [],
+      "source_id": "WEB06",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB06-E03"
+        ],
+        "value": "Laboratory-scale membrane comparison experiments"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB06-E03"
+        ],
+        "value": "Comparison of hollow-fiber nanofiltration membranes with two flat-sheet membranes commonly used in spiral-wound high-pressure elements"
+      }
+    }
+  ],
+  "source_system": "gpt51_web_search",
+  "task_id": "RT04"
+}

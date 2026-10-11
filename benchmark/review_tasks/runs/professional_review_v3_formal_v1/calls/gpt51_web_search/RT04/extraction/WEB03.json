@@ -1,0 +1,560 @@
+{
+  "call_key": "RT04:gpt51_web_search:extraction:WEB03",
+  "created_at": "2026-08-05T03:30:34.805679+00:00",
+  "raw_response_text": "{\"task_id\":\"RT04\",\"source_system\":\"gpt51_web_search\",\"records\":[{\"record_id\":\"WEB03-R1\",\"source_id\":\"WEB03\",\"doi_or_stable_url\":\"https://www.battelle.org/docs/default-source/conferences/chlorinated-conference-proceedings/2018-chlorinated-conference-proceedings/a10-pump-and-treat-for-pfas-remediation/645.pdf?sfvrsn=23188188_0\",\"citation\":\"Appleman TD, Dickenson ERV, Bellona C, Higgins CP. Removal of Per- and Polyfluoroalkyl Substances with Nanofiltration. In: A10 Pump and Treat for PFAS Remediation, Paper 645. Battelle Chlorinated Conference Proceedings; 2018.\",\"study_type\":\"primary_experiment\",\"study_scale\":{\"value\":\"Laboratory- and pilot-scale nanofiltration experiments and pilot studies for PFAS removal\",\"evidence_locator_ids\":[\"WEB03-E02\",\"WEB03-E03\"]},\"matrix\":{\"value\":\"Spiked aqueous film-forming foam (AFFF) formulation and AFFF-impacted groundwater from a Department of Defense site and an affected community\",\"evidence_locator_ids\":[\"WEB03-E03\"]},\"pfas_scope\":[{\"value\":\"Wide range of PFAS present in an AFFF formulation (\\\"common PFAS compounds\\\"), including mixtures in AFFF-impacted groundwaters\",\"evidence_locator_ids\":[\"WEB03-E02\",\"WEB03-E03\",\"WEB03-E04\"]}],\"treatment\":{\"value\":\"Pressure-driven nanofiltration (NF) membrane process for PFAS removal; reverse osmosis (RO) discussed comparatively as higher-energy alternative but not the primary focus of experiments\",\"evidence_locator_ids\":[\"WEB03-E01\",\"WEB03-E02\"]},\"operating_conditions\":[{\"name\":\"Membrane process type\",\"value\":\"Nanofiltration (NF)\",\"unit\":null,\"qualifiers\":\"Used to remove PFAS; evaluated in both laboratory and pilot-scale studies\",\"evidence_locator_ids\":[\"WEB03-E01\",\"WEB03-E02\"]},{\"name\":\"Energy comparison\",\"value\":\"NF lower energy cost than RO\",\"unit\":null,\"qualifiers\":\"Qualitative comparison noted in abstract; no specific energy values reported\",\"evidence_locator_ids\":[\"WEB03-E01\"]}],\"endpoints\":[{\"endpoint_type\":\"removal\",\"reported_term\":\"PFAS rejection\",\"interpretation\":\"PFAS rejection by NF membranes, quantified as percentage of PFAS retained by the membrane (i.e., removal from permeate) with no evidence of PFAS transformation or destruction; authors describe this as rejection/removal rather than degradation.\",\"evidence_locator_ids\":[\"WEB03-E02\",\"WEB03-E03\",\"WEB03-E04\"]}],\"quantitative_findings\":[{\"name\":\"PFAS rejection (common PFAS compounds in spiked experiments)\",\"value\":\">90\",\"value_form\":\"inequality\",\"unit\":\"%\",\"qualifiers\":\"Preliminary laboratory results for common PFAS compounds in spiked AFFF experiments; exact PFAS identities, membrane properties, pressures, fluxes, and recoveries not reported.\",\"evidence_locator_ids\":[\"WEB03-E04\"]}],\"limitations\":[{\"statement\":\"Conference abstract format provides only preliminary results with limited quantitative detail on membrane properties, operating conditions (pressure, flux, recovery), and performance metrics such as permeability, fouling, and energy consumption.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB03-E02\",\"WEB03-E04\"]},{\"statement\":\"Experiments focus on PFAS mixtures associated with AFFF (spiked formulation and AFFF-impacted groundwaters), which may limit generalizability to other PFAS compositions or lower-concentration drinking water matrices.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB03-E03\"]},{\"statement\":\"Specific nanofiltration membrane types and material properties are not specified in the abstract, constraining mechanistic interpretation and comparison across membrane processes.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB03-E01\",\"WEB03-E02\"]}],\"residuals_byproducts\":[{\"statement\":\"The abstract does not report measurements of PFAS transformation products, inorganic fluoride, or other byproducts, implying that the NF process is evaluated solely as a separation technology without claimed PFAS degradation or destruction.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"WEB03-E01\",\"WEB03-E04\"]}],\"comparability\":{\"status\":\"descriptive_only\",\"reason\":\"The study reports qualitative and limited quantitative PFAS rejection results (>90% for common PFAS in spiked AFFF experiments) without specifying membrane properties, operating pressures, fluxes, recoveries, or influent PFAS concentrations. This allows only high-level confirmation that NF can effectively remove PFAS from AFFF-related matrices, but does not support detailed quantitative comparison of performance across membrane technologies or operating regimes.\",\"evidence_locator_ids\":[\"WEB03-E01\",\"WEB03-E02\",\"WEB03-E03\",\"WEB03-E04\"]}}],\"extraction_notes\":[\"No held-out anchor DOIs, URLs, or exact titles were encountered in this source packet.\",\"The Battelle conference paper is available only as a short abstract in the provided packet; detailed experimental conditions (membrane model and material, pressure, flux, recovery, fouling behavior, and energy use) and full PFAS speciation or concentration data are not reported, so only one high-level NF rejection record could be extracted.\",\"Although reverse osmosis (RO) is mentioned in the abstract, no primary RO experimental results are described in the provided text, so no RO-specific record was created.\"]}",
+  "request": {
+    "max_completion_tokens": 16000,
+    "messages": [
+      {
+        "content": "You are an evidence extraction specialist for PFAS treatment and remediation\nresearch. Build a structured study evidence table before any narrative review\nis written.\n\nExtract one record per primary-study experiment, modeled scenario, or field\ndeployment that contributes usable evidence to the review task. A paper may\nproduce more than one record only when materially different matrices,\ntechnologies, operating regimes, or endpoints would otherwise be conflated.\n\nReview articles and perspectives may help identify terminology or primary\nstudies, but they must not be used as the source of a quantitative study\nrecord. Never copy a review table as though it were a primary result.\n\nFor every populated source-dependent field:\n- preserve the PFAS identity or class, matrix, starting concentration or\n  loading, operating conditions, study scale, measured endpoint, value, unit,\n  and material qualifiers when reported;\n- attach only the field-level evidence locator identifiers that directly\n  support that specific value or statement;\n- use an empty string or empty array when the source does not report the\n  information; do not infer or estimate it;\n- do not turn the absence of information in the supplied packet into a study\n  finding, quantitative result, or author-reported limitation unless the source\n  explicitly states that absence;\n- distinguish removal, separation, sorption, parent-compound loss,\n  transformation, degradation, destruction, defluorination, mineralization,\n  total organofluorine change, and toxicity change;\n- classify endpoint_type from what was actually measured, not from the\n  authors' preferred label. Parent loss alone is not destruction. Phase\n  transfer is removal or separation, not degradation. Inorganic fluoride\n  release or fluorine-balance closure can establish defluorination but cannot\n  by itself establish mineralization. Use mineralization only when direct\n  carbon-fate evidence such as CO2/inorganic-carbon production or a carbon\n  balance is reported. Preserve a broader author term in reported_term and\n  explain any mismatch in interpretation;\n- do not normalize or compare values unless their units, denominators,\n  matrices, PFAS scope, operating conditions, and endpoints permit it.\n\nOnly populate quantitative_findings when the source reports an actual numeric\nvalue, inequality, approximate value, range, or explicit ND/not-detected\nresult. Put the number or censoring marker in value and the measurement unit in\nunit. Normalize Unicode inequality signs to ASCII >= or <= and range dashes to\nan ASCII hyphen while preserving the source wording in qualifiers. A unit or\norder-of-magnitude scale without a number is not a quantitative finding.\nQualitative parent loss, intermediate formation, or disappearance belongs in\nthe endpoint interpretation or residual/byproduct statements instead.\n\nSet value_form to exactly one of:\n- exact_numeric: a bare number such as `99.7` or `1.2e-3`;\n- approximate_numeric: `~` followed by a number;\n- inequality: `<`, `<=`, `>`, or `>=` followed by a number;\n- range: two numbers separated by `-` or `to`; or\n- not_detected: exactly `ND`, `N/D`, `not detected`,\n  `below detection limit`, or `below quantification limit`.\n\nPut uncertainty, denominators, fold-change wording, and explanatory text in\nqualifiers rather than value. A deterministic validator will remove malformed\nquantitative fields before source verification.\n\nFor limitations, use basis=author_reported only when the source states the\nlimitation. Use basis=design_inferred only for a constraint that follows\ndirectly from cited design evidence, such as one matrix, one compound, or\nbench-scale operation. Never label missing information in the supplied packet\nas a scientific limitation of the study.\n\nMark each record as comparable with conditions, descriptive only, or not\ncomparable. Comparability is an analyst inference rather than a quotation:\nattach locators for the matrix, scale, conditions, endpoint, and denominator\non which the inference rests, and explain the reason. Do not reward a study\nfor reporting a larger percentage when its endpoint or conditions differ.\n\nThe task was derived from a defining review that is held out from all\ncandidate retrieval systems. The supplied anchor identifiers are an exclusion\nlist, not evidence. Do not extract from the anchor, cite it, reconstruct its\nconclusions, or use its tables.\n\nReturn one JSON object that follows the supplied evidence-table schema exactly.\nDo not write the narrative review in this step.\n",
+        "role": "system"
+      },
+      {
+        "content": "Task:\n{\"review_brief\":\"Prepare a focused, comparative review of how membrane processes should be selected for a specified PFAS composition, water matrix, and treatment objective.\",\"task_id\":\"RT04\",\"title\":\"Selecting a membrane process for a defined PFAS feed water\"}\n\nTask-specific data extraction objective:\nExtract membrane type and properties, PFAS identity, feed matrix and concentration, pressure, flux, recovery, rejection or adsorption endpoint, fouling, permeability, energy, scale, and comparison limitations.\n\nSource system (return this exact value):\ngpt51_web_search\n\nCandidate source identifier (all records must use this exact source_id):\nWEB03\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envint.2021.106876\",\"10.3929/ethz-b-000506220\"],\"all_blocked_titles\":[\"membrane based technologies for per and poly fluoroalkyl substances pfass removal from water removal mechanisms applications challenges and perspectives\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envint.2021.106876\",\"https://www.research-collection.ethz.ch/items/f9152dfa-5b8e-4ce2-8153-1cbb37911e55\"],\"anchor_id\":\"AR-JIN-2021\",\"corpus_source\":\"2021 - Jin - Membrane-based technologies for per- and poly-fluoroalkyl substances (PFASs) removal from water - Removal mechanisms, applications, challenges and.pdf\",\"doi\":\"10.1016/j.envint.2021.106876\",\"title\":\"Membrane-based technologies for per- and poly-fluoroalkyl substances (PFASs) removal from water: Removal mechanisms, applications, challenges and perspectives\",\"url\":\"https://doi.org/10.1016/j.envint.2021.106876\"}\n\nFrozen inspected Web Search sources and evidence locators:\n{\n  \"access_scope\": \"full_text\",\n  \"capture_source_id\": \"WEB21\",\n  \"citation\": \"Appleman TD, Dickenson ERV, Bellona C, Higgins CP. Removal of per- and polyfluoroalkyl substances with nanofiltration. In: Battelle Chlorinated Conference Proceedings; 2018. A10 Pump and Treat for PFAS Remediation, Paper 645.\",\n  \"covered_component_ids\": [\n    \"RT04-C1\",\n    \"RT04-C2\",\n    \"RT04-C3\"\n  ],\n  \"doi\": \"\",\n  \"doi_or_stable_url\": \"https://www.battelle.org/docs/default-source/conferences/chlorinated-conference/proceedings/2018-chlorinated-conference-proceedings/a10-pump-and-treat-for-pfas-remediation/645.pdf?sfvrsn=23188188_0\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB03-E01\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"P0, lines 15\\u201319\",\n      \"text\": \"The abstract notes that reverse osmosis (RO) and nanofiltration (NF) membranes are known to remove PFAS, but NF has significantly lower energy cost than RO and produces a concentrated PFAS stream suitable for downstream destruction.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB03-E02\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"P0, lines 21\\u201328\",\n      \"text\": \"The stated goal is to better understand factors influencing PFAS rejection by NF membranes in both laboratory and pilot\\u2011scale studies, addressing discrepancies in previously reported chain\\u2011length and operating\\u2011condition effects.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB03-E03\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"P0, lines 30\\u201333\",\n      \"text\": \"Rejection was evaluated for a wide range of PFAS by using a spiked AFFF formulation, AFFF\\u2011impacted groundwater from a Department of Defense site, and AFFF\\u2011impacted groundwater from an affected community, thereby varying PFAS speciation and water matrix.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB03-E04\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"P0, lines 34\\u201338\",\n      \"text\": \"Preliminary laboratory results indicated greater than 90% rejection of common PFAS compounds in spiked experiments, with ongoing work examining the roles of PFAS chain length, size, charge, membrane affinity, and matrix composition.\"\n    }\n  ],\n  \"publication_status\": \"conference_abstract\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://www.battelle.org/docs/default-source/conferences/chlorinated-conference/proceedings/2018-chlorinated-conference-proceedings/a10-pump-and-treat-for-pfas-remediation/645.pdf?sfvrsn=23188188_0\",\n  \"source_id\": \"WEB03\",\n  \"source_limitations\": [\n    \"Conference abstract provides limited quantitative detail (e.g., specific fluxes, pressures, recoveries, and breakthrough curves) and does not report permeability or energy consumption.\",\n    \"Membrane type(s), material properties, and exact PFAS concentration ranges are not fully specified, restricting mechanistic comparison with other NF/RO studies.\",\n    \"Pilot configurations and long\\u2011term fouling behavior are only qualitatively described.\",\n    \"Work focuses on AFFF\\u2011related PFAS mixtures; results may not generalize to other PFAS compositions or lower\\u2011concentration drinking water scenarios.\"\n  ],\n  \"title\": \"Removal of Per- and Polyfluoroalkyl Substances with Nanofiltration\",\n  \"year\": \"2018\"\n}\n\nDo not use search-result snippets as evidence. Use only the frozen inspected\nsource packet and preserve its declared access scope. Omit any source that\nresolves to a held-out anchor DOI, URL, or exact title and report the violation\nin extraction_notes. Extract at most three materially distinct records from\nthis source, prioritizing records that answer the task components.\n\nExtract primary-study evidence needed to answer the task and return the\nschema-constrained study evidence table.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_review_evidence_table",
+        "schema": {
+          "$defs": {
+            "endpoint": {
+              "additionalProperties": false,
+              "properties": {
+                "endpoint_type": {
+                  "enum": [
+                    "removal",
+                    "separation",
+                    "sorption",
+                    "parent_compound_loss",
+                    "transformation",
+                    "degradation",
+                    "destruction",
+                    "defluorination",
+                    "mineralization",
+                    "total_organofluorine_change",
+                    "toxicity_change",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB03-E01",
+                      "WEB03-E02",
+                      "WEB03-E03",
+                      "WEB03-E04"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "interpretation": {
+                  "type": "string"
+                },
+                "reported_term": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "endpoint_type",
+                "reported_term",
+                "interpretation",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceRecord": {
+              "additionalProperties": false,
+              "properties": {
+                "citation": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "comparability": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_locator_ids": {
+                      "items": {
+                        "enum": [
+                          "WEB03-E01",
+                          "WEB03-E02",
+                          "WEB03-E03",
+                          "WEB03-E04"
+                        ],
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "type": "array"
+                    },
+                    "reason": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "enum": [
+                        "comparable_with_conditions",
+                        "descriptive_only",
+                        "not_comparable"
+                      ],
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "status",
+                    "reason",
+                    "evidence_locator_ids"
+                  ],
+                  "type": "object"
+                },
+                "doi_or_stable_url": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "endpoints": {
+                  "items": {
+                    "$ref": "#/$defs/endpoint"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "limitations": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "matrix": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "operating_conditions": {
+                  "items": {
+                    "$ref": "#/$defs/namedValue"
+                  },
+                  "type": "array"
+                },
+                "pfas_scope": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceText"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "quantitative_findings": {
+                  "items": {
+                    "$ref": "#/$defs/quantitativeValue"
+                  },
+                  "type": "array"
+                },
+                "record_id": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "residuals_byproducts": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "source_id": {
+                  "enum": [
+                    "WEB03"
+                  ],
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "study_scale": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "study_type": {
+                  "enum": [
+                    "primary_experiment",
+                    "pilot_or_field_deployment",
+                    "modeling_or_life_cycle_study",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "treatment": {
+                  "$ref": "#/$defs/evidenceText"
+                }
+              },
+              "required": [
+                "record_id",
+                "source_id",
+                "doi_or_stable_url",
+                "citation",
+                "study_type",
+                "study_scale",
+                "matrix",
+                "pfas_scope",
+                "treatment",
+                "operating_conditions",
+                "endpoints",
+                "quantitative_findings",
+                "limitations",
+                "residuals_byproducts",
+                "comparability"
+              ],
+              "type": "object"
+            },
+            "evidenceStatement": {
+              "additionalProperties": false,
+              "properties": {
+                "basis": {
+                  "enum": [
+                    "author_reported",
+                    "design_inferred"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB03-E01",
+                      "WEB03-E02",
+                      "WEB03-E03",
+                      "WEB03-E04"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "statement": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "statement",
+                "basis",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceText": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB03-E01",
+                      "WEB03-E02",
+                      "WEB03-E03",
+                      "WEB03-E04"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "namedValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB03-E01",
+                      "WEB03-E02",
+                      "WEB03-E03",
+                      "WEB03-E04"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "quantitativeValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "WEB03-E01",
+                      "WEB03-E02",
+                      "WEB03-E03",
+                      "WEB03-E04"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "value_form": {
+                  "enum": [
+                    "exact_numeric",
+                    "approximate_numeric",
+                    "inequality",
+                    "range",
+                    "not_detected"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "value_form",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "properties": {
+            "extraction_notes": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "records": {
+              "items": {
+                "$ref": "#/$defs/evidenceRecord"
+              },
+              "maxItems": 3,
+              "type": "array"
+            },
+            "source_system": {
+              "enum": [
+                "gpt51_web_search"
+              ],
+              "type": "string"
+            },
+            "task_id": {
+              "enum": [
+                "RT04"
+              ],
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "source_system",
+            "records",
+            "extraction_notes"
+          ],
+          "title": "PFAS review study evidence table",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "63ca849098f5842d81b0645d2ad358b9e6878ae335f44e6711eb37125c387685",
+  "response_metadata": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.01917875,
+    "finish_reason": "stop",
+    "input_tokens": 3143,
+    "latency_seconds": 13.004700624966063,
+    "output_tokens": 1525,
+    "reasoning_tokens": 367,
+    "response_id": "chatcmpl-E9Mcgz4wz2GTBVC6guWsTJjoN3761",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 4668,
+    "web_search_calls": 0
+  },
+  "result": {
+    "extraction_notes": [
+      "No held-out anchor DOIs, URLs, or exact titles were encountered in this source packet.",
+      "The Battelle conference paper is available only as a short abstract in the provided packet; detailed experimental conditions (membrane model and material, pressure, flux, recovery, fouling behavior, and energy use) and full PFAS speciation or concentration data are not reported, so only one high-level NF rejection record could be extracted.",
+      "Although reverse osmosis (RO) is mentioned in the abstract, no primary RO experimental results are described in the provided text, so no RO-specific record was created."
+    ],
+    "records": [
+      {
+        "citation": "Appleman TD, Dickenson ERV, Bellona C, Higgins CP. Removal of Per- and Polyfluoroalkyl Substances with Nanofiltration. In: A10 Pump and Treat for PFAS Remediation, Paper 645. Battelle Chlorinated Conference Proceedings; 2018.",
+        "comparability": {
+          "evidence_locator_ids": [
+            "WEB03-E01",
+            "WEB03-E02",
+            "WEB03-E03",
+            "WEB03-E04"
+          ],
+          "reason": "The study reports qualitative and limited quantitative PFAS rejection results (>90% for common PFAS in spiked AFFF experiments) without specifying membrane properties, operating pressures, fluxes, recoveries, or influent PFAS concentrations. This allows only high-level confirmation that NF can effectively remove PFAS from AFFF-related matrices, but does not support detailed quantitative comparison of performance across membrane technologies or operating regimes.",
+          "status": "descriptive_only"
+        },
+        "doi_or_stable_url": "https://www.battelle.org/docs/default-source/conferences/chlorinated-conference-proceedings/2018-chlorinated-conference-proceedings/a10-pump-and-treat-for-pfas-remediation/645.pdf?sfvrsn=23188188_0",
+        "endpoints": [
+          {
+            "endpoint_type": "removal",
+            "evidence_locator_ids": [
+              "WEB03-E02",
+              "WEB03-E03",
+              "WEB03-E04"
+            ],
+            "interpretation": "PFAS rejection by NF membranes, quantified as percentage of PFAS retained by the membrane (i.e., removal from permeate) with no evidence of PFAS transformation or destruction; authors describe this as rejection/removal rather than degradation.",
+            "reported_term": "PFAS rejection"
+          }
+        ],
+        "limitations": [
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB03-E02",
+              "WEB03-E04"
+            ],
+            "statement": "Conference abstract format provides only preliminary results with limited quantitative detail on membrane properties, operating conditions (pressure, flux, recovery), and performance metrics such as permeability, fouling, and energy consumption."
+          },
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB03-E03"
+            ],
+            "statement": "Experiments focus on PFAS mixtures associated with AFFF (spiked formulation and AFFF-impacted groundwaters), which may limit generalizability to other PFAS compositions or lower-concentration drinking water matrices."
+          },
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB03-E01",
+              "WEB03-E02"
+            ],
+            "statement": "Specific nanofiltration membrane types and material properties are not specified in the abstract, constraining mechanistic interpretation and comparison across membrane processes."
+          }
+        ],
+        "matrix": {
+          "evidence_locator_ids": [
+            "WEB03-E03"
+          ],
+          "value": "Spiked aqueous film-forming foam (AFFF) formulation and AFFF-impacted groundwater from a Department of Defense site and an affected community"
+        },
+        "operating_conditions": [
+          {
+            "evidence_locator_ids": [
+              "WEB03-E01",
+              "WEB03-E02"
+            ],
+            "name": "Membrane process type",
+            "qualifiers": "Used to remove PFAS; evaluated in both laboratory and pilot-scale studies",
+            "unit": null,
+            "value": "Nanofiltration (NF)"
+          },
+          {
+            "evidence_locator_ids": [
+              "WEB03-E01"
+            ],
+            "name": "Energy comparison",
+            "qualifiers": "Qualitative comparison noted in abstract; no specific energy values reported",
+            "unit": null,
+            "value": "NF lower energy cost than RO"
+          }
+        ],
+        "pfas_scope": [
+          {
+            "evidence_locator_ids": [
+              "WEB03-E02",
+              "WEB03-E03",
+              "WEB03-E04"
+            ],
+            "value": "Wide range of PFAS present in an AFFF formulation (\"common PFAS compounds\"), including mixtures in AFFF-impacted groundwaters"
+          }
+        ],
+        "quantitative_findings": [
+          {
+            "evidence_locator_ids": [
+              "WEB03-E04"
+            ],
+            "name": "PFAS rejection (common PFAS compounds in spiked experiments)",
+            "qualifiers": "Preliminary laboratory results for common PFAS compounds in spiked AFFF experiments; exact PFAS identities, membrane properties, pressures, fluxes, and recoveries not reported.",
+            "unit": "%",
+            "value": ">90",
+            "value_form": "inequality"
+          }
+        ],
+        "record_id": "WEB03-R1",
+        "residuals_byproducts": [
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "WEB03-E01",
+              "WEB03-E04"
+            ],
+            "statement": "The abstract does not report measurements of PFAS transformation products, inorganic fluoride, or other byproducts, implying that the NF process is evaluated solely as a separation technology without claimed PFAS degradation or destruction."
+          }
+        ],
+        "source_id": "WEB03",
+        "study_scale": {
+          "evidence_locator_ids": [
+            "WEB03-E02",
+            "WEB03-E03"
+          ],
+          "value": "Laboratory- and pilot-scale nanofiltration experiments and pilot studies for PFAS removal"
+        },
+        "study_type": "primary_experiment",
+        "treatment": {
+          "evidence_locator_ids": [
+            "WEB03-E01",
+            "WEB03-E02"
+          ],
+          "value": "Pressure-driven nanofiltration (NF) membrane process for PFAS removal; reverse osmosis (RO) discussed comparatively as higher-energy alternative but not the primary focus of experiments"
+        }
+      }
+    ],
+    "source_system": "gpt51_web_search",
+    "task_id": "RT04"
+  },
+  "result_kind": "json",
+  "stage": "structured_extraction"
+}

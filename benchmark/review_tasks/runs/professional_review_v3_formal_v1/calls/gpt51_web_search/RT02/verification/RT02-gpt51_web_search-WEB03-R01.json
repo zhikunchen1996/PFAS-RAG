@@ -1,0 +1,236 @@
+{
+  "call_key": "RT02:gpt51_web_search:verify:RT02-gpt51_web_search-WEB03-R01",
+  "created_at": "2026-08-05T03:57:22.630983+00:00",
+  "raw_response_text": "{\"task_id\":\"RT02\",\"record_id\":\"RT02-gpt51_web_search-WEB03-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The DOI/URL exactly matches the source metadata provided (10.1186/s12302-023-00716-5).\"},{\"field_path\":\"citation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Author names, year, title, journal, and volume are consistent with the source metadata block.\"},{\"field_path\":\"study_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The described GAC selection test and column investigations are experimental work, consistent with classification as a primary experiment.\"},{\"field_path\":\"matrix.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The locator confirms PFBA and PFOA breakthrough curves in a GAC selection test but does not specify the water matrix or explicitly say 'aqueous solution'; it is reasonable to infer an aqueous matrix, but the qualifier about matrix specificity is not directly supported by the cited text.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The locator states that the granular carbon selection test was developed to compare adsorption capacities of different types of GAC and shows breakthrough curves using five different GAC types, matching the description of GAC adsorption using multiple GAC types.\"},{\"field_path\":\"study_scale.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The locator documents a granular carbon selection (GCS) test with multiple GAC types, supporting that this is a controlled test column study. However, the term 'laboratory-scale' is inferred rather than explicitly stated in the cited text.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The locator explicitly mentions PFBA breakthrough curves in the GCS test.\"},{\"field_path\":\"pfas_scope[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The locator explicitly mentions PFOA breakthrough curves in the GCS test.\"},{\"field_path\":\"operating_conditions[0].name\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The name 'configuration' and description of a GCS test align with the locator describing a granular carbon selection test used to compare GAC types via breakthrough curves.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The locator states that the granular carbon selection (GCS) test was developed to compare adsorption capacities of different GACs and that breakthrough curves are shown, which supports the description of a column breakthrough test used to compare GAC types.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"No numeric value is given; leaving the unit as null is consistent with the qualitative configuration description in the locator.\"},{\"field_path\":\"operating_conditions[0].qualifiers\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The qualifiers text closely matches the locator statement that breakthrough curves for PFBA and PFOA using five different GAC types are shown.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The locator describes breakthrough curves and adsorption capacities of PFBA and PFOA on GAC, which represent contaminant removal behavior; classifying the endpoint as 'removal' is consistent with the measured basis.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The interpretation accurately summarizes that PFBA and PFOA breakthrough behavior on different GAC types was used to compare adsorption capacities, as described in the locator.\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The locator explicitly references 'granular carbon selection test' and 'breakthrough curves' to compare adsorption capacities, consistent with the reported terms.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"qualifier\",\"reason\":\"The limitation is flagged as design_inferred. The locator shows a GAC selection test with multiple GAC types, which necessarily indicates a test/selection configuration distinct from a full-scale adsorber; inferring that such results may not represent full-scale performance is reasonable based on design, even though not explicitly stated in the cited text.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Given that the locator only notes the existence of breakthrough curves and adsorption capacity comparisons without reporting numerical bed volumes, loading, or explicit breakthrough criteria, classifying the record as 'descriptive_only' for cross-study quantitative comparison is consistent with the available information.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The explanation that the excerpt lacks quantitative bed volumes, loading, or breakthrough criteria aligns with the locator, which only mentions qualitative breakthrough curves and capacity comparison with no numerical details.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014study identity, treatment (GAC selection test), PFAS scope (PFBA, PFOA), configuration (GCS column breakthrough comparison), and endpoint classification (removal via breakthrough behavior)\u2014are supported by the cited locator. Some qualifiers about matrix and scale are inferred but do not mislead synthesis on treatment type or endpoint, so the record remains usable with minor caveats.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of when batch adsorption results do and do not predict column, pilot, or full-scale PFAS treatment performance.\",\"task_id\":\"RT02\",\"title\":\"Translating PFAS adsorption results from batch tests to continuous treatment\"}\n\nTask-specific extraction objective:\nExtract study scale, adsorbent, PFAS and matrix, batch or flow configuration, contact time, flow and bed properties, capacity definition, breakthrough criterion, bed volumes, media lifetime, and uncertainty or scale-up limitation.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Hopkins, Z.R., Knappe, D.R.U., et al. (2023). Sorptive removal of short-chain perfluoroalkyl substances (PFAS) during drinking water treatment using activated carbon and anion exchanger. Environmental Sciences Europe, 35, 46.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB03-E01\"\n    ],\n    \"reason\": \"Study compares relative GAC adsorption performance via breakthrough curves, but the excerpt provides no quantitative bed volumes, loading, or breakthrough criteria needed for cross-study quantitative comparison.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1186/s12302-023-00716-5\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"WEB03-E01\"\n      ],\n      \"interpretation\": \"Removal performance of different GAC types was evaluated by PFBA and PFOA breakthrough behavior in GCS columns to compare adsorption capacities.\",\n      \"reported_term\": \"breakthrough curves and adsorption capacities\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB03-E01\"\n      ],\n      \"statement\": \"Results are from laboratory-scale GAC selection columns and may not represent full-scale adsorber performance.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB03-E01\"\n    ],\n    \"value\": \"aqueous PFAS solution (exact water matrix not specified in provided excerpt)\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB03-E01\"\n      ],\n      \"name\": \"configuration\",\n      \"qualifiers\": \"breakthrough curves for PFBA and PFOA reported for five GAC types\",\n      \"unit\": null,\n      \"value\": \"column breakthrough test used to compare different GAC types (GCS test)\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB03-E01\"\n      ],\n      \"value\": \"PFBA\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB03-E01\"\n      ],\n      \"value\": \"PFOA\"\n    }\n  ],\n  \"quantitative_findings\": [],\n  \"record_id\": \"RT02-gpt51_web_search-WEB03-R01\",\n  \"residuals_byproducts\": [],\n  \"source_id\": \"WEB03\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB03-E01\"\n    ],\n    \"value\": \"laboratory-scale granular carbon selection (GCS) column tests\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB03-E01\"\n    ],\n    \"value\": \"granular activated carbon (GAC) adsorption \\u2013 granular carbon selection (GCS) test using multiple GAC types\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"full_text\",\n  \"capture_source_id\": \"WEB30\",\n  \"citation\": \"Hopkins, Z.R., Knappe, D.R.U., et al. (2023). Sorptive removal of short-chain perfluoroalkyl substances (PFAS) during drinking water treatment using activated carbon and anion exchanger. Environmental Sciences Europe, 35, 46.\",\n  \"covered_component_ids\": [\n    \"RT02-C1\",\n    \"RT02-C2\",\n    \"RT02-C3\"\n  ],\n  \"doi\": \"10.1186/s12302-023-00716-5\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1186/s12302-023-00716-5\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB03-E01\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Methods / GAC selection test\",\n      \"text\": \"The granular carbon selection test (GCS test) was developed to compare the adsorption capacities of different types of GAC. Breakthrough curves for PFBA and PFOA using five different GAC types are shown.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB03-E02\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Pilot-scale column investigations\",\n      \"text\": \"GAC column tests were used to determine the operation time of a full-scale GAC adsorber. The GAC adsorber used in the pilot-scale test received contaminated groundwater and PFAS concentrations were measured at different bed depths of the adsorber.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB03-E03\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Pilot-scale column investigations\",\n      \"text\": \"PFBA breakthrough could be observed at 5,000 bed volumes (BV). At a specific throughput of 11,000 BV the effluent and initial concentration were equal.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB03-E04\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Pilot-scale column investigations\",\n      \"text\": \"A 10% breakthrough is observed at 6000 BV for PFBA, at 11,000 BV for PFPeA, at 16,000 BV for PFHxA, at 20,000 BV for PFHpA and at 23,000 BV for PFOA.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB03-E05\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Pilot-scale column investigations / conclusions\",\n      \"text\": \"Under the given boundary conditions (especially the given initial concentrations for PFAS and a 10% breakthrough in maximum), GAC removal is effective for long-chain PFOA and short-chain PFHpA and PFHxA. However, GAC adsorption is not effective or results in short operation times for PFBA and PFPeA.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"pilot_or_field_deployment\",\n  \"source\": \"https://link.springer.com/article/10.1186/s12302-023-00716-5\",\n  \"source_id\": \"WEB03\",\n  \"source_limitations\": [\n    \"Lab-scale GAC selection tests and a single pilot adsorber may not represent all full-scale configurations.\",\n    \"Detailed batch isotherm or kinetic data are not emphasized; focus is on column and pilot behavior.\",\n    \"Mixture effects and competing constituents are specific to the studied groundwater and may differ in other matrices.\"\n  ],\n  \"title\": \"Sorptive removal of short-chain perfluoroalkyl substances (PFAS) during drinking water treatment using activated carbon and anion exchanger\",\n  \"year\": \"2023\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "da5549b5f82320d015c69043cb02524e35ae4b63b9706fa38a3ba74594575189",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.0204055,
+    "finish_reason": "stop",
+    "input_tokens": 2750,
+    "latency_seconds": 25.084745541913435,
+    "output_tokens": 1812,
+    "reasoning_tokens": 655,
+    "response_id": "chatcmpl-E9N2PRV2tpOGsbWMRsZZmG8hPAwzS",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 4562,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The DOI/URL exactly matches the source metadata provided (10.1186/s12302-023-00716-5).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "citation",
+        "reason": "Author names, year, title, journal, and volume are consistent with the source metadata block.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_type",
+        "reason": "The described GAC selection test and column investigations are experimental work, consistent with classification as a primary experiment.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "matrix.value",
+        "reason": "The locator confirms PFBA and PFOA breakthrough curves in a GAC selection test but does not specify the water matrix or explicitly say 'aqueous solution'; it is reasonable to infer an aqueous matrix, but the qualifier about matrix specificity is not directly supported by the cited text.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "The locator states that the granular carbon selection test was developed to compare adsorption capacities of different types of GAC and shows breakthrough curves using five different GAC types, matching the description of GAC adsorption using multiple GAC types.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "study_scale.value",
+        "reason": "The locator documents a granular carbon selection (GCS) test with multiple GAC types, supporting that this is a controlled test column study. However, the term 'laboratory-scale' is inferred rather than explicitly stated in the cited text.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "The locator explicitly mentions PFBA breakthrough curves in the GCS test.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1].value",
+        "reason": "The locator explicitly mentions PFOA breakthrough curves in the GCS test.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].name",
+        "reason": "The name 'configuration' and description of a GCS test align with the locator describing a granular carbon selection test used to compare GAC types via breakthrough curves.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "The locator states that the granular carbon selection (GCS) test was developed to compare adsorption capacities of different GACs and that breakthrough curves are shown, which supports the description of a column breakthrough test used to compare GAC types.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "No numeric value is given; leaving the unit as null is consistent with the qualitative configuration description in the locator.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].qualifiers",
+        "reason": "The qualifiers text closely matches the locator statement that breakthrough curves for PFBA and PFOA using five different GAC types are shown.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The locator describes breakthrough curves and adsorption capacities of PFBA and PFOA on GAC, which represent contaminant removal behavior; classifying the endpoint as 'removal' is consistent with the measured basis.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "The interpretation accurately summarizes that PFBA and PFOA breakthrough behavior on different GAC types was used to compare adsorption capacities, as described in the locator.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "The locator explicitly references 'granular carbon selection test' and 'breakthrough curves' to compare adsorption capacities, consistent with the reported terms.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "limitations[0].statement",
+        "reason": "The limitation is flagged as design_inferred. The locator shows a GAC selection test with multiple GAC types, which necessarily indicates a test/selection configuration distinct from a full-scale adsorber; inferring that such results may not represent full-scale performance is reasonable based on design, even though not explicitly stated in the cited text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "Given that the locator only notes the existence of breakthrough curves and adsorption capacity comparisons without reporting numerical bed volumes, loading, or explicit breakthrough criteria, classifying the record as 'descriptive_only' for cross-study quantitative comparison is consistent with the available information.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The explanation that the excerpt lacks quantitative bed volumes, loading, or breakthrough criteria aligns with the locator, which only mentions qualitative breakthrough curves and capacity comparison with no numerical details.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT02-gpt51_web_search-WEB03-R01",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014study identity, treatment (GAC selection test), PFAS scope (PFBA, PFOA), configuration (GCS column breakthrough comparison), and endpoint classification (removal via breakthrough behavior)\u2014are supported by the cited locator. Some qualifiers about matrix and scale are inferred but do not mislead synthesis on treatment type or endpoint, so the record remains usable with minor caveats.",
+    "task_id": "RT02"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

@@ -1,0 +1,224 @@
+{
+  "call_key": "RT03:gpt51_web_search:verify:RT03-gpt51_web_search-WEB08-R01",
+  "created_at": "2026-08-05T04:04:21.855981+00:00",
+  "raw_response_text": "{\"task_id\":\"RT03\",\"record_id\":\"RT03-gpt51_web_search-WEB08-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record URL matches the source URL exactly: https://pmc.ncbi.nlm.nih.gov/articles/PMC12149862/.\"},{\"field_path\":\"treatment\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The title and snippets explicitly describe regeneration of PFAS-laden GAC using modified supercritical CO2 / supercritical fluid extraction: title 'Regeneration of PFAS-laden granular activated carbon by modified supercritical CO2 extraction' and snippet mentioning 'modified SFE approach' with GAC treatment.\"},{\"field_path\":\"matrix\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Snippet WEB08-E01 notes that 'Granular activated carbon (GAC) is widely used to treat ... PFAS waste streams, resulting in the accumulation of large quantities of spent GAC that need to be landfilled or regenerated.' Snippet WEB08-E02 identifies PFOA as the PFAS used. Together they support spent PFAS- (PFOA-) loaded GAC as the matrix.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Snippet WEB08-E02 states: 'Perfluorooctanoic acid (PFOA) was chosen for this study due to its environmental persistence and high adsorption affinity,' matching the PFAS identity and rationale described in the field.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Snippet WEB08-E02 reports '>99% desorption after 1 h of GAC treatment,' supporting a treatment time of 1 hour.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text specifies '1 h of GAC treatment'; 'h' is the correct unit for this 1-hour duration.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The snippet reports '>99% desorption after 1 h of GAC treatment' using modified SFE. This describes transfer of PFOA from GAC into the extraction phase (a separation/desorption process), not chemical transformation, so classifying the endpoint as 'separation' is consistent with the evidence.\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reported term '>99% desorption after 1 h of GAC treatment' is taken directly from snippet WEB08-E02.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Snippet WEB08-E02 states '... yielded >99% desorption after 1 h of GAC treatment.' The field records the value as '>99' with value_form 'inequality', which accurately reflects the reported quantitative result.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The phrase '>99% desorption' in WEB08-E02 indicates the metric is a percentage; recording the unit as '%' is correct.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Only a single desorption metric (>99% after 1 h) is visible, with no conditions (pressure, temperature, flow) or multi-cycle capacity data in the snippets. Classifying the record as 'descriptive_only' for comparative synthesis follows directly from this limited reported information.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reason correctly explains that only a single desorption performance number is available without operating conditions or regeneration cycling information, which is consistent with the brief abstract snippets and justifies the descriptive-only classification.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Given the snippets only report that PFOA was chosen and that modified SFE yielded >99% desorption after 1 h, it is a necessary design-based inference that adsorption capacity recovery, number of cycles, GAC property changes, and energy/chemical use are not available from these excerpts. The limitation is framed as design_inferred and matches the documented lack of detail (also echoed in the source_limitations).\"},{\"field_path\":\"limitations[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The snippets explicitly mention PFAS/PFOA and GAC; no other PFAS or media are referenced. Inferring that the experiment focuses on a single PFAS (PFOA) and one adsorbent type (GAC), and that this constrains generalization, is a reasonable design-based inference from the available text.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The snippets only document PFOA desorption efficiency and do not mention concentrations of PFOA in the supercritical CO2 or any subsequent treatment or destruction. It is therefore well supported as a design-inferred statement that the fate and management of the PFAS-rich regenerant stream cannot be evaluated from the provided excerpts.\"},{\"field_path\":\"study_scale\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The statement correctly notes that study scale is not reported in the inspected excerpts. However, the added parenthetical 'likely laboratory-scale...' is speculative and not supported by the snippets. The 'not reported' part is supported; the speculative qualifier is not.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements needed for synthesis\u2014source identity, matrix (PFOA-loaded GAC), treatment (modified supercritical CO2 / SFE regeneration), separation endpoint (PFOA desorption), and the main quantitative finding (>99% desorption after 1 h)\u2014are directly supported by the cited snippets. The only issue is minor speculative wording in the study_scale field, which does not affect use of the record for evaluating regeneration performance, so the record is usable with that caveat excluded in synthesis.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of the evidence needed to choose among regeneration, replacement, and end-of-life management for PFAS-loaded adsorption media.\",\"task_id\":\"RT03\",\"title\":\"Deciding whether to regenerate or replace PFAS adsorption media\"}\n\nTask-specific extraction objective:\nExtract adsorbent and PFAS identity, loading protocol, regeneration or disposal method, operating conditions, desorption or destruction endpoint, capacity recovery, cycle number, material change, residual streams, energy, chemicals, and cost.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Regeneration of PFAS-laden granular activated carbon by modified supercritical CO2 extraction. 2024. Journal and authors not fully identifiable from inspected snippets.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB08-E01\",\n      \"WEB08-E02\"\n    ],\n    \"reason\": \"The record provides a single desorption performance metric (>99% PFOA desorption after 1 h) without accompanying information on adsorption capacity recovery, regeneration cycling, or operating conditions such as pressure, temperature, or CO2 flow; this precludes rigorous quantitative comparison with other regeneration or replacement options.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC12149862/\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"separation\",\n      \"evidence_locator_ids\": [\n        \"WEB08-E02\"\n      ],\n      \"interpretation\": \"Measured desorption of PFOA from GAC into the supercritical CO2-based extraction phase; this reflects phase transfer (removal of PFOA from the adsorbent) rather than chemical degradation or destruction of PFOA.\",\n      \"reported_term\": \">99% desorption after 1 h of GAC treatment\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB08-E01\",\n        \"WEB08-E02\"\n      ],\n      \"statement\": \"Only desorption/removal of PFOA from GAC is reported in the inspected excerpts; no information is available on post-regeneration adsorption capacity recovery, number of regeneration cycles, GAC property changes, or energy/chemical use, limiting assessment of regeneration viability compared with replacement or thermal reactivation.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB08-E01\",\n        \"WEB08-E02\"\n      ],\n      \"statement\": \"The study appears to focus on a single PFAS (PFOA) and one adsorbent type (granular activated carbon), which constrains generalization to other PFAS and media.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB08-E01\",\n      \"WEB08-E02\"\n    ],\n    \"value\": \"Spent granular activated carbon (GAC) loaded with PFAS (experiment specifically using PFOA-loaded GAC).\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB08-E02\"\n      ],\n      \"name\": \"treatment time\",\n      \"qualifiers\": \"Duration of modified supercritical CO2 treatment applied to PFOA-loaded GAC.\",\n      \"unit\": \"h\",\n      \"value\": \"1\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB08-E02\"\n      ],\n      \"value\": \"Perfluorooctanoic acid (PFOA) selected as model PFAS due to environmental persistence and high adsorption affinity.\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB08-E02\"\n      ],\n      \"name\": \"PFOA desorption from GAC after 1 h modified SFE regeneration\",\n      \"qualifiers\": \"Authors report \\\">99% desorption after 1 h of GAC treatment\\\" using modified supercritical CO2 extraction; endpoint is desorbed fraction of initially adsorbed PFOA.\",\n      \"unit\": \"%\",\n      \"value\": \">99\",\n      \"value_form\": \"inequality\"\n    }\n  ],\n  \"record_id\": \"RT03-gpt51_web_search-WEB08-R01\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB08-E01\",\n        \"WEB08-E02\"\n      ],\n      \"statement\": \"The inspected excerpts indicate high PFOA desorption from GAC into the extraction phase but do not report the fate of desorbed PFOA (e.g., concentration in supercritical CO2/co-solvent, subsequent treatment, or destruction), so management of the PFAS-rich regenerant stream cannot be evaluated.\"\n    }\n  ],\n  \"source_id\": \"WEB08\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB08-E01\",\n      \"WEB08-E02\"\n    ],\n    \"value\": \"Not reported in inspected excerpts (likely laboratory-scale column or batch GAC regeneration, but not specified).\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB08-E01\",\n      \"WEB08-E02\"\n    ],\n    \"value\": \"Regeneration of PFAS-laden GAC using modified supercritical CO2 extraction (modified supercritical fluid extraction, SFE).\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"other_inspected_page\",\n  \"capture_source_id\": \"WEB80\",\n  \"citation\": \"Authors not fully listed in inspected excerpt. Regeneration of PFAS-laden granular activated carbon by modified supercritical CO2 extraction. Journal not clearly identified in snippet (PFAS, PFOA, GAC regeneration, supercritical CO2). ~2024.\",\n  \"covered_component_ids\": [\n    \"RT03-C1\",\n    \"RT03-C2\",\n    \"RT03-C3\"\n  ],\n  \"doi\": \"\",\n  \"doi_or_stable_url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC12149862/\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB08-E01\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Intro/abstract snippet\",\n      \"text\": \"Granular activated carbon (GAC) is widely used to treat contaminated per- and polyfluoroalkyl substances (PFAS) waste streams, resulting in the accumulation of large quantities of spent GAC that need to be landfilled or regenerated. Keywords: PFAS, PFOA, Granular activated carbon, GAC regeneration, Supercritical CO2, Modified supercritical fluid extraction.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB08-E02\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Abstract / results snippet\",\n      \"text\": \"Perfluorooctanoic acid (PFOA) was chosen for this study due to its environmental persistence and high adsorption affinity, yet our modified SFE approach yielded >99% desorption after 1 h of GAC treatment.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB08-E03\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Background section snippet\",\n      \"text\": \"Thermal regeneration utilizes high temperatures, ranging from 600 to 1000 \\u00b0C, to desorb PFAS and other contaminants from spent GAC.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC12149862/\",\n  \"source_id\": \"WEB08\",\n  \"source_limitations\": [\n    \"Access to the full PMC article content was blocked by a reCAPTCHA; only short snippets from the page preview were visible.\",\n    \"Quantitative breakthrough curves before and after regeneration, assessment of GAC property changes, PFAS mass balance in CO2 and co-solvent phases, and energy/cost comparisons to thermal reactivation are not available from the inspected snippets.\"\n  ],\n  \"title\": \"Regeneration of PFAS-laden granular activated carbon by modified supercritical CO2 extraction\",\n  \"year\": \"2024\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "371c9c3ef50e90650216502c39a779c204df94fbb7380a322941d02be3ad1552",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.02064425,
+    "finish_reason": "stop",
+    "input_tokens": 2925,
+    "latency_seconds": 17.885033500031568,
+    "output_tokens": 1814,
+    "reasoning_tokens": 507,
+    "response_id": "chatcmpl-E9N9Ipnhr0uOSeU6yoKA8XVZ3688t",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 4739,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The record URL matches the source URL exactly: https://pmc.ncbi.nlm.nih.gov/articles/PMC12149862/.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment",
+        "reason": "The title and snippets explicitly describe regeneration of PFAS-laden GAC using modified supercritical CO2 / supercritical fluid extraction: title 'Regeneration of PFAS-laden granular activated carbon by modified supercritical CO2 extraction' and snippet mentioning 'modified SFE approach' with GAC treatment.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix",
+        "reason": "Snippet WEB08-E01 notes that 'Granular activated carbon (GAC) is widely used to treat ... PFAS waste streams, resulting in the accumulation of large quantities of spent GAC that need to be landfilled or regenerated.' Snippet WEB08-E02 identifies PFOA as the PFAS used. Together they support spent PFAS- (PFOA-) loaded GAC as the matrix.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "Snippet WEB08-E02 states: 'Perfluorooctanoic acid (PFOA) was chosen for this study due to its environmental persistence and high adsorption affinity,' matching the PFAS identity and rationale described in the field.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "Snippet WEB08-E02 reports '>99% desorption after 1 h of GAC treatment,' supporting a treatment time of 1 hour.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The text specifies '1 h of GAC treatment'; 'h' is the correct unit for this 1-hour duration.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The snippet reports '>99% desorption after 1 h of GAC treatment' using modified SFE. This describes transfer of PFOA from GAC into the extraction phase (a separation/desorption process), not chemical transformation, so classifying the endpoint as 'separation' is consistent with the evidence.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "The reported term '>99% desorption after 1 h of GAC treatment' is taken directly from snippet WEB08-E02.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "Snippet WEB08-E02 states '... yielded >99% desorption after 1 h of GAC treatment.' The field records the value as '>99' with value_form 'inequality', which accurately reflects the reported quantitative result.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The phrase '>99% desorption' in WEB08-E02 indicates the metric is a percentage; recording the unit as '%' is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "Only a single desorption metric (>99% after 1 h) is visible, with no conditions (pressure, temperature, flow) or multi-cycle capacity data in the snippets. Classifying the record as 'descriptive_only' for comparative synthesis follows directly from this limited reported information.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The reason correctly explains that only a single desorption performance number is available without operating conditions or regeneration cycling information, which is consistent with the brief abstract snippets and justifies the descriptive-only classification.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "Given the snippets only report that PFOA was chosen and that modified SFE yielded >99% desorption after 1 h, it is a necessary design-based inference that adsorption capacity recovery, number of cycles, GAC property changes, and energy/chemical use are not available from these excerpts. The limitation is framed as design_inferred and matches the documented lack of detail (also echoed in the source_limitations).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1]",
+        "reason": "The snippets explicitly mention PFAS/PFOA and GAC; no other PFAS or media are referenced. Inferring that the experiment focuses on a single PFAS (PFOA) and one adsorbent type (GAC), and that this constrains generalization, is a reasonable design-based inference from the available text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "The snippets only document PFOA desorption efficiency and do not mention concentrations of PFOA in the supercritical CO2 or any subsequent treatment or destruction. It is therefore well supported as a design-inferred statement that the fate and management of the PFAS-rich regenerant stream cannot be evaluated from the provided excerpts.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "study_scale",
+        "reason": "The statement correctly notes that study scale is not reported in the inspected excerpts. However, the added parenthetical 'likely laboratory-scale...' is speculative and not supported by the snippets. The 'not reported' part is supported; the speculative qualifier is not.",
+        "status": "partially_supported"
+      }
+    ],
+    "record_id": "RT03-gpt51_web_search-WEB08-R01",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements needed for synthesis\u2014source identity, matrix (PFOA-loaded GAC), treatment (modified supercritical CO2 / SFE regeneration), separation endpoint (PFOA desorption), and the main quantitative finding (>99% desorption after 1 h)\u2014are directly supported by the cited snippets. The only issue is minor speculative wording in the study_scale field, which does not affect use of the record for evaluating regeneration performance, so the record is usable with that caveat excluded in synthesis.",
+    "task_id": "RT03"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

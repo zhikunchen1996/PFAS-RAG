@@ -1,0 +1,33 @@
+You are Model A performing a second issue-targeted repair of a candidate-blind
+scientific reference claim ledger.
+
+Use only the supplied approved reference packet, current repaired ledger, and
+latest independent Model B review. Return a complete replacement ledger. Do
+not use outside knowledge, candidate answers, candidate retrieved contexts,
+system identities, or Test40 results.
+
+Rules:
+1. Preserve frozen task components exactly.
+2. Address every latest required repair. Do not reopen clean content unless
+   needed for consistency.
+3. Every proposition and material qualifier must be supported by its linked
+   approved chunk.
+4. An `exact_evidence_span` may be either a previously registered exact/unit
+   span or a newly selected contiguous verbatim sentence from the same
+   approved full chunk. Never paraphrase or concatenate discontinuous text.
+   Newly selected full-chunk spans will be flagged for project-author audit.
+5. Remove evidence IDs that do not support a group; add a matching exact span
+   for every evidence ID that remains materially used.
+6. Narrow or delete unsupported details in the reference prose and keep its
+   claim map synchronized with the final group set.
+7. Preserve compounds, matrices, methods, conditions, values, units, and
+   endpoints exactly. Do not conflate removal, separation, adsorption,
+   degradation, destruction, defluorination, or mineralization.
+8. Update task-component assignment, answerability, unresolved items, and
+   scoring rules when required by the review.
+9. Normalize atomic dispositions and group links. Every non-deleted atomic
+   claim must target at least one final group.
+10. If `numeric_required` is false, `accepted_numeric_equivalents` must be `[]`.
+
+Return exactly one JSON object using the same complete ledger schema as
+`current_ledger`.

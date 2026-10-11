@@ -1,0 +1,326 @@
+{
+  "call_key": "RT09:gpt51_web_search:verify:RT09-gpt51_web_search-WEB04-R01",
+  "created_at": "2026-08-05T04:39:40.685282+00:00",
+  "raw_response_text": "{\"task_id\":\"RT09\",\"record_id\":\"RT09-gpt51_web_search-WEB04-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record URL https://doi.org/10.26434/chemrxiv-2025-fxt40 matches the DOI and URL given in the source metadata.\"},{\"field_path\":\"citation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Author list, title, venue (ChemRxiv preprint), and year 2025 match the source citation.\"},{\"field_path\":\"study_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source is described as a commercial-scale demonstration using an industrial wastewater stream, consistent with classification as pilot_or_field_deployment.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E01 states a commercial-scale HALT system was used to treat a concentrated industrial wastewater stream from an ion exchange resin regeneration process, matching the summary text.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E01 and WEB04-E02 describe a HALT (hydrothermal alkaline treatment) system using NaOH to degrade and defluorinate PFAS; this matches the treatment summary of HALT using NaOH in a commercial-scale system.\"},{\"field_path\":\"matrix.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E01 describes a concentrated industrial wastewater stream from ion exchange resin regeneration, and WEB04-E04 notes concentrated liquids with complex water chemistries and high TDS; together they support the matrix description.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E02 refers to target FCAs and the source limitations note the focus is on fluorinated carboxylic acids (FCAs), matching this scope description.\"},{\"field_path\":\"pfas_scope[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source limitations state that perfluoroalkyl sulfonic acids are present only as minor constituents, which aligns with the description of PFSAs as minor constituents.\"},{\"field_path\":\"pfas_scope[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E04 states that HALT can degrade and defluorinate PFAS in concentrated liquids with complex water chemistries and high TDS, supporting this general PFAS-in-concentrated-liquids description.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E02 explicitly reports the temperature range as T: 300\u2013350 \u00b0C, matching the recorded value 300\u2013350.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E02 gives temperatures in \u00b0C, matching the recorded unit.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E02 explicitly reports [NaOH]: 0.1\u20130.5 M, matching the recorded range 0.1\u20130.5.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E02 gives NaOH concentration in M, matching the recorded unit.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E03 mentions operating at higher throughputs but provides no numeric value; the record leaves the value blank and notes lack of numeric data, which is consistent with the source.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"No unit is provided in the source for \u2018higher throughputs\u2019; the null unit in the record correctly reflects this.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E04 describes concentrated liquids with complex water chemistries and high TDS, which is accurately summarized as \u201chigh TDS, complex water chemistry.\u201d\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Matrix characteristics are descriptive; no units are applicable and none are given in the source, so a null unit is appropriate.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E02 reports near-100% degradation of FCAs across all operating conditions, which reflects loss of parent compounds; classifying this endpoint as parent_compound_loss is consistent with the measurements.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E01 and WEB04-E02 refer to defluorination of target FCAs, and WEB04-E03 shows inorganic fluoride as the final product with near-complete fluorine mass balance closure, supporting defluorination as an endpoint.\"},{\"field_path\":\"endpoints[2].endpoint_type\",\"status\":\"partially_supported\",\"error_type\":\"endpoint_classification\",\"reason\":\"WEB04-E03 describes a fluorine mass balance with near-complete closure, accounting for inorganic fluoride and VOF generation. This is a total fluorine balance rather than a direct measurement of total organofluorine change. The existence of a fluorine mass balance is supported, but labeling the endpoint specifically as total_organofluorine_change overstates what is measured.\"},{\"field_path\":\"endpoints[3].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E03 discusses observable and non-observable VOF generation under different conditions, so classification of \u201cother\u201d endpoint type focused on volatile organofluorine formation is consistent with the text.\"},{\"field_path\":\"endpoints[4].endpoint_type\",\"status\":\"unsupported\",\"error_type\":\"endpoint_classification\",\"reason\":\"The title includes \u201cPFAS destruction\u201d and WEB04-E01/E04 state the system degrades and defluorinates PFAS, but no measurements of carbon fate or full destruction (beyond defluorination and parent loss) are reported. Under the task rules, classifying this as a destruction endpoint is not supported by the measured basis and is an endpoint-classification error.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E02 states \u201cNear-100% degradation was achieved for FCAs across all tested operating conditions.\u201d Recording this as an approximate value of ~100 with value_form=approximate_numeric matches the source description.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The extent of degradation is clearly a percentage; representing the unit as % is consistent with the phrase \u201cNear-100% degradation.\u201d\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source metadata classify the document as a ChemRxiv preprint and the source_limitations include \u201cPreprint; not yet peer-reviewed at time of inspection,\u201d matching the limitation statement.\"},{\"field_path\":\"limitations[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Source_limitations explicitly note that the industrial wastewater composition and PFAS profile from ion-exchange regeneration may not generalize to other matrices, aligning with this design-inferred limitation.\"},{\"field_path\":\"limitations[2]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Source_limitations state that the fluorine mass balance does not include direct quantitative speciation of all volatile organofluorine compounds at sub-trace levels, and WEB04-E03 notes the presence of inert 1H-perfluoroalkane VOFs; together they support the limitation about incomplete VOF speciation.\"},{\"field_path\":\"limitations[3]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Source_limitations mention that the focus is on FCAs and that perfluoroalkyl sulfonic acids are minor constituents, which supports the stated design-inferred limitation regarding limited PFSA characterization.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E03 states that at the higher tested temperature, near-complete closure of the fluorine mass balance was observed, with dissolved inorganic fluoride as the final reaction product and no observable VOF generation, matching the summarized statement.\"},{\"field_path\":\"residuals_byproducts[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E03 reports that operating at higher throughputs, lower temperatures, and lower NaOH concentrations led to production of inert 1H-perfluoroalkane VOFs, consistent with the recorded byproduct description.\"},{\"field_path\":\"residuals_byproducts[2]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB04-E05 notes precipitation of hard minerals, likely including CaF2 and MgF2. The record adds that this indicates a sink for inorganic fluoride as sparingly soluble mineral fluorides; the mineral identification is supported, while interpreting them explicitly as a fluoride sink is an inferred qualifier not directly stated in the text.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The study uses a single complex industrial wastewater matrix and reports process conditions as ranges with largely qualitative performance statements (near-100% degradation, near-complete mass balance). Given these characteristics, coding comparability as descriptive_only is a reasonable inference from the cited evidence.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The explanation cites the use of a single industrial wastewater matrix, operating-condition ranges (300\u2013350 \u00b0C, 0.1\u20130.5 M NaOH), and qualitative endpoints like near-100% degradation and near-complete mass-balance closure, all of which are present in WEB04-E01 to WEB04-E04, supporting the stated rationale.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core fields describing the source identity, matrix, HALT treatment, key operating conditions, PFAS scope, parent-compound degradation, defluorination, fluorine mass balance behavior, and byproducts are well supported and numerically consistent with the source. Issues are limited to endpoint-type classification for fluorine mass balance and author \u201cdestruction\u201d language, plus a minor inferred qualifier about mineral fluorides as a fluoride sink; these do not compromise the record\u2019s utility for synthesis if interpreted accordingly.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of the measurements needed to distinguish disappearance of a target PFAS from transformation, defluorination, and broader destruction.\",\"task_id\":\"RT09\",\"title\":\"Determining whether a PFAS destructive treatment achieved meaningful destruction\"}\n\nTask-specific extraction objective:\nExtract treatment and conditions, parent PFAS measurement, transformation-product scope, fluoride or fluorine measurement, mass-balance method, mineralization-related endpoint, detection limits, sampling time, unidentified fraction, and authors' endpoint terminology.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.coche.2023.100944\"],\"all_blocked_titles\":[\"scaling up water treatment technologies for pfas destruction current status and potential for fit for purpose application\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.coche.2023.100944\"],\"anchor_id\":\"AR-BLOTEVOGEL-2023\",\"corpus_source\":\"2024 - Blotevogel - Scaling up water treatment technologies for PFAS destruction_ current status and potential for fit-for-purpose application.pdf\",\"doi\":\"10.1016/j.coche.2023.100944\",\"title\":\"Scaling up water treatment technologies for PFAS destruction: current status and potential for fit-for-purpose application\",\"url\":\"https://doi.org/10.1016/j.coche.2023.100944\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Smith SM, Pinkard BR, Zweifel T, et al. Demonstration of hydrothermal alkaline treatment for PFAS destruction in industrial wastewater: assessment of degradation, defluorination, fluorine mass balance, and potential for volatile organofluorine formation. ChemRxiv; 2025. Preprint.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB04-E01\",\n      \"WEB04-E02\",\n      \"WEB04-E03\",\n      \"WEB04-E04\"\n    ],\n    \"reason\": \"The study is a commercial-scale demonstration using a single complex industrial wastewater matrix with multiple operating conditions reported as ranges (temperature, NaOH concentration, throughput) and largely qualitative endpoint descriptions (near-100% degradation, near-complete mass-balance closure). Lack of detailed, condition-specific numeric data and detection limits in the provided text constrains direct quantitative comparison with other technologies or matrices.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.26434/chemrxiv-2025-fxt40\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"parent_compound_loss\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E01\",\n        \"WEB04-E02\"\n      ],\n      \"interpretation\": \"Parent FCA concentration loss (\\\"near-100% degradation\\\") was used as a primary endpoint to assess PFAS disappearance under HALT conditions.\",\n      \"reported_term\": \"degradation of target FCAs\"\n    },\n    {\n      \"endpoint_type\": \"defluorination\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E01\",\n        \"WEB04-E03\",\n        \"WEB04-E05\"\n      ],\n      \"interpretation\": \"Extent of defluorination was assessed, with dissolved inorganic fluoride identified as the final reaction product at higher temperature; this reflects conversion of organically bound fluorine to inorganic F- and some mineral fluorides (e.g., CaF2, MgF2).\",\n      \"reported_term\": \"defluorination; dissolved inorganic fluoride as final reaction product\"\n    },\n    {\n      \"endpoint_type\": \"total_organofluorine_change\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E01\",\n        \"WEB04-E03\"\n      ],\n      \"interpretation\": \"A fluorine mass balance was constructed to evaluate how much of the initial fluorine associated with FCAs/PFAS was accounted for in inorganic fluoride, volatile organofluorine species, and other sinks. \\\"Near-complete closure\\\" at higher temperature indicates that most fluorine was recovered in measured sinks.\",\n      \"reported_term\": \"fluorine mass balance; near-complete closure of the fluorine mass balance\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E01\",\n        \"WEB04-E03\"\n      ],\n      \"interpretation\": \"Formation of volatile organofluorine compounds (including inert 1H-perfluoroalkane VOFs) was evaluated as a potential byproduct pathway, particularly at lower temperatures, lower NaOH, and higher throughput.\",\n      \"reported_term\": \"potential for volatile organofluorine (VOF) formation\"\n    },\n    {\n      \"endpoint_type\": \"destruction\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E01\",\n        \"WEB04-E02\",\n        \"WEB04-E04\"\n      ],\n      \"interpretation\": \"Authors use the language of \\\"destruction\\\" based on near-100% parent FCA degradation plus high defluorination and fluorine mass-balance closure; however, detailed mineralization (carbon fate) measurements are not described in the provided text.\",\n      \"reported_term\": \"PFAS destruction; degrade and defluorinate PFAS with high efficacy\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E01\"\n      ],\n      \"statement\": \"Preprint; not yet peer-reviewed at time of inspection.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E01\",\n        \"WEB04-E04\"\n      ],\n      \"statement\": \"Industrial wastewater composition and PFAS profile are specific to an ion-exchange regeneration brine, which may limit generalizability to other matrices.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E03\"\n      ],\n      \"statement\": \"Fluorine mass balance does not include full quantitative speciation of all volatile organofluorine compounds at sub-trace levels; inert 1H-perfluoroalkane VOFs were observed under some conditions, implying possible unaccounted organofluorine in the gas phase.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E02\",\n        \"WEB04-E04\"\n      ],\n      \"statement\": \"Study focuses on fluorinated carboxylic acids as primary targets; perfluoroalkane sulfonic acids are only minor constituents and may not be fully characterized for defluorination or mass balance.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB04-E01\",\n      \"WEB04-E04\"\n    ],\n    \"value\": \"Concentrated industrial wastewater (ion-exchange resin regeneration brine) with complex water chemistry and high TDS.\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E02\"\n      ],\n      \"name\": \"temperature\",\n      \"qualifiers\": \"Range of tested temperatures in the HALT system.\",\n      \"unit\": \"\\u00b0C\",\n      \"value\": \"300-350\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E02\"\n      ],\n      \"name\": \"NaOH concentration\",\n      \"qualifiers\": \"Range of sodium hydroxide concentrations tested in HALT.\",\n      \"unit\": \"M\",\n      \"value\": \"0.1-0.5\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E03\"\n      ],\n      \"name\": \"throughput\",\n      \"qualifiers\": \"\\\"Higher throughputs\\\" mentioned as a condition influencing volatile organofluorine formation; no numeric values reported in the provided text.\",\n      \"unit\": null,\n      \"value\": \"\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E01\",\n        \"WEB04-E04\"\n      ],\n      \"name\": \"matrix characteristics\",\n      \"qualifiers\": \"Industrial wastewater from ion exchange regeneration with complex composition and high total dissolved solids.\",\n      \"unit\": null,\n      \"value\": \"high TDS, complex water chemistry\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E02\"\n      ],\n      \"value\": \"Target fluorinated carboxylic acids (FCAs) as primary PFAS of interest.\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E04\"\n      ],\n      \"value\": \"Perfluoroalkane sulfonic acids (PFSAs) present as minor constituents in the wastewater.\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E04\"\n      ],\n      \"value\": \"PFAS in general in concentrated liquids with complex water chemistries and high TDS.\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E02\"\n      ],\n      \"name\": \"FCA degradation extent\",\n      \"qualifiers\": \"Described as \\\"Near-100% degradation\\\" of target FCAs across all tested operating conditions; no specific numeric percentage or uncertainty reported in the provided text.\",\n      \"unit\": \"%\",\n      \"value\": \"~100\",\n      \"value_form\": \"approximate_numeric\"\n    }\n  ],\n  \"record_id\": \"RT09-gpt51_web_search-WEB04-R01\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E03\"\n      ],\n      \"statement\": \"At higher temperature, dissolved inorganic fluoride was observed as the final reaction product, with near-complete closure of the fluorine mass balance and no observable volatile organofluorine generation.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E03\"\n      ],\n      \"statement\": \"At higher throughput, lower temperatures, and lower NaOH concentrations, inert 1H-perfluoroalkane volatile organofluorine compounds were produced as byproducts.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E05\"\n      ],\n      \"statement\": \"Some precipitation of hard minerals (e.g., Ca, Mg) was observed, likely including CaF2 and MgF2, indicating a sink for inorganic fluoride as sparingly soluble mineral fluorides.\"\n    }\n  ],\n  \"source_id\": \"WEB04\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB04-E01\"\n    ],\n    \"value\": \"Commercial-scale HALT (hydrothermal alkaline treatment) system treating concentrated industrial wastewater from an ion exchange resin regeneration process.\"\n  },\n  \"study_type\": \"pilot_or_field_deployment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB04-E01\",\n      \"WEB04-E02\",\n      \"WEB04-E04\"\n    ],\n    \"value\": \"Hydrothermal alkaline treatment (HALT) using NaOH in a commercial-scale system.\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"full_text\",\n  \"capture_source_id\": \"WEB40\",\n  \"citation\": \"Smith SM, Pinkard BR, Zweifel T, et al. Demonstration of hydrothermal alkaline treatment for PFAS destruction in industrial wastewater: assessment of degradation, defluorination, fluorine mass balance, and potential for volatile organofluorine formation. ChemRxiv; 2025. Preprint.\",\n  \"covered_component_ids\": [\n    \"RT09-C1\",\n    \"RT09-C2\",\n    \"RT09-C3\"\n  ],\n  \"doi\": \"10.26434/chemrxiv-2025-fxt40\",\n  \"doi_or_stable_url\": \"https://doi.org/10.26434/chemrxiv-2025-fxt40\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB04-E01\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Page 0\\u20131, Introduction/Abstract region\",\n      \"text\": \"In this study, a commercial-scale HALT system was employed to degrade and defluorinate PFAS in a concentrated industrial wastewater stream produced from an ion exchange resin regeneration process. Numerous operating conditions were tested to assess the extent of PFAS degradation, extent of defluorination, and any production of fluorinated byproducts under relatively mild HALT conditions.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB04-E02\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Page 22, Conclusions\",\n      \"text\": \"Under a range of operating conditions (T: 300\\u2013350 \\u00b0C, [NaOH]: 0.1\\u20130.5 M), HALT displayed the ability to degrade and defluorinate target FCAs with high efficacy. Near-100% degradation was achieved for FCAs across all tested operating conditions.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB04-E03\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Page 23, Conclusions\",\n      \"text\": \"At the higher tested temperature, near-complete closure of the fluorine mass balance was observed, with dissolved inorganic fluoride formed as the final reaction product and no observable VOF generation. However, operating at higher throughputs, lower temperatures, and lower NaOH concentrations led to production of inert 1H-perfluoroalkane VOFs.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB04-E04\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Page 23, Conclusions\",\n      \"text\": \"Overall, this study demonstrates that HALT can be successfully incorporated as part of an industrial wastewater treatment train to degrade and defluorinate PFAS in concentrated liquids with complex water chemistries and high TDS. HALT efficacy is relatively agnostic to PFAS chain length and can be tuned to target FCAs or PFSAs with various resulting practical trade-offs.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB04-E05\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Page 23, Conclusions\",\n      \"text\": \"Some precipitation of hard minerals was observed (e.g., Ca, Mg), likely including CaF2 and MgF2.\"\n    }\n  ],\n  \"publication_status\": \"preprint\",\n  \"publication_type\": \"pilot_or_field_deployment\",\n  \"source\": \"https://chemrxiv.org/engage/api-gateway/chemrxiv/assets/orp/resource/item/69121302ef936fb4a27366dc/original/demonstration-of-hydrothermal-alkaline-treatment-for-pfas-destruction-in-industrial-wastewater-assessment-of-degradation-defluorination-fluorine-mass-balance-and-potential-for-volatile-organofluorine-formation.pdf\",\n  \"source_id\": \"WEB04\",\n  \"source_limitations\": [\n    \"Preprint; not yet peer-reviewed at time of inspection.\",\n    \"Industrial wastewater composition and PFAS profile are specific to an ion-exchange regeneration brine and may not generalize to other matrices.\",\n    \"Fluorine mass balance does not include direct quantitative speciation of all volatile organofluorine compounds at sub-trace levels.\",\n    \"Focus is on fluorinated carboxylic acids (FCAs); perfluoroalkyl sulfonic acids are present only as minor constituents.\"\n  ],\n  \"title\": \"Demonstration of hydrothermal alkaline treatment for PFAS destruction in industrial wastewater: assessment of degradation, defluorination, fluorine mass balance, and potential for volatile organofluorine formation\",\n  \"year\": \"2025\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "e7ac3eaa14d75f988e9069e5bc54476a4ca242262ec66c023dd68f90fafcd69a",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.041263,
+    "finish_reason": "stop",
+    "input_tokens": 4380,
+    "latency_seconds": 29.16015650006011,
+    "output_tokens": 3694,
+    "reasoning_tokens": 1460,
+    "response_id": "chatcmpl-E9NhHJ8R1UVPsL9gebp1O3SPLyQCa",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 8074,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The record URL https://doi.org/10.26434/chemrxiv-2025-fxt40 matches the DOI and URL given in the source metadata.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "citation",
+        "reason": "Author list, title, venue (ChemRxiv preprint), and year 2025 match the source citation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_type",
+        "reason": "The source is described as a commercial-scale demonstration using an industrial wastewater stream, consistent with classification as pilot_or_field_deployment.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "WEB04-E01 states a commercial-scale HALT system was used to treat a concentrated industrial wastewater stream from an ion exchange resin regeneration process, matching the summary text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "WEB04-E01 and WEB04-E02 describe a HALT (hydrothermal alkaline treatment) system using NaOH to degrade and defluorinate PFAS; this matches the treatment summary of HALT using NaOH in a commercial-scale system.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix.value",
+        "reason": "WEB04-E01 describes a concentrated industrial wastewater stream from ion exchange resin regeneration, and WEB04-E04 notes concentrated liquids with complex water chemistries and high TDS; together they support the matrix description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "WEB04-E02 refers to target FCAs and the source limitations note the focus is on fluorinated carboxylic acids (FCAs), matching this scope description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1].value",
+        "reason": "The source limitations state that perfluoroalkyl sulfonic acids are present only as minor constituents, which aligns with the description of PFSAs as minor constituents.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[2].value",
+        "reason": "WEB04-E04 states that HALT can degrade and defluorinate PFAS in concentrated liquids with complex water chemistries and high TDS, supporting this general PFAS-in-concentrated-liquids description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "WEB04-E02 explicitly reports the temperature range as T: 300\u2013350 \u00b0C, matching the recorded value 300\u2013350.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "WEB04-E02 gives temperatures in \u00b0C, matching the recorded unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "WEB04-E02 explicitly reports [NaOH]: 0.1\u20130.5 M, matching the recorded range 0.1\u20130.5.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "WEB04-E02 gives NaOH concentration in M, matching the recorded unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "WEB04-E03 mentions operating at higher throughputs but provides no numeric value; the record leaves the value blank and notes lack of numeric data, which is consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "No unit is provided in the source for \u2018higher throughputs\u2019; the null unit in the record correctly reflects this.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "WEB04-E04 describes concentrated liquids with complex water chemistries and high TDS, which is accurately summarized as \u201chigh TDS, complex water chemistry.\u201d",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "Matrix characteristics are descriptive; no units are applicable and none are given in the source, so a null unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "WEB04-E02 reports near-100% degradation of FCAs across all operating conditions, which reflects loss of parent compounds; classifying this endpoint as parent_compound_loss is consistent with the measurements.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "WEB04-E01 and WEB04-E02 refer to defluorination of target FCAs, and WEB04-E03 shows inorganic fluoride as the final product with near-complete fluorine mass balance closure, supporting defluorination as an endpoint.",
+        "status": "supported"
+      },
+      {
+        "error_type": "endpoint_classification",
+        "field_path": "endpoints[2].endpoint_type",
+        "reason": "WEB04-E03 describes a fluorine mass balance with near-complete closure, accounting for inorganic fluoride and VOF generation. This is a total fluorine balance rather than a direct measurement of total organofluorine change. The existence of a fluorine mass balance is supported, but labeling the endpoint specifically as total_organofluorine_change overstates what is measured.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[3].endpoint_type",
+        "reason": "WEB04-E03 discusses observable and non-observable VOF generation under different conditions, so classification of \u201cother\u201d endpoint type focused on volatile organofluorine formation is consistent with the text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "endpoint_classification",
+        "field_path": "endpoints[4].endpoint_type",
+        "reason": "The title includes \u201cPFAS destruction\u201d and WEB04-E01/E04 state the system degrades and defluorinates PFAS, but no measurements of carbon fate or full destruction (beyond defluorination and parent loss) are reported. Under the task rules, classifying this as a destruction endpoint is not supported by the measured basis and is an endpoint-classification error.",
+        "status": "unsupported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "WEB04-E02 states \u201cNear-100% degradation was achieved for FCAs across all tested operating conditions.\u201d Recording this as an approximate value of ~100 with value_form=approximate_numeric matches the source description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The extent of degradation is clearly a percentage; representing the unit as % is consistent with the phrase \u201cNear-100% degradation.\u201d",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "The source metadata classify the document as a ChemRxiv preprint and the source_limitations include \u201cPreprint; not yet peer-reviewed at time of inspection,\u201d matching the limitation statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1]",
+        "reason": "Source_limitations explicitly note that the industrial wastewater composition and PFAS profile from ion-exchange regeneration may not generalize to other matrices, aligning with this design-inferred limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[2]",
+        "reason": "Source_limitations state that the fluorine mass balance does not include direct quantitative speciation of all volatile organofluorine compounds at sub-trace levels, and WEB04-E03 notes the presence of inert 1H-perfluoroalkane VOFs; together they support the limitation about incomplete VOF speciation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[3]",
+        "reason": "Source_limitations mention that the focus is on FCAs and that perfluoroalkyl sulfonic acids are minor constituents, which supports the stated design-inferred limitation regarding limited PFSA characterization.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "WEB04-E03 states that at the higher tested temperature, near-complete closure of the fluorine mass balance was observed, with dissolved inorganic fluoride as the final reaction product and no observable VOF generation, matching the summarized statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[1]",
+        "reason": "WEB04-E03 reports that operating at higher throughputs, lower temperatures, and lower NaOH concentrations led to production of inert 1H-perfluoroalkane VOFs, consistent with the recorded byproduct description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "residuals_byproducts[2]",
+        "reason": "WEB04-E05 notes precipitation of hard minerals, likely including CaF2 and MgF2. The record adds that this indicates a sink for inorganic fluoride as sparingly soluble mineral fluorides; the mineral identification is supported, while interpreting them explicitly as a fluoride sink is an inferred qualifier not directly stated in the text.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The study uses a single complex industrial wastewater matrix and reports process conditions as ranges with largely qualitative performance statements (near-100% degradation, near-complete mass balance). Given these characteristics, coding comparability as descriptive_only is a reasonable inference from the cited evidence.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The explanation cites the use of a single industrial wastewater matrix, operating-condition ranges (300\u2013350 \u00b0C, 0.1\u20130.5 M NaOH), and qualitative endpoints like near-100% degradation and near-complete mass-balance closure, all of which are present in WEB04-E01 to WEB04-E04, supporting the stated rationale.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT09-gpt51_web_search-WEB04-R01",
+    "record_usable": true,
+    "record_usable_rationale": "Core fields describing the source identity, matrix, HALT treatment, key operating conditions, PFAS scope, parent-compound degradation, defluorination, fluorine mass balance behavior, and byproducts are well supported and numerically consistent with the source. Issues are limited to endpoint-type classification for fluorine mass balance and author \u201cdestruction\u201d language, plus a minor inferred qualifier about mineral fluorides as a fluoride sink; these do not compromise the record\u2019s utility for synthesis if interpreted accordingly.",
+    "task_id": "RT09"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

@@ -1,0 +1,356 @@
+{
+  "call_key": "RT03:bge_llm_local_rag:verify:RT03-bge_llm_local_rag-S03-R03",
+  "created_at": "2026-08-05T04:00:02.032906+00:00",
+  "raw_response_text": "{\"task_id\":\"RT03\",\"record_id\":\"RT03-bge_llm_local_rag-S03-R03\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record DOI/URL (https://doi.org/10.1016/j.cej.2020.126698) matches the DOI given in the source citation.\"},{\"field_path\":\"matrix\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Text describes PFOA solutions prepared in ultrapure water and used in IX and regeneration experiments, i.e., aqueous PFOA in laboratory water (S03-E02, S03-E03).\"},{\"field_path\":\"pfas_scope[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Perfluorooctanoic acid (PFOA) in water is clearly identified as the target PFAS in the title, abstract, and methods (S03-E02, S03-E03, S03-E04).\"},{\"field_path\":\"treatment\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Source explains a cyclic treatment with each cycle including IX adsorption of PFOA followed by direct regeneration of PFOA-sorbed resins using heat-activated peroxodisulfate (PDS) in an SR-AOP (S03-E01, S03-E02, S03-E07).\"},{\"field_path\":\"study_scale\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Experiments involve grams of resin, batch flasks, and SEM analyses, consistent with bench-scale cyclic IX and SR-AOP regeneration tests; high PDS dose (300 mM) and six cycles are mentioned (S03-E02, S03-E05, S03-E07).\"},{\"field_path\":\"study_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The article reports original laboratory experiments on IX and SR-AOP regeneration, fitting a primary experimental study (multiple methods and results sections).\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The cited text emphasizes qualitative findings (resin damage at high PDS, irreversible capacity loss) without tabulated quantitative capacity or removal values at high dose in the provided excerpts (S03-E02, S03-E05, S03-E07), so classifying comparability as descriptive_only is a reasonable inference.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Reason correctly notes that information at high PDS is mainly about damage and loss of capacity rather than detailed quantitative performance trends, consistent with the narrative description (S03-E02, S03-E07).\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The endpoint concerns cumulative PFOA removal over cycles. The source explicitly states that cumulative PFOA removal increased linearly with cycle number for regenerated resins (S03-E02), which fits endpoint_type='removal'.\"},{\"field_path\":\"endpoints[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Reported term 'cumulative PFOA removal' matches the text; the interpretation that removal was assessed over cycles and that high PDS caused damage and irreversible loss of adsorption capacity is supported by S03-E02 and S03-E07.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source describes SR-AOP and PDS treatment as destructing/degrading PFOA and detoxifying PFAS (S03-E01, S03-E02, S03-E08), corresponding to loss of the parent compound, so endpoint_type='parent_compound_loss' is appropriate.\"},{\"field_path\":\"endpoints[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Text notes that SR-AOP with PDS degrades/detoxifies PFOA sorbed on resins (S03-E01, S03-E02, S03-E08); the interpretation that this occurs during regeneration and that resin functionality can deteriorate at high dose is consistent with S03-E02 and S03-E07.\"},{\"field_path\":\"endpoints[2].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This endpoint addresses irreversible adsorption capacity loss and regeneration failure at high PDS dose; it is not a removal or destruction metric but a material performance outcome, so classification as 'other' is appropriate and supported by the text (S03-E02, S03-E07).\"},{\"field_path\":\"endpoints[2]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S03-E02 and S03-E07 clearly state that a too high PDS dose seriously damages resins and causes irreversible loss of adsorption capacity, aligning with the interpretation of adsorption capacity loss/regeneration failure at high dose.\"},{\"field_path\":\"endpoints[3].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This endpoint describes physical resin material damage (SEM-visible cracks, coarse surface), which is a material property, not a removal or chemical transformation metric; 'other' is an appropriate classification supported by S03-E05 and S03-E07.\"},{\"field_path\":\"endpoints[3]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S03-E07 reports SEM observations after six cycles at 30 and 300 mM PDS, showing coarse surface with many large cracks at 300 mM and attributing damage primarily to SO4\u00b7\u2212 oxidation, matching the interpretation of resin material damage.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Methods state that after five cyclic preloading tests, 100 mg/g PFOA had been loaded on the resins (S03-E03), matching the value 100.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFOA loading is given as 100 mg/g in the text (S03-E03); the unit mg/g is correctly captured.\"},{\"field_path\":\"operating_conditions[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Name and qualifiers correctly describe preloaded PFOA on resins before cyclic experiments; value 100 mg/g matches S03-E03.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Figure 4 caption mentions resins after 6 treatment cycles at specified PDS doses (S03-E05), and S03-E07 discusses morphology at the 6th cycle, supporting the value 6 for cycles evaluated.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The number of cycles is dimensionless; leaving unit as null is appropriate.\"},{\"field_path\":\"operating_conditions[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Description of 'Number of adsorption\u2013regeneration cycles' with 6 cycles at 300 mM PDS aligns with figure caption and discussion of the 6th cycle (S03-E05, S03-E07).\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Heat-activated peroxodisulfate (PDS) is described as the oxidant used to generate sulfate radicals for regeneration (S03-E01, S03-E02, S03-E07), matching the stated value.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The oxidant identity is a categorical descriptor; unit is correctly left null.\"},{\"field_path\":\"operating_conditions[2]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Name and qualifiers capture that PDS is the regeneration oxidant and is heat-activated to produce sulfate radicals, consistent with S03-E01, S03-E02, and S03-E07.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S03-E07 states that as PDS was increased to 300 mM, severe material damage occurred, indicating a regeneration condition at 300 mM PDS.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The PDS dose is explicitly given in mM in S03-E07; unit mM is correct.\"},{\"field_path\":\"operating_conditions[3]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Name and qualifiers describing a high PDS concentration of 300 mM during regeneration match S03-E07.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Figure 4 caption and related text refer to resins after 6 treatment cycles at 300 mM PDS (S03-E05, S03-E07), supporting the numeric value 6 as the number of cycles examined.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This finding is a count of cycles, so leaving unit null is appropriate.\"},{\"field_path\":\"quantitative_findings[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The name and qualifiers note that SEM morphology was evaluated after 6 treatment cycles at 300 mM PDS, consistent with S03-E05 and S03-E07.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S03-E07 describes increasing PDS to 300 mM, and S03-E02 notes that a too high PDS dose seriously damages resin and causes irreversible loss of adsorption capacity, supporting 300 mM as the high-dose condition.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The PDS concentration is specified in mM in the source (S03-E07); the unit mM is correct.\"},{\"field_path\":\"quantitative_findings[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The description of 300 mM as a 'too high' PDS dose that causes serious damage and irreversible loss of adsorption capacity reflects the narrative in S03-E02 and the dose level in S03-E07.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Design_inferred limitation notes that the high PDS (300 mM) experiments are bench-scale and aimed at understanding resin damage. The small-scale batch conditions and SEM-based damage analysis (S03-E05, S03-E07) reasonably support this inference.\"},{\"field_path\":\"limitations[1]\",\"status\":\"unsupported\",\"error_type\":\"other\",\"reason\":\"The limitation asserts that the study did not report quantitative adsorption capacity or removal values after each cycle at 300 mM PDS. The provided excerpts (S03-E02, S03-E05, S03-E07) do not demonstrate this absence, and some quantitative information may exist elsewhere (e.g., in figures). Non-reporting cannot be verified from the supplied text.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S03-E08 supports that the regenerant is a small quantity of non-hazardous solution primarily containing inert potassium and sulfate ions. However, the statement that severe resin degradation could introduce resin-derived organic fragments and that these were not characterized is speculative and not supported by the cited text (S03-E02, S03-E07, S03-E08).\"},{\"field_path\":\"endpoints\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Across the four endpoints, the source supports cumulative PFOA removal trends, PFOA degradation/detoxification, irreversible adsorption capacity loss at high PDS, and resin material damage seen in SEM, with appropriate classifications and interpretations (S03-E01, S03-E02, S03-E05, S03-E07, S03-E08).\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core aspects\u2014study identity, matrix, PFAS (PFOA), treatment scheme, operating conditions (100 mg/g loading, 300 mM PDS, 6 cycles), and key endpoints (removal, PFOA degradation, capacity loss, and resin damage)\u2014are well supported by the cited text. Issues are limited to one unsupported design-inferred limitation about missing quantitative data and a partially supported speculative statement about possible resin-derived byproducts. These do not compromise the usability of the record for synthesis of regeneration vs replacement decisions.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of the evidence needed to choose among regeneration, replacement, and end-of-life management for PFAS-loaded adsorption media.\",\"task_id\":\"RT03\",\"title\":\"Deciding whether to regenerate or replace PFAS adsorption media\"}\n\nTask-specific extraction objective:\nExtract adsorbent and PFAS identity, loading protocol, regeneration or disposal method, operating conditions, desorption or destruction endpoint, capacity recovery, cycle number, material change, residual streams, energy, chemicals, and cost.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Gao, P.; Cui, J.; Deng, Y. Direct regeneration of ion exchange resins with sulfate radical\\u2013based advanced oxidation for enabling a cyclic adsorption\\u2013regeneration treatment approach to aqueous perfluorooctanoic acid (PFOA). Chem. Eng. J. 2021, 405, 126698.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S03-E02\",\n      \"S03-E05\",\n      \"S03-E07\"\n    ],\n    \"reason\": \"This record characterizes performance and material integrity of ion exchange resins under a high PDS dose (300 mM) but does not provide directly comparable quantitative capacity or removal metrics relative to lower-dose conditions; evidence is mainly qualitative regarding damage and capacity loss.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.cej.2020.126698\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S03-E02\",\n        \"S03-E07\"\n      ],\n      \"interpretation\": \"Cumulative PFOA removal over cycles was assessed for resins regenerated at 300 mM PDS, but high oxidant dose led to serious damage and irreversible loss of adsorption capacity despite PFOA degradation.\",\n      \"reported_term\": \"cumulative PFOA removal\"\n    },\n    {\n      \"endpoint_type\": \"parent_compound_loss\",\n      \"evidence_locator_ids\": [\n        \"S03-E01\",\n        \"S03-E02\",\n        \"S03-E08\"\n      ],\n      \"interpretation\": \"Destruction of PFOA sorbed on the resins occurred during SR-AOP regeneration at 300 mM PDS, contributing to detoxification, but resin functionality deteriorated.\",\n      \"reported_term\": \"PFOA degradation / detoxification\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S03-E02\",\n        \"S03-E07\"\n      ],\n      \"interpretation\": \"At 300 mM PDS, severe resin material damage caused irreversible loss in adsorption capacity, indicating that this high oxidant dose is unsuitable for sustainable resin regeneration.\",\n      \"reported_term\": \"adsorption capacity loss / resin regeneration failure\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S03-E05\",\n        \"S03-E07\"\n      ],\n      \"interpretation\": \"SEM analysis after six cycles at 300 mM PDS showed a coarse resin surface with many large cracks, indicating severe material destruction primarily attributed to SO4\\u00b7\\u2212 oxidation rather than heat, PDS alone, or acidity.\",\n      \"reported_term\": \"resin material damage\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S03-E05\",\n        \"S03-E07\"\n      ],\n      \"statement\": \"High PDS dose experiments (300 mM) were conducted at bench scale and primarily aimed at mechanistic understanding of resin damage, not at process optimization for practical systems.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S03-E02\",\n        \"S03-E05\",\n        \"S03-E07\"\n      ],\n      \"statement\": \"The study did not report quantitative adsorption capacity values or removal percentages after each cycle at 300 mM PDS, limiting direct comparison of performance loss over time.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S03-E02\",\n      \"S03-E03\"\n    ],\n    \"value\": \"Aqueous PFOA solutions treated in cyclic IX adsorption\\u2013regeneration experiments (laboratory-prepared water)\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S03-E03\"\n      ],\n      \"name\": \"PFOA loading before first regeneration cycle\",\n      \"qualifiers\": \"Preloaded PFOA on resins prior to cyclic IX\\u2013SR-AOP experiments\",\n      \"unit\": \"mg/g\",\n      \"value\": \"100\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S03-E05\",\n        \"S03-E07\"\n      ],\n      \"name\": \"Number of adsorption\\u2013regeneration cycles evaluated\",\n      \"qualifiers\": \"Cyclic IX adsorption \\u2013 direct SR-AOP regeneration tests with 300 mM PDS conducted up to the 6th cycle\",\n      \"unit\": null,\n      \"value\": \"6\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S03-E01\",\n        \"S03-E02\",\n        \"S03-E05\",\n        \"S03-E07\"\n      ],\n      \"name\": \"Regeneration oxidant\",\n      \"qualifiers\": \"Heat-activated PDS used to generate sulfate radicals for direct regeneration\",\n      \"unit\": null,\n      \"value\": \"peroxodisulfate (PDS)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S03-E05\",\n        \"S03-E07\"\n      ],\n      \"name\": \"PDS dose during regeneration\",\n      \"qualifiers\": \"High PDS concentration during SR-AOP regeneration in one experimental group for cyclic IX adsorption\\u2013regeneration tests\",\n      \"unit\": \"mM\",\n      \"value\": \"300\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S03-E01\",\n        \"S03-E02\",\n        \"S03-E03\",\n        \"S03-E04\"\n      ],\n      \"value\": \"Perfluorooctanoic acid (PFOA) in water\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S03-E05\",\n        \"S03-E07\"\n      ],\n      \"name\": \"Number of adsorption\\u2013regeneration cycles with 300 mM PDS examined\",\n      \"qualifiers\": \"Resin morphology after 6 treatment cycles at 300 mM PDS for regeneration was evaluated via SEM.\",\n      \"unit\": null,\n      \"value\": \"6\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S03-E02\",\n        \"S03-E05\",\n        \"S03-E07\"\n      ],\n      \"name\": \"PDS dose classified as high in this study\",\n      \"qualifiers\": \"Described as a too high PDS dose that caused serious damage to the resins and irreversible loss of adsorption capacity.\",\n      \"unit\": \"mM\",\n      \"value\": \"300\",\n      \"value_form\": \"exact_numeric\"\n    }\n  ],\n  \"record_id\": \"RT03-bge_llm_local_rag-S03-R03\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S03-E02\",\n        \"S03-E07\",\n        \"S03-E08\"\n      ],\n      \"statement\": \"Despite high PDS dose, the regenerant stream is described as primarily containing inert potassium and sulfate ions, but severe resin degradation could also introduce resin-derived organic fragments into the regenerant, which were not characterized in the provided text.\"\n    }\n  ],\n  \"source_id\": \"S03\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S03-E02\",\n      \"S03-E05\",\n      \"S03-E07\"\n    ],\n    \"value\": \"Bench-scale cyclic ion exchange adsorption and SR-AOP regeneration experiments at a high PDS dose (300 mM) over six treatment cycles\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S03-E01\",\n      \"S03-E02\",\n      \"S03-E05\",\n      \"S03-E07\"\n    ],\n    \"value\": \"Repeated cycles of ion exchange adsorption of PFOA onto resins followed by in-situ regeneration using sulfate-radical-based advanced oxidation with heat-activated peroxodisulfate (PDS) at a high dose of 300 mM.\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 3,\n  \"bge_score\": 0.7343021035194397,\n  \"citation\": \"Gao, P.; Cui, J.; Deng, Y. Direct regeneration of ion exchange resins with sulfate radical-based advanced oxidation for enabling a cyclic adsorption - regeneration treatment approach to aqueous perfluorooctanoic acid (PFOA). Chemical Engineering Journal 2021 405 126698. DOI: 10.1016/j.cej.2020.126698.\",\n  \"doi\": \"10.1016/j.cej.2020.126698\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.cej.2020.126698\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 4,\n      \"locator_id\": \"S03-E01\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.43630674481391907,\n        \"RT03-C2\": 0.08246059715747833,\n        \"RT03-C3\": 0.0015433140797540545,\n        \"umbrella\": 0.29046228528022766\n      },\n      \"section\": \"methods\",\n      \"text\": \"4 \\u25cf\\u2212 )-driven advanced oxidation processes (SR- AOPs)[15\\u201317]. Despite effective degradation of certain PFAS chemi- cals, SR-AOPs can significantly increase total dissolved solids (TDS) in the treated water due to the production of abundant sulfate anions (the final product of dosed persulfate)[18], which is typically unacceptable for drinking or reclaimed water. The other issue is a dramatic pH de- crease over the treatment, which requires additional pH adjustment and further increases TDS. Here we proposed a new cyclic treatment approach to utilizing SR- AOPs, which can technically decompose PFAS but cannot be realisti- cally applied, for practical applications to water treatment and re- clamation. During the approach, each cycle is separated into two phases, i.e. IX adsorption and on-site regeneration. For the adsorption phase, trace PFAS in considerable water is concentrated onto a small quantity of resins for producing clean water. In the ensuing regenera- tion phase, PFAS sorbed on the resins is directly destroyed by SR-AOPs for PFAS detoxification and resin regeneration, accompanied by gen- eration of a small volume of easily managed and non-hazardous re- generant. To achieve the goal, two knowledge gaps need to be filled, including\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S03-E02\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.6168299317359924,\n        \"RT03-C2\": 0.012550095096230507,\n        \"RT03-C3\": 0.0005232457187958062,\n        \"umbrella\": 0.08929996192455292\n      },\n      \"section\": \"results\",\n      \"text\": \"On the other hand, sulfate radical (SO4 \\u25cf\\u2212 )- based advanced oxidation processes (SR-AOPs) have proven effective for destructing certain PFAS, but are rarely applied to realistic treatment, primarily because SR-AOPs can excessively increase total dissolved solids and decrease pH in treated water. Here we proposed and tested a cyclic treatment approach for addressing per- fluorooctanoic acid (PFOA), a representative PFAS. Each cycle included IX for purifying considerable PFOA- polluted water and concentrating trace PFOA on a small quantity of resins; and direct regeneration of PFOA- sorbed resins with heat activation of peroxodisulfate (PDS) for detoxification and resin regeneration. Results show that cumulative PFOA removal was linearly increased with the cycle number for regenerated resins. Despite slight resin destruction, regeneration with a low PDS dose could effectively recover the adsorption capability. However, a too high PDS dose could seriously damage the resins, causing an irreversible loss of the adsorption capacity. The approach can purify substantial water and detoxify PFOA, while producing a small quantity of non-hazardous regenerant, thereby enabling a cost effective design for treatment of PFOA-polluted water. Equally important, the study demonstrates a new strategy for on-site regeneration of exhausted IX resins in water and wastewater treatment.\"\n    },\n    {\n      \"corpus_chunk\": 6,\n      \"locator_id\": \"S03-E03\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.1062542051076889,\n        \"RT03-C2\": 0.000685575301758945,\n        \"RT03-C3\": 0.003582897363230586,\n        \"umbrella\": 0.01274778600782156\n      },\n      \"section\": \"methods\",\n      \"text\": \"strated capability for capturing aqueous PFOA[19]. The resins were first rinsed once for removing possible impurities on the surface through addition of 5.00 g resins into 500 mL ultrapure water in a 1 L conical flask. After 20-min mixing at 60 rpm on an orbital reciprocating shaker (Thermo Scientific MaxQ\\u2122 2508) at room temperature (25 \\u00b0C), the sample was filtered with 0.45 \\u03bcm nylon membrane (Corning\\u2122 nylon syringe filters). Thereafter, the resins were subject to PFOA preloading as follows. Resins (5.00 g) were introduced to 500 mL 200.0 mg/L PFOA solution in a 1 L flask on the shaker at 25 \\u00b0C at 150 rpm. The adsorption proceeded for 24 h before the solution was filtered using the 0.45 \\u03bcm nylon membrane. Filtrate PFOA was measured to quantify pre- loaded PFOA, while the resins were collected for another preloading run. After five cyclic preloading tests, 100 mg/g PFOA had been loaded on the resins. Feasibility tests were performed to compare F \\u2212 release and de- fluorination fractions after treatment of PFOA-preloaded resins in dif- ferent regeneration routes. In Route 1, the PFOA-preloaded resin was directly treated by SR-AOP at 10 mM peroxodisulfate (PDS) with the\"\n    },\n    {\n      \"corpus_chunk\": 0,\n      \"locator_id\": \"S03-E04\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.5506232976913452,\n        \"RT03-C2\": 0.023253927007317543,\n        \"RT03-C3\": 0.0002064565196633339,\n        \"umbrella\": 0.13277512788772583\n      },\n      \"section\": \"unknown\",\n      \"text\": \"Contents lists available atScienceDirect Chemical Engineering Journal journal homepage: www.elsevier.com/locate/cej Direct regeneration of ion exchange resins with sulfate radical-based advanced oxidation for enabling a cyclic adsorption \\u2013 regeneration treatment approach to aqueous perfluorooctanoic acid (PFOA) Panpan Gaoa,b, Junkui Cuib, Yang Dengb,\\u204e aSchool of Environmental Studies, China University of Geosciences, Wuhan, Hubei Province 430074, China bDepartment of Earth and Environmental Studies, Montclair State University, Montclair, NJ 07043, USA HIGHLIGHTS \\u2022SR-AOP regenerates PFOA-sorbed IX resins and detoxifies PFOA. \\u2022Resins are efficiently recovered with a minimal material damage at a low PDS dose. \\u2022A too high PDS dose can destruct resin materials without effective resin re- covery. \\u2022A cyclic adsorption \\u2013in-situregenera- tion approach is proposed for PFOA remediation. GRAPHICAL ABSTRACT ARTICLE INFO Keywords: PFOA Ion exchange resins Sulfate radicals Advanced oxidation process Resin regeneration ABSTRACT Per-and poly-fluoroalkyl substances (PFAS) challenge traditional water treatment and reuse. Although ion ex- change (IX) is a technically effective option for removal of aqueous PFAS, it cannot serve as an ultimate solution without PFAS detoxification and sustainable resin regeneration. On the other hand, sulfate radical (SO4 \\u25cf\\u2212 )-\"\n    },\n    {\n      \"corpus_chunk\": 23,\n      \"locator_id\": \"S03-E05\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.45464786887168884,\n        \"RT03-C2\": 0.025461899116635323,\n        \"RT03-C3\": 0.00032555623329244554,\n        \"umbrella\": 0.07456424832344055\n      },\n      \"section\": \"references\",\n      \"text\": \"Barbeau, S.G. Mostafavi, M. Mohseni, PFOA and PFOS removal by ion Fig. 4.Comparison of EDS spectra and morphology of four resins: (a) fresh; (b) pre-loaded with PFOA; (c) after 6 treatment cycles (30 mM PDS for regeneration); and (d) after 6 treatment cycles (300 mM PDS for regeneration). Fig. 5.FTIR spectra of resins at different stages. P. Gao, et al. Chemical Engineering Journal 405 (2021) 126698 5 exchange for water reuse and drinking applications: role of organic matter char- acteristics, Environ. Sci. Water Res. Technol. 5 (2019) 1782\\u20131795. [10]S. Woodard, J. Berry, B. Newman, Ion exchange resin for PFAS removal and pilot test comparison to GAC, Remediation J. 27 (2017) 19\\u201327. [11]V.A.A. Espana, M. Mallavarapu, R. Naidu, Treatment technologies for aqueous perfluorooctanesulfonate (PFOS) and perfluorooctanoate (PFOA): A critical review with an emphasis on field testing, Environ. Technol. Innovation 4 (2015) 168\\u2013181. [12] O.S. Arvaniti, A.S.\"\n    },\n    {\n      \"corpus_chunk\": 3,\n      \"locator_id\": \"S03-E06\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.17981384694576263,\n        \"RT03-C2\": 0.051794249564409256,\n        \"RT03-C3\": 0.0031146234832704067,\n        \"umbrella\": 0.16242852807044983\n      },\n      \"section\": \"methods\",\n      \"text\": \"treatments are needed. Among very few technically effective treatment methods, adsorption with activated carbon (AC) and ion exchange (IX) resins show promising results for practical removal of PFAS in water [7,8]. For example, IX for alleviation of aqueous PFAS has been docu- mented elsewhere[5,9,10]. However, adsorption barely provides a sustainable solution to toxic PFAS in water. For alleviating a significant economic burden associated with adsorbent consumption, regeneration is required for PFAS-spent AC or IX resins. This can consume substantial energy (e.g., thermal regeneration for AC) or generate PFAS-containing regenerant. Because regeneration is commonly off-site implemented, transportation be- tween the treatment and regeneration facilities increases costs and risks of secondary pollution. More importantly, adsorption processes only transfer PFAS from water to adsorbents or regenerant, but cannot re- duce their toxicity due to no alternation of their chemical structure. Of note, several other treatment processes have been well demon- strated through laboratory or pilot-scale studies to remove PFAS in water[11\\u201314], but are rarely applied to realistic water treatment and reclamation due to different restrictions and barriers. One such example is sulfate radical (SO 4 \\u25cf\\u2212 )-driven advanced oxidation processes (SR-\"\n    },\n    {\n      \"corpus_chunk\": 18,\n      \"locator_id\": \"S03-E07\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.165633887052536,\n        \"RT03-C2\": 0.0004978679353371263,\n        \"RT03-C3\": 0.0001091099766199477,\n        \"umbrella\": 0.023292774334549904\n      },\n      \"section\": \"results\",\n      \"text\": \"4b-2and3). After re- generation at 30 mM PDS, several cracks appeared on the resin surface at the 6 thcycle, but the surface mostly remained complete (Figs. 4c-2 and 3). Nonetheless, as PDS was further increased to 300 mM, the resin surface became much coarse, accompanied by the formation of many larger cracks (Figs. 4d-2 and 3), indicating a severe material damage. To determine whether the damage was ascribed to one or more of heat, PDS oxidation only, H + inherently produced from PDS decomposition, and SO4 \\u25cf\\u2212 oxidation during the SR-AOP regeneration, SEM analysis was conducted to examine morphology of the resins treated with heat, PDS oxidation, or acid only. We did not see any noticeable change on the morphology (images not shown here). Hence, the resin destruction was caused primarily by SO4 \\u25cf\\u2212 oxidation. Based on the aforementioned observations, we conclude that slight destruction of the resins regenerated at a relatively low PDS dose did not markedly discount the recovery of PFOA adsorption, but the re- generation at a too high PDS dose could lead to irreversible loss in the adsorption capacity due to serious damage of resin materials. Therefore, the key to success of the cyclic treatment approach includes:\"\n    },\n    {\n      \"corpus_chunk\": 19,\n      \"locator_id\": \"S03-E08\",\n      \"query_scores\": {\n        \"RT03-C1\": 0.1373646855354309,\n        \"RT03-C2\": 0.008131679147481918,\n        \"RT03-C3\": 0.0002537803375162184,\n        \"umbrella\": 0.06957698613405228\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"adsorption capacity due to serious damage of resin materials. Therefore, the key to success of the cyclic treatment approach includes: 1) adoption of appropriate resins capable of effectively capturing PFOA during adsorption and highly resistant to chemical damage during re- generation; and 2) determination of an optimal PDS dose for re- generation, which enables effective PFOA degradation without a sig- nificant compromise of the resin material. 4. Conclusions This study clearly demonstrates that regeneration of spent resins through direct SR-AOP serves as a new cyclic treatment option for addressing PFOA in water. The approach has a potential to efficiently treat considerable PFOA-polluted water and detoxify PFOA through chemical degradation, while producing a small quantity of non-ha- zardous and easily managed regenerant primarily containing inert po- tassium and sulfate ions. Besides PFOA, the cyclic treatment strategy can be applied to mitigation of other PFAS chemicals in water. Fig. 3.Cyclic IX adsorption \\u2013 direct SR-AOP regeneration experiments: (a) cumulative PFOA adsorption at different cycles (numbers in the legend represent the PDS doses (mM) during regeneration; 0 mM PDS represents the group in which no PDS was introduced during regeneration; scattered symbols and dash lines represent\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2020 - Gao - Direct regeneration of ion exchange resins with sulfate radical-based advanced oxidation for enabling a cyclic adsorption - regeneration treatment.pdf\",\n  \"source_id\": \"S03\",\n  \"title\": \"Direct regeneration of ion exchange resins with sulfate radical-based advanced oxidation for enabling a cyclic adsorption - regeneration treatment approach to aqueous perfluorooctanoic acid (PFOA)\",\n  \"year\": \"2020\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "102e2c9ff3fa803fdeb952e7d32129c57ce7290b901375136d6f8d0e2c02c5a8",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.04853925,
+    "finish_reason": "stop",
+    "input_tokens": 6569,
+    "latency_seconds": 46.428932416951284,
+    "output_tokens": 4148,
+    "reasoning_tokens": 1488,
+    "response_id": "chatcmpl-E9N4d7RXRlVmt9HiIDIgeR1wAetQu",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 10717,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The record DOI/URL (https://doi.org/10.1016/j.cej.2020.126698) matches the DOI given in the source citation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix",
+        "reason": "Text describes PFOA solutions prepared in ultrapure water and used in IX and regeneration experiments, i.e., aqueous PFOA in laboratory water (S03-E02, S03-E03).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0]",
+        "reason": "Perfluorooctanoic acid (PFOA) in water is clearly identified as the target PFAS in the title, abstract, and methods (S03-E02, S03-E03, S03-E04).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment",
+        "reason": "Source explains a cyclic treatment with each cycle including IX adsorption of PFOA followed by direct regeneration of PFOA-sorbed resins using heat-activated peroxodisulfate (PDS) in an SR-AOP (S03-E01, S03-E02, S03-E07).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale",
+        "reason": "Experiments involve grams of resin, batch flasks, and SEM analyses, consistent with bench-scale cyclic IX and SR-AOP regeneration tests; high PDS dose (300 mM) and six cycles are mentioned (S03-E02, S03-E05, S03-E07).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_type",
+        "reason": "The article reports original laboratory experiments on IX and SR-AOP regeneration, fitting a primary experimental study (multiple methods and results sections).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The cited text emphasizes qualitative findings (resin damage at high PDS, irreversible capacity loss) without tabulated quantitative capacity or removal values at high dose in the provided excerpts (S03-E02, S03-E05, S03-E07), so classifying comparability as descriptive_only is a reasonable inference.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "Reason correctly notes that information at high PDS is mainly about damage and loss of capacity rather than detailed quantitative performance trends, consistent with the narrative description (S03-E02, S03-E07).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The endpoint concerns cumulative PFOA removal over cycles. The source explicitly states that cumulative PFOA removal increased linearly with cycle number for regenerated resins (S03-E02), which fits endpoint_type='removal'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0]",
+        "reason": "Reported term 'cumulative PFOA removal' matches the text; the interpretation that removal was assessed over cycles and that high PDS caused damage and irreversible loss of adsorption capacity is supported by S03-E02 and S03-E07.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "The source describes SR-AOP and PDS treatment as destructing/degrading PFOA and detoxifying PFAS (S03-E01, S03-E02, S03-E08), corresponding to loss of the parent compound, so endpoint_type='parent_compound_loss' is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1]",
+        "reason": "Text notes that SR-AOP with PDS degrades/detoxifies PFOA sorbed on resins (S03-E01, S03-E02, S03-E08); the interpretation that this occurs during regeneration and that resin functionality can deteriorate at high dose is consistent with S03-E02 and S03-E07.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].endpoint_type",
+        "reason": "This endpoint addresses irreversible adsorption capacity loss and regeneration failure at high PDS dose; it is not a removal or destruction metric but a material performance outcome, so classification as 'other' is appropriate and supported by the text (S03-E02, S03-E07).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2]",
+        "reason": "S03-E02 and S03-E07 clearly state that a too high PDS dose seriously damages resins and causes irreversible loss of adsorption capacity, aligning with the interpretation of adsorption capacity loss/regeneration failure at high dose.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[3].endpoint_type",
+        "reason": "This endpoint describes physical resin material damage (SEM-visible cracks, coarse surface), which is a material property, not a removal or chemical transformation metric; 'other' is an appropriate classification supported by S03-E05 and S03-E07.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[3]",
+        "reason": "S03-E07 reports SEM observations after six cycles at 30 and 300 mM PDS, showing coarse surface with many large cracks at 300 mM and attributing damage primarily to SO4\u00b7\u2212 oxidation, matching the interpretation of resin material damage.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "Methods state that after five cyclic preloading tests, 100 mg/g PFOA had been loaded on the resins (S03-E03), matching the value 100.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "PFOA loading is given as 100 mg/g in the text (S03-E03); the unit mg/g is correctly captured.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0]",
+        "reason": "Name and qualifiers correctly describe preloaded PFOA on resins before cyclic experiments; value 100 mg/g matches S03-E03.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "Figure 4 caption mentions resins after 6 treatment cycles at specified PDS doses (S03-E05), and S03-E07 discusses morphology at the 6th cycle, supporting the value 6 for cycles evaluated.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The number of cycles is dimensionless; leaving unit as null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1]",
+        "reason": "Description of 'Number of adsorption\u2013regeneration cycles' with 6 cycles at 300 mM PDS aligns with figure caption and discussion of the 6th cycle (S03-E05, S03-E07).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "Heat-activated peroxodisulfate (PDS) is described as the oxidant used to generate sulfate radicals for regeneration (S03-E01, S03-E02, S03-E07), matching the stated value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "The oxidant identity is a categorical descriptor; unit is correctly left null.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2]",
+        "reason": "Name and qualifiers capture that PDS is the regeneration oxidant and is heat-activated to produce sulfate radicals, consistent with S03-E01, S03-E02, and S03-E07.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "S03-E07 states that as PDS was increased to 300 mM, severe material damage occurred, indicating a regeneration condition at 300 mM PDS.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "The PDS dose is explicitly given in mM in S03-E07; unit mM is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3]",
+        "reason": "Name and qualifiers describing a high PDS concentration of 300 mM during regeneration match S03-E07.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "Figure 4 caption and related text refer to resins after 6 treatment cycles at 300 mM PDS (S03-E05, S03-E07), supporting the numeric value 6 as the number of cycles examined.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "This finding is a count of cycles, so leaving unit null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0]",
+        "reason": "The name and qualifiers note that SEM morphology was evaluated after 6 treatment cycles at 300 mM PDS, consistent with S03-E05 and S03-E07.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "S03-E07 describes increasing PDS to 300 mM, and S03-E02 notes that a too high PDS dose seriously damages resin and causes irreversible loss of adsorption capacity, supporting 300 mM as the high-dose condition.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "The PDS concentration is specified in mM in the source (S03-E07); the unit mM is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1]",
+        "reason": "The description of 300 mM as a 'too high' PDS dose that causes serious damage and irreversible loss of adsorption capacity reflects the narrative in S03-E02 and the dose level in S03-E07.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "Design_inferred limitation notes that the high PDS (300 mM) experiments are bench-scale and aimed at understanding resin damage. The small-scale batch conditions and SEM-based damage analysis (S03-E05, S03-E07) reasonably support this inference.",
+        "status": "supported"
+      },
+      {
+        "error_type": "other",
+        "field_path": "limitations[1]",
+        "reason": "The limitation asserts that the study did not report quantitative adsorption capacity or removal values after each cycle at 300 mM PDS. The provided excerpts (S03-E02, S03-E05, S03-E07) do not demonstrate this absence, and some quantitative information may exist elsewhere (e.g., in figures). Non-reporting cannot be verified from the supplied text.",
+        "status": "unsupported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "S03-E08 supports that the regenerant is a small quantity of non-hazardous solution primarily containing inert potassium and sulfate ions. However, the statement that severe resin degradation could introduce resin-derived organic fragments and that these were not characterized is speculative and not supported by the cited text (S03-E02, S03-E07, S03-E08).",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints",
+        "reason": "Across the four endpoints, the source supports cumulative PFOA removal trends, PFOA degradation/detoxification, irreversible adsorption capacity loss at high PDS, and resin material damage seen in SEM, with appropriate classifications and interpretations (S03-E01, S03-E02, S03-E05, S03-E07, S03-E08).",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT03-bge_llm_local_rag-S03-R03",
+    "record_usable": true,
+    "record_usable_rationale": "Core aspects\u2014study identity, matrix, PFAS (PFOA), treatment scheme, operating conditions (100 mg/g loading, 300 mM PDS, 6 cycles), and key endpoints (removal, PFOA degradation, capacity loss, and resin damage)\u2014are well supported by the cited text. Issues are limited to one unsupported design-inferred limitation about missing quantitative data and a partially supported speculative statement about possible resin-derived byproducts. These do not compromise the usability of the record for synthesis of regeneration vs replacement decisions.",
+    "task_id": "RT03"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

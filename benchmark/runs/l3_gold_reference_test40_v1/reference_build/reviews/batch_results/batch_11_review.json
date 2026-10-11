@@ -1,0 +1,289 @@
+{
+  "batch_id": "test40-review-batch-11",
+  "batch_sha256": "f3ace110e5c0a37548b1d82e6a230d6a2c256a7d7ffa5c39465eaf0f0ef581fe",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-review-batch-11",
+    "reviews": [
+      {
+        "question_id": "WF10_029",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_029-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_029-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_029-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_029-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "WF10_032",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Several claim groups reuse a single evidence item's headline exact_evidence_span for multiple distinct 'supports' statements, even when the quoted text does not contain the content being attributed to it; the real supporting sentence exists elsewhere in the same full_chunk_text (or in a different evidence item's chunk) but is not cited."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_032-G01",
+            "verdict": "partially_supported",
+            "issues": [
+              "Both exact_spans entries cite WF10_032_MMG001's exact_evidence_span ('In the second cycle, the adsorption efficiency of PFPrA and PFBA decreased...') as support for the regenerant-composition claim and for the adsorbent mesoporous-structure claim; that quoted sentence discusses cycle-2 adsorption efficiency numbers and does not mention regenerant composition or adsorbent pore structure at all."
+            ],
+            "required_repairs": [
+              "Replace exact_spans entry 1 with the actual regenerant sentence from MMG001's full_chunk_text: 'A combination of ammonium solution with methanol, i.e., 50% methanol with 1% NH4OH, exhibited a higher value for PFCA desorption among all the tested specs of regenerants... The optimized spec of the regenerant was employed for subsequent cycles of adsorption–desorption.'",
+              "Replace exact_spans entry 2 with the adsorbent-structure sentence from MMG001's full_chunk_text: 'Our synthesized adsorbent exhibited a type H-IV hysteresis loop in the nitrogen adsorption–desorption isotherm, indicating the presence of a mesoporous structure having an average pore size of 6.37 nm. However, the pore size distribution plot revealed a fraction of pores smaller than 1 nm.'"
+            ]
+          },
+          {
+            "claim_group_id": "WF10_032-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_032-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_032-G04",
+            "verdict": "partially_supported",
+            "issues": [
+              "Second exact_spans entry cites MMG002's exact_evidence_span ('desorption increased in the second cycle... for PFPrA and ... for PFBA') as support for 'desorption behavior was consistent for the PFCA system up to three successive cycles, which in context includes PFOA and PFPeA'; that quoted sentence is about PFPrA/PFBA desorption increase, not about PFOA/PFPeA multi-cycle consistency."
+            ],
+            "required_repairs": [
+              "Replace the second exact_spans entry with the correct sentence from MMG002's full_chunk_text: 'Similarly, the desorption was also consistent up to three successive cycles.'"
+            ]
+          },
+          {
+            "claim_group_id": "WF10_032-G05",
+            "verdict": "partially_supported",
+            "issues": [
+              "Second exact_spans entry reuses MMG004's exact_evidence_span (about methanol/ethanol/methanol-NaCl/NaOH achieving >90% desorption of short-chain PFASs) to support a claim specifically about NaOH and ammonia achieving >85% retention after 4-5 cycles; the quoted span does not mention NaOH, ammonia, or the 4-5 cycle/85% figure."
+            ],
+            "required_repairs": [
+              "Replace the second exact_spans entry with the actual sentence from MMG004's full_chunk_text: 'Alkaline regenerants such as NaOH and ammonia showed similar trends: high recovery for short-chain PFASs on anion-exchange resins and mesoporous polymers (>85% retention after 4–5 cycles)...'"
+            ]
+          },
+          {
+            "claim_group_id": "WF10_032-X01",
+            "verdict": "partially_supported",
+            "issues": [
+              "First exact_spans entry cites WF10_032_MMG001's exact_evidence_span (cycle-2 adsorption efficiency numbers) to support the claim that 'incomplete desorption... resulted in preoccupied adsorption sites and reduced adsorption capacity in the second cycle'; the actual supporting sentence ('This incomplete desorption led to the preoccupation of adsorption sites, thereby reducing the adsorption capacity in the second cycle.') appears in MMG002's full_chunk_text (chunk 33), not in MMG001's cited span, and the evidence_id used is also the wrong one for this specific sentence.",
+              "Third exact_spans entry reuses MMG004's exact_evidence_span (about the 60-80% PFOA/PFOS efficiency drop) to support the separate claim about 'persistent residuals of PFOA/PFOS,' which is a distinct sentence in the same full_chunk_text not covered by the quoted span."
+            ],
+            "required_repairs": [
+              "Correct the first exact_spans entry to cite MMG002 (not MMG001) with the sentence: 'This incomplete desorption led to the preoccupation of adsorption sites, thereby reducing the adsorption capacity in the second cycle.'",
+              "Replace the third exact_spans entry with the correct sentence from MMG004's full_chunk_text: '...persistent residuals of PFOA/PFOS even after extended contact times [61,128,133].'"
+            ]
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Audit all exact_spans entries in this ledger to ensure each cited exact_evidence_span literally contains the content attributed to it in the 'supports' field, rather than reusing an evidence item's headline span for unrelated sub-claims drawn from elsewhere in the same or a different chunk."
+        ]
+      },
+      {
+        "question_id": "WF10_034",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Two claim groups that state direct cross-technology comparisons are assigned to single-technology, concentration-dependence task components (T02/T03) rather than to the comparison/synthesis component (T04), which is the component explicitly designed to hold cross-technology contrasts."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_034-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_034-G02",
+            "verdict": "partially_supported",
+            "issues": [
+              "Group content ('ion exchange resin... markedly more efficient than activated carbon') is a direct IX-vs-carbon comparison, not a description of carbon's concentration-dependent performance, so its assignment to task_component_id WF10_034-T03 ('carbon treatment ... depend on influent PFAS concentration') is a poor fit; it belongs more naturally under T04 (the cross-technology synthesis component)."
+            ],
+            "required_repairs": [
+              "Reassign WF10_034-G02 to task_component_id WF10_034-T04, or add a rationale explaining why a comparative (non-concentration) claim is scored against T03."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_034-G03",
+            "verdict": "partially_supported",
+            "issues": [
+              "Group content (E-destruct higher capacity/service life/lower cost than IX or carbon) is a cross-technology comparison rather than a description of how electrochemical performance changes with influent concentration, so its assignment to task_component_id WF10_034-T02 is questionable."
+            ],
+            "required_repairs": [
+              "Reassign WF10_034-G03 to task_component_id WF10_034-T04, or add a rationale for scoring this comparative claim under T02."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_034-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_034-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Review task_component_id assignments for WF10_034-G02 and WF10_034-G03 against the definitions of T02/T03 (single-technology, concentration-dependent) versus T04 (cross-technology synthesis) and reassign as appropriate."
+        ]
+      },
+      {
+        "question_id": "WF10_035",
+        "verdict": "repair_required",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_035-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_035-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_035-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_035-X01",
+            "verdict": "duplicate_or_overweighted",
+            "issues": [
+              "Evidence_ids WF10_035_MMG001 and WF10_035_MMG003 are identical: same doc, same chunk_id (38), same exact_evidence_span and full_chunk_text, differing only in evidence_type label (required_gold vs negative_gold). Both are cited in this constraint group's exact_spans with the same quoted text, which is a non-deduplicated overlap rather than distinct supporting content."
+            ],
+            "required_repairs": [
+              "Either merge WF10_035_MMG001 and WF10_035_MMG003 into a single evidence record, or add a clear rationale for why the identical span is retained under two separate evidence_ids/types; remove the redundant duplicate exact_spans entry in WF10_035-X01 if merged."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_035-X02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Resolve the duplicate evidence pair WF10_035_MMG001/WF10_035_MMG003 (identical span/chunk) before finalizing the ledger."
+        ]
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 161873,
+    "num_turns": 8,
+    "stop_reason": "tool_use",
+    "session_id": "ac393f4f-8814-46c4-9de6-2135c89390a8",
+    "total_cost_usd": 0.61877865,
+    "usage": {
+      "input_tokens": 12,
+      "cache_creation_input_tokens": 76909,
+      "cache_read_input_tokens": 255153,
+      "output_tokens": 16871,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 76909
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 15268,
+          "cache_read_input_tokens": 74723,
+          "cache_creation_input_tokens": 13257,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 13257,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 628,
+        "outputTokens": 19,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000723,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 12,
+        "outputTokens": 16871,
+        "cacheReadInputTokens": 255153,
+        "cacheCreationInputTokens": 76909,
+        "webSearchRequests": 0,
+        "costUSD": 0.6180556500000001,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 6506,
+    "ttft_stream_ms": 982,
+    "time_to_request_ms": 106,
+    "type": "result",
+    "duration_ms": 161979,
+    "uuid": "b5362f34-7c08-45d7-b4b4-f82bd4963999"
+  },
+  "candidate_test40_inputs_used": false
+}

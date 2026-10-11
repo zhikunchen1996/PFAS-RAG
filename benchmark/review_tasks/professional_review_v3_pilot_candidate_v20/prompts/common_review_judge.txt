@@ -1,0 +1,142 @@
+You are scoring one anonymous PFAS professional review against a frozen,
+candidate-blind task ledger. Evaluate the scientific usefulness of the review
+text, including how evidence is cited and integrated, not its retrieval-system
+label or prose polish.
+
+You receive:
+1. the visible review brief and its three required components;
+2. frozen task boundaries and material-violation rules; and
+3. one canonicalized anonymous candidate review.
+
+Citation identifiers have been deterministically anonymized to neutral
+`[R##]` markers before this request. Preserve and evaluate citation use, but do
+not infer the producing system. Do not award citations merely for being
+numerous, and do not reward answer length, headings, or writing style.
+Evidence discovery, field verification, metadata-based reference quality,
+source-breadth counts, and citation entailment are verified in Layer A.
+Layer B must assess whether major source-dependent claims are visibly cited,
+whether citation placement makes the supported claim identifiable, and
+whether multiple nonredundant sources support distinct parts of the reasoning.
+Meaningful evidence breadth may earn credit; raw marker count alone may not.
+Do not reward isolated numbers, decorative citations, or repeated citation of
+one source.
+
+This judgment has two levels.
+
+LEVEL 1: REQUIRED-COMPONENT FULFILLMENT
+
+For each frozen component, assign one status:
+
+- full: directly answers the complete requirement and reaches a usable,
+  appropriately bounded conclusion;
+- partial: addresses the requirement meaningfully but omits one material part,
+  condition, comparison, or conclusion;
+- absent: provides only a passing mention, generic background, or no relevant
+  answer;
+- contradicted: materially reverses the component or gives an internally
+  incompatible answer.
+
+Judge fulfillment only. Do not require every component to contain its own
+future-research discussion; outlook is assessed globally below.
+
+LEVEL 2: GLOBAL REVIEW OPERATIONS
+
+Assess each atomic operation across the complete review. Use the same scale:
+
+- full: the operation is clearly and materially performed;
+- partial: it is present but incomplete, weakly connected, or limited to a
+  small part of the task;
+- absent: it is not materially performed;
+- contradicted: the review performs the operation in a way that materially
+  conflicts with its own account or the frozen task boundaries.
+
+Critical synthesis operations
+
+1. comparative_integration
+   Integrates findings across alternatives, studies, conditions, or evidence
+   types. A catalog or study-by-study list is not full.
+2. conditional_explanation
+   Explains why outcomes differ using relevant mechanisms, matrices,
+   compounds, operating conditions, scale, or analytical scope.
+3. tension_limitation_resolution
+   Identifies and resolves or appropriately qualifies material tensions,
+   trade-offs, comparability limits, or failure modes.
+4. decision_conclusion
+   Derives a conditional conclusion that follows from the synthesis and is
+   useful for the decision posed by the task.
+
+Professional-depth operations
+
+1. mechanism_specificity
+   Uses technically specific mechanisms rather than labels alone.
+2. context_boundary_specificity
+   Preserves material PFAS, matrix, concentration, operating-condition, scale,
+   and analytical-scope boundaries where relevant.
+3. empirical_data_use
+   Uses condition-bound empirical observations, quantitative results, ranges,
+   or study-level contrasts to support the review's reasoning. Full requires
+   empirical information to do analytical work, not merely appear as isolated
+   numbers. Do not verify citations or require a fixed number of values.
+4. endpoint_comparability_discipline
+   Keeps removal, separation, adsorption, transformation, degradation,
+   defluorination, mineralization, and destruction distinct and avoids direct
+   comparison of materially incompatible endpoints or conditions.
+5. practitioner_decision_support
+   Converts the analysis into an actionable framework, conditional rule,
+   prioritized measurement, or operational implication.
+6. citation_evidence_integration
+   Connects source-dependent empirical, quantitative, comparative, and
+   mechanistic claims to appropriately placed citations and integrates
+   nonredundant sources into the reasoning. Full requires that major
+   source-dependent claims are generally cited, citations are placed so their
+   associated claims are identifiable, and multiple sources materially support
+   different findings, comparisons, or limitations in the analytical
+   structure. Penalize substantial uncited source-dependent claims, citation
+   dumping, decorative citation, or reliance on one citation for materially
+   different claims. Do not infer entailment, source authenticity, or truth
+   from a marker alone; Layer A performs that verification.
+
+Current-research and outlook operations
+
+1. current_development_specificity
+   Identifies concrete emerging methods, analytical developments, deployment
+   evidence, or changes in the state of research rather than saying only that
+   the field is evolving.
+2. specific_gap
+   States a precise unresolved scientific or implementation gap.
+3. consequence_of_gap
+   Explains which interpretation, design choice, or deployment decision the
+   gap prevents or weakens.
+4. testable_priority
+   Proposes a testable, measurable, or operationally specific next step and
+   gives a defensible priority rationale.
+
+CLAIM CALIBRATION
+
+Assess the complete review:
+
+- consistent: certainty, scope, and endpoint language remain internally
+  consistent;
+- minor_inconsistency: a localized mismatch does not materially change a
+  professional conclusion;
+- material_inconsistency: an absolute or unqualified claim conflicts with the
+  review's own qualifications, evidence hierarchy, endpoint distinctions, or
+  stated limitations and could change a professional conclusion;
+- not_assessable: the answer contains too little substantive content.
+
+Quote the shortest decisive span for an inconsistency. Do not use outside
+knowledge to invent an error.
+
+BOUNDARY CONSTRAINTS
+
+For each frozen boundary, report whether its material-violation rule is
+triggered. Missing a preferred statement is not a violation. The local scorer
+applies deterministic caps for material inconsistency and boundary violations.
+
+The ledger is non-exhaustive. Content outside it is neutral unless it
+materially undermines a required component, triggers a frozen boundary, or is
+demonstrably inconsistent with the visible task, ledger, or review itself.
+
+Return one JSON object following the supplied schema exactly. Do not return an
+overall score, dimension score, or system preference; all numeric aggregation
+is performed locally.

@@ -1,0 +1,218 @@
+{
+  "call_key": "RT05:gpt51_web_search:verify:RT05-gpt51_web_search-WEB10-R03",
+  "created_at": "2026-08-05T04:17:19.029037+00:00",
+  "raw_response_text": "{\"task_id\":\"RT05\",\"record_id\":\"RT05-gpt51_web_search-WEB10-R03\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Cited passages describe extrapolation of PFAS leaching data to estimate potential \u03a3PFAS released from an RO element over its lifetime, without reporting operational performance metrics such as recovery, energy, or cost. Characterizing this as descriptive/scenario-based and not directly comparable across technologies is consistent with the evidence.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The endpoint is a scenario-based estimate of total \u03a3PFAS potentially released from an RO element over its lifetime (E05), which does not fit standard removal or destruction metrics. Classifying it as 'other' is appropriate and consistent with the source.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"E05 supports that the authors extrapolated to a 40 m\u00b2 element and estimated potential \u03a3PFAS release over its lifetime. However, the interpretation adds methodological detail (explicitly referencing area-normalized masses) and frames the element as a \u2018PFAS reservoir and potential residual waste stream,\u2019 which are reasonable inferences but not directly stated in the cited passage.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 shows that leaching experiments used Milli-Q water on small fragments, and E05 shows extrapolation to a full 40 m\u00b2 element under assumed realistic leaching scenarios. The limitation that scenario estimates rely on extrapolation from lab leaching in Milli-Q with simplified leaching assumptions follows necessarily from these design facts.\"},{\"field_path\":\"matrix.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 states that PFAS leaching data were extrapolated to estimate potential \u03a3PFAS release from a 40 m\u00b2 RO element over its lifetime. Describing the matrix as modeled PFAS release from commercial RO elements over their operational lifetime matches this content.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 explicitly notes extrapolation to a 40 m\u00b2 element. The recorded value of 40 for membrane_area_per_element is directly supported.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 identifies a 40 m\u00b2 element; using m\u00b2 as the unit for membrane area is correct and consistent with the source.\"},{\"field_path\":\"operating_conditions[0].qualifiers\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 states that extrapolation was done to a 40 m\u00b2 element, consistent with the qualifier that the scenario assumes a 40 m\u00b2 RO element when extrapolating PFAS release.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 specifies potential \u03a3PFAS release per element over its lifetime. Summarizing this as 'lifetime release' correctly reflects the assessment scope.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The assessment_scope field is a categorical descriptor; leaving the unit null is appropriate and not in conflict with the source.\"},{\"field_path\":\"operating_conditions[1].qualifiers\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 describes estimated potential \u03a3PFAS release per element over its lifetime under realistic leaching scenarios, matching the qualifier language about lifetime release under realistic scenarios.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"E05 refers to potential \u03a3PFAS release from an element over its lifetime, supporting that \u03a3PFAS is the scope. The added detail 'sum of PFAS measured and modeled as potentially releasable from RO elements' is an interpretive clarification not explicitly stated in the cited passage.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E05 indicates potential \u03a3PFAS release on the order of tens of milligrams per 40 m\u00b2 element over its lifetime. Inferring that such masses make used RO elements a non-negligible PFAS-containing residual requiring appropriate end-of-life management is a reasonable design-inferred statement, consistent with study aims in the title and scenario discussion.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"E02 describes bench-scale leaching of 1 cm\u00b2 membrane fragments, and E05 describes extrapolation to a 40 m\u00b2 element. Characterizing this as scenario-based extrapolation from bench-scale leaching data to full-size RO elements matches the evidence.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The article title and E01/E05 establish that commercial RO membranes used in drinking water treatment were studied, and PFAS presence/leaching were evaluated. Describing the treatment as reverse osmosis elements in drinking water treatment, evaluated as potential long-term PFAS sources based on leaching-derived inventories, accurately reflects this context.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014source identity, RO treatment context, matrix description, scenario-based endpoint type, operating condition (40 m\u00b2 element area), and the qualitative magnitude and nature of PFAS release\u2014are supported by the cited passages. Minor interpretive extensions in the endpoint interpretation and PFAS scope are flagged as partially supported but do not misrepresent the underlying evidence or impair use of the record for synthesis of PFAS residuals from RO elements.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of how membrane-derived PFAS concentrates and spent membrane materials should be characterized and managed within a treatment train.\",\"task_id\":\"RT05\",\"title\":\"Managing PFAS residuals from membrane treatment\"}\n\nTask-specific extraction objective:\nExtract membrane process, feed and retained-stream composition, recovery, concentration factor, residual volume, co-contaminants, downstream treatment, destruction or disposal endpoint, energy, cost, and scale.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envint.2021.106876\",\"10.3929/ethz-b-000506220\"],\"all_blocked_titles\":[\"membrane based technologies for per and poly fluoroalkyl substances pfass removal from water removal mechanisms applications challenges and perspectives\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envint.2021.106876\",\"https://www.research-collection.ethz.ch/items/f9152dfa-5b8e-4ce2-8153-1cbb37911e55\"],\"anchor_id\":\"AR-JIN-2021\",\"corpus_source\":\"2021 - Jin - Membrane-based technologies for per- and poly-fluoroalkyl substances (PFASs) removal from water - Removal mechanisms, applications, challenges and.pdf\",\"doi\":\"10.1016/j.envint.2021.106876\",\"title\":\"Membrane-based technologies for per- and poly-fluoroalkyl substances (PFASs) removal from water: Removal mechanisms, applications, challenges and perspectives\",\"url\":\"https://doi.org/10.1016/j.envint.2021.106876\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Ekande OS, et al. Exploring Perfluoroalkyl and Polyfluoroalkyl Substance Presence and Potential Leaching from Reverse Osmosis Membranes: Implications for Drinking Water Treatment. Environ Sci Technol. 2024;58:15799\\u201315806.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB10-E02\",\n      \"WEB10-E05\"\n    ],\n    \"reason\": \"Scenario analysis provides order-of-magnitude estimates of PFAS release from RO elements rather than measured treatment performance parameters (e.g., recovery, energy, cost); values depend on modeling assumptions and are not directly comparable across treatment technologies.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1021/acs.est.4c04743\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"WEB10-E05\"\n      ],\n      \"interpretation\": \"Using area-normalized PFAS masses measured in leaching tests, the authors estimate total \\u03a3PFAS that could be released from a 40 m2 RO element during its operational lifetime, treating the membrane as a PFAS reservoir and potential residual waste stream.\",\n      \"reported_term\": \"Modeled potential \\u03a3PFAS release from RO elements over lifetime\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB10-E02\",\n        \"WEB10-E05\"\n      ],\n      \"statement\": \"Scenario estimates of \\u03a3PFAS release are based on extrapolation from lab leaching with Milli-Q water and simplified assumptions about realistic leaching conditions; actual system-specific releases may differ.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB10-E05\"\n    ],\n    \"value\": \"Modeled PFAS release from commercial RO membrane elements over operational lifetime\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB10-E05\"\n      ],\n      \"name\": \"membrane_area_per_element\",\n      \"qualifiers\": \"Scenario assumes a 40 m2 RO element when extrapolating PFAS release from area-normalized leaching data.\",\n      \"unit\": \"m2\",\n      \"value\": \"40\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB10-E05\"\n      ],\n      \"name\": \"assessment_scope\",\n      \"qualifiers\": \"Estimated potential \\u03a3PFAS release over the service lifetime of an RO element under realistic leaching scenarios.\",\n      \"unit\": null,\n      \"value\": \"lifetime release\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB10-E05\"\n      ],\n      \"value\": \"\\u03a3PFAS (sum of PFAS measured and modeled as potentially releasable from RO elements)\"\n    }\n  ],\n  \"quantitative_findings\": [],\n  \"record_id\": \"RT05-gpt51_web_search-WEB10-R03\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB10-E05\"\n      ],\n      \"statement\": \"Modeled \\u03a3PFAS release on the order of tens of milligrams per 40 m2 RO element over its lifetime indicates that used RO elements may represent a non-negligible PFAS-containing residual that requires appropriate end-of-life management or disposal.\"\n    }\n  ],\n  \"source_id\": \"WEB10\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB10-E05\"\n    ],\n    \"value\": \"Scenario-based extrapolation from bench-scale leaching data to full-size RO elements\"\n  },\n  \"study_type\": \"modeling_or_life_cycle_study\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB10-E05\"\n    ],\n    \"value\": \"Reverse osmosis elements in drinking water treatment, evaluated as potential long-term PFAS sources based on leaching-derived inventories\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"full_text\",\n  \"capture_source_id\": \"WEB11\",\n  \"citation\": \"Ekande OS, et al. Exploring Perfluoroalkyl and Polyfluoroalkyl Substance Presence and Potential Leaching from Reverse Osmosis Membranes: Implications for Drinking Water Treatment. Environmental Science & Technology. 2024;58:15799\\u201315806.\",\n  \"covered_component_ids\": [\n    \"RT05-C1\",\n    \"RT05-C3\"\n  ],\n  \"doi\": \"10.1021/acs.est.4c04743\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1021/acs.est.4c04743\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB10-E01\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Methods overview (P1\\u2013P2)\",\n      \"text\": \"The presence of PFAS in commercial reverse osmosis membranes was investigated using leaching experiments and a direct total oxidizable precursor assay applied to membrane fragments.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB10-E02\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Section 2.3.1 Membrane Leaching Experiment (P2)\",\n      \"text\": \"Forty membrane fragments of 1 cm2 were placed into 35 mL of Milli-Q water; after 48 h sonication, PFAS in the leachate were extracted and quantified by LC\\u2011HRMS.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB10-E03\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Results, P3\",\n      \"text\": \"In the leaching experiment, several PFAS, including PFOS and PFOA, were detected in water with surface-normalized loads between about 17 and 38 pg per cm2 of membrane.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB10-E04\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Results, P3\",\n      \"text\": \"Direct TOPA on membrane samples yielded up to sixteen times higher PFOS mass per cm2 compared to simple leaching, indicating substantial precursor or non-leachable PFAS content in the polymer matrix.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB10-E05\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Data analysis and scenario evaluation, P2\\u2013P4\",\n      \"text\": \"Extrapolating to a 40 m2 element and assuming realistic leaching scenarios, the authors estimated potential \\u03a3PFAS release on the order of tens of milligrams per element over its lifetime.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://backoffice.biblio.ugent.be/download/01JYTZTCNMJ07608AK531N4MYY/01JYZWW1R40N9Y1KZ9YAB98SWJ\",\n  \"source_id\": \"WEB10\",\n  \"source_limitations\": [\n    \"Study focuses on intact commercial RO elements rather than membranes that have operated on PFAS-impacted water; actual PFAS loads on spent elements may be higher.\",\n    \"Leaching tests used Milli-Q water and accelerated laboratory conditions; real system prewashing, cleaning practices, and concentrate-side exposures are not fully represented.\"\n  ],\n  \"title\": \"Exploring Perfluoroalkyl and Polyfluoroalkyl Substance Presence and Potential Leaching from Reverse Osmosis Membranes: Implications for Drinking Water Treatment\",\n  \"year\": \"2024\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "b6c1583b8f81030295dffd476fd2549bd6e6ad65999ffb3a4dde63033ed97e16",
+  "response_metadata": {
+    "cached_input_tokens": 1152,
+    "estimated_cost_usd": 0.024689,
+    "finish_reason": "stop",
+    "input_tokens": 3052,
+    "latency_seconds": 25.39640829199925,
+    "output_tokens": 2217,
+    "reasoning_tokens": 1007,
+    "response_id": "chatcmpl-E9NLhxBmMTyW03U4cE7P3frg8ZKMv",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 5269,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "Cited passages describe extrapolation of PFAS leaching data to estimate potential \u03a3PFAS released from an RO element over its lifetime, without reporting operational performance metrics such as recovery, energy, or cost. Characterizing this as descriptive/scenario-based and not directly comparable across technologies is consistent with the evidence.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The endpoint is a scenario-based estimate of total \u03a3PFAS potentially released from an RO element over its lifetime (E05), which does not fit standard removal or destruction metrics. Classifying it as 'other' is appropriate and consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "E05 supports that the authors extrapolated to a 40 m\u00b2 element and estimated potential \u03a3PFAS release over its lifetime. However, the interpretation adds methodological detail (explicitly referencing area-normalized masses) and frames the element as a \u2018PFAS reservoir and potential residual waste stream,\u2019 which are reasonable inferences but not directly stated in the cited passage.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "E02 shows that leaching experiments used Milli-Q water on small fragments, and E05 shows extrapolation to a full 40 m\u00b2 element under assumed realistic leaching scenarios. The limitation that scenario estimates rely on extrapolation from lab leaching in Milli-Q with simplified leaching assumptions follows necessarily from these design facts.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix.value",
+        "reason": "E05 states that PFAS leaching data were extrapolated to estimate potential \u03a3PFAS release from a 40 m\u00b2 RO element over its lifetime. Describing the matrix as modeled PFAS release from commercial RO elements over their operational lifetime matches this content.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "E05 explicitly notes extrapolation to a 40 m\u00b2 element. The recorded value of 40 for membrane_area_per_element is directly supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "E05 identifies a 40 m\u00b2 element; using m\u00b2 as the unit for membrane area is correct and consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].qualifiers",
+        "reason": "E05 states that extrapolation was done to a 40 m\u00b2 element, consistent with the qualifier that the scenario assumes a 40 m\u00b2 RO element when extrapolating PFAS release.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "E05 specifies potential \u03a3PFAS release per element over its lifetime. Summarizing this as 'lifetime release' correctly reflects the assessment scope.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The assessment_scope field is a categorical descriptor; leaving the unit null is appropriate and not in conflict with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].qualifiers",
+        "reason": "E05 describes estimated potential \u03a3PFAS release per element over its lifetime under realistic leaching scenarios, matching the qualifier language about lifetime release under realistic scenarios.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "pfas_scope[0].value",
+        "reason": "E05 refers to potential \u03a3PFAS release from an element over its lifetime, supporting that \u03a3PFAS is the scope. The added detail 'sum of PFAS measured and modeled as potentially releasable from RO elements' is an interpretive clarification not explicitly stated in the cited passage.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "E05 indicates potential \u03a3PFAS release on the order of tens of milligrams per 40 m\u00b2 element over its lifetime. Inferring that such masses make used RO elements a non-negligible PFAS-containing residual requiring appropriate end-of-life management is a reasonable design-inferred statement, consistent with study aims in the title and scenario discussion.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "E02 describes bench-scale leaching of 1 cm\u00b2 membrane fragments, and E05 describes extrapolation to a 40 m\u00b2 element. Characterizing this as scenario-based extrapolation from bench-scale leaching data to full-size RO elements matches the evidence.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "The article title and E01/E05 establish that commercial RO membranes used in drinking water treatment were studied, and PFAS presence/leaching were evaluated. Describing the treatment as reverse osmosis elements in drinking water treatment, evaluated as potential long-term PFAS sources based on leaching-derived inventories, accurately reflects this context.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT05-gpt51_web_search-WEB10-R03",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014source identity, RO treatment context, matrix description, scenario-based endpoint type, operating condition (40 m\u00b2 element area), and the qualitative magnitude and nature of PFAS release\u2014are supported by the cited passages. Minor interpretive extensions in the endpoint interpretation and PFAS scope are flagged as partially supported but do not misrepresent the underlying evidence or impair use of the record for synthesis of PFAS residuals from RO elements.",
+    "task_id": "RT05"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

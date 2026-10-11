@@ -1,0 +1,254 @@
+{
+  "batch_id": "test40-rereview1-batch-05",
+  "batch_sha256": "d1434bb2a82cf8a9c9ed97a28867a8b23bb5db1a9e17cba5253f298aa947ede5",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-rereview1-batch-05",
+    "reviews": [
+      {
+        "question_id": "WF10_015",
+        "verdict": "clean",
+        "question_level_issues": [
+          "Previous required repair concerned unvalidated Thomas-model spans in claim group WF10_015-G03; that group has been removed from the draft ledger entirely (no G03 present, and its content component T03 is already covered by WF10_015-G02), which resolves the flagged span-validation gap rather than repairing the spans in place. This is an acceptable resolution."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_015-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_015-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_015-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_015-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_015-X02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "WF10_023",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "The previous flag on WF10_023-G01 (implying Fig. S4 and Fig. 3 describe the same experimental run) has been addressed by decoupling the wording ('separate text reports the operating conditions...'), but a new span-validity issue remains in the same group: the 'supports' narrative for the WF10_023_MMG003 exact_spans entry claims the span 'provides the experimental conditions (initial concentration 10,000 ppb, feed flow rate, room temperature, and filtration time)', but the approved exact_evidence_span/unit_exact_spans for WF10_023_MMG003 contain only the LC-QQQ detection-limit sentence. The operating-condition text (10,000 ppb; 30 mL/min; room temperature; 24 h) appears only in the unvalidated portion of full_chunk_text (a figure caption) and has not been confirmed as a unit_exact_span."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_023-G01",
+            "verdict": "partially_supported",
+            "issues": [
+              "The exact_spans entry for WF10_023_MMG003 attributes operating-condition details (10,000 ppb initial concentration, 30 mL/min feed flow rate, room temperature, 24 h filtration) to the quoted exact_evidence_span, but that span text only states that permeate concentrations were below LC-QQQ detection limits at 1000 ppb; the operating-condition sentence is a separate, unvalidated portion of the full_chunk_text (a figure caption)."
+            ],
+            "required_repairs": [
+              "Validate the figure-caption sentence containing the operating conditions (10,000 ppb; 30 mL/min; room temperature; 24 h) as an additional unit_exact_span for WF10_023_MMG003 and confirm unit_spans_found_in_full_chunk for it, or remove/soften the operating-conditions attribution in G01's canonical_proposition, material_qualifiers, full_rule, and exact_spans 'supports' text until it is backed by a validated span."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_023-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_023-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Validate or remove the operating-conditions attribution to WF10_023_MMG003 in G01 as described above."
+        ]
+      },
+      {
+        "question_id": "WF10_026",
+        "verdict": "clean",
+        "question_level_issues": [
+          "Previous required repairs (deduplicate repeated exact_spans entries for the same evidence_id in G01 and G02) have been resolved: each evidence_id now appears only once in the exact_spans lists for G01, G02, and X01."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_026-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_026-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_026-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "WF10_028",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "The previous flag (WF10_028-T01's PFOA-specific wording did not match non-PFOA content in G02 and G03) was addressed by reassigning G02 and G03 from T01 to T02, rather than by broadening T01's wording or annotating the scope extension as the prior review suggested. However, T02's component_text is specifically an evaluative task ('evaluate whether the claim ... is directly supported, partially supported, unsupported, or overgeneralized ... and state what additional evidence would be needed'), while G02 and G03 are extraction-type, affirmative content describing observed PFAS-rejection trends (total PFAS plateau; PFOS decline), not evaluations of overgeneralization. This reassignment creates a new task-component/content mismatch rather than resolving the original one."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_028-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_028-G02",
+            "verdict": "partially_supported",
+            "issues": [
+              "Group is now assigned to WF10_028-T02 (an evaluative task component about overgeneralization/support level), but its content is an affirmative extraction of a total-PFAS rejection trend, which does not match T02's stated purpose."
+            ],
+            "required_repairs": [
+              "Reassign WF10_028-G02 back to WF10_028-T01 and broaden T01's component_text to explicitly cover total PFAS rejection (not just PFOA), or otherwise align task-component wording with this group's extraction-type content."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_028-G03",
+            "verdict": "partially_supported",
+            "issues": [
+              "Group is now assigned to WF10_028-T02 (an evaluative task component about overgeneralization/support level), but its content is an affirmative extraction of a PFOS-rejection trend in MXene membranes, which does not match T02's stated purpose."
+            ],
+            "required_repairs": [
+              "Reassign WF10_028-G03 back to WF10_028-T01 and broaden T01's component_text to explicitly cover PFOS rejection (not just PFOA), or otherwise align task-component wording with this group's extraction-type content."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_028-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_028-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_028-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Resolve the task-component/content mismatch for G02 and G03 by reassigning them to WF10_028-T01 with broadened wording covering total PFAS and PFOS, rather than reassigning them to the evaluative WF10_028-T02."
+        ]
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 120305,
+    "num_turns": 6,
+    "stop_reason": "tool_use",
+    "session_id": "2d9791ba-4fbd-41a5-8c95-8107a7740086",
+    "total_cost_usd": 0.48032260000000004,
+    "usage": {
+      "input_tokens": 8,
+      "cache_creation_input_tokens": 70050,
+      "cache_read_input_tokens": 120337,
+      "output_tokens": 12039,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 70050
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 11105,
+          "cache_read_input_tokens": 60535,
+          "cache_creation_input_tokens": 20586,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 20586,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 835,
+        "outputTokens": 18,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000925,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 8,
+        "outputTokens": 12039,
+        "cacheReadInputTokens": 120337,
+        "cacheCreationInputTokens": 70050,
+        "webSearchRequests": 0,
+        "costUSD": 0.47939760000000003,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 4612,
+    "ttft_stream_ms": 908,
+    "time_to_request_ms": 39,
+    "type": "result",
+    "duration_ms": 120025,
+    "uuid": "2bdabf9a-c134-41a4-8a25-5369c014d037"
+  },
+  "candidate_test40_inputs_used": false
+}

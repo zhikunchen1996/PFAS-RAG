@@ -1,0 +1,248 @@
+{
+  "call_key": "RT10:gpt51_web_search:verify:RT10-gpt51_web_search-WEB01-R01",
+  "created_at": "2026-08-05T04:44:59.360893+00:00",
+  "raw_response_text": "{\"task_id\":\"RT10\",\"record_id\":\"RT10-gpt51_web_search-WEB01-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The DOI/URL exactly matches the source metadata: https://doi.org/10.1016/j.watres.2023.120212.\"},{\"field_path\":\"treatment\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record states adsorption to colloidal activated carbon (CAC), which is consistent with the title and abstract description that PFOS and PFOA affinity to colloidal activated carbon was evaluated (WEB01-E01).\"},{\"field_path\":\"matrix\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record describes an aqueous solution and notes that detailed background matrix composition is not specified. The abstract refers to ionic strength and Ca2+ in the context of adsorption, which necessarily implies an aqueous solution but does not specify further details (WEB01-E01), matching the cautious wording used.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFOS is explicitly mentioned in the abstract passage describing affinity to colloidal activated carbon (WEB01-E01).\"},{\"field_path\":\"pfas_scope[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFOA is explicitly mentioned in the abstract passage describing affinity to colloidal activated carbon (WEB01-E01).\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The endpoint concerns PFOS and PFOA affinity to colloidal activated carbon and promotive effects on adsorption (WEB01-E01), which is correctly classified as a sorption endpoint.\"},{\"field_path\":\"endpoints[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The interpretation that increasing ionic strength from 1\u2013100 mM and Ca2+ from 0\u20132 mM enhanced PFOS and PFOA affinity to CAC and promoted adsorption is directly supported by WEB01-E01, which states these promotive effects.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The second endpoint summarizes a proposed mechanism (hydrophobic interaction), which is not itself a performance metric; classifying this as 'other' is appropriate given WEB01-E04.\"},{\"field_path\":\"endpoints[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB01-E04 states that hydrophobic interaction is the predominant mechanism for PFAS adsorption to colloidal activated carbon, matching the interpretation and reported term.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB01-E01 reports that affinity increased as ionic strength rose from 1 to 100 mM; the recorded value range 1\u2013100 matches this statement.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Ionic strength is given in mM in WEB01-E01, matching the unit recorded for this operating condition.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB01-E01 reports that affinity increased as Ca2+ increased from 0 to 2 mM; the recorded value range 0\u20132 matches this statement.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Ca2+ concentration is given in mM in WEB01-E01, matching the unit recorded for this operating condition.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The quantitative finding summarizes the ionic strength range tested (1\u2013100), which directly reflects WEB01-E01 stating that ionic strength rose from 1 to 100 mM.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract reports ionic strength in mM (WEB01-E01); the unit mM is correctly recorded.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The quantitative finding summarizes the Ca2+ range tested (0\u20132), which directly reflects WEB01-E01 stating that Ca2+ increased from 0 to 2 mM.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract reports Ca2+ concentration in mM (WEB01-E01); the unit mM is correctly recorded.\"},{\"field_path\":\"study_scale\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The record states 'Laboratory-scale batch adsorption experiments with colloidal activated carbon', while WEB01-E01 and related abstract text only establish that adsorption to colloidal activated carbon was studied; they do not specify batch vs. column or explicitly state laboratory scale. Laboratory experiments are a reasonable inference, but the specific 'batch' qualifier is not directly supported.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"All described conditions concern PFOS and PFOA adsorption to the same colloidal activated carbon, with ionic strength and Ca2+ varied while other aspects are implicitly held constant (WEB01-E01). Inferring that these conditions are comparable with noted matrix modifiers is consistent with the cited information.\"},{\"field_path\":\"comparability\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reasoning that comparability holds under matched PFAS and sorbent conditions while ionic strength and Ca2+ are varied is consistent with WEB01-E01, which describes promotive effects of these matrix modifiers under otherwise common conditions.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014source identity, PFAS (PFOS and PFOA), treatment (adsorption to colloidal activated carbon), aqueous matrix, key matrix modifiers (ionic strength and Ca2+ ranges), and adsorption/sorption endpoints\u2014are directly supported by the abstract. The only partial issue is the unspecific 'batch' qualifier in the study scale, which does not materially affect interpretability of treatment performance, so the record remains usable for synthesis.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of how water-matrix effects should be tested and reported so that PFAS treatment performance can be translated beyond clean laboratory water.\",\"task_id\":\"RT10\",\"title\":\"Designing PFAS treatment studies that remain valid in real water\"}\n\nTask-specific extraction objective:\nExtract matrix constituent and concentration, PFAS identity, treatment, clean-water control, matrix-modified condition, direction and magnitude of effect, endpoint, proposed mechanism, constituent interaction, matched operating conditions, and study scale.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.hazadv.2023.100322\"],\"all_blocked_titles\":[\"effects of water matrix on per and poly fluoroalkyl substances pfas treatment physical separation and degradation processes a review\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.hazadv.2023.100322\"],\"anchor_id\":\"AR-ZEIDABADI-2023\",\"corpus_source\":\"2023 - Zeidabadi - Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment - Physical-separation and degradation processes - A review.pdf\",\"doi\":\"10.1016/j.hazadv.2023.100322\",\"title\":\"Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment: Physical-separation and degradation processes - A review\",\"url\":\"https://doi.org/10.1016/j.hazadv.2023.100322\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Factors Affecting the Adsorption of Per- and Polyfluoroalkyl Substances (PFAS) by Colloidal Activated Carbon, Water Research, 2023, 242, 120212.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB01-E01\",\n      \"WEB01-E04\"\n    ],\n    \"reason\": \"All conditions described refer to PFOS and PFOA adsorption to the same colloidal activated carbon in aqueous solution, with ionic strength and Ca2+ varied as matrix modifiers; endpoints are consistently expressed as changes in adsorption affinity under matched PFAS and sorbent conditions.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.watres.2023.120212\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"sorption\",\n      \"evidence_locator_ids\": [\n        \"WEB01-E01\"\n      ],\n      \"interpretation\": \"Increased ionic strength (1-100 mM) and Ca2+ concentration (0-2 mM) enhanced PFOS and PFOA affinity to colloidal activated carbon, indicating that higher salinity and presence of divalent cations promote adsorption.\",\n      \"reported_term\": \"PFOS and PFOA affinity to colloidal activated carbon; adsorption promotive effects\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"WEB01-E04\"\n      ],\n      \"interpretation\": \"Hydrophobic interaction was proposed as the predominant mechanism for PFAS adsorption to colloidal activated carbon.\",\n      \"reported_term\": \"Proposed adsorption mechanism\"\n    }\n  ],\n  \"limitations\": [],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB01-E01\"\n    ],\n    \"value\": \"Aqueous solution (details of background matrix not specified in the accessible abstract).\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB01-E01\"\n      ],\n      \"name\": \"Ionic strength\",\n      \"qualifiers\": \"Salinity adjusted within this range while measuring PFOS and PFOA affinity to colloidal activated carbon.\",\n      \"unit\": \"mM\",\n      \"value\": \"1-100\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB01-E01\"\n      ],\n      \"name\": \"Calcium concentration (Ca2+)\",\n      \"qualifiers\": \"Ca2+ concentration increased within this range to evaluate its effect on PFOS and PFOA adsorption.\",\n      \"unit\": \"mM\",\n      \"value\": \"0-2\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB01-E01\"\n      ],\n      \"value\": \"Perfluorooctane sulfonate (PFOS)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB01-E01\"\n      ],\n      \"value\": \"Perfluorooctanoic acid (PFOA)\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB01-E01\"\n      ],\n      \"name\": \"Ionic strength range tested\",\n      \"qualifiers\": \"Salinity range over which PFOS and PFOA affinity to colloidal activated carbon increased.\",\n      \"unit\": \"mM\",\n      \"value\": \"1-100\",\n      \"value_form\": \"range\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB01-E01\"\n      ],\n      \"name\": \"Calcium concentration range tested\",\n      \"qualifiers\": \"Ca2+ range over which PFOS and PFOA affinity to colloidal activated carbon increased.\",\n      \"unit\": \"mM\",\n      \"value\": \"0-2\",\n      \"value_form\": \"range\"\n    }\n  ],\n  \"record_id\": \"RT10-gpt51_web_search-WEB01-R01\",\n  \"residuals_byproducts\": [],\n  \"source_id\": \"WEB01\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB01-E01\"\n    ],\n    \"value\": \"Laboratory-scale batch adsorption experiments with colloidal activated carbon; salinity (ionic strength) and Ca2+ concentration varied while assessing PFOS and PFOA adsorption affinity.\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB01-E01\",\n      \"WEB01-E04\"\n    ],\n    \"value\": \"Adsorption to colloidal activated carbon (CAC).\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"abstract\",\n  \"capture_source_id\": \"WEB11\",\n  \"citation\": \"Water Research, 2023, 242, 120212\",\n  \"covered_component_ids\": [\n    \"RT10-C1\",\n    \"RT10-C2\"\n  ],\n  \"doi\": \"10.1016/j.watres.2023.120212\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.watres.2023.120212\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB01-E01\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract (PubMed)\",\n      \"text\": \"The study reports that PFOS and PFOA affinity to colloidal activated carbon increased as ionic strength rose from 1 to 100 mM and as Ca2+ increased from 0 to 2 mM, indicating promotive effects of higher salinity and divalent cations on adsorption.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB01-E02\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract (PubMed)\",\n      \"text\": \"Adding 1\\u201320 mg C/L Suwannee River fulvic acid (representing dissolved organic carbon) or 10\\u2013100 mg/L diethylene glycol butyl ether (AFFF surfactant) decreased PFOS and PFOA adsorption, showing inhibitory effects of natural organic matter and surfactants.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB01-E03\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Abstract (PubMed)\",\n      \"text\": \"Co\\u2011contaminants benzene (0.5\\u20134.8 mg/L) and trichloroethylene (0.5\\u20138 mg/L) reduced PFOS adsorption by roughly twenty\\u2011fold at the highest TCE level, while effects on PFOA were neutral to slightly promotive, highlighting PFAS\\u2011specific competitive effects.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB01-E04\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Main text excerpt (PubMed)\",\n      \"text\": \"The authors conclude that hydrophobic interaction is the predominant mechanism for PFAS adsorption to colloidal activated carbon and that hydrophilic, short\\u2011chain PFAS (e.g., PFBA, PFPeA) will break through barriers first under identical conditions.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://pubmed.ncbi.nlm.nih.gov/37336180/\",\n  \"source_id\": \"WEB01\",\n  \"source_limitations\": [\n    \"Only abstract-level text was accessible from PubMed; full experimental matrix compositions and operating conditions could not be viewed directly.\",\n    \"Specific PFAS concentrations, contact times, and clean-water control details are not visible in the inspected snippet.\"\n  ],\n  \"title\": \"Factors Affecting the Adsorption of Per- and Polyfluoroalkyl Substances (PFAS) by Colloidal Activated Carbon\",\n  \"year\": \"2023\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "27023e05264d6e7ce2bc11f2a4953717d6a3264905cf271b08b52d5ffd197575",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.02132425,
+    "finish_reason": "stop",
+    "input_tokens": 2997,
+    "latency_seconds": 15.740881915902719,
+    "output_tokens": 1873,
+    "reasoning_tokens": 545,
+    "response_id": "chatcmpl-E9NmePHj4UTUE6XiJVZqsGtOUW79N",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 4870,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The DOI/URL exactly matches the source metadata: https://doi.org/10.1016/j.watres.2023.120212.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment",
+        "reason": "The record states adsorption to colloidal activated carbon (CAC), which is consistent with the title and abstract description that PFOS and PFOA affinity to colloidal activated carbon was evaluated (WEB01-E01).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix",
+        "reason": "The record describes an aqueous solution and notes that detailed background matrix composition is not specified. The abstract refers to ionic strength and Ca2+ in the context of adsorption, which necessarily implies an aqueous solution but does not specify further details (WEB01-E01), matching the cautious wording used.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "PFOS is explicitly mentioned in the abstract passage describing affinity to colloidal activated carbon (WEB01-E01).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1].value",
+        "reason": "PFOA is explicitly mentioned in the abstract passage describing affinity to colloidal activated carbon (WEB01-E01).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The endpoint concerns PFOS and PFOA affinity to colloidal activated carbon and promotive effects on adsorption (WEB01-E01), which is correctly classified as a sorption endpoint.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0]",
+        "reason": "The interpretation that increasing ionic strength from 1\u2013100 mM and Ca2+ from 0\u20132 mM enhanced PFOS and PFOA affinity to CAC and promoted adsorption is directly supported by WEB01-E01, which states these promotive effects.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "The second endpoint summarizes a proposed mechanism (hydrophobic interaction), which is not itself a performance metric; classifying this as 'other' is appropriate given WEB01-E04.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1]",
+        "reason": "WEB01-E04 states that hydrophobic interaction is the predominant mechanism for PFAS adsorption to colloidal activated carbon, matching the interpretation and reported term.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "WEB01-E01 reports that affinity increased as ionic strength rose from 1 to 100 mM; the recorded value range 1\u2013100 matches this statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "Ionic strength is given in mM in WEB01-E01, matching the unit recorded for this operating condition.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "WEB01-E01 reports that affinity increased as Ca2+ increased from 0 to 2 mM; the recorded value range 0\u20132 matches this statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "Ca2+ concentration is given in mM in WEB01-E01, matching the unit recorded for this operating condition.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "The quantitative finding summarizes the ionic strength range tested (1\u2013100), which directly reflects WEB01-E01 stating that ionic strength rose from 1 to 100 mM.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The abstract reports ionic strength in mM (WEB01-E01); the unit mM is correctly recorded.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "The quantitative finding summarizes the Ca2+ range tested (0\u20132), which directly reflects WEB01-E01 stating that Ca2+ increased from 0 to 2 mM.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "The abstract reports Ca2+ concentration in mM (WEB01-E01); the unit mM is correctly recorded.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "study_scale",
+        "reason": "The record states 'Laboratory-scale batch adsorption experiments with colloidal activated carbon', while WEB01-E01 and related abstract text only establish that adsorption to colloidal activated carbon was studied; they do not specify batch vs. column or explicitly state laboratory scale. Laboratory experiments are a reasonable inference, but the specific 'batch' qualifier is not directly supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "All described conditions concern PFOS and PFOA adsorption to the same colloidal activated carbon, with ionic strength and Ca2+ varied while other aspects are implicitly held constant (WEB01-E01). Inferring that these conditions are comparable with noted matrix modifiers is consistent with the cited information.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability",
+        "reason": "The reasoning that comparability holds under matched PFAS and sorbent conditions while ionic strength and Ca2+ are varied is consistent with WEB01-E01, which describes promotive effects of these matrix modifiers under otherwise common conditions.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT10-gpt51_web_search-WEB01-R01",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014source identity, PFAS (PFOS and PFOA), treatment (adsorption to colloidal activated carbon), aqueous matrix, key matrix modifiers (ionic strength and Ca2+ ranges), and adsorption/sorption endpoints\u2014are directly supported by the abstract. The only partial issue is the unspecific 'batch' qualifier in the study scale, which does not materially affect interpretability of treatment performance, so the record remains usable for synthesis.",
+    "task_id": "RT10"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

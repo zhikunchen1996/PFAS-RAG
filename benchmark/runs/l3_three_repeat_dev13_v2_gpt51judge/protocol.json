@@ -1,0 +1,39 @@
+{
+  "protocol_id": "l3_three_repeat_dev13_v2_gpt51judge",
+  "status": "pre_run_frozen",
+  "date": "2026-07-29",
+  "scope": "Dev13 GPT-5.1 canonical-order L3 judge stability",
+  "questions": 13,
+  "systems": 6,
+  "answers_per_repeat": 78,
+  "repeat_count": 3,
+  "claim_order": "canonical",
+  "judge": {
+    "request_model": "gpt-5.1",
+    "required_returned_snapshot": "gpt-5.1-2025-11-13",
+    "reasoning_effort": "low",
+    "temperature": "provider default; not sent",
+    "max_completion_tokens": 12000,
+    "one_anonymous_answer_per_request": true
+  },
+  "repeat_sources": {
+    "repeat_1": "78 new GPT-5.1 judge calls; a valid smoke call is retained as its first item",
+    "repeat_2": "78 new GPT-5.1 judge calls",
+    "repeat_3": "78 new GPT-5.1 judge calls"
+  },
+  "aggregation": {
+    "primary_score": "equal mean across three complete repeat-specific system means",
+    "within_repeat_system_mean": "equal mean across 13 question scores",
+    "uncertainty_display": "sample standard deviation across three complete canonical judge repeats",
+    "claim_status_repeatability": "three-way exact agreement reported separately",
+    "diagnostic_rates": "equal mean across repeats"
+  },
+  "bootstrap": {
+    "enabled": false,
+    "confidence_interval": null,
+    "permutation_test": null
+  },
+  "reverse_claim_order_new_calls": 0,
+  "planned_new_calls": 234,
+  "held_out_test40_used": false
+}

@@ -1,0 +1,37 @@
+{
+  "protocol_id": "test40_formal_v1_retrieval",
+  "status": "complete",
+  "question_count": 40,
+  "held_out_test40_used": true,
+  "test_results_used_for_configuration": false,
+  "questions_sha256": "983d4bb40d615d80257776402e43f01bbc52626a43dfbd15480206f0764e92d4",
+  "gold_sha256": "7e2b27cbbf18fc6b91a07d06035051df2d2a15fd8485525d0f323b88c8a00f72",
+  "settings": {
+    "collection_name": "rag_documents_bge_large_en_v1_5_sent256_overlap2_corpus434_repaired_v1",
+    "embedding_model": "BAAI/bge-large-en-v1.5",
+    "configured_embedding_device": "cuda",
+    "auto_resolved_runtime_device": "cpu",
+    "reference_filter": true,
+    "runtime_device": "cpu"
+  },
+  "hybrid": {
+    "pool_k": 60,
+    "final_top_k": 10
+  },
+  "bge": {
+    "pool_k": 60,
+    "final_top_k": 10,
+    "model": "BAAI/bge-reranker-base",
+    "device": "cpu",
+    "batch_size": 16,
+    "max_length": 512,
+    "max_chars_per_candidate": 1800,
+    "document_cap": null
+  },
+  "runtime": {
+    "bge_model_load_seconds": 1.0233304579742253,
+    "hybrid_retrieval_seconds_sum": 226.1970982478815,
+    "bge_rerank_seconds_sum": 268.1494393340545
+  },
+  "api_calls": 0
+}

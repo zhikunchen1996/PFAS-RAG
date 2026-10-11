@@ -1,0 +1,215 @@
+{
+  "batch_id": "test40-review-batch-13",
+  "batch_sha256": "0a1eda2bb76acd4eed1e0c0a3334c131f5c44db043c98ba09528fa47bfff554d",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-review-batch-13",
+    "reviews": [
+      {
+        "question_id": "NQ07b",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ07b-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ07b-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ07b-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ07b-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ07b-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ07b-X02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "NQ25",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Multiple claim/constraint groups reuse the same single quoted exact_evidence_span (from NQ25_MMG002 or NQ25_MMG003) for several unrelated 'supports' descriptions whose content is not actually present in that quoted span, even though the correct supporting text exists elsewhere in the same full_chunk_text. This is a systemic exact-span validity/sufficiency problem, not isolated to one group."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ25-G01",
+            "verdict": "partially_supported",
+            "issues": [
+              "The exact_spans entry citing NQ25_MMG003 quotes only the PFCA-vs-long-chain/PFSA affinity sentence, but the 'supports' text claims it shows matrix-specific removal behavior and run times in a groundwater matrix — content that is not in the quoted span (it is a different sentence later in the same full_chunk_text: 'In the PFAS‑polluted groundwater matrix, the short‑chain PFCA PFBA and PFPeA could only be sufficiently removed with activated carbon over short run times of 6000 and 11,000 bed volumes...')."
+            ],
+            "required_repairs": [
+              "Replace the NQ25_MMG003 exact_evidence_span used in this entry with the actual groundwater/run-time sentence from the full_chunk_text so the quoted text matches the claimed support, or retarget the current quote to a claim it genuinely supports (PFAS-class affinity ordering)."
+            ]
+          },
+          {
+            "claim_group_id": "NQ25-G02",
+            "verdict": "partially_supported",
+            "issues": [
+              "All three exact_spans entries misattribute content: the NQ25_MMG002 span (the ion-exchange mechanism sentence) is quoted twice but claimed to support 'batch experiments with Freundlich parameters' and 'sorption isotherms as a metric' — neither is contained in that sentence (the Freundlich/batch content is a separate sentence in the same chunk). The NQ25_MMG003 span (PFCA affinity sentence) is claimed to support column run-time/bed-volume reporting, which is not in that sentence either (the run-time/BV content is elsewhere in the MMG003 chunk)."
+            ],
+            "required_repairs": [
+              "Re-quote the actual Freundlich/batch-study sentence from NQ25_MMG002's full_chunk_text ('in the equilibrium batch studies with demineralized water ... higher Freundlich KF values and lower Freundlich n values were determined') for the batch/Freundlich claim.",
+              "Re-quote the actual run-time/bed-volume sentence from NQ25_MMG003's full_chunk_text for the column-test claim rather than reusing the PFCA-affinity sentence."
+            ]
+          },
+          {
+            "claim_group_id": "NQ25-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ25-G04",
+            "verdict": "partially_supported",
+            "issues": [
+              "Three of four exact_spans entries reuse the NQ25_MMG002 ion-exchange-mechanism sentence to claim support for the activated-carbon adsorption order (PFOA > PFHxA > PFPeA > PFBA) and the ion-exchange adsorption order (PFOS > PFHxS > PFBS ≈ PFOA > ...), but neither order is contained in that quoted sentence; the actual order statements are separate sentences in the same full_chunk_text."
+            ],
+            "required_repairs": [
+              "Replace the mismatched entries with the actual quoted order sentences: 'The experimental investiga - tions with activated carbon showed the following order of sorption: PFOA > PFHxA > PFPeA > PFBA' and 'The experimental investigations with IEX K6362 and several other resins ... lead to the following order of adsorption of the PFAS: PFOS > PFHxS > PFBS ≈ PFOA > PFHpA > PFHxA > PFPeA > PFBA', instead of the mechanism sentence."
+            ]
+          },
+          {
+            "claim_group_id": "NQ25-G05",
+            "verdict": "partially_supported",
+            "issues": [
+              "The second exact_spans entry reuses the NQ25_MMG005 Filtrasorb/Norit GAC-comparison sentence to claim support for a statement about the Purolite A600 ion-exchange resin's chemistry, but that quoted sentence says nothing about Purolite A600; the actual Purolite description is a separate sentence later in the same full_chunk_text."
+            ],
+            "required_repairs": [
+              "Re-quote the actual Purolite A600 description ('The Purolite A600 is a Type I strong-base anion resin with quaternary amino functional groups (polystyrene cross-linked with divinylbenzene; \"gel-type\" resin)') for the resin-chemistry claim rather than reusing the GAC comparison sentence."
+            ]
+          },
+          {
+            "claim_group_id": "NQ25-G06",
+            "verdict": "partially_supported",
+            "issues": [
+              "All three exact_spans entries misattribute the quoted text: the NQ25_MMG002 ion-exchange mechanism sentence is reused (twice) to claim support for Freundlich isotherm parameters and solid-phase concentrations, and the NQ25_MMG003 PFCA-affinity sentence is reused to claim support for column run-time/bed-volume reporting; none of these specific reporting-metric claims are present in the quoted sentences."
+            ],
+            "required_repairs": [
+              "Replace with the actual Freundlich-parameter sentence and the actual run-time/bed-volume sentence from the respective full_chunk_texts so each quoted span matches its claimed support."
+            ]
+          },
+          {
+            "claim_group_id": "NQ25-X01",
+            "verdict": "partially_supported",
+            "issues": [
+              "The second exact_spans entry reuses the NQ25_MMG003 PFCA-affinity sentence to claim it shows ion exchange had longer run times than activated carbon in a specific groundwater case, but that content is not in the quoted sentence (it is a separate run-time/BV sentence elsewhere in the same chunk)."
+            ],
+            "required_repairs": [
+              "Re-quote the actual groundwater run-time comparison sentence from NQ25_MMG003's full_chunk_text for this claim instead of reusing the PFCA-affinity sentence."
+            ]
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Audit all exact_spans entries for NQ25 claim/constraint groups and replace mismatched reused spans (NQ25_MMG002 and NQ25_MMG003 in particular) with the correct sub-quotes from their full_chunk_text that actually contain the asserted content, per the group-level repairs listed above."
+        ]
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 104352,
+    "num_turns": 5,
+    "stop_reason": "tool_use",
+    "session_id": "ef981d6d-7736-4b80-aca6-bbfc5ae0cd9a",
+    "total_cost_usd": 0.3366017,
+    "usage": {
+      "input_tokens": 6,
+      "cache_creation_input_tokens": 42496,
+      "cache_read_input_tokens": 60119,
+      "output_tokens": 10566,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 42496
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 9678,
+          "cache_read_input_tokens": 36036,
+          "cache_creation_input_tokens": 17531,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 17531,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 628,
+        "outputTokens": 14,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.0006979999999999999,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 6,
+        "outputTokens": 10566,
+        "cacheReadInputTokens": 60119,
+        "cacheCreationInputTokens": 42496,
+        "webSearchRequests": 0,
+        "costUSD": 0.3359037,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 6693,
+    "ttft_stream_ms": 2347,
+    "time_to_request_ms": 51,
+    "type": "result",
+    "duration_ms": 103927,
+    "uuid": "b29aa3ec-0314-49e0-9bd4-646d193bfd20"
+  },
+  "candidate_test40_inputs_used": false
+}

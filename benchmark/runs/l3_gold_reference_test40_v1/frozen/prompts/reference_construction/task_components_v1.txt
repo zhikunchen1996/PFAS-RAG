@@ -1,0 +1,32 @@
+You are constructing task components for a scientific benchmark question.
+
+Use only the supplied visible question and task boundaries. Do not use outside
+knowledge and do not answer the question. Divide the requested information
+need into the smallest useful set of non-overlapping components that a
+researcher-facing answer should address.
+
+Rules:
+1. Return 1 to 4 components.
+2. Components must collectively cover the visible question and must_include.
+3. Do not insert facts, methods, values, compounds, or conclusions that are not
+   already stated in the question or boundaries.
+4. Do not mention benchmark construction, gold evidence, retrieval, scoring,
+   or candidate systems.
+5. Keep endpoint distinctions explicit when the question requires them.
+
+Return exactly one JSON object:
+{
+  "question_id": "string",
+  "task_components": [
+    {
+      "task_component_id": "QUESTION_ID-T01",
+      "component_text": "one answerable information need"
+    }
+  ],
+  "coverage_check": {
+    "question_covered": true,
+    "must_include_covered": true,
+    "must_not_claim_respected": true,
+    "notes": "short explanation"
+  }
+}

@@ -1,0 +1,296 @@
+{
+  "call_key": "RT01:bge_llm_local_rag:verify:RT01-bge_llm_local_rag-S11-R03",
+  "created_at": "2026-08-05T03:50:56.578169+00:00",
+  "raw_response_text": "{\"task_id\":\"RT01\",\"record_id\":\"RT01-bge_llm_local_rag-S11-R03\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"citation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Matches the article title, authors, journal, year, volume, and article number given in the source metadata (chunk S11-E06 and citation header).\"},{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record DOI URL (https://doi.org/10.1016/j.jhazmat.2024.136763) matches the DOI given in the source metadata and citation text.\"},{\"field_path\":\"matrix.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk S11-E02 states that five PFAS were \\\"mixed with type-1 DI water\\\" at a defined concentration. The record\u2019s description as Type-1 deionized water spiked with individual PFAS is consistent with this text.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E02 lists PFBA among the five PFAS used. Identifying it as a C4 carboxylate is chemically correct and consistent with the named compound.\"},{\"field_path\":\"pfas_scope[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E02 lists PFHxA among the five PFAS used. Identifying it as a C6 carboxylate is chemically consistent with the named compound.\"},{\"field_path\":\"pfas_scope[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E02 lists PFOA among the five PFAS used. Identifying it as a C8 carboxylate is chemically consistent with the named compound.\"},{\"field_path\":\"pfas_scope[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E02 lists PFDA among the five PFAS used. Identifying it as a C10 carboxylate is chemically consistent with the named compound.\"},{\"field_path\":\"pfas_scope[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E02 lists PDoDA (a C12 carboxylate). The record spells this as PFDoDA but keeps the C12 carboxylate description, which is consistent with the source compound and chain length.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E02: the pure-solution adsorption experiment used five PFAS \\\"mixed with type-1 DI water at a concentration of 0.4 mg/L each\\\" and the kinetics experiment used an initial concentration of 0.4 mg/L for each PFAS. The value 0.4 matches this exactly.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E02 reports concentration in mg/L, matching the recorded unit.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E02 states the adsorption test was performed using HCl-modified CFA-B at 10, 100, and 1000 g/L, and the kinetic experiment used a 10 g/L dose. The recorded value 10 (for kinetics) is supported.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source explicitly reports CFA-B dosages in g/L (S11-E02), matching the recorded unit.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E02 notes the kinetic experiment ran for 24 h and samples were collected starting at 0 h; S11-E05 states rapid adsorption from 0\u20135 h and equilibrium after 12 h. Representing the contact-time range as 0\u201324 h is consistent with these statements.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Contact time is reported in hours in the methods and results (e.g., \\\"for 24 h\\\", S11-E02; \\\"0 to 5 h\\\", \\\"after 12 h\\\", S11-E05), matching the unit h.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract and highlights (S11-E03, S11-E05, S11-E06) repeatedly refer to PFAS adsorption capacity and adsorption kinetics. Classifying this endpoint as sorption is consistent with the measured basis (PFAS uptake/adsorption).\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The second endpoint concerns mechanistic interpretation (chemisorption, monolayer adsorption, electrostatic and other interactions) rather than a direct sorption metric. Using endpoint_type \\\"other\\\" is an appropriate classification, given S11-E05 and S11-E01/S11-E07.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E03 and S11-E06 state that adsorption kinetics were measured and that \\\"longer-chain PFAS exhibited faster adsorption rates and higher adsorption capacity with CFA\\\". S11-E05 also notes that kinetic data for individual PFAS show longer chain PFAS are absorbed faster than shorter ones. This supports the interpretation about time-resolved adsorption and chain-length-dependent uptake.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E05 states that kinetics fit a pseudo-second-order model (chemisorption) and isotherms fit Langmuir (monolayer adsorption). S11-E01 and S11-E07 describe electrostatic interactions, hydrophobic forces, hydrogen bonding, cation bridging, and metal oxide complexation as relevant mechanisms. This matches the recorded mechanistic interpretation.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E05 explicitly states \\\"equilibrium was achieved after 12 h.\\\" The recorded value 12 (h) matches this.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Equilibrium time is given in hours in S11-E05 (\\\"after 12 h\\\"), matching the unit h.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E05 states \\\"rapid adsorption occurs from 0 to 5 h\\\". The recorded value range 0\u20135 is consistent with this statement.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The rapid adsorption period is reported in hours (\\\"0 to 5 h\\\"), consistent with unit h.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Design facts from S11-E02/S11-E03/S11-E05 show that kinetics used relatively high PFAS concentrations in DI water and a single modified CFA-B formulation. Inferring limited extrapolation to other PFAS, adsorbents, and natural-water matrices is a reasonable design-based limitation.\"},{\"field_path\":\"residuals_byproducts[0].statement\",\"status\":\"unsupported\",\"error_type\":\"other\",\"reason\":\"The cited chunks discuss adsorption mechanisms and performance but do not state whether PFAS degradation products or inorganic fluoride were or were not monitored. The assertion that no monitoring of PFAS degradation or inorganic fluoride was reported cannot be confirmed from the provided text alone.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The description of bench-scale batch adsorption kinetics with individual PFAS and modified CFA-B is consistent with the laboratory adsorption and kinetics experiments described in S11-E02 and summarized in S11-E03 and S11-E05.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E02 describes batch adsorption tests using 2.5 M HCl-modified CFA-B with individual PFAS in DI water and S11-E05/S11-E03 highlight adsorption kinetics and chain-length effects. This supports the treatment description.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Kinetics are batch tests in DI water with defined PFAS species, doses, and contact times (S11-E02, S11-E03), a typical design for batch-kinetics studies. Concluding \\\"comparable_with_conditions\\\" (noting matrix and PFAS differences) conservatively follows from these design details.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reason cites defined PFAS, DI water matrix, known contact times, and adsorbent dose as bases for comparability, which are all supported by S11-E02 and S11-E03; acknowledging chain length and solution chemistry differences is a reasonable analytical qualification.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014source identity, PFAS and adsorbent identity, DI-water matrix, operating conditions, adsorption/kinetics endpoints, and key quantitative findings on contact time and kinetics\u2014are all directly supported by the cited text. The only unsupported field concerns a design-inferred statement about unmonitored degradation/byproducts, which does not affect the usability of adsorption data for synthesis.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused, data-grounded review explaining how an engineer should select an adsorption medium for a specified PFAS profile and water matrix.\",\"task_id\":\"RT01\",\"title\":\"Selecting an adsorption medium for a defined PFAS water-treatment application\"}\n\nTask-specific extraction objective:\nExtract adsorbent identity and properties, PFAS identity, water matrix, influent concentration, pH, co-constituents, dose or bed conditions, adsorption endpoint, quantitative result, and reported mechanism.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Patel, H.V.; Greer, M.; Brazil, B.; Yu, W.; Hamoush, S.; Zhang, L.; Zhao, R. Adsorption capacity and mechanism of modified coal fly ash (CFA) for per- and polyfluoroalkyl substances (PFAS) in landfill leachate. Journal of Hazardous Materials. 2025;484:136763.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S11-E02\",\n      \"S11-E03\",\n      \"S11-E05\"\n    ],\n    \"reason\": \"The kinetics experiments used defined PFAS species, concentrations, and a DI water matrix, with clear reporting of contact times and adsorbent dose; these are broadly comparable to other batch-kinetics studies, although chain length and solution chemistry differences must be considered.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.jhazmat.2024.136763\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"sorption\",\n      \"evidence_locator_ids\": [\n        \"S11-E02\",\n        \"S11-E03\",\n        \"S11-E05\"\n      ],\n      \"interpretation\": \"Time-resolved sorbed mass and/or aqueous concentration of individual PFAS used to fit kinetic models; used to conclude that longer-chain PFAS adsorb faster and reach higher capacities than shorter-chain PFAS on CFA-B.\",\n      \"reported_term\": \"PFAS adsorption kinetics and chain-length-dependent uptake\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S11-E01\",\n        \"S11-E03\",\n        \"S11-E05\",\n        \"S11-E07\"\n      ],\n      \"interpretation\": \"Kinetic fits (pseudo-second-order) and isotherm analysis (Langmuir) were used to infer that chemisorption and monolayer adsorption dominate PFAS uptake by CFA; text also discusses roles of electrostatic attraction, hydrophobic interactions, hydrogen bonding, cation bridging, and metal oxide complexation.\",\n      \"reported_term\": \"Adsorption mechanism (chemisorption, monolayer adsorption, electrostatic and other interactions)\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S11-E02\",\n        \"S11-E03\",\n        \"S11-E05\"\n      ],\n      \"statement\": \"Kinetic and mechanistic interpretations are based on relatively high PFAS concentrations in DI water and on a single modified CFA-B formulation, limiting extrapolation to other PFAS, adsorbent modifications, and natural-water matrices.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S11-E02\"\n    ],\n    \"value\": \"Type-1 deionized water spiked with individual PFAS (PFBA, PFHxA, PFOA, PFDA, PFDoDA).\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E02\"\n      ],\n      \"name\": \"Initial PFAS concentration (individual PFAS kinetics)\",\n      \"qualifiers\": \"Initial concentration for each of PFBA, PFHxA, PFOA, PFDA, PFDoDA in DI water for 24 h kinetics test.\",\n      \"unit\": \"mg/L\",\n      \"value\": \"0.4\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E02\"\n      ],\n      \"name\": \"CFA-B dose (kinetics)\",\n      \"qualifiers\": \"2.5 M HCl-modified CFA-B dose for the 24 h adsorption kinetics experiment with individual PFAS.\",\n      \"unit\": \"g/L\",\n      \"value\": \"10\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E02\",\n        \"S11-E05\"\n      ],\n      \"name\": \"Contact time range\",\n      \"qualifiers\": \"Samples collected over 24 h; rapid adsorption from 0\\u20135 h with equilibrium reached after 12 h, per kinetic analysis summary.\",\n      \"unit\": \"h\",\n      \"value\": \"0-24\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E02\"\n      ],\n      \"value\": \"PFBA (C4, carboxylate).\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E02\"\n      ],\n      \"value\": \"PFHxA (C6, carboxylate).\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E02\"\n      ],\n      \"value\": \"PFOA (C8, carboxylate).\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E02\"\n      ],\n      \"value\": \"PFDA (C10, carboxylate).\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E02\"\n      ],\n      \"value\": \"PFDoDA (C12, carboxylate).\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E05\"\n      ],\n      \"name\": \"Equilibrium time\",\n      \"qualifiers\": \"Equilibrium for PFAS adsorption on CFA was reached after 12 h according to kinetic data.\",\n      \"unit\": \"h\",\n      \"value\": \"12\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E05\"\n      ],\n      \"name\": \"Rapid adsorption period\",\n      \"qualifiers\": \"Kinetic data indicate rapid PFAS adsorption from 0 to 5 h before approaching equilibrium.\",\n      \"unit\": \"h\",\n      \"value\": \"0-5\",\n      \"value_form\": \"range\"\n    }\n  ],\n  \"record_id\": \"RT01-bge_llm_local_rag-S11-R03\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S11-E01\",\n        \"S11-E03\",\n        \"S11-E05\",\n        \"S11-E07\"\n      ],\n      \"statement\": \"Mechanistic discussion focuses on adsorption interactions (chemisorption, hydrogen bonding, cation bridging, metal complexation); no monitoring of PFAS degradation or inorganic fluoride was reported for kinetics tests.\"\n    }\n  ],\n  \"source_id\": \"S11\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S11-E02\",\n      \"S11-E03\",\n      \"S11-E05\"\n    ],\n    \"value\": \"Bench-scale batch adsorption kinetics experiments with individual PFAS and modified CFA-B.\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S11-E02\",\n      \"S11-E05\"\n    ],\n    \"value\": \"Batch adsorption of individual PFAS onto 2.5 M HCl-modified CFA-B to study adsorption kinetics and chain-length effects.\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 16,\n  \"bge_score\": 0.3224070966243744,\n  \"citation\": \"Patel, H.V.; Greer, M.; Brazil, B.; Yu, W.; Hamoush, S.; Zhang, L.; Zhao, R. Adsorption capacity and mechanism of modified coal fly ash (CFA) for per- and polyfluoroalkyl substances (PFAS) in landfill leachate. Journal of Hazardous Materials 2025 484 136763. DOI: 10.1016/j.jhazmat.2024.136763.\",\n  \"doi\": \"10.1016/j.jhazmat.2024.136763\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.jhazmat.2024.136763\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 34,\n      \"locator_id\": \"S11-E01\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.3930448293685913,\n        \"RT01-C2\": 0.0012350042816251516,\n        \"RT01-C3\": 3.746134461835027e-05,\n        \"umbrella\": 0.2948261499404907\n      },\n      \"section\": \"results\",\n      \"text\": \"adsorbents play a crucial role in PFAS adsorption. Additionally, the chemical composition of CFA-B, with higher levels of silica (SiO \\u2082 ), alumina (Al \\u2082 O \\u2083 ), iron oxides (Fe \\u2082 O \\u2083 ), and calcium oxide (CaO), con - tributes significantly to its performance. These components enhance surface charge development, electrostatic interactions, and hydrogen bonding with PFAS molecules, thereby increasing the adsorption efficiency. In CFA-B, iron oxides promoted surface complexation with PFAS functional groups, whereas calcium oxide enhanced adsorption through ionic interactions, particularly under acidic conditions. These chemical interactions and hydrophobic forces between the PFAS fluorinated car - bon chains and adsorbent further improved the PFAS removal capacity of CFA-B. In contrast, the lower surface area and reduced oxide content of CFA-A and CFA-C limit their ability to interact effectively with PFAS, resulting in decreased removal efficiencies. In summary, the superior physical and chemical characteristics of CFA-B provided multiple adsorption pathways, making it more effective for PFAS removal during leachate treatment. Fig. 6 shows the amounts of short- and long-chain PFAS adsorbed per gram of CFA. Based on the PFAS adsorbed on CFA adsorbents, it was found that short-chain PFAS had significantly higher adsorption than long-chain PFAS.\"\n    },\n    {\n      \"corpus_chunk\": 17,\n      \"locator_id\": \"S11-E02\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.7044331431388855,\n        \"RT01-C2\": 0.0032447590492665768,\n        \"RT01-C3\": 0.00017207993369083852,\n        \"umbrella\": 0.07492119818925858\n      },\n      \"section\": \"methods\",\n      \"text\": \"Additionally altering the initial pH of the leachate may cause precipitation or losing the ionic forms of PFAS. Studies show that most PFAS are in their ionic form at neutral pH due to their low pKa values [62-64] . A similar adsorption experiment was conducted using five PFAS with the same functional group but various carbon chain lengths (PFBA, PFHxA, PFOA, PFDA, and PDoDA) mixed with type-1 DI water at a concentration of 0.4 mg/L each. This adsorption experiment was con - ducted to test whether the CFA adsorbents have an affinity for certain groups of PFAS in a multiple-PFAS solution. The adsorption test was performed using 2.5 M HCl-modified CFA-B at 10, 100, and 1000 g/L dosages. 2.6. Adsorption kinetics Adsorption kinetic experiments were conducted to determine and compare the adsorption rates of individual PFAS on the modified CFA. For the experiment, CFA-B modified with HCl (2.5 M) was mixed with an initial concentration of 0.4 mg/L of PFBA, PFHxA, PFOA, PFDA, PFDoDA, and a 10 g/L dose for 24 h. Samples were collected at 0, 5, 10,\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S11-E03\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.5565593242645264,\n        \"RT01-C2\": 0.06928420066833496,\n        \"RT01-C3\": 3.7648507714038715e-05,\n        \"umbrella\": 0.1378173679113388\n      },\n      \"section\": \"abstract\",\n      \"text\": \"ARTICLE INFO Keywords: Per- and Polyfluoro-Alkyl Substances (PFAS) Landfill leachate Coal Fly-Ash And Dissolved Organic Matter (DOM) ABSTRACT This study explores the potential of modified coal fly ash (CFA) as an adsorbing material for immobilizing Per- and Polyfluoroalkyl Substances (PFAS) and bulk organic matter from landfill leachate, comparing its efficacy to that of activated carbon. Physiochemical modification of CFA using hydrochloric acid (HCl) and thermal treatment significantly enhanced its adsorption properties, increasing the BET surface area by 2.5 to 3.5 times and pore volume by 2 to 3 times. Despite the high concentrations of dissolved organic matter (DOM) in landfill leachate, modified CFA achieved up to 88 % removal of total organic carbon (TOC) and 93 % decrease of UV 254 at an optimal dose of 400 g/L. The PFAS adsorption capacity reached 3.5 mg/g, representing approximately 3 \\u2013 15 % of that of activated carbon due to its limited surface area and pore volume. CFA possesses 5 to 15 times higher surface area based adsorption capacity (in mg/m 2 ) than activated carbon. Adsorption kinetics were best described by a pseudo-second-order model, indicating that chemisorption is the primary mechanism. Notably, longer-chain PFAS exhibited faster adsorption rates and higher adsorption capacity with CFA.\"\n    },\n    {\n      \"corpus_chunk\": 21,\n      \"locator_id\": \"S11-E04\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.14318354427814484,\n        \"RT01-C2\": 0.01666034385561943,\n        \"RT01-C3\": 0.0007357750437222421,\n        \"umbrella\": 0.11026342213153839\n      },\n      \"section\": \"methods\",\n      \"text\": \"ciation (APHA) [66] . All containers, vials, and glassware used in water quality analysis were cleaned with methanolic ammonium hydroxide, rinsed, and dried before use to prevent cross-contamination and envi - ronmental errors. Raw leachate samples and supernatants collected from the leachate adsorption test were analyzed for pH, Chemical Oxygen Demand (COD), Total Organic Carbon (TOC), UV 254 Absorbance, and other water quality parameters. COD was measured using a HACH ultra-high-range TNT823 (250 \\u2013 15,000 mg/L) and a high-range TNT822 (25 \\u2013 1500 mg/L) with a DR 6000 spectrophotometer (HACH, Loveland, CO, USA). pH was measured using an Intellical PHC281 water quality laboratory refillable pH electrode (HACH, Loveland, CO, USA). The TOC was analyzed using an Online TOC-L analyzer with an ASI-L autosampler (Shimadzu, Kyoto, Japan). All samples were prepared and analyzed in triplicate to minimize statistical and instrumental errors for quality control. Inorganic nitrogen was measured in the form of ammonium-nitrogen and nitrate-nitrogen using a HACH ultra-high-range TNT833 (47 \\u2013 130 mg/L) and HACH high-range TNT836 (5 \\u2013 35 mg/L) with a DR 6000 spectrophotometer (HACH,\"\n    },\n    {\n      \"corpus_chunk\": 47,\n      \"locator_id\": \"S11-E05\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.6558756828308105,\n        \"RT01-C2\": 0.0007560019148513675,\n        \"RT01-C3\": 4.471142165130004e-05,\n        \"umbrella\": 0.19533084332942963\n      },\n      \"section\": \"results\",\n      \"text\": \"adsorbing properties, increasing BET surface area by 2.5-3.5 times and pore volume by 2-3 times. \\u2022 CFA achieved 88% TOC removal, 93% UV removal at the optimum dose of 400 g/L for a landfill leachate. \\u2022 With pure PFAS solutions with initial concentration ranging from 0.5 \\u2013 2.5 mg/L, CFA achieved up to 3.5 mg/g PFAS adsorption, which is approximately 3-15% of activated carbon under the same condition. \\u2022 CFA possesses approximately 5-15 times higher surface area based adsorption capacity than activated carbon due to its lower surface area. \\u2022 Adsorption of pure PFAS mixture solution and kinetics data of indi - vidual PFAS compounds indicated that longer chain PFAS com - pounds are absorbed by CFA at a faster rate than shorter chain ones. \\u2022 Adsorption Kinetic data showed that rapid adsorption occurs from 0 to 5 h and equilibrium was achieved after 12 h and they fit well with the pseudo-second order reaction indicating that the adsorption occurs via chemisorption. \\u2022 The adsorption isotherm data fits better with non-linear Langmuir isotherm compared to Freundlich isotherm, indicating that the adsorption of PFAS on CFA is monolayer adsorption. \\u2022 Langmuir adsorption isotherm data showed that CFA has higher adsorption capacity for longer chain PFAS than shorter ones.\"\n    },\n    {\n      \"corpus_chunk\": 0,\n      \"locator_id\": \"S11-E06\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.2617933750152588,\n        \"RT01-C2\": 0.0017978863324970007,\n        \"RT01-C3\": 3.7304911529645324e-05,\n        \"umbrella\": 0.07709087431430817\n      },\n      \"section\": \"unknown\",\n      \"text\": \"Adsorption capacity and mechanism of modified coal fly ash (CFA) for per- and polyfluoroalkyl substances (PFAS) in landfill leachate Harsh V. Patel a , Myles Greer b , Brian Brazil c , Wenzheng Yu d , Sameer Hamoush a , Lifeng Zhang e , Renzun Zhao a , * a Department of Civil, Architectural and Environmental Engineering, North Carolina Agricultural and Technical State University, Greensboro, NC 27411, USA b Jacobs Solutions Inc., Virginia Beach, VA 23462, USA c Waste Management Inc., Gaithersburg, MD 20878, USA d State Key Laboratory of Environmental Aquatic Chemistry, Research Center for Eco-Environmental Sciences, Chinese Academy of Sciences, Beijing 100085, China e Joint School of Nanoscience and Nanotechnology, North Carolina Agricultural and Technical State University, Greensboro, NC 27411, USA HIGHLIGHTS GRAPHICAL ABSTRACT \\u2022 Coal fly ash effectively adsorbs bulk organic matter in landfill leachate. \\u2022 CFA shows 3.5 mg/g PFAS adsorption, 3-15 % of activated carbon \\u2019 s capacity. \\u2022 CFA shows higher surface area-based adsorption capacity (in mg/m 2 ) than GAC. \\u2022 Long-chain PFAS adsorbed faster and at higher capacities than short-chain variants. \\u2022 PFAS adsorption on CFA is character - ized by monolayer and chemisorption mechanisms. ARTICLE INFO Keywords:\"\n    },\n    {\n      \"corpus_chunk\": 10,\n      \"locator_id\": \"S11-E07\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.21166275441646576,\n        \"RT01-C2\": 0.0003556504670996219,\n        \"RT01-C3\": 5.0415728765074164e-05,\n        \"umbrella\": 0.11031782627105713\n      },\n      \"section\": \"methods\",\n      \"text\": \"In addition, hydrogen bonding, cation bridging, and metal oxide complexation (ligand exchange) played minor roles in PFAS adsorption on the CFA surface. Hydrogen bonding can occur when oxygen atoms in the func - tional group of the PFAS molecule accept electrons from the hydrogen present on CFA surfaces at higher pH levels [54-56] . Hydrogen bonding has also been found to be responsible for PFAS adsorption on nano-sized alumina, iron oxide, silica oxide, and titanium oxide [55] . In terms of cation bridging, it has been found that the presence of Na + and Ca 2 + on mineral adsorbents like montmorillonite, kaolinite, and hematite can increase PFAS adsorption via cation bridging [56] . Similarly, in the presence of ions such as Cl - and CO 3 - , the adsorption of PFOS onto mesoporous silica, boehmite, and iron surfaces is significantly improved because of the interactions between the hydroxyl ions of the metal ox - ides on the surface and the ligand ions [57-59] . Metal complexation between coal fly ash (CFA) surfaces and PFAS involves coordination between metal cations (e.g., Fe\\u00b2 \\u207a , Al\\u00b3 \\u207a , Ca\\u00b2 \\u207a ) present on the CFA and the polar functional groups (e.g., carboxylates and sulfonates) of PFAS. The\"\n    },\n    {\n      \"corpus_chunk\": 35,\n      \"locator_id\": \"S11-E08\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.18928931653499603,\n        \"RT01-C2\": 0.0007164627313613892,\n        \"RT01-C3\": 4.402577906148508e-05,\n        \"umbrella\": 0.057672351598739624\n      },\n      \"section\": \"results\",\n      \"text\": \"found that short-chain PFAS had significantly higher adsorption than long-chain PFAS. CFA B, A, and C adsorbed 59.9, 54.5, and 39.1 ng short-chain (C \\u2264 6) PFAS per g of CFA, respectively; while adsorbing only 9.2, 9.4, and 4.7 ng long-chain PFAS (C > 6) per g of CFA, respectively. There are two possible reasons for this observation: 1) CFA adsorbents have a higher adsorption affinity for short-chain PFAS, or 2) CFA adsorbents have higher adsorption for short-chain PFAS because of the significantly higher initial concentration of short-chain PFAS com - pounds in the leachate compared to long-chain PFAS. To verify the above-mentioned two possible reasons for the higher adsorption of short-chain PFAS in landfill leachate by CFA, a control adsorption experiment was carried out using pure solutions of five PFAS compounds (PFBA, PFHxA, PFOA, PFDA, and PFDoDA) with carbon chain lengths ranging from 4 to 12 and the same functional head group as CFA-B modified with 2.5 M HCl at doses of 10, 100, and 1000 g/L. Fig. 5. Adsorption capacity for total sulphonic and carboxylic PFAS in landfill\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2024 - Patel - Adsorption capacity and mechanism of modified coal fly ash (CFA) for per- and polyfluoroalkyl substances (PFAS) in landfill leachate.pdf\",\n  \"source_id\": \"S11\",\n  \"title\": \"Adsorption capacity and mechanism of modified coal fly ash (CFA) for per- and polyfluoroalkyl substances (PFAS) in landfill leachate\",\n  \"year\": \"2024\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "0413681e580ad3a45c4cf1eabf48ae33066fffb76c2e19346b2bd4c41b9f8352",
+  "response_metadata": {
+    "cached_input_tokens": 1152,
+    "estimated_cost_usd": 0.0372365,
+    "finish_reason": "stop",
+    "input_tokens": 6410,
+    "latency_seconds": 21.113217125064693,
+    "output_tokens": 3052,
+    "reasoning_tokens": 1034,
+    "response_id": "chatcmpl-E9MwFEOJGSoJSmNXq3u9U8owWpkDR",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 9462,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "citation",
+        "reason": "Matches the article title, authors, journal, year, volume, and article number given in the source metadata (chunk S11-E06 and citation header).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The record DOI URL (https://doi.org/10.1016/j.jhazmat.2024.136763) matches the DOI given in the source metadata and citation text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix.value",
+        "reason": "Chunk S11-E02 states that five PFAS were \"mixed with type-1 DI water\" at a defined concentration. The record\u2019s description as Type-1 deionized water spiked with individual PFAS is consistent with this text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "S11-E02 lists PFBA among the five PFAS used. Identifying it as a C4 carboxylate is chemically correct and consistent with the named compound.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1].value",
+        "reason": "S11-E02 lists PFHxA among the five PFAS used. Identifying it as a C6 carboxylate is chemically consistent with the named compound.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[2].value",
+        "reason": "S11-E02 lists PFOA among the five PFAS used. Identifying it as a C8 carboxylate is chemically consistent with the named compound.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[3].value",
+        "reason": "S11-E02 lists PFDA among the five PFAS used. Identifying it as a C10 carboxylate is chemically consistent with the named compound.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[4].value",
+        "reason": "S11-E02 lists PDoDA (a C12 carboxylate). The record spells this as PFDoDA but keeps the C12 carboxylate description, which is consistent with the source compound and chain length.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "S11-E02: the pure-solution adsorption experiment used five PFAS \"mixed with type-1 DI water at a concentration of 0.4 mg/L each\" and the kinetics experiment used an initial concentration of 0.4 mg/L for each PFAS. The value 0.4 matches this exactly.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "S11-E02 reports concentration in mg/L, matching the recorded unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "S11-E02 states the adsorption test was performed using HCl-modified CFA-B at 10, 100, and 1000 g/L, and the kinetic experiment used a 10 g/L dose. The recorded value 10 (for kinetics) is supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The source explicitly reports CFA-B dosages in g/L (S11-E02), matching the recorded unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "S11-E02 notes the kinetic experiment ran for 24 h and samples were collected starting at 0 h; S11-E05 states rapid adsorption from 0\u20135 h and equilibrium after 12 h. Representing the contact-time range as 0\u201324 h is consistent with these statements.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "Contact time is reported in hours in the methods and results (e.g., \"for 24 h\", S11-E02; \"0 to 5 h\", \"after 12 h\", S11-E05), matching the unit h.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The abstract and highlights (S11-E03, S11-E05, S11-E06) repeatedly refer to PFAS adsorption capacity and adsorption kinetics. Classifying this endpoint as sorption is consistent with the measured basis (PFAS uptake/adsorption).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "The second endpoint concerns mechanistic interpretation (chemisorption, monolayer adsorption, electrostatic and other interactions) rather than a direct sorption metric. Using endpoint_type \"other\" is an appropriate classification, given S11-E05 and S11-E01/S11-E07.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "S11-E03 and S11-E06 state that adsorption kinetics were measured and that \"longer-chain PFAS exhibited faster adsorption rates and higher adsorption capacity with CFA\". S11-E05 also notes that kinetic data for individual PFAS show longer chain PFAS are absorbed faster than shorter ones. This supports the interpretation about time-resolved adsorption and chain-length-dependent uptake.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "S11-E05 states that kinetics fit a pseudo-second-order model (chemisorption) and isotherms fit Langmuir (monolayer adsorption). S11-E01 and S11-E07 describe electrostatic interactions, hydrophobic forces, hydrogen bonding, cation bridging, and metal oxide complexation as relevant mechanisms. This matches the recorded mechanistic interpretation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "S11-E05 explicitly states \"equilibrium was achieved after 12 h.\" The recorded value 12 (h) matches this.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "Equilibrium time is given in hours in S11-E05 (\"after 12 h\"), matching the unit h.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "S11-E05 states \"rapid adsorption occurs from 0 to 5 h\". The recorded value range 0\u20135 is consistent with this statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "The rapid adsorption period is reported in hours (\"0 to 5 h\"), consistent with unit h.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].statement",
+        "reason": "Design facts from S11-E02/S11-E03/S11-E05 show that kinetics used relatively high PFAS concentrations in DI water and a single modified CFA-B formulation. Inferring limited extrapolation to other PFAS, adsorbents, and natural-water matrices is a reasonable design-based limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "other",
+        "field_path": "residuals_byproducts[0].statement",
+        "reason": "The cited chunks discuss adsorption mechanisms and performance but do not state whether PFAS degradation products or inorganic fluoride were or were not monitored. The assertion that no monitoring of PFAS degradation or inorganic fluoride was reported cannot be confirmed from the provided text alone.",
+        "status": "unsupported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "The description of bench-scale batch adsorption kinetics with individual PFAS and modified CFA-B is consistent with the laboratory adsorption and kinetics experiments described in S11-E02 and summarized in S11-E03 and S11-E05.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "S11-E02 describes batch adsorption tests using 2.5 M HCl-modified CFA-B with individual PFAS in DI water and S11-E05/S11-E03 highlight adsorption kinetics and chain-length effects. This supports the treatment description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "Kinetics are batch tests in DI water with defined PFAS species, doses, and contact times (S11-E02, S11-E03), a typical design for batch-kinetics studies. Concluding \"comparable_with_conditions\" (noting matrix and PFAS differences) conservatively follows from these design details.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The reason cites defined PFAS, DI water matrix, known contact times, and adsorbent dose as bases for comparability, which are all supported by S11-E02 and S11-E03; acknowledging chain length and solution chemistry differences is a reasonable analytical qualification.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT01-bge_llm_local_rag-S11-R03",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014source identity, PFAS and adsorbent identity, DI-water matrix, operating conditions, adsorption/kinetics endpoints, and key quantitative findings on contact time and kinetics\u2014are all directly supported by the cited text. The only unsupported field concerns a design-inferred statement about unmonitored degradation/byproducts, which does not affect the usability of adsorption data for synthesis.",
+    "task_id": "RT01"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

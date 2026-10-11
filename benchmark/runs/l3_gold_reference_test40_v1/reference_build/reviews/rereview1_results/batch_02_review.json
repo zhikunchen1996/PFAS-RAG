@@ -1,0 +1,164 @@
+{
+  "batch_id": "test40-rereview1-batch-02",
+  "batch_sha256": "94876a334cd5206f4fb6ce69e2d1a1e61fea924d5ffc76cb3471f7e905d10df1",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-rereview1-batch-02",
+    "reviews": [
+      {
+        "question_id": "NQ16",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Previous repair to remove/resolve the orphaned NQ16_MMG001 evidence_id was applied only to NQ16-G01 (removed from evidence_ids there) but NQ16-G03 still lists NQ16_MMG001 in its evidence_ids array with no corresponding exact_spans entry, leaving it unverifiable and unattributed to any span-level support in that group."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ16-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ16-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ16-G03",
+            "verdict": "partially_supported",
+            "issues": [
+              "evidence_ids includes NQ16_MMG001 but the exact_spans array only contains entries for NQ16_MMG002, NQ16_MMG003, and NQ16_MMG004; NQ16_MMG001's contribution to the transition proposition is unexplained and unverifiable against a specific span (the prior repair fixed the MMG004 duplication but did not address this newly visible MMG001 orphan, which was not previously flagged for this group but is present in the current evidence_ids list)."
+            ],
+            "required_repairs": [
+              "Either remove NQ16_MMG001 from NQ16-G03's evidence_ids or add an exact_span entry (with evidence_id, exact_evidence_span, and supports rationale) justifying its inclusion in the early-to-equilibrium transition claim."
+            ]
+          },
+          {
+            "claim_group_id": "NQ16-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Remove NQ16_MMG001 from NQ16-G03's evidence_ids or add a matching exact_span entry for it."
+        ]
+      },
+      {
+        "question_id": "NQ20",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ20-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ20-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ20-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ20-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 44662,
+    "num_turns": 5,
+    "stop_reason": "tool_use",
+    "session_id": "8c289a1a-e80c-4689-895d-374ad5726014",
+    "total_cost_usd": 0.29874095,
+    "usage": {
+      "input_tokens": 6,
+      "cache_creation_input_tokens": 56953,
+      "cache_read_input_tokens": 54824,
+      "output_tokens": 4526,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 56953
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 3925,
+          "cache_read_input_tokens": 36642,
+          "cache_creation_input_tokens": 25366,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 25366,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 722,
+        "outputTokens": 18,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000812,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 6,
+        "outputTokens": 4526,
+        "cacheReadInputTokens": 54824,
+        "cacheCreationInputTokens": 56953,
+        "webSearchRequests": 0,
+        "costUSD": 0.29792894999999997,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 3199,
+    "ttft_stream_ms": 956,
+    "time_to_request_ms": 53,
+    "type": "result",
+    "duration_ms": 44044,
+    "uuid": "ed049105-df4f-4d72-b31a-52293af48240"
+  },
+  "candidate_test40_inputs_used": false
+}

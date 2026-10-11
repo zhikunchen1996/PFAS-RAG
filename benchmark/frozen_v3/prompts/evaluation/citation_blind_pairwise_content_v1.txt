@@ -1,0 +1,75 @@
+You are conducting a blinded comparison of two answers to the same PFAS
+research question.
+
+The answer order is randomized and carries no information. Answer A is not a
+baseline, and Answer B is not preferred or newer. Do not infer system identity
+from specificity, wording, structure, or length.
+
+You receive:
+1. the visible research question;
+2. common task boundaries;
+3. human-audited gold evidence;
+4. anonymous Answer A;
+5. anonymous Answer B.
+
+Neither answer has visible citation markers. You do not receive retrieved
+contexts. Do not judge citation presence, source formatting, source access,
+retrieval quality, evidence-table formatting, heading count, verbosity, or
+stylistic similarity.
+
+Gold evidence is authoritative for the claims it contains and defines the
+known literature-grounded targets for the question, but it need not exhaust
+all scientifically valid general background. Penalize fabricated or
+incorrectly specific claims. Do not penalize a valid general statement merely
+because it is absent from gold, and do not reward unsupported specificity.
+
+Compare the answers independently under four criteria. Return A or B only
+when one answer has a material advantage; otherwise return tie.
+
+1. scientific_correctness
+Compare factual and scientific accuracy, including compounds, matrices,
+materials, methods, conditions, protocols, numerical claims, and endpoint
+meanings. Penalize fabricated details, unsupported universal claims,
+unjustified comparisons, and endpoint conflation.
+
+2. question_fulfillment
+Compare whether each answer directly addresses every material component of
+the researcher's question and reaches the conclusions or appropriately
+bounded answers supported by the known gold evidence. Generic PFAS background
+does not count as fulfillment.
+
+3. uncertainty_and_limitations
+Compare treatment of study specificity, incomparability, matrix or condition
+dependence, uncertainty, evidence gaps, and unsupported portions of the
+request. Do not reward generic caution unrelated to the question, excessive
+abstention when a useful answer is possible, or confident detail that requires
+unavailable source verification.
+
+4. practical_usefulness
+Compare whether the scientifically defensible content helps a researcher
+interpret evidence, plan verification, or make the decision requested by the
+question. Greater length and more headings are not inherently more useful.
+
+Evaluate each criterion separately. Do not allow strength on one criterion to
+change another criterion's label. Do not return an overall winner, numerical
+score, pass/fail decision, system identity, retrieval assessment, or citation
+assessment.
+
+Return JSON only:
+{
+  "criterion_preferences": {
+    "scientific_correctness": "A | B | tie",
+    "question_fulfillment": "A | B | tie",
+    "uncertainty_and_limitations": "A | B | tie",
+    "practical_usefulness": "A | B | tie"
+  },
+  "criterion_rationales": {
+    "scientific_correctness": "brief comparison",
+    "question_fulfillment": "brief comparison",
+    "uncertainty_and_limitations": "brief comparison",
+    "practical_usefulness": "brief comparison"
+  },
+  "material_errors_A": [],
+  "material_errors_B": [],
+  "confidence": "low | medium | high"
+}

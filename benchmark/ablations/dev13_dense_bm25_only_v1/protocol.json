@@ -1,0 +1,52 @@
+{
+  "protocol_id": "dev13_dense_bm25_only_v1",
+  "status": "post-freeze exploratory component ablation",
+  "packaged_on": "2026-08-11",
+  "evaluation_split": "Dev13 only",
+  "test40_used": false,
+  "questions": "benchmark/frozen_v3/input/questions_dev13.csv",
+  "gold": "benchmark/frozen_v3/gold/chunk_based_gold.jsonl",
+  "corpus": {
+    "collection": "rag_documents_bge_large_en_v1_5_sent256_overlap2_corpus434_repaired_v1",
+    "record_count": 434,
+    "chunk_count": 29805
+  },
+  "common_retrieval": {
+    "candidate_pool": 60,
+    "final_context": 10,
+    "context_window": 0,
+    "reference_filter": "src.rag_app.rag.is_reference_like, with non-reference chunks ordered before reference-like chunks within each component pool",
+    "api_calls": 0
+  },
+  "systems": {
+    "dense_only": {
+      "embedding_model": "BAAI/bge-large-en-v1.5",
+      "ranking": "ascending vector distance",
+      "excluded": ["BM25", "hybrid fusion", "cross-encoder", "LLM selector"]
+    },
+    "bm25_only": {
+      "k1": 1.5,
+      "b": 0.75,
+      "tokenizer": "src.rag_app.rag.tokenize_list",
+      "excluded": ["dense retrieval", "hybrid fusion", "cross-encoder", "LLM selector"]
+    }
+  },
+  "metrics": [
+    "MRR_required_gold",
+    "required_gold_recall@10",
+    "gold_doc_recall@10",
+    "negative_gold_recall@10"
+  ],
+  "frozen_hybrid_reference": "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/summary_retrieval_metrics.csv",
+  "post_hoc_reference_penalty_sensitivity": {
+    "scope": "all 53 questions, reported separately by Dev13 and Test40",
+    "conditions": [
+      "legacy numerical penalty",
+      "0.15 citation-marker penalty disabled",
+      "all numerical reference penalties disabled"
+    ],
+    "result": "Recall metrics were unchanged; MRR changed slightly. The active application retired numerical penalties while formal result artifacts remained immutable.",
+    "output": "benchmark/ablations/dev13_dense_bm25_only_v1/results/reference_penalty_sensitivity_all53_v1/summary.json"
+  },
+  "interpretation_boundary": "This package isolates retrieval components on the development split. It is not a new held-out test and does not alter the frozen main experiments."
+}

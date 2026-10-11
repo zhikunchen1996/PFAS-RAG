@@ -1,0 +1,89 @@
+You are conducting a blinded comparison of two answers to the same PFAS
+research question.
+
+The answer order is randomized and carries no information. The payload contains
+no system name, question identifier, task label, answerability label, repeat
+number, orientation, or citation marker. Do not infer how either answer was
+generated.
+
+You receive:
+1. the visible research question;
+2. common scientific boundaries;
+3. non-exhaustive reference evidence;
+4. a common verification evidence set assembled without using either answer;
+5. anonymous Answer A;
+6. anonymous Answer B.
+
+The reference evidence contains known source-supported targets. It is useful
+for checking claims that it directly covers, but it is not exhaustive. Absence
+from the reference evidence is not evidence that a claim is false.
+
+The common verification evidence is the deduplicated union of passages selected
+by multiple frozen retrieval methods before this comparison. It may contain
+direct evidence, background, mismatched evidence, conflicting evidence, or
+irrelevant details. It does not belong to Answer A or Answer B. Use a passage
+only for what its text establishes under the applicable compound, material,
+matrix, method, condition, scale, endpoint, metric, unit, denominator,
+comparison basis, and scope.
+
+Both answers have had citation markers removed. Citation presence, absence,
+count, formatting, placement, and coverage are not evaluation criteria.
+
+Compare the answers independently under four criteria. Return A or B only when
+one answer has a material advantage; otherwise return tie.
+
+1. scientific_correctness
+
+Compare factual and scientific accuracy, including compounds, matrices,
+materials, methods, conditions, protocols, numerical claims, endpoint
+meanings, comparisons, and scope. Use the reference and verification evidence
+to check source-dependent claims. Penalize contradictions, unsupported
+extrapolation, endpoint conflation, incorrectly transferred conditions, and
+overgeneralization. Do not call a claim fabricated merely because it is absent
+from the non-exhaustive evidence. When the supplied evidence cannot verify a
+claim and the claim cannot be judged confidently from established scientific
+knowledge, treat it as uncertain rather than automatically incorrect.
+
+2. question_fulfillment
+
+Compare whether each answer directly addresses the material information needs
+expressed in the visible question. Do not use hidden task categories or
+answerability labels. Appropriate partial answers and calibrated abstention
+can be preferable when evidence is incomplete. Generic PFAS background does
+not count as fulfillment.
+
+3. uncertainty_and_limitations
+
+Compare treatment of study specificity, incomparability, matrix or condition
+dependence, uncertainty, evidence gaps, and unsupported portions of the
+request. Do not reward generic caution, excessive abstention, or verbosity.
+
+4. practical_usefulness
+
+Compare whether the scientifically defensible content helps a researcher
+interpret evidence, plan verification, or make the decision requested by the
+question. Greater length and more headings are not inherently more useful.
+
+Evaluate each criterion separately. Do not allow strength on one criterion to
+change another criterion's label. Do not return an overall winner, numerical
+score, pass/fail decision, system identity, retrieval assessment, or citation
+assessment.
+
+Return JSON only:
+{
+  "criterion_preferences": {
+    "scientific_correctness": "A | B | tie",
+    "question_fulfillment": "A | B | tie",
+    "uncertainty_and_limitations": "A | B | tie",
+    "practical_usefulness": "A | B | tie"
+  },
+  "criterion_rationales": {
+    "scientific_correctness": "brief evidence-aware comparison",
+    "question_fulfillment": "brief comparison against the visible question",
+    "uncertainty_and_limitations": "brief comparison",
+    "practical_usefulness": "brief comparison"
+  },
+  "material_errors_A": [],
+  "material_errors_B": [],
+  "confidence": "low | medium | high"
+}

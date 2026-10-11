@@ -1,0 +1,86 @@
+{
+  "protocol_id": "pfas_rag_layer1_common_tagger_v1_dev13",
+  "status": "dev13_protocol_candidate",
+  "source_freeze": "benchmark/frozen_v3/freeze_manifest.json",
+  "scope": "Dev13 development only; no Frozen V3 Test40 execution",
+  "systems": {
+    "hybrid": {
+      "retrieval": "hybrid_top10_pool60_win0",
+      "final_chunks": 10,
+      "initial_pool": 60
+    },
+    "bge": {
+      "retrieval": "bge_base_top10_pool60_nodoccap",
+      "final_chunks": 10,
+      "initial_pool": 60
+    },
+    "bge_llm": {
+      "retrieval": "bge_llm_gpt51_pool60_bge30_llm10_fullchunk",
+      "final_chunks": 10,
+      "bge_shortlist": 30,
+      "initial_pool": 60
+    }
+  },
+  "common_downstream_pipeline": {
+    "tagger_model": "gpt-5.1",
+    "tagger_temperature": 0,
+    "tagger_reasoning_effort": "provider default, not explicitly set; identical across arms",
+    "tagger_prompt": "benchmark/frozen_v3/prompts/evaluation/soft_eligibility_tagger_v3.txt",
+    "answer_model": "gpt-5.1",
+    "answer_temperature": 0,
+    "answer_reasoning_effort": "provider default, not explicitly set; identical across arms",
+    "answer_prompt": "benchmark/frozen_v3/prompts/evaluation/rag_answer_prompt_soft_tags_v3.txt",
+    "full_context_retained": true,
+    "chunk_order_retained": true,
+    "gold_visible": false,
+    "system_identity_visible": false,
+    "retrieval_scores_visible": false
+  },
+  "metric_boundary": {
+    "retrieval_metrics_computed_before_tagger": true,
+    "primary_retrieval_metric": "MRR_required_gold",
+    "secondary_retrieval_metrics": [
+      "required_gold_recall@10",
+      "gold_document_recall@10"
+    ],
+    "answer_and_citation_metrics_computed_after_common_pipeline": true,
+    "primary_answer_comparisons": [
+      "Hybrid versus BGE",
+      "Hybrid versus BGE-LLM",
+      "BGE versus BGE-LLM"
+    ],
+    "primary_answer_metric": "Davidson Bradley-Terry normalized ability from citation-blind adaptive mirrored pairwise judgments of scientific correctness and question fulfillment",
+    "pairwise_protocol": {
+      "initial_calls_per_pair_question": 2,
+      "initial_design": "mirrored A/B order",
+      "adaptive_rule": "add one second mirrored pair only when the two initial system-mapped outcomes disagree",
+      "tie_model": "Davidson Bradley-Terry",
+      "uncertainty": "question-cluster bootstrap with all three pair outcomes retained within each sampled question",
+      "bootstrap_repetitions": 2000,
+      "bootstrap_seed": 20260726
+    },
+    "primary_citation_metric": {
+      "name": "citation_supported_claim_rate",
+      "definition": "externally verifiable answer claims that are entailed by their immediately cited retrieved chunks divided by all externally verifiable answer claims",
+      "gold_recall_used": false
+    },
+    "secondary_citation_metrics": [
+      "citation_completeness",
+      "citation_entailment_accuracy",
+      "unsupported_claim_rate"
+    ],
+    "citation_gold_recall_prohibited": "Chunk gold is non-exhaustive and cannot define complete citation recall."
+  },
+  "cost_boundary": {
+    "tagger": "common downstream cost reported separately for every arm",
+    "answer_generation": "common downstream cost reported separately for every arm",
+    "bge_llm_selector": "retrieval-specific cost assigned only to BGE-LLM"
+  },
+  "latency_boundary": {
+    "per_call": "wall-clock latency measured around every current-run tagger and answer API request",
+    "per_system": "sum and mean per-call latency reported separately for each system and stage",
+    "parallel_stage": "observed wall-clock duration of the interleaved tagger and answer stages",
+    "retrieval": "matched Hybrid, BGE, and BGE-LLM stage latency inherited from Frozen V3 runtime records with provenance",
+    "aggregation_warning": "summed per-call latency and parallel wall-clock are distinct quantities and must not be interchanged"
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "call_key": "RT04:gpt51_web_search:verify:RT04-gpt51_web_search-WEB03-R01",
+  "created_at": "2026-08-05T04:10:20.509276+00:00",
+  "raw_response_text": "{\"task_id\":\"RT04\",\"record_id\":\"RT04-gpt51_web_search-WEB03-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The stable URL exactly matches the source URL provided in the evidence packet.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract only reports qualitative and very limited quantitative rejection results (>90% for common PFAS) without any operating conditions or membrane properties, which justifies classifying the study as descriptive_only for quantitative comparison purposes.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The stated reason accurately reflects that only preliminary rejection percentages are given and that details on membrane properties, operating conditions, and energy are missing, as described in the abstract and the source_limitations.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract explicitly focuses on PFAS rejection by NF membranes (a separation measure) and does not mention any PFAS transformation or destruction, so categorizing the endpoint as removal is consistent with the reported work.\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source repeatedly refers to PFAS \u2018rejection\u2019 by NF membranes, matching the reported term.\"},{\"field_path\":\"matrix.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The value restates that rejection was evaluated using a spiked AFFF formulation and AFFF-impacted groundwater from a Department of Defense site and an affected community, which is directly supported by WEB03-E03.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB03-E01 and WEB03-E02 state that nanofiltration (NF) membranes are used to remove PFAS and that the work studies NF membranes, supporting the value 'Nanofiltration (NF)' as the membrane process type.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This field is non-numeric process-type information, so leaving the unit null is appropriate.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB03-E01 states that NF has significantly lower energy cost than RO, supporting the qualitative energy comparison 'NF lower energy cost than RO'.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The energy comparison is qualitative with no numerical values, so a null unit is appropriate.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB03-E03 notes rejection was evaluated for a wide range of PFAS using spiked AFFF and AFFF-impacted groundwaters, and WEB03-E04 mentions 'common PFAS compounds' in spiked experiments; together they support the described PFAS scope.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"numeric_transcription\",\"reason\":\"WEB03-E04 reports 'greater than 90% rejection of common PFAS compounds in spiked experiments'; the extracted value '>90' with inequality form correctly captures this statement.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source reports rejection as a percentage; using '%' as the unit is consistent with the abstract.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The statement that the conference abstract provides only preliminary results with limited quantitative detail on membrane properties, operating conditions, and performance metrics follows directly from the minimal data in WEB03-E01\u2013E04 and is consistent with the source_limitations; it is appropriately classified as design_inferred.\"},{\"field_path\":\"limitations[1].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB03-E03 and the source_limitations describe that the work focuses on AFFF-related PFAS mixtures (spiked AFFF and AFFF-impacted groundwaters), supporting the inference that generalizability to other PFAS compositions or low-concentration drinking water is limited.\"},{\"field_path\":\"limitations[2].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source_limitations explicitly note that membrane type(s) and material properties are not fully specified; the limitation statement accurately reflects this and is reasonably design_inferred from the abstract format.\"},{\"field_path\":\"residuals_byproducts[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Neither the abstract (WEB03-E01\u2013E04) nor the source_limitations mention any measurement of transformation products, inorganic fluoride, or other byproducts, so inferring that NF is evaluated solely as a separation technology is reasonable as a design_inferred statement.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB03-E02 states that PFAS rejection was examined in both laboratory and pilot-scale studies, supporting the description of laboratory- and pilot-scale experiments and pilot studies for PFAS removal.\"},{\"field_path\":\"treatment.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The abstract clearly indicates the use of nanofiltration membranes for PFAS removal and discusses RO only comparatively (WEB03-E01\u2013E02), supporting that NF is the primary focus and RO is a higher-energy alternative. However, the term 'pressure-driven' is not stated explicitly in the abstract, so that qualifier is inferred from general membrane-technology knowledge rather than from the cited text.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014source identity, membrane process (NF), PFAS scope, matrices (AFFF formulation and AFFF-impacted groundwater), study scale, and the key quantitative finding (>90% rejection of common PFAS in spiked experiments)\u2014are directly supported by the cited abstract. The only partial issue is the inferred 'pressure-driven' qualifier in the treatment description, which does not affect the core quantitative or comparative interpretation. The record is therefore usable for synthesis with minor caution on that inferred qualifier.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused, comparative review of how membrane processes should be selected for a specified PFAS composition, water matrix, and treatment objective.\",\"task_id\":\"RT04\",\"title\":\"Selecting a membrane process for a defined PFAS feed water\"}\n\nTask-specific extraction objective:\nExtract membrane type and properties, PFAS identity, feed matrix and concentration, pressure, flux, recovery, rejection or adsorption endpoint, fouling, permeability, energy, scale, and comparison limitations.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envint.2021.106876\",\"10.3929/ethz-b-000506220\"],\"all_blocked_titles\":[\"membrane based technologies for per and poly fluoroalkyl substances pfass removal from water removal mechanisms applications challenges and perspectives\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envint.2021.106876\",\"https://www.research-collection.ethz.ch/items/f9152dfa-5b8e-4ce2-8153-1cbb37911e55\"],\"anchor_id\":\"AR-JIN-2021\",\"corpus_source\":\"2021 - Jin - Membrane-based technologies for per- and poly-fluoroalkyl substances (PFASs) removal from water - Removal mechanisms, applications, challenges and.pdf\",\"doi\":\"10.1016/j.envint.2021.106876\",\"title\":\"Membrane-based technologies for per- and poly-fluoroalkyl substances (PFASs) removal from water: Removal mechanisms, applications, challenges and perspectives\",\"url\":\"https://doi.org/10.1016/j.envint.2021.106876\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Appleman TD, Dickenson ERV, Bellona C, Higgins CP. Removal of Per- and Polyfluoroalkyl Substances with Nanofiltration. In: A10 Pump and Treat for PFAS Remediation, Paper 645. Battelle Chlorinated Conference Proceedings; 2018.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB03-E01\",\n      \"WEB03-E02\",\n      \"WEB03-E03\",\n      \"WEB03-E04\"\n    ],\n    \"reason\": \"The study reports qualitative and limited quantitative PFAS rejection results (>90% for common PFAS in spiked AFFF experiments) without specifying membrane properties, operating pressures, fluxes, recoveries, or influent PFAS concentrations. This allows only high-level confirmation that NF can effectively remove PFAS from AFFF-related matrices, but does not support detailed quantitative comparison of performance across membrane technologies or operating regimes.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://www.battelle.org/docs/default-source/conferences/chlorinated-conference-proceedings/2018-chlorinated-conference-proceedings/a10-pump-and-treat-for-pfas-remediation/645.pdf?sfvrsn=23188188_0\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"WEB03-E02\",\n        \"WEB03-E03\",\n        \"WEB03-E04\"\n      ],\n      \"interpretation\": \"PFAS rejection by NF membranes, quantified as percentage of PFAS retained by the membrane (i.e., removal from permeate) with no evidence of PFAS transformation or destruction; authors describe this as rejection/removal rather than degradation.\",\n      \"reported_term\": \"PFAS rejection\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB03-E02\",\n        \"WEB03-E04\"\n      ],\n      \"statement\": \"Conference abstract format provides only preliminary results with limited quantitative detail on membrane properties, operating conditions (pressure, flux, recovery), and performance metrics such as permeability, fouling, and energy consumption.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB03-E03\"\n      ],\n      \"statement\": \"Experiments focus on PFAS mixtures associated with AFFF (spiked formulation and AFFF-impacted groundwaters), which may limit generalizability to other PFAS compositions or lower-concentration drinking water matrices.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB03-E01\",\n        \"WEB03-E02\"\n      ],\n      \"statement\": \"Specific nanofiltration membrane types and material properties are not specified in the abstract, constraining mechanistic interpretation and comparison across membrane processes.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB03-E03\"\n    ],\n    \"value\": \"Spiked aqueous film-forming foam (AFFF) formulation and AFFF-impacted groundwater from a Department of Defense site and an affected community\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB03-E01\",\n        \"WEB03-E02\"\n      ],\n      \"name\": \"Membrane process type\",\n      \"qualifiers\": \"Used to remove PFAS; evaluated in both laboratory and pilot-scale studies\",\n      \"unit\": null,\n      \"value\": \"Nanofiltration (NF)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB03-E01\"\n      ],\n      \"name\": \"Energy comparison\",\n      \"qualifiers\": \"Qualitative comparison noted in abstract; no specific energy values reported\",\n      \"unit\": null,\n      \"value\": \"NF lower energy cost than RO\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB03-E02\",\n        \"WEB03-E03\",\n        \"WEB03-E04\"\n      ],\n      \"value\": \"Wide range of PFAS present in an AFFF formulation (\\\"common PFAS compounds\\\"), including mixtures in AFFF-impacted groundwaters\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB03-E04\"\n      ],\n      \"name\": \"PFAS rejection (common PFAS compounds in spiked experiments)\",\n      \"qualifiers\": \"Preliminary laboratory results for common PFAS compounds in spiked AFFF experiments; exact PFAS identities, membrane properties, pressures, fluxes, and recoveries not reported.\",\n      \"unit\": \"%\",\n      \"value\": \">90\",\n      \"value_form\": \"inequality\"\n    }\n  ],\n  \"record_id\": \"RT04-gpt51_web_search-WEB03-R01\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB03-E01\",\n        \"WEB03-E04\"\n      ],\n      \"statement\": \"The abstract does not report measurements of PFAS transformation products, inorganic fluoride, or other byproducts, implying that the NF process is evaluated solely as a separation technology without claimed PFAS degradation or destruction.\"\n    }\n  ],\n  \"source_id\": \"WEB03\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB03-E02\",\n      \"WEB03-E03\"\n    ],\n    \"value\": \"Laboratory- and pilot-scale nanofiltration experiments and pilot studies for PFAS removal\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB03-E01\",\n      \"WEB03-E02\"\n    ],\n    \"value\": \"Pressure-driven nanofiltration (NF) membrane process for PFAS removal; reverse osmosis (RO) discussed comparatively as higher-energy alternative but not the primary focus of experiments\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"full_text\",\n  \"capture_source_id\": \"WEB21\",\n  \"citation\": \"Appleman TD, Dickenson ERV, Bellona C, Higgins CP. Removal of per- and polyfluoroalkyl substances with nanofiltration. In: Battelle Chlorinated Conference Proceedings; 2018. A10 Pump and Treat for PFAS Remediation, Paper 645.\",\n  \"covered_component_ids\": [\n    \"RT04-C1\",\n    \"RT04-C2\",\n    \"RT04-C3\"\n  ],\n  \"doi\": \"\",\n  \"doi_or_stable_url\": \"https://www.battelle.org/docs/default-source/conferences/chlorinated-conference/proceedings/2018-chlorinated-conference-proceedings/a10-pump-and-treat-for-pfas-remediation/645.pdf?sfvrsn=23188188_0\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB03-E01\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"P0, lines 15\\u201319\",\n      \"text\": \"The abstract notes that reverse osmosis (RO) and nanofiltration (NF) membranes are known to remove PFAS, but NF has significantly lower energy cost than RO and produces a concentrated PFAS stream suitable for downstream destruction.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB03-E02\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"P0, lines 21\\u201328\",\n      \"text\": \"The stated goal is to better understand factors influencing PFAS rejection by NF membranes in both laboratory and pilot\\u2011scale studies, addressing discrepancies in previously reported chain\\u2011length and operating\\u2011condition effects.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB03-E03\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"P0, lines 30\\u201333\",\n      \"text\": \"Rejection was evaluated for a wide range of PFAS by using a spiked AFFF formulation, AFFF\\u2011impacted groundwater from a Department of Defense site, and AFFF\\u2011impacted groundwater from an affected community, thereby varying PFAS speciation and water matrix.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB03-E04\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"P0, lines 34\\u201338\",\n      \"text\": \"Preliminary laboratory results indicated greater than 90% rejection of common PFAS compounds in spiked experiments, with ongoing work examining the roles of PFAS chain length, size, charge, membrane affinity, and matrix composition.\"\n    }\n  ],\n  \"publication_status\": \"conference_abstract\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://www.battelle.org/docs/default-source/conferences/chlorinated-conference/proceedings/2018-chlorinated-conference-proceedings/a10-pump-and-treat-for-pfas-remediation/645.pdf?sfvrsn=23188188_0\",\n  \"source_id\": \"WEB03\",\n  \"source_limitations\": [\n    \"Conference abstract provides limited quantitative detail (e.g., specific fluxes, pressures, recoveries, and breakthrough curves) and does not report permeability or energy consumption.\",\n    \"Membrane type(s), material properties, and exact PFAS concentration ranges are not fully specified, restricting mechanistic comparison with other NF/RO studies.\",\n    \"Pilot configurations and long\\u2011term fouling behavior are only qualitatively described.\",\n    \"Work focuses on AFFF\\u2011related PFAS mixtures; results may not generalize to other PFAS compositions or lower\\u2011concentration drinking water scenarios.\"\n  ],\n  \"title\": \"Removal of Per- and Polyfluoroalkyl Substances with Nanofiltration\",\n  \"year\": \"2018\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "c46688f509bd0584ae33384ccd7f44e687b5eef4bdfcea597e246ab0343c6888",
+  "response_metadata": {
+    "cached_input_tokens": 1152,
+    "estimated_cost_usd": 0.02545525,
+    "finish_reason": "stop",
+    "input_tokens": 3457,
+    "latency_seconds": 20.735461125033908,
+    "output_tokens": 2243,
+    "reasoning_tokens": 922,
+    "response_id": "chatcmpl-E9NF2SmZHKCwrZQETwAOJhbCwUVP4",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 5700,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The stable URL exactly matches the source URL provided in the evidence packet.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The abstract only reports qualitative and very limited quantitative rejection results (>90% for common PFAS) without any operating conditions or membrane properties, which justifies classifying the study as descriptive_only for quantitative comparison purposes.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The stated reason accurately reflects that only preliminary rejection percentages are given and that details on membrane properties, operating conditions, and energy are missing, as described in the abstract and the source_limitations.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The abstract explicitly focuses on PFAS rejection by NF membranes (a separation measure) and does not mention any PFAS transformation or destruction, so categorizing the endpoint as removal is consistent with the reported work.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "The source repeatedly refers to PFAS \u2018rejection\u2019 by NF membranes, matching the reported term.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix.value",
+        "reason": "The value restates that rejection was evaluated using a spiked AFFF formulation and AFFF-impacted groundwater from a Department of Defense site and an affected community, which is directly supported by WEB03-E03.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "WEB03-E01 and WEB03-E02 state that nanofiltration (NF) membranes are used to remove PFAS and that the work studies NF membranes, supporting the value 'Nanofiltration (NF)' as the membrane process type.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "This field is non-numeric process-type information, so leaving the unit null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "WEB03-E01 states that NF has significantly lower energy cost than RO, supporting the qualitative energy comparison 'NF lower energy cost than RO'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The energy comparison is qualitative with no numerical values, so a null unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "WEB03-E03 notes rejection was evaluated for a wide range of PFAS using spiked AFFF and AFFF-impacted groundwaters, and WEB03-E04 mentions 'common PFAS compounds' in spiked experiments; together they support the described PFAS scope.",
+        "status": "supported"
+      },
+      {
+        "error_type": "numeric_transcription",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "WEB03-E04 reports 'greater than 90% rejection of common PFAS compounds in spiked experiments'; the extracted value '>90' with inequality form correctly captures this statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The source reports rejection as a percentage; using '%' as the unit is consistent with the abstract.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].statement",
+        "reason": "The statement that the conference abstract provides only preliminary results with limited quantitative detail on membrane properties, operating conditions, and performance metrics follows directly from the minimal data in WEB03-E01\u2013E04 and is consistent with the source_limitations; it is appropriately classified as design_inferred.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1].statement",
+        "reason": "WEB03-E03 and the source_limitations describe that the work focuses on AFFF-related PFAS mixtures (spiked AFFF and AFFF-impacted groundwaters), supporting the inference that generalizability to other PFAS compositions or low-concentration drinking water is limited.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[2].statement",
+        "reason": "The source_limitations explicitly note that membrane type(s) and material properties are not fully specified; the limitation statement accurately reflects this and is reasonably design_inferred from the abstract format.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0].statement",
+        "reason": "Neither the abstract (WEB03-E01\u2013E04) nor the source_limitations mention any measurement of transformation products, inorganic fluoride, or other byproducts, so inferring that NF is evaluated solely as a separation technology is reasonable as a design_inferred statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "WEB03-E02 states that PFAS rejection was examined in both laboratory and pilot-scale studies, supporting the description of laboratory- and pilot-scale experiments and pilot studies for PFAS removal.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "treatment.value",
+        "reason": "The abstract clearly indicates the use of nanofiltration membranes for PFAS removal and discusses RO only comparatively (WEB03-E01\u2013E02), supporting that NF is the primary focus and RO is a higher-energy alternative. However, the term 'pressure-driven' is not stated explicitly in the abstract, so that qualifier is inferred from general membrane-technology knowledge rather than from the cited text.",
+        "status": "partially_supported"
+      }
+    ],
+    "record_id": "RT04-gpt51_web_search-WEB03-R01",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014source identity, membrane process (NF), PFAS scope, matrices (AFFF formulation and AFFF-impacted groundwater), study scale, and the key quantitative finding (>90% rejection of common PFAS in spiked experiments)\u2014are directly supported by the cited abstract. The only partial issue is the inferred 'pressure-driven' qualifier in the treatment description, which does not affect the core quantitative or comparative interpretation. The record is therefore usable for synthesis with minor caution on that inferred qualifier.",
+    "task_id": "RT04"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

@@ -1,0 +1,39 @@
+{
+  "analysis_id": "test40_retrieval_metric_answer_correlation_v1",
+  "analysis_type": "posthoc_derived_secondary_analysis",
+  "created_date": "2026-08-12",
+  "new_model_calls": false,
+  "frozen_inputs_must_not_be_modified": true,
+  "source_case_builder": "benchmark/ablations/test40_retrieval_answer_cost_v2/scripts/run_analysis.py::build_cases",
+  "applicable_questions": "Test40 questions with at least one required-gold chunk",
+  "retrieval_metrics": [
+    "MRR_required_gold",
+    "required_gold_recall@10",
+    "gold_doc_recall@10"
+  ],
+  "answer_metric": "mean of the three frozen GPT-5.1 question-level component-balanced core reference-claim coverage scores",
+  "association": "Spearman rank correlation across the original 114 question-system observations",
+  "significance_test": {
+    "method": "OLS on average ranks with question-clustered CR1 standard errors",
+    "cluster": "question",
+    "degrees_of_freedom": 37,
+    "alternative": "two-sided",
+    "multiple_testing": "Benjamini-Hochberg FDR across the three exploratory retrieval-metric tests"
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20260812,
+    "unit": "question",
+    "rule": "retain all three retrieval-system observations for every sampled question",
+    "interval": "percentile 95% interval"
+  },
+  "coefficient_comparison": "within-replicate differences between dependent Spearman correlations",
+  "full_retrieval_diagnostic": "Spearman association between MRR and final-answer quality among observations with required_gold_recall@10 = 1",
+  "strict_matched_full_retrieval_diagnostic": "descriptive system means for the seven questions on which all three systems had required_gold_recall@10 = 1",
+  "interpretation_limits": [
+    "post hoc and descriptive, not causal",
+    "retrieval metrics are correlated and coefficient differences require paired uncertainty",
+    "human-audited gold is non-exhaustive",
+    "full required-gold retrieval does not imply identical complete contexts"
+  ]
+}

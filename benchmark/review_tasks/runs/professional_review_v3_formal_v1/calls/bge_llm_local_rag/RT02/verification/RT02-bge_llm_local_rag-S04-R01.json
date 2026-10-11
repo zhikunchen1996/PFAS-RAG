@@ -1,0 +1,374 @@
+{
+  "call_key": "RT02:bge_llm_local_rag:verify:RT02-bge_llm_local_rag-S04-R01",
+  "created_at": "2026-08-05T03:54:11.689850+00:00",
+  "raw_response_text": "{\"task_id\":\"RT02\",\"record_id\":\"RT02-bge_llm_local_rag-S04-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The DOI and URL exactly match the citation provided in the source metadata (DOI: 10.1002/aws2.1172).\"},{\"field_path\":\"study_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The article is labeled as ORIGINAL RESEARCH and describes experimental RSSCT work, consistent with a primary_experiment classification.\"},{\"field_path\":\"study_scale\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The abstract and methods describe laboratory rapid small-scale column tests (RSSCTs) using continuous-flow packed beds of GAC and IX resins with real groundwaters (six PFAS-impacted drinking water wells in Arizona), matching the summarized study_scale description.\"},{\"field_path\":\"matrix\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Methods state that water samples came from six PFAS-impacted groundwaters in Arizona used as drinking water supplies (S04-E05) and abstract mentions six groundwaters used as drinking water supplies (S04-E02), consistent with the matrix description.\"},{\"field_path\":\"treatment\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text indicates PFAS removal by granular activated carbon (GAC) and ion exchange (IX) resin in RSSCT packed columns, including coal-based and coconut-shell-based GACs and IX resins (S04-E01, S04-E02, S04-E03, S04-E08), matching the treatment summary.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The endpoint is based on adsorption capacities q\u03a3PFAS (mass PFAS adsorbed per mass sorbent) reported in S04-E02, which is correctly classified as a sorption endpoint.\"},{\"field_path\":\"endpoints[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E02 states that adsorption capacities (q\u03a3PFAS) ranged from 10.3 to 228 ng PFAS/mg sorbent after about 100,000 bed volumes treated, used to compare sorbents. This supports the interpretation and reported term of summed PFAS capacity in RSSCT columns.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The endpoint describes breakthrough behavior and removal efficiency, which are correctly classified under a removal endpoint type.\"},{\"field_path\":\"endpoints[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E02 and S04-E08 describe breakthrough and removal: IX resins performed better than GAC; PFSAs broke through later than PFCAs of the same chain length; shorter-chain PFAS broke through before longer-chain PFAS. This matches the interpretation of PFAS breakthrough curves and relative removal efficiency.\"},{\"field_path\":\"endpoints[2].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This endpoint concerns empirical model performance and regression statistics rather than sorption/removal magnitudes, so classification as 'other' is appropriate.\"},{\"field_path\":\"endpoints[2]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E03 presents an empirical model for effluent \u03a3PFAS including sorbent-type indicator variables and influent PFHxS, PFHxA, PFHpA, and DOC, and shows a regression of observed vs predicted \u03a3PFAS with slope 0.99 and R\u00b2 = 0.92 over 126 data points, supporting the interpretation.\"},{\"field_path\":\"endpoints[3].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The endpoint concerns discussion of RSSCT scaling behavior and methodological limitations rather than a direct performance metric, so 'other' is an appropriate classification.\"},{\"field_path\":\"endpoints[3]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E06 discusses benefits and limitations of RSSCT scaling models, including that CD-RSSCTs had earlier breakthrough than PD-RSSCTs and that CD-based designs are conservative, and notes challenges such as long bed volumes/run times and the grab-sample nature of RSSCTs. This aligns with the provided interpretation.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E06 states, 'A limitation of RSSCTs is that they operate for a \u201cgrab\u201d water sample, whereas full-scale systems often see...' confirming an author-reported limitation about using single grab samples versus variable full-scale influent quality.\"},{\"field_path\":\"limitations[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E06 notes that CD-RSSCTs have earlier breakthrough than PD-RSSCTs and that using CD-RSSCT results to design full-scale systems would be 'conservative,' implying higher sorbent replacement costs. This directly supports the stated author-reported limitation.\"},{\"field_path\":\"limitations[2]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S04-E06 states that PFAS may require a long number of bed volumes and associated run time (likely years) to detectable breakthrough in many full-scale systems and that such studies are ongoing. The record\u2019s added claim that this 'constrains direct validation of RSSCT-derived designs' is a reasonable inference but not explicitly stated by the authors, so the core point is supported but the specific validation-constraint language is inferred.\"},{\"field_path\":\"limitations[3]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E02 and S04-E05 show the study used RSSCTs with specific commercial GACs and IX resins and six Arizona groundwaters. Inferring that this limits generalization to other adsorbents, operating conditions, and source waters is a reasonable design-based limitation.\"},{\"field_path\":\"pfas_scope[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E02 reports 'Seven PFAS substances with chain lengths of C4\u2013C9 were detected in the groundwaters.' S04-E03 lists PFHxS, PFHxA, and PFHpA explicitly in the model, consistent with the description of detected PFAS and example analytes.\"},{\"field_path\":\"pfas_scope[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E02 defines the sum of detected PFAS concentrations as \u03a3PFAS and uses it to report q\u03a3PFAS capacities; S04-E03 models \u03a3PFAS, confirming use of \u03a3PFAS as an aggregate metric.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E05 states, 'RSSCTs use continuous-flow packed beds of adsorbent material,' which, together with the article context, supports the description of column configuration as rapid small-scale continuous-flow packed beds of adsorbent.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The field is intentionally unitless (text description of configuration), which is appropriate; no numeric unit is required or implied in the cited text.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E02 notes 'six groundwaters used as drinking water supplies' and S04-E05 mentions 'Water samples from six PFAS-impacted groundwaters,' supporting the value '6' for the water source count.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Count of water sources is dimensionless, so a null/empty unit is appropriate and consistent with the text.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E02 states that the sum of PFAS concentrations (\u03a3PFAS) ranged from 156 to 7,044 ng/L, matching the recorded value '156-7044' as a range.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text explicitly gives concentrations in ng/L, matching the recorded unit 'ng/L'.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E02 reports that q\u03a3PFAS values were calculated after 'about 100,000 bed volumes treated,' supporting the approximate value '~100000' for treated bed volumes.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text refers to 'bed volumes treated'; using 'bed volumes' as the unit is appropriate and consistent.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E02 states \u03a3PFAS ranged from 156 to 7,044 ng/L across the six groundwaters. The recorded range '156-7044' matches this statement.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"\u03a3PFAS is reported in ng/L in S04-E02, consistent with the unit 'ng/L' in the record.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E02 reports that q\u03a3PFAS values ranged from 10.3 to 228 ng PFAS/mg sorbent after about 100,000 bed volumes treated. The recorded range '10.3-228' matches this exactly.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The capacity is explicitly given as 'ng PFAS/mg sorbent' in S04-E02, matching the recorded unit.\"},{\"field_path\":\"quantitative_findings[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E03 states that the regression of observed versus predicted \u03a3PFAS yields '\u03a3PFAS Predicted = 0.99 \u00d7 \u03a3PFASObserved \u2013 5.54 (R2 = 0.92).' The slope value 0.99 matches the recorded value.\"},{\"field_path\":\"quantitative_findings[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The slope of a regression line is dimensionless; leaving the unit null is appropriate.\"},{\"field_path\":\"quantitative_findings[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E03 gives the regression equation with intercept \u20135.54, matching the recorded value '-5.54'.\"},{\"field_path\":\"quantitative_findings[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The regression intercept is dimensionless (in the same units as \u03a3PFAS but not expressed with a unit here), so a null unit is acceptable.\"},{\"field_path\":\"quantitative_findings[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E03 reports 'R2 = 0.92' for the regression of observed vs predicted \u03a3PFAS, matching the recorded value '0.92'.\"},{\"field_path\":\"quantitative_findings[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"R\u00b2 is a dimensionless statistic; a null unit is appropriate.\"},{\"field_path\":\"quantitative_findings[5].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E03 notes that Figure 6a plots 'all 126 data points as observed versus predicted' for \u03a3PFAS, matching the recorded value '126' for the number of data points.\"},{\"field_path\":\"quantitative_findings[5].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The number of data points is a pure count, so leaving the unit null is appropriate.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The study uses RSSCT packed columns with commercial GAC and IX sorbents and real PFAS-impacted groundwaters (S04-E01, S04-E02, S04-E05), reports adsorption capacities and breakthrough behavior (S04-E02, S04-E08), and explicitly discusses RSSCT scaling benefits and limitations including CD vs PD designs (S04-E06). Classifying the results as 'comparable_with_conditions' to other continuous-flow PFAS adsorption systems is a reasonable, well-supported inference.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"All elements cited in the reason\u2014RSSCT columns, commercial GAC/IX, real impacted groundwaters, adsorption capacities in ng PFAS/mg sorbent, large bed volumes (~100,000 BV), and discussion of RSSCT-to-full-scale scaling and limitations\u2014are supported by S04-E01, S04-E02, S04-E05, S04-E06, and S04-E08.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014study identity, matrix (PFAS-impacted groundwaters), treatment configuration (RSSCT continuous-flow packed beds with GAC and IX), endpoint classifications (sorption, removal, model performance, scaling limitations), and all quantitative findings with their units\u2014are directly supported by the cited text. The only minor issue is a slightly interpretive phrasing in one author-reported limitation, marked as partially supported, which does not affect quantitative or core design data. The record is therefore suitable for use in synthesis with attention to the noted limitation qualifier.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of when batch adsorption results do and do not predict column, pilot, or full-scale PFAS treatment performance.\",\"task_id\":\"RT02\",\"title\":\"Translating PFAS adsorption results from batch tests to continuous treatment\"}\n\nTask-specific extraction objective:\nExtract study scale, adsorbent, PFAS and matrix, batch or flow configuration, contact time, flow and bed properties, capacity definition, breakthrough criterion, bed volumes, media lifetime, and uncertainty or scale-up limitation.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Zeng, C.; Atkinson, A.; Sharma, N.; Ashani, H.; Hjelmstad, A.; Venkatesh, K.; Westerhoff, P. Removing per- and polyfluoroalkyl substances from groundwaters using activated carbon and ion exchange resin packed columns. AWWA Water Science. 2020;2:e1172. doi:10.1002/aws2.1172.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S04-E01\",\n      \"S04-E02\",\n      \"S04-E05\",\n      \"S04-E06\",\n      \"S04-E08\"\n    ],\n    \"reason\": \"The study uses continuous-flow packed-bed RSSCT columns with commercially relevant GAC and IX media and real PFAS-impacted groundwaters, reports adsorption capacities in ng PFAS per mg sorbent and breakthrough-based performance over up to ~100,000 bed volumes, and explicitly discusses RSSCT-to-full-scale scaling behavior and limitations, making the results suitable for conditional comparison with other column, pilot, or full-scale PFAS adsorption studies that report similar endpoints.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1002/aws2.1172\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"sorption\",\n      \"evidence_locator_ids\": [\n        \"S04-E02\"\n      ],\n      \"interpretation\": \"Mass of summed PFAS (\\u03a3PFAS) adsorbed per unit mass of sorbent in RSSCT columns after approximately 100,000 bed volumes of groundwater treatment, used to compare performance across GACs and IX resins.\",\n      \"reported_term\": \"adsorption capacity (q\\u03a3PFAS)\"\n    },\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S04-E02\",\n        \"S04-E08\"\n      ],\n      \"interpretation\": \"PFAS breakthrough curves in RSSCT columns were interpreted in terms of relative breakthrough times and removal efficiency for different PFAS classes and chain lengths, showing later breakthrough for PFSAs than PFCAs of same chain length and poorer removal of short-chain PFCAs, especially by GAC.\",\n      \"reported_term\": \"PFAS breakthrough behavior and removal efficiency\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S04-E03\"\n      ],\n      \"interpretation\": \"An empirical regression model for effluent \\u03a3PFAS was developed incorporating sorbent type and influent PFAS concentrations; predicted vs observed \\u03a3PFAS showed near 1:1 agreement with high coefficient of determination (R2 = 0.92).\",\n      \"reported_term\": \"Empirical breakthrough prediction model performance\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S04-E06\"\n      ],\n      \"interpretation\": \"Authors discuss how constant-diffusivity (CD) RSSCTs exhibited earlier PFAS breakthrough than proportional-diffusivity (PD) RSSCTs in their work, implying that CD-RSSCT-based designs are conservative for full-scale systems; they also note RSSCT limitations related to using single grab samples versus variable full-scale influent quality and practical challenges of very long full-scale run times to PFAS breakthrough.\",\n      \"reported_term\": \"Assessment of RSSCT scaling limitations for PFAS\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S04-E06\"\n      ],\n      \"statement\": \"RSSCTs are based on single grab samples of groundwater, whereas full-scale systems experience temporal variability in influent quality, which is a limitation when translating RSSCT results to full-scale performance.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S04-E06\"\n      ],\n      \"statement\": \"The authors observed that constant-diffusivity RSSCTs (CD-RSSCTs) yielded earlier PFAS breakthrough than proportional-diffusivity RSSCTs (PD-RSSCTs), so using CD-RSSCT results directly for full-scale design is conservative and may overestimate sorbent replacement frequency and costs.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S04-E06\"\n      ],\n      \"statement\": \"Very long bed volumes and associated run times (potentially years) would be required to observe PFAS breakthrough in many full-scale systems, which constrains direct validation of RSSCT-derived designs against full-scale breakthrough data.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S04-E01\",\n        \"S04-E02\",\n        \"S04-E05\",\n        \"S04-E08\"\n      ],\n      \"statement\": \"The study evaluates performance at lab RSSCT scale using specific commercial GACs and IX resins and six Arizona groundwaters, which limits generalization to other adsorbents, operating conditions, and source waters without additional validation.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S04-E02\",\n      \"S04-E05\"\n    ],\n    \"value\": \"PFAS-impacted groundwater from six drinking water supply wells in Arizona, USA.\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E01\",\n        \"S04-E05\"\n      ],\n      \"name\": \"Column configuration\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"Rapid small-scale column tests (RSSCTs) using continuous-flow packed beds of adsorbent.\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E02\",\n        \"S04-E05\"\n      ],\n      \"name\": \"Water source count\",\n      \"qualifiers\": \"Number of distinct PFAS-impacted groundwaters used in RSSCTs.\",\n      \"unit\": null,\n      \"value\": \"6\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E02\"\n      ],\n      \"name\": \"Influent \\u03a3PFAS concentration range\",\n      \"qualifiers\": \"Range of summed concentrations of seven detected PFAS across six groundwaters.\",\n      \"unit\": \"ng/L\",\n      \"value\": \"156-7044\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E02\"\n      ],\n      \"name\": \"Treated bed volumes at which capacities were compared\",\n      \"qualifiers\": \"Adsorption capacities q\\u03a3PFAS reported after about 100,000 bed volumes treated.\",\n      \"unit\": \"bed volumes\",\n      \"value\": \"~100000\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E02\",\n        \"S04-E03\"\n      ],\n      \"value\": \"Seven PFAS substances with perfluoroalkyl chain lengths C4\\u2013C9 detected in the groundwaters (PFAS mixture; specific analytes include PFHxS, PFHxA, PFHpA among others).\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E02\",\n        \"S04-E03\"\n      ],\n      \"value\": \"Sum of PFAS (\\u03a3PFAS) used as an aggregate metric for adsorption capacity and breakthrough modeling.\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E02\"\n      ],\n      \"name\": \"Influent \\u03a3PFAS concentration range across six groundwaters\",\n      \"qualifiers\": \"Sum of seven detected PFAS with chain lengths C4\\u2013C9.\",\n      \"unit\": \"ng/L\",\n      \"value\": \"156-7044\",\n      \"value_form\": \"range\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E02\"\n      ],\n      \"name\": \"Adsorption capacity q\\u03a3PFAS range across sorbents\",\n      \"qualifiers\": \"Range of calculated \\u03a3PFAS adsorption capacities for different sorbents after about 100,000 bed volumes treated.\",\n      \"unit\": \"ng PFAS/mg sorbent\",\n      \"value\": \"10.3-228\",\n      \"value_form\": \"range\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E03\"\n      ],\n      \"name\": \"Empirical model regression slope for predicted vs observed \\u03a3PFAS\",\n      \"qualifiers\": \"Linear regression: \\u03a3PFAS_predicted = 0.99 \\u00d7 \\u03a3PFAS_observed \\u2013 5.54.\",\n      \"unit\": null,\n      \"value\": \"0.99\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E03\"\n      ],\n      \"name\": \"Empirical model regression intercept for predicted vs observed \\u03a3PFAS\",\n      \"qualifiers\": \"Linear regression: \\u03a3PFAS_predicted = 0.99 \\u00d7 \\u03a3PFAS_observed \\u2013 5.54.\",\n      \"unit\": null,\n      \"value\": \"-5.54\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E03\"\n      ],\n      \"name\": \"Empirical model coefficient of determination for \\u03a3PFAS\",\n      \"qualifiers\": \"R2 for observed vs predicted \\u03a3PFAS across 126 data points.\",\n      \"unit\": null,\n      \"value\": \"0.92\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E03\"\n      ],\n      \"name\": \"Number of data points used in \\u03a3PFAS model evaluation\",\n      \"qualifiers\": \"Data points from RSSCT breakthrough for \\u03a3PFAS.\",\n      \"unit\": null,\n      \"value\": \"126\",\n      \"value_form\": \"exact_numeric\"\n    }\n  ],\n  \"record_id\": \"RT02-bge_llm_local_rag-S04-R01\",\n  \"residuals_byproducts\": [],\n  \"source_id\": \"S04\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S04-E01\",\n      \"S04-E02\",\n      \"S04-E05\"\n    ],\n    \"value\": \"Laboratory rapid small-scale column tests (RSSCTs) with continuous-flow packed beds of GAC and ion exchange resins treating real PFAS-impacted groundwaters.\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S04-E01\",\n      \"S04-E02\",\n      \"S04-E08\"\n    ],\n    \"value\": \"Packed-bed adsorption using multiple commercially available sorbents: coal-based granular activated carbons (GACs), coconut-shell-based GACs, and ion exchange (IX) resins operated in RSSCT columns.\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 4,\n  \"bge_score\": 0.4770759642124176,\n  \"citation\": \"Zeng, C.; Atkinson, A.; Sharma, N.; Ashani, H.; Hjelmstad, A.; Venkatesh, K.; Westerhoff, P. Removing per- and polyfluoroalkyl substances from groundwaters using activated carbon and ion exchange resin packed columns. AWWA Water Science 2020 2. DOI: 10.1002/aws2.1172.\",\n  \"doi\": \"10.1002/aws2.1172\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1002/aws2.1172\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 0,\n      \"locator_id\": \"S04-E01\",\n      \"query_scores\": {\n        \"RT02-C1\": 5.954634980298579e-05,\n        \"RT02-C2\": 0.05030902102589607,\n        \"RT02-C3\": 3.729239324457012e-05,\n        \"umbrella\": 0.6694615483283997\n      },\n      \"section\": \"unknown\",\n      \"text\": \"ORIGINAL RESEARCH Removing per- and polyfluoroalkyl substances from groundwaters using activated carbon and ion exchange resin packed columns Chao Zeng1 | Ariel Atkinson 1 | Naushita Sharma 1 | Harsh Ashani 2 | Annika Hjelmstad1 | Krishishvar Venkatesh 1 | Paul Westerhoff 1 1Nanosystems Engineering Research Center for Nanotechnology-Enabled Water Treatment, School of Sustainable Engineering and the Built Environment, Arizona State University, Tempe, Arizona 2Corona Environmental Consulting, Fremont, California Correspondence Paul Westerhoff, Nanosystems Engineering Research Center for Nanotechnology-Enabled Water Treatment, School of Sustainable Engineering and the Built Environment, Arizona State University, Tempe, AZ 85287-3005. Email: p.westerhoff@asu.edu Funding information Carollo Engineering and Confidential Drinking Water Utilities; National Science Foundation, Grant/Award Number: EEC- 1449500 Abstract Human exposure to per- and polyfluoroalkyl substances (PFAS) in drinking water is of growing concern as a result of increasing reports of occurrence and potential regulation. Adsorption of PFAS by granular activated carbon (GAC) or ion exchange (IX) resin is a suitable treatment technique. However, few studies compare PFAS removal in continuous flow GAC or IX adsorption sys- tems using real drinking water sources. In this study, rapid small-scale column tests (RSSCTs) were used to investigate the effects of PFAS type and chain\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S04-E02\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.017845068126916885,\n        \"RT02-C2\": 0.02532954514026642,\n        \"RT02-C3\": 3.729993477463722e-05,\n        \"umbrella\": 0.17664259672164917\n      },\n      \"section\": \"unknown\",\n      \"text\": \"In this study, rapid small-scale column tests (RSSCTs) were used to investigate the effects of PFAS type and chain length on adsorption by GAC and IX resin for six groundwaters used as drink- ing water supplies. Seven PFAS substances with chain lengths of C4 \\u2013C9 were detected in the groundwaters with the sum of their concentrations ( \\u03a3PFAS) ranging from 156 to 7,044 ng/L. Adsorption capacities ( q \\u03a3PFAS) were calculated to compare the removal capacity among different sorbents and q\\u03a3PFAS values ranged from 10.3 to 228 ng PFAS/mg sorbent after about 100,000 bed volumes treated. Coal-based GACs had higher adsorption capacity compared with coconutshell-based GAC, which was likely due to higher mesopore and macropore volumes. IX resins performed better than GAC in removing PFAS, but they were not effective in treating short-chain perfluorocarboxylic acids (PFCAs). Perfluorosulfonic acids (PFSAs) broke through later than PFCAs with the same chain length. Within PFSA or PFCA classes, shorter-chain PFAS species always broke through before longer-chain PFAS. Statistical analysis demonstrated that PFAS with higher hydrophobicity and molecular weight are more amenable to GAC adsorption. Empirical models were developed and predicted PFAS breakthrough. By quantifying PFAS selectivity and removal efficiency, this work provides benchmark data for commercially available\"\n    },\n    {\n      \"corpus_chunk\": 30,\n      \"locator_id\": \"S04-E03\",\n      \"query_scores\": {\n        \"RT02-C1\": 5.9809728554682806e-05,\n        \"RT02-C2\": 0.012381568551063538,\n        \"RT02-C3\": 3.7383866583695635e-05,\n        \"umbrella\": 0.07731109112501144\n      },\n      \"section\": \"discussion\",\n      \"text\": \"function model: \\u03a3PFAS\\u00bd/C138 = e\\u221218:00x1 \\u221218:61x2 \\u221218:58x3 \\u221218:57x4 \\u221215:71x5 \\u221216:97x6 \\u221219:56x7 \\u221220:38x8 /C1 BV 1:2284 /C1 PFHxS\\u00bd/C138 1:069 /C1 PFHxA\\u00bd/C138 \\u22120:492 /C1 PFHpA\\u00bd/C138 0:999 DOC\\u00bd/C138 \\u22122:01 \\u00f01\\u00de where \\u03a3PFAS is concentration of all the PFAS detected in the effluent; x1, x2, x3, x4, x5, x6, x7, and x8 represent sorbents Coal1, Coal2, Coal3, Coal4, Coco1, Coco2, IX1, and IX2, respectively ( x = 1, if use the sorbent; x =0 ,i f not); and [PFHxS], [PFHxA], and [PFHpA] are the con- centrations of those PFAS species in the groundwaters. The regression coefficients in the two models indicate the affinity of different sorbents on PFAS adsorption: IX resins > coal-based GACs > coconut-shell-based GACs. Figure 6a plots all 126 data points as observed versus predicted (Equation 1) for \\u03a3PFAS, which yields a near 1:1 regression through the data of \\u03a3PFAS Predicted = 0.99 \\u00d7 \\u03a3PFASObserved \\u2013 5.54 ( R2 = 0.92).\"\n    },\n    {\n      \"corpus_chunk\": 33,\n      \"locator_id\": \"S04-E04\",\n      \"query_scores\": {\n        \"RT02-C1\": 8.55885591590777e-05,\n        \"RT02-C2\": 0.0024135594721883535,\n        \"RT02-C3\": 3.728624142240733e-05,\n        \"umbrella\": 0.20181436836719513\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"evant as independent parameters to predict PFAS break- through. We believe this type of model is helpful for the case study and could be mimicked in other regions where groundwater quality may be different. 5 | CONCLUSIONS Our results provide benchmark performance assessments of commercially available adsorption technologies for PFAS removal. As numerous funding agencies, compa- nies, and research groups are seeking innovative PFAS treatment technologies (including but not limited to sor- bents), this work provides adsorption capacity metrics and expected operational run time that can be used in future techno-economic analyses. Specifically, this work highlights the less efficient sorption of shorter-chain spe- cies by commercial sorbents, which should encourage research on technologies targeting their removal. ACKNOWLEDGMENT This work was partially funded by the National Science Foundation (EEC-1449500) Nanosystems Engineering Research Center on Nanotechnology-Enabled Water Treatment. Support from Carollo Engineering and Confi- dential Drinking Water Utilities is appreciated for collect- ing water samples and funding PFAS analysis. Onur G. Apul from University of Massachusetts Lowell kindly helped by measuring the point of zero charge for the GACs used in this study. Laurel Passantino provided technical editing of the manuscript. REFERENCES Ahrens, L., & Bundschuh, M. (2014). Fate and effects of poly- and perfluoroalkly substances in the aquatic environment: A review.\"\n    },\n    {\n      \"corpus_chunk\": 6,\n      \"locator_id\": \"S04-E05\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0005057488451711833,\n        \"RT02-C2\": 0.0035491532180458307,\n        \"RT02-C3\": 3.732943150680512e-05,\n        \"umbrella\": 0.17597752809524536\n      },\n      \"section\": \"methods\",\n      \"text\": \"PFAS concentration/speciation were statistically corre- lated with adsorption capacity and PFAS breakthrough. By quantifying PFAS selectivity and removal efficiency, this work provides benchmark data for commercially available treatment technologies and guidance toward specific classes of PFAS for which new treatment technol- ogies may be most beneficial. 2 | MATERIALS AND METHODS 2.1 | Groundwater sources Water samples from six PFAS-impacted groundwaters (Arizona, USA) were collected in 2018\\u20132019. The wells var- ied in capacity from 45 to >225 m 3/hr (198\\u2013991 gpm) and were previously used as drinking water supplies, until PFAS was detected, at which time they were taken off-line until treatment was installed. Wells were purged and samples were collected in 55-gal high-density polyethylene (HDPE) drums, transported to the labo ratory, and used in experi- ments within 2 weeks. Water quality was monitored throughout the experiments and is summarized in Table S1. 2.2 | Rapid small-scale column test RSSCTs use continuous-flow packed beds of adsorbent material that, through dimensionless analysis that 2o f1 1 ZENG ET AL .\"\n    },\n    {\n      \"corpus_chunk\": 27,\n      \"locator_id\": \"S04-E06\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.0005465381545946002,\n        \"RT02-C2\": 0.005389316938817501,\n        \"RT02-C3\": 3.729210948222317e-05,\n        \"umbrella\": 0.17540238797664642\n      },\n      \"section\": \"discussion\",\n      \"text\": \"can lead to the formation of molecular aggregates or micelles on adsorption sites, although this is less likely to happen for comparatively hydrophilic PFBA and PFBS (Zaggia et al., 2016). 4.4 | Benefits and limitations of RSSCT scaling models RSSCTs are valuable tools to examine relative pollutant removals for different adsorbents and water qualities. Limited research is available comparing adsorption capacity or breakthrough curves for CD- or PD-RSSCTs against pilot- or full-scale data (Schaefer et al., 2019). One challenge for PFAS is the long number of BV and associated run time (likely years) to detectable break- t h r o u g hi nm a n yf u l l - s c a l es y s t e m s .S u c hs t u d i e sa r e ongoing in our laboratory. We have seen that CD- RSSCTs have earlier breakthrough than PD-RSSCTs, and thus considering results from CD-RSSCTs to design full-scale systems would be \\u201cconservative. \\u201d That is to say, the sorbent replacement costs would be higher for CD- compared with PD-RSSCTs, and thus potentially represent an upper bound in potential sorbent costs. A limitation of RSSCTs is that they operate for a \\u201cgrab\\u201d water sample, whereas full-scale systems often see\"\n    },\n    {\n      \"corpus_chunk\": 4,\n      \"locator_id\": \"S04-E07\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.00032561086118221283,\n        \"RT02-C2\": 0.012872304767370224,\n        \"RT02-C3\": 3.730092794285156e-05,\n        \"umbrella\": 0.08888468146324158\n      },\n      \"section\": \"introduction\",\n      \"text\": \"Martincigh, 2018). Appleman and coworkers (Appleman et al., 2014) investigated the occurrence of 23 PFAS in raw and treated waters from 20 utilities in the USA and found PFOS, PFHxA, and PFHxS were the three most commonly occurring PFAS. Many other drinking waters related to PFAS occurrence studies are underway. Adsorption using granular activated carbon (GAC) or ion exchange (IX) resin is emerging through research (Meng et al., 2014; Yang et al., 2018; Yu, Zhang, Deng, Huang, & Yu, 2009; Zhi & Liu, 2015, 2016) and as commercially available best available treatments for PFAS that many groundwater utilities are considering or have recently installed. Carbon chain length and func- tional groups are important factors controlling PFAS adsorption; longer-chain PFAS are generally more amenable to GAC and IX resin adsorption than the shorter-chain PFAS, and perfluorosulfonic acids (PFSAs) normally have higher adsorption capacity and selectivity than perfluorinated carboxylic acids (PFCAs) (McCleaf et al., 2017; Rostvall et al., 2018; Xiao, Ulrich, Chen, & Higgins, 2017; Zaggia, Conte, Falletti, Fant, & Chiorboli, 2016). Existing research focuses on treating PFOA and\"\n    },\n    {\n      \"corpus_chunk\": 22,\n      \"locator_id\": \"S04-E08\",\n      \"query_scores\": {\n        \"RT02-C1\": 0.00017955261864699423,\n        \"RT02-C2\": 0.015978258103132248,\n        \"RT02-C3\": 3.733772609848529e-05,\n        \"umbrella\": 0.07621891796588898\n      },\n      \"section\": \"discussion\",\n      \"text\": \"4.1 | Influence of sorbent materials Coal-based GAC had higher PFAS removal efficiency than coconutshell-based GAC in real groundwaters at ambient PFAS concentrations. However, coal-based GAC did have low affinity for the adsorption of short-chain PFCAs, and IX resin removed PFAS more efficiently than GAC in all the groundwaters. GAC and IX resin per- formed very differently in the column tests, which can be explained by their different mechanisms for PFAS removal. Hydrophobic interaction is the main mecha- nism for PFAS adsorption onto GAC, while molecular size (versus pore size) and charge distribution on IX resins lead to electrostatic mechanisms, which dominate for PFAS removal by IX resin. (Du et al., 2015). The observation that coal-based GAC removes PFAS more efficiently than coconut-shell-based GAC in real FIGURE 5 Representative RSSCT breakthrough curves in the lead columns for three groundwaters and two carbon types (Coal1 and Coal2) as a function of BV treated and PFAS effluent concentrations (C) normalized to PFAS influent concentration (C 0). PFAS: per- and polyfluoroalkyl substances; RSSCT: rapid small-scale column test ZENG ET AL . 7o f1 1\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2020 - Zeng - Removing per- and polyfluoroalkyl substances from groundwaters using activated carbon.pdf\",\n  \"source_id\": \"S04\",\n  \"title\": \"Removing per- and polyfluoroalkyl substances from groundwaters using activated carbon and ion exchange resin packed columns\",\n  \"year\": \"2020\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "bab078cab047ce44ed6aee4415923e9aee98fe3cee87a3062605179dadb73186",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.04830425,
+    "finish_reason": "stop",
+    "input_tokens": 7317,
+    "latency_seconds": 27.21869762497954,
+    "output_tokens": 4031,
+    "reasoning_tokens": 1146,
+    "response_id": "chatcmpl-E9MzJucUgK4zaH1w3YIzhAS3l9iqu",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 11348,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The DOI and URL exactly match the citation provided in the source metadata (DOI: 10.1002/aws2.1172).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_type",
+        "reason": "The article is labeled as ORIGINAL RESEARCH and describes experimental RSSCT work, consistent with a primary_experiment classification.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale",
+        "reason": "The abstract and methods describe laboratory rapid small-scale column tests (RSSCTs) using continuous-flow packed beds of GAC and IX resins with real groundwaters (six PFAS-impacted drinking water wells in Arizona), matching the summarized study_scale description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix",
+        "reason": "Methods state that water samples came from six PFAS-impacted groundwaters in Arizona used as drinking water supplies (S04-E05) and abstract mentions six groundwaters used as drinking water supplies (S04-E02), consistent with the matrix description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment",
+        "reason": "The text indicates PFAS removal by granular activated carbon (GAC) and ion exchange (IX) resin in RSSCT packed columns, including coal-based and coconut-shell-based GACs and IX resins (S04-E01, S04-E02, S04-E03, S04-E08), matching the treatment summary.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The endpoint is based on adsorption capacities q\u03a3PFAS (mass PFAS adsorbed per mass sorbent) reported in S04-E02, which is correctly classified as a sorption endpoint.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0]",
+        "reason": "S04-E02 states that adsorption capacities (q\u03a3PFAS) ranged from 10.3 to 228 ng PFAS/mg sorbent after about 100,000 bed volumes treated, used to compare sorbents. This supports the interpretation and reported term of summed PFAS capacity in RSSCT columns.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "The endpoint describes breakthrough behavior and removal efficiency, which are correctly classified under a removal endpoint type.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1]",
+        "reason": "S04-E02 and S04-E08 describe breakthrough and removal: IX resins performed better than GAC; PFSAs broke through later than PFCAs of the same chain length; shorter-chain PFAS broke through before longer-chain PFAS. This matches the interpretation of PFAS breakthrough curves and relative removal efficiency.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].endpoint_type",
+        "reason": "This endpoint concerns empirical model performance and regression statistics rather than sorption/removal magnitudes, so classification as 'other' is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2]",
+        "reason": "S04-E03 presents an empirical model for effluent \u03a3PFAS including sorbent-type indicator variables and influent PFHxS, PFHxA, PFHpA, and DOC, and shows a regression of observed vs predicted \u03a3PFAS with slope 0.99 and R\u00b2 = 0.92 over 126 data points, supporting the interpretation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[3].endpoint_type",
+        "reason": "The endpoint concerns discussion of RSSCT scaling behavior and methodological limitations rather than a direct performance metric, so 'other' is an appropriate classification.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[3]",
+        "reason": "S04-E06 discusses benefits and limitations of RSSCT scaling models, including that CD-RSSCTs had earlier breakthrough than PD-RSSCTs and that CD-based designs are conservative, and notes challenges such as long bed volumes/run times and the grab-sample nature of RSSCTs. This aligns with the provided interpretation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "S04-E06 states, 'A limitation of RSSCTs is that they operate for a \u201cgrab\u201d water sample, whereas full-scale systems often see...' confirming an author-reported limitation about using single grab samples versus variable full-scale influent quality.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1]",
+        "reason": "S04-E06 notes that CD-RSSCTs have earlier breakthrough than PD-RSSCTs and that using CD-RSSCT results to design full-scale systems would be 'conservative,' implying higher sorbent replacement costs. This directly supports the stated author-reported limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "limitations[2]",
+        "reason": "S04-E06 states that PFAS may require a long number of bed volumes and associated run time (likely years) to detectable breakthrough in many full-scale systems and that such studies are ongoing. The record\u2019s added claim that this 'constrains direct validation of RSSCT-derived designs' is a reasonable inference but not explicitly stated by the authors, so the core point is supported but the specific validation-constraint language is inferred.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[3]",
+        "reason": "S04-E02 and S04-E05 show the study used RSSCTs with specific commercial GACs and IX resins and six Arizona groundwaters. Inferring that this limits generalization to other adsorbents, operating conditions, and source waters is a reasonable design-based limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0]",
+        "reason": "S04-E02 reports 'Seven PFAS substances with chain lengths of C4\u2013C9 were detected in the groundwaters.' S04-E03 lists PFHxS, PFHxA, and PFHpA explicitly in the model, consistent with the description of detected PFAS and example analytes.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1]",
+        "reason": "S04-E02 defines the sum of detected PFAS concentrations as \u03a3PFAS and uses it to report q\u03a3PFAS capacities; S04-E03 models \u03a3PFAS, confirming use of \u03a3PFAS as an aggregate metric.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "S04-E05 states, 'RSSCTs use continuous-flow packed beds of adsorbent material,' which, together with the article context, supports the description of column configuration as rapid small-scale continuous-flow packed beds of adsorbent.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The field is intentionally unitless (text description of configuration), which is appropriate; no numeric unit is required or implied in the cited text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "S04-E02 notes 'six groundwaters used as drinking water supplies' and S04-E05 mentions 'Water samples from six PFAS-impacted groundwaters,' supporting the value '6' for the water source count.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "Count of water sources is dimensionless, so a null/empty unit is appropriate and consistent with the text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "S04-E02 states that the sum of PFAS concentrations (\u03a3PFAS) ranged from 156 to 7,044 ng/L, matching the recorded value '156-7044' as a range.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "The text explicitly gives concentrations in ng/L, matching the recorded unit 'ng/L'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "S04-E02 reports that q\u03a3PFAS values were calculated after 'about 100,000 bed volumes treated,' supporting the approximate value '~100000' for treated bed volumes.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "The text refers to 'bed volumes treated'; using 'bed volumes' as the unit is appropriate and consistent.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "S04-E02 states \u03a3PFAS ranged from 156 to 7,044 ng/L across the six groundwaters. The recorded range '156-7044' matches this statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "\u03a3PFAS is reported in ng/L in S04-E02, consistent with the unit 'ng/L' in the record.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "S04-E02 reports that q\u03a3PFAS values ranged from 10.3 to 228 ng PFAS/mg sorbent after about 100,000 bed volumes treated. The recorded range '10.3-228' matches this exactly.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "The capacity is explicitly given as 'ng PFAS/mg sorbent' in S04-E02, matching the recorded unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].value",
+        "reason": "S04-E03 states that the regression of observed versus predicted \u03a3PFAS yields '\u03a3PFAS Predicted = 0.99 \u00d7 \u03a3PFASObserved \u2013 5.54 (R2 = 0.92).' The slope value 0.99 matches the recorded value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].unit",
+        "reason": "The slope of a regression line is dimensionless; leaving the unit null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].value",
+        "reason": "S04-E03 gives the regression equation with intercept \u20135.54, matching the recorded value '-5.54'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].unit",
+        "reason": "The regression intercept is dimensionless (in the same units as \u03a3PFAS but not expressed with a unit here), so a null unit is acceptable.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].value",
+        "reason": "S04-E03 reports 'R2 = 0.92' for the regression of observed vs predicted \u03a3PFAS, matching the recorded value '0.92'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].unit",
+        "reason": "R\u00b2 is a dimensionless statistic; a null unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[5].value",
+        "reason": "S04-E03 notes that Figure 6a plots 'all 126 data points as observed versus predicted' for \u03a3PFAS, matching the recorded value '126' for the number of data points.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[5].unit",
+        "reason": "The number of data points is a pure count, so leaving the unit null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The study uses RSSCT packed columns with commercial GAC and IX sorbents and real PFAS-impacted groundwaters (S04-E01, S04-E02, S04-E05), reports adsorption capacities and breakthrough behavior (S04-E02, S04-E08), and explicitly discusses RSSCT scaling benefits and limitations including CD vs PD designs (S04-E06). Classifying the results as 'comparable_with_conditions' to other continuous-flow PFAS adsorption systems is a reasonable, well-supported inference.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "All elements cited in the reason\u2014RSSCT columns, commercial GAC/IX, real impacted groundwaters, adsorption capacities in ng PFAS/mg sorbent, large bed volumes (~100,000 BV), and discussion of RSSCT-to-full-scale scaling and limitations\u2014are supported by S04-E01, S04-E02, S04-E05, S04-E06, and S04-E08.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT02-bge_llm_local_rag-S04-R01",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014study identity, matrix (PFAS-impacted groundwaters), treatment configuration (RSSCT continuous-flow packed beds with GAC and IX), endpoint classifications (sorption, removal, model performance, scaling limitations), and all quantitative findings with their units\u2014are directly supported by the cited text. The only minor issue is a slightly interpretive phrasing in one author-reported limitation, marked as partially supported, which does not affect quantitative or core design data. The record is therefore suitable for use in synthesis with attention to the noted limitation qualifier.",
+    "task_id": "RT02"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

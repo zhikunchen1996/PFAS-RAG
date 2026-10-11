@@ -1,0 +1,393 @@
+{
+  "question_id": "WF10_032",
+  "reference_packet_sha256": "15b9148899bcf01691645b7a69168d1f732e92ecd24b5ef1f95184a01ed03270",
+  "prompt_sha256": "008063f21e0cb5cd76c21b98aa9dbeec16fa63bd7461cb3a179e5107e8c8c30d",
+  "raw_result": {
+    "question_id": "WF10_032",
+    "answerability": "supported",
+    "answerability_rationale": "The provided evidence directly describes adsorption and desorption behavior of short-chain PFCAs (PFPrA, PFBA, PFPeA) and related PFASs over repeated regeneration cycles, including the regenerant composition (for one study), changes between first, second, and third cycles, and general multi-cycle desorption patterns for short-chain PFASs. However, some aspects requested in the question (detailed protocol steps, full operating conditions, and matrix description) are not present in the supplied text and must be listed as unresolved.",
+    "task_components": [
+      {
+        "task_component_id": "WF10_032-T01",
+        "component_text": "Describe the experimental setup used to evaluate short-chain PFCA adsorption and desorption over repeated adsorbent regeneration cycles, including the protocol steps for adsorption and regeneration, the regenerant composition, the adsorbent and other key materials, the operating conditions, the matrix in which adsorption/desorption were tested, and the specific short-chain PFCA target compounds."
+      },
+      {
+        "task_component_id": "WF10_032-T02",
+        "component_text": "Extract what is reported about changes in short-chain PFCA adsorption and desorption behavior after the second, third, and any additional regeneration cycles, including observed performance patterns (e.g., maintained, improved, or decreased adsorption/desorption), and any explicitly stated limitations or constraints of the regeneration approach or adsorbent performance across cycles."
+      }
+    ],
+    "claim_groups": [
+      {
+        "claim_group_id": "WF10_032-G01",
+        "task_component_id": "WF10_032-T01",
+        "canonical_proposition": "In Shaikh et al., a combination of ammonium solution with methanol (50% methanol with 1% NH4OH) was selected as the optimized regenerant and used for subsequent adsorption–desorption cycles to regenerate a synthesized PFCA adsorbent.",
+        "central_proposition": "Optimized regenerant composition and its use across cycles",
+        "material_qualifiers": [
+          "regenerant: combination of ammonium solution with methanol",
+          "regenerant composition: 50% methanol with 1% NH4OH",
+          "application: employed for subsequent cycles of adsorption–desorption",
+          "adsorbent: synthesized adsorbent (mesoporous with some micropores)"
+        ],
+        "importance": "core",
+        "function": "affirmative",
+        "scoring_role": "required_content",
+        "evidence_ids": [
+          "WF10_032_MMG001"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Count as fully supported if the answer notes that Shaikh et al. used a regenerant composed of ammonium solution with methanol, specifically 50% methanol with 1% NH4OH, and that this optimized regenerant was then applied in subsequent adsorption–desorption cycles to regenerate their synthesized adsorbent.",
+        "partial_rule": "Count as partially supported if the answer mentions either that an alcohol–ammonium regenerant (methanol with ammonium solution) was optimized and used in multiple adsorption–desorption cycles, or if it specifies the 50% methanol with 1% NH4OH composition but does not clearly state that this was used for successive cycles.",
+        "contradiction_rule": "Mark as contradicted if the answer claims a different regenerant composition (e.g., different solvent or different ammonium concentration) for Shaikh et al.'s multi-cycle tests, or states that regeneration was done without using the 50% methanol with 1% NH4OH combination.",
+        "source_atomic_claim_ids": [
+          "WF10_032-A04"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "WF10_032_MMG001",
+            "exact_evidence_span": "A combination of ammonium solution with methanol, i.e., 50% methanol with 1% NH 4OH, exhibited a higher value for PFCA desorption among all the tested specs of regenerants because of its effectiveness in weakening both the hydrophobic and the electrostatic interactions. The optimized spec of the regenerant was employed for subsequent cycles of adsorption –desorption.",
+            "supports": "Identifies the regenerant as a combination of ammonium solution with methanol, specifies the composition as 50% methanol with 1% NH4OH, and states that this optimized regenerant was used in subsequent adsorption–desorption cycles."
+          },
+          {
+            "evidence_id": "WF10_032_MMG001",
+            "exact_evidence_span": "Our synthesized adsorbent exhibited a type H-IV hysteresis loop in the nitrogen adsorption–desorption isotherm, indicating the presence of a mesoporous structure having an average pore size of 6.37 nm. However, the pore size distribution plot revealed a fraction of pores smaller than 1 nm.",
+            "supports": "Indicates that the adsorbent used in these adsorption–desorption cycles was a synthesized material with mesoporous structure and some micropores."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "WF10_032-G02",
+        "task_component_id": "WF10_032-T02",
+        "canonical_proposition": "In Shaikh et al., the adsorption efficiency of the short-chain PFCAs PFPrA and PFBA decreased in the second cycle relative to the first but then remained almost consistent in the third cycle when using the regenerated adsorbent.",
+        "central_proposition": "Second-cycle decrease and third-cycle stability in PFPrA and PFBA adsorption",
+        "material_qualifiers": [
+          "compounds: PFPrA, PFBA (short-chain PFCAs)",
+          "metric: adsorption efficiency",
+          "cycles: first vs second vs third",
+          "trend: decreased in second cycle; almost consistent in third"
+        ],
+        "importance": "core",
+        "function": "affirmative",
+        "scoring_role": "required_content",
+        "evidence_ids": [
+          "WF10_032_MMG001"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Count as fully supported if the answer states that PFPrA and PFBA adsorption efficiencies dropped between the first and second cycles but then were approximately stable or consistent in the third cycle.",
+        "partial_rule": "Count as partially supported if the answer only notes a reduction in PFPrA and PFBA adsorption in the second cycle, or only notes that adsorption for these short-chain PFCAs was similar between the second and third cycles, without describing both aspects.",
+        "contradiction_rule": "Mark as contradicted if the answer claims that PFPrA and PFBA adsorption efficiencies did not decrease in the second cycle, or that they continued to decline in the third cycle rather than remaining almost consistent.",
+        "source_atomic_claim_ids": [
+          "WF10_032-A01"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "WF10_032_MMG001",
+            "exact_evidence_span": "In the second cycle, the adsorption efficiency of PFPrA and PFBA decreased from 74 ± 7.8% to 65 ± 10.2% and 79 ± 11.7% to 70 ± 7.6%, respectively, but remained almost consistent for the third cycle.",
+            "supports": "Directly reports that PFPrA and PFBA adsorption efficiencies decreased in the second cycle relative to the first and that adsorption remained almost consistent in the third cycle."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "WF10_032-G03",
+        "task_component_id": "WF10_032-T02",
+        "canonical_proposition": "In Shaikh et al., desorption efficiencies for PFPrA and PFBA increased in the second regeneration cycle relative to the first when using the optimized regenerant.",
+        "central_proposition": "Improved desorption of PFPrA and PFBA in the second cycle",
+        "material_qualifiers": [
+          "compounds: PFPrA, PFBA (short-chain PFCAs)",
+          "metric: desorption",
+          "cycles: first vs second",
+          "trend: desorption increased in second cycle"
+        ],
+        "importance": "core",
+        "function": "affirmative",
+        "scoring_role": "required_content",
+        "evidence_ids": [
+          "WF10_032_MMG002"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Count as fully supported if the answer explains that desorption of PFPrA and PFBA increased in the second cycle compared to the first when the optimized regenerant was used.",
+        "partial_rule": "Count as partially supported if the answer notes that desorption improved in later cycles without specifying that the reported increase occurred specifically in the second cycle for PFPrA and PFBA.",
+        "contradiction_rule": "Mark as contradicted if the answer states that PFPrA and PFBA desorption decreased or stayed the same in the second cycle relative to the first, or suggests that regeneration efficiency did not improve in that cycle.",
+        "source_atomic_claim_ids": [
+          "WF10_032-A02"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "WF10_032_MMG002",
+            "exact_evidence_span": "However, desorption increased in the second cycle from 81 ± 11.2% to 90 ± 6.4% for PFPrA and 85 ± 6.7% to 93 ± 3.9% for PFBA.",
+            "supports": "Shows that desorption efficiencies for PFPrA and PFBA were higher in the second cycle than in the first."
+          },
+          {
+            "evidence_id": "WF10_032_MMG002",
+            "exact_evidence_span": "and an increase in regeneration efficiency as compared to the first cycle was observed.",
+            "supports": "States that overall regeneration efficiency improved in the second cycle relative to the first, consistent with increased desorption."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "WF10_032-G04",
+        "task_component_id": "WF10_032-T02",
+        "canonical_proposition": "In Shaikh et al., adsorption and desorption efficiencies for PFOA and PFPeA remained consistent over three adsorption–desorption cycles, indicating stable performance across regenerations for these PFCAs under the reported conditions.",
+        "central_proposition": "Stable multi-cycle adsorption and desorption for PFOA and PFPeA",
+        "material_qualifiers": [
+          "compounds: PFOA, PFPeA",
+          "metric: adsorption and desorption efficiencies",
+          "cycles: up to three successive cycles",
+          "trend: efficiencies remained consistent across cycles"
+        ],
+        "importance": "core",
+        "function": "affirmative",
+        "scoring_role": "required_content",
+        "evidence_ids": [
+          "WF10_032_MMG003",
+          "WF10_032_MMG002"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Count as fully supported if the answer notes that PFOA and PFPeA adsorption remained consistent over three cycles and that desorption for these compounds was also consistent up to three successive cycles.",
+        "partial_rule": "Count as partially supported if the answer mentions only adsorption or only desorption consistency for PFOA and PFPeA over three cycles, or if it states multi-cycle stability for these compounds without specifying three cycles.",
+        "contradiction_rule": "Mark as contradicted if the answer claims that PFOA or PFPeA adsorption or desorption significantly declined or increased across the three cycles in Shaikh et al.'s study.",
+        "source_atomic_claim_ids": [
+          "WF10_032-A03"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "WF10_032_MMG003",
+            "exact_evidence_span": "Meanwhile, PFOA and PFPeA adsorption remained consistent over the three cycles, maintaining around 80% and 90% efficiency, respectively.",
+            "supports": "States that PFOA and PFPeA adsorption remained consistent across three cycles and gives approximate efficiencies."
+          },
+          {
+            "evidence_id": "WF10_032_MMG002",
+            "exact_evidence_span": "Similarly, the desorption was also consistent up to three successive cycles.",
+            "supports": "Indicates that desorption behavior was consistent for the PFCA system up to three successive cycles, which in context includes PFOA and PFPeA."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "WF10_032-G05",
+        "task_component_id": "WF10_032-T02",
+        "canonical_proposition": "Across multiple studies summarized by Andrunik and Smol, solvent-based and alkaline regenerants such as methanol, ethanol, methanol–NaCl, methanol–NaOH, NaOH, and ammonia typically achieve high multi-cycle desorption and recovery of short-chain PFASs, with desorption efficiencies often exceeding 90% and retention exceeding 85% after 4–5 cycles on certain adsorbents.",
+        "central_proposition": "General multi-cycle desorption performance of short-chain PFASs with solvent and alkaline regenerants",
+        "material_qualifiers": [
+          "PFAS type: short-chain PFASs",
+          "regenerants: methanol, ethanol, methanol–NaCl, methanol–NaOH, NaOH, ammonia",
+          "adsorbents: polymeric and carbonaceous adsorbents, anion-exchange resins, mesoporous polymers",
+          "cycles: multiple cycles (including 4–5 cycles)",
+          "trend: consistently high desorption and recovery for short-chain PFASs"
+        ],
+        "importance": "supplementary",
+        "function": "affirmative",
+        "scoring_role": "supplementary_content",
+        "evidence_ids": [
+          "WF10_032_MMG004"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Count as fully supported if the answer conveys that, in the broader literature summarized by Andrunik and Smol, methanol- or ethanol-based solvent systems (with or without salts or bases) and alkaline regenerants like NaOH or ammonia provide high desorption or recovery of short-chain PFASs across multiple regeneration cycles, with mentions of >90% desorption or >85% retention after 4–5 cycles on suitable adsorbents.",
+        "partial_rule": "Count as partially supported if the answer notes that solvent or alkaline regenerants achieve generally high multi-cycle desorption of short-chain PFASs but omits either the involvement of salts/bases, the multi-cycle aspect, or the rough magnitude (>90% or >85%).",
+        "contradiction_rule": "Mark as contradicted if the answer claims that these regenerants generally show poor multi-cycle desorption for short-chain PFASs, or that desorption efficiencies for short-chain PFASs are typically below those of long-chain PFASs under the same solvent/alkaline regeneration conditions in this summarized literature.",
+        "source_atomic_claim_ids": [
+          "WF10_032-A05"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "WF10_032_MMG004",
+            "exact_evidence_span": "Methanol, ethanol and methanol–NaCl or methanol–NaOH mixtures consistently achieved >90% desorption of short-chain PFASs over multiple cycles, whereas efficiencies for PFOA and PFOS dropped to 60–80% under the same conditions [61,128,133].",
+            "supports": "Reports that methanol, ethanol, and methanol–NaCl or methanol–NaOH mixtures achieve >90% desorption of short-chain PFASs over multiple cycles."
+          },
+          {
+            "evidence_id": "WF10_032_MMG004",
+            "exact_evidence_span": "Alkaline regenerants such as NaOH and am- monia showed similar trends: high recovery for short-chain PFASs on anion-exchange resins and mesoporous polymers (>85% retention after 4–5 cycles) but persistent residuals of PFOA/PFOS even after extended contact times [ 61,128,133].",
+            "supports": "States that alkaline regenerants NaOH and ammonia show high recovery for short-chain PFASs with >85% retention after 4–5 cycles on certain adsorbents."
+          }
+        ]
+      }
+    ],
+    "constraint_groups": [
+      {
+        "claim_group_id": "WF10_032-X01",
+        "task_component_id": "WF10_032-T02",
+        "canonical_proposition": "In Shaikh et al., incomplete desorption of short-chain PFCAs left some adsorption sites preoccupied and reduced adsorption capacity in the second cycle, and in the broader literature summarized by Andrunik and Smol, long-chain PFASs such as PFOA and PFOS generally exhibit lower desorption efficiencies and persistent residuals under the same regenerant conditions that are highly effective for short-chain species.",
+        "central_proposition": "Documented limitations: incomplete desorption affecting second-cycle adsorption and poorer regeneration of long-chain PFASs compared to short-chain PFASs",
+        "material_qualifiers": [
+          "study-specific limitation: incomplete desorption leading to preoccupation of adsorption sites and lower second-cycle capacity in Shaikh et al.",
+          "comparative limitation: PFOA and PFOS show lower desorption efficiencies and persistent residuals under solvent or alkaline regeneration that works well for short-chain PFASs in the reviewed studies"
+        ],
+        "importance": "core",
+        "function": "limitation",
+        "scoring_role": "constraint_only",
+        "evidence_ids": [
+          "WF10_032_MMG001",
+          "WF10_032_MMG004"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Use as a constraint if the answer acknowledges that, in Shaikh et al., incomplete desorption preoccupied adsorption sites and reduced adsorption capacity in the second cycle, and/or notes that in the broader literature long-chain PFASs like PFOA and PFOS do not regenerate as completely as short-chain species under similar solvent or alkaline conditions. Answers should not generalize high regeneration performance to all PFASs without these caveats.",
+        "partial_rule": "Use as partially satisfied if the answer mentions either (but not both) the incomplete desorption effect on second-cycle adsorption in Shaikh et al. or the poorer regeneration of long-chain PFASs in the reviewed studies, as a limitation.",
+        "contradiction_rule": "Flag as contradicting this constraint if the answer claims that desorption in Shaikh et al. was complete across cycles with no impact on adsorption capacity, or that long-chain PFASs such as PFOA and PFOS regenerated as well or better than short-chain PFASs under solvent or alkaline conditions described by Andrunik and Smol.",
+        "source_atomic_claim_ids": [
+          "WF10_032-A06"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "WF10_032_MMG001",
+            "exact_evidence_span": "These micropores likely facilitated the diffusion and entrapment of short chain PFCAs due to their relatively small molecular size. As a result, a fraction of these adsorbed molecules may remain trapped within the micropores even after the successive regeneration cycle. This incomplete desorption led to the preoccupation of adsorption sites, thereby reducing the adsorption capacity in the second cycle.",
+            "supports": "Shows that incomplete desorption of short-chain PFCAs resulted in preoccupied adsorption sites and reduced adsorption capacity in the second cycle."
+          },
+          {
+            "evidence_id": "WF10_032_MMG004",
+            "exact_evidence_span": "whereas efficiencies for PFOA and PFOS dropped to 60–80% under the same conditions [61,128,133].",
+            "supports": "Indicates that PFOA and PFOS desorption efficiencies are lower (60–80%) than those of short-chain PFASs under the same regenerant conditions."
+          },
+          {
+            "evidence_id": "WF10_032_MMG004",
+            "exact_evidence_span": "but persistent residuals of PFOA/PFOS even after extended contact times [ 61,128,133].",
+            "supports": "Notes that PFOA and PFOS can show persistent residuals after regeneration, emphasizing a limitation for long-chain PFASs compared to short-chain species."
+          }
+        ]
+      }
+    ],
+    "atomic_claim_dispositions": [
+      {
+        "atomic_claim_id": "WF10_032-A01",
+        "atomic_claim": "In Shaikh et al., adsorption efficiencies of PFPrA and PFBA decreased in the second cycle compared to the first but remained almost consistent in the third cycle.",
+        "evidence_ids": [
+          "WF10_032_MMG001"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "WF10_032-G02"
+        ],
+        "rationale": "Directly supported by the reported adsorption efficiencies for PFPrA and PFBA across first, second, and third cycles."
+      },
+      {
+        "atomic_claim_id": "WF10_032-A02",
+        "atomic_claim": "In Shaikh et al., desorption efficiencies for PFPrA and PFBA increased in the second cycle compared to the first, reflecting higher regeneration efficiency with the optimized regenerant.",
+        "evidence_ids": [
+          "WF10_032_MMG002"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "WF10_032-G03"
+        ],
+        "rationale": "Supported by explicit desorption percentages and the statement that regeneration efficiency increased in the second cycle."
+      },
+      {
+        "atomic_claim_id": "WF10_032-A03",
+        "atomic_claim": "In Shaikh et al., PFOA and PFPeA adsorption and desorption remained consistent over three successive adsorption–desorption cycles.",
+        "evidence_ids": [
+          "WF10_032_MMG003",
+          "WF10_032_MMG002"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "WF10_032-G04"
+        ],
+        "rationale": "Supported by statements that PFOA and PFPeA adsorption remained consistent over three cycles and that desorption was also consistent up to three successive cycles."
+      },
+      {
+        "atomic_claim_id": "WF10_032-A04",
+        "atomic_claim": "In Shaikh et al., the optimized regenerant used for subsequent adsorption–desorption cycles was a combination of ammonium solution with methanol, specifically 50% methanol with 1% NH4OH.",
+        "evidence_ids": [
+          "WF10_032_MMG001"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "WF10_032-G01"
+        ],
+        "rationale": "Directly supported by the description of regenerant composition and its use in subsequent cycles."
+      },
+      {
+        "atomic_claim_id": "WF10_032-A05",
+        "atomic_claim": "According to Andrunik and Smol, methanol, ethanol, methanol–NaCl or methanol–NaOH mixtures, and alkaline regenerants such as NaOH and ammonia generally yield high multi-cycle desorption and recovery of short-chain PFASs, with >90% desorption and >85% retention after 4–5 cycles reported on certain adsorbents.",
+        "evidence_ids": [
+          "WF10_032_MMG004"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "WF10_032-G05"
+        ],
+        "rationale": "Summarizes the reported multi-cycle desorption and retention performance for short-chain PFASs with specified regenerants."
+      },
+      {
+        "atomic_claim_id": "WF10_032-A06",
+        "atomic_claim": "Incomplete desorption of short-chain PFCAs in Shaikh et al. reduced second-cycle adsorption capacity, and in the reviewed literature long-chain PFASs such as PFOA and PFOS exhibit lower desorption efficiencies and persistent residuals compared to short-chain species under similar regenerant conditions.",
+        "evidence_ids": [
+          "WF10_032_MMG001",
+          "WF10_032_MMG004"
+        ],
+        "action": "constraint_only",
+        "target_claim_group_ids": [
+          "WF10_032-X01"
+        ],
+        "rationale": "Represents limitation-oriented information that should constrain overgeneralization but is not itself required content for directly answering the main question."
+      }
+    ],
+    "reference_answer": "In the study by Shaikh et al., a synthesized PFCA adsorbent with a mesoporous structure and some micropores was subjected to repeated adsorption–desorption cycles. For regeneration, they screened different regenerants and identified a combination of ammonium solution with methanol as optimal: “50% methanol with 1% NH4OH” showed the highest PFCA desorption among the tested regenerants, and “the optimized spec of the regenerant was employed for subsequent cycles of adsorption–desorption.” No further protocol steps, operating conditions, or matrix details are provided in the supplied text beyond the indication that these were repeated adsorption–desorption cycles on the same synthesized adsorbent.\n\nRegarding cycle-to-cycle performance for short-chain PFCAs, Shaikh et al. report that “in the second cycle, the adsorption efficiency of PFPrA and PFBA decreased … but remained almost consistent for the third cycle.” Thus, the regenerated adsorbent showed a drop in PFPrA and PFBA adsorption efficiency in the second cycle relative to the first, followed by approximately stable adsorption performance in the third cycle. At the same time, “desorption increased in the second cycle … for PFPrA and … for PFBA,” and the authors note “an increase in regeneration efficiency as compared to the first cycle,” indicating that the optimized regenerant improved desorption performance in the second cycle for these short-chain PFCAs.\n\nFor other PFCAs in the same experiment, multi-cycle performance appeared more stable. The authors state that “PFOA and PFPeA adsorption remained consistent over the three cycles” and that “the desorption was also consistent up to three successive cycles.” Under the reported conditions, adsorption and desorption of PFOA and PFPeA therefore did not show the second-cycle decrease in adsorption seen for PFPrA and PFBA.\n\nThe text further notes a limitation in Shaikh et al.’s system: the pore size distribution includes “a fraction of pores smaller than 1 nm,” and these micropores “likely facilitated the diffusion and entrapment of short chain PFCAs,” so “a fraction of these adsorbed molecules may remain trapped … even after the successive regeneration cycle.” This “incomplete desorption led to the preoccupation of adsorption sites, thereby reducing the adsorption capacity in the second cycle.” Thus, while desorption of PFPrA and PFBA improved in the second cycle, incomplete desorption overall contributed to reduced second-cycle adsorption capacity for some short-chain PFCAs.\n\nComplementing this single-study evidence, the review by Andrunik and Smol summarizes broader multi-cycle regeneration behavior for short-chain PFASs. They report that “methanol, ethanol and methanol–NaCl or methanol–NaOH mixtures consistently achieved >90% desorption of short-chain PFASs over multiple cycles,” indicating that solvent-based regenerants with or without salts can repeatedly desorb short-chain PFASs at high efficiency on polymeric and carbonaceous adsorbents. They also state that “alkaline regenerants such as NaOH and ammonia showed similar trends: high recovery for short-chain PFASs on anion-exchange resins and mesoporous polymers (>85% retention after 4–5 cycles).” In contrast, under the same conditions “efficiencies for PFOA and PFOS dropped to 60–80%” and there were “persistent residuals of PFOA/PFOS even after extended contact times,” highlighting that the high multi-cycle desorption and retention observed for short-chain PFASs does not necessarily extend to long-chain PFASs.\n\nWithin the limits of the provided text, the key multi-cycle pattern for short-chain PFCAs is therefore that, when using an optimized methanol–ammonium regenerant, PFPrA and PFBA show improved desorption but reduced adsorption in the second cycle followed by stable adsorption in the third, while PFOA and PFPeA maintain relatively consistent adsorption and desorption over three cycles. The broader literature indicates that methanol/ethanol-based and alkaline regenerants can maintain high desorption and recovery of short-chain PFASs over multiple regeneration cycles, though detailed experimental conditions and matrices are not fully specified in the excerpts provided here.",
+    "reference_answer_claim_map": [
+      {
+        "claim_group_id": "WF10_032-G01",
+        "reference_answer_excerpt": "For regeneration, they screened different regenerants and identified a combination of ammonium solution with methanol as optimal: “50% methanol with 1% NH4OH” showed the highest PFCA desorption among the tested regenerants, and “the optimized spec of the regenerant was employed for subsequent cycles of adsorption–desorption.”"
+      },
+      {
+        "claim_group_id": "WF10_032-G02",
+        "reference_answer_excerpt": "Shaikh et al. report that “in the second cycle, the adsorption efficiency of PFPrA and PFBA decreased … but remained almost consistent for the third cycle.” Thus, the regenerated adsorbent showed a drop in PFPrA and PFBA adsorption efficiency in the second cycle relative to the first, followed by approximately stable adsorption performance in the third cycle."
+      },
+      {
+        "claim_group_id": "WF10_032-G03",
+        "reference_answer_excerpt": "At the same time, “desorption increased in the second cycle … for PFPrA and … for PFBA,” and the authors note “an increase in regeneration efficiency as compared to the first cycle,” indicating that the optimized regenerant improved desorption performance in the second cycle for these short-chain PFCAs."
+      },
+      {
+        "claim_group_id": "WF10_032-G04",
+        "reference_answer_excerpt": "The authors state that “PFOA and PFPeA adsorption remained consistent over the three cycles” and that “the desorption was also consistent up to three successive cycles.” Under the reported conditions, adsorption and desorption of PFOA and PFPeA therefore did not show the second-cycle decrease in adsorption seen for PFPrA and PFBA."
+      },
+      {
+        "claim_group_id": "WF10_032-G05",
+        "reference_answer_excerpt": "They report that “methanol, ethanol and methanol–NaCl or methanol–NaOH mixtures consistently achieved >90% desorption of short-chain PFASs over multiple cycles,” indicating that solvent-based regenerants with or without salts can repeatedly desorb short-chain PFASs at high efficiency on polymeric and carbonaceous adsorbents. They also state that “alkaline regenerants such as NaOH and ammonia showed similar trends: high recovery for short-chain PFASs on anion-exchange resins and mesoporous polymers (>85% retention after 4–5 cycles).”"
+      },
+      {
+        "claim_group_id": "WF10_032-X01",
+        "reference_answer_excerpt": "The text further notes a limitation in Shaikh et al.’s system: the pore size distribution includes “a fraction of pores smaller than 1 nm,” and these micropores “likely facilitated the diffusion and entrapment of short chain PFCAs,” so “a fraction of these adsorbed molecules may remain trapped … even after the successive regeneration cycle.” This “incomplete desorption led to the preoccupation of adsorption sites, thereby reducing the adsorption capacity in the second cycle.”\n\nIn contrast, under the same conditions “efficiencies for PFOA and PFOS dropped to 60–80%” and there were “persistent residuals of PFOA/PFOS even after extended contact times,” highlighting that the high multi-cycle desorption and retention observed for short-chain PFASs does not necessarily extend to long-chain PFASs."
+      }
+    ],
+    "unresolved_or_unsupported": [
+      "Specific adsorption–desorption protocol steps (e.g., contact times, solid–liquid ratios, sequence and duration of adsorption vs regeneration stages) for Shaikh et al. are not described in the provided text.",
+      "Detailed operating conditions such as temperature, pH, flow regime (batch vs column), and agitation for the adsorption and regeneration cycles in Shaikh et al. are not available in the supplied excerpts.",
+      "The precise water matrix for Shaikh et al.’s adsorption/desorption experiments (e.g., specific surface water source, synthetic vs real water, ionic strength, co-contaminants) cannot be confirmed from the provided chunks alone.",
+      "The exact identity or formulation name of Shaikh et al.’s quaternary ammonium adsorbent beyond being a synthesized, mesoporous material with some micropores is not given in the excerpts.",
+      "The number of regeneration cycles beyond three, and any performance patterns after the third cycle in Shaikh et al.’s study, are not reported in the provided text.",
+      "For the multi-study review summarized by Andrunik and Smol, study-specific details such as individual adsorbent types, matrices, and exact regeneration protocols for each cited system are not available in the excerpt and cannot be reconstructed.",
+      "The question’s request for explicit second- and third-cycle performance of all individual short-chain PFCA species beyond PFPrA, PFBA, PFPeA, and PFOA cannot be fully satisfied because only these compounds are discussed in the supplied Shaikh et al. text."
+    ],
+    "boundary_check": {
+      "must_include_addressed": true,
+      "must_not_claim_respected": true,
+      "notes": "The answer draws only on explicit statements from the provided evidence regarding regenerant composition, target PFCAs, and multi-cycle adsorption/desorption trends, and it flags missing details (protocol steps, operating conditions, matrix) as unresolved rather than inferring them. It does not generalize study-specific findings to universal PFAS treatment claims and treats the broader patterns in the review as literature-specific summaries rather than universal rules."
+    }
+  },
+  "generation": {
+    "request_model": "gpt-5.1",
+    "response_model": "gpt-5.1-2025-11-13",
+    "response_id": "chatcmpl-E77AcfuI0Kk6C2yYeETcpddBQGWNb",
+    "reasoning_effort": "low",
+    "temperature": "provider_default_not_sent",
+    "max_completion_tokens": 20000,
+    "finish_reason": "stop",
+    "prompt_tokens": 4353,
+    "cached_prompt_tokens": 0,
+    "completion_tokens": 8510,
+    "total_tokens": 12863,
+    "latency_seconds": 57.97300375002669,
+    "request_sha256": "6a343deca64c378333f83f8bed96ec35711c2dc8ebc3dd56c9d5332da31d2401",
+    "estimated_cost_usd": 0.09054125
+  },
+  "analytical_status": "quarantined_schema_invalid"
+}

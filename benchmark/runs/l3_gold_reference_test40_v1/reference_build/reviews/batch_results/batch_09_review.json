@@ -1,0 +1,290 @@
+{
+  "batch_id": "test40-review-batch-09",
+  "batch_sha256": "6836ba431cb681dcd38d17dad89e41e6aaa2fec213c47b6860a7e477598fb643",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-review-batch-09",
+    "reviews": [
+      {
+        "question_id": "WF10_012",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Claim group WF10_012-G06 is assigned to task component T01 (which specifically asks to extract PVA/MOF modification protocol/reagent details) but its content, evidence, and 'supports' text are identical in substance to G01 and G02 (MXene-TiO2, PDA, PEI modifications), none of which are PVA/MOF. This duplicates already-scored content under a task component it does not actually address, since no PVA/MOF evidence exists at all."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_012-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_012-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_012-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_012-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_012-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_012-G06",
+            "verdict": "duplicate_or_overweighted",
+            "issues": [
+              "Assigned to T01 ('how the base membrane was modified with PVA/MOF layers') but contains no PVA/MOF content; it restates the MXene-TiO2/PDA/PEI modification facts already scored in G01 and G02, effectively double-counting the same evidence under a mismatched task component."
+            ],
+            "required_repairs": [
+              "Either reassign this group to T02 where the modification-method content is already covered by G01/G02 (making it redundant and removable), or remove the group entirely and rely on the existing 'unresolved_or_unsupported' entry to record that no PVA/MOF modification details are supported for T01."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_012-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Resolve the WF10_012-G06 task-component mismatch/duplication as described above."
+        ]
+      },
+      {
+        "question_id": "WF10_013",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Recurring pattern: several claim-group 'exact_spans' entries reuse one short quoted span verbatim to back multiple distinct 'supports' statements whose specific content (e.g., precursor-to-PFCA conversion, chlorinated/brominated byproducts, complex-matrix effects) is not actually present in that literal quoted text, even though related sentences do exist elsewhere in the same full_chunk_text."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_013-G01",
+            "verdict": "partially_supported",
+            "issues": [
+              "The canonical/central proposition credits WF10_013_MMG002 with describing sulfonamide- and fluorotelomer-based precursor transformation into PFCAs, but the evidence item's exact_evidence_span/validated unit_exact_spans only contain the sentence 'Therefore, the extent to which PFBA should be degraded has to be considered for practical purposes.' The precursor-to-PFCA sentence appears only in the surrounding full_chunk_text and was never validated as an exact/unit span, yet the group cites the PFBA sentence as the 'exact_evidence_span' supporting the precursor-transformation claim."
+            ],
+            "required_repairs": [
+              "Add and validate the actual precursor-to-PFCA sentence ('In brief, sulfonamide-based precursors and fluorotelomer-based precursors were electrochemically transformed into perfluoroalkyl carboxylic acids (PFCAs)...') as a unit_exact_span for WF10_013_MMG002, or narrow the canonical/central proposition to only what the currently validated span supports (the PFBA degradation-extent caveat) and cite the precursor-conversion content from a separately verified span."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_013-G02",
+            "verdict": "partially_supported",
+            "issues": [
+              "Three of the four exact_spans entries cite the identical short quote 'However, formation of transformation products, including PFAS, is a well-known issue [17,18].' for WF10_013_MMG003, but two of the associated 'supports' statements (about harmful chlorinated/brominated byproducts and about landfill leachate being a complex matrix) describe content found only in later, unquoted sentences of the same chunk, not in the cited span itself."
+            ],
+            "required_repairs": [
+              "Replace the mismatched exact_evidence_span citations with the actual supporting sentences from the chunk (e.g., 'Advanced oxidation processes may also result in formation of harmful chlorinated and brominated transformation byproducts [13].' and 'Untargeted analyses are particularly important for complex matrices such as landfill leachate...'), and validate them as unit_exact_spans for WF10_013_MMG003."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_013-X01",
+            "verdict": "partially_supported",
+            "issues": [
+              "Same duplication/mismatch pattern as G02: two exact_spans entries reuse the identical 'However, formation of transformation products, including PFAS, is a well-known issue [17,18].' quote to support distinct claims (reliance on targeted triple-quadrupole methods; landfill leachate complexity) not contained in that literal text."
+            ],
+            "required_repairs": [
+              "Cite and validate the specific chunk sentences that actually state reliance on targeted triple-quadrupole quantification and the complex-matrix/co-contaminant point, rather than reusing the single introductory sentence for both."
+            ]
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Correct the mismatched/duplicated exact-span citations in G01, G02, and X01 as detailed above."
+        ]
+      },
+      {
+        "question_id": "WF10_014",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_014-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_014-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_014-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_014-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_014-X02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_014-X03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "WF10_015",
+        "verdict": "repair_required",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_015-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_015-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_015-G03",
+            "verdict": "partially_supported",
+            "issues": [
+              "The two exact_spans quotes about the Thomas model ('Application of breakthrough modeling using the Thomas model...' and 'These modeling efforts enable direct comparison of adsorbent use rates...') are present in WF10_015_MMG002's full_chunk_text but are not among the evidence item's validated exact_evidence_span/unit_exact_spans, so their inclusion has not gone through the same span-validation check as the rest of the evidence."
+            ],
+            "required_repairs": [
+              "Add these two sentences to WF10_015_MMG002's unit_exact_spans list and confirm unit_spans_found_in_full_chunk for them, so the group's citations are backed by validated spans consistent with the rest of the record."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_015-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_015-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_015-X02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Validate the Thomas-model sentences as unit_exact_spans for WF10_015_MMG002 as described in G03."
+        ]
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 126917,
+    "num_turns": 6,
+    "stop_reason": "tool_use",
+    "session_id": "d61b275d-9a28-4ede-8cb8-b72319883e24",
+    "total_cost_usd": 0.5070219499999999,
+    "usage": {
+      "input_tokens": 8,
+      "cache_creation_input_tokens": 75139,
+      "cache_read_input_tokens": 123429,
+      "output_tokens": 12498,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 75139
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 11098,
+          "cache_read_input_tokens": 63026,
+          "cache_creation_input_tokens": 23184,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 23184,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 628,
+        "outputTokens": 20,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000728,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 8,
+        "outputTokens": 12498,
+        "cacheReadInputTokens": 123429,
+        "cacheCreationInputTokens": 75139,
+        "webSearchRequests": 0,
+        "costUSD": 0.50629395,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 7559,
+    "ttft_stream_ms": 918,
+    "time_to_request_ms": 102,
+    "type": "result",
+    "duration_ms": 126703,
+    "uuid": "cdc8f61e-018c-49fc-8123-f94f1a92ae1f"
+  },
+  "candidate_test40_inputs_used": false
+}

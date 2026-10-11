@@ -1,0 +1,55 @@
+{
+  "estimate_basis": "Linear scaling from recorded Dev13 GPT-5.1 usage, with Test40 reference-answer L1.5 used directly for the L1.5 unit cost",
+  "currency": "USD",
+  "prices_per_million_tokens": {
+    "input": 1.25,
+    "cached_input": 0.125,
+    "output": 10.0
+  },
+  "components": [
+    {
+      "stage": "Hybrid and BGE local retrieval plus L1",
+      "planned_calls": 0,
+      "estimated_cost_usd": 0.0
+    },
+    {
+      "stage": "BGE-LLM selector",
+      "planned_calls": 40,
+      "estimated_cost_usd": 0.8176
+    },
+    {
+      "stage": "Common soft tagger for three systems",
+      "planned_calls": 120,
+      "estimated_cost_usd": 2.5839
+    },
+    {
+      "stage": "Matched RAG answer generation for three systems",
+      "planned_calls": 120,
+      "estimated_cost_usd": 2.0758
+    },
+    {
+      "stage": "L1.5 once for three systems",
+      "planned_calls": 120,
+      "estimated_cost_usd": 1.7513
+    },
+    {
+      "stage": "L3 three complete repeats for three systems",
+      "planned_calls": 360,
+      "estimated_cost_usd_range": [
+        8.0,
+        10.6
+      ],
+      "conservative_dev13_call_scaled_estimate_usd": 10.5036
+    }
+  ],
+  "estimated_total_usd_range": [
+    15.2,
+    17.8
+  ],
+  "recommended_budget_ceiling_usd": 20.0,
+  "notes": [
+    "The L3 upper estimate scales the completed Dev13 three-repeat cost by call count and is conservative because Test40 has fewer claim groups per question on average.",
+    "The ceiling includes a modest allowance for schema failures or manually resumed transient failures.",
+    "No paid call is authorized by this estimate or by the preflight package."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "protocol_id": "dev13_verified_tags_v3_revision2_2026-07-26",
+  "status": "frozen_canonical_generation_selector_aligned",
+  "scope": "Dev13 only; Test40 not inspected or run",
+  "development_set": "benchmark/frozen_v3/input/questions_dev13.csv",
+  "gold": "benchmark/frozen_v3/gold/chunk_based_gold.jsonl",
+  "retrieval_input": "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/bge_llm_gpt51/retrieval_outputs/rag_outputs_bge_llm_gpt51_pool60_bge30_llm10_fullchunk.jsonl",
+  "selector_prompt": "benchmark/frozen_v3/prompts/retrieval/bge_llm_selector_v3.txt",
+  "retrieval_configuration": {
+    "system": "BGE-LLM",
+    "initial_pool": 60,
+    "bge_shortlist": 30,
+    "final_chunks": 10,
+    "selector_model": "gpt-5.1",
+    "selector_temperature": 0,
+    "selector_prompt_matches_budget_sweep": true
+  },
+  "generation": {
+    "tagger_model": "gpt-5.1",
+    "answer_model": "gpt-5.1",
+    "direct_model": "gpt-5.1",
+    "temperature": 0,
+    "full_context_retained": true,
+    "chunk_order_retained": true,
+    "gold_exposed_to_selector_tagger_or_answer": false,
+    "matched_untagged_generated": false,
+    "matched_direct_generated": true,
+    "fresh_run_without_result_reuse": true
+  },
+  "answer_visible_tag_fields": [
+    "eligibility",
+    "detail_policy",
+    "evidence_polarity",
+    "confidence",
+    "exact_support"
+  ],
+  "audit_only_tag_fields": [
+    "question_components",
+    "supports_components"
+  ],
+  "prohibited_answer_visible_fields": [
+    "question_component_descriptions",
+    "allowed_use",
+    "avoid_use",
+    "omit_details",
+    "non_verbatim_exact_support"
+  ],
+  "local_validation": {
+    "exact_support_must_be_a_normalized_substring_of_its_full_chunk": true,
+    "invalid_exact_support_action": "replace with empty string and log",
+    "legacy_free_text_key_action": "discard",
+    "synthetic_leakage_regression_test": "benchmark/frozen_v3/scripts/validate_task_general_prompt.py"
+  },
+  "canonical_generation_result": "benchmark/frozen_v3/results/dev13_verified_tags_v3_r2_confirmation_2026-07-26",
+  "canonical_evaluation_result": "benchmark/frozen_v3/results/dev13_neutral_evidence_v3_2026-07-26",
+  "evaluation_revision_note": "Revision 2 remains the canonical selector-aligned generation artifact. Revision 3 replaces its superseded RAG-owned-context judge with the neutral-evidence judge."
+}

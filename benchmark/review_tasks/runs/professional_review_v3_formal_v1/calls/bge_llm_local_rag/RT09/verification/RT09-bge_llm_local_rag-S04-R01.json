@@ -1,0 +1,356 @@
+{
+  "call_key": "RT09:bge_llm_local_rag:verify:RT09-bge_llm_local_rag-S04-R01",
+  "created_at": "2026-08-05T04:34:23.268896+00:00",
+  "raw_response_text": "{\"task_id\":\"RT09\",\"record_id\":\"RT09-bge_llm_local_rag-S04-R01\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"citation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Citation text (authors, title, journal, year, article number) matches the provided source metadata.\"},{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record DOI/URL exactly matches the DOI given in the source (10.1016/j.cej.2022.139063).\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Status 'comparable_with_conditions' is a reasonable inference given a continuous-flow SCWO reactor, aqueous PFAS mixture, defined temperature and residence time, and destruction/defluorination endpoints (S04-E01, E03, E06, E08).\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Reason correctly describes continuous-flow SCWO of PFOS/PFHpS/PFOA, clear temperature and residence time ranges, and DRE/defluorination definitions as in S04-E01, E03, E06, E08.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E01 defines DRE based on influent and effluent PFAS concentrations measured by LC-MS/MS, which corresponds to parent-compound loss. S04-E08 reports 99.999% destruction, consistent with this endpoint type.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E01 explicitly defines DRE as reduction in PFAS between influent and effluent, and S04-E08 reports '99.999 % destruction of all PFAS ... at 650 \u00b0C and residence time of ~ 30 s', matching the interpretation.\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E01 uses the term 'PFAS destruction and removal efficiency (DRE)'. This matches the reported_term.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E01 defines '%deF' as conversion of organic fluorine to fluoride ions, which is a defluorination endpoint; S04-E06 and S04-E08 discuss complete defluorination at 650 \u00b0C.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E01 defines %deF as percentage of initial organic fluorine converted to fluoride ions; S04-E06 states free fluoride measurement by IC shows complete PFOS defluorination at 650 \u00b0C; S04-E08 mentions 'complete defluorination' at 650 \u00b0C and ~30 s. This matches the interpretation.\"},{\"field_path\":\"endpoints[1].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E01 explicitly uses 'overall defluorination efficiency (%deF)'. 'Complete defluorination' is described in S04-E06 and S04-E08.\"},{\"field_path\":\"endpoints[2].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E06 describes degradation pathways (oxidative C\u2013S bond cleavage, decarboxylation, sequential \u2013CF2 elimination), which are transformation processes, so endpoint_type='transformation' is appropriate.\"},{\"field_path\":\"endpoints[2].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E06 gives the detailed PFOS degradation pathway (C\u2013S cleavage, decarboxylation, \u2013CF2 elimination). S04-E08 indicates essentially complete destruction at 650 \u00b0C and ~30 s. The interpretation accurately summarizes this, with the note that intermediates are less emphasized at high T being a reasonable inference.\"},{\"field_path\":\"endpoints[2].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E06 and S04-E08 refer to 'degradation behavior', 'reaction routes', and 'PFAS destruction'; these align with the reported terms describing transformation/decomposition.\"},{\"field_path\":\"endpoints[3].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This endpoint is used to capture the authors' broader use of the term 'destruction' beyond strict analytical endpoints. The source repeatedly uses 'destruction' as a general term (e.g., title and S04-E04, E06, E08), so classifying it as 'other' is appropriate.\"},{\"field_path\":\"endpoints[3].interpretation\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The source clearly uses 'destruction' to describe near-complete PFAS removal (S04-E06, E08) and directly measures parent PFAS loss and fluoride release (S04-E01, E06). However, the explicit statement that carbon mineralization is not measured is an inference from the absence of carbon fate measurements in the provided chunks rather than a direct statement in the cited text.\"},{\"field_path\":\"endpoints[3].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The term 'PFAS destruction' is used repeatedly in the article (title and within S04-E04, E06, E08), matching the reported_term.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E06 states 'Additional characterization of intermediate species in gas and liquid effluent is required to fully elucidate a chemical reaction mechanism for PFAS destruction in SCWO environments,' which directly supports the limitation; the rest of the statement is a faithful paraphrase.\"},{\"field_path\":\"limitations[1].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E08 describes a continuous flow SCWO reactor treating PFOS, PFHpS, and PFOA in PFAS-impacted liquids; inferring limited applicability to other PFAS structures, complex matrices, and larger scales is a reasonable design-based limitation.\"},{\"field_path\":\"matrix.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E06 refers to 'PFAS-impacted matrices' and S04-E08 to PFAS-impacted liquids treated in a continuous flow SCWO reactor. This supports 'PFAS-impacted liquids (aqueous PFAS solutions) treated in continuous SCWO reactor' as the matrix.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E08 reports 'operating temperature of 650 \u00b0C' at which 99.999% destruction and complete defluorination were observed; this matches the value 650.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Temperature is expressed in \u00b0C in S04-E08, matching the unit.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E08 states 'residence time of ~ 30 s' for the condition with 99.999% destruction and complete defluorination, matching '~30'.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Residence time is given in seconds (s) in S04-E08, matching the unit.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E03 states the fuel\u2013air ratio 'was held approximately constant at ~ 60 % excess air,' matching the value '~60'.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The excess air is given as a percent in S04-E03, matching the '%' unit.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E01 describes fluoride ions concentration in effluents 'detected by IC', corresponding to ion chromatography for fluoride analysis.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This field appropriately has no unit for an analysis method; leaving unit null is consistent with the qualitative nature of the entry.\"},{\"field_path\":\"operating_conditions[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E01 states residual PFAS concentrations in liquid effluents were 'measured by LC-MS/MS', matching the method name.\"},{\"field_path\":\"operating_conditions[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"As an analytical method, no unit is expected; null unit is appropriate and consistent with the qualitative nature of this condition.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S04-E06 and E08 clearly involve PFOS, but the full expanded name 'perfluorooctane sulfonate' is not shown in the provided chunks. The acronym support is clear; the expanded name is inferred from common usage.\"},{\"field_path\":\"pfas_scope[1].value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S04-E02 and E08 explicitly mention 'PFHpS', but the expansion 'perfluoroheptane sulfonate' is not present in the cited text. The acronym is supported; the full name is inferred.\"},{\"field_path\":\"pfas_scope[2].value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S04-E06 and E08 explicitly mention 'PFOA', but the expansion 'perfluorooctanoic acid' is not shown in the provided chunks. The abbreviation is supported; the full name is inferred.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E08 reports '99.999 % destruction of all PFAS' at 650 \u00b0C and ~30 s; this matches the value 99.999 with value_form 'exact_numeric'.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The 99.999 value in S04-E08 is clearly expressed as a percent ('% destruction'), matching the '%' unit.\"},{\"field_path\":\"quantitative_findings[0].name\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E01 defines 'PFAS destruction and removal efficiency (DRE)'; using this as the name 'destruction_and_removal_efficiency_DRE' is consistent with the source terminology.\"},{\"field_path\":\"residuals_byproducts[0].statement\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S04-E02 states that F atoms released during PFAS mineralization form HF, which after cooling/depressurizing enters the aqueous phase where H+ and F\u2212 are present. However, the mention of 'high-temperature conditions (including those approaching 650 \u00b0C)' and the specific tie to IC quantification are not present in S04-E02 (the IC method is defined in S04-E01). Thus, the mechanistic part is supported but some qualifiers and method linkage are inferred.\"},{\"field_path\":\"study_scale.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S04-E08 describes a 'continuous flow SCWO reactor' treating PFOS, PFHpS, and PFOA; S04-E06 notes PFAS-impacted matrices. The 'continuous-flow SCWO reactor treating PFOS, PFHpS, and PFOA' portion is supported. The designation 'bench-scale' and explicit 'aqueous feed' are reasonable inferences but are not stated in the cited text.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S04-E08 describes a continuous flow SCWO reactor and notes that autogenic operation is sustained by reaction of an ethanol/air mixture, supporting 'Continuous supercritical water oxidation (SCWO) with ethanol/air co-fuel' as the treatment.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core aspects\u2014source identity, treatment (continuous SCWO with ethanol/air co-fuel), aqueous PFAS matrix, PFAS scope (PFOS, PFHpS, PFOA), operating conditions (650 \u00b0C, ~30 s, ~60% excess air), endpoint types (parent loss and defluorination), and the key quantitative DRE value (99.999% at 650 \u00b0C and ~30 s)\u2014are directly supported by the cited text. Partial supports involve minor interpretive qualifiers (e.g., expanded PFAS names, bench-scale descriptor, and some mechanistic phrasing), but these do not materially misrepresent the study\u2019s data or endpoints. The record is therefore usable for synthesis with attention to noted qualifiers.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of the measurements needed to distinguish disappearance of a target PFAS from transformation, defluorination, and broader destruction.\",\"task_id\":\"RT09\",\"title\":\"Determining whether a PFAS destructive treatment achieved meaningful destruction\"}\n\nTask-specific extraction objective:\nExtract treatment and conditions, parent PFAS measurement, transformation-product scope, fluoride or fluorine measurement, mass-balance method, mineralization-related endpoint, detection limits, sampling time, unidentified fraction, and authors' endpoint terminology.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.coche.2023.100944\"],\"all_blocked_titles\":[\"scaling up water treatment technologies for pfas destruction current status and potential for fit for purpose application\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.coche.2023.100944\"],\"anchor_id\":\"AR-BLOTEVOGEL-2023\",\"corpus_source\":\"2024 - Blotevogel - Scaling up water treatment technologies for PFAS destruction_ current status and potential for fit-for-purpose application.pdf\",\"doi\":\"10.1016/j.coche.2023.100944\",\"title\":\"Scaling up water treatment technologies for PFAS destruction: current status and potential for fit-for-purpose application\",\"url\":\"https://doi.org/10.1016/j.coche.2023.100944\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Li, J.; Austin, C.; Moore, S.; Pinkard, B.R.; Novosselov, I.V. PFOS destruction in a continuous supercritical water oxidation reactor. Chemical Engineering Journal. 2023, 451, 139063.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S04-E01\",\n      \"S04-E03\",\n      \"S04-E06\",\n      \"S04-E08\"\n    ],\n    \"reason\": \"Record represents continuous-flow SCWO treatment of an aqueous PFOS/PFHpS/PFOA mixture with clearly defined temperature and residence time, and destruction/defluorination endpoints expressed on a consistent basis (percent of influent PFAS or organic fluorine). These conditions are reasonably comparable to other SCWO studies under similar matrices and flow regimes, but not to non-SCWO technologies or non-aqueous matrices without careful adjustment.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.cej.2022.139063\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"parent_compound_loss\",\n      \"evidence_locator_ids\": [\n        \"S04-E01\",\n        \"S04-E08\"\n      ],\n      \"interpretation\": \"DRE defined as percent reduction of measured PFAS concentration between influent and effluent; at 650 \\u00b0C and ~30 s residence time, authors report 99.999% destruction of all PFAS (PFOS, PFHpS, PFOA).\",\n      \"reported_term\": \"PFAS destruction and removal efficiency (DRE)\"\n    },\n    {\n      \"endpoint_type\": \"defluorination\",\n      \"evidence_locator_ids\": [\n        \"S04-E01\",\n        \"S04-E06\",\n        \"S04-E08\"\n      ],\n      \"interpretation\": \"Defluorination efficiency defined as percentage of initial organic fluorine converted to fluoride ions. At 650 \\u00b0C and ~30 s residence time, free fluoride measurement by IC indicated complete defluorination of PFOS and the PFAS mixture.\",\n      \"reported_term\": \"overall defluorination efficiency (%deF); complete defluorination\"\n    },\n    {\n      \"endpoint_type\": \"transformation\",\n      \"evidence_locator_ids\": [\n        \"S04-E06\",\n        \"S04-E08\"\n      ],\n      \"interpretation\": \"Authors describe oxidative C\\u2013S bond cleavage of PFOS followed by decarboxylation and sequential \\u2013CF2 elimination and chain shortening, but at 650 \\u00b0C and ~30 s they report essentially complete PFAS destruction so intermediates are not emphasized at this condition.\",\n      \"reported_term\": \"degradation behavior; reaction routes; PFAS decomposition\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S04-E01\",\n        \"S04-E06\",\n        \"S04-E08\"\n      ],\n      \"interpretation\": \"Authors use the term \\\"destruction\\\" to refer to near-complete parent PFAS removal; however, the directly measured endpoints are parent PFAS loss and fluoride release, not full carbon mineralization.\",\n      \"reported_term\": \"PFAS destruction\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S04-E06\"\n      ],\n      \"statement\": \"Authors describe the need for additional characterization of intermediate species in gas and liquid effluents to fully elucidate the chemical reaction mechanism for PFAS destruction in SCWO environments, indicating that even at conditions where complete defluorination is observed, the reaction network and any minor residual organofluorine species are not fully resolved.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S04-E06\",\n        \"S04-E08\"\n      ],\n      \"statement\": \"Study is limited to a continuous bench-scale SCWO reactor treating aqueous solutions of PFOS, PFHpS, and PFOA, so applicability to other PFAS structures, complex real matrices, and larger scales must be inferred.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S04-E06\",\n      \"S04-E08\"\n    ],\n    \"value\": \"PFAS-impacted liquids (aqueous PFAS solutions) treated in continuous SCWO reactor\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E08\"\n      ],\n      \"name\": \"reactor_temperature\",\n      \"qualifiers\": \"Operating temperature at which 99.999% destruction and complete defluorination of all PFAS were observed\",\n      \"unit\": \"\\u00b0C\",\n      \"value\": \"650\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E08\"\n      ],\n      \"name\": \"residence_time\",\n      \"qualifiers\": \"Approximate residence time associated with 99.999% PFAS destruction and complete defluorination\",\n      \"unit\": \"s\",\n      \"value\": \"~30\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E03\"\n      ],\n      \"name\": \"oxidant_excess_air\",\n      \"qualifiers\": \"Fuel\\u2013air ratio controlled to ~60% excess air based on O2 measurements; applies to SCWO operation generally\",\n      \"unit\": \"%\",\n      \"value\": \"~60\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E01\",\n        \"S04-E06\"\n      ],\n      \"name\": \"fluoride_analysis_method\",\n      \"qualifiers\": \"Free fluoride ions in effluents measured by IC for defluorination assessment\",\n      \"unit\": null,\n      \"value\": \"ion chromatography (IC)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E01\",\n        \"S04-E02\"\n      ],\n      \"name\": \"PFAS_analysis_method\",\n      \"qualifiers\": \"Residual PFAS concentrations in liquid effluents measured by LC-MS/MS\",\n      \"unit\": null,\n      \"value\": \"LC-MS/MS\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E06\",\n        \"S04-E08\"\n      ],\n      \"value\": \"PFOS (perfluorooctane sulfonate)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E02\",\n        \"S04-E08\"\n      ],\n      \"value\": \"PFHpS (perfluoroheptane sulfonate)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E06\",\n        \"S04-E08\"\n      ],\n      \"value\": \"PFOA (perfluorooctanoic acid)\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S04-E08\"\n      ],\n      \"name\": \"destruction_and_removal_efficiency_DRE\",\n      \"qualifiers\": \"Reported for all PFAS (PFOS, PFHpS, PFOA) at 650 \\u00b0C and ~30 s residence time in the continuous SCWO reactor\",\n      \"unit\": \"%\",\n      \"value\": \"99.999\",\n      \"value_form\": \"exact_numeric\"\n    }\n  ],\n  \"record_id\": \"RT09-bge_llm_local_rag-S04-R01\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S04-E02\"\n      ],\n      \"statement\": \"At high-temperature conditions (including those approaching 650 \\u00b0C), authors infer that F atoms released during PFAS mineralization in the SCWO environment form HF, which upon cooling and depressurization partitions into the aqueous phase as H+ and F\\u2212; free fluoride is then quantified by IC.\"\n    }\n  ],\n  \"source_id\": \"S04\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S04-E06\",\n      \"S04-E08\"\n    ],\n    \"value\": \"Bench-scale continuous-flow supercritical water oxidation (SCWO) reactor treating PFOS, PFHpS, and PFOA in aqueous feed\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S04-E06\",\n      \"S04-E08\"\n    ],\n    \"value\": \"Continuous supercritical water oxidation (SCWO) with ethanol/air co-fuel to sustain autogenic operation\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 4,\n  \"bge_score\": 0.604994535446167,\n  \"citation\": \"Li, J.; Austin, C.; Moore, S.; Pinkard, B.R.; Novosselov, I.V. PFOS destruction in a continuous supercritical water oxidation reactor. Chemical Engineering Journal 2023 451 139063. DOI: 10.1016/j.cej.2022.139063.\",\n  \"doi\": \"10.1016/j.cej.2022.139063\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.cej.2022.139063\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 18,\n      \"locator_id\": \"S04-E01\",\n      \"query_scores\": {\n        \"RT09-C1\": 0.003036895301192999,\n        \"RT09-C2\": 8.622014138381928e-05,\n        \"RT09-C3\": 0.0003031571686733514,\n        \"umbrella\": 0.4732201099395752\n      },\n      \"section\": \"methods\",\n      \"text\": \"umn started at 40 \\u25e6 C and is kept for 6 min; then, the temperature profile is divided into three stages with a ramp up of 10 \\u25e6 C/s to 90 \\u25e6 C, then 5 \\u25e6 C/ s to 200 \\u25e6 C, and 30 \\u25e6 C/s to 250 \\u25e6 C, which was held for 2 mins. PFAS destruction and removal efficiency (DRE) and the overall defluorination efficiency (%deF) were defined as follows: DRE = [ PFAS ] inf \\u0000 [ PFAS ] eff [ PFAS ] inf \\u00d7 100% where [PFAS] inf is the measured initial influent concentrations of PFAS (ppm) and [PFAS] eff is the residual PFAS concentration in the liquid effluents (ppm) measured by LC-MS/MS. The defluorination ef - ficiency indicates the percent of fluorine in PFAS molecules transformed into fluoride ions: % deF = C F \\u0000 \\u2211 C organic \\u0000 F \\u00d7 100% where the C F - is the fluoride ions concentration in the effluents (ppm) detected by IC and the C org - F is the initial concentration of organic fluorine (initially bound in PFAS) (ppm), which is calculated as the summation of the mole fraction of F in each PFAS multiplied by each PFAS concentration (ppm). 3. Results and discussion 3.1.\"\n    },\n    {\n      \"corpus_chunk\": 25,\n      \"locator_id\": \"S04-E02\",\n      \"query_scores\": {\n        \"RT09-C1\": 0.04256722703576088,\n        \"RT09-C2\": 0.0009538073791190982,\n        \"RT09-C3\": 0.00019547496049199253,\n        \"umbrella\": 0.14003199338912964\n      },\n      \"section\": \"methods\",\n      \"text\": \"2n ). Still, due to the limitation of the available NIST library and the sensitivity of the measurements [58] , only 1H-perfluorohexane was identified in these analyses. 3.4. Total PFAS Destruction/Defluorination Fig. 4 presents total measured PFAS and fluoride concentrations as a function of operating temperatures, as well as the overall measured fluorine mass balance at various temperatures. The original PFOS and PFHpS concentrations are used to establish the 100 % defluorination concentration. In the free radical SCWO environment, the F atoms released during the mineralization of PFAS will combine with the H atom to form an HF molecule [28] . After cooling and depressurizing by the system, HF molecules enter the aqueous phase where H + and F - ions Fig. 2. PFAS yields during the decomposition of PFOS (99 %) and PFHpS (1 %) mixture. The limit of detection (LOD) for each PFAS by LC-MS/MS was 0.05 ppb. Fig. 3. Mass fragments of gas products from SCWO of PFOA (a) and PFOS (b) at different temperatures. J. Li et al. Chemical Engineering Journal 451 (2023) 139063 6 are present. Moreover, the initial stock is also converted to PFCA in - termediates ( Fig. 2 ) and gas species ( Fig. 3 ).\"\n    },\n    {\n      \"corpus_chunk\": 14,\n      \"locator_id\": \"S04-E03\",\n      \"query_scores\": {\n        \"RT09-C1\": 5.026029248256236e-05,\n        \"RT09-C2\": 0.004995152819901705,\n        \"RT09-C3\": 0.00019454082939773798,\n        \"umbrella\": 0.0015647992258891463\n      },\n      \"section\": \"methods\",\n      \"text\": \"concentrations, which are used for continuous process monitoring. When the reactor reaches steady state operation at any given condition, the gas sample is collected down - stream of the liquid/gas separator in the 0.6 L Tedlar \\u00ae gas sampling bags for subsequent analysis. The liquid samples are collected in poly - propylene bottles fitted with polypropylene screw caps (Polypropylene Plastic Jar, 4 FL oz/120 mL Capacity, McMaster-Carr). The CO level was below the detection limit (1 ppm) for all runs with T > 510 \\u25e6 C, indicating complete fuel oxidation. At lower operating temperatures, the CO level rises, indicating incomplete fuel oxidation, similar to lean premixed combustion approaching lean blowout [84,85] . Figure S6 plots CO as a function of reactor operating temperature (TC4). The O 2 measurements were used to calculate the fuel \\u2013 air ratio, which was held approximately Fig. 1. Simplified schematic of the SCWO reactor and sample collection. Thermocouple 1 (TC1) and TC2 monitor influent temperatures, TC3, TC4, and TC5 \\u2013 internal reactor fluid temperature, TC6 and TC7 \\u2013 effluent before and after the cooler, TC8 and TC9 \\u2013 external reactor wall temperature. J. Li et al. Chemical Engineering Journal 451 (2023) 139063 4 constant at ~ 60 % excess air.\"\n    },\n    {\n      \"corpus_chunk\": 4,\n      \"locator_id\": \"S04-E04\",\n      \"query_scores\": {\n        \"RT09-C1\": 0.00022686160809826106,\n        \"RT09-C2\": 9.421557479072362e-05,\n        \"RT09-C3\": 0.0015379383694380522,\n        \"umbrella\": 0.2946268618106842\n      },\n      \"section\": \"methods\",\n      \"text\": \"Various technologies exist for PFAS capture and removal from liq - uids, such as granular activated carbon (GAC) adsorption [22] , ion ex - change resin (IXR) treatment [23] , foam fractionation [24,25] , and reverse osmosis (RO) [26,27] . These methods concentrate PFAS, and end-of-life treatment technologies of concentrated waste streams become necessary. Several approaches for PFAS destruction have been proposed; among those are dual-frequency ultrasound (DFUS) [28] , plasma-based technology [29] , sonochemical destruction [30] , electro - chemical oxidation [7] , etc. These approaches can degrade PFAS, but they require long residence times, high energy consumption, and chemical additives such as sulfite, iodide, Fe(III), persulfate, or TiO 2 [31,32] . Hydrothermal treatment (HT) and supercritical water oxida - tion (SCWO) have been shown effective for the destruction of recalci - trant organic molecules and recently were investigated for PFAS treatment [33 \\u2013 35] . However, before the industrial-scale hydrothermal PFAS treatment is implemented, the approach \\u2019 s efficacy should be determined, i.e., operational parameters such as reactor temperatures, residence times, and other operational conditions required for complete\"\n    },\n    {\n      \"corpus_chunk\": 30,\n      \"locator_id\": \"S04-E05\",\n      \"query_scores\": {\n        \"RT09-C1\": 0.0011593649396672845,\n        \"RT09-C2\": 6.0406371630961075e-05,\n        \"RT09-C3\": 0.0006482682074420154,\n        \"umbrella\": 0.22179722785949707\n      },\n      \"section\": \"methods\",\n      \"text\": \"Fig. 5. Comparison of PFAS destruction and defluorination with previous SCWO studies. Pinkard et al. used batch reactor T ~ 425 \\u2013 500 \\u25e6 C, McDonough et al. reported PFAS destruction in continuous SCWO reactor at T ~ 650 \\u25e6 C, and Krause et al. reported operation of three different continuous flow systems at T ~ 590 \\u2013 595 \\u25e6 C. J. Li et al. Chemical Engineering Journal 451 (2023) 139063 7 temperatures overlapping with the current work [60] . Though Pinkard et al. conducted experiments at relatively mild SCWO conditions (T ~ 425 \\u2013 500 \\u25e6 C), the DRE ~ 50 \\u2013 70 %and %deF ~ 13 \\u2013 78 % were ach - ieved. At low temperatures (420 \\u2013 450 \\u25e6 C), the destruction and defluorination efficiencies were higher than the current work, which might be due to the long preheat (78 \\u2013 83 min) and residence times ( \\u03c4 res = 60 min). Pinkard et al. also reported similar destruction and defluorination efficiencies at 475 \\u2013 500 \\u25e6 C; the analysis of PFAS quan - tification was performed by LC-QToF-MS, and the fluoride concentra - tion was analyzed via fluoride ion-selective electrode (ISE), and they also showed that defluorination was greater than DRE by ~ 8 % at 500 \\u25e6 C.\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S04-E06\",\n      \"query_scores\": {\n        \"RT09-C1\": 0.0037997099570930004,\n        \"RT09-C2\": 0.00023416751355398446,\n        \"RT09-C3\": 0.00024190072144847363,\n        \"umbrella\": 0.20170029997825623\n      },\n      \"section\": \"abstract\",\n      \"text\": \"Targeted LC-MS/MS analysis suggests that oxidative C \\u2013 S bond cleavage initiates PFOS degradation, followed by decarboxylation to facilitate sequential -CF 2 elimination and chain shortening. Trifluoroacetic acid (TFA) was found to be the most recalcitrant intermediate product in the effluent, persisting at T = 600 \\u25e6 C and residence time of ~ 32 s, emphasizing the need for TFA monitoring in SCWO treatment of PFAS-impacted matrices. Analysis of gaseous products shows the presence of the volatile organofluorine (VOF) such as 1H-per - fluoroalkane at T = 420 \\u2013 530 \\u25e6 C; the GS/MS spectra of gaseous reaction products suggest that other VOFs may be present. Free fluoride measurement by ion chromatography shows complete PFOS defluorination at T = 650 \\u25e6 C. Overall, this work establishes the operational envelope for SCWO treatment of PFAS-impacted liquids and suggests the chemical routes for PFAS destruction. Additional characterization of intermediate species in gas and liquid effluent is required to fully elucidate a chemical reaction mechanism for PFAS destruction in SCWO environments. 1. Introduction 1.1. Background Per- and polyfluoroalkyl substances (PFAS) are synthetic fluorine- containing organic compounds with the hydrogen atoms replaced by one or more fluorine atoms; the molecule may be terminated by a functional group, such as perfluoroalkyl carboxylic acids (PFCAs) with\"\n    },\n    {\n      \"corpus_chunk\": 31,\n      \"locator_id\": \"S04-E07\",\n      \"query_scores\": {\n        \"RT09-C1\": 5.55801743757911e-05,\n        \"RT09-C2\": 4.435020673554391e-05,\n        \"RT09-C3\": 0.00014277479203883559,\n        \"umbrella\": 0.1439749002456665\n      },\n      \"section\": \"methods\",\n      \"text\": \"\\u25e6 C. The longer exposure to high-temperature SCWO conditions is likely to lead to complete degradation of less recalcitrant intermediate species resulting in better agreement between destruction and defluorination. At T = 475 \\u2013 500 \\u25e6 C, the PFAS removal efficiency in the current continuous system was similar to the batch reactor even though the residence times were significantly shorter, which means the PFAS destruction occurs much faster in the continuous regime. Compared with the batch reactor, the continuous system provides a faster mixing for PFAS and the oxidant, which is limited to diffusion in the batch system. Note that in the buoyancy stabilized flame enhances stability of the reacting system even in the scenarios with incomplete fuel oxidation [98 \\u2013 101] providing the abundance of free radicals from co-fuel oxida - tion. This is confirmed by the presence of CO (product of incomplete oxidation) in the exhaust stream in the current experiments. The inter - action between the hydrocarbon oxidation products and PFAS is very likely to exist in piloted continuous reactors and the chemical kinetics of both PFAS decomposition and fuel oxidation may be affected. Fig. 6. PFOS, PFOA, and VOFs as a function of temperature for the PFOA (a) and PFOS (b) decomposition in the SCWO environment. Fig. 7. Suggested reaction routes for PFOS decomposition in the SCWO environment.\"\n    },\n    {\n      \"corpus_chunk\": 39,\n      \"locator_id\": \"S04-E08\",\n      \"query_scores\": {\n        \"RT09-C1\": 0.0004100786754861474,\n        \"RT09-C2\": 6.021422450430691e-05,\n        \"RT09-C3\": 0.00026180362328886986,\n        \"umbrella\": 0.10020299255847931\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"ethanol oxidation chemistry. The CO and free radicals from the oxida - tion process are likely to participate in the PFAS degradation routes. The interaction between hydrocarbon and fluorocarbon species in the SCWO environment presents a complex problem, and addressing the intricacies of the matrix effects is beyond the scope of the current work. J. Li et al. Chemical Engineering Journal 451 (2023) 139063 9 4. Conclusions This study presents the degradation behavior of PFOS, PFHpS, and PFOA in a continuous flow SCWO reactor operated over a range of temperatures (T = 410 \\u2013 650 \\u25e6 C). The autogenic operation of the system is sustained by a reaction of ethanol/air mixture, and the reactor oper - ation is characterized as a function of co-fuel concentration. 99.999 % destruction of all PFAS and complete defluorination was observed at an operating temperature of 650 \\u25e6 C and residence time of ~ 30 s, with PFOS being the most recalcitrant species. This study also provides insight into the reaction routes as a function of the reaction temperature; the lower temperature PFOS experiments (T = 420 \\u2013 600 \\u25e6 C) yielded a pool of PFCAs (PFOA, PFHxA, PFPeA, PFBA, PFPrA, TFA) in the liquid effluents as well as the emissions of VOF such as 1H-perfluoroalkane in the gas stream.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2023 - Li - PFOS destruction in a continuous supercritical water oxidation reactor.pdf\",\n  \"source_id\": \"S04\",\n  \"title\": \"PFOS destruction in a continuous supercritical water oxidation reactor\",\n  \"year\": \"2023\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "3a79f3e6df5bc0dfe697e34299594c90d69850d039573e2658e210dbc1b7ba62",
+  "response_metadata": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.05403,
+    "finish_reason": "stop",
+    "input_tokens": 6824,
+    "latency_seconds": 40.123387999949045,
+    "output_tokens": 4550,
+    "reasoning_tokens": 1781,
+    "response_id": "chatcmpl-E9NbzYGIxwY2IWl2aM0kiq7732oI4",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 11374,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "citation",
+        "reason": "Citation text (authors, title, journal, year, article number) matches the provided source metadata.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The record DOI/URL exactly matches the DOI given in the source (10.1016/j.cej.2022.139063).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "Status 'comparable_with_conditions' is a reasonable inference given a continuous-flow SCWO reactor, aqueous PFAS mixture, defined temperature and residence time, and destruction/defluorination endpoints (S04-E01, E03, E06, E08).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "Reason correctly describes continuous-flow SCWO of PFOS/PFHpS/PFOA, clear temperature and residence time ranges, and DRE/defluorination definitions as in S04-E01, E03, E06, E08.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "S04-E01 defines DRE based on influent and effluent PFAS concentrations measured by LC-MS/MS, which corresponds to parent-compound loss. S04-E08 reports 99.999% destruction, consistent with this endpoint type.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "S04-E01 explicitly defines DRE as reduction in PFAS between influent and effluent, and S04-E08 reports '99.999 % destruction of all PFAS ... at 650 \u00b0C and residence time of ~ 30 s', matching the interpretation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "S04-E01 uses the term 'PFAS destruction and removal efficiency (DRE)'. This matches the reported_term.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "S04-E01 defines '%deF' as conversion of organic fluorine to fluoride ions, which is a defluorination endpoint; S04-E06 and S04-E08 discuss complete defluorination at 650 \u00b0C.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "S04-E01 defines %deF as percentage of initial organic fluorine converted to fluoride ions; S04-E06 states free fluoride measurement by IC shows complete PFOS defluorination at 650 \u00b0C; S04-E08 mentions 'complete defluorination' at 650 \u00b0C and ~30 s. This matches the interpretation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].reported_term",
+        "reason": "S04-E01 explicitly uses 'overall defluorination efficiency (%deF)'. 'Complete defluorination' is described in S04-E06 and S04-E08.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].endpoint_type",
+        "reason": "S04-E06 describes degradation pathways (oxidative C\u2013S bond cleavage, decarboxylation, sequential \u2013CF2 elimination), which are transformation processes, so endpoint_type='transformation' is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].interpretation",
+        "reason": "S04-E06 gives the detailed PFOS degradation pathway (C\u2013S cleavage, decarboxylation, \u2013CF2 elimination). S04-E08 indicates essentially complete destruction at 650 \u00b0C and ~30 s. The interpretation accurately summarizes this, with the note that intermediates are less emphasized at high T being a reasonable inference.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[2].reported_term",
+        "reason": "S04-E06 and S04-E08 refer to 'degradation behavior', 'reaction routes', and 'PFAS destruction'; these align with the reported terms describing transformation/decomposition.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[3].endpoint_type",
+        "reason": "This endpoint is used to capture the authors' broader use of the term 'destruction' beyond strict analytical endpoints. The source repeatedly uses 'destruction' as a general term (e.g., title and S04-E04, E06, E08), so classifying it as 'other' is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "endpoints[3].interpretation",
+        "reason": "The source clearly uses 'destruction' to describe near-complete PFAS removal (S04-E06, E08) and directly measures parent PFAS loss and fluoride release (S04-E01, E06). However, the explicit statement that carbon mineralization is not measured is an inference from the absence of carbon fate measurements in the provided chunks rather than a direct statement in the cited text.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[3].reported_term",
+        "reason": "The term 'PFAS destruction' is used repeatedly in the article (title and within S04-E04, E06, E08), matching the reported_term.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].statement",
+        "reason": "S04-E06 states 'Additional characterization of intermediate species in gas and liquid effluent is required to fully elucidate a chemical reaction mechanism for PFAS destruction in SCWO environments,' which directly supports the limitation; the rest of the statement is a faithful paraphrase.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1].statement",
+        "reason": "S04-E08 describes a continuous flow SCWO reactor treating PFOS, PFHpS, and PFOA in PFAS-impacted liquids; inferring limited applicability to other PFAS structures, complex matrices, and larger scales is a reasonable design-based limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix.value",
+        "reason": "S04-E06 refers to 'PFAS-impacted matrices' and S04-E08 to PFAS-impacted liquids treated in a continuous flow SCWO reactor. This supports 'PFAS-impacted liquids (aqueous PFAS solutions) treated in continuous SCWO reactor' as the matrix.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "S04-E08 reports 'operating temperature of 650 \u00b0C' at which 99.999% destruction and complete defluorination were observed; this matches the value 650.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "Temperature is expressed in \u00b0C in S04-E08, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "S04-E08 states 'residence time of ~ 30 s' for the condition with 99.999% destruction and complete defluorination, matching '~30'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "Residence time is given in seconds (s) in S04-E08, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "S04-E03 states the fuel\u2013air ratio 'was held approximately constant at ~ 60 % excess air,' matching the value '~60'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "The excess air is given as a percent in S04-E03, matching the '%' unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "S04-E01 describes fluoride ions concentration in effluents 'detected by IC', corresponding to ion chromatography for fluoride analysis.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "This field appropriately has no unit for an analysis method; leaving unit null is consistent with the qualitative nature of the entry.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].value",
+        "reason": "S04-E01 states residual PFAS concentrations in liquid effluents were 'measured by LC-MS/MS', matching the method name.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].unit",
+        "reason": "As an analytical method, no unit is expected; null unit is appropriate and consistent with the qualitative nature of this condition.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "pfas_scope[0].value",
+        "reason": "S04-E06 and E08 clearly involve PFOS, but the full expanded name 'perfluorooctane sulfonate' is not shown in the provided chunks. The acronym support is clear; the expanded name is inferred from common usage.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "pfas_scope[1].value",
+        "reason": "S04-E02 and E08 explicitly mention 'PFHpS', but the expansion 'perfluoroheptane sulfonate' is not present in the cited text. The acronym is supported; the full name is inferred.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "pfas_scope[2].value",
+        "reason": "S04-E06 and E08 explicitly mention 'PFOA', but the expansion 'perfluorooctanoic acid' is not shown in the provided chunks. The abbreviation is supported; the full name is inferred.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "S04-E08 reports '99.999 % destruction of all PFAS' at 650 \u00b0C and ~30 s; this matches the value 99.999 with value_form 'exact_numeric'.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The 99.999 value in S04-E08 is clearly expressed as a percent ('% destruction'), matching the '%' unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].name",
+        "reason": "S04-E01 defines 'PFAS destruction and removal efficiency (DRE)'; using this as the name 'destruction_and_removal_efficiency_DRE' is consistent with the source terminology.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "residuals_byproducts[0].statement",
+        "reason": "S04-E02 states that F atoms released during PFAS mineralization form HF, which after cooling/depressurizing enters the aqueous phase where H+ and F\u2212 are present. However, the mention of 'high-temperature conditions (including those approaching 650 \u00b0C)' and the specific tie to IC quantification are not present in S04-E02 (the IC method is defined in S04-E01). Thus, the mechanistic part is supported but some qualifiers and method linkage are inferred.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "study_scale.value",
+        "reason": "S04-E08 describes a 'continuous flow SCWO reactor' treating PFOS, PFHpS, and PFOA; S04-E06 notes PFAS-impacted matrices. The 'continuous-flow SCWO reactor treating PFOS, PFHpS, and PFOA' portion is supported. The designation 'bench-scale' and explicit 'aqueous feed' are reasonable inferences but are not stated in the cited text.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "S04-E08 describes a continuous flow SCWO reactor and notes that autogenic operation is sustained by reaction of an ethanol/air mixture, supporting 'Continuous supercritical water oxidation (SCWO) with ethanol/air co-fuel' as the treatment.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT09-bge_llm_local_rag-S04-R01",
+    "record_usable": true,
+    "record_usable_rationale": "Core aspects\u2014source identity, treatment (continuous SCWO with ethanol/air co-fuel), aqueous PFAS matrix, PFAS scope (PFOS, PFHpS, PFOA), operating conditions (650 \u00b0C, ~30 s, ~60% excess air), endpoint types (parent loss and defluorination), and the key quantitative DRE value (99.999% at 650 \u00b0C and ~30 s)\u2014are directly supported by the cited text. Partial supports involve minor interpretive qualifiers (e.g., expanded PFAS names, bench-scale descriptor, and some mechanistic phrasing), but these do not materially misrepresent the study\u2019s data or endpoints. The record is therefore usable for synthesis with attention to noted qualifiers.",
+    "task_id": "RT09"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

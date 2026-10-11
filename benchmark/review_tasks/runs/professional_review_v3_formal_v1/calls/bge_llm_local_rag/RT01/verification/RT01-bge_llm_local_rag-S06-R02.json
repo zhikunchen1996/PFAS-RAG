@@ -1,0 +1,326 @@
+{
+  "call_key": "RT01:bge_llm_local_rag:verify:RT01-bge_llm_local_rag-S06-R02",
+  "created_at": "2026-08-05T03:49:25.237979+00:00",
+  "raw_response_text": "{\"task_id\":\"RT01\",\"record_id\":\"RT01-bge_llm_local_rag-S06-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record DOI/URL exactly matches the DOI given in the source metadata (10.1039/c9ew00409b; https://doi.org/10.1039/c9ew00409b).\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFOA (perfluorooctanoic acid) is explicitly identified as a target PFAS in the article text (e.g., Table 1 and introduction in S06-E04, S06-E05).\"},{\"field_path\":\"pfas_scope[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"PFOS (perfluorooctane sulfonic acid) is explicitly identified as a target PFAS in the article text (e.g., Table 1 and introduction in S06-E04, S06-E05).\"},{\"field_path\":\"matrix.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E07 states that the design scenario uses 5 mg C per L background NOM at pH 7, and C0 \u2264 50 000 ng L\u22121 PFOA/PFOS. S06-E06 notes that 5 mg C/L NOM was selected based on sampled recycled wastewaters and is representative of many surface waters, supporting the characterization as natural or recycled water with PFAS spiked up to 50 000 ng/L.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E07: \u201cC0 \u2264 50 000 ng L\u22121\u201d clearly gives an upper-bound initial concentration of 50 000 ng/L, matching the recorded numeric value 50000.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source uses \u201cng L\u22121\u201d (S06-E07), which corresponds to the recorded unit ng/L.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E07: the conclusion states that the resin dosage is sufficient to reduce influent PFOA/PFOS below 70 ng L\u22121; the recorded value 70 matches this effluent target.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The effluent target is reported as 70 ng L\u22121 in S06-E07, consistent with the unit ng/L.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E07 reports \u201c5 mg C per L background NOM,\u201d matching the recorded value 5.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The text gives \u201c5 mg C per L\u201d (S06-E07), which matches the recorded unit mg C/L.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E07 states \u201cpH = 7,\u201d which matches the recorded value 7.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"pH is dimensionless and the record leaves unit null; this is appropriate and not in conflict with the source (S06-E07).\"},{\"field_path\":\"operating_conditions[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E07 states \u201cT =2 3 \u00b0C,\u201d and S06-E08 also uses \u201cT =2 3 \u00b0C,\u201d supporting the recorded temperature value 23.\"},{\"field_path\":\"operating_conditions[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Temperature is reported in \u201c\u00b0C\u201d in S06-E07 and S06-E08; the recorded unit \u00b0C is consistent.\"},{\"field_path\":\"operating_conditions[5].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E07: \u201cA resin dosage of 1000 mg L (4.5 mL L\u22121) is sufficient\u2026\u201d clearly supports the design resin dosage value 1000.\"},{\"field_path\":\"operating_conditions[5].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source states \u201c1000 mg L\u201d (S06-E07), which is standardly interpreted as mg/L; the recorded unit mg/L is consistent.\"},{\"field_path\":\"operating_conditions[6].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E02 notes the resin has quaternary amine based functional groups \u201csame as Purolite A860, tested here,\u201d and S06-E07 mentions exchange of chloride ions; this supports the description of a strong-base anion resin with quaternary amine groups and chloride counterion similar to Purolite A860.\"},{\"field_path\":\"operating_conditions[6].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This operating condition is descriptive (resin type); the record correctly leaves the unit null and no unit is implied by the source (S06-E02, S06-E07).\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E07 describes achieving influent PFOA/PFOS concentrations reduced to below 70 ng L\u22121, which is a change in aqueous concentration. Classifying this as a \u2018removal\u2019 endpoint is consistent with the measurement basis.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The second endpoint summarizes mechanistic interpretation (ion exchange of chloride, minimal hydrophobic adsorption, film diffusion limitation). This is not a concentration-based performance metric, so classifying it as endpoint_type \u2018other\u2019 is appropriate and consistent with S06-E07.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E07 explicitly states that a resin dosage of 1000 mg L (4.5 mL L\u22121) is sufficient to reduce influent PFOA/PFOS at C0 \u2264 50 000 ng L\u22121 below 70 ng L\u22121 with 5 mg C/L NOM at pH 7 and 23 \u00b0C, matching the interpretation text.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E07: bullet points state that removal involved equivalent exchange of chloride ions with minimal hydrophobic adsorption and that Biot number analysis indicates film diffusion is limiting for C0 \u2264 50 \u00b5g L\u22121 and 100 mg/L resin. This supports the described mechanism and mass-transfer limitation.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The limitation is labeled design_inferred and correctly infers from S06-E06 and S06-E07 that the key design point is from batch tests at a single NOM level (5 mg C/L) and pH 7, with single PFAS systems; it also reasonably notes that performance may differ under flow-through or mixed-PFAS conditions. These follow logically from the experimental description, so the design_inferred limitation is supported.\"},{\"field_path\":\"limitations[1]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S06-E07 explicitly reports that Biot number estimations indicate film diffusion is the limiting factor for C0 \u2264 50 \u00b5g L\u22121 at a 100 mg/L resin dose. However, the additional statement that this \u201cimplies that contact time and hydraulics will influence removal performance beyond equilibrium capacity\u201d is an interpretation not directly reported in the text, yet the limitation is labeled author_reported. The core fact (film diffusion limitation at given conditions) is supported, but the implication and author_reported basis are not fully supported.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E07 states \u201cA resin dosage of 1000 mg L (4.5 mL L\u22121) is sufficient\u2026\u201d; the recorded value 1000 matches exactly and is correctly flagged as exact_numeric.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The resin dose is reported in \u201cmg L\u201d (interpreted as mg/L) in S06-E07; the unit mg/L is consistent.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E07: the statement \u201cC0 \u2264 50 000 ng L\u22121\u201d for influent PFOA/PFOS at which the target can be met directly supports the recorded value 50000 as the maximum influent concentration; value_form exact_numeric is consistent with the discrete numeric limit.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The influent concentration is reported in ng L\u22121 in S06-E07; the recorded unit ng/L is correct.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E07 notes that removal involved equivalent exchange of chloride ions with minimal hydrophobic adsorption and gives no indication of PFAS transformation or mineralization. Inferring that the process achieves separation (ion exchange) rather than destruction is a reasonable design_inferred conclusion consistent with the evidence.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E06 describes jar tests with 1 L beakers, specified contact times, and controlled conditions, indicating bench-scale batch experiments. S06-E07 frames results as a design-relevant scenario for achieving regulatory targets in NOM-containing waters, supporting the recorded description.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S06-E02 indicates the tested resin has quaternary amine functional groups like Purolite A860, and S06-E07 provides the 1000 mg/L (4.5 mL/L) resin dose in batch contact. Together these support the description of strong-base anion exchange treatment with quaternary-amine resin and chloride exchange at the stated dose.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The experiment is a clearly specified bench-scale batch IX system with defined resin dose, NOM concentration, pH, temperature, influent concentration, and a regulatory effluent target (S06-E06, S06-E07). This supports the judgment that results are comparable with conditions to other IX or adsorption systems when normalized appropriately.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The explanation that comparability is enabled by a clearly specified batch IX design point (resin dose, NOM level, pH, influent and effluent limits) follows directly from S06-E06 and S06-E07. No contradictions with the source are present.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014source identity, PFAS (PFOA, PFOS), water matrix and NOM level, pH and temperature, resin type and dose, removal endpoint, and quantitative design findings (required resin dose and maximum influent concentration to meet 70 ng/L)\u2014are all directly supported. The only minor issue is an over-interpreted author_reported limitation; this does not affect the core quantitative or mechanistic data, so the record remains suitable for synthesis with attention to the noted qualifier on that limitation field.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused, data-grounded review explaining how an engineer should select an adsorption medium for a specified PFAS profile and water matrix.\",\"task_id\":\"RT01\",\"title\":\"Selecting an adsorption medium for a defined PFAS water-treatment application\"}\n\nTask-specific extraction objective:\nExtract adsorbent identity and properties, PFAS identity, water matrix, influent concentration, pH, co-constituents, dose or bed conditions, adsorption endpoint, quantitative result, and reported mechanism.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Dixit, F.; Barbeau, B.; Mostafavi, S.G.; Mohseni, M. PFOA and PFOS removal by ion exchange for water reuse and drinking applications: role of organic matter characteristics. Environ. Sci.: Water Res. Technol. 2019, 5, 1782\\u20131795.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S06-E06\",\n      \"S06-E07\"\n    ],\n    \"reason\": \"This record provides a clearly specified batch IX design point (resin dose, NOM level, pH, influent limit, and effluent target) for PFOA/PFOS, allowing direct comparison with other adsorption or ion-exchange systems operated at similar influent concentrations and water chemistry when normalized per volume treated.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1039/c9ew00409b\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S06-E07\"\n      ],\n      \"interpretation\": \"With 1000 mg/L of the quaternary-amine IX resin at pH 7 and 5 mg C/L NOM, influent PFOA and PFOS up to 50,000 ng/L can be reduced to below 70 ng/L, meeting the cited regulatory guideline.\",\n      \"reported_term\": \"PFAS removal to below guideline limit\"\n    },\n    {\n      \"endpoint_type\": \"other\",\n      \"evidence_locator_ids\": [\n        \"S06-E07\"\n      ],\n      \"interpretation\": \"PFAS removal involved equivalent ion exchange of chloride ions on the resin with negatively charged PFOA and PFOS, with minimal contribution from hydrophobic adsorption; film diffusion was identified as the mass-transfer limiting step at lower concentrations and moderate resin dosages.\",\n      \"reported_term\": \"removal mechanism\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S06-E06\",\n        \"S06-E07\"\n      ],\n      \"statement\": \"Design recommendation is based on batch equilibrium conditions with single-compound PFAS (PFOA or PFOS), one NOM level (5 mg C/L), and pH 7; performance and required resin dose could differ under flow-through conditions, mixed PFAS, or varying pH and NOM characteristics.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S06-E07\",\n        \"S06-E06\"\n      ],\n      \"statement\": \"Film diffusion was indicated as the limiting mass-transfer step at PFAS concentrations \\u226450 \\u00b5g/L and resin dosage 100 mg/L, implying that contact time and hydraulics will influence removal performance beyond equilibrium capacity.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S06-E06\",\n      \"S06-E07\"\n    ],\n    \"value\": \"Water with 5 mg C/L background natural organic matter at pH 7, representing natural or recycled waters, spiked with PFOA and PFOS up to 50,000 ng/L\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S06-E07\"\n      ],\n      \"name\": \"PFAS initial concentration upper bound\",\n      \"qualifiers\": \"Scenario considers influent PFOA/PFOS concentration C0 \\u2264 50,000 ng/L\",\n      \"unit\": \"ng/L\",\n      \"value\": \"50000\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S06-E07\"\n      ],\n      \"name\": \"Target effluent concentration\",\n      \"qualifiers\": \"USEPA guideline concentration for combined PFOA/PFOS, used as treatment target\",\n      \"unit\": \"ng/L\",\n      \"value\": \"70\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S06-E07\",\n        \"S06-E06\"\n      ],\n      \"name\": \"NOM concentration\",\n      \"qualifiers\": \"Background natural organic matter concentration for the design scenario\",\n      \"unit\": \"mg C/L\",\n      \"value\": \"5\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S06-E07\"\n      ],\n      \"name\": \"pH\",\n      \"qualifiers\": \"Solution pH for the IX design scenario\",\n      \"unit\": null,\n      \"value\": \"7\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S06-E08\",\n        \"S06-E07\"\n      ],\n      \"name\": \"Temperature\",\n      \"qualifiers\": \"Reported experimental temperature T = 23 \\u00b0C for batch IX experiments\",\n      \"unit\": \"\\u00b0C\",\n      \"value\": \"23\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S06-E07\"\n      ],\n      \"name\": \"Resin dosage (design scenario)\",\n      \"qualifiers\": \"Equivalent to 4.5 mL resin per L used to meet regulatory target with NOM present\",\n      \"unit\": \"mg/L\",\n      \"value\": \"1000\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S06-E02\",\n        \"S06-E07\"\n      ],\n      \"name\": \"Resin type and functional group\",\n      \"qualifiers\": \"Text notes previously reported PFAS capacities for Purolite A600E, A520E, A532E and states that the resin tested here has the same quaternary amine functional groups as Purolite A860; removal proceeds by exchange of chloride ions.\",\n      \"unit\": null,\n      \"value\": \"Strong-base anion exchange resin with quaternary amine functional groups and chloride counterion (similar to Purolite A860)\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S06-E07\",\n        \"S06-E04\"\n      ],\n      \"value\": \"Perfluorooctanoic acid (PFOA)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S06-E07\",\n        \"S06-E04\"\n      ],\n      \"value\": \"Perfluorooctane sulfonic acid (PFOS)\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S06-E07\"\n      ],\n      \"name\": \"Required resin dose to meet guideline\",\n      \"qualifiers\": \"A resin dosage of 1000 mg/L (4.5 mL/L) is reported as sufficient to reduce influent PFOA/PFOS up to 50,000 ng/L below 70 ng/L with 5 mg C/L NOM at pH 7 and 23 \\u00b0C.\",\n      \"unit\": \"mg/L\",\n      \"value\": \"1000\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S06-E07\"\n      ],\n      \"name\": \"Maximum influent concentration meeting target\",\n      \"qualifiers\": \"Upper bound influent concentration C0 \\u2264 50,000 ng/L for which the stated resin dose achieves effluent below 70 ng/L.\",\n      \"unit\": \"ng/L\",\n      \"value\": \"50000\",\n      \"value_form\": \"exact_numeric\"\n    }\n  ],\n  \"record_id\": \"RT01-bge_llm_local_rag-S06-R02\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S06-E07\"\n      ],\n      \"statement\": \"PFAS were removed from the aqueous phase primarily via chloride ion exchange on the resin, with no discussion of transformation products or mineralization; thus, the technology achieves separation rather than destruction.\"\n    }\n  ],\n  \"source_id\": \"S06\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S06-E07\",\n      \"S06-E03\",\n      \"S06-E06\"\n    ],\n    \"value\": \"Bench-scale batch IX design scenario for achieving regulatory targets in NOM-containing water\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S06-E02\",\n      \"S06-E07\"\n    ],\n    \"value\": \"Strong-base anion exchange using a quaternary-amine resin (same functional group chemistry as Purolite A860) with chloride counterion, dosed at 1000 mg/L (4.5 mL/L) in batch contact\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 9,\n  \"bge_score\": 0.4488433301448822,\n  \"citation\": \"Dixit, F.; Barbeau, B.; Mostafavi, S.G.; Mohseni, M. rsc.li/es-water PFOA and PFOS removal by ion exchange for water reuse and drinking applications: role of organic matter characteristics \\u2020. Environmental Science: Water Research & Technology 2019 5 1782-1795. DOI: 10.1039/c9ew00409b.\",\n  \"doi\": \"10.1039/c9ew00409b\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1039/c9ew00409b\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 4,\n      \"locator_id\": \"S06-E01\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.03319881856441498,\n        \"RT01-C2\": 0.0658654123544693,\n        \"RT01-C3\": 7.0955567935016e-05,\n        \"umbrella\": 0.17868046462535858\n      },\n      \"section\": \"methods\",\n      \"text\": \"osmosis, although highly effective, requires additional pre- treatment steps to prevent membrane fouling, therefore necessitating the need for multiple processes to achieve complete PFAS removal. 13,14 As an alternative, scientific studies have evaluated the effectiveness of numerous carbon- based adsorbent materials for PFAs removal. 15,16 However, problems with high Organic Matter (OM) competition, adsorbent regeneration and design of adsorbents with the desired surface chemistry/properties remain important challenges, thereby limiting the commercial application of carbon-based adsorption processes. For instance, scientific studies have demonstrated variable PFAS removal efficiency with changing OM characteristics. 16 Similarly, evidence of pore blockage and competitive interactions between micropollutants and OM has also been reported. 17\\u201319 Anionic ion exchange (IX) resins offer a cost-effective alternative for removing OM from natural waters. 20,21 Under pH relevant to water treatment, PFOA and PFOS are negatively charged and can therefore be simultaneously removed by IX resins. 22 However, effluent OM (EfOM) in recycled waters and natural organic matter (NOM) in surface and ground water sources are usually present at concentrations (mg L \\u22121), much higher than those of PFAS (ng L \\u22121), which result in competition for uptake sites via IX. Specifically, OM characteristics, such as\"\n    },\n    {\n      \"corpus_chunk\": 24,\n      \"locator_id\": \"S06-E02\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.039328645914793015,\n        \"RT01-C2\": 0.006132329348474741,\n        \"RT01-C3\": 3.7651810998795554e-05,\n        \"umbrella\": 0.021144116297364235\n      },\n      \"section\": \"methods\",\n      \"text\": \"resin charge ratio is \\u223c1, a similar amount of PFOA (say 20 \\u03bcg PFOA: 5 \\u00d7 10\\u22122 \\u03bceq) would require a higher amount of resin exchange sites (in meq) when compared to similar amount of PFOS (lower charge density, 10 \\u03bcg PFOS: 4 \\u00d7 10\\u22122 \\u03bceq, 1.2 fold less exchange site requirements). Scientific studies with different ion exchange resins have indicated a higher removal of PFAS compounds with sulphonic groups over carboxyl group containing PFAS by IX resins with quaternary amine based functional groups (same as Purolite A860, tested here). For instance, Purolite A600E, A520E and A532E were reported with a maximum uptake capacities of 125 mg g \\u22121, 134 mg g \\u22121 and 145 mg g \\u22121, respectively, for PFOA (or \\u223c47, 51 and 55 neq meq \\u22121), while uptakes capacities of 186 mg g \\u22121, 210 mg g \\u22121 and 260 mg g \\u22121 were, respectively, reported for PFOS compounds (or 58, 66 and 82 neq meq \\u22121).26,52 A similar observation was made over PFBA (butanoic acid) and PFBS (butane sulphonate) compounds. 26 Consequently, the higher affinity towards PFOS by A860 could also be attributed to the resin properties and its selective affinity towards specific\"\n    },\n    {\n      \"corpus_chunk\": 40,\n      \"locator_id\": \"S06-E03\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.0009511697571724653,\n        \"RT01-C2\": 0.11440698802471161,\n        \"RT01-C3\": 5.4681600886397064e-05,\n        \"umbrella\": 0.0032254415564239025\n      },\n      \"section\": \"methods\",\n      \"text\": \"L\\u22121 (see S.6 \\u2020 for details). Inorganic ions have previously been reported as strong competitors for organic compounds during IX process (with the tested resin) and would have therefore resulted in a lower PFOA/PFOS uptake via direct competition for active exchange sites when compared to SRNOM or any other IHSS isolate (5 mg C per L) with similar concentration. 43,48 Therefore, the model was estimated considering the competitive effects from the EfOM and inorganic ions utilizing a multi-component EBC model (details in S.4, \\u2020 48). Moreover, the EBC model fits for all matrices (except SRHA) and indicated a high degree of correlation ( R2 > 0.9) with low errors (Marquardt's percent standard deviation (MPSD) <10, data not shown 58). Hence, it can be concluded that the EBC model could be effectively used to predict the PFAS removal by IX for various source water characteristics, provided they do not exhibit pore blockage (such as what was observed for SRHA). 3.5 Impact of NOM characteristics on PFAS kinetics The kinetics of PFOA and PFOS uptakes were studied at different initial concentrations (5 \\u2013100 \\u03bcgL \\u22121), in DI water adjusted at pH \\u223c 7. The studies were performed to evaluate the\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S06-E04\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.01438345666974783,\n        \"RT01-C2\": 0.038803935050964355,\n        \"RT01-C3\": 0.000239221568335779,\n        \"umbrella\": 0.10345511883497238\n      },\n      \"section\": \"methods\",\n      \"text\": \"Factors influencing the uptake behavior included the PFOA and PFOS concentrations, resin dosage, and background OM characteristics, more specifically the charge density and molecular weight distribution of source water OM. The equivalent background concentration (EBC) was employed to evaluate the competitive uptake between OM and PFAS. Experimental data were fitted to different mathematical and physical models to evaluate the competitive interactions. Further, IX was able to achieve complete PFAS removal with simultaneous >60% dissolved organic carbon (DOC) removal. Evidence of size exclusion and pore blockage was also observed in the presence of humics and larger molecular weight organic fractions. Results of this study indicate that IX exhibits great potential for simultaneous OM and PFAS removal for drinking and potable water reuse applications. 1. Introduction Drinking water supplies are typically derived from a variety of surface and ground water sources. Among the regulated chemical contaminants associated with the drinking water, perfluoroalkyl compounds (PFAS) are a significant concern. 1 PFAS exhibit exceptionally high thermal resistance and are chemically inert. Consequently, PFAS are commonly used as fire-fighting foam components and industrial impregnating agents for textile, cosmetic and leather industries. Toxicological studies have indicated that PFAS are bio- accumulative and pose numerous health risks to humans. 2,3 Among the environmentally persistent PFAS, perfluorooctanoic acid (PFOA) and perfluorooctane sulfonic\"\n    },\n    {\n      \"corpus_chunk\": 12,\n      \"locator_id\": \"S06-E05\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.00979575514793396,\n        \"RT01-C2\": 0.02069963328540325,\n        \"RT01-C3\": 3.903207471012138e-05,\n        \"umbrella\": 0.11315154284238815\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"rpm for 48 hours. The final pH was measured when the resins were settled down. The pH at which the NaCl solution did not change was selected as the pHpzc. Note that pHpzc with less than \\u00b10.1 was chosen to ensure reproducibility. Table 1 Characteristics of the NOM fractions, PFOA and PFOS NOM fractionsa and PFAS Charge density (meq g \\u22121) Average apparent molecular weight (Da) Suwannee River natural organic matter (SRNOM) 10.2 (meq per g C) b 1030c Pony Lake fulvic acid (PLFA) 6.8 (meq per g C) b 760c Suwannee River humic acid (SRHA) 8.9 (meq per g C) b 1540c Suwannee River fulvic acid (SRFA) 10.9 (meq per g C) b 1070c Perfluoro-octanoic acid (PFOA) 2.4 (meq per g PFOA) or 10.4 (meq per g C) d 414d Perfluoro-octanoesulfonic acid (PFOS) 2.0 (meq per g PFOS) d 500d Wastewater characteristics Water matrix DOC (mg C per L) Average molecular weight e (Da) Initial pH Synthetic effluent 5.5 \\u00b1 0.2 1200 7.2 \\u00b1 0.2 Wastewater effluent f 5.0 \\u00b1 0.3 1150 7.5 \\u00b1 0.3\"\n    },\n    {\n      \"corpus_chunk\": 15,\n      \"locator_id\": \"S06-E06\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.002921590581536293,\n        \"RT01-C2\": 0.011746498756110668,\n        \"RT01-C3\": 8.439322118647397e-05,\n        \"umbrella\": 0.10376369208097458\n      },\n      \"section\": \"methods\",\n      \"text\": \"PLFA, or real and synthetic wastewaters, respectively. These selected range of PFAS concentration were adopted considering the wide concentration range of PFAS detected in natural environments. 46 Further, studies at higher concentrations (say in \\u03bcg PFAS per L) provided a more comprehensive and clearer understanding of the competitive behavior with NOM fractions. Nonetheless, in our selected range, we did incorporate and study the uptake at more commonly encountered PFAS concentrations (which are usually in ng L \\u22121 to \\u03bcgL \\u22121 (ref. 47)). The NOM concentration of 5 mg C per L was selected as the sampled recycled wastewaters exhibited this concentration. It is also a representative concentration for many surface water sources. 48 After 24 h, the resins were filtered from the treated water using a 0.45 \\u03bcm pre-rinsed syringe filters (Fisher Scientific, SLHV033RS, ON, Canada), prior to determining the final DOC and PFAS concentration. For kinetic studies, 2.2 mL of resin (equivalent to a dry resin dosage of 500 mg)) was mixed with 1 L of water in circular 1 L beakers agitated with a Phipps & Bird 9900 Jar tester (Richmond, VA, USA) operated at 150 rpm for contact times varying from 2 minutes up to 24 hours. Triplicate experiments were performed for every experimental\"\n    },\n    {\n      \"corpus_chunk\": 48,\n      \"locator_id\": \"S06-E07\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.014415846206247807,\n        \"RT01-C2\": 0.10191107541322708,\n        \"RT01-C3\": 3.728937008418143e-05,\n        \"umbrella\": 0.04531541466712952\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"dosage of 100 mg L \\u22121 (0.45 mL L \\u22121). Therefore, for commercial resin dosages which are \\u223c4\\u201310 mL L \\u22121,60 a complete PFAS removal can be achieved with simultaneous >60% DOC removal. Consequently, IX holds promising potentials for practical application in drinking water treatment and potable reuse applications. 4. Conclusion The following conclusions were derived from this research: \\u0081 Removal of PFAS via IX involved equivalent exchange of chloride ions with minimal influence of hydrophobic adsorption. \\u0081 A resin dosage of 1000 mg L (4.5 mL L \\u22121) is sufficient to get the influent PFOA/PFOS concentration ( C0 \\u2264 50 000 ng L\\u22121) below 70 ng L \\u22121 (USEPA Guideline) with 5 mg C per L background NOM at pH = 7 ( T =2 3 \\u00b0C). \\u0081 Uptake of PFOA and PFOS is significantly impacted by the background organic matter's charge density and, more importantly, by the molecular weight distribution. \\u0081 IAST-EBC model could be used to predict the IX performance for PFOA and PFOS removal in natural and synthetic recycled and impaired waters. \\u0081 Mass transfer biot number estimations indicate that film diffusion is the limiting factor for PFOA and PFOS concentration of C0 \\u2264 50 \\u03bcgL \\u22121 (resin dosage 100 mg\"\n    },\n    {\n      \"corpus_chunk\": 37,\n      \"locator_id\": \"S06-E08\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.0001459653867641464,\n        \"RT01-C2\": 0.10136909782886505,\n        \"RT01-C3\": 3.729320815182291e-05,\n        \"umbrella\": 0.00019779267313424498\n      },\n      \"section\": \"methods\",\n      \"text\": \"density and average molecular weight in Fig. 4(A) and (B). As depicted, the concentration of competing compounds Fig. 3 Equilibrium studies in the presence of different OM fractions (PLFA, SRNOM, SRFA and SRHA, C0 = 5 mg C per L), investigating the removal of (A) PFOA and (B) PFOS, (C) DOC (in meq L \\u22121), and (D) DOC (as percentage removal). Dotted lines indicate a fit to IAST-EBC model. Data values indicate experimental results. C0 for PFOA and PFOS = 10 \\u03bcg C per L, resin dosage 10 \\u20131000 mg IX per L at pH 7.0 and T =2 3 \\u00b0C. No statistical difference was observed between the DOC removal (in meq 3(C) or as% 3(D)) in waters containing PFOA or PFOS ( p < 0.05). Environmental Science: Water Research & Technology Paper Published on 02 September 2019. Downloaded by Queens University - Kingston on 4/18/2026 4:32:43 AM. View Article Online 1790 | Environ. Sci.: Water Res. Technol.,2 0 1 9 ,5,1 7 8 2\\u20131795 This journal is \\u00a9 The Royal Society of Chemistry 2019\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2019 - Dixit - rsc.li - es-water PFOA and PFOS removal by ion exchange for water reuse and drinking applications - role of organic matter characteristics \\u2020.pdf\",\n  \"source_id\": \"S06\",\n  \"title\": \"rsc.li/es-water PFOA and PFOS removal by ion exchange for water reuse and drinking applications: role of organic matter characteristics \\u2020\",\n  \"year\": \"2019\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "f17d25cc0e64de04e341c3e095bce07b0a6bf0aaaaa053afd9d5bb210f5ebf91",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.046018,
+    "finish_reason": "stop",
+    "input_tokens": 6864,
+    "latency_seconds": 28.978990874951705,
+    "output_tokens": 3859,
+    "reasoning_tokens": 1345,
+    "response_id": "chatcmpl-E9MuepGYhqAKEEBHcEPngbFhpswFP",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 10723,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The record DOI/URL exactly matches the DOI given in the source metadata (10.1039/c9ew00409b; https://doi.org/10.1039/c9ew00409b).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "PFOA (perfluorooctanoic acid) is explicitly identified as a target PFAS in the article text (e.g., Table 1 and introduction in S06-E04, S06-E05).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1].value",
+        "reason": "PFOS (perfluorooctane sulfonic acid) is explicitly identified as a target PFAS in the article text (e.g., Table 1 and introduction in S06-E04, S06-E05).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix.value",
+        "reason": "S06-E07 states that the design scenario uses 5 mg C per L background NOM at pH 7, and C0 \u2264 50 000 ng L\u22121 PFOA/PFOS. S06-E06 notes that 5 mg C/L NOM was selected based on sampled recycled wastewaters and is representative of many surface waters, supporting the characterization as natural or recycled water with PFAS spiked up to 50 000 ng/L.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "S06-E07: \u201cC0 \u2264 50 000 ng L\u22121\u201d clearly gives an upper-bound initial concentration of 50 000 ng/L, matching the recorded numeric value 50000.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The source uses \u201cng L\u22121\u201d (S06-E07), which corresponds to the recorded unit ng/L.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "S06-E07: the conclusion states that the resin dosage is sufficient to reduce influent PFOA/PFOS below 70 ng L\u22121; the recorded value 70 matches this effluent target.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The effluent target is reported as 70 ng L\u22121 in S06-E07, consistent with the unit ng/L.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "S06-E07 reports \u201c5 mg C per L background NOM,\u201d matching the recorded value 5.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "The text gives \u201c5 mg C per L\u201d (S06-E07), which matches the recorded unit mg C/L.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "S06-E07 states \u201cpH = 7,\u201d which matches the recorded value 7.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "pH is dimensionless and the record leaves unit null; this is appropriate and not in conflict with the source (S06-E07).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].value",
+        "reason": "S06-E07 states \u201cT =2 3 \u00b0C,\u201d and S06-E08 also uses \u201cT =2 3 \u00b0C,\u201d supporting the recorded temperature value 23.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].unit",
+        "reason": "Temperature is reported in \u201c\u00b0C\u201d in S06-E07 and S06-E08; the recorded unit \u00b0C is consistent.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[5].value",
+        "reason": "S06-E07: \u201cA resin dosage of 1000 mg L (4.5 mL L\u22121) is sufficient\u2026\u201d clearly supports the design resin dosage value 1000.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[5].unit",
+        "reason": "The source states \u201c1000 mg L\u201d (S06-E07), which is standardly interpreted as mg/L; the recorded unit mg/L is consistent.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[6].value",
+        "reason": "S06-E02 notes the resin has quaternary amine based functional groups \u201csame as Purolite A860, tested here,\u201d and S06-E07 mentions exchange of chloride ions; this supports the description of a strong-base anion resin with quaternary amine groups and chloride counterion similar to Purolite A860.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[6].unit",
+        "reason": "This operating condition is descriptive (resin type); the record correctly leaves the unit null and no unit is implied by the source (S06-E02, S06-E07).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "S06-E07 describes achieving influent PFOA/PFOS concentrations reduced to below 70 ng L\u22121, which is a change in aqueous concentration. Classifying this as a \u2018removal\u2019 endpoint is consistent with the measurement basis.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "The second endpoint summarizes mechanistic interpretation (ion exchange of chloride, minimal hydrophobic adsorption, film diffusion limitation). This is not a concentration-based performance metric, so classifying it as endpoint_type \u2018other\u2019 is appropriate and consistent with S06-E07.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "S06-E07 explicitly states that a resin dosage of 1000 mg L (4.5 mL L\u22121) is sufficient to reduce influent PFOA/PFOS at C0 \u2264 50 000 ng L\u22121 below 70 ng L\u22121 with 5 mg C/L NOM at pH 7 and 23 \u00b0C, matching the interpretation text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "S06-E07: bullet points state that removal involved equivalent exchange of chloride ions with minimal hydrophobic adsorption and that Biot number analysis indicates film diffusion is limiting for C0 \u2264 50 \u00b5g L\u22121 and 100 mg/L resin. This supports the described mechanism and mass-transfer limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "The limitation is labeled design_inferred and correctly infers from S06-E06 and S06-E07 that the key design point is from batch tests at a single NOM level (5 mg C/L) and pH 7, with single PFAS systems; it also reasonably notes that performance may differ under flow-through or mixed-PFAS conditions. These follow logically from the experimental description, so the design_inferred limitation is supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "limitations[1]",
+        "reason": "S06-E07 explicitly reports that Biot number estimations indicate film diffusion is the limiting factor for C0 \u2264 50 \u00b5g L\u22121 at a 100 mg/L resin dose. However, the additional statement that this \u201cimplies that contact time and hydraulics will influence removal performance beyond equilibrium capacity\u201d is an interpretation not directly reported in the text, yet the limitation is labeled author_reported. The core fact (film diffusion limitation at given conditions) is supported, but the implication and author_reported basis are not fully supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "S06-E07 states \u201cA resin dosage of 1000 mg L (4.5 mL L\u22121) is sufficient\u2026\u201d; the recorded value 1000 matches exactly and is correctly flagged as exact_numeric.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The resin dose is reported in \u201cmg L\u201d (interpreted as mg/L) in S06-E07; the unit mg/L is consistent.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "S06-E07: the statement \u201cC0 \u2264 50 000 ng L\u22121\u201d for influent PFOA/PFOS at which the target can be met directly supports the recorded value 50000 as the maximum influent concentration; value_form exact_numeric is consistent with the discrete numeric limit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "The influent concentration is reported in ng L\u22121 in S06-E07; the recorded unit ng/L is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "S06-E07 notes that removal involved equivalent exchange of chloride ions with minimal hydrophobic adsorption and gives no indication of PFAS transformation or mineralization. Inferring that the process achieves separation (ion exchange) rather than destruction is a reasonable design_inferred conclusion consistent with the evidence.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "S06-E06 describes jar tests with 1 L beakers, specified contact times, and controlled conditions, indicating bench-scale batch experiments. S06-E07 frames results as a design-relevant scenario for achieving regulatory targets in NOM-containing waters, supporting the recorded description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "S06-E02 indicates the tested resin has quaternary amine functional groups like Purolite A860, and S06-E07 provides the 1000 mg/L (4.5 mL/L) resin dose in batch contact. Together these support the description of strong-base anion exchange treatment with quaternary-amine resin and chloride exchange at the stated dose.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The experiment is a clearly specified bench-scale batch IX system with defined resin dose, NOM concentration, pH, temperature, influent concentration, and a regulatory effluent target (S06-E06, S06-E07). This supports the judgment that results are comparable with conditions to other IX or adsorption systems when normalized appropriately.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The explanation that comparability is enabled by a clearly specified batch IX design point (resin dose, NOM level, pH, influent and effluent limits) follows directly from S06-E06 and S06-E07. No contradictions with the source are present.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT01-bge_llm_local_rag-S06-R02",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014source identity, PFAS (PFOA, PFOS), water matrix and NOM level, pH and temperature, resin type and dose, removal endpoint, and quantitative design findings (required resin dose and maximum influent concentration to meet 70 ng/L)\u2014are all directly supported. The only minor issue is an over-interpreted author_reported limitation; this does not affect the core quantitative or mechanistic data, so the record remains suitable for synthesis with attention to the noted qualifier on that limitation field.",
+    "task_id": "RT01"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

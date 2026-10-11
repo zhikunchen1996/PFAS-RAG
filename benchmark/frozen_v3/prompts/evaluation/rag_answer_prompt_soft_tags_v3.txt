@@ -1,0 +1,103 @@
+You are answering a literature-grounded PFAS research question.
+
+The passages below were obtained by automatic retrieval. They may contain
+direct evidence, useful background, nearby but mismatched evidence, conflicting
+evidence, or irrelevant details.
+
+{context_mode_instructions}
+
+Question:
+{question_text}
+
+Retrieved context:
+{retrieved_context}
+
+Infer the researcher's requested operation from the visible question rather
+than from a predefined task label. The request may involve extraction,
+description, comparison, classification, explanation, synthesis, claim
+assessment, identification of limitations, or a bounded recommendation.
+Privately decompose it into material information needs and inspect all ten
+chunks before answering.
+
+For every source-dependent claim, verify the evidence dimensions that matter
+for that claim:
+
+- subject, entity, compound, or population;
+- intervention, process, material, instrument, or method;
+- matrix, environment, sample type, or application context;
+- study design, test mode, scale, and time basis;
+- outcome, endpoint, metric definition, and evidence polarity;
+- value, unit, denominator, uncertainty, and reporting basis;
+- operating, analytical, or environmental conditions;
+- comparison reference, system boundary, and claimed level of generality.
+
+Apply these general evidence rules:
+
+1. Topical relevance is not sufficient support. Use a chunk only for the
+   component and scope it actually establishes.
+2. Preserve the exact meaning of outcomes and metrics. Do not collapse
+   different outcomes into one label or infer an unreported endpoint.
+3. Report quantitative details only with the metric, unit, denominator, and
+   contextual qualifiers necessary to interpret them.
+4. Report procedural details only when they answer the request or are needed
+   to scope a finding, explain a reported relationship, or assess
+   comparability.
+5. Compare or rank evidence only when the relevant subjects, outcomes,
+   metrics, units, contexts, conditions, time bases, and system boundaries are
+   compatible. Otherwise present bounded examples and explain the source of
+   heterogeneity.
+6. Match causal and universal language to the strength and scope of the
+   evidence. Do not turn an association, isolated example, or condition-bound
+   result into a general rule.
+7. Absence of evidence is not evidence of absence. When assessing a claim,
+   distinguish explicit support, contradiction, limitation, heterogeneity,
+   uncertainty, and missing evidence.
+8. Preserve genuine conflicts instead of forcing one conclusion.
+9. Distinguish reported findings from your interpretation and any practical
+   recommendation. Make the reasoning boundary visible.
+
+Adapt the response form to the requested operation:
+
+- extract exact details when exact details are requested and supported;
+- organize categories when classification is requested;
+- align evidence on a common basis before comparing it;
+- answer a proposed claim directly before explaining qualifications;
+- synthesize recurring findings and disagreements without counting examples as
+  independent proof of a universal trend;
+- make a recommendation only at the level justified by the evidence.
+
+Use atomic citations:
+
+- cite only claims entailed by the full chunk;
+- put [C#] immediately after the supported sentence;
+- split a sentence when different parts require different sources;
+- do not cite general interpretation;
+- never cite an advisory tag as evidence.
+
+When retrieval is incomplete, answer supported components, identify what is
+missing, and do not substitute nearby evidence. A short uncited scientific
+interpretation may clarify the evidence, but it must not introduce
+study-specific details or replace a literature-supported answer.
+
+Match length and structure to the question. A narrow request should receive a
+short direct answer; a genuinely multi-component synthesis may be longer.
+Do not add sections, examples, values, conditions, or background merely
+because they appear in retrieval. Before responding, privately remove every
+detail that does not help answer, bound, compare, or interpret the request.
+
+Required output:
+
+1. Answerability
+Give one of: answerable, partially_answerable, examples_only,
+conflicting_or_heterogeneous, or insufficient_from_context, with a one-sentence
+reason.
+
+2. Answer
+Provide a complete, question-aligned answer with atomic citations.
+
+3. Uncertainty and limitations
+State only material missing evidence and scope, conflict, or comparability
+limits.
+
+4. Practical takeaway
+Give one concise, bounded conclusion or next evidence need.

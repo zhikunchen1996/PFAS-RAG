@@ -1,0 +1,242 @@
+{
+  "call_key": "RT10:gpt51_web_search:verify:RT10-gpt51_web_search-WEB16-R02",
+  "created_at": "2026-08-05T04:47:35.216129+00:00",
+  "raw_response_text": "{\"task_id\":\"RT10\",\"record_id\":\"RT10-gpt51_web_search-WEB16-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record DOI and URL match the source metadata (10.1021/acsestwater.5c00236).\"},{\"field_path\":\"citation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The title, journal, and year in the record are consistent with the source metadata for this ACS ES&T Water article.\"},{\"field_path\":\"treatment\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Both evidence chunks state that the article examines PFAA adsorption to colloidal activated carbon in groundwater, matching the treatment description.\"},{\"field_path\":\"matrix\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Chunk WEB16-E02 explicitly mentions an unimpacted groundwater matrix with added individual solutes, matching the matrix description.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The title and summary describe perfluoroalkyl acids (PFAA), and WEB16-E02 highlights effects on short-chain PFAA, matching the scope description.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source repeatedly refers to adsorption of PFAA to colloidal activated carbon, which is correctly classified as a sorption endpoint.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB16-E02 states that short-chain PFAA experienced additive inhibitory effects from multiple solutes when added to an unimpacted groundwater matrix, matching the description of matrix-modified adsorption relative to the baseline matrix.\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The summary describes the study as examining PFAA adsorption to colloidal activated carbon, matching the reported term.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB16-E01 notes adsorption to colloidal activated carbon; capturing this as 'Colloidal activated carbon (CAC)' as the treatment medium is directly supported.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"No numeric value is given or needed for the treatment medium, so leaving the unit null is appropriate and consistent with the source.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB16-E02 refers to 'an unimpacted groundwater matrix' as the base to which solutes were added, supporting 'Unimpacted groundwater' as the baseline matrix condition.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The baseline matrix is a qualitative condition; no numeric unit is required, so a null unit is appropriate.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB16-E02 states that individual solutes were added to an unimpacted groundwater matrix, supporting 'Addition of multiple individual groundwater solutes' as the matrix modification.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Matrix modification is described qualitatively with no numeric value; a null unit is consistent with the source.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The provided chunks give only qualitative descriptions of effects without listing specific solutes, concentrations, or adsorption metrics. It is a reasonable design-inferred limitation that only qualitative information is available from the inspected summary.\"},{\"field_path\":\"study_scale.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The chunks indicate an experimental adsorption study but do not explicitly state that it is laboratory-scale. Inferring 'Laboratory-scale' is reasonable yet not directly supported by the text, while 'scale not further specified' is accurate.\"},{\"field_path\":\"study_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The article is described as examining how solutes affect adsorption and is tagged in the source metadata as a primary experiment, supporting this classification.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The cited text only provides qualitative directionality of matrix effects without quantitative adsorption metrics or detailed operating conditions, so classifying comparability as 'descriptive_only' is consistent with the available evidence.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reason accurately reflects that only qualitative findings are available from the summary and that numeric data and detailed conditions could not be extracted, which matches the source limitations.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014source identity, PFAS scope, groundwater matrix with added solutes, adsorption to colloidal activated carbon, and qualitative matrix effects on short-chain PFAA adsorption\u2014are directly supported. The only partial issue is an inferred laboratory-scale designation, which does not materially mislead PFAS treatment synthesis and can be interpreted cautiously.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of how water-matrix effects should be tested and reported so that PFAS treatment performance can be translated beyond clean laboratory water.\",\"task_id\":\"RT10\",\"title\":\"Designing PFAS treatment studies that remain valid in real water\"}\n\nTask-specific extraction objective:\nExtract matrix constituent and concentration, PFAS identity, treatment, clean-water control, matrix-modified condition, direction and magnitude of effect, endpoint, proposed mechanism, constituent interaction, matched operating conditions, and study scale.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.hazadv.2023.100322\"],\"all_blocked_titles\":[\"effects of water matrix on per and poly fluoroalkyl substances pfas treatment physical separation and degradation processes a review\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.hazadv.2023.100322\"],\"anchor_id\":\"AR-ZEIDABADI-2023\",\"corpus_source\":\"2023 - Zeidabadi - Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment - Physical-separation and degradation processes - A review.pdf\",\"doi\":\"10.1016/j.hazadv.2023.100322\",\"title\":\"Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment: Physical-separation and degradation processes - A review\",\"url\":\"https://doi.org/10.1016/j.hazadv.2023.100322\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Impacts of Groundwater Constituents and Colloidal Activated Carbon (CAC) Surface Chemistry on the Adsorption of Perfluoroalkyl Acids (PFAA) in Aqueous Film-Forming Foam (AFFF)-Impacted Groundwater, ACS ES&T Water, 2025.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB16-E02\"\n    ],\n    \"reason\": \"The inspected text provides directionality of matrix effects (additive inhibition) on short-chain PFAA adsorption but lacks numeric data and detailed operating conditions, limiting use in cross-study performance comparisons.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1021/acsestwater.5c00236\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"sorption\",\n      \"evidence_locator_ids\": [\n        \"WEB16-E02\"\n      ],\n      \"interpretation\": \"Extent of short-chain PFAA adsorption to CAC from groundwater as affected by multiple groundwater solutes, which produced additive inhibitory effects relative to unimpacted groundwater.\",\n      \"reported_term\": \"PFAA adsorption to colloidal activated carbon\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB16-E02\"\n      ],\n      \"statement\": \"Only qualitative descriptions of additive inhibitory effects on short-chain PFAA adsorption are available from the inspected summary; specific solute identities, concentrations, and adsorption metrics are not reported.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB16-E02\"\n    ],\n    \"value\": \"Unimpacted groundwater matrix amended with individual groundwater solutes, evaluated for short-chain PFAA adsorption to CAC.\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB16-E01\"\n      ],\n      \"name\": \"Treatment medium\",\n      \"qualifiers\": \"Used as sorbent for PFAA from groundwater.\",\n      \"unit\": null,\n      \"value\": \"Colloidal activated carbon (CAC)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB16-E02\"\n      ],\n      \"name\": \"Water matrix baseline\",\n      \"qualifiers\": \"Served as base matrix for short-chain PFAA adsorption tests; individual solutes added to evaluate matrix effects.\",\n      \"unit\": null,\n      \"value\": \"Unimpacted groundwater\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB16-E02\"\n      ],\n      \"name\": \"Matrix modification\",\n      \"qualifiers\": \"Multiple solutes contributed additively to inhibit short-chain PFAA adsorption to CAC.\",\n      \"unit\": null,\n      \"value\": \"Addition of multiple individual groundwater solutes\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB16-E02\"\n      ],\n      \"value\": \"Perfluoroalkyl acids (PFAA), with emphasis on short-chain PFAA fraction.\"\n    }\n  ],\n  \"quantitative_findings\": [],\n  \"record_id\": \"RT10-gpt51_web_search-WEB16-R02\",\n  \"residuals_byproducts\": [],\n  \"source_id\": \"WEB16\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB16-E01\",\n      \"WEB16-E02\"\n    ],\n    \"value\": \"Laboratory-scale adsorption experiments (scale not further specified).\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB16-E01\",\n      \"WEB16-E02\"\n    ],\n    \"value\": \"Adsorption to colloidal activated carbon (CAC) in groundwater matrices.\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"publisher_page\",\n  \"capture_source_id\": \"WEB17\",\n  \"citation\": \"ACS ES&T Water (citation details from secondary source)\",\n  \"covered_component_ids\": [\n    \"RT10-C1\",\n    \"RT10-C2\"\n  ],\n  \"doi\": \"10.1021/acsestwater.5c00236\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1021/acsestwater.5c00236\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB16-E01\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"SERDP/ESTCP project page summary\",\n      \"text\": \"According to a SERDP/ESTCP project summary, this ACS ES&T Water article examines how individual groundwater solutes affect PFAA adsorption to colloidal activated carbon in AFFF\\u2011impacted groundwater.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB16-E02\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"SERDP/ESTCP project page summary\",\n      \"text\": \"Adding individual solutes to an unimpacted groundwater matrix showed that total organic carbon had the strongest negative impact on long\\u2011chain PFAA adsorption, while short\\u2011chain PFAA experienced additive inhibitory effects from multiple solutes.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://doi.org/10.1021/acsestwater.5c00236\",\n  \"source_id\": \"WEB16\",\n  \"source_limitations\": [\n    \"The ACS article itself was not directly accessible; evidence comes from a secondary summary that cites the paper and describes its key findings.\",\n    \"Quantitative adsorption coefficients and exact solute concentrations could not be extracted from the inspected text.\"\n  ],\n  \"title\": \"Impacts of Groundwater Constituents and Colloidal Activated Carbon (CAC) Surface Chemistry on the Adsorption of Perfluoroalkyl Acids (PFAA) in Aqueous Film-Forming Foam (AFFF)-Impacted Groundwater\",\n  \"year\": \"2025\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "91f9604ad95117ce8e954a0b1b160673c574e703e3dff745a6c1cad86ec3f94b",
+  "response_metadata": {
+    "cached_input_tokens": 1152,
+    "estimated_cost_usd": 0.01778775,
+    "finish_reason": "stop",
+    "input_tokens": 2579,
+    "latency_seconds": 16.388577250065282,
+    "output_tokens": 1586,
+    "reasoning_tokens": 483,
+    "response_id": "chatcmpl-E9Np9cYI39nBTar6bNGByQ49Buirc",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 4165,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The record DOI and URL match the source metadata (10.1021/acsestwater.5c00236).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "citation",
+        "reason": "The title, journal, and year in the record are consistent with the source metadata for this ACS ES&T Water article.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment",
+        "reason": "Both evidence chunks state that the article examines PFAA adsorption to colloidal activated carbon in groundwater, matching the treatment description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix",
+        "reason": "Chunk WEB16-E02 explicitly mentions an unimpacted groundwater matrix with added individual solutes, matching the matrix description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "The title and summary describe perfluoroalkyl acids (PFAA), and WEB16-E02 highlights effects on short-chain PFAA, matching the scope description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The source repeatedly refers to adsorption of PFAA to colloidal activated carbon, which is correctly classified as a sorption endpoint.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "WEB16-E02 states that short-chain PFAA experienced additive inhibitory effects from multiple solutes when added to an unimpacted groundwater matrix, matching the description of matrix-modified adsorption relative to the baseline matrix.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "The summary describes the study as examining PFAA adsorption to colloidal activated carbon, matching the reported term.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "WEB16-E01 notes adsorption to colloidal activated carbon; capturing this as 'Colloidal activated carbon (CAC)' as the treatment medium is directly supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "No numeric value is given or needed for the treatment medium, so leaving the unit null is appropriate and consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "WEB16-E02 refers to 'an unimpacted groundwater matrix' as the base to which solutes were added, supporting 'Unimpacted groundwater' as the baseline matrix condition.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The baseline matrix is a qualitative condition; no numeric unit is required, so a null unit is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "WEB16-E02 states that individual solutes were added to an unimpacted groundwater matrix, supporting 'Addition of multiple individual groundwater solutes' as the matrix modification.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "Matrix modification is described qualitatively with no numeric value; a null unit is consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].statement",
+        "reason": "The provided chunks give only qualitative descriptions of effects without listing specific solutes, concentrations, or adsorption metrics. It is a reasonable design-inferred limitation that only qualitative information is available from the inspected summary.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "study_scale.value",
+        "reason": "The chunks indicate an experimental adsorption study but do not explicitly state that it is laboratory-scale. Inferring 'Laboratory-scale' is reasonable yet not directly supported by the text, while 'scale not further specified' is accurate.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_type",
+        "reason": "The article is described as examining how solutes affect adsorption and is tagged in the source metadata as a primary experiment, supporting this classification.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The cited text only provides qualitative directionality of matrix effects without quantitative adsorption metrics or detailed operating conditions, so classifying comparability as 'descriptive_only' is consistent with the available evidence.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The reason accurately reflects that only qualitative findings are available from the summary and that numeric data and detailed conditions could not be extracted, which matches the source limitations.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT10-gpt51_web_search-WEB16-R02",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014source identity, PFAS scope, groundwater matrix with added solutes, adsorption to colloidal activated carbon, and qualitative matrix effects on short-chain PFAA adsorption\u2014are directly supported. The only partial issue is an inferred laboratory-scale designation, which does not materially mislead PFAS treatment synthesis and can be interpreted cautiously.",
+    "task_id": "RT10"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

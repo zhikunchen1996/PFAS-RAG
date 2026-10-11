@@ -1,0 +1,204 @@
+{
+  "batch_id": "test40-rereview1-batch-07",
+  "batch_sha256": "e2ae20133f8162bfbcbe0242760f3976a02e1848f9e73ffc988cb307a1b60890",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-rereview1-batch-07",
+    "reviews": [
+      {
+        "question_id": "WF10_039",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "The previously flagged structural defect in G02 (malformed exact_spans entry embedding WF10_039_MMG006 inside the MMG005 object) has been resolved: exact_spans now contains three separate, well-formed objects for MMG001, MMG005, and MMG006.",
+          "However, an independent check of exact-span sufficiency (not raised in the prior review) surfaces the same span/supports mismatch pattern seen elsewhere in this batch: in several groups the 'supports' narrative describes content (e.g., the sand/hydrophobic-interaction sentence, the ZVI/synergistic-interaction sentence, the 'minor compared to GAC capacity' sentence, the 'aluminum did not incrementally contribute' sentence) that is present only in full_chunk_text and not within the quoted exact_evidence_span tied to that evidence_id."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_039-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_039-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_039-G03",
+            "verdict": "partially_supported",
+            "issues": [
+              "The MMG001 exact_spans entry quotes only the sulfonate/carboxylate affinity sentence, but its 'supports' text describes the separate sand/hydrophobic-interaction and clay/iron/hydrophilic-film sentence, which is not contained in the quoted span (it appears elsewhere in the same full_chunk_text).",
+              "The MMG003 exact_spans entry quotes only the '>99% PFOS / 28% PFOA' removal sentence, but its 'supports' text describes the separate electrostatic/hydrophobic-interaction and hydrophilic-film sentences from later in the same chunk, which are not part of the quoted span.",
+              "The MMG006 exact_spans entry quotes only the sulfonate-affinity attribution sentence, but its 'supports' text describes the separate synergistic sand/clay/ZVI sentence, which is not part of the quoted span."
+            ],
+            "required_repairs": [
+              "For each of MMG001, MMG003, and MMG006 in G03, either extend the quoted exact_evidence_span to include the specific sentence that substantiates the hydrophobic/electrostatic/hydrophilic-film claim in the supports text, or rewrite the supports text so it only describes what the quoted span actually contains."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_039-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_039-X01",
+            "verdict": "partially_supported",
+            "issues": [
+              "The MMG007 exact_spans entry quotes only the PFOA-increase/PFOS-negligible-change sentence, but its 'supports' text also asserts that 'the influence of iron oxide is expected to be minor compared to the GAC sorption capacity,' which is a separate sentence not contained in the quoted span.",
+              "The MMG002 exact_spans entry quotes only the batch-test removal-efficiency ranges sentence, but its 'supports' text asserts that 'the inclusion of aluminum ... did not incrementally contribute to additional PFOA/PFOS removal efficiency,' which is a separate sentence not contained in the quoted span."
+            ],
+            "required_repairs": [
+              "Extend the quoted span for MMG007 in X01 to include the 'minor compared to the GAC sorption capacity' sentence, or narrow the supports text to match only the quoted removal-percentage content.",
+              "Extend the quoted span for MMG002 in X01 to include the aluminum/AGEM-2 sentence, or narrow the supports text to match only the quoted removal-efficiency-ranges content."
+            ]
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Resolve the span/supports mismatches identified in G03 and X01 by either extending the quoted exact_evidence_span for the affected evidence_ids or narrowing the supports narrative to match only the quoted text."
+        ]
+      },
+      {
+        "question_id": "NQ03a",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Prior repairs largely resolved the structural duplication and gross mismatches previously flagged (e.g., the duplicated NQ03a_MMG002 entries in G04 are now a single well-formed entry; the two-sentence MMG005 refrigeration claim in G04 is now split into two correctly matched entries; the MMG004/MMG007 mismatches in G04 are resolved by narrowing supports text to the quoted content).",
+          "However, in several cases the repair approach was to narrow the 'supports' text to match the already-quoted span rather than to extend the span to cover the claimed content, which leaves some central propositions and material qualifiers without a supporting exact span."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ03a-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ03a-G02",
+            "verdict": "partially_supported",
+            "issues": [
+              "The required repair asked for the NQ03a_MMG006 exact_spans entry to quote the GC-ECD/±5% verification sentence so it matches the group's central proposition about analytical verification. Instead, the entry still quotes 'The stock solution was initially made with methanol...' and the supports text was rewritten to only describe that sentence. As a result, no exact_spans entry in this group now actually quotes the verification sentence that the central proposition (and the reference answer) relies on for evidence_id NQ03a_MMG006, even though the approved evidence record's own exact_evidence_span for MMG006 also does not include that sentence (it appears only in full_chunk_text)."
+            ],
+            "required_repairs": [
+              "Either add an exact_spans entry for NQ03a_MMG006 that quotes the GC-ECD/±5% verification sentence (consistent with the approved evidence's exact_evidence_span/unit_exact_spans, extending them if needed at the evidence level), or revise the group's central_proposition/full_rule so it no longer depends on span-level support for the verification claim that is not present in the cited evidence's designated span."
+            ]
+          },
+          {
+            "claim_group_id": "NQ03a-G03",
+            "verdict": "partially_supported",
+            "issues": [
+              "The prior repair for the NQ03a_MMG002 mismatch was resolved by narrowing the supports text to describe only the methanol/water (80:20) dilution sentence, rather than extending the span to include the SPME calibration sentence. As a result, the material qualifier 'SPME calibration curve using ultra-pure water spiked at 5000 ng/L and diluted to multiple levels' listed in this group's material_qualifiers is no longer backed by any exact_spans citation."
+            ],
+            "required_repairs": [
+              "Add a second exact_spans entry for NQ03a_MMG002 (or extend the existing one) quoting the SPME calibration sentence so the listed material qualifier about the 5000 ng/L spike and multi-level dilution is supported by an exact span."
+            ]
+          },
+          {
+            "claim_group_id": "NQ03a-G04",
+            "verdict": "partially_supported",
+            "issues": [
+              "The NQ03a_MMG008 exact_spans entry's supports text states the quoted stock-concentration sentence shows stocks 'providing controlled starting solutions that can be diluted without introducing additional contaminants from separate stock preparations' -- this contamination-avoidance inference is not stated in the quoted span or elsewhere in the approved evidence and appears to be an unsupported addition."
+            ],
+            "required_repairs": [
+              "Remove or rephrase the unsupported 'without introducing additional contaminants from separate stock preparations' inference in the NQ03a_MMG008 supports text so it describes only what the quoted stock-concentration sentence actually states."
+            ]
+          },
+          {
+            "claim_group_id": "NQ03a-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "In G02, either add a properly matched exact span for the GC-ECD verification claim on NQ03a_MMG006 or adjust the group's requirement so it isn't dependent on unsupported span content.",
+          "In G03, add or extend an exact_spans entry for NQ03a_MMG002 to support the listed SPME calibration material qualifier.",
+          "In G04, remove the unsupported contamination-avoidance inference from the NQ03a_MMG008 supports text."
+        ]
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 133582,
+    "num_turns": 6,
+    "stop_reason": "tool_use",
+    "session_id": "352229f2-a83c-4e64-8b37-5984081ba117",
+    "total_cost_usd": 0.46912705,
+    "usage": {
+      "input_tokens": 8,
+      "cache_creation_input_tokens": 60009,
+      "cache_read_input_tokens": 118201,
+      "output_tokens": 13851,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 60009
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 12776,
+          "cache_read_input_tokens": 58002,
+          "cache_creation_input_tokens": 13078,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 13078,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 754,
+        "outputTokens": 18,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000844,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 8,
+        "outputTokens": 13851,
+        "cacheReadInputTokens": 118201,
+        "cacheCreationInputTokens": 60009,
+        "webSearchRequests": 0,
+        "costUSD": 0.46828305,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 4947,
+    "ttft_stream_ms": 874,
+    "time_to_request_ms": 37,
+    "type": "result",
+    "duration_ms": 133155,
+    "uuid": "f9342b4c-ffc6-4e97-9973-e289e3c67832"
+  },
+  "candidate_test40_inputs_used": false
+}

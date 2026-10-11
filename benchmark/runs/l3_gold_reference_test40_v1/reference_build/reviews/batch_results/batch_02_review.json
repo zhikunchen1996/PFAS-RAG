@@ -1,0 +1,252 @@
+{
+  "batch_id": "test40-review-batch-02",
+  "batch_sha256": "289a3cd21703b1c2a633acc0ae2c250e6fec7b3169d59827a8856ead8060de30",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-review-batch-02",
+    "reviews": [
+      {
+        "question_id": "NQ08",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ08-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ08-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ08-G03",
+            "verdict": "supported",
+            "issues": [
+              "Uses the same exact span and largely the same underlying fact (per-batch field/transport/procedural blanks) as G01, split out to serve the T02 frequency component; content is distinct enough (function vs. frequency) that this is an acceptable, non-duplicative decomposition."
+            ],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ08-G04",
+            "verdict": "supported",
+            "issues": [
+              "Shares evidence and spans with G02, split to serve the T02 frequency component; acceptable given the distinct functional vs. frequency framing."
+            ],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ08-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "NQ09",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ09-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ09-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ09-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ09-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "NQ11",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Task components T02 (standard choice linked to analyte coverage/method scope) and T03 (situations relying on non-exact analogs) are operationalized as claim groups G02 and G03 that cite the identical three exact evidence spans (NQ11_MMG002, NQ11_MMG003, NQ11_MMG004) and the same merged atomic claims (A03, A04), with near-identical canonical/central propositions. This double-counts the same underlying content across two required_content groups rather than deduplicating overlapping evidence into distinct scoring contributions."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ11-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ11-G02",
+            "verdict": "duplicate_or_overweighted",
+            "issues": [
+              "Identical exact_spans and evidence_ids to G03; central proposition substantively overlaps G03's content (non-exact/class-based standard selection by functional group and chain length), inflating scoring weight for the same fact under two separate required_content groups."
+            ],
+            "required_repairs": [
+              "Merge G02 and G03 into a single claim group, or clearly separate them so each scores a distinct facet (e.g., G02 restricted to coverage/scope justification only, G03 restricted to concrete application scenarios) without reusing the same exact spans as the primary support for both."
+            ]
+          },
+          {
+            "claim_group_id": "NQ11-G03",
+            "verdict": "duplicate_or_overweighted",
+            "issues": [
+              "Identical exact_spans and evidence_ids to G02; largely restates the same non-exact/class-based standard selection content already scored in G02."
+            ],
+            "required_repairs": [
+              "Same as G02: merge or differentiate scoring content so the same evidence is not double-credited across G02 and G03."
+            ]
+          },
+          {
+            "claim_group_id": "NQ11-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Deduplicate or clearly differentiate NQ11-G02 and NQ11-G03 so the same exact spans/atomic claims are not used to independently score near-identical propositions."
+        ]
+      },
+      {
+        "question_id": "NQ13",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ13-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ13-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ13-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ13-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ13-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 76141,
+    "num_turns": 6,
+    "stop_reason": "tool_use",
+    "session_id": "c8652670-eb57-4476-af95-0a2c534f3a5f",
+    "total_cost_usd": 0.38671565,
+    "usage": {
+      "input_tokens": 8,
+      "cache_creation_input_tokens": 64473,
+      "cache_read_input_tokens": 118733,
+      "output_tokens": 7238,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 64473
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 6054,
+          "cache_read_input_tokens": 59421,
+          "cache_creation_input_tokens": 16204,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 16204,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 628,
+        "outputTokens": 20,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000728,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 8,
+        "outputTokens": 7238,
+        "cacheReadInputTokens": 118733,
+        "cacheCreationInputTokens": 64473,
+        "webSearchRequests": 0,
+        "costUSD": 0.38598765,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 7216,
+    "ttft_stream_ms": 1808,
+    "time_to_request_ms": 40,
+    "type": "result",
+    "duration_ms": 75684,
+    "uuid": "915f92c5-60c2-4df7-ac2c-c6c545114c33"
+  },
+  "candidate_test40_inputs_used": false
+}

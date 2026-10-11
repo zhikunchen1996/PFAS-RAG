@@ -1,0 +1,566 @@
+{
+  "question_id": "NQ25",
+  "reference_packet_sha256": "f7f983547a98bd9865f28a06da13f9623f2207fed80f413939282059f6b67731",
+  "prompt_sha256": "008063f21e0cb5cd76c21b98aa9dbeec16fa63bd7461cb3a179e5107e8c8c30d",
+  "raw_result": {
+    "question_id": "NQ25",
+    "answerability": "supported",
+    "answerability_rationale": "The available evidence directly describes mechanistic differences between activated carbon and ion-exchange resins, PFAS-specific effects (chain length and functional group), matrix effects, and differences in materials and performance metrics. These support an explanation of why cross-study comparison of adsorption performance between activated carbon and ion-exchange resins is difficult, while allowing like-for-like comparisons to be highlighted. Some potentially relevant factors (e.g., pH, temperature, detailed operating hydraulics) are not covered, but the core comparison-focused information need can be met.",
+    "task_components": [
+      {
+        "task_component_id": "NQ25-T01",
+        "component_text": "Identify and describe the study design and operating-condition factors that make it difficult to directly compare PFAS adsorption performance between activated carbon and ion-exchange resins, including differences in water/wastewater matrices, operating modes, and other experimental conditions, while only comparing like-for-like (comparable compounds, matrices, and operating modes). Mention any reported capacity values only when they are explicitly supported by the source."
+      },
+      {
+        "task_component_id": "NQ25-T02",
+        "component_text": "Identify and describe the PFAS- and adsorbent-specific factors, as well as data reporting and performance-metric choices, that complicate cross-study comparison of adsorption performance between activated carbon and ion-exchange resins for comparable PFAS and conditions. Ensure that any mention of relative capacity is source-supported and avoid any statement that either material is universally higher-capacity for all PFAS under all conditions."
+      }
+    ],
+    "claim_groups": [
+      {
+        "claim_group_id": "NQ25-G01",
+        "task_component_id": "NQ25-T01",
+        "canonical_proposition": "Differences in water matrices and background species alter ion-exchange and activated-carbon PFAS sorption behavior, making cross-study comparisons difficult unless matrices are comparable.",
+        "central_proposition": "Matrix composition, particularly in groundwater and natural waters, can strongly affect PFAS removal by ion-exchange resins and activated carbon, so performance data are not directly comparable across studies using different matrices.",
+        "material_qualifiers": [
+          "PFAS-polluted groundwater",
+          "natural water matrices with multivalent cations, anions, dissolved organic matter",
+          "short- and long-chain PFCA and other PFAS"
+        ],
+        "importance": "core",
+        "function": "affirmative",
+        "scoring_role": "required_content",
+        "evidence_ids": [
+          "NQ25_MMG003",
+          "NQ25_MMG004"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Award full credit if the answer explains that differences in water or wastewater matrix composition (e.g., PFAS-polluted groundwater vs other surface/natural waters with varying background ions and dissolved organic matter) significantly affect PFAS adsorption/removal by ion-exchange resins and activated carbon, and that therefore performance comparisons must be made only for comparable matrices. The explanation should reference that background species in natural waters can compete with PFAS for ion-exchange sites and can block pores, and that published results (e.g., in a groundwater matrix) are matrix-specific.",
+        "partial_rule": "Award partial credit if the answer mentions that water matrix or co-contaminants affect PFAS adsorption performance for at least one of the adsorbent types (ion-exchange or activated carbon), but does not clearly connect this to difficulties in comparing studies or does not emphasize that comparisons should be limited to similar matrices.",
+        "contradiction_rule": "Flag a contradiction if the answer implies that PFAS adsorption performance for activated carbon and ion-exchange resins is independent of water matrix or background species, or that results from one matrix can be universally applied to other matrices without qualification.",
+        "source_atomic_claim_ids": [
+          "NQ25-A01",
+          "NQ25-A02"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ25_MMG003",
+            "exact_evidence_span": "Laboratory tests and column tests were carried out in a waterwoks to investigate the removal of short‑ and long‑ chain PFAS using activated carbon filtration and ion exchange treatment. ... In the PFAS‑polluted groundwater matrix, the short‑chain PFCA PFBA and PFPeA could only be sufficiently removed with activated carbon over short run times of 6000 and 11,000 bed volumes (BV), respectively.",
+            "supports": "Shows that performance of activated carbon filtration and ion exchange treatment was evaluated in a specific PFAS‑polluted groundwater matrix, highlighting that observed run times and removal behavior are matrix-specific."
+          },
+          {
+            "evidence_id": "NQ25_MMG004",
+            "exact_evidence_span": "their performance can be significantly compromised in the presence of background species commonly found in natural water matrices, including multivalent cations, anions, and dissolved organic matter. 26 These background species, typically present at concentrations in the higher range (mg L−1), can compete with trace-level PFAS compounds (ng L −1) for active sites of resin. In some cases, these interfering species may also contribute to pore blockage, further diminishing the resin's capacity and kinetics.",
+            "supports": "Shows that background species in natural water matrices can compete with PFAS for ion-exchange resin sites and cause pore blockage, significantly compromising performance and thereby making matrix-dependent comparisons necessary."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "NQ25-G02",
+        "task_component_id": "NQ25-T01",
+        "canonical_proposition": "Differences in operating modes and performance metrics (batch isotherms vs column run times and bed volumes) complicate direct comparison of PFAS adsorption performance between activated carbon and ion-exchange resins.",
+        "central_proposition": "Studies use different experimental modes and metrics to evaluate PFAS adsorption, such as equilibrium batch isotherms and Freundlich parameters versus column tests reporting run times and bed volumes, which complicates direct performance comparison between activated carbon and ion-exchange resins unless the modes and metrics are aligned.",
+        "material_qualifiers": [
+          "equilibrium batch studies with demineralized water",
+          "column tests in a waterworks",
+          "activated carbon filtration",
+          "ion exchange treatment",
+          "short- and long-chain PFAS"
+        ],
+        "importance": "core",
+        "function": "affirmative",
+        "scoring_role": "required_content",
+        "evidence_ids": [
+          "NQ25_MMG002",
+          "NQ25_MMG003"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Award full credit if the answer notes that different studies assess PFAS adsorption using different experimental modes and metrics (e.g., batch isotherms with Freundlich parameters vs column tests with run time and bed volumes), and explains that this hinders direct comparison of activated carbon and ion-exchange performance unless comparable modes and metrics are used.",
+        "partial_rule": "Award partial credit if the answer mentions different experimental setups (e.g., batch vs column) or metrics but does not clearly tie this to difficulties in comparing GAC and ion-exchange resin performance.",
+        "contradiction_rule": "Flag a contradiction if the answer implies that PFAS adsorption data from batch and column tests or from different reporting metrics are directly and straightforwardly comparable without qualification.",
+        "source_atomic_claim_ids": [
+          "NQ25-A03",
+          "NQ25-A04"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ25_MMG002",
+            "exact_evidence_span": "in the equilibrium batch studies with demineralized water (see Fig. 1). With increasing chain length, higher Freundlich KF values and lower Freundlich n values were determined (see Table  5).",
+            "supports": "Shows that PFAS sorption was characterized in equilibrium batch studies using Freundlich isotherm parameters, representing one experimental mode and metric set."
+          },
+          {
+            "evidence_id": "NQ25_MMG002",
+            "exact_evidence_span": "Sorption iso - therms for the eight PFAS found in the ground water (using strong base IEX K6362) are shown in Fig. 2.",
+            "supports": "Indicates use of sorption isotherms as a performance metric for PFAS adsorption on ion-exchange resins."
+          },
+          {
+            "evidence_id": "NQ25_MMG003",
+            "exact_evidence_span": "Laboratory tests and column tests were carried out in a waterwoks to investigate the removal of short‑ and long‑ chain PFAS using activated carbon filtration and ion exchange treatment. ... the short‑chain PFCA PFBA and PFPeA could only be sufficiently removed with activated carbon over short run times of 6000 and 11,000 bed volumes (BV), respectively. ... The removal of short‑chain PFCA using ion exchange media could also only be achieved over relatively short run times of 5000 BV for PFBA, 10,000BV for PFPeA and 18,000 BV for PFHxA.",
+            "supports": "Shows that PFAS removal by activated carbon and ion exchange in column tests was evaluated using run times and bed volumes, a different experimental mode and performance metric than batch isotherms."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "NQ25-G03",
+        "task_component_id": "NQ25-T02",
+        "canonical_proposition": "Different underlying sorption mechanisms for granular activated carbon and ion-exchange resins mean PFAS properties influence each adsorbent type differently, complicating direct comparison of performance.",
+        "central_proposition": "Granular activated carbon primarily relies on hydrophobic interactions (with secondary electrostatic effects), whereas anion-exchange resins rely on a mixture of anion exchange and physical sorption, which may be less dependent on substance polarity. These distinct mechanisms mean that the same PFAS can interact differently with each adsorbent, complicating cross-study performance comparisons.",
+        "material_qualifiers": [
+          "granular activated carbon (GAC)",
+          "anion exchange resins",
+          "PFAS in water and drinking water treatment systems"
+        ],
+        "importance": "core",
+        "function": "affirmative",
+        "scoring_role": "required_content",
+        "evidence_ids": [
+          "NQ25_MMG001",
+          "NQ25_MMG002"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Award full credit if the answer clearly describes that GAC adsorbs PFAS mainly through hydrophobic interactions with pore surfaces plus secondary electrostatic interactions, while anion-exchange resins remove PFAS via a mixture of anion exchange and physical sorption that may be less dependent on PFAS polarity, and explains that these differing mechanisms make direct performance comparisons PFAS- and condition-specific.",
+        "partial_rule": "Award partial credit if the answer notes that sorption mechanisms differ between GAC and ion-exchange resins but does not clearly connect these differences to PFAS property dependence or to difficulties in performance comparison.",
+        "contradiction_rule": "Flag a contradiction if the answer asserts that GAC and ion-exchange resins operate via essentially the same sorption mechanisms for PFAS, or that PFAS properties affect both adsorbent classes in the same way.",
+        "source_atomic_claim_ids": [
+          "NQ25-A05",
+          "NQ25-A06"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ25_MMG001",
+            "exact_evidence_span": "The adsorption mechanisms for PFAS on GAC primarily involve hydrophobic in - teractions with the pore surfaces of the carbon. These interactions are supplemented by secondary electrostatic interactions that can either attract or repel PFAS, depending on the net surface charge of the GAC",
+            "supports": "Shows that PFAS adsorption on granular activated carbon is dominated by hydrophobic interactions with pore surfaces and influenced by secondary electrostatic interactions."
+          },
+          {
+            "evidence_id": "NQ25_MMG002",
+            "exact_evidence_span": "Ion exchange The sorption mechanism of PFAS onto anion exchange resins is a mixture of anion exchange and physical sorp - tion, like van der Waals interaction [23, 36], that might be less dependent on substance polarity.",
+            "supports": "Shows that PFAS sorption onto anion exchange resins involves both anion exchange and physical sorption (e.g., van der Waals), and may be less dependent on PFAS polarity than GAC sorption."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "NQ25-G04",
+        "task_component_id": "NQ25-T02",
+        "canonical_proposition": "PFAS chain length and functional group strongly influence sorption affinity on both activated carbon and ion-exchange resins, with different adsorption orders for each, complicating like-for-like comparison.",
+        "central_proposition": "Sorption affinity for PFAS on both activated carbon and ion-exchange resins depends strongly on chain length and functional group, and the relative adsorption orders differ between the two adsorbent types, so comparing performance requires matching PFAS species and recognizing that results are not transferable across PFAS classes.",
+        "material_qualifiers": [
+          "short- and long-chain PFCA",
+          "short-chain PFSA",
+          "PFOA, PFHxA, PFPeA, PFBA",
+          "PFOS, PFHxS, PFBS",
+          "specific ion-exchange resin K6362"
+        ],
+        "importance": "core",
+        "function": "affirmative",
+        "scoring_role": "required_content",
+        "evidence_ids": [
+          "NQ25_MMG002",
+          "NQ25_MMG003"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Award full credit if the answer explains that, for comparable experimental conditions, PFAS sorption affinity varies significantly with chain length and functional group on both activated carbon and ion-exchange resins, cites at least one reported adsorption order or trend for each adsorbent class, and notes that these PFAS-specific effects complicate direct cross-study comparison unless the same PFAS are considered.",
+        "partial_rule": "Award partial credit if the answer mentions that PFAS chain length or functional group affects sorption on one or both adsorbent types but does not provide specific orders or does not clearly relate this to comparison difficulty.",
+        "contradiction_rule": "Flag a contradiction if the answer suggests that PFAS chain length or functional group have negligible effect on sorption affinity for either activated carbon or ion-exchange resins, or that relative performance is independent of PFAS speciation.",
+        "source_atomic_claim_ids": [
+          "NQ25-A07",
+          "NQ25-A08",
+          "NQ25-A09"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ25_MMG002",
+            "exact_evidence_span": "The experimental investiga - tions with activated carbon showed the following order of sorption: PFOA > PFHxA > PFPeA > PFBA.",
+            "supports": "Gives a specific adsorption order for PFAS on activated carbon, illustrating chain-length-dependent sorption performance."
+          },
+          {
+            "evidence_id": "NQ25_MMG002",
+            "exact_evidence_span": "The experimental investigations with IEX K6362 and several other resins (Fig. 2 and Table  6) lead to the following order of adsorption of the PFAS: PFOS > PFHxS > PFBS ≈ PFOA > PFHpA > PFHxA > PFPeA > PFBA. A large dif- ference in adsorption affinity can be seen depending on the PFAS chain length and the functional group.",
+            "supports": "Gives a specific adsorption order for PFAS on an ion-exchange resin and states explicitly that adsorption affinity depends strongly on PFAS chain length and functional group."
+          },
+          {
+            "evidence_id": "NQ25_MMG002",
+            "exact_evidence_span": "The C4 compound PFBA shows the lowest solid phase concen - trations and thus a low adsorption affinity. For the PFCA, the isotherms become steeper with increasing chain length which implies that longer-chain PFCA are better removed from the solution than short-chain PFCA. This dependency is also observed for the PFSA.",
+            "supports": "Shows that adsorption affinity increases with PFCA chain length and that short-chain PFBA has low adsorption affinity, illustrating chain-length dependence for both PFCA and PFSA."
+          },
+          {
+            "evidence_id": "NQ25_MMG003",
+            "exact_evidence_span": "For all adsorbents, the sorption affinity of short‑chain per‑ and polyfluoroalkyl carboxylic acids (PFCA) was significantly lower than that of long‑chain PFAS or short‑chain per‑ and polyfluoroalkyl sulfonic acids (PFSA).",
+            "supports": "Demonstrates that, across all tested adsorbents (activated carbon and ion-exchange), short-chain PFCA have significantly lower sorption affinity than long-chain PFAS or short-chain PFSA, emphasizing PFAS-class dependence."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "NQ25-G05",
+        "task_component_id": "NQ25-T02",
+        "canonical_proposition": "Variability in material properties and formulations within the categories of granular activated carbon and ion-exchange resins complicates generalization and comparison of PFAS adsorption performance.",
+        "central_proposition": "Even within the granular activated carbon and ion-exchange resin categories, different commercial materials have different preparation methods, pore structures, and surface properties, so adsorption performance comparisons labeled broadly as 'GAC vs ion exchange' may actually reflect specific material choices rather than class-wide behavior.",
+        "material_qualifiers": [
+          "Filtrasorb 400 GAC",
+          "Norit 1240 W GAC",
+          "steam-activated bituminous coal, pulverized and reagglomerated",
+          "steam-activated coal",
+          "Purolite A600 Type I strong-base anion resin"
+        ],
+        "importance": "supplementary",
+        "function": "affirmative",
+        "scoring_role": "supplementary_content",
+        "evidence_ids": [
+          "NQ25_MMG005",
+          "NQ25_MMG002"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Award full credit if the answer notes that within the broad classes of GAC and ion-exchange resins, different commercial products have distinct origins, activation or polymer chemistries, and physical properties, and explains that this intra-class variability complicates generalization and cross-study comparisons of 'GAC' versus 'ion exchange' for PFAS adsorption.",
+        "partial_rule": "Award partial credit if the answer mentions that different GAC or ion-exchange products exist but does not clearly connect their differing properties to difficulties in performance comparison.",
+        "contradiction_rule": "Flag a contradiction if the answer implies that all GAC or all ion-exchange resins can be treated as having identical material properties and PFAS adsorption behavior for comparison purposes.",
+        "source_atomic_claim_ids": [
+          "NQ25-A10",
+          "NQ25-A11"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ25_MMG005",
+            "exact_evidence_span": "Two commercially available GAC materials, Filtrasorb 400 (Calgon Carbon Corporation, Feluy, Belgium; e ﬀective size of 0.55 −0.75 mm, surface area of 1050 m 2 g−1, and iodine number of 1000 mg g −1) and Norit 1240 W (Norit Nederland BV, Amersfoort, The Netherlands; e ﬀective size of 0.65 mm, surface area of 1150 m 2 g−1, and iodine number of 1020 mg g−1) were applied. The main di ﬀerence, and why it is interesting to compare these two, is that the Filtrasorb 400 material is prepared from steam-activated bituminous coal that was pulverized and reagglomerated whereas Norit 1240 W is prepared from steam-activated coal. Reagglomerated coals tend to be homogeneously activated throughout, making it a competitive material for the adsorption of PFASs and other micropollutants.",
+            "supports": "Shows that different GAC products (Filtrasorb 400 and Norit 1240 W) have different origins, preparation methods, and surface areas, implying that PFAS adsorption performance can vary within the GAC class."
+          },
+          {
+            "evidence_id": "NQ25_MMG005",
+            "exact_evidence_span": "The two AIX materials used in this study were received from Purolite Corporation (King of Prussia, PA, USA). The Purolite A600 is a Type I strong-base anion resin with quaternary amino functional groups (polystyrene cross-linked with divinylbenzene; “gel-type” resin).",
+            "supports": "Indicates that specific ion-exchange resin materials (e.g., Purolite A600) have defined chemistries and structures, highlighting that ion-exchange behavior depends on the particular resin formulation."
+          }
+        ]
+      },
+      {
+        "claim_group_id": "NQ25-G06",
+        "task_component_id": "NQ25-T02",
+        "canonical_proposition": "Different data reporting approaches and performance metrics (e.g., sorption isotherms and Freundlich parameters vs solid-phase concentrations and bed-volume breakthrough) make quantitative comparison of PFAS adsorption performance between activated carbon and ion-exchange resins challenging.",
+        "central_proposition": "Studies report PFAS adsorption performance using various metrics, including isotherm parameters, solid-phase concentrations, and column run times or bed volumes to a specified removal level, complicating direct comparison between activated carbon and ion-exchange resins unless the same metrics and endpoints are used.",
+        "material_qualifiers": [
+          "Freundlich KF and n values",
+          "sorption isotherms",
+          "solid phase concentrations",
+          "run times and bed volumes in column tests"
+        ],
+        "importance": "supplementary",
+        "function": "affirmative",
+        "scoring_role": "supplementary_content",
+        "evidence_ids": [
+          "NQ25_MMG002",
+          "NQ25_MMG003"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Award full credit if the answer points out that PFAS adsorption performance is reported using different metrics such as Freundlich isotherm parameters, qualitative/quantitative solid-phase concentrations, and column run times or bed volumes, and that this variation in reporting complicates cross-study and cross-material comparison.",
+        "partial_rule": "Award partial credit if the answer generally notes variability in reporting metrics without providing concrete examples or without tying it to comparison difficulty between GAC and ion-exchange.",
+        "contradiction_rule": "Flag a contradiction if the answer suggests that PFAS adsorption performance metrics are standardized in a way that makes cross-study comparison straightforward without qualification.",
+        "source_atomic_claim_ids": [
+          "NQ25-A12"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ25_MMG002",
+            "exact_evidence_span": "With increasing chain length, higher Freundlich KF values and lower Freundlich n values were determined (see Table  5).",
+            "supports": "Shows that PFAS sorption was quantified using Freundlich isotherm parameters, one type of performance metric."
+          },
+          {
+            "evidence_id": "NQ25_MMG002",
+            "exact_evidence_span": "The C4 compound PFBA shows the lowest solid phase concen - trations and thus a low adsorption affinity.",
+            "supports": "Demonstrates use of solid-phase concentrations as a measure of adsorption affinity, a different performance metric from isotherm parameters or column run times."
+          },
+          {
+            "evidence_id": "NQ25_MMG003",
+            "exact_evidence_span": "PFBA and PFPeA could only be sufficiently removed with activated carbon over short run times of 6000 and 11,000 bed volumes (BV), respectively. ... The removal of short‑chain PFCA using ion exchange media could also only be achieved over relatively short run times of 5000 BV for PFBA, 10,000BV for PFPeA and 18,000 BV for PFHxA.",
+            "supports": "Shows that column performance was reported using run times and bed volumes, another distinct performance metric."
+          }
+        ]
+      }
+    ],
+    "constraint_groups": [
+      {
+        "claim_group_id": "NQ25-X01",
+        "task_component_id": "NQ25-T02",
+        "canonical_proposition": "PFAS adsorption performance for activated carbon and ion-exchange resins is PFAS- and condition-specific, and the available evidence does not support universal claims that one class is always higher-capacity or superior under all conditions.",
+        "central_proposition": "Observed differences in removal run times, sorption affinity trends, and sensitivity to background species show that the relative performance of activated carbon and ion-exchange resins depends on PFAS type and experimental conditions; the evidence does not justify general statements that one adsorbent class is universally better for all PFAS and matrices.",
+        "material_qualifiers": [
+          "short-chain PFCA",
+          "long-chain PFAS",
+          "short-chain PFSA",
+          "PFAS-polluted groundwater",
+          "natural water matrices with competing species"
+        ],
+        "importance": "core",
+        "function": "limitation",
+        "scoring_role": "constraint_only",
+        "evidence_ids": [
+          "NQ25_MMG003",
+          "NQ25_MMG004"
+        ],
+        "synthesis_required": false,
+        "numeric_required": false,
+        "accepted_numeric_equivalents": [],
+        "full_rule": "Ensure the answer does not claim that ion-exchange resins or activated carbon are universally higher-capacity or superior for all PFAS and conditions. The answer should instead emphasize PFAS- and matrix-specific performance, noting that short-chain PFCA have lower sorption affinity on all tested adsorbents and that ion-exchange performance can be severely compromised by background species.",
+        "partial_rule": "If the answer hints that one material is generally better but includes clear qualifications about PFAS type and conditions, treat this as partially respecting the constraint but still note the need for stronger conditional language.",
+        "contradiction_rule": "Flag a contradiction if the answer explicitly states or clearly implies that one adsorbent class (either activated carbon or ion-exchange resins) has universally higher capacity or superior performance for all PFAS and under all conditions.",
+        "source_atomic_claim_ids": [
+          "NQ25-A13",
+          "NQ25-A14"
+        ],
+        "exact_spans": [
+          {
+            "evidence_id": "NQ25_MMG003",
+            "exact_evidence_span": "For all adsorbents, the sorption affinity of short‑chain per‑ and polyfluoroalkyl carboxylic acids (PFCA) was significantly lower than that of long‑chain PFAS or short‑chain per‑ and polyfluoroalkyl sulfonic acids (PFSA).",
+            "supports": "Shows that sorption affinity depends on PFAS class across all adsorbents, indicating performance is PFAS-specific rather than universally high for one material class."
+          },
+          {
+            "evidence_id": "NQ25_MMG003",
+            "exact_evidence_span": "In the PFAS‑polluted groundwater matrix, the short‑chain PFCA PFBA and PFPeA could only be sufficiently removed with activated carbon over short run times of 6000 and 11,000 bed volumes (BV), respectively. ... The removal of short‑chain PFCA using ion exchange media could also only be achieved over relatively short run times of 5000 BV for PFBA, 10,000BV for PFPeA and 18,000 BV for PFHxA. These are sometimes significantly longer than those of activated carbon.",
+            "supports": "Illustrates that in a specific groundwater matrix and for specific PFAS, ion exchange can have longer run times than activated carbon, but the observation is PFAS- and matrix-specific and not a universal rule."
+          },
+          {
+            "evidence_id": "NQ25_MMG004",
+            "exact_evidence_span": "their performance can be significantly compromised in the presence of background species commonly found in natural water matrices, including multivalent cations, anions, and dissolved organic matter. ... these interfering species may also contribute to pore blockage, further diminishing the resin's capacity and kinetics.",
+            "supports": "Shows that ion-exchange resin capacity and kinetics are sensitive to background species, further emphasizing that performance depends on water matrix conditions rather than being universally superior."
+          }
+        ]
+      }
+    ],
+    "atomic_claim_dispositions": [
+      {
+        "atomic_claim_id": "NQ25-A01",
+        "atomic_claim": "PFAS removal by activated carbon filtration and ion-exchange treatment was studied in a PFAS-polluted groundwater matrix, and observed removal behavior and run times are specific to that matrix.",
+        "evidence_ids": [
+          "NQ25_MMG003"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ25-G01"
+        ],
+        "rationale": "Directly supported by Riegel et al. and used to argue that performance is matrix-specific, complicating cross-study comparison."
+      },
+      {
+        "atomic_claim_id": "NQ25-A02",
+        "atomic_claim": "Background species in natural water matrices, including multivalent cations, anions, and dissolved organic matter, can compete with PFAS for ion-exchange resin active sites and cause pore blockage, significantly compromising resin capacity and kinetics.",
+        "evidence_ids": [
+          "NQ25_MMG004"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ25-G01"
+        ],
+        "rationale": "Explicitly described in Shaikh et al. and central to explaining matrix effects on ion-exchange performance."
+      },
+      {
+        "atomic_claim_id": "NQ25-A03",
+        "atomic_claim": "PFAS sorption in some studies is characterized using equilibrium batch experiments in demineralized water and reported with Freundlich KF and n parameters.",
+        "evidence_ids": [
+          "NQ25_MMG002"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ25-G02"
+        ],
+        "rationale": "Supported by Riegel et al. and used to illustrate one experimental mode and metric set."
+      },
+      {
+        "atomic_claim_id": "NQ25-A04",
+        "atomic_claim": "PFAS removal by activated carbon filtration and ion exchange in column tests is often reported in terms of run time and bed volumes to achieve sufficient removal.",
+        "evidence_ids": [
+          "NQ25_MMG003"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ25-G02"
+        ],
+        "rationale": "Backed by bed-volume and run-time data in Riegel et al., supporting the point about differing metrics."
+      },
+      {
+        "atomic_claim_id": "NQ25-A05",
+        "atomic_claim": "On granular activated carbon, PFAS adsorption mechanisms primarily involve hydrophobic interactions with pore surfaces, with secondary electrostatic interactions that depend on the GAC surface charge.",
+        "evidence_ids": [
+          "NQ25_MMG001"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ25-G03"
+        ],
+        "rationale": "Direct mechanistic description from Sanzana et al. and central to contrasting with ion-exchange."
+      },
+      {
+        "atomic_claim_id": "NQ25-A06",
+        "atomic_claim": "On anion-exchange resins, PFAS sorption is a mixture of anion exchange and physical sorption such as van der Waals interactions and may be less dependent on PFAS polarity.",
+        "evidence_ids": [
+          "NQ25_MMG002"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ25-G03"
+        ],
+        "rationale": "Direct mechanistic description from Riegel et al. and key to explaining different PFAS-property dependencies."
+      },
+      {
+        "atomic_claim_id": "NQ25-A07",
+        "atomic_claim": "In equilibrium studies with activated carbon, the order of PFAS sorption was PFOA > PFHxA > PFPeA > PFBA, indicating chain-length-dependent adsorption.",
+        "evidence_ids": [
+          "NQ25_MMG002"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ25-G04"
+        ],
+        "rationale": "Provides a specific adsorption order on activated carbon, relevant to PFAS-specific performance."
+      },
+      {
+        "atomic_claim_id": "NQ25-A08",
+        "atomic_claim": "For an ion-exchange resin K6362 and related resins, PFAS adsorption followed the order PFOS > PFHxS > PFBS ≈ PFOA > PFHpA > PFHxA > PFPeA > PFBA, with large differences in adsorption affinity depending on PFAS chain length and functional group.",
+        "evidence_ids": [
+          "NQ25_MMG002"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ25-G04"
+        ],
+        "rationale": "Gives the specific adsorption order and explicitly links affinity to chain length and functional group, central to PFAS-specific comparison."
+      },
+      {
+        "atomic_claim_id": "NQ25-A09",
+        "atomic_claim": "Across all adsorbents tested, the sorption affinity of short-chain PFCA was significantly lower than that of long-chain PFAS or short-chain PFSA.",
+        "evidence_ids": [
+          "NQ25_MMG003"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ25-G04"
+        ],
+        "rationale": "Summarizes a cross-adsorbent trend from Riegel et al., showing PFAS-class dependence that complicates universal comparisons."
+      },
+      {
+        "atomic_claim_id": "NQ25-A10",
+        "atomic_claim": "Different commercial granular activated carbons such as Filtrasorb 400 and Norit 1240 W differ in origin, preparation (pulverized and reagglomerated steam-activated bituminous coal vs steam-activated coal), and properties like surface area and iodine number.",
+        "evidence_ids": [
+          "NQ25_MMG005"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ25-G05"
+        ],
+        "rationale": "Directly supported and used to show intra-class variability among GACs."
+      },
+      {
+        "atomic_claim_id": "NQ25-A11",
+        "atomic_claim": "Specific ion-exchange resins such as Purolite A600 are Type I strong-base anion resins with quaternary amino functional groups on a polystyrene-divinylbenzene gel-type matrix.",
+        "evidence_ids": [
+          "NQ25_MMG005"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ25-G05"
+        ],
+        "rationale": "Characterizes a particular ion-exchange resin formulation, supporting the point that resin chemistry varies across products."
+      },
+      {
+        "atomic_claim_id": "NQ25-A12",
+        "atomic_claim": "PFAS adsorption performance is reported using different metrics, including Freundlich isotherm parameters, solid-phase concentrations, and column run times or bed volumes.",
+        "evidence_ids": [
+          "NQ25_MMG002",
+          "NQ25_MMG003"
+        ],
+        "action": "retained",
+        "target_claim_group_ids": [
+          "NQ25-G06"
+        ],
+        "rationale": "Synthesizes several supported reporting approaches into one atomic claim about metric variability."
+      },
+      {
+        "atomic_claim_id": "NQ25-A13",
+        "atomic_claim": "Short-chain PFCA show significantly lower sorption affinity than long-chain PFAS or short-chain PFSA for all adsorbents tested, indicating that performance differences are PFAS-type dependent rather than universally favoring one adsorbent class.",
+        "evidence_ids": [
+          "NQ25_MMG003"
+        ],
+        "action": "constraint_only",
+        "target_claim_group_ids": [
+          "NQ25-X01"
+        ],
+        "rationale": "Used as a limitation to prevent universal superiority claims; not scored as content beyond enforcing constraints."
+      },
+      {
+        "atomic_claim_id": "NQ25-A14",
+        "atomic_claim": "Ion-exchange resin performance can be diminished by background species through site competition and pore blockage, while in specific groundwater cases ion exchange showed longer run times than activated carbon for short-chain PFCA, demonstrating condition-specific relative performance.",
+        "evidence_ids": [
+          "NQ25_MMG003",
+          "NQ25_MMG004"
+        ],
+        "action": "constraint_only",
+        "target_claim_group_ids": [
+          "NQ25-X01"
+        ],
+        "rationale": "Combines limitations on ion-exchange performance under certain conditions to emphasize that relative performance is not universally superior, serving as a constraint."
+      }
+    ],
+    "reference_answer": "Across the available studies, several distinct groups of factors make it difficult to directly compare PFAS adsorption performance between granular activated carbon (GAC) and ion‑exchange (IEX) resins, even when similar PFAS are considered.\n\nFrom a study‑design and operating‑condition perspective, performance is clearly matrix‑dependent. Riegel et al. evaluated activated carbon filtration and ion‑exchange treatment in a specific PFAS‑polluted groundwater matrix, reporting that short‑chain PFCA (PFBA, PFPeA) were only sufficiently removed over relatively short run times of 6000 and 11,000 bed volumes (BV) with activated carbon, and that ion‑exchange media removed short‑chain PFCA over relatively short run times of 5000 BV for PFBA, 10,000 BV for PFPeA, and 18,000 BV for PFHxA in that same matrix.\nThis underscores that observed run times and breakthrough behaviors are tied to the groundwater matrix used and cannot automatically be transferred to other waters without adjustment.\n\nIon‑exchange performance is additionally sensitive to the presence of background species typical of natural waters. Shaikh and co‑workers note that commercially available ion‑exchange resins, though widely used for PFAS, can have their performance “significantly compromised in the presence of background species commonly found in natural water matrices, including multivalent cations, anions, and dissolved organic matter,” with these species (present at mg L−1 levels) competing with trace‑level PFAS for active sites and in some cases contributing to pore blockage, which diminishes resin capacity and kinetics.\nThus, comparing IEX performance across studies without aligning matrix composition is misleading.\n\nThe way experiments are run and metrics are defined also varies. In the same Riegel study, PFAS sorption on both activated carbon and IEX was characterized in equilibrium batch experiments with demineralized water using Freundlich isotherm parameters (KF and n), while in the groundwater column tests performance was described by run time and bed volumes to achieve sufficient removal.\nSorption isotherms and solid‑phase concentrations were used to interpret resin affinity in another part of that work, and bed‑volume run times were again the key metric in the column filters.\nBecause some studies report isotherm parameters, others emphasize solid‑phase loadings, and still others focus on BV run times or breakthrough curves, it is difficult to directly compare numerical performance between GAC and IEX unless the same operating modes and endpoints are used.\n\nBeyond design and matrix issues, PFAS‑ and adsorbent‑specific factors strongly shape observed performance and complicate cross‑material comparisons.\nMechanistically, Sanzana et al. report that PFAS adsorption on GAC “primarily involve[s] hydrophobic interactions with the pore surfaces of the carbon,” supplemented by secondary electrostatic interactions that can attract or repel PFAS depending on the GAC surface charge.\nRiegel et al. describe a different mechanism for anion‑exchange resins, where the sorption of PFAS is “a mixture of anion exchange and physical sorption, like van der Waals interaction … that might be less dependent on substance polarity.”\nBecause GAC emphasizes hydrophobic interactions and surface charge effects, while IEX combines electrostatic exchange with less polarity‑dependent physical sorption, the same PFAS can interact differently with each adsorbent type under the same nominal conditions, making simple performance rankings misleading.\n\nWithin any given study, PFAS chain length and functional group are major determinants of adsorption affinity for both material classes.\nIn equilibrium experiments with activated carbon, Riegel et al. found the sorption order PFOA > PFHxA > PFPeA > PFBA, indicating that longer‑chain PFCA sorb more strongly than shorter ones under those conditions.\nFor a strong‑base ion‑exchange resin (K6362) and related materials, the order PFOS > PFHxS > PFBS ≈ PFOA > PFHpA > PFHxA > PFPeA > PFBA was observed, and the authors emphasized “a large dif­ference in adsorption affinity … depending on the PFAS chain length and the functional group,” with the C4 PFBA showing the lowest solid‑phase concentrations and thus low adsorption affinity, and increasingly steep isotherms (better removal) with increasing PFCA chain length.\nThey further noted that, across all adsorbents tested (including both activated carbon and IEX), short‑chain PFCA had significantly lower sorption affinity than long‑chain PFAS or short‑chain PFSA.\nThese PFAS‑specific affinity trends mean that even when comparing GAC and IEX for the same matrix and test mode, performance differences are specific to the PFAS mixture and cannot be generalized across all PFAS.\n\nAdsorbent formulation and material properties also vary within each class, limiting how far broad labels like “GAC” or “ion exchange” can be used in cross‑study comparisons.\nFranke et al. compared two GACs, Filtrasorb 400 and Norit 1240 W, both steam‑activated coals but with different preparation routes and properties: Filtrasorb 400 is a steam‑activated bituminous coal that was pulverized and reagglomerated, while Norit 1240 W is prepared directly from steam‑activated coal; the two have different effective sizes, surface areas, and iodine numbers, and the reagglomerated coal is described as being homogeneously activated and particularly competitive for PFAS and other micropollutants.\nThey also used specific ion‑exchange resins, such as Purolite A600, a Type I strong‑base anion resin with quaternary amino functional groups on a polystyrene‑divinylbenzene gel‑type matrix.\nSuch variability within each category means that reported performance differences can reflect particular GAC or resin formulations rather than intrinsic class‑level behavior.\n\nFinally, the diversity of reporting choices further complicates numerical comparisons.\nRiegel and co‑workers used Freundlich KF and n values in demineralized water batch tests, solid‑phase concentrations to express relative affinity (e.g., showing PFBA as having the lowest solid‑phase concentrations), and column run times and bed volumes for breakthrough behavior in groundwater.\nOther work with ion‑exchange emphasizes how competing background species reduce effective capacity and slow kinetics.\nBecause studies may prioritize different performance measures (isotherm coefficients, solid‑phase loadings, BV to breakthrough, or qualitative removal descriptions), direct quantitative comparison of adsorption performance between GAC and IEX is challenging unless the same metrics, PFAS species, matrices, and operating modes are aligned.\n\nTaken together, these findings show that cross‑study comparison of PFAS adsorption between activated carbon and ion‑exchange resins must be restricted to like‑for‑like scenarios—matching PFAS chemistries, water matrices, adsorbent formulations, experimental modes, and performance metrics—and that the available evidence does not justify universal claims that one adsorbent class is always higher‑capacity or superior for all PFAS and conditions.",
+    "reference_answer_claim_map": [
+      {
+        "claim_group_id": "NQ25-G01",
+        "reference_answer_excerpt": "From a study‑design and operating‑condition perspective, performance is clearly matrix‑dependent. Riegel et al. evaluated activated carbon filtration and ion‑exchange treatment in a specific PFAS‑polluted groundwater matrix, reporting that short‑chain PFCA (PFBA, PFPeA) were only sufficiently removed over relatively short run times of 6000 and 11,000 bed volumes (BV) with activated carbon, and that ion‑exchange media removed short‑chain PFCA over relatively short run times of 5000 BV for PFBA, 10,000 BV for PFPeA, and 18,000 BV for PFHxA in that same matrix.\nThis underscores that observed run times and breakthrough behaviors are tied to the groundwater matrix used and cannot automatically be transferred to other waters without adjustment.\n\nIon‑exchange performance is additionally sensitive to the presence of background species typical of natural waters. Shaikh and co‑workers note that commercially available ion‑exchange resins, though widely used for PFAS, can have their performance “significantly compromised in the presence of background species commonly found in natural water matrices, including multivalent cations, anions, and dissolved organic matter,” with these species (present at mg L−1 levels) competing with trace‑level PFAS for active sites and in some cases contributing to pore blockage, which diminishes resin capacity and kinetics."
+      },
+      {
+        "claim_group_id": "NQ25-G02",
+        "reference_answer_excerpt": "The way experiments are run and metrics are defined also varies. In the same Riegel study, PFAS sorption on both activated carbon and IEX was characterized in equilibrium batch experiments with demineralized water using Freundlich isotherm parameters (KF and n), while in the groundwater column tests performance was described by run time and bed volumes to achieve sufficient removal.\nSorption isotherms and solid‑phase concentrations were used to interpret resin affinity in another part of that work, and bed‑volume run times were again the key metric in the column filters.\nBecause some studies report isotherm parameters, others emphasize solid‑phase loadings, and still others focus on BV run times or breakthrough curves, it is difficult to directly compare numerical performance between GAC and IEX unless the same operating modes and endpoints are used."
+      },
+      {
+        "claim_group_id": "NQ25-G03",
+        "reference_answer_excerpt": "Mechanistically, Sanzana et al. report that PFAS adsorption on GAC “primarily involve[s] hydrophobic interactions with the pore surfaces of the carbon,” supplemented by secondary electrostatic interactions that can attract or repel PFAS depending on the GAC surface charge.\nRiegel et al. describe a different mechanism for anion‑exchange resins, where the sorption of PFAS is “a mixture of anion exchange and physical sorption, like van der Waals interaction … that might be less dependent on substance polarity.”\nBecause GAC emphasizes hydrophobic interactions and surface charge effects, while IEX combines electrostatic exchange with less polarity‑dependent physical sorption, the same PFAS can interact differently with each adsorbent type under the same nominal conditions, making simple performance rankings misleading."
+      },
+      {
+        "claim_group_id": "NQ25-G04",
+        "reference_answer_excerpt": "Within any given study, PFAS chain length and functional group are major determinants of adsorption affinity for both material classes.\nIn equilibrium experiments with activated carbon, Riegel et al. found the sorption order PFOA > PFHxA > PFPeA > PFBA, indicating that longer‑chain PFCA sorb more strongly than shorter ones under those conditions.\nFor a strong‑base ion‑exchange resin (K6362) and related materials, the order PFOS > PFHxS > PFBS ≈ PFOA > PFHpA > PFHxA > PFPeA > PFBA was observed, and the authors emphasized “a large dif­ference in adsorption affinity … depending on the PFAS chain length and the functional group,” with the C4 PFBA showing the lowest solid‑phase concentrations and thus low adsorption affinity, and increasingly steep isotherms (better removal) with increasing PFCA chain length.\nThey further noted that, across all adsorbents tested (including both activated carbon and IEX), short‑chain PFCA had significantly lower sorption affinity than long‑chain PFAS or short‑chain PFSA.\nThese PFAS‑specific affinity trends mean that even when comparing GAC and IEX for the same matrix and test mode, performance differences are specific to the PFAS mixture and cannot be generalized across all PFAS."
+      },
+      {
+        "claim_group_id": "NQ25-G05",
+        "reference_answer_excerpt": "Adsorbent formulation and material properties also vary within each class, limiting how far broad labels like “GAC” or “ion exchange” can be used in cross‑study comparisons.\nFranke et al. compared two GACs, Filtrasorb 400 and Norit 1240 W, both steam‑activated coals but with different preparation routes and properties: Filtrasorb 400 is a steam‑activated bituminous coal that was pulverized and reagglomerated, while Norit 1240 W is prepared directly from steam‑activated coal; the two have different effective sizes, surface areas, and iodine numbers, and the reagglomerated coal is described as being homogeneously activated and particularly competitive for PFAS and other micropollutants.\nThey also used specific ion‑exchange resins, such as Purolite A600, a Type I strong‑base anion resin with quaternary amino functional groups on a polystyrene‑divinylbenzene gel‑type matrix.\nSuch variability within each category means that reported performance differences can reflect particular GAC or resin formulations rather than intrinsic class‑level behavior."
+      },
+      {
+        "claim_group_id": "NQ25-G06",
+        "reference_answer_excerpt": "Finally, the diversity of reporting choices further complicates numerical comparisons.\nRiegel and co‑workers used Freundlich KF and n values in demineralized water batch tests, solid‑phase concentrations to express relative affinity (e.g., showing PFBA as having the lowest solid‑phase concentrations), and column run times and bed volumes for breakthrough behavior in groundwater.\nOther work with ion‑exchange emphasizes how competing background species reduce effective capacity and slow kinetics.\nBecause studies may prioritize different performance measures (isotherm coefficients, solid‑phase loadings, BV to breakthrough, or qualitative removal descriptions), direct quantitative comparison of adsorption performance between GAC and IEX is challenging unless the same metrics, PFAS species, matrices, and operating modes are aligned."
+      }
+    ],
+    "unresolved_or_unsupported": [
+      "The influence of pH, temperature, and ionic strength on comparative PFAS adsorption performance between activated carbon and ion-exchange resins is not described in the available evidence.",
+      "Specific quantitative adsorption capacities (e.g., mg PFAS per g adsorbent) for particular PFAS on GAC versus ion-exchange resins are not reported in the provided excerpts, so no capacity comparison in those units can be made.",
+      "The role of non-PFAS organic micropollutants or natural organic matter in competing with PFAS specifically for GAC adsorption sites is not detailed beyond general pore blockage and competition effects described for ion-exchange resins.",
+      "Regeneration protocols, number of use cycles, and how regeneration affects long-term comparative performance of GAC and ion-exchange resins for PFAS are not covered in the supplied text.",
+      "Detailed hydraulic conditions in column tests (e.g., flow rates, empty bed contact times) and their direct impact on cross-material comparison are not provided in the evidence excerpts."
+    ],
+    "boundary_check": {
+      "must_include_addressed": true,
+      "must_not_claim_respected": true,
+      "notes": "The answer focuses on factors that hinder comparison—matrix composition, differing mechanisms, PFAS chain length and functional group, material variability, and metric diversity—and restricts discussion of relative performance to specific PFAS and conditions cited in the evidence. No universal claim is made that either activated carbon or ion-exchange resins are always higher-capacity or superior for all PFAS or matrices, and capacity is only discussed qualitatively or via reported orders and bed-volume run times where explicitly supported."
+    }
+  },
+  "generation": {
+    "request_model": "gpt-5.1",
+    "response_model": "gpt-5.1-2025-11-13",
+    "response_id": "chatcmpl-E77DRQjZLwMxMzvUq4wm67MVAF1h4",
+    "reasoning_effort": "low",
+    "temperature": "provider_default_not_sent",
+    "max_completion_tokens": 20000,
+    "finish_reason": "stop",
+    "prompt_tokens": 4886,
+    "cached_prompt_tokens": 0,
+    "completion_tokens": 12640,
+    "total_tokens": 17526,
+    "latency_seconds": 82.97543704195414,
+    "request_sha256": "26f42c05e3e37203423b638a1089d978f1879c2ad021a6f736d91ab30ede3803",
+    "estimated_cost_usd": 0.1325075
+  },
+  "analytical_status": "quarantined_schema_invalid"
+}

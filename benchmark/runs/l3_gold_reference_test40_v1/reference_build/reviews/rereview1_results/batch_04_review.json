@@ -1,0 +1,265 @@
+{
+  "batch_id": "test40-rereview1-batch-04",
+  "batch_sha256": "a1eb4e37d780543de5af28214234a334e279e8283e60a38f4ba0532b90a76250",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-rereview1-batch-04",
+    "reviews": [
+      {
+        "question_id": "WF10_005",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_005-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_005-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_005-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_005-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_005-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "WF10_011",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "The previously flagged WF10_011-G03 misattribution was resolved by removing the claim group entirely and moving the negative-bias/regeneration content to 'unresolved_or_unsupported', which is an acceptable resolution given that the actual desorption sentence was never validated as an exact/unit span for WF10_011_MMG003. However, a new span-sufficiency problem exists in WF10_011-G02: the validated exact_evidence_span/unit_exact_span for WF10_011_MMG005 is truncated at '...at 0.6 V Fig.' and does not include the continuation '...were dramatically increased by 60-fold and 150-fold, respectively,' yet the reference_answer directly quotes that unvalidated continuation and attributes it to WF10_011_MMG005."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_011-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-G02",
+            "verdict": "partially_supported",
+            "issues": [
+              "The validated exact_evidence_span/unit_exact_span for WF10_011_MMG005 ends at '...at 0.6 V Fig.' and does not contain the '60-fold and 150-fold' magnitude that the canonical/central proposition characterizes as 'dramatically' enhanced and that the reference_answer quotes verbatim and attributes to this evidence_id."
+            ],
+            "required_repairs": [
+              "Either extend and validate the WF10_011_MMG005 exact/unit span to include the continuation sentence containing 'were dramatically increased by 60-fold and 150-fold, respectively (Li et al., 2011)', or remove the quoted '60-fold and 150-fold' language from the reference_answer/supports text and restate the claim using only the content actually present in the validated span (adsorption rate/capacity values at 0.6 V vs. suspended powder, without the multiplier)."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_011-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-X02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-X03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-X04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": false,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Resolve the WF10_011-G02 span-sufficiency/quotation mismatch as described above so the reference_answer does not quote unvalidated text from WF10_011_MMG005."
+        ]
+      },
+      {
+        "question_id": "WF10_012",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "The previously flagged WF10_012-G06 task-component mismatch/duplication was resolved by removing the group entirely and recording the PVA/MOF gap in 'unresolved_or_unsupported', which matches one of the two repair options offered. However, a new mismatch exists in WF10_012-G01: its second exact_spans entry reuses the same truncated quote used for the first entry ('All modified membranes exhibited significantly enhanced PFOA rejection ( Fig.') but its 'supports' text asserts a distinct, unvalidated mechanistic claim (MXene-TiO2 incorporation into the thin-film layer impeding PFOA transport) that only appears later, unquoted, in the full_chunk_text. The reference_answer likewise quotes 'the incorporation of MXene-TiO 2 composites into the thin-film layers' as if from the approved evidence, but that phrase is not part of the validated exact_evidence_span/unit_exact_spans for WF10_012_MMG001."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_012-G01",
+            "verdict": "partially_supported",
+            "issues": [
+              "Second exact_spans entry for WF10_012_MMG001 duplicates the first entry's quote ('All modified membranes exhibited significantly enhanced PFOA rejection ( Fig.') but its 'supports' text describes the MXene-TiO2 thin-film incorporation/PFOA-transport-impedance mechanism, which is not contained in that quoted span and was never validated as a separate unit_exact_span.",
+              "The reference_answer quotes 'the incorporation of MXene-TiO 2 composites into the thin-film layers' and attributes it to the same evidence record, but this phrase is likewise absent from the validated exact_evidence_span/unit_exact_spans."
+            ],
+            "required_repairs": [
+              "Either validate the actual mechanistic sentence from WF10_012_MMG001's full_chunk_text ('Moreover, the incorporation of MXene-TiO 2 composites into the thin-film layers introduces additional surface negative charge and potential 2D nanochannel-like interfaces, which further impede the transport of PFOA...') as a distinct unit_exact_span and cite it for the second exact_spans entry, or remove the mechanistic 'supports' claim and the corresponding reference_answer quotation and rely only on the validated 'significantly enhanced PFOA rejection' statement."
+            ]
+          },
+          {
+            "claim_group_id": "WF10_012-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_012-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_012-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_012-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_012-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": false,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Resolve the WF10_012-G01 span/quotation mismatch as described above."
+        ]
+      },
+      {
+        "question_id": "WF10_013",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_013-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_013-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_013-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 135733,
+    "num_turns": 7,
+    "stop_reason": "tool_use",
+    "session_id": "09329256-9ab8-43bd-a568-caf9ada8fbed",
+    "total_cost_usd": 0.55259375,
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 74685,
+      "cache_read_input_tokens": 211610,
+      "output_tokens": 13871,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 74685
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 12688,
+          "cache_read_input_tokens": 85106,
+          "cache_creation_input_tokens": 650,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 650,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 862,
+        "outputTokens": 17,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000947,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 10,
+        "outputTokens": 13871,
+        "cacheReadInputTokens": 211610,
+        "cacheCreationInputTokens": 74685,
+        "webSearchRequests": 0,
+        "costUSD": 0.55164675,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 3888,
+    "ttft_stream_ms": 954,
+    "time_to_request_ms": 39,
+    "type": "result",
+    "duration_ms": 134979,
+    "uuid": "91fbe34a-5178-4b64-9629-ed5ccca31024"
+  },
+  "candidate_test40_inputs_used": false
+}

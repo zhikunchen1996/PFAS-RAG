@@ -1,0 +1,278 @@
+{
+  "call_key": "RT10:bge_llm_local_rag:verify:RT10-bge_llm_local_rag-S08-R03",
+  "created_at": "2026-08-05T04:43:50.984340+00:00",
+  "raw_response_text": "{\"task_id\":\"RT10\",\"record_id\":\"RT10-bge_llm_local_rag-S08-R03\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The study used the same IX resin and batch configurations across matrices (reference NOM fractions, real and synthetic wastewaters, and DI water), with matched PFAS and NOM/DOC levels for the isotherm work. Chunk S08-E07 specifies isotherms with 10\u20131000 mg resin in 1 L source water containing 0.1\u2013100 \u00b5g PFAS/L and 5 mg C/L of either reference NOM or real/synthetic wastewaters. S08-E06 explains that 5 mg C/L was selected based on recycled wastewater DOC. S08-E02 notes DI water kinetic tests and an EBC model applied across matrices. These collectively support that results are comparable with conditions across matrices.\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The endpoint is PFAS removal by ion exchange. S08-E05 states that IX was able to achieve complete PFAS removal and >60% DOC removal. S08-E02 discusses using an EBC model to predict PFAS removal by IX for various source waters, and S08-E07 describes isotherm experiments measuring PFAS concentrations before and after contact. These clearly indicate a removal endpoint.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The second endpoint concerns competitive uptake behavior rather than transformation. S08-E05 notes that the equivalent background concentration (EBC) was employed to evaluate competitive uptake between OM and PFAS, and S08-E02 discusses competitive effects of EfOM and inorganic ions within a multi-component EBC model on PFAS uptake. This still reflects a removal/uptake endpoint and is correctly classified as removal rather than degradation.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 explicitly states that wastewaters were microfiltered (0.3 \u00b5m) and then ultrafiltered (200 kDa) before IX, and that MF/UF was only performed on wastewaters to mimic potable reuse scenarios. Inferring that this pretreatment may underrepresent matrix effects present in less-treated effluents is a reasonable design-based limitation.\"},{\"field_path\":\"limitations[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E02 describes competition from EfOM and inorganic ions being handled together in a multi-component EBC model; there is no indication of experiments where inorganic ions were varied independently of EfOM. Given the description of the design, inferring that inorganic ions were not independently varied is reasonable and thus the stated limitation is design-inferred and supported.\"},{\"field_path\":\"matrix\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 describes MF/UF-pretreated wastewaters (0.3 \u00b5m MF then 200 kDa UF) that were then used in IX isotherm tests alongside reference NOM fractions. S08-E06 notes that 5 mg C/L NOM was chosen because sampled recycled wastewaters exhibited this DOC, linking to an effluent organic matter (EfOM) background. S08-E02 references competitive effects from EfOM and inorganic ions and also DI water-based kinetic tests. Together these support the matrix description of MF/UF-treated real and synthetic secondary effluents with EfOM and inorganic ions, compared to DI and NOM-isolate synthetic waters at similar DOC and PFAS levels.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 states that prior to IX experiments, wastewaters were microfiltered with 0.3 \u00b5m PVDF MF and then passed through 200 kDa PVDF UF membranes. The value string \u201cMF 0.3 \u00b5m + UF 200 kDa\u201d correctly summarizes these pretreatments.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"No numeric unit is needed because the value is a descriptive combination of two processes with embedded size specifications (0.3 \u00b5m and 200 kDa) already given in the qualifiers and source text (S08-E07). Leaving unit null is consistent and not misleading.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 indicates that UF was operated on a CF042 cell at 15 mL min\u207b\u00b9 (or 200 LMH). The recorded value 200 matches the flux of 200 LMH.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 explicitly reports the UF flux as 200 LMH, so the unit \u201cLMH\u201d is correct.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 reports that UF was operated at transmembrane pressures of 5\u201325 psi. The recorded range \u201c5-25\u201d corresponds exactly to this description.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source (S08-E07) specifies transmembrane pressure in psi, so the unit \u201cpsi\u201d is correct.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E06 states that the NOM concentration of 5 mg C per L was selected because sampled recycled wastewaters exhibited this concentration, and S08-E07 notes isotherms using 5 mg C/L with both reference NOM and real/synthetic wastewaters. The recorded value 5 matches the described DOC/NOM level.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E06 uses \u201c5 mg C per L,\u201d equivalent to mg C/L. Thus the unit \u201cmg C/L\u201d is correct.\"},{\"field_path\":\"operating_conditions[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 states that isotherm studies used 1 L of source water having 0.1\u2013100 \u00b5g PFAS per L. The recorded range \u201c0.1-100\u201d matches this initial PFAS concentration range.\"},{\"field_path\":\"operating_conditions[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 reports PFAS concentrations as \u00b5g PFAS per L, so the unit \u201c\u00b5g/L\u201d is correct.\"},{\"field_path\":\"operating_conditions[5].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 indicates that isotherm studies used 10\u20131000 mg of resins mixed with 1 L of source water. This is equivalent to a resin dosage of 10\u20131000 mg/L. The recorded value range \u201c10-1000\u201d reflects this accurately.\"},{\"field_path\":\"operating_conditions[5].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Because 10\u20131000 mg of resin was used in 1 L water (S08-E07), expressing the dosage as mg/L is appropriate. The unit \u201cmg/L\u201d is thus supported.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E03 lists \u201cPentadecafluorooctanoic acid (PFOA, CAS: 335-67-1\u2026)\u201d as a PFAS used. The record\u2019s description of PFOA matches this compound.\"},{\"field_path\":\"pfas_scope[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E03 lists \u201cheptadecafluorooctanesulfonic acid (PFOS, CAS 173-23-1, 40% in water)\u201d as the other PFAS. The record\u2019s description of PFOS is consistent with this.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E06 states: \u201cThe NOM concentration of 5 mg C per L was selected as the sampled recycled wastewaters exhibited this concentration.\u201d The recorded numeric value 5 (value_form exact_numeric) matches the DOC/NOM level described as an effluent reference condition.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E06 uses the unit \u201cmg C per L\u201d; this is equivalent to \u201cmg C/L,\u201d exactly as recorded.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Across the provided chunks (S08-E02, E05, E06, E07), the study reports PFAS and DOC behavior and discusses inorganic ions only conceptually (as competitors) within the EBC model (S08-E02). There is no indication that specific inorganic ion breakthrough or speciation changes were measured. Inferring that inorganic ion effects are not directly quantified and are instead inferred from modeling/prior work is a reasonable design-based statement.\"},{\"field_path\":\"study_scale\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S08-E07 describes isotherm studies with 10\u20131000 mg resin in 1 L of water, and S08-E06 describes kinetic studies with 2.2 mL resin in 1 L beakers agitated on a jar tester\u2014typical bench-scale batch setups. S08-E03 notes comparative studies with secondary effluent relative to synthetic waters. DI water kinetics are also noted in S08-E02. These support the description of bench-scale batch isotherm and kinetic experiments using real and synthetic wastewaters, NOM waters, and DI controls.\"},{\"field_path\":\"treatment\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The methods describe a strongly basic polyacrylic anion exchange resin (implied by IX context and earlier parts of the paper) used in batch tests. S08-E07 details that MF/UF-pretreated wastewaters were used prior to IX, and S08-E02 describes using a multi-component EBC model to estimate competitive effects from EfOM and inorganic ions on PFOA/PFOS uptake. These collectively support the treatment description of a strong-base anion exchange resin applied to MF/UF-pretreated secondary effluent and synthetic waters in batch, with competition evaluated via an EBC model.\"}],\"record_usable\":true,\"record_usable_rationale\":\"All core elements\u2014source identity, PFAS compounds, matrix description, IX treatment, operating conditions, and the key quantitative DOC level\u2014are directly supported by the cited text with no numeric or unit errors. Endpoint classification as removal and the comparability conclusion follow from the experimental design. Any interpretive limitations or inferences are reasonable and clearly based on the reported methods, so the record is suitable for synthesis with attention to stated qualifiers.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of how water-matrix effects should be tested and reported so that PFAS treatment performance can be translated beyond clean laboratory water.\",\"task_id\":\"RT10\",\"title\":\"Designing PFAS treatment studies that remain valid in real water\"}\n\nTask-specific extraction objective:\nExtract matrix constituent and concentration, PFAS identity, treatment, clean-water control, matrix-modified condition, direction and magnitude of effect, endpoint, proposed mechanism, constituent interaction, matched operating conditions, and study scale.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.hazadv.2023.100322\"],\"all_blocked_titles\":[\"effects of water matrix on per and poly fluoroalkyl substances pfas treatment physical separation and degradation processes a review\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.hazadv.2023.100322\"],\"anchor_id\":\"AR-ZEIDABADI-2023\",\"corpus_source\":\"2023 - Zeidabadi - Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment - Physical-separation and degradation processes - A review.pdf\",\"doi\":\"10.1016/j.hazadv.2023.100322\",\"title\":\"Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment: Physical-separation and degradation processes - A review\",\"url\":\"https://doi.org/10.1016/j.hazadv.2023.100322\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Dixit, F.; Barbeau, B.; Mostafavi, S.G.; Mohseni, M. PFOA and PFOS removal by ion exchange for water reuse and drinking applications: role of organic matter characteristics. Environ. Sci.: Water Res. Technol. 2019, 5, 1782\\u20131795.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S08-E02\",\n      \"S08-E06\",\n      \"S08-E07\"\n    ],\n    \"reason\": \"Real and synthetic wastewaters, NOM-isolate waters, and DI-water controls were tested with the same resin, PFAS concentration ranges, DOC levels, and batch configurations, enabling comparison of how EfOM and inorganic ions alter PFAS removal relative to cleaner matrices.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1039/c9ew00409b\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S08-E02\",\n        \"S08-E05\",\n        \"S08-E07\"\n      ],\n      \"interpretation\": \"Comparison of PFOA/PFOS removal by IX in secondary effluent and synthetic wastewaters (with EfOM and inorganic ions) versus DI and NOM-isolate waters at matched PFAS and DOC levels.\",\n      \"reported_term\": \"PFAS removal in real vs synthetic waters\"\n    },\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S08-E02\",\n        \"S08-E05\"\n      ],\n      \"interpretation\": \"Change in apparent PFAS uptake capacity and EBC model behavior when EfOM and inorganic ions are present, interpreted as competitive occupancy of exchange sites and possible pore effects.\",\n      \"reported_term\": \"Competitive uptake (EBC modeling)\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S08-E07\"\n      ],\n      \"statement\": \"Wastewaters were pretreated by MF/UF to remove particulates and high-molecular-weight organics, so results may underrepresent matrix effects in less-treated effluents.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S08-E02\",\n        \"S08-E05\"\n      ],\n      \"statement\": \"Inorganic ions were not varied independently from EfOM, making it difficult to apportion competitive effects between organic and inorganic constituents.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S08-E02\",\n      \"S08-E06\",\n      \"S08-E07\"\n    ],\n    \"value\": \"Microfiltered and ultrafiltered secondary effluent (real and synthetic wastewaters) containing effluent organic matter (EfOM) and inorganic ions, compared against deionized water and NOM-isolate synthetic waters at similar PFAS and DOC levels.\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E07\"\n      ],\n      \"name\": \"Pre-treatment of wastewaters\",\n      \"qualifiers\": \"Secondary effluents were microfiltered (0.3 \\u00b5m PVDF) then ultrafiltered (200 kDa PVDF) at 200 LMH and 5\\u201325 psi before IX to mimic potable reuse scenarios.\",\n      \"unit\": null,\n      \"value\": \"MF 0.3 \\u00b5m + UF 200 kDa\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E07\"\n      ],\n      \"name\": \"UF flux\",\n      \"qualifiers\": \"Equivalent to 15 mL/min in CF042 cell during UF of wastewaters prior to IX.\",\n      \"unit\": \"LMH\",\n      \"value\": \"200\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E07\"\n      ],\n      \"name\": \"UF transmembrane pressure\",\n      \"qualifiers\": \"Pressure range used during UF pretreatment.\",\n      \"unit\": \"psi\",\n      \"value\": \"5-25\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E06\",\n        \"S08-E07\"\n      ],\n      \"name\": \"NOM/EfOM concentration in IX tests\",\n      \"qualifiers\": \"Wastewater matrices adjusted or selected to have ~5 mg C/L DOC, similar to synthetic NOM waters.\",\n      \"unit\": \"mg C/L\",\n      \"value\": \"5\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E07\"\n      ],\n      \"name\": \"PFAS initial concentration (isotherms)\",\n      \"qualifiers\": \"Concentration range for PFOA/PFOS in IX tests with real and synthetic wastewaters, matching synthetic NOM waters.\",\n      \"unit\": \"\\u00b5g/L\",\n      \"value\": \"0.1-100\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E07\"\n      ],\n      \"name\": \"Resin dosage (isotherm range)\",\n      \"qualifiers\": \"Same dosage range applied for all matrices including real and synthetic wastewaters.\",\n      \"unit\": \"mg/L\",\n      \"value\": \"10-1000\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E03\"\n      ],\n      \"value\": \"PFOA (pentadecafluorooctanoic acid).\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E03\"\n      ],\n      \"value\": \"PFOS (heptadecafluorooctanesulfonic acid).\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S08-E06\"\n      ],\n      \"name\": \"Effluent DOC reference level\",\n      \"qualifiers\": \"Recycled wastewaters exhibited ~5 mg C/L DOC, which was adopted in synthetic matrices to match EfOM loadings.\",\n      \"unit\": \"mg C/L\",\n      \"value\": \"5\",\n      \"value_form\": \"exact_numeric\"\n    }\n  ],\n  \"record_id\": \"RT10-bge_llm_local_rag-S08-R03\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S08-E02\"\n      ],\n      \"statement\": \"Study tracked PFAS and DOC but did not measure specific inorganic ion breakthrough or speciation changes; matrix effects from inorganic ions are inferred from modeling and prior work, not from direct ion-uptake measurements in these tests.\"\n    }\n  ],\n  \"source_id\": \"S08\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S08-E02\",\n      \"S08-E05\",\n      \"S08-E06\",\n      \"S08-E07\"\n    ],\n    \"value\": \"Bench-scale batch ion-exchange isotherm and kinetic experiments using real and synthetic wastewaters compared with synthetic NOM waters and DI-water controls.\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S08-E02\",\n      \"S08-E05\",\n      \"S08-E07\"\n    ],\n    \"value\": \"Strong-base anion-exchange resin applied to MF/UF-pretreated secondary effluent and synthetic wastewaters in batch mode, with competitive effects of EfOM and inorganic ions evaluated using a multi-component EBC model.\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 10,\n  \"bge_score\": 0.09052669256925583,\n  \"citation\": \"Dixit, F.; Barbeau, B.; Mostafavi, S.G.; Mohseni, M. rsc.li/es-water PFOA and PFOS removal by ion exchange for water reuse and drinking applications: role of organic matter characteristics \\u2020. Environmental Science: Water Research & Technology 2019 5 1782-1795. DOI: 10.1039/c9ew00409b.\",\n  \"doi\": \"10.1039/c9ew00409b\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1039/c9ew00409b\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 48,\n      \"locator_id\": \"S08-E01\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.002412864938378334,\n        \"RT10-C2\": 0.01134712714701891,\n        \"RT10-C3\": 3.7286808947101235e-05,\n        \"umbrella\": 0.23866529762744904\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"dosage of 100 mg L \\u22121 (0.45 mL L \\u22121). Therefore, for commercial resin dosages which are \\u223c4\\u201310 mL L \\u22121,60 a complete PFAS removal can be achieved with simultaneous >60% DOC removal. Consequently, IX holds promising potentials for practical application in drinking water treatment and potable reuse applications. 4. Conclusion The following conclusions were derived from this research: \\u0081 Removal of PFAS via IX involved equivalent exchange of chloride ions with minimal influence of hydrophobic adsorption. \\u0081 A resin dosage of 1000 mg L (4.5 mL L \\u22121) is sufficient to get the influent PFOA/PFOS concentration ( C0 \\u2264 50 000 ng L\\u22121) below 70 ng L \\u22121 (USEPA Guideline) with 5 mg C per L background NOM at pH = 7 ( T =2 3 \\u00b0C). \\u0081 Uptake of PFOA and PFOS is significantly impacted by the background organic matter's charge density and, more importantly, by the molecular weight distribution. \\u0081 IAST-EBC model could be used to predict the IX performance for PFOA and PFOS removal in natural and synthetic recycled and impaired waters. \\u0081 Mass transfer biot number estimations indicate that film diffusion is the limiting factor for PFOA and PFOS concentration of C0 \\u2264 50 \\u03bcgL \\u22121 (resin dosage 100 mg\"\n    },\n    {\n      \"corpus_chunk\": 40,\n      \"locator_id\": \"S08-E02\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.025115391239523888,\n        \"RT10-C2\": 0.00719107361510396,\n        \"RT10-C3\": 0.00018426217138767242,\n        \"umbrella\": 0.024553898721933365\n      },\n      \"section\": \"methods\",\n      \"text\": \"L\\u22121 (see S.6 \\u2020 for details). Inorganic ions have previously been reported as strong competitors for organic compounds during IX process (with the tested resin) and would have therefore resulted in a lower PFOA/PFOS uptake via direct competition for active exchange sites when compared to SRNOM or any other IHSS isolate (5 mg C per L) with similar concentration. 43,48 Therefore, the model was estimated considering the competitive effects from the EfOM and inorganic ions utilizing a multi-component EBC model (details in S.4, \\u2020 48). Moreover, the EBC model fits for all matrices (except SRHA) and indicated a high degree of correlation ( R2 > 0.9) with low errors (Marquardt's percent standard deviation (MPSD) <10, data not shown 58). Hence, it can be concluded that the EBC model could be effectively used to predict the PFAS removal by IX for various source water characteristics, provided they do not exhibit pore blockage (such as what was observed for SRHA). 3.5 Impact of NOM characteristics on PFAS kinetics The kinetics of PFOA and PFOS uptakes were studied at different initial concentrations (5 \\u2013100 \\u03bcgL \\u22121), in DI water adjusted at pH \\u223c 7. The studies were performed to evaluate the\"\n    },\n    {\n      \"corpus_chunk\": 7,\n      \"locator_id\": \"S08-E03\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.0015147114172577858,\n        \"RT10-C2\": 0.11826828867197037,\n        \"RT10-C3\": 3.744877176359296e-05,\n        \"umbrella\": 0.040069080889225006\n      },\n      \"section\": \"methods\",\n      \"text\": \"36,37 Further, we also evaluated the influence of operating parameters such as pH and contact time on the uptake capacity of the resin. Subsequently, the kinetics of uptake were studied to analyze the rate controlling steps of PFOA/ PFOS removal using anionic IX. Finally, comparative studies were performed with a secondary effluent to relate the uptake of PFOA and PFOS with the one observed with synthetic waters. Consequently, this study, although more focused towards potable reuse, also presents key knowledge essential for drinking water treatment applications. 2. Experimental 2.1 Chemicals and reagents Pentadecafluorooctanoic acid (PFOA, CAS: 335-67-1, 5 g powder) and heptadecafluorooctanesulfonic acid (PFOS, CAS 173-23-1, 40% in water) were purchased from Sigma Aldrich (Oakville, ON, Canada) and were used as received. Suwannee River natural organic matter (SRNOM), Suwannee River fulvic acid (SRFA), Suwannee River humic acid (SRHA) and Pony Lake fulvic acid (PLFA) were obtained from the International Humic Substances Society (St. Paul, MN, USA). PFAS and NOM properties are given in Table 1. As depicted in Table 1, the selected NOM fractions offered a wide range of charge density and molecular weight distribution, including OM characteristics encountered in the natural environments.\"\n    },\n    {\n      \"corpus_chunk\": 28,\n      \"locator_id\": \"S08-E04\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.0021741765085607767,\n        \"RT10-C2\": 0.0122743034735322,\n        \"RT10-C3\": 0.00019200585666112602,\n        \"umbrella\": 0.032666876912117004\n      },\n      \"section\": \"methods\",\n      \"text\": \"performed throughout this project. Note that the concentration of PFAS in the control experiments did not vary significantly ( p < 0.05), indicating no precipitation of PFAS compounds at lower pH via protonation of the acid group. Several factors could influence the uptake of PFAS with changing pH, especially at higher pH values (pH > 6). The point of zero charge (pH pzc) of the resin is approximately at pH \\u223c7.2. Changing pH could potentially impact the electrostatic interactions between PFAS and IX resins. 54 Although the IX capacity of the resin is pH independent, the net charge density would decrease as pH increases (becomes zero at pH pzc). In addition to the electrostatic interactions, changing pH also impacts chemisorption. At higher PFAS concentrations of >500 \\u03bcgL \\u22121 (as shown in Fig. 1(A)), we have established that removal of PFAS by polyacrilic strongly basic resins is mostly driven by ion exchange. However, here we tested the impact of pH at very low PFAS concentrations of 10 \\u03bcgL \\u22121 (note, environmentally relevant concentrations are similar or even lesser). At low contaminant concentrations, the ratio between ion exchange and sorption could be different (as compared to high concentration studies). Here the effort was made to investigate the\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S08-E05\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.0022984484676271677,\n        \"RT10-C2\": 0.04805409535765648,\n        \"RT10-C3\": 4.922790685668588e-05,\n        \"umbrella\": 0.18922893702983856\n      },\n      \"section\": \"methods\",\n      \"text\": \"Factors influencing the uptake behavior included the PFOA and PFOS concentrations, resin dosage, and background OM characteristics, more specifically the charge density and molecular weight distribution of source water OM. The equivalent background concentration (EBC) was employed to evaluate the competitive uptake between OM and PFAS. Experimental data were fitted to different mathematical and physical models to evaluate the competitive interactions. Further, IX was able to achieve complete PFAS removal with simultaneous >60% dissolved organic carbon (DOC) removal. Evidence of size exclusion and pore blockage was also observed in the presence of humics and larger molecular weight organic fractions. Results of this study indicate that IX exhibits great potential for simultaneous OM and PFAS removal for drinking and potable water reuse applications. 1. Introduction Drinking water supplies are typically derived from a variety of surface and ground water sources. Among the regulated chemical contaminants associated with the drinking water, perfluoroalkyl compounds (PFAS) are a significant concern. 1 PFAS exhibit exceptionally high thermal resistance and are chemically inert. Consequently, PFAS are commonly used as fire-fighting foam components and industrial impregnating agents for textile, cosmetic and leather industries. Toxicological studies have indicated that PFAS are bio- accumulative and pose numerous health risks to humans. 2,3 Among the environmentally persistent PFAS, perfluorooctanoic acid (PFOA) and perfluorooctane sulfonic\"\n    },\n    {\n      \"corpus_chunk\": 15,\n      \"locator_id\": \"S08-E06\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.003200167091563344,\n        \"RT10-C2\": 0.00875692069530487,\n        \"RT10-C3\": 3.770168041228317e-05,\n        \"umbrella\": 0.11178191006183624\n      },\n      \"section\": \"methods\",\n      \"text\": \"PLFA, or real and synthetic wastewaters, respectively. These selected range of PFAS concentration were adopted considering the wide concentration range of PFAS detected in natural environments. 46 Further, studies at higher concentrations (say in \\u03bcg PFAS per L) provided a more comprehensive and clearer understanding of the competitive behavior with NOM fractions. Nonetheless, in our selected range, we did incorporate and study the uptake at more commonly encountered PFAS concentrations (which are usually in ng L \\u22121 to \\u03bcgL \\u22121 (ref. 47)). The NOM concentration of 5 mg C per L was selected as the sampled recycled wastewaters exhibited this concentration. It is also a representative concentration for many surface water sources. 48 After 24 h, the resins were filtered from the treated water using a 0.45 \\u03bcm pre-rinsed syringe filters (Fisher Scientific, SLHV033RS, ON, Canada), prior to determining the final DOC and PFAS concentration. For kinetic studies, 2.2 mL of resin (equivalent to a dry resin dosage of 500 mg)) was mixed with 1 L of water in circular 1 L beakers agitated with a Phipps & Bird 9900 Jar tester (Richmond, VA, USA) operated at 150 rpm for contact times varying from 2 minutes up to 24 hours. Triplicate experiments were performed for every experimental\"\n    },\n    {\n      \"corpus_chunk\": 14,\n      \"locator_id\": \"S08-E07\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.004218102898448706,\n        \"RT10-C2\": 0.023226642981171608,\n        \"RT10-C3\": 3.7287023587850854e-05,\n        \"umbrella\": 0.10655105859041214\n      },\n      \"section\": \"methods\",\n      \"text\": \"pre-filtered with 0.45 \\u03bcm pre-rinsed membrane filters (Millex- HV Syringe Filters, Catalog number: SLHV033RS, Duluth, GA, USA) and stored in the dark at 4 \\u00b0C for up to four weeks. Prior to the IX experiments, the wastewaters were microfiltered (0.3 \\u03bcm, GE Osmonics Flat Sheet, JX, PVDF, MF (Sterlitech Corporation, Kent, WA, USA)) and then passed through ultrafiltration membranes (200 kDa \\u03bcm, Synder Flat Sheet, V5, PVDF, UF (Sterlitech Corporation, Kent, WA, USA)), operated on a CF042 cascade at 15 mL min \\u22121 (or 200 LMH) at operating transmembrane pressures of 5 \\u201325 psi. Note that the MF/UF treatment was only performed on wastewaters, and not on NOM fractions, to mimic scenarios relevant to potable- reuse. 2.6 Isotherms and kinetic studies For isotherm studies, 10 \\u20131000 mg of resins (221 mg dry weight of resin = 1 mL of wet resin) were mixed for 24 hours (equilibrium) with 1 L of source water having 0.1 \\u2013100 \\u03bcg PFAS per L and 5 mg C per L initial concentration of either four reference NOM fractions, SRNOM, SRHA, SRFA and PLFA, or real and synthetic wastewaters, respectively. These\"\n    },\n    {\n      \"corpus_chunk\": 5,\n      \"locator_id\": \"S08-E08\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.019381484016776085,\n        \"RT10-C2\": 0.013473850674927235,\n        \"RT10-C3\": 3.7463272747118026e-05,\n        \"umbrella\": 0.08498828858137131\n      },\n      \"section\": \"methods\",\n      \"text\": \"for uptake sites via IX. Specifically, OM characteristics, such as charge density and molecular weight distribution, are expected to influence PFAS removal via competitive mechanisms such as pore blockage and direct competition for active sites. 23,24 Although scientific studies have investigated PFAS removal from natural waters via IX, the existing data on the competitive interactions between PFAS and organic matter under varied OM characteristics (charge density and molecular weight distribution) are scarce. For instance, past studies have investigated the removal of different PFAS from groundwater and wastewaters. 25\\u201327 However, their key focus was on comparing the efficacy of strongly basic IX over carbon-based adsorbents under fixed OM backgrounds. Similarly, other researchers investigated PFAS removal in different surface waters. 15,16,28 However, the impact of OM characteristics on PFAS uptake was not comprehensively evaluated. Moreover, competitive interactions between PFAS and NOM are often evaluated in bi-solute systems, despite the fact that the uptake of PFAS in natural environments involves multi-component competitive interactions (with NOM and inorganic ions). 27,29 Other existing studies in scientific literature on emerging PFAS removal via IX present the fundamental kinetic and isotherm data in de-ionized waters.30\\u201332 Information on PFAS removal by IX under the influence of varied characteristics of the organic compounds present in the real water sources is often\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2019 - Dixit - rsc.li - es-water PFOA and PFOS removal by ion exchange for water reuse and drinking applications - role of organic matter characteristics \\u2020.pdf\",\n  \"source_id\": \"S08\",\n  \"title\": \"rsc.li/es-water PFOA and PFOS removal by ion exchange for water reuse and drinking applications: role of organic matter characteristics \\u2020\",\n  \"year\": \"2019\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "0d11199d5ab629b650cae286671964943c4bbe75df7545405078717834fe916f",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.04780175,
+    "finish_reason": "stop",
+    "input_tokens": 6555,
+    "latency_seconds": 39.01618774991948,
+    "output_tokens": 4076,
+    "reasoning_tokens": 1747,
+    "response_id": "chatcmpl-E9NlATRFMOWN003jzVjD7ZPvU9ZXC",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 10631,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The study used the same IX resin and batch configurations across matrices (reference NOM fractions, real and synthetic wastewaters, and DI water), with matched PFAS and NOM/DOC levels for the isotherm work. Chunk S08-E07 specifies isotherms with 10\u20131000 mg resin in 1 L source water containing 0.1\u2013100 \u00b5g PFAS/L and 5 mg C/L of either reference NOM or real/synthetic wastewaters. S08-E06 explains that 5 mg C/L was selected based on recycled wastewater DOC. S08-E02 notes DI water kinetic tests and an EBC model applied across matrices. These collectively support that results are comparable with conditions across matrices.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The endpoint is PFAS removal by ion exchange. S08-E05 states that IX was able to achieve complete PFAS removal and >60% DOC removal. S08-E02 discusses using an EBC model to predict PFAS removal by IX for various source waters, and S08-E07 describes isotherm experiments measuring PFAS concentrations before and after contact. These clearly indicate a removal endpoint.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "The second endpoint concerns competitive uptake behavior rather than transformation. S08-E05 notes that the equivalent background concentration (EBC) was employed to evaluate competitive uptake between OM and PFAS, and S08-E02 discusses competitive effects of EfOM and inorganic ions within a multi-component EBC model on PFAS uptake. This still reflects a removal/uptake endpoint and is correctly classified as removal rather than degradation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "S08-E07 explicitly states that wastewaters were microfiltered (0.3 \u00b5m) and then ultrafiltered (200 kDa) before IX, and that MF/UF was only performed on wastewaters to mimic potable reuse scenarios. Inferring that this pretreatment may underrepresent matrix effects present in less-treated effluents is a reasonable design-based limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1]",
+        "reason": "S08-E02 describes competition from EfOM and inorganic ions being handled together in a multi-component EBC model; there is no indication of experiments where inorganic ions were varied independently of EfOM. Given the description of the design, inferring that inorganic ions were not independently varied is reasonable and thus the stated limitation is design-inferred and supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix",
+        "reason": "S08-E07 describes MF/UF-pretreated wastewaters (0.3 \u00b5m MF then 200 kDa UF) that were then used in IX isotherm tests alongside reference NOM fractions. S08-E06 notes that 5 mg C/L NOM was chosen because sampled recycled wastewaters exhibited this DOC, linking to an effluent organic matter (EfOM) background. S08-E02 references competitive effects from EfOM and inorganic ions and also DI water-based kinetic tests. Together these support the matrix description of MF/UF-treated real and synthetic secondary effluents with EfOM and inorganic ions, compared to DI and NOM-isolate synthetic waters at similar DOC and PFAS levels.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "S08-E07 states that prior to IX experiments, wastewaters were microfiltered with 0.3 \u00b5m PVDF MF and then passed through 200 kDa PVDF UF membranes. The value string \u201cMF 0.3 \u00b5m + UF 200 kDa\u201d correctly summarizes these pretreatments.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "No numeric unit is needed because the value is a descriptive combination of two processes with embedded size specifications (0.3 \u00b5m and 200 kDa) already given in the qualifiers and source text (S08-E07). Leaving unit null is consistent and not misleading.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "S08-E07 indicates that UF was operated on a CF042 cell at 15 mL min\u207b\u00b9 (or 200 LMH). The recorded value 200 matches the flux of 200 LMH.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "S08-E07 explicitly reports the UF flux as 200 LMH, so the unit \u201cLMH\u201d is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "S08-E07 reports that UF was operated at transmembrane pressures of 5\u201325 psi. The recorded range \u201c5-25\u201d corresponds exactly to this description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "The source (S08-E07) specifies transmembrane pressure in psi, so the unit \u201cpsi\u201d is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "S08-E06 states that the NOM concentration of 5 mg C per L was selected because sampled recycled wastewaters exhibited this concentration, and S08-E07 notes isotherms using 5 mg C/L with both reference NOM and real/synthetic wastewaters. The recorded value 5 matches the described DOC/NOM level.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "S08-E06 uses \u201c5 mg C per L,\u201d equivalent to mg C/L. Thus the unit \u201cmg C/L\u201d is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].value",
+        "reason": "S08-E07 states that isotherm studies used 1 L of source water having 0.1\u2013100 \u00b5g PFAS per L. The recorded range \u201c0.1-100\u201d matches this initial PFAS concentration range.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[4].unit",
+        "reason": "S08-E07 reports PFAS concentrations as \u00b5g PFAS per L, so the unit \u201c\u00b5g/L\u201d is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[5].value",
+        "reason": "S08-E07 indicates that isotherm studies used 10\u20131000 mg of resins mixed with 1 L of source water. This is equivalent to a resin dosage of 10\u20131000 mg/L. The recorded value range \u201c10-1000\u201d reflects this accurately.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[5].unit",
+        "reason": "Because 10\u20131000 mg of resin was used in 1 L water (S08-E07), expressing the dosage as mg/L is appropriate. The unit \u201cmg/L\u201d is thus supported.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "S08-E03 lists \u201cPentadecafluorooctanoic acid (PFOA, CAS: 335-67-1\u2026)\u201d as a PFAS used. The record\u2019s description of PFOA matches this compound.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[1].value",
+        "reason": "S08-E03 lists \u201cheptadecafluorooctanesulfonic acid (PFOS, CAS 173-23-1, 40% in water)\u201d as the other PFAS. The record\u2019s description of PFOS is consistent with this.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "S08-E06 states: \u201cThe NOM concentration of 5 mg C per L was selected as the sampled recycled wastewaters exhibited this concentration.\u201d The recorded numeric value 5 (value_form exact_numeric) matches the DOC/NOM level described as an effluent reference condition.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "S08-E06 uses the unit \u201cmg C per L\u201d; this is equivalent to \u201cmg C/L,\u201d exactly as recorded.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "Across the provided chunks (S08-E02, E05, E06, E07), the study reports PFAS and DOC behavior and discusses inorganic ions only conceptually (as competitors) within the EBC model (S08-E02). There is no indication that specific inorganic ion breakthrough or speciation changes were measured. Inferring that inorganic ion effects are not directly quantified and are instead inferred from modeling/prior work is a reasonable design-based statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale",
+        "reason": "S08-E07 describes isotherm studies with 10\u20131000 mg resin in 1 L of water, and S08-E06 describes kinetic studies with 2.2 mL resin in 1 L beakers agitated on a jar tester\u2014typical bench-scale batch setups. S08-E03 notes comparative studies with secondary effluent relative to synthetic waters. DI water kinetics are also noted in S08-E02. These support the description of bench-scale batch isotherm and kinetic experiments using real and synthetic wastewaters, NOM waters, and DI controls.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment",
+        "reason": "The methods describe a strongly basic polyacrylic anion exchange resin (implied by IX context and earlier parts of the paper) used in batch tests. S08-E07 details that MF/UF-pretreated wastewaters were used prior to IX, and S08-E02 describes using a multi-component EBC model to estimate competitive effects from EfOM and inorganic ions on PFOA/PFOS uptake. These collectively support the treatment description of a strong-base anion exchange resin applied to MF/UF-pretreated secondary effluent and synthetic waters in batch, with competition evaluated via an EBC model.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT10-bge_llm_local_rag-S08-R03",
+    "record_usable": true,
+    "record_usable_rationale": "All core elements\u2014source identity, PFAS compounds, matrix description, IX treatment, operating conditions, and the key quantitative DOC level\u2014are directly supported by the cited text with no numeric or unit errors. Endpoint classification as removal and the comparability conclusion follow from the experimental design. Any interpretive limitations or inferences are reasonable and clearly based on the reported methods, so the record is suitable for synthesis with attention to stated qualifiers.",
+    "task_id": "RT10"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

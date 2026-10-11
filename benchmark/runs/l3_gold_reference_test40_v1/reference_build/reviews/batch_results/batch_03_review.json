@@ -1,0 +1,212 @@
+{
+  "batch_id": "test40-review-batch-03",
+  "batch_sha256": "3df55b8877b204da8638b4da4331cccf4fb4bba8bb38c4e9766faf083ecc032b",
+  "prompt_sha256": "36d1ac30ce1bfad6a2b61144eb973739f80addc0c6ddce3a241ec83cd268816c",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-review-batch-03",
+    "reviews": [
+      {
+        "question_id": "NQ16",
+        "verdict": "repair_required",
+        "question_level_issues": [
+          "Two evidence spans are each cited twice within the same claim group with near-identical or redundant 'supports' annotations, without adding distinct content, violating the dedup requirement.",
+          "NQ16-G01 lists evidence_id NQ16_MMG001 in evidence_ids but does not cite it in the group's exact_spans list; its content ('The others required 360 min to reach 90% adsorption') is a later-time/endpoint fact more relevant to NQ16-G02 than to the early-time proposition of G01."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ16-G01",
+            "verdict": "duplicate_or_overweighted",
+            "issues": [
+              "NQ16_MMG002's exact_evidence_span is quoted twice in exact_spans with two separate 'supports' entries that restate essentially the same point (fast early removal at 30 min) rather than distinct content.",
+              "NQ16_MMG001 is listed in evidence_ids but has no corresponding exact_span entry in this group; its content is about the 360-min endpoint, which belongs to the later-time discussion (G02) rather than early-time sampling (G01)."
+            ],
+            "required_repairs": [
+              "Merge the two NQ16_MMG002 exact_span entries in G01 into one, keeping only the distinct supporting rationale.",
+              "Either remove NQ16_MMG001 from G01's evidence_ids or add an exact_span entry from it that is actually relevant to the early-time sampling proposition."
+            ]
+          },
+          {
+            "claim_group_id": "NQ16-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ16-G03",
+            "verdict": "duplicate_or_overweighted",
+            "issues": [
+              "NQ16_MMG004's exact_evidence_span (PFOS 2 h vs GenX 6 h) is quoted twice with different 'supports' text; the second entry claims support for a '4 to 168 h' range across systems, but that range appears only in the full_chunk_text discussion of cited literature, not in the quoted exact_evidence_span itself."
+            ],
+            "required_repairs": [
+              "Consolidate the two NQ16_MMG004 exact_span entries into one, and if the 4–168 h range claim is retained, note explicitly that it is drawn from the full_chunk_text's discussion of cited comparator studies rather than from the exact_evidence_span alone."
+            ]
+          },
+          {
+            "claim_group_id": "NQ16-X01",
+            "verdict": "duplicate_or_overweighted",
+            "issues": [
+              "Same NQ16_MMG004 span is quoted twice with redundant supports text (adsorbent-dependence vs 4–168 h range), mirroring the duplication seen in G03; the 4–168 h figure again derives from full_chunk_text context rather than the quoted span."
+            ],
+            "required_repairs": [
+              "Merge the two exact_span entries for NQ16_MMG004 in X01 into a single entry, and clarify that the 4–168 h range is supported via the full original chunk rather than the exact_evidence_span alone."
+            ]
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": [
+          "Deduplicate the repeated NQ16_MMG002 span entry in NQ16-G01 and the repeated NQ16_MMG004 span entries in NQ16-G03 and NQ16-X01.",
+          "Resolve the orphaned NQ16_MMG001 evidence_id in NQ16-G01 by either citing it directly or removing it from that group's evidence_ids."
+        ]
+      },
+      {
+        "question_id": "NQ18",
+        "verdict": "clean",
+        "question_level_issues": [],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ18-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ18-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ18-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ18-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ18-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ18-G06",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ18-G07",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ18-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ18-X02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ18-X03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 84905,
+    "num_turns": 6,
+    "stop_reason": "tool_use",
+    "session_id": "96bbc341-dc9c-419d-b59f-6cf5e8804191",
+    "total_cost_usd": 0.40167470000000005,
+    "usage": {
+      "input_tokens": 8,
+      "cache_creation_input_tokens": 64944,
+      "cache_read_input_tokens": 114609,
+      "output_tokens": 8200,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 64944
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 7126,
+          "cache_read_input_tokens": 58499,
+          "cache_creation_input_tokens": 11500,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 11500,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 628,
+        "outputTokens": 20,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000728,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 8,
+        "outputTokens": 8200,
+        "cacheReadInputTokens": 114609,
+        "cacheCreationInputTokens": 64944,
+        "webSearchRequests": 0,
+        "costUSD": 0.4009467,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 6162,
+    "ttft_stream_ms": 1014,
+    "time_to_request_ms": 170,
+    "type": "result",
+    "duration_ms": 84478,
+    "uuid": "7ee03186-221d-4f80-b21b-b68d19a41c0b"
+  },
+  "candidate_test40_inputs_used": false
+}

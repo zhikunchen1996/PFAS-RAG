@@ -1,0 +1,2357 @@
+{
+  "deterministic_field_normalizations": [],
+  "deterministic_field_rejections": [
+    {
+      "field_path": "quantitative_findings[3]",
+      "finding": {
+        "evidence_locator_ids": [
+          "WEB06-E03"
+        ],
+        "name": "Mass fraction of detected short-chain PFAAs",
+        "qualifiers": "Trace concentrations of shorter-chain PFAAs detected at all frequencies; total amount of all short-chain species represented less than 1% of the total yield by mass. Value reported here as <1%.",
+        "unit": "% of total yield by mass",
+        "value": "1",
+        "value_form": "inequality"
+      },
+      "reason": "invalid_value_for_declared_value_form",
+      "record_id": "RT09-gpt51_web_search-WEB06-R01"
+    },
+    {
+      "field_path": "quantitative_findings[3]",
+      "finding": {
+        "evidence_locator_ids": [
+          "WEB07-E03"
+        ],
+        "name": "Fluorine_balance_high_T",
+        "qualifiers": ">100% recovered based on initial PFAS fluorine at T > 580 \u00b0C; reflects measured fluoride plus remaining PFAS and indicates slight over-recovery at higher temperatures.",
+        "unit": "% of initial F",
+        "value": "100",
+        "value_form": "inequality"
+      },
+      "reason": "invalid_value_for_declared_value_form",
+      "record_id": "RT09-gpt51_web_search-WEB07-R01"
+    }
+  ],
+  "deterministic_preverification_rejections": [],
+  "records": [
+    {
+      "citation": "Ren Z, Bergmann U, Leivisk\u00e4 T. Reductive degradation of perfluorooctanoic acid in complex water matrices by using the UV/sulfite process. Water Research. 2021;205:117676.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E02",
+          "WEB01-E04"
+        ],
+        "reason": "Bench-scale aqueous UV/sulfite treatment of a single PFAS (PFOA) with clearly reported initial concentration, pH, sulfite dose, reaction times, parent loss, and defluorination expressed on consistent percentage and concentration bases; results are comparable to other UV/sulfite PFOA experiments under similar high-concentration, synthetic-water conditions but not directly to field conditions or different PFAS chemistries.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1016/j.watres.2021.117676",
+      "endpoints": [
+        {
+          "endpoint_type": "parent_compound_loss",
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E04"
+          ],
+          "interpretation": "Loss of parent PFOA concentration in solution, with concentration reported as below the analytical detection limit after 1 h under UV/sulfite at pH 10",
+          "reported_term": "PFOA degradation; PFOA decomposition; eliminate PFOA"
+        },
+        {
+          "endpoint_type": "defluorination",
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "interpretation": "Inorganic fluoride release expressed as percent of theoretical fluoride from PFOA after 24 h; 89% of C\u2013F bonds in PFOA accounted for as fluoride at pH 10, indicating substantial but not complete defluorination",
+          "reported_term": "defluorination"
+        },
+        {
+          "endpoint_type": "transformation",
+          "evidence_locator_ids": [
+            "WEB01-E03"
+          ],
+          "interpretation": "Formation of identifiable transformation products including short-chain perfluorinated carboxylic acids (C<7), hydrogen-substituted PFAS, sulfonated intermediates, and unsaturated intermediates, indicating stepwise chain-shortening and partial hydrogen-for-fluorine substitution rather than direct mineralization",
+          "reported_term": "short-chain PFCAs, hydrogen substituted compounds, sulfonated and unsaturated intermediates; chain-shortening and H/F change reactions; PFOA degradation"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E02",
+            "WEB01-E06"
+          ],
+          "statement": "Study investigates only one PFAS (PFOA) at relatively high initial concentration (10 mg/L) compared with typical environmental levels (ng/L to \u00b5g/L), and results may not directly translate to trace-level conditions."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E02",
+            "WEB01-E04",
+            "WEB01-E05"
+          ],
+          "statement": "Experiments are bench-scale in controlled synthetic/complex water matrices rather than real contaminated waters, limiting direct field applicability."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E02",
+          "WEB01-E04",
+          "WEB01-E05"
+        ],
+        "value": "Aqueous solution described as a complex water matrix; experiments conducted in water with controlled initial pH and sulfite, without the added carbonate/nitrate/humic acid interferents highlighted separately"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E02"
+          ],
+          "name": "Initial PFOA concentration",
+          "qualifiers": "Unless otherwise specified; corresponds to 24.15 \u00b5M",
+          "unit": "mg/L",
+          "value": "10"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "name": "Initial pH",
+          "qualifiers": "Condition for the experiment where PFOA fell below detection after 1 h and 89% defluorination was achieved after 24 h",
+          "unit": null,
+          "value": "10"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E02"
+          ],
+          "name": "Sulfite dosage",
+          "qualifiers": "Unless otherwise specified; condition for experiments including pH 10 case",
+          "unit": "mM",
+          "value": "10"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "name": "Reaction time (parent removal)",
+          "qualifiers": "Time at which PFOA concentration was reported below the detection limit at pH 10",
+          "unit": "h",
+          "value": "1"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "name": "Reaction time (defluorination)",
+          "qualifiers": "Time at which 89% defluorination was reported at pH 10",
+          "unit": "h",
+          "value": "24"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E02",
+            "WEB01-E04"
+          ],
+          "value": "Perfluorooctanoic acid (PFOA) as target compound"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "name": "PFOA concentration after 1 h at pH 10",
+          "qualifiers": "Reported as below the detection limit (10 \u00b5g/L) under conditions: C0 10 mg/L, initial pH = 10, sulfite 10 mM",
+          "unit": "\u00b5g/L",
+          "value": "<10",
+          "value_form": "inequality"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "name": "PFOA analytical detection limit",
+          "qualifiers": "Stated detection limit used to interpret PFOA concentration as below detection",
+          "unit": "\u00b5g/L",
+          "value": "10",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "name": "Defluorination after 24 h at pH 10",
+          "qualifiers": "UV/sulfite, C0 10 mg/L, initial pH = 10, sulfite 10 mM",
+          "unit": "% of theoretical fluoride from initial PFOA",
+          "value": "89",
+          "value_form": "exact_numeric"
+        }
+      ],
+      "record_id": "RT09-gpt51_web_search-WEB01-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB01-E03"
+          ],
+          "statement": "Short-chain perfluorinated carboxylic acids (PFCAs, C<7), hydrogen-substituted compounds, sulfonated intermediates, and unsaturated intermediates were detected during treatment, indicating that significant fractions of fluorine and carbon remained in organic transformation products rather than being fully mineralized."
+        }
+      ],
+      "source_id": "WEB01",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E02",
+          "WEB01-E04",
+          "WEB01-E05"
+        ],
+        "value": "Bench-scale UV/sulfite aqueous-phase experiment in synthetic/complex water matrix"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E02",
+          "WEB01-E04"
+        ],
+        "value": "UV/sulfite advanced reduction process generating hydrated electrons (eaq\u2212) for reductive degradation of PFOA"
+      }
+    },
+    {
+      "citation": "Ren Z, Bergmann U, Leivisk\u00e4 T. Reductive degradation of perfluorooctanoic acid in complex water matrices by using the UV/sulfite process. Water Research. 2021;205:117676.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E02",
+          "WEB01-E04"
+        ],
+        "reason": "Bench-scale aqueous UV/sulfite treatment of PFOA with clearly reported initial concentration, high pH, sulfite dose, reaction time, and consistent percentage-based degradation and defluorination metrics; results can be compared to other UV/sulfite PFOA experiments under similar synthetic-water, high-pH conditions but not directly to other technologies or environmental matrices.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1016/j.watres.2021.117676",
+      "endpoints": [
+        {
+          "endpoint_type": "parent_compound_loss",
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E04"
+          ],
+          "interpretation": "Complete loss of detectable parent PFOA after 24 h under UV/sulfite at pH 12, expressed as 100% degradation relative to initial PFOA concentration; disappearance alone does not establish complete destruction of all PFAS-derived organic fluorine.",
+          "reported_term": "PFOA degradation; decomposition; 100% degradation"
+        },
+        {
+          "endpoint_type": "defluorination",
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "interpretation": "Inorganic fluoride release expressed as 98% of theoretical fluoride from PFOA after 24 h at pH 12, indicating near-complete cleavage of C\u2013F bonds, though a small fraction of fluorine may remain in organic form or unaccounted.",
+          "reported_term": "defluorination"
+        },
+        {
+          "endpoint_type": "transformation",
+          "evidence_locator_ids": [
+            "WEB01-E03"
+          ],
+          "interpretation": "Detection of short-chain PFCAs (C<7), hydrogen-substituted PFAS, sulfonated intermediates, and unsaturated intermediates during UV/sulfite treatment indicates that PFOA undergoes stepwise transformation pathways at high pH, not just direct mineralization, even when overall defluorination is high.",
+          "reported_term": "short-chain PFCAs, hydrogen substituted compounds, sulfonated and unsaturated intermediates; chain-shortening and H/F change reactions; PFOA degradation"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E02"
+          ],
+          "statement": "Study focuses on a single PFAS (PFOA) at high initial concentration (10 mg/L) under elevated pH conditions (up to pH 12), which may not reflect practical operating windows or trace-level contamination in real waters."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E02",
+            "WEB01-E04"
+          ],
+          "statement": "Experiments are bench-scale in controlled synthetic/complex water matrices rather than in real contaminated waters, limiting direct inference about performance in natural systems."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E02",
+          "WEB01-E04"
+        ],
+        "value": "Aqueous solution described as a complex water matrix with controlled initial pH and sulfite; focus here on high-pH (pH 12) condition without specified added interferents"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E02"
+          ],
+          "name": "Initial PFOA concentration",
+          "qualifiers": "Unless otherwise specified; corresponds to 24.15 \u00b5M",
+          "unit": "mg/L",
+          "value": "10"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E02"
+          ],
+          "name": "Initial pH",
+          "qualifiers": "Higher initial pH condition reported to greatly enhance PFOA degradation with 100% degradation and 98% defluorination after 24 h",
+          "unit": null,
+          "value": "12"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E02"
+          ],
+          "name": "Sulfite dosage",
+          "qualifiers": "Unless otherwise specified; condition for experiments including pH 12 case",
+          "unit": "mM",
+          "value": "10"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "name": "Reaction time (reported endpoints)",
+          "qualifiers": "Time at which 100% degradation and 98% defluorination were reported for pH 12 condition",
+          "unit": "h",
+          "value": "24"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01",
+            "WEB01-E02",
+            "WEB01-E04"
+          ],
+          "value": "Perfluorooctanoic acid (PFOA) as target compound"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "name": "PFOA degradation after 24 h at pH 12",
+          "qualifiers": "Described as 100% degradation under UV/sulfite with C0 10 mg/L, initial pH = 12, sulfite 10 mM",
+          "unit": "% of initial PFOA concentration",
+          "value": "100",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E01"
+          ],
+          "name": "Defluorination after 24 h at pH 12",
+          "qualifiers": "UV/sulfite, C0 10 mg/L, initial pH = 12, sulfite 10 mM",
+          "unit": "% of theoretical fluoride from initial PFOA",
+          "value": "98",
+          "value_form": "exact_numeric"
+        }
+      ],
+      "record_id": "RT09-gpt51_web_search-WEB01-R02",
+      "residuals_byproducts": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB01-E03"
+          ],
+          "statement": "Short-chain PFCAs (C<7), hydrogen-substituted compounds, sulfonated intermediates, and unsaturated intermediates were detected during treatment, indicating that even under conditions with 100% measured PFOA degradation and 98% defluorination, organic transformation products persist."
+        }
+      ],
+      "source_id": "WEB01",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E02",
+          "WEB01-E04"
+        ],
+        "value": "Bench-scale UV/sulfite aqueous-phase experiment in synthetic/complex water matrix at elevated initial pH"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB01-E01",
+          "WEB01-E02",
+          "WEB01-E04"
+        ],
+        "value": "UV/sulfite advanced reduction process generating hydrated electrons (eaq\u2212) for reductive degradation of PFOA at initial pH 12"
+      }
+    },
+    {
+      "citation": "Ren Z, Bergmann U, Leivisk\u00e4 T. Reductive degradation of perfluorooctanoic acid in complex water matrices by using the UV/sulfite process. Water Research. 2021;205:117676.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB01-E05",
+          "WEB01-E06"
+        ],
+        "reason": "This record summarizes qualitative matrix-effect observations (significant versus smaller negative effects) without quantitative removal or defluorination data; it informs process limitations and required measurements but is not directly comparable on a numeric basis to other experiments or technologies.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1016/j.watres.2021.117676",
+      "endpoints": [
+        {
+          "endpoint_type": "parent_compound_loss",
+          "evidence_locator_ids": [
+            "WEB01-E05"
+          ],
+          "interpretation": "Change in PFOA concentration under UV/sulfite in the presence of various inorganic anions and humic acid; qualitative assessment that certain matrix components substantially suppress PFOA degradation, likely by UV screening or scavenging of hydrated electrons.",
+          "reported_term": "PFOA degradation; eliminate PFOA"
+        },
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB01-E05"
+          ],
+          "interpretation": "Process-efficiency endpoint describing how carbonate, nitrate, and humic acid reduce the effectiveness of UV/sulfite treatment through light attenuation and hydrated-electron quenching, rather than a direct chemical-transformation endpoint.",
+          "reported_term": "negative effect on PFOA degradation via UV blocking or quenching"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB01-E05"
+          ],
+          "statement": "Only qualitative descriptions of the extent of inhibition by carbonate, nitrate, humic acid, chloride, and phosphate are available in the provided text; detailed kinetic or percentage-removal data under these complex-matrix conditions are not reported here."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB01-E05",
+            "WEB01-E06"
+          ],
+          "statement": "Matrix complexity is represented by discrete additions of inorganic anions and humic acid in synthetic water rather than by authentic field waters, which may contain broader suites of organic and inorganic constituents and lower PFAS concentrations."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB01-E05"
+        ],
+        "value": "Aqueous solutions representing complex water matrices containing added carbonate, nitrate, chloride, phosphate, and/or humic acid at specified threshold concentrations"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E05"
+          ],
+          "name": "Matrix component - carbonate",
+          "qualifiers": "Presence at concentrations above this level showed a significant negative effect on PFOA degradation",
+          "unit": "mM",
+          "value": ">5"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E05"
+          ],
+          "name": "Matrix component - nitrate",
+          "qualifiers": "Presence at concentrations above this level showed a significant negative effect on PFOA degradation",
+          "unit": "mM",
+          "value": ">2"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E05"
+          ],
+          "name": "Matrix component - humic acid",
+          "qualifiers": "Presence at concentrations above this level showed a significant negative effect on PFOA degradation",
+          "unit": "mg/L",
+          "value": ">25"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E05"
+          ],
+          "name": "Matrix component - chloride",
+          "qualifiers": "Presence reported to have a smaller effect on PFOA degradation compared to carbonate, nitrate, and humic acid (concentration thresholds not specified in provided text)",
+          "unit": null,
+          "value": ""
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB01-E05"
+          ],
+          "name": "Matrix component - phosphate",
+          "qualifiers": "Presence reported to have a smaller effect on PFOA degradation compared to carbonate, nitrate, and humic acid (concentration thresholds not specified in provided text)",
+          "unit": null,
+          "value": ""
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB01-E04",
+            "WEB01-E05"
+          ],
+          "value": "Perfluorooctanoic acid (PFOA) as target compound"
+        }
+      ],
+      "quantitative_findings": [],
+      "record_id": "RT09-gpt51_web_search-WEB01-R03",
+      "residuals_byproducts": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB01-E05",
+            "WEB01-E06"
+          ],
+          "statement": "The negative impacts of carbonate, nitrate, and humic acid on PFOA degradation are attributed to UV blocking and quenching of hydrated electrons, suggesting that under realistic water-matrix conditions, a larger fraction of PFOA and/or its transformation products may remain after treatment unless pretreatment or higher UV doses are used."
+        }
+      ],
+      "source_id": "WEB01",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB01-E04",
+          "WEB01-E05"
+        ],
+        "value": "Bench-scale UV/sulfite experiments assessing PFOA degradation in presence of inorganic anions and humic acid as matrix components"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB01-E04",
+          "WEB01-E05"
+        ],
+        "value": "UV/sulfite advanced reduction process generating hydrated electrons (eaq\u2212) to degrade PFOA in the presence of inorganic anions and natural organic matter"
+      }
+    },
+    {
+      "citation": "O\u2019Connor N. Forever No More: Complete mineralization of per- and polyfluoroalkyl substances (PFAS) using an optimized UV/sulfite/iodide system. PhD thesis, Royal Military College of Canada; 2024. Chapter 3.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB02-E01",
+          "WEB02-E02",
+          "WEB02-E06"
+        ],
+        "reason": "Endpoints are reported as percentage degradation and percentage defluorination for multiple PFAS treated in the same bicarbonate-buffered alkaline UV/sulfite/iodide system, enabling conditional comparison of parent loss and defluorination across PFOS, PFOA, 6:2 FTS, and PFBS within this specific bench-scale setup.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1016/j.scitotenv.2023.164137",
+      "endpoints": [
+        {
+          "endpoint_type": "parent_compound_loss",
+          "evidence_locator_ids": [
+            "WEB02-E02"
+          ],
+          "interpretation": "Loss of initial PFAS concentration under UV/sulfite/iodide treatment, reported by authors as \u201c100% degradation\u201d for PFOS, PFOA, and 6:2 FTS and incomplete degradation for PFBS.",
+          "reported_term": "degradation"
+        },
+        {
+          "endpoint_type": "defluorination",
+          "evidence_locator_ids": [
+            "WEB02-E02",
+            "WEB02-E06"
+          ],
+          "interpretation": "Release of inorganic fluoride from PFAS, with >90% defluorination reported for PFOS, PFOA, and 6:2 FTS in the initial system; measured via fluoride ion recovery.",
+          "reported_term": "defluorination"
+        },
+        {
+          "endpoint_type": "transformation",
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "interpretation": "Formation and identification of \u2013F/+H PFPS and \u2013F/+H PFES from PFOS and different \u2013F/+H PFOS isomers, used to infer C\u2013C bond cleavage and C\u2013F bond cleavage along the perfluoroalkyl chain.",
+          "reported_term": "degradation products; C\u2013C and C\u2013F bond cleavage"
+        },
+        {
+          "endpoint_type": "destruction",
+          "evidence_locator_ids": [
+            "WEB02-E01",
+            "WEB02-E06"
+          ],
+          "interpretation": "Authors define destruction as combined loss of initial PFAS and quantitative recovery of resultant fluoride; this is a composite endpoint involving parent loss and defluorination, not a separate directly measured variable.",
+          "reported_term": "destruction"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB02-E01"
+          ],
+          "statement": "Experiments conducted in a simple bicarbonate-buffered alkaline aqueous matrix rather than complex real wastewaters or natural waters."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB02-E02",
+            "WEB02-E03",
+            "WEB02-E06"
+          ],
+          "statement": "Destruction assessment is based on loss of parent PFAS concentration and recovery of inorganic fluoride; the available text does not indicate a complete fluorine mass balance including volatile or non-extractable organofluorine."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB02-E01"
+        ],
+        "value": "Bicarbonate-buffered alkaline aqueous solution."
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E01"
+          ],
+          "name": "pH",
+          "qualifiers": "Bicarbonate-buffered alkaline system; no numeric pH provided in the extracted passages.",
+          "unit": null,
+          "value": "alkaline (exact value not reported in available text)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E01"
+          ],
+          "name": "Reductant precursors",
+          "qualifiers": "Added to bicarbonate-buffered alkaline solution and activated with UV light.",
+          "unit": null,
+          "value": "sulfite and iodide"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E01"
+          ],
+          "name": "UV activation",
+          "qualifiers": "Specific wavelength and intensity not reported in available text.",
+          "unit": null,
+          "value": "UV light used to activate sulfite/iodide to generate aqueous electrons"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E02"
+          ],
+          "value": "Perfluorooctane sulfonic acid (PFOS)."
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E02"
+          ],
+          "value": "Perfluorooctanoic acid (PFOA)."
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E02"
+          ],
+          "value": "6:2 fluorotelomer sulfonic acid (6:2 FTS)."
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E02"
+          ],
+          "value": "Perfluorobutane sulfonic acid (PFBS)."
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E02"
+          ],
+          "name": "PFAS degradation for PFOS, PFOA, and 6:2 FTS in initial UV/sulfite/iodide system",
+          "qualifiers": "Reported as \u201c100% degradation\u201d for PFOS, PFOA, and 6:2 FTS; time and initial concentrations not provided in available text.",
+          "unit": "%",
+          "value": "100",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E02"
+          ],
+          "name": "Defluorination for PFOS, PFOA, and 6:2 FTS in initial UV/sulfite/iodide system",
+          "qualifiers": "Reported as \u201c>90% defluorination\u201d for PFOS, PFOA, and 6:2 FTS; exact values, time, and initial fluorine loading not provided in available text.",
+          "unit": "%",
+          "value": ">90",
+          "value_form": "inequality"
+        }
+      ],
+      "record_id": "RT09-gpt51_web_search-WEB02-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB02-E03"
+          ],
+          "statement": "Novel identification of \u2013F/+H perfluoropropane sulfonic acid (PFPS) and \u2013F/+H perfluoroethane sulfonic acid (PFES), along with different isomers of \u2013F/+H PFOS, following PFOS degradation, confirming C\u2013C bond cleavage and suggesting C\u2013F bond cleavage across the perfluoroalkyl chain."
+        }
+      ],
+      "source_id": "WEB02",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB02-E01"
+        ],
+        "value": "Laboratory UV photoreactor experiments (scale not further specified in available text)."
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB02-E01"
+        ],
+        "value": "UV/sulfite/iodide system in bicarbonate-buffered alkaline solution to generate aqueous electrons in a reductive environment."
+      }
+    },
+    {
+      "citation": "O\u2019Connor N. Forever No More: Complete mineralization of per- and polyfluoroalkyl substances (PFAS) using an optimized UV/sulfite/iodide system. PhD thesis, Royal Military College of Canada; 2024. Chapter 3.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB02-E01",
+          "WEB02-E02",
+          "WEB02-E04",
+          "WEB02-E06"
+        ],
+        "reason": "This optimized PFBS experiment is directly comparable, with conditions, to the initial UV/sulfite/iodide experiments because it uses the same basic matrix and treatment technology and reports outcomes as percent destruction and qualitative complete defluorination, differing mainly in sulfite dosing strategy.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1016/j.scitotenv.2023.164137",
+      "endpoints": [
+        {
+          "endpoint_type": "parent_compound_loss",
+          "evidence_locator_ids": [
+            "WEB02-E04",
+            "WEB02-E06"
+          ],
+          "interpretation": "Near-complete loss of PFBS concentration under the optimized UV/sulfite/iodide protocol; authors use \u201cdestruction\u201d to describe this endpoint, but it is operationally parent-compound loss.",
+          "reported_term": ">99.9% destruction"
+        },
+        {
+          "endpoint_type": "defluorination",
+          "evidence_locator_ids": [
+            "WEB02-E04",
+            "WEB02-E06"
+          ],
+          "interpretation": "Recovery of inorganic fluoride corresponding to the fluorine content of PFBS; authors state that the optimized protocol achieved complete quantitative defluorination, implying near-100% conversion of PFBS-bound fluorine to fluoride, although no explicit numeric percentage is provided in the extracted text.",
+          "reported_term": "complete quantitative defluorination"
+        },
+        {
+          "endpoint_type": "destruction",
+          "evidence_locator_ids": [
+            "WEB02-E04",
+            "WEB02-E06"
+          ],
+          "interpretation": "Composite destruction metric defined by authors as both near-complete PFBS loss and quantitative fluoride recovery; this integrates parent-compound loss with defluorination but does not explicitly document full mineralization or a total fluorine mass balance beyond fluoride.",
+          "reported_term": ">99.9% destruction; destruction measured as loss of PFAS plus quantitative fluoride recovery"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB02-E01",
+            "WEB02-E04"
+          ],
+          "statement": "Experiments performed in a simple bicarbonate-buffered alkaline aqueous matrix rather than complex real wastewaters or natural waters."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB02-E04",
+            "WEB02-E06"
+          ],
+          "statement": "Destruction evaluation relies on PFBS loss and fluoride recovery; no explicit evidence in the available text of full fluorine or carbon mineralization balances (e.g., accounting for volatile or non-extractable organofluorine, or CO2 production)."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB02-E01",
+          "WEB02-E04"
+        ],
+        "value": "Bicarbonate-buffered alkaline aqueous solution (same UV/sulfite/iodide system as initial experiments, with modified sulfite dosing)."
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E04"
+          ],
+          "name": "Reductant strategy",
+          "qualifiers": "Compared with the initial UV/sulfite/iodide configuration; numeric concentrations not provided in available text.",
+          "unit": null,
+          "value": "Elevated initial sulfite concentration"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E04"
+          ],
+          "name": "Sulfite replenishment",
+          "qualifiers": "Specific dosing intervals and amounts not provided in available text.",
+          "unit": null,
+          "value": "Additional sulfite added at regular intervals during UV activation"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB02-E01"
+          ],
+          "name": "UV activation",
+          "qualifiers": "Specific wavelength and intensity not reported in available text.",
+          "unit": null,
+          "value": "UV light used to activate sulfite/iodide to generate aqueous electrons"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E02",
+            "WEB02-E04"
+          ],
+          "value": "Perfluorobutane sulfonic acid (PFBS)."
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB02-E04",
+            "WEB02-E06"
+          ],
+          "name": "PFBS destruction in optimized UV/sulfite/iodide protocol",
+          "qualifiers": "Reported as \u201c>99.9% destruction\u201d of PFBS using elevated initial sulfite and periodic sulfite additions; endpoint defined by authors as loss of initial PFAS together with quantitative fluoride recovery.",
+          "unit": "%",
+          "value": ">99.9",
+          "value_form": "inequality"
+        }
+      ],
+      "record_id": "RT09-gpt51_web_search-WEB02-R02",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB02-E02",
+            "WEB02-E04"
+          ],
+          "statement": "The available text for the optimized PFBS protocol emphasizes destruction and quantitative defluorination; specific PFBS transformation products or unidentified residues are not described in the extracted passages."
+        }
+      ],
+      "source_id": "WEB02",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB02-E04"
+        ],
+        "value": "Laboratory UV photoreactor experiments with optimized dosing strategy for PFBS (scale not further specified in available text)."
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB02-E01",
+          "WEB02-E04"
+        ],
+        "value": "Optimized UV/sulfite/iodide treatment protocol with elevated initial sulfite concentration and periodic additional sulfite dosing during UV activation to enhance PFBS destruction."
+      }
+    },
+    {
+      "citation": "Pinkard B, Smith SM, Vorarath P, et al. Degradation and Defluorination of Ultra Short-, Short-, and Long-Chain PFASs in High Total Dissolved Solids Solutions by Hydrothermal Alkaline Treatment\u2014Closing the Fluorine Mass Balance. ACS ES&T Engineering. 2024;4:2810\u20132818.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB03-E01",
+          "WEB03-E02",
+          "WEB03-E03",
+          "WEB03-E04"
+        ],
+        "reason": "The study reports temperature and NaOH ranges and uses multiple analytical endpoints (targeted PFAS, free fluoride, total organic fluorine) to support claims of complete degradation and defluorination with near-stoichiometric fluorine mass balance, but the provided text does not include specific reaction times, individual compound concentrations, detection limits, or numerical extents of removal/defluorination. Without these quantitative details, the record is best used qualitatively to illustrate how fluorine mass balance and multiple measurements distinguish disappearance, defluorination, and organofluorine byproduct formation, rather than for direct numerical comparison to other technologies.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1021/acsestengg.4c00378",
+      "endpoints": [
+        {
+          "endpoint_type": "degradation",
+          "evidence_locator_ids": [
+            "WEB03-E01",
+            "WEB03-E03",
+            "WEB03-E04"
+          ],
+          "interpretation": "Loss of parent PFASs in the HALT system assessed via targeted LC\u2013MS/MS of multiple PFAS classes (ultra short-, short-, and long-chain), interpreted by authors as degradation under hydrothermal alkaline conditions.",
+          "reported_term": "degradation"
+        },
+        {
+          "endpoint_type": "defluorination",
+          "evidence_locator_ids": [
+            "WEB03-E01",
+            "WEB03-E02",
+            "WEB03-E03",
+            "WEB03-E04"
+          ],
+          "interpretation": "Conversion of organically bound fluorine in PFASs to inorganic (free) fluoride in solution, assessed via free fluoride quantification and integrated in a fluorine mass-balance framework. Authors describe achieving complete defluorination at optimized HALT conditions.",
+          "reported_term": "defluorination"
+        },
+        {
+          "endpoint_type": "total_organofluorine_change",
+          "evidence_locator_ids": [
+            "WEB03-E02",
+            "WEB03-E04"
+          ],
+          "interpretation": "Change in organofluorine content in solution measured as total organic fluorine (TOF), used together with targeted LC\u2013MS/MS and free fluoride to close a fluorine mass balance and infer minimal formation of undesired organofluorine byproducts.",
+          "reported_term": "fluorine mass balance; total organic fluorine measurements"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB03-E01",
+            "WEB03-E03"
+          ],
+          "statement": "Evidence is from bench-scale HALT experiments in a single, synthetic, high-TDS aqueous matrix, which may limit direct extrapolation to other matrices or field conditions."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB03-E02",
+            "WEB03-E04"
+          ],
+          "statement": "The fluorine mass-balance relies on solution-phase targeted PFAS, free fluoride, and total organic fluorine measurements; potential volatile or unmeasured organofluorine species are inferred to be minimal based on near-stoichiometric closure rather than directly trapped or speciated."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB03-E01",
+          "WEB03-E03"
+        ],
+        "value": "Aqueous matrix with high total dissolved solids (TDS), reported as ~10 wt % TDS"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB03-E01"
+          ],
+          "name": "Temperature",
+          "qualifiers": "Range of HALT operating temperatures evaluated",
+          "unit": "\u00b0C",
+          "value": "250-350"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB03-E01"
+          ],
+          "name": "NaOH concentration",
+          "qualifiers": "Range of NaOH mass fraction in HALT solutions",
+          "unit": "wt %",
+          "value": "2-16"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB03-E01",
+            "WEB03-E03"
+          ],
+          "name": "Total dissolved solids (TDS) content",
+          "qualifiers": "High-TDS aqueous matrix, approximate value as reported",
+          "unit": "wt %",
+          "value": "~10"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB03-E01",
+            "WEB03-E05"
+          ],
+          "value": "Mixture of ultra short-chain PFASs"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB03-E01",
+            "WEB03-E05"
+          ],
+          "value": "Mixture of short-chain PFASs"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB03-E01",
+            "WEB03-E05"
+          ],
+          "value": "Mixture of long-chain PFASs"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB03-E05"
+          ],
+          "value": "Perfluoroalkyl carboxylic acids (PFCAs)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB03-E05"
+          ],
+          "value": "Perfluoroalkyl ether carboxylic acid (PFECA)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB03-E05"
+          ],
+          "value": "Polyfluoroalkyl carboxylic acids (polyFCAs)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB03-E05"
+          ],
+          "value": "Perfluoroalkyl sulfonic acids (PFSAs)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB03-E05"
+          ],
+          "value": "Fluoroalkane sulfonamides (FASAs)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB03-E05"
+          ],
+          "value": "Bis-(perfluoroalkane sulfonyl)imidic acid (PFSI)"
+        }
+      ],
+      "quantitative_findings": [],
+      "record_id": "RT09-gpt51_web_search-WEB03-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB03-E02"
+          ],
+          "statement": "A multiple-lines-of-evidence approach combining targeted LC\u2013MS/MS, free fluoride quantification, and total organic fluorine measurements led the authors to conclude that minimal undesired organofluorine byproducts were formed under optimized HALT conditions, with the fluorine mass balance described as near-stoichiometric."
+        }
+      ],
+      "source_id": "WEB03",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB03-E01",
+          "WEB03-E02",
+          "WEB03-E03"
+        ],
+        "value": "Bench-scale hydrothermal alkaline treatment experiments using synthetic high-TDS aqueous PFAS mixtures"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB03-E01",
+          "WEB03-E03",
+          "WEB03-E04"
+        ],
+        "value": "Hydrothermal alkaline treatment (HALT) of PFAS mixtures in high-TDS aqueous solutions"
+      }
+    },
+    {
+      "citation": "Smith SM, Pinkard BR, Zweifel T, et al. Demonstration of hydrothermal alkaline treatment for PFAS destruction in industrial wastewater: assessment of degradation, defluorination, fluorine mass balance, and potential for volatile organofluorine formation. ChemRxiv; 2025. Preprint.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB04-E01",
+          "WEB04-E02",
+          "WEB04-E03",
+          "WEB04-E04"
+        ],
+        "reason": "The study is a commercial-scale demonstration using a single complex industrial wastewater matrix with multiple operating conditions reported as ranges (temperature, NaOH concentration, throughput) and largely qualitative endpoint descriptions (near-100% degradation, near-complete mass-balance closure). Lack of detailed, condition-specific numeric data and detection limits in the provided text constrains direct quantitative comparison with other technologies or matrices.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.26434/chemrxiv-2025-fxt40",
+      "endpoints": [
+        {
+          "endpoint_type": "parent_compound_loss",
+          "evidence_locator_ids": [
+            "WEB04-E01",
+            "WEB04-E02"
+          ],
+          "interpretation": "Parent FCA concentration loss (\"near-100% degradation\") was used as a primary endpoint to assess PFAS disappearance under HALT conditions.",
+          "reported_term": "degradation of target FCAs"
+        },
+        {
+          "endpoint_type": "defluorination",
+          "evidence_locator_ids": [
+            "WEB04-E01",
+            "WEB04-E03",
+            "WEB04-E05"
+          ],
+          "interpretation": "Extent of defluorination was assessed, with dissolved inorganic fluoride identified as the final reaction product at higher temperature; this reflects conversion of organically bound fluorine to inorganic F- and some mineral fluorides (e.g., CaF2, MgF2).",
+          "reported_term": "defluorination; dissolved inorganic fluoride as final reaction product"
+        },
+        {
+          "endpoint_type": "total_organofluorine_change",
+          "evidence_locator_ids": [
+            "WEB04-E01",
+            "WEB04-E03"
+          ],
+          "interpretation": "A fluorine mass balance was constructed to evaluate how much of the initial fluorine associated with FCAs/PFAS was accounted for in inorganic fluoride, volatile organofluorine species, and other sinks. \"Near-complete closure\" at higher temperature indicates that most fluorine was recovered in measured sinks.",
+          "reported_term": "fluorine mass balance; near-complete closure of the fluorine mass balance"
+        },
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB04-E01",
+            "WEB04-E03"
+          ],
+          "interpretation": "Formation of volatile organofluorine compounds (including inert 1H-perfluoroalkane VOFs) was evaluated as a potential byproduct pathway, particularly at lower temperatures, lower NaOH, and higher throughput.",
+          "reported_term": "potential for volatile organofluorine (VOF) formation"
+        },
+        {
+          "endpoint_type": "destruction",
+          "evidence_locator_ids": [
+            "WEB04-E01",
+            "WEB04-E02",
+            "WEB04-E04"
+          ],
+          "interpretation": "Authors use the language of \"destruction\" based on near-100% parent FCA degradation plus high defluorination and fluorine mass-balance closure; however, detailed mineralization (carbon fate) measurements are not described in the provided text.",
+          "reported_term": "PFAS destruction; degrade and defluorinate PFAS with high efficacy"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB04-E01"
+          ],
+          "statement": "Preprint; not yet peer-reviewed at time of inspection."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB04-E01",
+            "WEB04-E04"
+          ],
+          "statement": "Industrial wastewater composition and PFAS profile are specific to an ion-exchange regeneration brine, which may limit generalizability to other matrices."
+        },
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB04-E03"
+          ],
+          "statement": "Fluorine mass balance does not include full quantitative speciation of all volatile organofluorine compounds at sub-trace levels; inert 1H-perfluoroalkane VOFs were observed under some conditions, implying possible unaccounted organofluorine in the gas phase."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB04-E02",
+            "WEB04-E04"
+          ],
+          "statement": "Study focuses on fluorinated carboxylic acids as primary targets; perfluoroalkane sulfonic acids are only minor constituents and may not be fully characterized for defluorination or mass balance."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB04-E01",
+          "WEB04-E04"
+        ],
+        "value": "Concentrated industrial wastewater (ion-exchange resin regeneration brine) with complex water chemistry and high TDS."
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "temperature",
+          "qualifiers": "Range of tested temperatures in the HALT system.",
+          "unit": "\u00b0C",
+          "value": "300-350"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "NaOH concentration",
+          "qualifiers": "Range of sodium hydroxide concentrations tested in HALT.",
+          "unit": "M",
+          "value": "0.1-0.5"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E03"
+          ],
+          "name": "throughput",
+          "qualifiers": "\"Higher throughputs\" mentioned as a condition influencing volatile organofluorine formation; no numeric values reported in the provided text.",
+          "unit": null,
+          "value": ""
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E01",
+            "WEB04-E04"
+          ],
+          "name": "matrix characteristics",
+          "qualifiers": "Industrial wastewater from ion exchange regeneration with complex composition and high total dissolved solids.",
+          "unit": null,
+          "value": "high TDS, complex water chemistry"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "value": "Target fluorinated carboxylic acids (FCAs) as primary PFAS of interest."
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E04"
+          ],
+          "value": "Perfluoroalkane sulfonic acids (PFSAs) present as minor constituents in the wastewater."
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB04-E04"
+          ],
+          "value": "PFAS in general in concentrated liquids with complex water chemistries and high TDS."
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB04-E02"
+          ],
+          "name": "FCA degradation extent",
+          "qualifiers": "Described as \"Near-100% degradation\" of target FCAs across all tested operating conditions; no specific numeric percentage or uncertainty reported in the provided text.",
+          "unit": "%",
+          "value": "~100",
+          "value_form": "approximate_numeric"
+        }
+      ],
+      "record_id": "RT09-gpt51_web_search-WEB04-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB04-E03"
+          ],
+          "statement": "At higher temperature, dissolved inorganic fluoride was observed as the final reaction product, with near-complete closure of the fluorine mass balance and no observable volatile organofluorine generation."
+        },
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB04-E03"
+          ],
+          "statement": "At higher throughput, lower temperatures, and lower NaOH concentrations, inert 1H-perfluoroalkane volatile organofluorine compounds were produced as byproducts."
+        },
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB04-E05"
+          ],
+          "statement": "Some precipitation of hard minerals (e.g., Ca, Mg) was observed, likely including CaF2 and MgF2, indicating a sink for inorganic fluoride as sparingly soluble mineral fluorides."
+        }
+      ],
+      "source_id": "WEB04",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB04-E01"
+        ],
+        "value": "Commercial-scale HALT (hydrothermal alkaline treatment) system treating concentrated industrial wastewater from an ion exchange resin regeneration process."
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB04-E01",
+          "WEB04-E02",
+          "WEB04-E04"
+        ],
+        "value": "Hydrothermal alkaline treatment (HALT) using NaOH in a commercial-scale system."
+      }
+    },
+    {
+      "citation": "Harrison BG, Major DW, Kinsman LL, et al. Smoldering Treatment of PFAS: Investigation of Mass Balance and Volumetric Scale Up for Field Implementation. ACS Omega. 2025;10(28):30489-30500.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB05-E01",
+          "WEB05-E02",
+          "WEB05-E03",
+          "WEB05-E04",
+          "WEB05-E05"
+        ],
+        "reason": "Endpoints are reported on a consistent fluorine-mass basis (percent of initial fluorine or PFAS mass) for the same soil-smoldering system, combining targeted PFAS analysis, total fluorine by PIGE, and HF emissions, which allows conditional comparison of parent-compound loss, total fluorine removal, and fluorine mass balance within this study.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1021/acsomega.5c02257",
+      "endpoints": [
+        {
+          "endpoint_type": "parent_compound_loss",
+          "evidence_locator_ids": [
+            "WEB05-E01"
+          ],
+          "interpretation": "LC\u2013MS/MS-targeted PFAS in soil were reduced by >99.9%, to below the method quantitation limit in nearly all tests; this quantifies parent-compound loss/removal but does not by itself demonstrate destruction, defluorination, or mineralization.",
+          "reported_term": ">99.9% reduction in detectable PFAS (targeted PFAS analysis)"
+        },
+        {
+          "endpoint_type": "total_organofluorine_change",
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "interpretation": "PIGE measurements of total fluorine in soil showed 96\u201399% removal, with residual 0.5\u20133.3 mg F/kg soil post-treatment in tests without CaO. This captures the change in bulk fluorine (organic + inorganic) but cannot resolve specific PFAS or products.",
+          "reported_term": "96\u201399% removal in total fluorine (PIGE soil data)"
+        },
+        {
+          "endpoint_type": "defluorination",
+          "evidence_locator_ids": [
+            "WEB05-E03",
+            "WEB05-E04"
+          ],
+          "interpretation": "HF collected in emissions exceeded the mass of targeted PFAS detected in emissions, and fluorine mass balance recoveries (soil + emissions + burnout tests) ranged from 68\u2013128%, indicating substantial conversion of organofluorine to inorganic fluoride, though with considerable uncertainty in closure.",
+          "reported_term": "HF emissions and fluorine mass balance used to infer mineralization"
+        },
+        {
+          "endpoint_type": "destruction",
+          "evidence_locator_ids": [
+            "WEB05-E05"
+          ],
+          "interpretation": "The sum of HF emitted and organic fluorine remaining in post-treatment soil was <2% of the original fluorine mass. Authors interpret this as PFAS mineralization with minimal HF release, implying near-complete destruction of PFAS; however, the endpoint directly measured is fluorine partitioning and does not report carbon mineralization.",
+          "reported_term": "<2% of original fluorine mass as emitted HF + residual organic fluorine; PFAS mineralized"
+        },
+        {
+          "endpoint_type": "defluorination",
+          "evidence_locator_ids": [
+            "WEB05-E06"
+          ],
+          "interpretation": "XPS showed formation of CaF2 in post-treatment soils (not present before), and authors interpret this as >98% of initial PFAS fluorine converted to CaF2. This evidences extensive defluorination and conversion to an inorganic fluoride solid phase, but carbon fate was not directly measured.",
+          "reported_term": ">98% of pretreatment PFAS mass mineralized into CaF2"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB05-E01",
+            "WEB05-E02"
+          ],
+          "statement": "The PFAS evaluation relied primarily on a targeted LC\u2013MS/MS list, so PFAS and transformation products outside this scope could contribute to the remaining fluorine mass and to discrepancies between targeted PFAS removal and total fluorine removal."
+        },
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB05-E04"
+          ],
+          "statement": "Fluorine mass balance closure had substantial uncertainty, with recoveries from 68% to 128%, limiting the precision with which degree of defluorination and destruction can be quantified."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB05-E01",
+          "WEB05-E02"
+        ],
+        "value": "PFAS-impacted soil (analyzed by PIGE and LC\u2013MS/MS)."
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E02",
+            "WEB05-E06"
+          ],
+          "name": "Presence of CaO amendment",
+          "qualifiers": "Tests without CaO reported separately from CaO-amended tests.",
+          "unit": null,
+          "value": "Some tests conducted with CaO amendment and some without CaO; fluorine retention behavior differed."
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E01"
+          ],
+          "value": "Targeted PFAS measured by LC\u2013MS/MS (individual compounds not specified in provided excerpts)."
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "value": "Total fluorine in soil by PIGE, representing both targeted and untargeted organofluorine and inorganic fluorine species."
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E01"
+          ],
+          "name": "Targeted PFAS reduction in soil (LC\u2013MS/MS)",
+          "qualifiers": ">99.9% reduction in detectable targeted PFAS; concentrations were below the method quantitation limit for all tests except B-4 and Ca-3.",
+          "unit": "%",
+          "value": ">99.9",
+          "value_form": "inequality"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "name": "Total fluorine removal in soil (no CaO tests)",
+          "qualifiers": "PIGE soil data for tests without CaO showed 96\u201399% removal in total fluorine following smoldering.",
+          "unit": "%",
+          "value": "96-99",
+          "value_form": "range"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "name": "Residual total fluorine in soil (no CaO tests)",
+          "qualifiers": "Post-treatment total fluorine concentration range in soil for tests without CaO as measured by PIGE.",
+          "unit": "mg F/kg soil",
+          "value": "0.5-3.3",
+          "value_form": "range"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E04"
+          ],
+          "name": "Fluorine mass balance recovery",
+          "qualifiers": "Overall fluorine mass recovery combining pretreatment soil, PIGE analysis of emission GAC and post-treatment sand, and fluorine recovered during burnout tests.",
+          "unit": "% of initial fluorine mass",
+          "value": "68-128",
+          "value_form": "range"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E05"
+          ],
+          "name": "Emitted HF + residual organic fluorine (fraction of original fluorine mass)",
+          "qualifiers": "Sum of total mass emitted as HF and as organic fluorine in the post-treatment soil relative to the original pretreatment fluorine mass.",
+          "unit": "% of original fluorine mass",
+          "value": "<2",
+          "value_form": "inequality"
+        }
+      ],
+      "record_id": "RT09-gpt51_web_search-WEB05-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB05-E03"
+          ],
+          "statement": "HF was detected in emissions, with total HF mass exceeding detected targeted PFAS in emissions, indicating inorganic fluoride evolution during treatment."
+        },
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB05-E05"
+          ],
+          "statement": "The sum of HF emissions and organic fluorine in post-treatment soil was <2% of the original fluorine mass, suggesting that most fluorine was retained in other phases (e.g., solid inorganic fluoride such as CaF2) rather than being emitted as HF or remaining as organofluorine in soil."
+        }
+      ],
+      "source_id": "WEB05",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB05-E01",
+          "WEB05-E02"
+        ],
+        "value": "Smoldering treatment tests on PFAS-impacted soil (scale not explicitly specified in provided excerpts)."
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB05-E01",
+          "WEB05-E02",
+          "WEB05-E03",
+          "WEB05-E04",
+          "WEB05-E05",
+          "WEB05-E06"
+        ],
+        "value": "Smoldering combustion treatment of PFAS-impacted soil (self-sustaining smoldering remediation)."
+      }
+    },
+    {
+      "citation": "Harrison BG, Major DW, Kinsman LL, et al. Smoldering Treatment of PFAS: Investigation of Mass Balance and Volumetric Scale Up for Field Implementation. ACS Omega. 2025;10(28):30489-30500.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB05-E02"
+        ],
+        "reason": "This record isolates the no-CaO configuration, allowing conditional comparison of fluorine removal and residual fluorine in soil against CaO-amended and all-test aggregates while keeping matrix and treatment type consistent.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1021/acsomega.5c02257",
+      "endpoints": [
+        {
+          "endpoint_type": "total_organofluorine_change",
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "interpretation": "PIGE soil measurements in tests without CaO showed high removal of total fluorine (96\u201399%) and low residual fluorine (0.5\u20133.3 mg F/kg), indicating substantial reduction in bulk fluorine-bearing species but not resolving whether remaining fluorine is organic or inorganic.",
+          "reported_term": "96\u201399% removal in total fluorine (no CaO)"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "statement": "Because PIGE measures total fluorine but cannot distinguish organic from inorganic species, the relative contributions of remaining PFAS, transformation products, and inorganic fluoride in the residual 0.5\u20133.3 mg F/kg soil are not resolved."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB05-E02"
+        ],
+        "value": "PFAS-impacted soil (no CaO amendment) analyzed by PIGE for total fluorine."
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "name": "CaO amendment",
+          "qualifiers": "Subset of smoldering tests explicitly reported as being conducted without CaO addition.",
+          "unit": null,
+          "value": "Absent (tests without CaO)"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "value": "Bulk total fluorine in soil (organic + inorganic) measured by PIGE for tests without CaO; individual PFAS species not resolved in these measurements."
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "name": "Total fluorine removal in soil (no CaO)",
+          "qualifiers": "Reported total fluorine removal for smoldering tests without CaO amendment based on PIGE soil data.",
+          "unit": "%",
+          "value": "96-99",
+          "value_form": "range"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "name": "Residual total fluorine concentration in soil (no CaO)",
+          "qualifiers": "Post-treatment total fluorine levels in soil in tests without CaO.",
+          "unit": "mg F/kg soil",
+          "value": "0.5-3.3",
+          "value_form": "range"
+        }
+      ],
+      "record_id": "RT09-gpt51_web_search-WEB05-R02",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB05-E02"
+          ],
+          "statement": "Residual fluorine of 0.5\u20133.3 mg F/kg soil remained after smoldering without CaO, but its chemical form (untransformed PFAS, transformation products, or inorganic fluoride) was not specified."
+        }
+      ],
+      "source_id": "WEB05",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB05-E02"
+        ],
+        "value": "Smoldering treatment tests on PFAS-impacted soil without CaO amendment."
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB05-E02"
+        ],
+        "value": "Self-sustaining smoldering treatment of PFAS-impacted soil without CaO amendment."
+      }
+    },
+    {
+      "citation": "Harrison BG, Major DW, Kinsman LL, et al. Smoldering Treatment of PFAS: Investigation of Mass Balance and Volumetric Scale Up for Field Implementation. ACS Omega. 2025;10(28):30489-30500.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB05-E05",
+          "WEB05-E06"
+        ],
+        "reason": "This record focuses on CaO-amended smoldering tests where CaF2 formation was characterized, allowing conditional comparison of defluorination and product speciation against no-CaO tests and aggregate fluorine mass balance results within the same soil-smoldering system.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1021/acsomega.5c02257",
+      "endpoints": [
+        {
+          "endpoint_type": "defluorination",
+          "evidence_locator_ids": [
+            "WEB05-E06"
+          ],
+          "interpretation": "XPS showed CaF2 was absent in CaO and pretreatment soils but present in post-treatment soils, and authors inferred that >98% of the pretreatment PFAS mass was converted to CaF2. This supports extensive defluorination and conversion of organofluorine to inorganic fluoride solid, but carbon mineralization was not directly assessed.",
+          "reported_term": ">98% of pretreatment PFAS mass mineralized into CaF2"
+        },
+        {
+          "endpoint_type": "destruction",
+          "evidence_locator_ids": [
+            "WEB05-E05",
+            "WEB05-E06"
+          ],
+          "interpretation": "Authors interpret the strong CaF2 signal and low HF emissions as evidence that PFAS were mineralized to CaF2 during smoldering with CaO, minimizing potentially harmful emissions. The measured endpoint is fluorine partitioning and speciation (CaF2 vs HF vs organic fluorine), not direct CO2 production.",
+          "reported_term": "PFAS mineralized with minimal HF emissions"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB05-E06"
+          ],
+          "statement": "CaF2 formation was inferred from XPS signals, which are qualitative/semi-quantitative and do not provide a full fluorine mass balance for CaF2 alone; thus, the >98% estimate of PFAS mass converted to CaF2 carries analytical uncertainty."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB05-E06"
+        ],
+        "value": "PFAS-impacted soil amended with CaO, analyzed by XPS for CaF2 formation."
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E06"
+          ],
+          "name": "CaO amendment",
+          "qualifiers": "XPS evidence for CaF2 formation reported only in CaO-amended soils.",
+          "unit": null,
+          "value": "Present (CaO-amended tests)"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E06"
+          ],
+          "value": "PFAS fluorine inferred from CaF2 formation (PFAS constituents not specified in excerpt)."
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB05-E06"
+          ],
+          "name": "PFAS fluorine converted to CaF2 (CaO-amended tests)",
+          "qualifiers": "Based on XPS evidence of CaF2 in post-treatment soils and its absence in CaO and pretreatment soils; authors state this suggests >98% of pretreatment PFAS mass mineralized into CaF2.",
+          "unit": "% of pretreatment PFAS mass (as fluorine)",
+          "value": ">98",
+          "value_form": "inequality"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB05-E05",
+            "WEB05-E06"
+          ],
+          "name": "Emitted HF + residual organic fluorine fraction of original fluorine mass (CaO-amended configuration representative)",
+          "qualifiers": "Sum of HF emitted and organic fluorine in post-treatment soil was reported as <2% of the original fluorine mass; cited by authors in support of the conclusion that PFAS mineralized predominantly to CaF2 with minimal HF emissions.",
+          "unit": "% of original fluorine mass",
+          "value": "<2",
+          "value_form": "inequality"
+        }
+      ],
+      "record_id": "RT09-gpt51_web_search-WEB05-R03",
+      "residuals_byproducts": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB05-E06"
+          ],
+          "statement": "XPS analysis indicated CaF2 was not present in CaO and pretreatment soils but was present in post-treatment soils, consistent with formation of solid inorganic CaF2 as the major PFAS-derived fluorine sink."
+        },
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB05-E06"
+          ],
+          "statement": "Authors state that >98% of pretreatment PFAS mass was mineralized into CaF2 during treatment, implying limited residual PFAS or volatile fluoride byproducts and suggesting CaF2 as a stable terminal product."
+        }
+      ],
+      "source_id": "WEB05",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB05-E06"
+        ],
+        "value": "Smoldering treatment tests on PFAS-impacted soil with CaO amendment."
+      },
+      "study_type": "pilot_or_field_deployment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB05-E06"
+        ],
+        "value": "Self-sustaining smoldering remediation of CaO-amended PFAS-impacted soil, designed to convert PFAS fluorine into CaF2."
+      }
+    },
+    {
+      "citation": "Wood RJ, Sidnell T, Ross I, et al. Ultrasonic degradation of perfluorooctane sulfonic acid (PFOS) correlated with sonochemical and sonoluminescence characterisation. Ultrason Sonochem. 2020;68:105196.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB06-E01",
+          "WEB06-E02",
+          "WEB06-E03",
+          "WEB06-E04",
+          "WEB06-E05"
+        ],
+        "reason": "The study provides qualitative and semi-quantitative evidence of PFOS parent loss, stoichiometric inorganic fluoride release, and low yields of targeted short-chain PFAAs under specific ultrasonic frequencies and time scales. However, key conditions such as exact initial PFOS concentration, reactor configuration, and full fluorine mass balance (including non-target organofluorine species and mineralization products like CO2) are not fully specified in the supplied text, limiting direct quantitative comparison with other PFAS destruction technologies on a common basis.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1016/j.ultsonch.2020.105196",
+      "endpoints": [
+        {
+          "endpoint_type": "parent_compound_loss",
+          "evidence_locator_ids": [
+            "WEB06-E02",
+            "WEB06-E05"
+          ],
+          "interpretation": "Loss of PFOS parent compound in solution during sonication, measured analytically (ALS). Authors describe \"degradation\" and report complete PFOS degradation at 400 and 500 kHz after several hours.",
+          "reported_term": "PFOS degradation; complete degradation at selected frequencies"
+        },
+        {
+          "endpoint_type": "defluorination",
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E02",
+            "WEB06-E04"
+          ],
+          "interpretation": "Inorganic fluoride release to solution, compared with the theoretical fluoride yield (315.9 \u00b5M, 6.001 mg L-1) corresponding to complete cleavage of C\u2013F bonds from PFOS. Authors report stoichiometric release of fluoride ions at 400, 500, and 1000 kHz, supporting extensive defluorination under these conditions.",
+          "reported_term": "Stoichiometric fluoride release; 100% PFOS degradation theoretical fluoride yield"
+        },
+        {
+          "endpoint_type": "transformation",
+          "evidence_locator_ids": [
+            "WEB06-E02",
+            "WEB06-E03"
+          ],
+          "interpretation": "Formation of shorter-chain PFAAs as measurable transformation products; total mass of these species is less than 1% of the total yield by mass, indicating limited accumulation of identifiable perfluoroalkyl acid intermediates.",
+          "reported_term": "Trace shorter chain PFAAs as transformation products"
+        },
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB06-E04"
+          ],
+          "interpretation": "Time-dependent fluoride release evaluated and compared to zero-order kinetics at different frequencies; within the first 2 h, 400 kHz shows least and 1000 kHz the best agreement with zero-order behaviour, but this is a kinetic characterization rather than a separate degradation endpoint.",
+          "reported_term": "Kinetic behaviour (zero-order agreement) in fluoride release"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E02",
+            "WEB06-E05"
+          ],
+          "statement": "Single-compound PFOS system in a simple aqueous matrix; results may not extrapolate to mixed PFAS or real wastewaters."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E02",
+            "WEB06-E03"
+          ],
+          "statement": "Fluorine mass balance is based on inorganic fluoride and targeted short-chain PFAAs; other inorganic or organic fluorine-containing products (e.g., volatile organofluorine or unidentified organics) are not comprehensively quantified, so complete destruction versus defluorination cannot be fully resolved."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB06-E02",
+            "WEB06-E04",
+            "WEB06-E05"
+          ],
+          "statement": "Bench-scale ultrasonic reactor and controlled conditions may not represent performance at larger scales or under variable field conditions."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB06-E01",
+          "WEB06-E02",
+          "WEB06-E05"
+        ],
+        "value": "Simple aqueous PFOS solution (laboratory water matrix, not a complex wastewater)."
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB06-E02",
+            "WEB06-E05"
+          ],
+          "name": "Ultrasonic frequency",
+          "qualifiers": "44 kHz reported as ineffective for PFOS degradation; stoichiometric fluoride release and complete PFOS degradation reported at 400 and 500 kHz; stoichiometric fluoride release reported at 1000 kHz.",
+          "unit": "kHz",
+          "value": "44, 400, 500, 1000"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E04",
+            "WEB06-E05"
+          ],
+          "name": "Treatment time",
+          "qualifiers": "Degradation of PFOS and fluoride release after 4 h of sonication reported; kinetics within first 2 h also discussed.",
+          "unit": "h",
+          "value": "4"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB06-E05"
+          ],
+          "name": "Bulk temperature change",
+          "qualifiers": "All frequencies showed an increase of ~20 \u00b0C in bulk temperature during sonication.",
+          "unit": "\u00b0C",
+          "value": "~20"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E04"
+          ],
+          "name": "Fluoride analysis methods",
+          "qualifiers": "Fluoride measured via electrode analysis and ALS; similar values reported between the two methods.",
+          "unit": null,
+          "value": "Fluoride ion-selective electrode and ALS spectrophotometry"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E03",
+            "WEB06-E05"
+          ],
+          "name": "Analytical method for PFOS and PFAAs",
+          "qualifiers": "PFOS degradation and trace short-chain PFAAs quantified by ALS; exact method details not in supplied text, but Table 2 referenced for PFOS after 4 h.",
+          "unit": null,
+          "value": "ALS analysis (PFOS and short-chain PFAAs)"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB06-E01",
+            "WEB06-E02",
+            "WEB06-E05"
+          ],
+          "value": "Perfluorooctane sulfonic acid (PFOS) as the target PFAS."
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB06-E02",
+            "WEB06-E03"
+          ],
+          "value": "Trace shorter-chain perfluoroalkyl acids (short-chain PFAAs) monitored as transformation products."
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB06-E01"
+          ],
+          "name": "Theoretical fluoride yield from complete PFOS defluorination",
+          "qualifiers": "Reported theoretical yield of fluoride ions given 100% PFOS degradation; equivalent to 6.001 mg L-1 fluoride.",
+          "unit": "\u00b5M",
+          "value": "315.9",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB06-E01"
+          ],
+          "name": "Theoretical fluoride yield from complete PFOS defluorination",
+          "qualifiers": "Mass-concentration equivalent of 315.9 \u00b5M fluoride for 100% PFOS degradation.",
+          "unit": "mg L-1",
+          "value": "6.001",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB06-E05"
+          ],
+          "name": "Temperature increase during sonication",
+          "qualifiers": "All frequencies showed an increase of ~20 \u00b0C in bulk temperature during sonication.",
+          "unit": "\u00b0C",
+          "value": "~20",
+          "value_form": "approximate_numeric"
+        }
+      ],
+      "record_id": "RT09-gpt51_web_search-WEB06-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB06-E03"
+          ],
+          "statement": "Trace concentrations of several shorter-chain PFAAs were detected at all ultrasonic frequencies; collectively they accounted for less than 1% of the total yield by mass, indicating only minor accumulation of these identifiable transformation products."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB06-E02",
+            "WEB06-E03"
+          ],
+          "statement": "Authors state that stoichiometric fluoride release and complete PFOS degradation at 400 and 500 kHz occurred \"without significant formation of less fluorinated shorter chain PFAAs,\" implying that most fluorine was converted to inorganic fluoride rather than remaining in measurable PFAAs; other organofluorine products, if present, were not fully characterized in the supplied text."
+        }
+      ],
+      "source_id": "WEB06",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB06-E01",
+          "WEB06-E02",
+          "WEB06-E04",
+          "WEB06-E05"
+        ],
+        "value": "Bench-scale ultrasonic treatment of PFOS in aqueous solution at multiple frequencies (44, 400, 500, 1000 kHz) for up to 4 h."
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB06-E02",
+          "WEB06-E04",
+          "WEB06-E05"
+        ],
+        "value": "Ultrasonic (sonolytic) treatment of PFOS solution at various ultrasonic frequencies, with characterization of sonochemical and sonoluminescence conditions."
+      }
+    },
+    {
+      "citation": "Li J, Austin C, Moore S, Pinkard BR, Novosselov IV. PFOS destruction in a continuous supercritical water oxidation reactor. Chem Eng J. 2023;451:139063.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB07-E01",
+          "WEB07-E02",
+          "WEB07-E03"
+        ],
+        "reason": "Bench-scale continuous SCWO experiments on a defined aqueous PFAS matrix with clearly specified temperature and residence-time conditions, fluorine mass balance, and parent PFAS measurements provide quantitatively interpretable removal, defluorination, and reported mineralization endpoints that can be compared to other destructive treatments under similarly controlled conditions and concentration-based metrics.",
+        "status": "comparable_with_conditions"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1016/j.cej.2022.139063",
+      "endpoints": [
+        {
+          "endpoint_type": "parent_compound_loss",
+          "evidence_locator_ids": [
+            "WEB07-E01",
+            "WEB07-E02"
+          ],
+          "interpretation": "Loss of PFOS, PFHpS, and PFOA parent compounds in the aqueous phase; authors describe up to 99.999% destruction at 650 \u00b0C and ~30 s, but this endpoint reflects parent-PFAS concentration decrease rather than, by itself, chemical destruction.",
+          "reported_term": "destruction"
+        },
+        {
+          "endpoint_type": "defluorination",
+          "evidence_locator_ids": [
+            "WEB07-E01",
+            "WEB07-E02",
+            "WEB07-E03"
+          ],
+          "interpretation": "Defluorination assessed by measuring aqueous fluoride concentration and constructing a fluorine mass balance relative to initial PFAS fluorine; complete defluorination reported at 650 \u00b0C and ~30 s, with F-balance exceeding 100% at T > 580 \u00b0C and deficits at lower temperatures.",
+          "reported_term": "complete defluorination; fluorine mass balance"
+        },
+        {
+          "endpoint_type": "mineralization",
+          "evidence_locator_ids": [
+            "WEB07-E03",
+            "WEB07-E04"
+          ],
+          "interpretation": "Authors report 99.9999% mineralization at T > 650 \u00b0C, interpreted as nearly complete conversion of PFAS fluorine to inorganic fluoride combined with disappearance of organic PFAS. The provided text does not describe a full carbon balance, so the mineralization percentage appears to be inferred primarily from PFAS loss and fluorine mass balance rather than a direct CO2-based carbon-fate measurement.",
+          "reported_term": "99.9999% mineralization of PFAS"
+        },
+        {
+          "endpoint_type": "total_organofluorine_change",
+          "evidence_locator_ids": [
+            "WEB07-E02",
+            "WEB07-E03"
+          ],
+          "interpretation": "Total fluorine balance constructed from measured PFAS and fluoride concentrations; >100% F recovery at T > 580 \u00b0C and deficits at lower T indicate temperature-dependent closure of the fluorine balance and possible contributions from unquantified fluorinated species or measurement uncertainty.",
+          "reported_term": "overall fluorine mass balance"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB07-E02",
+            "WEB07-E03",
+            "WEB07-E04"
+          ],
+          "statement": "Evidence for mineralization is primarily based on fluorine mass balance and PFAS disappearance, with only qualitative mention of gas-phase CO2; a complete carbon balance is not documented in the provided text."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB07-E01",
+            "WEB07-E03"
+          ],
+          "statement": "Reported defluorination and mineralization efficiencies are obtained at relatively high temperatures (>=580-650 \u00b0C) and short residence time (~30 s) in a specialized SCWO reactor, which may limit direct transferability to other treatment systems or lower-temperature processes."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB07-E01",
+          "WEB07-E02"
+        ],
+        "value": "Aqueous solution containing PFOS, PFHpS, and PFOA subjected to SCWO"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB07-E01"
+          ],
+          "name": "Temperature_range",
+          "qualifiers": "SCWO reactor operated over this temperature range for PFOS, PFHpS, and PFOA degradation experiments",
+          "unit": "\u00b0C",
+          "value": "410-650"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB07-E01"
+          ],
+          "name": "High_destruction_temperature",
+          "qualifiers": "Condition at which 99.999% destruction and complete defluorination of all PFAS were observed",
+          "unit": "\u00b0C",
+          "value": "650"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB07-E01"
+          ],
+          "name": "Residence_time_at_high_T",
+          "qualifiers": "Approximate residence time (~30 s) at 650 \u00b0C associated with reported 99.999% destruction and complete defluorination",
+          "unit": "s",
+          "value": "30"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB07-E03"
+          ],
+          "name": "Temperature_with_high_F_recovery",
+          "qualifiers": ">100% F balance reported at T > 580 \u00b0C; apparent deficits at lower temperatures",
+          "unit": "\u00b0C",
+          "value": "580"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB07-E01"
+          ],
+          "value": "Perfluorooctane sulfonate (PFOS)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB07-E01"
+          ],
+          "value": "Perfluoroheptane sulfonate (PFHpS)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB07-E01"
+          ],
+          "value": "Perfluorooctanoic acid (PFOA)"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB07-E02"
+          ],
+          "value": "Total measured PFAS reported as Sum(PFCAs + PFOS + PFHpS) in effluent analysis"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB07-E01"
+          ],
+          "name": "PFAS_parent_loss",
+          "qualifiers": "Destruction of all measured PFAS (PFOS, PFHpS, and PFOA) in SCWO at 650 \u00b0C and ~30 s; reported as destruction efficiency based on concentration reduction.",
+          "unit": "%",
+          "value": "99.999",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB07-E01",
+            "WEB07-E02"
+          ],
+          "name": "Defluorination_efficiency",
+          "qualifiers": "Complete defluorination observed at 650 \u00b0C and ~30 s in SCWO; based on fluoride measurements and F-balance.",
+          "unit": "%",
+          "value": "100",
+          "value_form": "exact_numeric"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB07-E03"
+          ],
+          "name": "PFAS_mineralization",
+          "qualifiers": "SCWO operation at T > 650 \u00b0C yielded 99.9999% mineralization of PFAS as reported by authors; details of supporting carbon-fate measurements not visible in provided text.",
+          "unit": "%",
+          "value": "99.9999",
+          "value_form": "exact_numeric"
+        }
+      ],
+      "record_id": "RT09-gpt51_web_search-WEB07-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB07-E02",
+            "WEB07-E03"
+          ],
+          "statement": "At temperatures below about 580 \u00b0C, the fluorine mass balance shows an apparent deficit, indicating that some fluorinated species are not fully accounted for in the measured PFAS plus fluoride pool."
+        }
+      ],
+      "source_id": "WEB07",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB07-E01",
+          "WEB07-E02",
+          "WEB07-E03"
+        ],
+        "value": "Continuous-flow laboratory-scale supercritical water oxidation (SCWO) reactor treating aqueous PFAS solutions"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB07-E01",
+          "WEB07-E02",
+          "WEB07-E03"
+        ],
+        "value": "Continuous-flow supercritical water oxidation (SCWO) of PFAS solutions over a temperature range of 410-650 \u00b0C"
+      }
+    },
+    {
+      "citation": "Li J, Austin C, Moore S, Pinkard BR, Novosselov IV. PFOS destruction in a continuous supercritical water oxidation reactor. Chem Eng J. 2023;451:139063.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB07-E04",
+          "WEB07-E05"
+        ],
+        "reason": "Gas-phase VOF occurrence and persistence are characterized semi-qualitatively without concentration or flux data or detection limits, providing valuable mechanistic insight into transformation pathways and potential unidentified fluorine compartments, but not directly comparable in a quantitative sense to other treatments focused on aqueous-phase removal or defluorination percentages.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://doi.org/10.1016/j.cej.2022.139063",
+      "endpoints": [
+        {
+          "endpoint_type": "transformation",
+          "evidence_locator_ids": [
+            "WEB07-E04",
+            "WEB07-E05"
+          ],
+          "interpretation": "Gas-phase GC/MS analysis shows formation of volatile organofluorines at lower SCWO temperatures, indicating transformation of aqueous PFAS into intermediate volatile fluorinated species rather than direct defluorination; these VOFs persist longer than PFCAs in the effluent.",
+          "reported_term": "volatile organofluorines (VOFs) as intermediates"
+        },
+        {
+          "endpoint_type": "defluorination",
+          "evidence_locator_ids": [
+            "WEB07-E04",
+            "WEB07-E05"
+          ],
+          "interpretation": "At 580 \u00b0C, no gaseous fluorine-containing compounds were detected and only N2, O2, CO2, and H2O were present, implying that above this temperature most fluorine is present as inorganic fluoride in the aqueous phase rather than as volatile organofluorines, consistent with high defluorination and reduced off-gas PFAS-related emissions.",
+          "reported_term": "absence of gaseous fluorine compounds at 580 \u00b0C"
+        },
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB07-E04",
+            "WEB07-E05"
+          ],
+          "interpretation": "Authors note that VOFs were more persistent than PFCA in effluent, suggesting that these gas-phase or semi-volatile organofluorine transformation products can control the residence time needed to achieve high overall defluorination, even when parent PFAS appear largely degraded.",
+          "reported_term": "VOFs more persistent than PFCA in effluent"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB07-E04",
+            "WEB07-E05"
+          ],
+          "statement": "Gas-phase analysis of volatile organofluorines was semi-qualitative by GC/MS, and the specific compounds and their concentrations were not fully quantified in the provided text, limiting the ability to close a complete fluorine and carbon mass balance across all phases."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB07-E04"
+          ],
+          "statement": "Lack of reported detection limits for gaseous fluorinated species means that non-detection at 580 \u00b0C cannot be directly translated into a quantitative upper bound on residual volatile organofluorines."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB07-E01",
+          "WEB07-E04"
+        ],
+        "value": "SCWO effluent gas phase from treatment of aqueous PFOS and PFOA solutions"
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB07-E04"
+          ],
+          "name": "Temperature_with_no_detectable_gaseous_F_species",
+          "qualifiers": "At 580 \u00b0C, gas analysis reported no gaseous fluorine compounds, only N2, O2, CO2, and H2O in gas products.",
+          "unit": "\u00b0C",
+          "value": "580"
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB07-E01",
+            "WEB07-E04"
+          ],
+          "value": "PFOS and PFOA as parent PFAS for gas-emission experiments"
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB07-E04",
+            "WEB07-E05"
+          ],
+          "value": "Volatile organofluorines (VOFs) detected in gas phase at lower temperatures (unresolved mixture; semi-qualitative GC/MS identification)"
+        }
+      ],
+      "quantitative_findings": [
+        {
+          "evidence_locator_ids": [
+            "WEB07-E04"
+          ],
+          "name": "Gaseous_fluorinated_compounds_at_580C",
+          "qualifiers": "At 580 \u00b0C, gas-phase analysis by GC/MS showed no gaseous fluorine compounds; only N2, O2, CO2, and H2O were detected. Detection limits are not specified in the provided text.",
+          "unit": null,
+          "value": "not detected",
+          "value_form": "not_detected"
+        }
+      ],
+      "record_id": "RT09-gpt51_web_search-WEB07-R02",
+      "residuals_byproducts": [
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB07-E04"
+          ],
+          "statement": "At lower SCWO temperatures, gas-phase GC/MS detected ion fragments associated with volatile organofluorines, indicating formation of fluorinated intermediates in the gas phase during PFOS and PFOA destruction."
+        },
+        {
+          "basis": "author_reported",
+          "evidence_locator_ids": [
+            "WEB07-E04",
+            "WEB07-E05"
+          ],
+          "statement": "VOFs were found to be more persistent than PFCA in the effluent, and their stability may dictate the minimum residence time required to achieve high defluorination efficiencies in SCWO."
+        }
+      ],
+      "source_id": "WEB07",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB07-E01",
+          "WEB07-E04",
+          "WEB07-E05"
+        ],
+        "value": "Continuous-flow laboratory SCWO reactor with off-gas sampling for volatile organofluorine analysis during PFOS and PFOA experiments"
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB07-E01",
+          "WEB07-E04",
+          "WEB07-E05"
+        ],
+        "value": "Supercritical water oxidation of PFOS and PFOA with simultaneous collection and GC/MS analysis of gas products for volatile organofluorine species"
+      }
+    },
+    {
+      "citation": "O\u2019Connor N. Aqueous Electron Initiated Destruction of Per- and Polyfluoroalkyl Substances (PFAS). PhD thesis, Royal Military College of Canada; 2024. Chapter 4: Investigating the UV/Sulfite + Iodide System to Mineralize PFAS in the Presence of Complex Matrices: Implications for Treatment of AFFF Concentrates.",
+      "comparability": {
+        "evidence_locator_ids": [
+          "WEB08-E01",
+          "WEB08-E02",
+          "WEB08-E03"
+        ],
+        "reason": "The available text only states that a UV/sulfite + iodide aqueous-electron system was investigated for PFAS mineralization and robustness in complex matrices/AFFF concentrates, without providing specific PFAS analytes, treatment conditions, sampling times, or quantitative parent loss/defluorination/mineralization data; thus it cannot be quantitatively compared with other studies\u2019 destruction endpoints.",
+        "status": "descriptive_only"
+      },
+      "doi_or_stable_url": "https://espace.rmc-cmr.ca/jspui/bitstream/11264/1943/1/O%27Connor%20Thesis%202024%20Final.pdf",
+      "endpoints": [
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB08-E01"
+          ],
+          "interpretation": "Authors frame the UV/sulfite + iodide system as aiming to \"mineralize\" PFAS in complex matrices and AFFF concentrates, but the excerpt does not show which measurements (e.g., parent loss, fluoride release, TOC/CO2) were used to support mineralization.",
+          "reported_term": "mineralize PFAS"
+        },
+        {
+          "endpoint_type": "other",
+          "evidence_locator_ids": [
+            "WEB08-E02"
+          ],
+          "interpretation": "System robustness and effectiveness are discussed qualitatively in relation to different water parameters and radical scavengers; specific quantitative removal or defluorination metrics are not given in the excerpt.",
+          "reported_term": "robustness/effectiveness in presence of radical scavengers"
+        }
+      ],
+      "limitations": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB08-E01",
+            "WEB08-E02",
+            "WEB08-E03"
+          ],
+          "statement": "Only qualitative descriptions of a UV/sulfite + iodide system\u2019s robustness, mineralization intent, and applicability to fluorotelomer-dominant, complex aqueous matrices (AFFF concentrates) are available in the excerpt; no specific PFAS species, operating conditions, measurement suite, or quantitative destruction/defluorination results are provided."
+        },
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB08-E01"
+          ],
+          "statement": "Thesis-based work may overlap with or precede related peer-reviewed articles; the excerpt does not identify whether all experimental details and analytical methods have been independently validated."
+        }
+      ],
+      "matrix": {
+        "evidence_locator_ids": [
+          "WEB08-E01",
+          "WEB08-E03"
+        ],
+        "value": "Complex aqueous matrices, including AFFF (aqueous film-forming foam) concentrates (general description only; no specific water chemistry or composition in the excerpt)."
+      },
+      "operating_conditions": [
+        {
+          "evidence_locator_ids": [
+            "WEB08-E01"
+          ],
+          "name": "Reactive species concept",
+          "qualifiers": "",
+          "unit": null,
+          "value": "Aqueous electrons generated in UV/sulfite + iodide system; detailed light intensity, doses, and reagent concentrations not provided in excerpt."
+        },
+        {
+          "evidence_locator_ids": [
+            "WEB08-E02"
+          ],
+          "name": "Matrix complexity",
+          "qualifiers": "Scavengers not individually named; no concentrations reported in excerpt.",
+          "unit": null,
+          "value": "System effectiveness and robustness evaluated in presence of several different reactive radical scavengers representing complex water parameters."
+        }
+      ],
+      "pfas_scope": [
+        {
+          "evidence_locator_ids": [
+            "WEB08-E01"
+          ],
+          "value": "Per- and polyfluoroalkyl substances (PFAS) present in AFFF concentrates and complex aqueous matrices; individual PFAS not specified in the excerpt."
+        }
+      ],
+      "quantitative_findings": [],
+      "record_id": "RT09-gpt51_web_search-WEB08-R01",
+      "residuals_byproducts": [
+        {
+          "basis": "design_inferred",
+          "evidence_locator_ids": [
+            "WEB08-E02",
+            "WEB08-E03"
+          ],
+          "statement": "The excerpt notes consideration of reactive radical scavengers and hypothesizes that an oxidative pre-treatment could expand effectiveness to fluorotelomer-dominant complex matrices, implying concern about transformation products and incomplete destruction, but it does not report specific transformation products, unidentified fractions, or byproduct analyses."
+        }
+      ],
+      "source_id": "WEB08",
+      "study_scale": {
+        "evidence_locator_ids": [
+          "WEB08-E01"
+        ],
+        "value": "Bench-scale experimental work reported within a PhD thesis chapter (specific reactor scale and volumes not available in the excerpt)."
+      },
+      "study_type": "primary_experiment",
+      "treatment": {
+        "evidence_locator_ids": [
+          "WEB08-E01",
+          "WEB08-E02"
+        ],
+        "value": "UV/sulfite + iodide aqueous-electron-based treatment system, investigated for PFAS \"mineralization\" and robustness in complex matrices."
+      }
+    }
+  ],
+  "source_system": "gpt51_web_search",
+  "task_id": "RT09"
+}

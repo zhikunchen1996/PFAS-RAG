@@ -1,0 +1,248 @@
+{
+  "batch_id": "test40-rereview2-batch-02",
+  "batch_sha256": "97c7aa85877ca527acf464edc397b6147a88adfbb39fe7954bb945a03093c1b9",
+  "prompt_sha256": "bc7904e476fd67ebd0a410a32318efe13ee807e1e031944c11e245ffec8c2c15",
+  "schema_sha256": "81eeb1e41a106373ce90635cee021f9e78e4833911c1aef2f87678870cf8e787",
+  "review": {
+    "batch_id": "test40-rereview2-batch-02",
+    "reviews": [
+      {
+        "question_id": "NQ28",
+        "verdict": "clean",
+        "question_level_issues": [
+          "The prior pervasive-misattribution issue (exact_spans 'supports' text describing content not contained in the quoted/registered span) has been resolved: NQ28-G01, NQ28-G02, and NQ28-G03 now each cite a distinct, verbatim, contiguous span from the linked full_chunk_text that actually contains the described content.",
+          "Several of the newly repaired exact_spans quotes (in NQ28-G01, NQ28-G02, and part of NQ28-G03) are verbatim contiguous spans selected from the approved full_chunk_text but are not listed in the evidence record's registered exact_evidence_span/unit_exact_spans fields. Per the current instructions these are valid candidate evidence and do not make the groups partially supported, but every such newly selected span must be flagged for project-author audit before freeze."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "NQ28-G01",
+            "verdict": "supported",
+            "issues": [
+              "Both NQ28_MMG002 exact_spans entries ('AOPs and ARPs have shown promise...' and 'eaq− (hydrated electron) is more effective...') are newly selected verbatim spans not present in NQ28_MMG002's registered unit_exact_spans list; each now correctly matches its own supports text, resolving the prior reused-span misattribution, but both require project-author audit before freeze as newly selected spans."
+            ],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-G02",
+            "verdict": "supported",
+            "issues": [
+              "The NQ28_MMG001 exact_spans entry ('Hydrated electron-based advanced reduction processes are considered...') and the three NQ28_MMG002 entries are newly selected verbatim spans not present in either evidence record's registered unit_exact_spans; each now correctly matches its own supports text, resolving the prior reused/misattributed-span issue, but all four require project-author audit before freeze."
+            ],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-G03",
+            "verdict": "supported",
+            "issues": [
+              "The second NQ28_MMG002 entry ('AOPs can sometimes be ineffective...') and both NQ28_MMG003 entries ('electrochemical oxidation performed better...' and 'Experimental scale investigations...') are newly selected verbatim spans not present in the registered unit_exact_spans lists; each now correctly matches its own supports text, resolving the prior reused-span misattribution, but all three require project-author audit before freeze."
+            ],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-G06",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "NQ28-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "WF10_011",
+        "verdict": "clean",
+        "question_level_issues": [
+          "The previously flagged WF10_011-G02 span-sufficiency/quotation mismatch is resolved: the reference_answer and the exact_spans 'supports' text no longer quote or rely on the unvalidated '60-fold and 150-fold' continuation from WF10_011_MMG005; the claim is now restated using only the paired adsorption-rate/capacity values contained in the validated span."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_011-G01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-X02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-X03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_011-X04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      },
+      {
+        "question_id": "WF10_012",
+        "verdict": "clean",
+        "question_level_issues": [
+          "The previously flagged WF10_012-G01 span/quotation mismatch is resolved: the second WF10_012_MMG001 exact_spans entry now cites the actual mechanistic sentence ('Moreover, the incorporation of MXene-TiO2 composites into the thin-film layers introduces additional surface negative charge...') as its own distinct, verbatim, contiguous span, and the reference_answer's quotation of that mechanism is drawn from within this span, resolving the prior misattribution.",
+          "The newly cited mechanistic span for WF10_012_MMG001 is not present in that evidence record's registered unit_exact_spans (which contains only the truncated 'All modified membranes...' span); per current instructions this is valid candidate evidence but requires project-author audit before freeze."
+        ],
+        "group_reviews": [
+          {
+            "claim_group_id": "WF10_012-G01",
+            "verdict": "supported",
+            "issues": [
+              "The second WF10_012_MMG001 exact_spans entry is a newly selected verbatim span not present in the registered unit_exact_spans list; content now correctly matches its supports text, but requires project-author audit before freeze."
+            ],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_012-G02",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_012-G03",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_012-G04",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_012-G05",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          },
+          {
+            "claim_group_id": "WF10_012-X01",
+            "verdict": "supported",
+            "issues": [],
+            "required_repairs": []
+          }
+        ],
+        "reference_prose_consistent": true,
+        "boundary_respected": true,
+        "required_repairs": []
+      }
+    ]
+  },
+  "claude_run": {
+    "is_error": false,
+    "duration_api_ms": 120036,
+    "num_turns": 7,
+    "stop_reason": "tool_use",
+    "session_id": "1b1d5d70-23b8-484f-8008-cd989e1e1406",
+    "total_cost_usd": 0.5456647,
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 79872,
+      "cache_read_input_tokens": 208279,
+      "output_tokens": 12181,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 79872
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 10653,
+          "cache_read_input_tokens": 84305,
+          "cache_creation_input_tokens": 6638,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 6638,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 831,
+        "outputTokens": 17,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000916,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 10,
+        "outputTokens": 12181,
+        "cacheReadInputTokens": 208279,
+        "cacheCreationInputTokens": 79872,
+        "webSearchRequests": 0,
+        "costUSD": 0.5447487,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "ttft_ms": 9635,
+    "ttft_stream_ms": 1502,
+    "time_to_request_ms": 51,
+    "type": "result",
+    "duration_ms": 119751,
+    "uuid": "5c093a13-9851-4f9c-bc1f-0a373a478cf6"
+  },
+  "candidate_test40_inputs_used": false
+}

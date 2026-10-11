@@ -1,0 +1,344 @@
+{
+  "call_key": "RT07:bge_llm_local_rag:verify:RT07-bge_llm_local_rag-S11-R02",
+  "created_at": "2026-08-05T04:26:50.275916+00:00",
+  "raw_response_text": "{\"task_id\":\"RT07\",\"record_id\":\"RT07-bge_llm_local_rag-S11-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record DOI/URL (10.1016/j.watres.2024.121300; https://doi.org/10.1016/j.watres.2024.121300) exactly matches the citation information in the source.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The paper explicitly compares ozone and air foam fractionation using the same landfill leachate (S11-E01, E05, E06) and reports air-flow\u2013dependent performance (S11-E03, E06). A status of \u201ccomparable_with_conditions\u201d is a reasonable inference from these details.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reason correctly notes that air foam fractionation is evaluated on the same landfill leachate and within the same experimental framework as ozone foam fractionation, with different gas types and flow rates (S11-E01, E03, E05, E06). The need to account for foam property differences is consistent with the text describing wetter foam for air and drier foam for ozone (S11-E01, E05).\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Endpoint 0 is classified as \u201cremoval,\u201d which matches the measured basis: PFAS concentration decrease in the bulk liquid during foam fractionation by air with different air flow rates (S11-E03, E06: \u201cRemoval efficiency of PFAS during foam fractionation process by air using different air flow rates...\u201d and detailed percent removals).\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E03 and S11-E06 describe removal efficiencies and kinetics of PFAS during foam fractionation by air at 0.5, 0.8, and 1 L/min, including improved removal of short-chain PFAS and PFOA with higher air flow. This supports the interpretation given.\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reported term paraphrases the paper\u2019s focus on \u201cRemoval efficiency of PFAS during foam fractionation process by air using different air flow rates\u201d (S11-E06) and is consistent with the language in S11-E03 describing removal efficiencies and kinetics.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Endpoint 1 concerns enrichment/transfer of PFAS into foamate; this is a separation endpoint. S11-E05 and S11-E06 describe foam wettability, differences in foamate dryness between air and ozone, and that the concentrated foamate has higher PFAS concentration and more detected compounds than the original leachate, which fits a separation classification.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E05 reports that air foam fractionation produces wetter foam with higher wettability, while ozone produces drier foamate that is 2\u20134 times drier than the air system. S11-E06 states the concentrated foamate has a higher number of PFAS detected and total PFAS up to 800 \u00b5g/L. Together, these support the interpretation of PFAS transfer and concentration into a PFAS-rich foamate with higher volume/wettability for air.\"},{\"field_path\":\"endpoints[1].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"\u201cPFAS enrichment in foamate (air system)\u201d is a concise paraphrase of the description that the concentrated foamate has a significantly increased number of PFAS detected and higher total PFAS concentration compared to the original leachate (S11-E06), in the context of air vs ozone foam fractionation (S11-E05, E06).\"},{\"field_path\":\"matrix.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The source clearly states that the system treats landfill leachate (S11-E01, E06), but the specific qualifier that this is \u201cthe same PFAS-contaminated leachate used in comparative ozone foam fractionation experiments\u201d is an inference. The comparative nature is supported, but the \u2018same batch\u2019 wording is not directly stated in the cited chunks.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record states gas type as air. S11-E05 refers to \u201cair foam fractionation\u201d and S11-E06 to \u201cfoam fractionation process by air using different air flow rates,\u201d confirming that ambient air is the gas used.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"No unit is appropriate for a categorical variable (gas type). The field correctly leaves unit as null.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E03 states that by increasing the air flow rate from 0.5 L/min to 1 L/min removal increased, and S11-E06 lists kinetics for 1, 0.8, and 0.5 L/min. Representing the range as 0.5\u20131 is consistent with these values.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source explicitly reports flow rates in L/min (S11-E03, E06), matching the unit used.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E05 states, \u201cThe wettability of the foam recovered using air foam fractionation ranged from 7 % to 13 %,\u201d matching the recorded 7\u201313 range.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Wettability is given in percent in the source (S11-E05), consistent with the '%' unit used.\"},{\"field_path\":\"operating_conditions[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E01 notes that ozone foam fractionation generates foamate volumes 2\u20134 times less than air, and S11-E05 states that foamate from the ozone system is 2\u20134 times drier than that from the air system. Representing the relative factor as 2\u20134 is consistent with these descriptions.\"},{\"field_path\":\"operating_conditions[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The field expresses a dimensionless multiplicative factor (\u201c2\u20134 times\u201d), so leaving the unit null is appropriate and consistent with the text (S11-E01, E05).\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"partially_supported\",\"error_type\":\"other\",\"reason\":\"S11-E03 lists several short-chain PFAS measured (PFBS (C4), PFHxA (C5), 5:3 FTCA (C5), PFHpA (C6), PFHxS (C6), 6:2 FTS (C6)) and PFOA (C7). However, PFPeS (C5) is not mentioned in the cited text, so including PFPeS is not supported. The general description of a mixture of long- and short-chain PFAS in landfill leachate and the example of PFOA as a longer-chain species are supported.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E03 states: \u201cby increasing the air flow rates from 0.5 L/min to 1 L/min, the removal of the short-chain PFAS (e.g., PFHxA (C5), PFPeS (C5)) was upwarded by 10 %\u201330 %.\u201d The recorded range 10\u201330 matches this statement.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source reports the increase as 10\u201330 % (S11-E03). Using '%' as the unit is correct.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E03 states, \u201cThe removal efficiency of PFOA (C7) was also increased by 20 %.\u201d The recorded value 20 (exact_numeric) matches this magnitude.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The 20 % change for PFOA is explicitly given in percent (S11-E03), so '%' is the correct unit.\"},{\"field_path\":\"quantitative_findings[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E05 reports \u201cThe wettability of the foam recovered using air foam fractionation ranged from 7 % to 13 %.\u201d The recorded 7\u201313 range matches exactly.\"},{\"field_path\":\"quantitative_findings[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Wettability is reported in percent in the source (S11-E05); '%' is therefore correct.\"},{\"field_path\":\"quantitative_findings[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E01 indicates ozone foam fractionation generates foamate volumes 2\u20134 times less than air, and S11-E05 notes ozone foamate is 2\u20134 times drier than that of the air system. Representing this as a factor of 2\u20134 is consistent with the text.\"},{\"field_path\":\"quantitative_findings[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The value is a relative multiplicative factor (2\u20134 times), which is dimensionless; leaving unit null is appropriate.\"},{\"field_path\":\"quantitative_findings[4].value\",\"status\":\"partially_supported\",\"error_type\":\"source_attribution\",\"reason\":\"S11-E06 reports, \u201cThe total concentration of PFAS in the foamate reached up to 800 \u00b5g/L.\u201d This supports the numeric value 800. However, the record labels this as a maximum concentration in \u201cair-foamate\u201d whereas the cited text does not distinguish whether this foamate is from air or ozone; it is simply \u201cthe concentrated foamate.\u201d Thus, the number is supported, but attribution specifically to air foamate is not.\"},{\"field_path\":\"quantitative_findings[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source reports \u201c800 \u00b5g/L\u201d (S11-E06), and the record uses '\u00b5g/L' as the unit, which matches exactly.\"},{\"field_path\":\"limitations[0].statement\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E03 notes that long-chain PFAS are removed to below LOD in 2\u20136 min while complete removal of short-chain PFAS is unlikely in the studied timeframe, and that some short-chain PFAS with fewer than four perfluorinated carbons have recoveries below 10%. It also shows improved short-chain removal (10\u201330% higher) with increased air flow. This supports the limitation that short-chain removal improves with flow but still lags long-chain PFAS and remains challenging.\"},{\"field_path\":\"limitations[1].statement\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S11-E05 states that air foam fractionation produces foam with wettability 7\u201313% and that ozone foamate is 2\u20134 times drier. S11-E01 notes ozone generates foamate volumes 2\u20134 times less, leading to significant cost savings and reduced storage requirements. It is therefore reasonable to infer that the wetter, higher-volume air foamate would increase disposal/treatment burden, but the text does not explicitly state increased costs for the air system. The descriptive part (wetter air foamate) is supported; the explicit linkage to higher costs for air is inferred rather than directly author-reported.\"},{\"field_path\":\"limitations[2].statement\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S11-E03 and E06 clearly show that only a limited range of air flow rates (0.5, 0.8, 1 L/min) was investigated and that removal kinetics were studied over minutes, implying short-term experiments. However, the statement explicitly calling the study \u201cbench-scale\u201d and highlighting that long-term operational stability and full-scale performance are not established is a reasonable design inference rather than directly reported in these excerpts. The limited range of air flows is directly supported; the scale and long-term-stability aspects are inferred.\"},{\"field_path\":\"residuals_byproducts[0].statement\",\"status\":\"partially_supported\",\"error_type\":\"source_attribution\",\"reason\":\"S11-E06 shows that the concentrated foamate has a significantly increased number of PFAS detected compared to the original leachate and total PFAS up to 800 \u00b5g/L, indicating a PFAS-rich residual that would require further management. However, the excerpt does not specify whether this concentrated foamate is from the air or ozone system; attributing it specifically to \u201cAir foam fractionation\u201d is not directly supported by the cited text, though the general notion of PFAS-rich foamate needing downstream treatment is supported.\"},{\"field_path\":\"residuals_byproducts[1].statement\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S11-E01 and E04 state that ozone foam fractionation produces 2\u20134 times less foamate and that this reduction in foamate volume yields substantial cost savings and reduced storage requirements. It follows by implication that air foam fractionation, which produces more and wetter foamate (S11-E05), would entail higher downstream treatment volume and costs, but this implication is not explicitly stated for the air system. Thus, the direction of the effect is reasonable but partially inferred.\"},{\"field_path\":\"study_scale.value\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The record describes the work as \u201cbench-scale air foam fractionation treating real landfill leachate.\u201d The cited excerpts (S11-E01, E05, E06) clearly indicate real landfill leachate and experimental foam fractionation systems with specified gas flow rates, triplicate experiments, and kinetics over minutes, which strongly imply bench-scale experimentation. However, the term \u2018bench-scale\u2019 is not explicitly used in the provided chunks; it is a reasonable but inferred classification.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S11-E06 and E05 refer to \u201cfoam fractionation process by air using different air flow rates,\u201d and discuss removal kinetics and foam properties, which is consistent with air being bubbled through landfill leachate to generate PFAS-enriched foamate. The description of varying air flow rates for kinetic and removal comparison directly matches the cited figures and text.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014source identity, landfill leachate matrix, treatment as foam fractionation by air, removal and separation endpoints, air flow operating conditions, and key quantitative removal and foamate-wettability metrics\u2014are well supported by the cited text. Some qualifiers (e.g., explicit bench-scale wording, attribution of the 800 \u00b5g/L foamate concentration and some residual/disposal implications specifically to the air system, inclusion of PFPeS in the PFAS scope) are partially supported or inferred, but these do not compromise the fundamental interpretability of the record for synthesis about foam fractionation performance and foamate characteristics.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of when foam fractionation is useful as a concentration step and how the resulting PFAS-rich foamate should be managed.\",\"task_id\":\"RT07\",\"title\":\"Placing foam fractionation within a PFAS treatment train\"}\n\nTask-specific extraction objective:\nExtract feed source, PFAS profile, scale, operating duration, feed and foamate volume, recovery, enrichment, short-chain performance, energy, operational stability, downstream foamate treatment, and residual endpoint.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.jhazmat.2023.133182\"],\"all_blocked_titles\":[\"a review of foam fractionation for the removal of per and polyfluoroalkyl substances pfas from aqueous matrices\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.jhazmat.2023.133182\"],\"anchor_id\":\"AR-WE-2024\",\"corpus_source\":\"2024 - We - A review of foam fractionation for the removal of per- and polyfluoroalkyl substances (PFAS) from aqueous matrices.pdf\",\"doi\":\"10.1016/j.jhazmat.2023.133182\",\"title\":\"A review of foam fractionation for the removal of per- and polyfluoroalkyl substances (PFAS) from aqueous matrices\",\"url\":\"https://doi.org/10.1016/j.jhazmat.2023.133182\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Vo, P.H.; Nguyen, T.T.; Nguyen, H.T.; Baulch, J.; Dong, S.; Nguyen, C.V.; Thai, P.K.; Nguyen, A.V. PFAS removal from landfill leachate by ozone foam fractionation - System optimization and adsorption quantification. Water Research 2024, 253, 121300.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S11-E01\",\n      \"S11-E03\",\n      \"S11-E05\",\n      \"S11-E06\"\n    ],\n    \"reason\": \"This air foam fractionation record uses the same landfill leachate matrix and bench-scale setup described for the ozone system, with explicitly varied gas flow rates. Direct comparison to the ozone foam fractionation record is appropriate for assessing relative removal, short-chain performance, and foamate volume, provided differences in gas type and foam properties are accounted for.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.watres.2024.121300\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S11-E03\",\n        \"S11-E06\"\n      ],\n      \"interpretation\": \"PFAS concentration decrease in bulk landfill leachate during air foam fractionation at different air flow rates; authors report improvements in removal for both short-chain PFAS and PFOA when increasing air flow rate.\",\n      \"reported_term\": \"PFAS removal efficiency and kinetics during air foam fractionation\"\n    },\n    {\n      \"endpoint_type\": \"separation\",\n      \"evidence_locator_ids\": [\n        \"S11-E05\",\n        \"S11-E06\"\n      ],\n      \"interpretation\": \"PFAS transfer and concentration into foamate generated by air foam fractionation; foamate has higher PFAS concentrations and more detected species than original leachate, though with higher wettability and volume compared with ozone foamate.\",\n      \"reported_term\": \"PFAS enrichment in foamate (air system)\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S11-E03\"\n      ],\n      \"statement\": \"Short-chain PFAS removal by air foam fractionation improves with increasing air flow but still lags behind long-chain PFAS removal, indicating challenges in concentrating very short-chain PFAS.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S11-E01\",\n        \"S11-E05\"\n      ],\n      \"statement\": \"Foamate generated by air foam fractionation is wetter (higher wettability and volume) than ozone foamate, which may increase downstream storage and destruction costs.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S11-E03\",\n        \"S11-E06\"\n      ],\n      \"statement\": \"The study is bench-scale and uses a limited range of air flow rates, so long-term operational stability and full-scale performance are not established.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S11-E01\",\n      \"S11-E05\",\n      \"S11-E06\"\n    ],\n    \"value\": \"Landfill leachate (same PFAS-contaminated leachate used in comparative ozone foam fractionation experiments)\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E02\",\n        \"S11-E05\",\n        \"S11-E06\"\n      ],\n      \"name\": \"Gas type\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"Air (ambient)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E03\",\n        \"S11-E06\"\n      ],\n      \"name\": \"Gas flow rate range\",\n      \"qualifiers\": \"Removal efficiency and kinetics evaluated at air flow rates of 0.5, 0.8, and 1 L/min; specific performance improvements noted when increasing from 0.5 to 1 L/min.\",\n      \"unit\": \"L/min\",\n      \"value\": \"0.5-1\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E05\"\n      ],\n      \"name\": \"Foamate wettability\",\n      \"qualifiers\": \"Wettability of foam recovered using air foam fractionation ranged from 7% to 13%.\",\n      \"unit\": \"%\",\n      \"value\": \"7-13\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E01\",\n        \"S11-E05\"\n      ],\n      \"name\": \"Relative foamate volume vs. ozone foam fractionation\",\n      \"qualifiers\": \"Foamate produced by the air system was 2\\u20134 times wetter/higher in volume compared with ozone foam fractionation.\",\n      \"unit\": null,\n      \"value\": \"2-4\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E03\",\n        \"S11-E06\"\n      ],\n      \"value\": \"Mixture of native PFAS in landfill leachate including long-chain and short-chain PFAS; specific short-chain analytes mentioned for gas-flow comparison include PFHxA (C5) and PFPeS (C5), with PFOA (C7) as an example long-chain PFAS.\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E03\"\n      ],\n      \"name\": \"Effect of increasing air flow on short-chain PFAS removal\",\n      \"qualifiers\": \"When increasing air flow rate from 0.5 L/min to 1 L/min, removal of short-chain PFAS such as PFHxA (C5) and PFPeS (C5) increased by about 10\\u201330 percentage points.\",\n      \"unit\": \"%\",\n      \"value\": \"10-30\",\n      \"value_form\": \"range\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E03\"\n      ],\n      \"name\": \"Effect of increasing air flow on PFOA removal\",\n      \"qualifiers\": \"Increasing the air flow rate from 0.5 L/min to 1 L/min increased PFOA (C7) removal by approximately 20 percentage points.\",\n      \"unit\": \"%\",\n      \"value\": \"20\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E05\"\n      ],\n      \"name\": \"Foamate wettability (air system)\",\n      \"qualifiers\": \"Wettability of foamate recovered using air foam fractionation ranged from 7% to 13%.\",\n      \"unit\": \"%\",\n      \"value\": \"7-13\",\n      \"value_form\": \"range\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E01\",\n        \"S11-E05\"\n      ],\n      \"name\": \"Relative foamate volume vs. ozone foam fractionation\",\n      \"qualifiers\": \"Air foam fractionation produced foamate that was 2\\u20134 times wetter/higher in volume than foamate from the ozone system.\",\n      \"unit\": null,\n      \"value\": \"2-4\",\n      \"value_form\": \"range\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S11-E06\"\n      ],\n      \"name\": \"Maximum total PFAS concentration in air-foamate (inferred shared value)\",\n      \"qualifiers\": \"Total PFAS concentration in concentrated foamate (combined discussion of air and ozone systems) reached up to 800 \\u00b5g/L; specific partition between air- and ozone-generated foamates is not distinguished in the excerpt.\",\n      \"unit\": \"\\u00b5g/L\",\n      \"value\": \"800\",\n      \"value_form\": \"exact_numeric\"\n    }\n  ],\n  \"record_id\": \"RT07-bge_llm_local_rag-S11-R02\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S11-E06\"\n      ],\n      \"statement\": \"Air foam fractionation concentrates PFAS, including a wider set of PFAS species than detected in the original leachate, into a PFAS-rich foamate that still requires downstream destruction or secure disposal.\"\n    },\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S11-E01\",\n        \"S11-E04\",\n        \"S11-E05\"\n      ],\n      \"statement\": \"Because air foam fractionation generates higher-volume, wetter foamate than ozone foam fractionation, downstream PFAS destruction technologies (e.g., plasma, thermal, electrochemical) would face a higher treatment volume and associated costs.\"\n    }\n  ],\n  \"source_id\": \"S11\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S11-E01\",\n      \"S11-E05\",\n      \"S11-E06\"\n    ],\n    \"value\": \"Bench-scale air foam fractionation treating real landfill leachate (comparative system to ozone foam fractionation)\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S11-E01\",\n      \"S11-E05\",\n      \"S11-E06\"\n    ],\n    \"value\": \"Air foam fractionation (bubbling ambient air through landfill leachate to generate PFAS-enriched foamate), operated at different air flow rates for kinetic and removal comparison.\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 11,\n  \"bge_score\": 0.8190277218818665,\n  \"citation\": \"Vo, P.H.; Nguyen, T.T.; Nguyen, H.T.; Baulch, J.; Dong, S.; Nguyen, C.V.; Thai, P.K.; Nguyen, A.V. PFAS removal from landfill leachate by ozone foam fractionation - System optimization and adsorption quantification. Water Research 2024 253 121300. DOI: 10.1016/j.watres.2024.121300.\",\n  \"doi\": \"10.1016/j.watres.2024.121300\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.watres.2024.121300\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S11-E01\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.003248644294217229,\n        \"RT07-C2\": 0.00507376017048955,\n        \"RT07-C3\": 0.014522796496748924,\n        \"umbrella\": 0.8066460490226746\n      },\n      \"section\": \"results\",\n      \"text\": \"Landfills are the primary endpoint for the disposal of PFAS-laden waste, which subsequently releases PFAS to the surrounding environments through landfill leachate. Ozone foam fractionation emerges as a promising tech - nology for PFAS removal to address the issue. This study aims to (i) assess the effectiveness of the ozone foam fractionation system to remove PFAS from landfill leachate, and (ii) quantify equilibrium PFAS adsorption onto the gas-water interface of ozone bubbles, followed by a comparison with air foam fractionation. The results show that ozone foam fractionation is effective for PFAS removal from landfill leachate, with more than 90 % long- chain PFAS removed. The identified operating conditions provide valuable insights for industrial applications, guiding the optimization of ozone flow rates (1 L/min), dosing (43 mg/L) and minimizing foamate production (4 % wettability). The equilibrium modelling reveals that the surface excess of air bubbles exceeds that of ozone bubbles by 20 \\u2013 40 % at a corresponding PFAS concentration. However, the overall removal of PFAS from landfill leachate by ozone foam fractionation remains substantial. Notably, ozone foam fractionation generates foamate volumes 2 \\u2013 4 times less, resulting in significant cost savings for the final disposal of waste products and reduced site storage requirements. 1. Introduction Per- and poly-fluoroalkyl substances (PFAS) constitute a diverse set\"\n    },\n    {\n      \"corpus_chunk\": 14,\n      \"locator_id\": \"S11-E02\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.030539730563759804,\n        \"RT07-C2\": 0.0029432394076138735,\n        \"RT07-C3\": 0.0003513734263833612,\n        \"umbrella\": 0.2515912353992462\n      },\n      \"section\": \"results\",\n      \"text\": \"4 -PFOS were used for quantification (Table S1). The QA/QC results are provided in Table S3. 3.5. Measurements of surface tension of PFAS solutions The surface tensions of three popular PFAS (i.e., PFOA (C 7 ), PFHxS (C 6 ), PFBS (C 4 )) at a wide range of concentrations (i.e., 10 \\u0000 3 - 50 g/L) were measured using PAT- 1 M bubble profile analysis tensiometer from SINTERFACE, Germany. The concentrations of PFAS were chosen to cover from low bulk-water concentration to near-micelle and micelle levels of the three PFAS studied. To ensure the cleanliness, all devices were double-checked by comparing the standard sum frequency gen - eration (SFG) spectroscopy spectra of DI water with the SFG spectra of DI water in the sample holder. The tensiometer was calibrated once per month using the reference liquid method (e.g., Milli-Q water) with a thermometer temperature gun. All measurements were conducted using the buoyant bubble method. The PFAS solution was saturated by air or ozone prior to the measurement. Air and ozone bubbles were created in the cell by connecting the inlet pipe with ambient air and ozone generator, respectively. The measurement of dynamic surface tension\"\n    },\n    {\n      \"corpus_chunk\": 16,\n      \"locator_id\": \"S11-E03\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.002447538310661912,\n        \"RT07-C2\": 0.6113815903663635,\n        \"RT07-C3\": 0.0004141285317018628,\n        \"umbrella\": 0.1470237821340561\n      },\n      \"section\": \"results\",\n      \"text\": \"8 )). The removal of short-chain PFAS (i.e., PFBS (C 4 ), PFHxA (C 5 ), 5:3 FTCA (C 5 ), PFHpA (C 6 ), PFHxS (C 6 ), 6:2 FTS (C 6 )) ranged from 8 % to 95 %. The recoveries of below 10 % were observed for some short- chain PFAS, which have less than four perfluorinated carbons. Increasing the air flow rates improved the efficiency of PFAS removal. Pertaining to short-chain PFAS, by increasing the air flow rates from 0.5 L/min to 1 L/min, the removal of the short-chain PFAS (e.g., PFHxA (C 5 ), PFPeS (C 5 )) was upwarded by 10 % \\u2013 30 %. The removal efficiency of PFOA (C7) was also increased by 20 %. It took 2 min to 6 min to remove long-chain PFAS to the level below LOD in the bulk liquid (0.03 \\u2013 0.05 \\u00b5 g/L) while a complete removal of short-chain PFAS is un - likely to be achieved within the studied timeframe (Table S4). The removal rate of long-chain PFAS is higher than the short-chain\"\n    },\n    {\n      \"corpus_chunk\": 32,\n      \"locator_id\": \"S11-E04\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.003205739427357912,\n        \"RT07-C2\": 0.015217569656670094,\n        \"RT07-C3\": 0.43082064390182495,\n        \"umbrella\": 0.6936167478561401\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"5. Conclusions The overall treatment performance indicates total PFAS removed by ozone foam fractionation is significant with more than 90 % long-chain PFAS removed. The greatest advantage of ozone foam fractionation is a higher reduction in foamate generated than air foam fractionation. It results in substantial benefit for final disposal costs and reduces site storage requirements of hazardous materials. The subsequent technol - ogy for PFAS destruction such as plasma, thermal and electrochemical oxidation also receive a corresponding reduction in workload with lower volume of foamate for degradation. These results demonstrate the promising applicability of ozone foam fractionation for treatment of PFAS-laden landfill leachate. In a broader scale, ozone foam fraction - ation can also be incorporated with the aeration stage in wastewater treatment plants by developing a foam collection system and an ozone generator. Further research is required to validate the operation mode (e.g., continuous, enriching, stripping) and system configuration (e.g., multistage treatment) to comprehensively elucidate the techno- economic viability of this technology. Supporting information Quantification of PFAS, QA/QC, Data analysis, PFAS study, Experi - mental Design, Foam Fractionation System, Measured Surface Tension of PFAS. CRediT authorship contribution statement Phong H.N. Vo: Writing \\u2013 original draft, Methodology, Investiga - tion, Formal analysis, Conceptualization. Thao T.P.\"\n    },\n    {\n      \"corpus_chunk\": 22,\n      \"locator_id\": \"S11-E05\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.008108420297503471,\n        \"RT07-C2\": 0.011320534162223339,\n        \"RT07-C3\": 0.003401954425498843,\n        \"umbrella\": 0.7992317080497742\n      },\n      \"section\": \"methods\",\n      \"text\": \"The finding is well supported by others experiments and modelling studies ( Nguyen et al., 2003 ; Stevenson et al., 2003 ). The wettability of the foam recovered using air foam fractionation ranged from 7 % to 13 %; in turn, the wettability of foamate recovered by ozone fractionation is below 4 %. Another notable difference between ozone foam fractionation and air foam fractionation lies in the finding that the foamate produced by the ozone system is 2 \\u2013 4 times drier compared to that generated by air sys - tem. This phenomenon is attributable to the stronger hydrophobicity of the ozonated bubbles. It results in a lesser extent of boundary water on the surface of bubbles which be carried out to the reservoir tank. The amount of boundary water surrounding the bubble strongly affects the wettability of the foam recovered ( Nguyen et al., 2003 ). In addition, the higher foam hydrophobicity results in lower surface water density, making it easier for the liquid film between two bubbles to thin and undergo coalescence. Foam hydrophobicity also promotes the rupture of liquid films by increasing the attractive hydrophobic force, so called non-DLVO force, alongside the attractive van der Waals forces and Fig. 1. Removal efficiency of PFAS during foam fractionation process by air using different air flow rates (Panel A).\"\n    },\n    {\n      \"corpus_chunk\": 23,\n      \"locator_id\": \"S11-E06\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.003732964862138033,\n        \"RT07-C2\": 0.0020879392977803946,\n        \"RT07-C3\": 0.0029886059928685427,\n        \"umbrella\": 0.7307786345481873\n      },\n      \"section\": \"methods\",\n      \"text\": \"1. Removal efficiency of PFAS during foam fractionation process by air using different air flow rates (Panel A). Kinetics of PFAS removal using gas flow rate 1 L/ min (Panel B), 0.8 L/min (Panel C), and 0.5 L/min (Panel D) in both dash and continuous lines. Error bars represent minimum/maximum values from triplicate experiments ( n = 3). C represents the concentrations of PFAS at time t, C 0 represents the concentrations of PFAS at the initial time. P.H.N. Vo et al. Water Research 253 (2024) 121300 5 repulsive electrostatic forces in the disjoining pressure of liquid films ( Ghosh, 2004 ; Langevin, 2020 ; Pereira et al., 2014 ). Another reason for the difference is the heavier mass of ozone than air in which resulted in slower rise of ozone bubbles, hence forming drier foamate. The concentrated foamate showed a significantly increasing number of PFAS detected compared to the original leachate, such as 6:2 FTCA, PFECHS, FOSA, 8:2 FTS, and N-MeFOSAA. The total concentration of PFAS in the foamate reached up to 800 \\u00b5 g/L. It again indicates the occurrence of substantial PFAS compounds in landfill leachate that need\"\n    },\n    {\n      \"corpus_chunk\": 2,\n      \"locator_id\": \"S11-E07\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.006713213864713907,\n        \"RT07-C2\": 0.003961049020290375,\n        \"RT07-C3\": 0.003561968682333827,\n        \"umbrella\": 0.5212938785552979\n      },\n      \"section\": \"introduction\",\n      \"text\": \"Introduction Per- and poly-fluoroalkyl substances (PFAS) constitute a diverse set of synthetic chemicals renowned for their superior in water and oil repelling and have high thermal stability. Owing to these unique char - acteristics, PFAS have been used for a wide range of surface-active ap - plications in construction materials, paper and packaging products, textile, metal finishing, and plating; and aqueous film foaming foams (AFFFs) ( Barzen-Hanson et al., 2017 ). Landfills represent the primary endpoint for disposal of PFAS-laden waste, where, several years after landfilling, PFAS have leached and dissipated to the surrounding envi - ronments via landfill leachate ( Li et al., 2023 ). Numerous reports have highlighted the association between PFAS and health effects such as elevated cholesterol levels, increased cancer risks, diminished organ functions, and reproduction issues ( Sunderland et al., 2019 ). It leads to a range of regulations imposed on landfill leachate to restrict PFAS discharge into the environment. Foam fractionation stands out as a promising technology for removing PFAS from aqueous media (e.g. groundwater, wastewater, landfill leachate) ( Smith et al., 2022 ). The fundamental concept of foam fractionation revolves around the hydrophobic sorption of PFAS mole - cules into the gas-water interface of bubbles. Hence, PFAS can be\"\n    },\n    {\n      \"corpus_chunk\": 28,\n      \"locator_id\": \"S11-E08\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.0021345203276723623,\n        \"RT07-C2\": 0.04672907665371895,\n        \"RT07-C3\": 0.0006325144204311073,\n        \"umbrella\": 0.48319143056869507\n      },\n      \"section\": \"results\",\n      \"text\": \"surface excess of PFAS in leachate is known to be higher extent due to the presence of dissolved solids ( Buckley et al., 2022 ; Costanza et al., 2019 ). Foam fractionation using air purely depends on the interaction of PFAS molecules and the gas-water interface of air bubbles. In turn, ozone fractionation is driven by O 3 and its products (e.g., \\u2022 OH, O 2 \\u2022 \\u0000 and 1 O 2 ), which affect the sorption of PFAS molecules to gas-water interface of ozone bubbles through an O 3 -rich layer surrounded the interface of ozone bubbles ( Dai et al., 2019 ). Previous study hypothesized that ozone and its products act as a binder to attract the negatively charged head groups of PFAS molecules such as SO 3 \\u0000 and COO \\u0000 , hence improving the removal of PFAS. Ozone fractionation was known to recover long-chain PFAS better using over-the-air fractionation given the comparison of short-chain PFAS removal was missing ( Dai et al., 2019 ). However, in this study, our results and model showed that adsorption of PFAS onto air bubbles was higher than ozone bubbles. The underlying mechanism for the phenomenon needs further investigation. 4.6. Implications Using a rigorous ozone dose as shown in this study, PFAS precursors\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2024 - Vo - PFAS removal from landfill leachate by ozone foam fractionation - System optimization and adsorption quantification.pdf\",\n  \"source_id\": \"S11\",\n  \"title\": \"PFAS removal from landfill leachate by ozone foam fractionation - System optimization and adsorption quantification\",\n  \"year\": \"2024\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "d9b458b57d828729eada74064f101ad4f7bca63d7d7b2f869ea3d0f3de83d334",
+  "response_metadata": {
+    "cached_input_tokens": 1152,
+    "estimated_cost_usd": 0.0635065,
+    "finish_reason": "stop",
+    "input_tokens": 6810,
+    "latency_seconds": 42.21054191689473,
+    "output_tokens": 5629,
+    "reasoning_tokens": 2309,
+    "response_id": "chatcmpl-E9NUefoYjBuczVRxHKpgPJo06d9fA",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 12439,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The record DOI/URL (10.1016/j.watres.2024.121300; https://doi.org/10.1016/j.watres.2024.121300) exactly matches the citation information in the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The paper explicitly compares ozone and air foam fractionation using the same landfill leachate (S11-E01, E05, E06) and reports air-flow\u2013dependent performance (S11-E03, E06). A status of \u201ccomparable_with_conditions\u201d is a reasonable inference from these details.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The reason correctly notes that air foam fractionation is evaluated on the same landfill leachate and within the same experimental framework as ozone foam fractionation, with different gas types and flow rates (S11-E01, E03, E05, E06). The need to account for foam property differences is consistent with the text describing wetter foam for air and drier foam for ozone (S11-E01, E05).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "Endpoint 0 is classified as \u201cremoval,\u201d which matches the measured basis: PFAS concentration decrease in the bulk liquid during foam fractionation by air with different air flow rates (S11-E03, E06: \u201cRemoval efficiency of PFAS during foam fractionation process by air using different air flow rates...\u201d and detailed percent removals).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "S11-E03 and S11-E06 describe removal efficiencies and kinetics of PFAS during foam fractionation by air at 0.5, 0.8, and 1 L/min, including improved removal of short-chain PFAS and PFOA with higher air flow. This supports the interpretation given.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "The reported term paraphrases the paper\u2019s focus on \u201cRemoval efficiency of PFAS during foam fractionation process by air using different air flow rates\u201d (S11-E06) and is consistent with the language in S11-E03 describing removal efficiencies and kinetics.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "Endpoint 1 concerns enrichment/transfer of PFAS into foamate; this is a separation endpoint. S11-E05 and S11-E06 describe foam wettability, differences in foamate dryness between air and ozone, and that the concentrated foamate has higher PFAS concentration and more detected compounds than the original leachate, which fits a separation classification.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "S11-E05 reports that air foam fractionation produces wetter foam with higher wettability, while ozone produces drier foamate that is 2\u20134 times drier than the air system. S11-E06 states the concentrated foamate has a higher number of PFAS detected and total PFAS up to 800 \u00b5g/L. Together, these support the interpretation of PFAS transfer and concentration into a PFAS-rich foamate with higher volume/wettability for air.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].reported_term",
+        "reason": "\u201cPFAS enrichment in foamate (air system)\u201d is a concise paraphrase of the description that the concentrated foamate has a significantly increased number of PFAS detected and higher total PFAS concentration compared to the original leachate (S11-E06), in the context of air vs ozone foam fractionation (S11-E05, E06).",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "matrix.value",
+        "reason": "The source clearly states that the system treats landfill leachate (S11-E01, E06), but the specific qualifier that this is \u201cthe same PFAS-contaminated leachate used in comparative ozone foam fractionation experiments\u201d is an inference. The comparative nature is supported, but the \u2018same batch\u2019 wording is not directly stated in the cited chunks.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "The record states gas type as air. S11-E05 refers to \u201cair foam fractionation\u201d and S11-E06 to \u201cfoam fractionation process by air using different air flow rates,\u201d confirming that ambient air is the gas used.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "No unit is appropriate for a categorical variable (gas type). The field correctly leaves unit as null.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "S11-E03 states that by increasing the air flow rate from 0.5 L/min to 1 L/min removal increased, and S11-E06 lists kinetics for 1, 0.8, and 0.5 L/min. Representing the range as 0.5\u20131 is consistent with these values.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The source explicitly reports flow rates in L/min (S11-E03, E06), matching the unit used.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "S11-E05 states, \u201cThe wettability of the foam recovered using air foam fractionation ranged from 7 % to 13 %,\u201d matching the recorded 7\u201313 range.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "Wettability is given in percent in the source (S11-E05), consistent with the '%' unit used.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].value",
+        "reason": "S11-E01 notes that ozone foam fractionation generates foamate volumes 2\u20134 times less than air, and S11-E05 states that foamate from the ozone system is 2\u20134 times drier than that from the air system. Representing the relative factor as 2\u20134 is consistent with these descriptions.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[3].unit",
+        "reason": "The field expresses a dimensionless multiplicative factor (\u201c2\u20134 times\u201d), so leaving the unit null is appropriate and consistent with the text (S11-E01, E05).",
+        "status": "supported"
+      },
+      {
+        "error_type": "other",
+        "field_path": "pfas_scope[0].value",
+        "reason": "S11-E03 lists several short-chain PFAS measured (PFBS (C4), PFHxA (C5), 5:3 FTCA (C5), PFHpA (C6), PFHxS (C6), 6:2 FTS (C6)) and PFOA (C7). However, PFPeS (C5) is not mentioned in the cited text, so including PFPeS is not supported. The general description of a mixture of long- and short-chain PFAS in landfill leachate and the example of PFOA as a longer-chain species are supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "S11-E03 states: \u201cby increasing the air flow rates from 0.5 L/min to 1 L/min, the removal of the short-chain PFAS (e.g., PFHxA (C5), PFPeS (C5)) was upwarded by 10 %\u201330 %.\u201d The recorded range 10\u201330 matches this statement.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The source reports the increase as 10\u201330 % (S11-E03). Using '%' as the unit is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "S11-E03 states, \u201cThe removal efficiency of PFOA (C7) was also increased by 20 %.\u201d The recorded value 20 (exact_numeric) matches this magnitude.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "The 20 % change for PFOA is explicitly given in percent (S11-E03), so '%' is the correct unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].value",
+        "reason": "S11-E05 reports \u201cThe wettability of the foam recovered using air foam fractionation ranged from 7 % to 13 %.\u201d The recorded 7\u201313 range matches exactly.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].unit",
+        "reason": "Wettability is reported in percent in the source (S11-E05); '%' is therefore correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].value",
+        "reason": "S11-E01 indicates ozone foam fractionation generates foamate volumes 2\u20134 times less than air, and S11-E05 notes ozone foamate is 2\u20134 times drier than that of the air system. Representing this as a factor of 2\u20134 is consistent with the text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].unit",
+        "reason": "The value is a relative multiplicative factor (2\u20134 times), which is dimensionless; leaving unit null is appropriate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "source_attribution",
+        "field_path": "quantitative_findings[4].value",
+        "reason": "S11-E06 reports, \u201cThe total concentration of PFAS in the foamate reached up to 800 \u00b5g/L.\u201d This supports the numeric value 800. However, the record labels this as a maximum concentration in \u201cair-foamate\u201d whereas the cited text does not distinguish whether this foamate is from air or ozone; it is simply \u201cthe concentrated foamate.\u201d Thus, the number is supported, but attribution specifically to air foamate is not.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].unit",
+        "reason": "The source reports \u201c800 \u00b5g/L\u201d (S11-E06), and the record uses '\u00b5g/L' as the unit, which matches exactly.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0].statement",
+        "reason": "S11-E03 notes that long-chain PFAS are removed to below LOD in 2\u20136 min while complete removal of short-chain PFAS is unlikely in the studied timeframe, and that some short-chain PFAS with fewer than four perfluorinated carbons have recoveries below 10%. It also shows improved short-chain removal (10\u201330% higher) with increased air flow. This supports the limitation that short-chain removal improves with flow but still lags long-chain PFAS and remains challenging.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "limitations[1].statement",
+        "reason": "S11-E05 states that air foam fractionation produces foam with wettability 7\u201313% and that ozone foamate is 2\u20134 times drier. S11-E01 notes ozone generates foamate volumes 2\u20134 times less, leading to significant cost savings and reduced storage requirements. It is therefore reasonable to infer that the wetter, higher-volume air foamate would increase disposal/treatment burden, but the text does not explicitly state increased costs for the air system. The descriptive part (wetter air foamate) is supported; the explicit linkage to higher costs for air is inferred rather than directly author-reported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "limitations[2].statement",
+        "reason": "S11-E03 and E06 clearly show that only a limited range of air flow rates (0.5, 0.8, 1 L/min) was investigated and that removal kinetics were studied over minutes, implying short-term experiments. However, the statement explicitly calling the study \u201cbench-scale\u201d and highlighting that long-term operational stability and full-scale performance are not established is a reasonable design inference rather than directly reported in these excerpts. The limited range of air flows is directly supported; the scale and long-term-stability aspects are inferred.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "source_attribution",
+        "field_path": "residuals_byproducts[0].statement",
+        "reason": "S11-E06 shows that the concentrated foamate has a significantly increased number of PFAS detected compared to the original leachate and total PFAS up to 800 \u00b5g/L, indicating a PFAS-rich residual that would require further management. However, the excerpt does not specify whether this concentrated foamate is from the air or ozone system; attributing it specifically to \u201cAir foam fractionation\u201d is not directly supported by the cited text, though the general notion of PFAS-rich foamate needing downstream treatment is supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "residuals_byproducts[1].statement",
+        "reason": "S11-E01 and E04 state that ozone foam fractionation produces 2\u20134 times less foamate and that this reduction in foamate volume yields substantial cost savings and reduced storage requirements. It follows by implication that air foam fractionation, which produces more and wetter foamate (S11-E05), would entail higher downstream treatment volume and costs, but this implication is not explicitly stated for the air system. Thus, the direction of the effect is reasonable but partially inferred.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "study_scale.value",
+        "reason": "The record describes the work as \u201cbench-scale air foam fractionation treating real landfill leachate.\u201d The cited excerpts (S11-E01, E05, E06) clearly indicate real landfill leachate and experimental foam fractionation systems with specified gas flow rates, triplicate experiments, and kinetics over minutes, which strongly imply bench-scale experimentation. However, the term \u2018bench-scale\u2019 is not explicitly used in the provided chunks; it is a reasonable but inferred classification.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "S11-E06 and E05 refer to \u201cfoam fractionation process by air using different air flow rates,\u201d and discuss removal kinetics and foam properties, which is consistent with air being bubbled through landfill leachate to generate PFAS-enriched foamate. The description of varying air flow rates for kinetic and removal comparison directly matches the cited figures and text.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT07-bge_llm_local_rag-S11-R02",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014source identity, landfill leachate matrix, treatment as foam fractionation by air, removal and separation endpoints, air flow operating conditions, and key quantitative removal and foamate-wettability metrics\u2014are well supported by the cited text. Some qualifiers (e.g., explicit bench-scale wording, attribution of the 800 \u00b5g/L foamate concentration and some residual/disposal implications specifically to the air system, inclusion of PFPeS in the PFAS scope) are partially supported or inferred, but these do not compromise the fundamental interpretability of the record for synthesis about foam fractionation performance and foamate characteristics.",
+    "task_id": "RT07"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

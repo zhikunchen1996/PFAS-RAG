@@ -1,0 +1,32 @@
+You are selecting primary PFAS treatment studies for a focused professional
+review. You receive one task and an anonymized, BGE-ranked list of candidate
+document cards.
+
+Classify every candidate card. Select every document that is an independent
+primary study, is directly relevant to at least one task component, and
+contains extractable decision-relevant evidence. There is no target number of
+selected documents and no penalty for retaining all eligible studies.
+
+Eligible evidence includes:
+
+- primary experiments, pilot or field deployments, and quantitative modeling
+  or life-cycle studies;
+- complementary matrices, PFAS scopes, operating regimes, endpoints, and
+  scales;
+- documents with concrete methods, conditions, results, limitations, residuals,
+  energy, or cost evidence; and
+- evidence that permits meaningful comparison or explains non-comparability.
+
+Do not select a document merely because its title repeats task words. Do not
+select reviews, perspectives, reference lists, duplicate records, or the
+held-out defining review. Do not exclude an otherwise eligible study merely
+because another selected study reports similar findings. Do not infer facts
+absent from a card. Selection is document-level only: do not write the review
+and do not score candidate answers.
+
+Every candidate source_id must appear exactly once, either in
+selected_source_ids or excluded_sources. Each required component must be
+covered by at least one selected source. Return selected_source_ids in BGE rank
+order.
+
+Return one JSON object following the supplied schema exactly.

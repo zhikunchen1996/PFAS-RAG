@@ -1,0 +1,675 @@
+{
+  "call_key": "RT10:bge_llm_local_rag:extraction:S05",
+  "created_at": "2026-08-05T03:45:23.851896+00:00",
+  "raw_response_text": "{\"task_id\":\"RT10\",\"source_system\":\"bge_llm_local_rag\",\"records\":[{\"record_id\":\"S05-R1\",\"source_id\":\"S05\",\"doi_or_stable_url\":\"https://doi.org/10.1016/j.jhazmat.2026.141033\",\"citation\":\"Yao, L.; Shao, T.; Zhang, M.; Li, T.; Xu, R.; Liao, Y. Machine learning-assisted modeling and analysis of PFAS removal from contaminated water via membrane-based treatment. Journal of Hazardous Materials. 2026, 502, 141033.\",\"study_type\":\"modeling_or_life_cycle_study\",\"study_scale\":{\"value\":\"Data-driven modeling study using 480 experimental NF/RO membrane rejection data points for 17 PFAS from 18 prior laboratory studies\",\"evidence_locator_ids\":[\"S05-E06\"]},\"matrix\":{\"value\":\"Contaminated water / wastewater (feed matrices drawn from multiple NF/RO PFAS studies)\",\"evidence_locator_ids\":[\"S05-E05\",\"S05-E06\"]},\"pfas_scope\":[{\"value\":\"17 PFAS species encompassing perfluoroalkyl sulfonic acids (PFSAs)\",\"evidence_locator_ids\":[\"S05-E06\"]},{\"value\":\"perfluoroalkyl carboxylic acids (PFCAs)\",\"evidence_locator_ids\":[\"S05-E06\"]},{\"value\":\"perfluoroether carboxylic acids (PFECAs)\",\"evidence_locator_ids\":[\"S05-E06\"]}],\"treatment\":{\"value\":\"Membrane-based treatment using 24 nanofiltration (NF) and reverse osmosis (RO) membranes (6 commercial NF, 9 commercial RO, 9 modified membranes)\",\"evidence_locator_ids\":[\"S05-E05\",\"S05-E06\"]},\"operating_conditions\":[{\"name\":\"membrane_type\",\"value\":\"24 NF/RO membranes (6 commercial NF, 9 commercial RO, 9 modified membranes)\",\"unit\":null,\"qualifiers\":\"Compiled from 18 experimental papers; specific products and modifications not detailed in this excerpt\",\"evidence_locator_ids\":[\"S05-E06\"]},{\"name\":\"PFAS_concentration\",\"value\":\"\",\"unit\":null,\"qualifiers\":\"PFAS concentration treated as an influent condition influencing membrane performance; no numeric range given in excerpt\",\"evidence_locator_ids\":[\"S05-E08\"]},{\"name\":\"pH\",\"value\":\"\",\"unit\":null,\"qualifiers\":\"pH included as an influent condition; variations in pH alter PFAS charge state and affect membrane rejection\",\"evidence_locator_ids\":[\"S05-E02\",\"S05-E08\"]},{\"name\":\"inorganic_ions\",\"value\":\"\",\"unit\":null,\"qualifiers\":\"Presence and concentration of inorganic ions (e.g., calcium) considered as influent conditions that can form complexes with PFAS and influence rejection\",\"evidence_locator_ids\":[\"S05-E02\",\"S05-E08\"]},{\"name\":\"operation_pressure\",\"value\":\"\",\"unit\":null,\"qualifiers\":\"Operating pressure treated as a model input and key operating condition for NF/RO performance\",\"evidence_locator_ids\":[\"S05-E02\",\"S05-E08\"]},{\"name\":\"other_influent_conditions\",\"value\":\"\",\"unit\":null,\"qualifiers\":\"Model inputs include multiple water quality and operating variables; exact list not fully specified in excerpt, but twelve characteristic variables were selected\",\"evidence_locator_ids\":[\"S05-E05\",\"S05-E07\"]}],\"endpoints\":[{\"endpoint_type\":\"removal\",\"reported_term\":\"PFAS rejection / removal efficiency by NF/RO membranes (modeled)\",\"interpretation\":\"The study models PFAS rejection efficiencies of NF/RO membranes as a function of PFAS properties, membrane characteristics, and influent conditions such as pH, inorganic ion concentration, and operating pressure; it does not report new experimental rejection data in this excerpt but analyzes how these variables influence predicted removal.\",\"evidence_locator_ids\":[\"S05-E03\",\"S05-E05\",\"S05-E06\",\"S05-E08\"]},{\"endpoint_type\":\"other\",\"reported_term\":\"Model predictive performance (R2, RMSE) for PFAS rejection prediction\",\"interpretation\":\"Kernel extreme learning machine (KELM) models, optimized by sparrow search algorithm (SSA) and AdaBoost, are evaluated for their ability to predict PFAS rejection; improvements in R2 and RMSE quantify model fit rather than treatment performance.\",\"evidence_locator_ids\":[\"S05-E03\",\"S05-E05\",\"S05-E07\"]}],\"quantitative_findings\":[{\"name\":\"baseline_KELM_R2_test_set\",\"value\":\"0.56\",\"value_form\":\"exact_numeric\",\"unit\":null,\"qualifiers\":\"R2 on test data for baseline KELM model predicting PFAS rejection\",\"evidence_locator_ids\":[\"S05-E05\",\"S05-E07\"]},{\"name\":\"baseline_KELM_RMSE_test_set\",\"value\":\"10.31\",\"value_form\":\"exact_numeric\",\"unit\":null,\"qualifiers\":\"RMSE on test data for baseline KELM model predicting PFAS rejection (units consistent with rejection percentage)\",\"evidence_locator_ids\":[\"S05-E05\",\"S05-E07\"]},{\"name\":\"SSA_optimized_KELM_R2_test_set\",\"value\":\"0.71\",\"value_form\":\"exact_numeric\",\"unit\":null,\"qualifiers\":\"R2 on test data after optimization of KELM with sparrow search algorithm (SSA)\",\"evidence_locator_ids\":[\"S05-E07\"]},{\"name\":\"SSA_AdaBoost_KELM_R2_test_set\",\"value\":\"0.85\",\"value_form\":\"exact_numeric\",\"unit\":null,\"qualifiers\":\"R2 on test data for SSA-AdaBoost optimized KELM model predicting PFAS rejection\",\"evidence_locator_ids\":[\"S05-E03\",\"S05-E05\",\"S05-E07\"]},{\"name\":\"SSA_AdaBoost_KELM_RMSE_test_set\",\"value\":\"5.04\",\"value_form\":\"exact_numeric\",\"unit\":null,\"qualifiers\":\"RMSE on test data for SSA-AdaBoost optimized KELM model predicting PFAS rejection\",\"evidence_locator_ids\":[\"S05-E03\",\"S05-E05\",\"S05-E07\"]}],\"limitations\":[{\"statement\":\"The compiled NF/RO PFAS rejection dataset has limited size, high variance, diverse data sources, and complex systems, which constrains machine learning performance and generalizability.\",\"basis\":\"author_reported\",\"evidence_locator_ids\":[\"S05-E04\"]},{\"statement\":\"The dataset aggregates 480 experimental data points from 18 different studies with varying feed matrices, testing configurations, and membrane types, so modeled effects of water quality and operating conditions cannot be cleanly attributed to standardized matrix comparisons.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"S05-E06\"]},{\"statement\":\"Although influent conditions (pH, inorganic ions, PFAS concentration, pressure) are recognized as key factors affecting PFAS removal, specific matrix-constituent concentrations and matched clean-water vs. real-water comparisons are not detailed in the excerpt, limiting direct inference on water-matrix effects.\",\"basis\":\"design_inferred\",\"evidence_locator_ids\":[\"S05-E02\",\"S05-E08\"]}],\"residuals_byproducts\":[],\"comparability\":{\"status\":\"not_comparable\",\"reason\":\"This record represents a secondary modeling study that pools heterogeneous NF/RO PFAS rejection data from multiple prior experiments with differing matrices and operating conditions. It does not report controlled comparisons between clean and matrix-modified waters under matched conditions, so quantitative removal values and model-fit statistics cannot be directly compared to primary experimental matrix-effect studies.\",\"evidence_locator_ids\":[\"S05-E05\",\"S05-E06\",\"S05-E08\"]}}],\"extraction_notes\":[]}",
+  "request": {
+    "max_completion_tokens": 16000,
+    "messages": [
+      {
+        "content": "You are an evidence extraction specialist for PFAS treatment and remediation\nresearch. Build a structured study evidence table before any narrative review\nis written.\n\nExtract one record per primary-study experiment, modeled scenario, or field\ndeployment that contributes usable evidence to the review task. A paper may\nproduce more than one record only when materially different matrices,\ntechnologies, operating regimes, or endpoints would otherwise be conflated.\n\nReview articles and perspectives may help identify terminology or primary\nstudies, but they must not be used as the source of a quantitative study\nrecord. Never copy a review table as though it were a primary result.\n\nFor every populated source-dependent field:\n- preserve the PFAS identity or class, matrix, starting concentration or\n  loading, operating conditions, study scale, measured endpoint, value, unit,\n  and material qualifiers when reported;\n- attach only the field-level evidence locator identifiers that directly\n  support that specific value or statement;\n- use an empty string or empty array when the source does not report the\n  information; do not infer or estimate it;\n- do not turn the absence of information in the supplied packet into a study\n  finding, quantitative result, or author-reported limitation unless the source\n  explicitly states that absence;\n- distinguish removal, separation, sorption, parent-compound loss,\n  transformation, degradation, destruction, defluorination, mineralization,\n  total organofluorine change, and toxicity change;\n- classify endpoint_type from what was actually measured, not from the\n  authors' preferred label. Parent loss alone is not destruction. Phase\n  transfer is removal or separation, not degradation. Inorganic fluoride\n  release or fluorine-balance closure can establish defluorination but cannot\n  by itself establish mineralization. Use mineralization only when direct\n  carbon-fate evidence such as CO2/inorganic-carbon production or a carbon\n  balance is reported. Preserve a broader author term in reported_term and\n  explain any mismatch in interpretation;\n- do not normalize or compare values unless their units, denominators,\n  matrices, PFAS scope, operating conditions, and endpoints permit it.\n\nOnly populate quantitative_findings when the source reports an actual numeric\nvalue, inequality, approximate value, range, or explicit ND/not-detected\nresult. Put the number or censoring marker in value and the measurement unit in\nunit. Normalize Unicode inequality signs to ASCII >= or <= and range dashes to\nan ASCII hyphen while preserving the source wording in qualifiers. A unit or\norder-of-magnitude scale without a number is not a quantitative finding.\nQualitative parent loss, intermediate formation, or disappearance belongs in\nthe endpoint interpretation or residual/byproduct statements instead.\n\nSet value_form to exactly one of:\n- exact_numeric: a bare number such as `99.7` or `1.2e-3`;\n- approximate_numeric: `~` followed by a number;\n- inequality: `<`, `<=`, `>`, or `>=` followed by a number;\n- range: two numbers separated by `-` or `to`; or\n- not_detected: exactly `ND`, `N/D`, `not detected`,\n  `below detection limit`, or `below quantification limit`.\n\nPut uncertainty, denominators, fold-change wording, and explanatory text in\nqualifiers rather than value. A deterministic validator will remove malformed\nquantitative fields before source verification.\n\nFor limitations, use basis=author_reported only when the source states the\nlimitation. Use basis=design_inferred only for a constraint that follows\ndirectly from cited design evidence, such as one matrix, one compound, or\nbench-scale operation. Never label missing information in the supplied packet\nas a scientific limitation of the study.\n\nMark each record as comparable with conditions, descriptive only, or not\ncomparable. Comparability is an analyst inference rather than a quotation:\nattach locators for the matrix, scale, conditions, endpoint, and denominator\non which the inference rests, and explain the reason. Do not reward a study\nfor reporting a larger percentage when its endpoint or conditions differ.\n\nThe task was derived from a defining review that is held out from all\ncandidate retrieval systems. The supplied anchor identifiers are an exclusion\nlist, not evidence. Do not extract from the anchor, cite it, reconstruct its\nconclusions, or use its tables.\n\nReturn one JSON object that follows the supplied evidence-table schema exactly.\nDo not write the narrative review in this step.\n",
+        "role": "system"
+      },
+      {
+        "content": "Task:\n{\"review_brief\":\"Prepare a focused review of how water-matrix effects should be tested and reported so that PFAS treatment performance can be translated beyond clean laboratory water.\",\"task_id\":\"RT10\",\"title\":\"Designing PFAS treatment studies that remain valid in real water\"}\n\nTask-specific data extraction objective:\nExtract matrix constituent and concentration, PFAS identity, treatment, clean-water control, matrix-modified condition, direction and magnitude of effect, endpoint, proposed mechanism, constituent interaction, matched operating conditions, and study scale.\n\nSource system (return this exact value):\nbge_llm_local_rag\n\nCandidate source identifier (all records must use this exact source_id):\nS05\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.hazadv.2023.100322\"],\"all_blocked_titles\":[\"effects of water matrix on per and poly fluoroalkyl substances pfas treatment physical separation and degradation processes a review\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.hazadv.2023.100322\"],\"anchor_id\":\"AR-ZEIDABADI-2023\",\"corpus_source\":\"2023 - Zeidabadi - Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment - Physical-separation and degradation processes - A review.pdf\",\"doi\":\"10.1016/j.hazadv.2023.100322\",\"title\":\"Effects of water matrix on per- and poly-fluoroalkyl substances (PFAS) treatment: Physical-separation and degradation processes - A review\",\"url\":\"https://doi.org/10.1016/j.hazadv.2023.100322\"}\n\nCandidate local-corpus source documents and complete evidence chunks:\n{\n  \"bge_document_rank\": 6,\n  \"bge_score\": 0.2885518968105316,\n  \"citation\": \"Yao, L.; Shao, T.; Zhang, M.; Li, T.; Xu, R.; Liao, Y. Machine learning-assisted modeling and analysis of PFAS removal from contaminated water via membrane-based treatment. Journal of Hazardous Materials 2026 502 141033. DOI: 10.1016/j.jhazmat.2026.141033.\",\n  \"doi\": \"10.1016/j.jhazmat.2026.141033\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.jhazmat.2026.141033\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 3,\n      \"locator_id\": \"S05-E01\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.00016518824850209057,\n        \"RT10-C2\": 0.013984249904751778,\n        \"RT10-C3\": 6.409036723198369e-05,\n        \"umbrella\": 0.33332350850105286\n      },\n      \"section\": \"results\",\n      \"text\": \"surface activity and stability. However, in recent decades, the health hazards of PFAS and the increasing environmental pollution of PFAS have garnered growing attention from both the industries and the sci - entific communities [1,2 ] . To address this issue, the U.S. Environmental Protection Agency finalized the national primary drinking water regu - lation in 2024, establishing legally enforceable maximum contaminant levels of 4 ppt each for perfluorooctanoic acid (PFOA) and per - fluorooctanesulfonic acid (PFOS), and a hazard index of 10 ppt for the combined concentrations of more PFAS. It is anticipated that these regulations will be promulgated within a year with a compliance date by 2026 [3] . Therefore, there is an urgent need for highly effective pro - cessing of PFAS contaminated water to protect public health [4] . Traditional water treatment processes such as coagulation, sand filtration, precipitation, and disinfection are not conspicuously efficient in the PFAS removal. Despite several advanced oxidation processes (e.g., electrochemical oxidation [5] , activated persulfate oxidation [6] , pho - tocatalysis [7,8 ] , UV-induced oxidation [9,10] ) have shown better performances for the removal of PFAS from water, these processes require high energy consumption and long operational period. In addi -\"\n    },\n    {\n      \"corpus_chunk\": 6,\n      \"locator_id\": \"S05-E02\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.01714859902858734,\n        \"RT10-C2\": 0.019900333136320114,\n        \"RT10-C3\": 0.00034658698132261634,\n        \"umbrella\": 0.14684727787971497\n      },\n      \"section\": \"results\",\n      \"text\": \"among others, directly influence the membrane performance and PFAS removal efficiency. Variations in pH can alter the charge state of PFAS molecules, thereby affecting their behavior on the membrane surface. Inorganic ions present in the influent, for example calcium, may form complexes with PFAS molecules, further influencing their removal ef - ficiency [23] . Additionally, operating conditions, including pressure, need to be optimized under different scenarios to ensure the efficient operation of the membrane process [24 \\u2013 26] . Currently, the traditional control variable method is usually used to study the single-factor problem affecting the performance of NF and RO membranes. However, given the complex interaction between the PFAS and membrane materials under a continuously changing complex environment, the control variable method, which is time-consuming, is incapable of simultaneously accounting for the coupled influences of multiple factors. Therefore, establishing an appropriate machine learning (ML) model, which can handle the coupling effects of multiple influencing factors to enhance the PFAS removal efficiency and optimize the membrane performance, is of great significance [27] . The past decade has witnessed unprecedented advances in ML that are revolutionizing a broad range of scientific disciplines, such as environmental engineering, quantum physics, materials science, biomedicine, etc. [28] It has gradually emerged as a valuable tool in PFAS related research.\"\n    },\n    {\n      \"corpus_chunk\": 0,\n      \"locator_id\": \"S05-E03\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.0001396505831507966,\n        \"RT10-C2\": 0.0740276426076889,\n        \"RT10-C3\": 7.116719643818215e-05,\n        \"umbrella\": 0.24215218424797058\n      },\n      \"section\": \"unknown\",\n      \"text\": \"Machine learning-assisted modeling and analysis of PFAS removal from contaminated water via membrane-based treatment Lei Yao a , * , Tianyi Shao a , Minmin Zhang b , Tian Li c , Ronghua Xu d , Yuan Liao e a School of Electrical and Information Engineering, Wuhan Institute of Technology, Wuhan 430205, China b Zhejiang Key Laboratory of Petrochemical Environmental Pollution Control, Zhejiang Ocean University, Zhoushan 316022, China c State Key Laboratory of Water Pollution Control and Green Resources Recycling, Key Laboratory of Yangtze River Water Environment, Ministry of Education, College of Environmental Science and Engineering, Tongji University, Shanghai 200092, China d Guangdong Provincial Key Laboratory of Environmental Pollution Control and Remediation Technology, Sun Yat-sen University, Guangzhou 510275, China e School of Advanced Engineering, Great Bay University, Dongguan, Guangdong 523000, China HIGHLIGHTS GRAPHICAL ABSTRACT \\u2022 SSA and AdaBoost optimize KELM to predict PFAS removal efficiency. \\u2022 SSA-KELM-AdaBoost yields R 2 = 0.85 and RMSE = 5.04 on test data. \\u2022 SHAP and partial dependence plots quantify variable importance. \\u2022 Membrane rejection mechanism changes when rejection exceeds 80 %. \\u2022 PFAS MW and chain length drive PFSA removal, pH drives PFCA. ARTICLE INFO Keywords: PFAS Membrane Machine learning Nanofiltration Reverse osmosis ABSTRACT Perfluoroalkyl and polyfluoroalkyl substances (PFAS) have garnered worldwide concern owing to their pervasive\"\n    },\n    {\n      \"corpus_chunk\": 8,\n      \"locator_id\": \"S05-E04\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.00014086239389143884,\n        \"RT10-C2\": 0.020100248977541924,\n        \"RT10-C3\": 0.0007575142080895603,\n        \"umbrella\": 0.0879611149430275\n      },\n      \"section\": \"results\",\n      \"text\": \"techniques to analyze the influence of operational conditions on the rejection efficiency of PFOS through NF processes. However, given the large variety of PFAS types and the different rejection mechanisms be - tween membranes and PFAS (including size exclusion, Donnan exclu - sion, dielectric effect, etc. ), the rational selection of characteristic variables that can represent the interactions between PFAS molecules and membrane surfaces is essential [33] . This approach is preferable to simply using a natural number ordering method to represent membrane type, which is particularly challenging. Among various ML algorithms, artificial neural networks (ANN) [34] and XGBoost algorithms have been frequently applied in membrane performance prediction, especially in the research of desalination [35] L. Yao et al. Journal of Hazardous Materials 502 (2026) 141033 2 and removal of micro-pollutants [36] . However, given the main issue of data in membrane science featured with limited dataset size, high variance, diverse data sources, and complex systems, ML algorithms still require further optimization [37] . In this paper, we propose to use the kernel extreme learning machine (KELM) algorithm to investigate the NF and RO membrane processes for the removal of a wide range of PFAS from wastewater. Compared with other algorithms, the KELM algorithm demonstrates unique advantages in reducing training time and computational complexity by introducing\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S05-E05\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.0006765136495232582,\n        \"RT10-C2\": 0.05421396344900131,\n        \"RT10-C3\": 8.873129263520241e-05,\n        \"umbrella\": 0.21862377226352692\n      },\n      \"section\": \"abstract\",\n      \"text\": \"ABSTRACT Perfluoroalkyl and polyfluoroalkyl substances (PFAS) have garnered worldwide concern owing to their pervasive environmental persistence and deleterious effects on aquatic resources. Membrane separation technologies, particularly nanofiltration (NF) membranes and reverse osmosis (RO) membranes, have potential in PFAS removal, but the multi-factor coupling effects of these technologies still lack systematic research. This study developed sparrow search algorithm (SSA) and AdaBoost algorithms optimized kernel extreme learning machine (KELM) model to analyze the performance of 24 types of RO and NF membranes for removing 17 different PFAS from contaminated water. Based on the PFAS removal mechanism of RO and NF membranes and the operating conditions, twelve characteristic variables were selected as model inputs. Compared with the partial least squares, ridge regression, random forest, gradient-boosting, XGBoost, support vector machine, and BP neural network, the baseline KELM model delivered competitive accuracy (R 2 = 0.56, RMSE = 10.31). After SSA- AdaBoost optimization, predictive performance rose significantly (R 2 = 0.85, RMSE = 5.04). SHapley Additive exPlanations algorithm and partial dependence plots were applied to investigated the feature importance and the * Corresponding author. E-mail address: yaoolei@wit.edu.cn (L. Yao). Contents lists available at ScienceDirect Journal of Hazardous Materials\"\n    },\n    {\n      \"corpus_chunk\": 11,\n      \"locator_id\": \"S05-E06\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.00012099619925720617,\n        \"RT10-C2\": 0.0057434081099927425,\n        \"RT10-C3\": 7.830613321857527e-05,\n        \"umbrella\": 0.20127493143081665\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"Google Scholar and ScienceDirect with the keywords: (\\u201cNanofiltration\\u201d OR \\u201cReverse Osmosis\\u201d OR \\u201cmodified membrane\\u201d) AND (\\u201cPFAS\\u201d OR \\u201cper- and polyfluoroalkyl substances\\u201d) AND (\\u201cwastewater\\u201d OR \\u201cremoval\\u201d). The systematic screening and selection process is detailed in the PRISMA flow diagram (see Figure S1 in the Supplementary Infor - mation ). Finally, 18 relevant scientific papers, from which 480 experi - mental data points were extracted. The compiled dataset encompassed 17 different PFAS species and included 6 commercial NF membranes, 9 commercial RO membranes, and 9 modified membranes. A summary of the data provenance and experimental conditions for the included studies was provided in Table S1 , which clarified the source paper, membrane type, testing configuration, feed matrix, and PFAS species. Based on different functional group moieties, the target PFAS were assigned to three distinct classes, which were perfluoroalkyl sulfonic acids (PFSAs), perfluoroalkyl carboxylic acids (PFCAs) and per - fluoroether carboxylic acids (PFECAs), to elucidate the effect of the polar head groups on the membrane rejection efficiency. Fig. 1 (a) il - lustrates the distribution of PFAS rejection through NF/RO as box plots, which enables an immediate visual comparison of both the central tendency and the dispersion of rejection performance among the three PFAS categories.\"\n    },\n    {\n      \"corpus_chunk\": 24,\n      \"locator_id\": \"S05-E07\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.0005041083786636591,\n        \"RT10-C2\": 0.008576597087085247,\n        \"RT10-C3\": 7.100571383489296e-05,\n        \"umbrella\": 0.1914539933204651\n      },\n      \"section\": \"methods\",\n      \"text\": \"parameter S defines the radius of influence of a single data point. A small S value (approaching 0.01) means the radius is small, causing the model to construct the decision function primarily from narrow, local patterns in the feature space. This is mechanistically consistent with PFAS rejection, where the permeation of a molecule is predominantly deter - mined by its interaction with the membrane under specific conditions ( e. g., size exclusion becomes decisive when the molecular radius exceeds the pore size). This suggested that key feature variables, which deter - mine whether PFAS molecules can pass through the membrane, may predominantly influence the PFAS separation process. Subsequent analysis using the SHAP algorithm can further pinpoint the key inde - pendent variables affecting membrane rejection. The individual contributions of SSA optimization and AdaBoost ensemble were systematically evaluated through ablation experiments in this study. As shown in Fig. 4 , the baseline KELM model achieved R 2 of 0.56 (RMSE = 10.31) on the test set, indicating limited generalization capability. Subsequent optimization with SSA significantly improved R 2 to 0.71 for the test set, representing an obvious enhancement over the baseline model. The integration of AdaBoost ensemble further elevated the model performance, achieving notably improved test performance (R 2 = 0.85, RMSE = 5.04).\"\n    },\n    {\n      \"corpus_chunk\": 5,\n      \"locator_id\": \"S05-E08\",\n      \"query_scores\": {\n        \"RT10-C1\": 0.0038182411808520555,\n        \"RT10-C2\": 0.032805267721414566,\n        \"RT10-C3\": 4.8616842832416296e-05,\n        \"umbrella\": 0.18680237233638763\n      },\n      \"section\": \"results\",\n      \"text\": \"PFAS removal using NF and RO membranes is intricately influenced by several factors. These include the physiochemical properties of PFAS, the inherent characteristics of the membrane, and the influent water conditions. Firstly, the structural characteristics of PFAS play a signifi - cant role in the removal process. PFAS typically consist of perfluorinated alkyl chains, with molecular weights ranging from several hundred to several thousand, depending on their chemical structure and chain length. Consequently, the removal efficiency through membrane sepa - ration processes varies significantly, generally exhibiting higher removal rates for high-molecular-weight PFAS [18 , 19] . Secondly, the inherent characteristics of the membrane, such as pore size and surface properties of the membrane material, also have a profound impact on the removal efficiency of PFAS. In addition to the pore size of the membrane affecting the size-exclusion effect on PFAS, the hydro - philicity/hydrophobicity of the membrane surface and the surface charge also influence the interaction between the membrane and PFAS molecules, thereby affecting the final rejection rate [20 \\u2013 22] . This effect is particularly pronounced in the process of NF separation processes of PFAS. Finally, the influent conditions, including the concentration of PFAS, pH value, concentration of inorganic ions, and operation pressure, among others, directly influence the membrane performance and PFAS removal efficiency.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2026 - Yao - Machine learning-assisted modeling and analysis of PFAS removal from contaminated water via membrane-based treatment.pdf\",\n  \"source_id\": \"S05\",\n  \"title\": \"Machine learning-assisted modeling and analysis of PFAS removal from contaminated water via membrane-based treatment\",\n  \"year\": \"2026\"\n}\n\nAll anchor records should already have been removed by deterministic filtering.\nIf an anchor identifier is nevertheless present, omit it and report the\nviolation in extraction_notes. Extract at most three materially distinct\nrecords from this source, prioritizing records that answer the task components.\n\nUse only the supplied source documents. Extract primary-study evidence needed\nto answer the task and return the schema-constrained study evidence table.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_review_evidence_table",
+        "schema": {
+          "$defs": {
+            "endpoint": {
+              "additionalProperties": false,
+              "properties": {
+                "endpoint_type": {
+                  "enum": [
+                    "removal",
+                    "separation",
+                    "sorption",
+                    "parent_compound_loss",
+                    "transformation",
+                    "degradation",
+                    "destruction",
+                    "defluorination",
+                    "mineralization",
+                    "total_organofluorine_change",
+                    "toxicity_change",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "S05-E01",
+                      "S05-E02",
+                      "S05-E03",
+                      "S05-E04",
+                      "S05-E05",
+                      "S05-E06",
+                      "S05-E07",
+                      "S05-E08"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "interpretation": {
+                  "type": "string"
+                },
+                "reported_term": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "endpoint_type",
+                "reported_term",
+                "interpretation",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceRecord": {
+              "additionalProperties": false,
+              "properties": {
+                "citation": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "comparability": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_locator_ids": {
+                      "items": {
+                        "enum": [
+                          "S05-E01",
+                          "S05-E02",
+                          "S05-E03",
+                          "S05-E04",
+                          "S05-E05",
+                          "S05-E06",
+                          "S05-E07",
+                          "S05-E08"
+                        ],
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "type": "array"
+                    },
+                    "reason": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "enum": [
+                        "comparable_with_conditions",
+                        "descriptive_only",
+                        "not_comparable"
+                      ],
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "status",
+                    "reason",
+                    "evidence_locator_ids"
+                  ],
+                  "type": "object"
+                },
+                "doi_or_stable_url": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "endpoints": {
+                  "items": {
+                    "$ref": "#/$defs/endpoint"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "limitations": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "matrix": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "operating_conditions": {
+                  "items": {
+                    "$ref": "#/$defs/namedValue"
+                  },
+                  "type": "array"
+                },
+                "pfas_scope": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceText"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "quantitative_findings": {
+                  "items": {
+                    "$ref": "#/$defs/quantitativeValue"
+                  },
+                  "type": "array"
+                },
+                "record_id": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "residuals_byproducts": {
+                  "items": {
+                    "$ref": "#/$defs/evidenceStatement"
+                  },
+                  "type": "array"
+                },
+                "source_id": {
+                  "enum": [
+                    "S05"
+                  ],
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "study_scale": {
+                  "$ref": "#/$defs/evidenceText"
+                },
+                "study_type": {
+                  "enum": [
+                    "primary_experiment",
+                    "pilot_or_field_deployment",
+                    "modeling_or_life_cycle_study",
+                    "other"
+                  ],
+                  "type": "string"
+                },
+                "treatment": {
+                  "$ref": "#/$defs/evidenceText"
+                }
+              },
+              "required": [
+                "record_id",
+                "source_id",
+                "doi_or_stable_url",
+                "citation",
+                "study_type",
+                "study_scale",
+                "matrix",
+                "pfas_scope",
+                "treatment",
+                "operating_conditions",
+                "endpoints",
+                "quantitative_findings",
+                "limitations",
+                "residuals_byproducts",
+                "comparability"
+              ],
+              "type": "object"
+            },
+            "evidenceStatement": {
+              "additionalProperties": false,
+              "properties": {
+                "basis": {
+                  "enum": [
+                    "author_reported",
+                    "design_inferred"
+                  ],
+                  "type": "string"
+                },
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "S05-E01",
+                      "S05-E02",
+                      "S05-E03",
+                      "S05-E04",
+                      "S05-E05",
+                      "S05-E06",
+                      "S05-E07",
+                      "S05-E08"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "statement": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "statement",
+                "basis",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "evidenceText": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "S05-E01",
+                      "S05-E02",
+                      "S05-E03",
+                      "S05-E04",
+                      "S05-E05",
+                      "S05-E06",
+                      "S05-E07",
+                      "S05-E08"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "namedValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "S05-E01",
+                      "S05-E02",
+                      "S05-E03",
+                      "S05-E04",
+                      "S05-E05",
+                      "S05-E06",
+                      "S05-E07",
+                      "S05-E08"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            },
+            "quantitativeValue": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_locator_ids": {
+                  "items": {
+                    "enum": [
+                      "S05-E01",
+                      "S05-E02",
+                      "S05-E03",
+                      "S05-E04",
+                      "S05-E05",
+                      "S05-E06",
+                      "S05-E07",
+                      "S05-E08"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qualifiers": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "value_form": {
+                  "enum": [
+                    "exact_numeric",
+                    "approximate_numeric",
+                    "inequality",
+                    "range",
+                    "not_detected"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "value",
+                "value_form",
+                "unit",
+                "qualifiers",
+                "evidence_locator_ids"
+              ],
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "properties": {
+            "extraction_notes": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "records": {
+              "items": {
+                "$ref": "#/$defs/evidenceRecord"
+              },
+              "maxItems": 3,
+              "type": "array"
+            },
+            "source_system": {
+              "enum": [
+                "bge_llm_local_rag"
+              ],
+              "type": "string"
+            },
+            "task_id": {
+              "enum": [
+                "RT10"
+              ],
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "source_system",
+            "records",
+            "extraction_notes"
+          ],
+          "title": "PFAS review study evidence table",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "fe963c463c8ddf3884429a298023a9827eba38ee00655c9a0bf0e256ddebaa4e",
+  "response_metadata": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.02835875,
+    "finish_reason": "stop",
+    "input_tokens": 5879,
+    "latency_seconds": 16.838837125105783,
+    "output_tokens": 2101,
+    "reasoning_tokens": 494,
+    "response_id": "chatcmpl-E9MqxpAHzIWjhJlSyXCCHGgBoZ7q0",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 7980,
+    "web_search_calls": 0
+  },
+  "result": {
+    "extraction_notes": [],
+    "records": [
+      {
+        "citation": "Yao, L.; Shao, T.; Zhang, M.; Li, T.; Xu, R.; Liao, Y. Machine learning-assisted modeling and analysis of PFAS removal from contaminated water via membrane-based treatment. Journal of Hazardous Materials. 2026, 502, 141033.",
+        "comparability": {
+          "evidence_locator_ids": [
+            "S05-E05",
+            "S05-E06",
+            "S05-E08"
+          ],
+          "reason": "This record represents a secondary modeling study that pools heterogeneous NF/RO PFAS rejection data from multiple prior experiments with differing matrices and operating conditions. It does not report controlled comparisons between clean and matrix-modified waters under matched conditions, so quantitative removal values and model-fit statistics cannot be directly compared to primary experimental matrix-effect studies.",
+          "status": "not_comparable"
+        },
+        "doi_or_stable_url": "https://doi.org/10.1016/j.jhazmat.2026.141033",
+        "endpoints": [
+          {
+            "endpoint_type": "removal",
+            "evidence_locator_ids": [
+              "S05-E03",
+              "S05-E05",
+              "S05-E06",
+              "S05-E08"
+            ],
+            "interpretation": "The study models PFAS rejection efficiencies of NF/RO membranes as a function of PFAS properties, membrane characteristics, and influent conditions such as pH, inorganic ion concentration, and operating pressure; it does not report new experimental rejection data in this excerpt but analyzes how these variables influence predicted removal.",
+            "reported_term": "PFAS rejection / removal efficiency by NF/RO membranes (modeled)"
+          },
+          {
+            "endpoint_type": "other",
+            "evidence_locator_ids": [
+              "S05-E03",
+              "S05-E05",
+              "S05-E07"
+            ],
+            "interpretation": "Kernel extreme learning machine (KELM) models, optimized by sparrow search algorithm (SSA) and AdaBoost, are evaluated for their ability to predict PFAS rejection; improvements in R2 and RMSE quantify model fit rather than treatment performance.",
+            "reported_term": "Model predictive performance (R2, RMSE) for PFAS rejection prediction"
+          }
+        ],
+        "limitations": [
+          {
+            "basis": "author_reported",
+            "evidence_locator_ids": [
+              "S05-E04"
+            ],
+            "statement": "The compiled NF/RO PFAS rejection dataset has limited size, high variance, diverse data sources, and complex systems, which constrains machine learning performance and generalizability."
+          },
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "S05-E06"
+            ],
+            "statement": "The dataset aggregates 480 experimental data points from 18 different studies with varying feed matrices, testing configurations, and membrane types, so modeled effects of water quality and operating conditions cannot be cleanly attributed to standardized matrix comparisons."
+          },
+          {
+            "basis": "design_inferred",
+            "evidence_locator_ids": [
+              "S05-E02",
+              "S05-E08"
+            ],
+            "statement": "Although influent conditions (pH, inorganic ions, PFAS concentration, pressure) are recognized as key factors affecting PFAS removal, specific matrix-constituent concentrations and matched clean-water vs. real-water comparisons are not detailed in the excerpt, limiting direct inference on water-matrix effects."
+          }
+        ],
+        "matrix": {
+          "evidence_locator_ids": [
+            "S05-E05",
+            "S05-E06"
+          ],
+          "value": "Contaminated water / wastewater (feed matrices drawn from multiple NF/RO PFAS studies)"
+        },
+        "operating_conditions": [
+          {
+            "evidence_locator_ids": [
+              "S05-E06"
+            ],
+            "name": "membrane_type",
+            "qualifiers": "Compiled from 18 experimental papers; specific products and modifications not detailed in this excerpt",
+            "unit": null,
+            "value": "24 NF/RO membranes (6 commercial NF, 9 commercial RO, 9 modified membranes)"
+          },
+          {
+            "evidence_locator_ids": [
+              "S05-E08"
+            ],
+            "name": "PFAS_concentration",
+            "qualifiers": "PFAS concentration treated as an influent condition influencing membrane performance; no numeric range given in excerpt",
+            "unit": null,
+            "value": ""
+          },
+          {
+            "evidence_locator_ids": [
+              "S05-E02",
+              "S05-E08"
+            ],
+            "name": "pH",
+            "qualifiers": "pH included as an influent condition; variations in pH alter PFAS charge state and affect membrane rejection",
+            "unit": null,
+            "value": ""
+          },
+          {
+            "evidence_locator_ids": [
+              "S05-E02",
+              "S05-E08"
+            ],
+            "name": "inorganic_ions",
+            "qualifiers": "Presence and concentration of inorganic ions (e.g., calcium) considered as influent conditions that can form complexes with PFAS and influence rejection",
+            "unit": null,
+            "value": ""
+          },
+          {
+            "evidence_locator_ids": [
+              "S05-E02",
+              "S05-E08"
+            ],
+            "name": "operation_pressure",
+            "qualifiers": "Operating pressure treated as a model input and key operating condition for NF/RO performance",
+            "unit": null,
+            "value": ""
+          },
+          {
+            "evidence_locator_ids": [
+              "S05-E05",
+              "S05-E07"
+            ],
+            "name": "other_influent_conditions",
+            "qualifiers": "Model inputs include multiple water quality and operating variables; exact list not fully specified in excerpt, but twelve characteristic variables were selected",
+            "unit": null,
+            "value": ""
+          }
+        ],
+        "pfas_scope": [
+          {
+            "evidence_locator_ids": [
+              "S05-E06"
+            ],
+            "value": "17 PFAS species encompassing perfluoroalkyl sulfonic acids (PFSAs)"
+          },
+          {
+            "evidence_locator_ids": [
+              "S05-E06"
+            ],
+            "value": "perfluoroalkyl carboxylic acids (PFCAs)"
+          },
+          {
+            "evidence_locator_ids": [
+              "S05-E06"
+            ],
+            "value": "perfluoroether carboxylic acids (PFECAs)"
+          }
+        ],
+        "quantitative_findings": [
+          {
+            "evidence_locator_ids": [
+              "S05-E05",
+              "S05-E07"
+            ],
+            "name": "baseline_KELM_R2_test_set",
+            "qualifiers": "R2 on test data for baseline KELM model predicting PFAS rejection",
+            "unit": null,
+            "value": "0.56",
+            "value_form": "exact_numeric"
+          },
+          {
+            "evidence_locator_ids": [
+              "S05-E05",
+              "S05-E07"
+            ],
+            "name": "baseline_KELM_RMSE_test_set",
+            "qualifiers": "RMSE on test data for baseline KELM model predicting PFAS rejection (units consistent with rejection percentage)",
+            "unit": null,
+            "value": "10.31",
+            "value_form": "exact_numeric"
+          },
+          {
+            "evidence_locator_ids": [
+              "S05-E07"
+            ],
+            "name": "SSA_optimized_KELM_R2_test_set",
+            "qualifiers": "R2 on test data after optimization of KELM with sparrow search algorithm (SSA)",
+            "unit": null,
+            "value": "0.71",
+            "value_form": "exact_numeric"
+          },
+          {
+            "evidence_locator_ids": [
+              "S05-E03",
+              "S05-E05",
+              "S05-E07"
+            ],
+            "name": "SSA_AdaBoost_KELM_R2_test_set",
+            "qualifiers": "R2 on test data for SSA-AdaBoost optimized KELM model predicting PFAS rejection",
+            "unit": null,
+            "value": "0.85",
+            "value_form": "exact_numeric"
+          },
+          {
+            "evidence_locator_ids": [
+              "S05-E03",
+              "S05-E05",
+              "S05-E07"
+            ],
+            "name": "SSA_AdaBoost_KELM_RMSE_test_set",
+            "qualifiers": "RMSE on test data for SSA-AdaBoost optimized KELM model predicting PFAS rejection",
+            "unit": null,
+            "value": "5.04",
+            "value_form": "exact_numeric"
+          }
+        ],
+        "record_id": "S05-R1",
+        "residuals_byproducts": [],
+        "source_id": "S05",
+        "study_scale": {
+          "evidence_locator_ids": [
+            "S05-E06"
+          ],
+          "value": "Data-driven modeling study using 480 experimental NF/RO membrane rejection data points for 17 PFAS from 18 prior laboratory studies"
+        },
+        "study_type": "modeling_or_life_cycle_study",
+        "treatment": {
+          "evidence_locator_ids": [
+            "S05-E05",
+            "S05-E06"
+          ],
+          "value": "Membrane-based treatment using 24 nanofiltration (NF) and reverse osmosis (RO) membranes (6 commercial NF, 9 commercial RO, 9 modified membranes)"
+        }
+      }
+    ],
+    "source_system": "bge_llm_local_rag",
+    "task_id": "RT10"
+  },
+  "result_kind": "json",
+  "stage": "structured_extraction"
+}

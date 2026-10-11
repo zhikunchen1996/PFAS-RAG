@@ -1,0 +1,2 @@
+"""Minimal RAG application package."""
+

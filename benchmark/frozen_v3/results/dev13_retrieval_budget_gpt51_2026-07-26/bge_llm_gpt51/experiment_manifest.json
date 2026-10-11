@@ -1,0 +1,44 @@
+{
+  "run_id": "bge_llm_gpt51",
+  "questions": "benchmark/frozen_v3/input/questions_dev13.csv",
+  "questions_sha256": "d1506d0dfd6c342ee11273ba6e1e9a542a55b3dddd1fdfe2aa0261c35c209a91",
+  "gold": "benchmark/frozen_v3/gold/chunk_based_gold.jsonl",
+  "gold_sha256": "7e2b27cbbf18fc6b91a07d06035051df2d2a15fd8485525d0f323b88c8a00f72",
+  "specs_path": "benchmark/frozen_v3/methods/dev13_retrieval_budget_gpt51_specs.json",
+  "specs_sha256": "1fa3eeff8bb09c1fbb7e1a841444590d756be54e3f7c293c94de8c40406e3397",
+  "manifest_enrichment_after_run": true,
+  "producer_script_compatibility": "The recorded selector outputs predate the current runner's expanded manifest schema. The hashes above were verified post hoc against the frozen inputs; rerunning an LLM selector is configuration-reproducible but not expected to be byte-identical.",
+  "policy": "Hybrid poolK -> BGE shortlistK -> LLM final topK",
+  "llm_model": "gpt-5.1",
+  "temperature": 0,
+  "selector_max_chars": 0,
+  "selector_input": "visible_question_only",
+  "selector_prompt": "benchmark/frozen_v3/prompts/retrieval/bge_llm_selector_v3.txt",
+  "selector_prompt_sha256": "f4a7e06160ca8347c5ca1e8839798a9a7fed5ae58bc0919fd0a9b0e865e41fa7",
+  "specs": [
+    {
+      "config_name": "bge_llm_gpt51_pool30_bge15_llm5_fullchunk",
+      "candidate_scores": "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/bge_candidate_scores.jsonl",
+      "source_config": "bge_base_top5_pool30_nodoccap",
+      "pool_k": 30,
+      "bge_shortlist_k": 15,
+      "final_top_k": 5
+    },
+    {
+      "config_name": "bge_llm_gpt51_pool60_bge30_llm10_fullchunk",
+      "candidate_scores": "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/bge_candidate_scores.jsonl",
+      "source_config": "bge_base_top10_pool60_nodoccap",
+      "pool_k": 60,
+      "bge_shortlist_k": 30,
+      "final_top_k": 10
+    },
+    {
+      "config_name": "bge_llm_gpt51_pool120_bge60_llm20_fullchunk",
+      "candidate_scores": "benchmark/frozen_v3/results/dev13_retrieval_budget_gpt51_2026-07-26/local_hybrid_bge/bge_candidate_scores.jsonl",
+      "source_config": "bge_base_top20_pool120_nodoccap",
+      "pool_k": 120,
+      "bge_shortlist_k": 60,
+      "final_top_k": 20
+    }
+  ]
+}

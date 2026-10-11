@@ -1,0 +1,272 @@
+{
+  "call_key": "RT01:gpt51_web_search:verify:RT01-gpt51_web_search-WEB02-R03",
+  "created_at": "2026-08-05T03:52:23.923385+00:00",
+  "raw_response_text": "{\"task_id\":\"RT01\",\"record_id\":\"RT01-gpt51_web_search-WEB02-R03\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"citation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Citation details (authors, title, journal, year) match the provided source metadata.\"},{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The DOI/URL exactly matches the source record (10.1016/j.chemosphere.2023.139983).\"},{\"field_path\":\"matrix.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Locator WEB02-E01 states that batch tests used groundwater. The source-level limitations further note that groundwater composition is site-specific and only partially characterized, consistent with the description of natural groundwater with limited co-constituent detail.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Locator WEB02-E01 states batch tests used 100 mg/L PFOA or PFOS in pure water and groundwater, supporting PFOS at 100 mg/L initial concentration.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Locator WEB02-E01 specifies 100 mg/L PFOA or PFOS used in batch tests, matching the value 100 for initial PFOS concentration.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Concentration is expressed in mg/L in WEB02-E01, matching the unit.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB02-E01 identifies HPA25M as one of the strong-base anion exchange resins; WEB02-E04 describes HPA25M\u2019s higher porosity and substantial 1\u201310 nm pore fraction. Together they support the description of HPA25M as a strong-base AER with high porosity and 1\u201310 nm pores.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This field is a descriptive adsorbent type and correctly has no unit (null).\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB02-E02 and WEB02-E03 state that pseudo-second-order kinetic modeling was used, supporting the kinetic_model value.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Kinetic model type is dimensionless and appropriately has no unit (null).\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The study evaluates adsorption/ion-exchange of PFOS on resins with reported adsorption capacities (q_e), which clearly corresponds to a sorption endpoint type.\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source discusses adsorption capacities (q_e) and PFOS removal/selectivity (WEB02-E02, WEB02-E03), consistent with the reported term \\\"adsorption capacity (q_e) and selectivity for PFOS in groundwater.\\\"\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB02-E02 and WEB02-E03 show PFOS q_e of 1007 mg/g in pure water and ~929 mg/g in groundwater, supporting the statement that groundwater capacity remains high and close to the pure-water value. WEB02-E05 attributes the mechanism to electrostatic anion exchange plus hydrophobic interactions, and no degradation is mentioned, aligning with the interpretation.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB02-E03 reports that PFOS capacities on HPA25M in groundwater remained high (~929 mg/g), matching the approximate value \\\"~929\\\" with value_form=approximate_numeric.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB02-E03 expresses capacities as q_e in mg/g, matching the unit mg/g.\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB02-E02 reports PFOS q_e in pure water for HPA25M as 1007 mg/g, matching the recorded value 1007 with value_form=exact_numeric.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB02-E02 gives q_e values in mg/g, matching the recorded unit.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Within this study, PFOS adsorption on HPA25M is measured in pure water and groundwater using the same batch methods and kinetic modeling (WEB02-E01 to E03). This justifies classifying the data as comparable_with_conditions. The status is an analyst judgment consistent with the evidence.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reason correctly notes comparability of PFOS q_e between pure water and groundwater based on consistent batch methods (WEB02-E01 to E03) and appropriately highlights that comparison to other study types (e.g., columns, multi-PFAS systems) must be cautious; this logically follows from the cited design and endpoints.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB02-E01 states 100 mg/L PFAS in batch tests; these are high relative to environmental levels, and batch q_e do not directly represent continuous-flow performance. This limitation is correctly labeled design_inferred and follows directly from the described design.\"},{\"field_path\":\"limitations[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB02-E01 indicates only PFOA and PFOS were tested. Thus, stating that only PFOS (a long-chain sulfonate) was evaluated for groundwater selectivity on HPA25M and that short-chain/mixed PFAS behavior is uncharacterized is a valid design-inferred limitation.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB02-E05 reports CF2-related peaks from XPS/FTIR after adsorption and that PFOA/PFOS signals were strongest on HPA25M and PA312, supporting sorbed PFAS on the resin surface and a physical/ionic sorption mechanism. However, the statement that \\\"no transformation products were reported in the supplied text\\\" is not explicitly documented in the locators and is an inference about absence of evidence, so this part is only partially supported.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB02-E01 describes batch tests, which are inherently bench-scale laboratory experiments, and they include groundwater as the matrix. The phrase \\\"Bench-scale batch adsorption tests in groundwater matrix\\\" accurately summarizes this.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB02-E01 notes HPA25M as a strong-base AER tested in batch with PFOS-containing groundwater; WEB02-E04 describes its porosity and 1\u201310 nm pores. This supports the description of treatment as use of strong-base AER HPA25M in batch contact with PFOS-spiked groundwater and characterized pore structure.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014source identity, matrix, PFAS identity, operating conditions, sorption endpoint, and quantitative equilibrium capacities with correct units\u2014are all supported by the cited evidence. The only partial issue concerns a nuanced inference about lack of transformation products, which does not affect adsorption data usability for synthesis.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused, data-grounded review explaining how an engineer should select an adsorption medium for a specified PFAS profile and water matrix.\",\"task_id\":\"RT01\",\"title\":\"Selecting an adsorption medium for a defined PFAS water-treatment application\"}\n\nTask-specific extraction objective:\nExtract adsorbent identity and properties, PFAS identity, water matrix, influent concentration, pH, co-constituents, dose or bed conditions, adsorption endpoint, quantitative result, and reported mechanism.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Parvin S, Hara-Yamamura H, Ueda S, et al. Important properties of anion exchange resins for efficient removal of PFOS and PFOA from groundwater. Chemosphere. 2023;341:139983.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB02-E01\",\n      \"WEB02-E02\",\n      \"WEB02-E03\",\n      \"WEB02-E04\",\n      \"WEB02-E05\"\n    ],\n    \"reason\": \"PFOS equilibrium capacities (q_e, mg/g) on HPA25M in pure water and groundwater are directly comparable within this study due to consistent batch methods and modeling; they can also be cautiously compared to other single-solute, high-concentration batch sorption capacities but not to column breakthrough data or multi-PFAS competitive systems.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.chemosphere.2023.139983\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"sorption\",\n      \"evidence_locator_ids\": [\n        \"WEB02-E03\",\n        \"WEB02-E04\",\n        \"WEB02-E05\"\n      ],\n      \"interpretation\": \"Equilibrium sorption capacity of PFOS on HPA25M in groundwater remains high and close to the pure-water capacity, indicating strong sorption and selectivity for PFOS in the presence of groundwater co-constituents; mechanism attributed to a combination of electrostatic anion exchange and hydrophobic interactions in suitably sized pores, not to chemical degradation.\",\n      \"reported_term\": \"adsorption capacity (q_e) and selectivity for PFOS in groundwater\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB02-E01\",\n        \"WEB02-E02\",\n        \"WEB02-E03\"\n      ],\n      \"statement\": \"Batch equilibrium capacities at 100 mg/L PFOS do not directly indicate performance at environmentally relevant ng/L\\u2013\\u00b5g/L levels or under continuous-flow conditions.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB02-E01\",\n        \"WEB02-E03\"\n      ],\n      \"statement\": \"Only PFOS (a long-chain sulfonate) was evaluated for groundwater selectivity on HPA25M; behavior of short-chain sulfonates or mixed-PFAS systems is not characterized.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB02-E01\",\n      \"WEB02-E03\"\n    ],\n    \"value\": \"Natural groundwater (site-specific composition; detailed co-constituents not reported in supplied text)\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB02-E01\"\n      ],\n      \"name\": \"initial_PFOS_concentration\",\n      \"qualifiers\": \"PFOS-spiked groundwater in batch tests\",\n      \"unit\": \"mg/L\",\n      \"value\": \"100\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB02-E04\"\n      ],\n      \"name\": \"adsorbent_type\",\n      \"qualifiers\": \"SEM and pore-size analyses show substantial 1\\u201310 nm pores associated with efficient PFOS removal in groundwater.\",\n      \"unit\": null,\n      \"value\": \"Strong-base anion exchange resin HPA25M with high porosity and 1\\u201310 nm pore fraction\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB02-E02\",\n        \"WEB02-E03\"\n      ],\n      \"name\": \"kinetic_model\",\n      \"qualifiers\": \"Used to derive equilibrium capacity q_e for PFOS\",\n      \"unit\": null,\n      \"value\": \"pseudo-second-order\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB02-E01\"\n      ],\n      \"value\": \"Perfluorooctane sulfonate (PFOS) at 100 mg/L initial concentration\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB02-E03\"\n      ],\n      \"name\": \"equilibrium_adsorption_capacity_qe_PFOS_on_HPA25M_groundwater\",\n      \"qualifiers\": \"Approximate q_e from pseudo-second-order model; authors note PFOS capacity in groundwater remains high (~929 mg/g) and similar to pure water (1007 mg/g), suggesting robust PFOS sorption.\",\n      \"unit\": \"mg/g\",\n      \"value\": \"~929\",\n      \"value_form\": \"approximate_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"WEB02-E02\"\n      ],\n      \"name\": \"equilibrium_adsorption_capacity_qe_PFOS_on_HPA25M_pure_water\",\n      \"qualifiers\": \"q_e for PFOS on HPA25M in pure water from pseudo-second-order model, enabling comparison to groundwater performance.\",\n      \"unit\": \"mg/g\",\n      \"value\": \"1007\",\n      \"value_form\": \"exact_numeric\"\n    }\n  ],\n  \"record_id\": \"RT01-gpt51_web_search-WEB02-R03\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB02-E05\"\n      ],\n      \"statement\": \"XPS and FTIR spectra after adsorption showed CF2-related peaks attributed to retained PFOA/PFOS on the resin surface, supporting physical/ionic sorption rather than transformation; no transformation products were reported in the supplied text.\"\n    }\n  ],\n  \"source_id\": \"WEB02\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB02-E01\",\n      \"WEB02-E03\",\n      \"WEB02-E04\"\n    ],\n    \"value\": \"Bench-scale batch adsorption tests in groundwater matrix\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB02-E01\",\n      \"WEB02-E03\",\n      \"WEB02-E04\"\n    ],\n    \"value\": \"Strong-base anion exchange resin HPA25M used as adsorbent; batch contact with PFOS-spiked groundwater; resin characterized by high porosity and 1\\u201310 nm pores\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"full_text\",\n  \"capture_source_id\": \"WEB12\",\n  \"citation\": \"Parvin S, Hara-Yamamura H, Ueda S, et al. Important properties of anion exchange resins for efficient removal of PFOS and PFOA from groundwater. Chemosphere. 2023;341:139983.\",\n  \"covered_component_ids\": [\n    \"RT01-C1\",\n    \"RT01-C2\",\n    \"RT01-C3\"\n  ],\n  \"doi\": \"10.1016/j.chemosphere.2023.139983\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.chemosphere.2023.139983\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB02-E01\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Materials and methods \\u2013 PFOA and PFOS removal tests (ResearchGate PDF p.2\\u20133, Abstract and Section 2)\",\n      \"text\": \"Batch tests used 100 mg/L PFOA or PFOS in laboratory pure water and groundwater to compare four strong-base AERs (HPA25M, PA312, UBA120) and one weak-base AER (WA30) plus a polymeric adsorbent (HP20).\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB02-E02\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Results \\u2013 Table 2, PFOA and PFOS adsorption kinetics (ResearchGate PDF p.5, Table 2)\",\n      \"text\": \"Pseudo-second-order kinetic modeling gave equilibrium capacities q_e in pure water for PFOA of 931 mg/g (HPA25M), 1003 mg/g (PA312), 997 mg/g (UBA120) and 654 mg/g (WA30); PFOS q_e were 1007, 670, 244 and 548 mg/g, respectively.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB02-E03\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Results \\u2013 Table 2, groundwater vs pure water (ResearchGate PDF p.5, Table 2)\",\n      \"text\": \"In groundwater, PFOA capacities dropped substantially (e.g., HPA25M q_e \\u2248348 mg/g vs 931 mg/g in pure water), whereas PFOS capacities on HPA25M remained high (~929 mg/g), indicating stronger selectivity for PFOS.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB02-E04\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Results \\u2013 SEM-EDX and pore structure (ResearchGate PDF p.6\\u20137, Fig. 3\\u20134)\",\n      \"text\": \"SEM and pore-size analyses showed HPA25M had higher porosity and a substantial fraction of pores in the 1\\u201310 nm range, which the authors link to more efficient and robust PFOS removal in groundwater.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB02-E05\",\n      \"passage_type\": \"faithful_paraphrase\",\n      \"section\": \"Results \\u2013 Spectroscopic characterization (ResearchGate PDF p.5\\u20136, Fig. 3)\",\n      \"text\": \"XPS/FTIR spectra indicated CF2-related peaks on resin surfaces after adsorption; PFOA and PFOS signals were strongest on HPA25M and PA312, supporting a mechanism combining electrostatic anion exchange with hydrophobic interactions in resin pores.\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://www.researchgate.net/publication/373689118_Important_properties_of_anion_exchange_resins_for_efficient_removal_of_PFOS_and_PFOA_from_groundwater\",\n  \"source_id\": \"WEB02\",\n  \"source_limitations\": [\n    \"Batch experiments used very high initial PFAS concentrations (100 mg/L), above typical drinking water levels.\",\n    \"Only PFOA and PFOS were tested; short-chain PFAS and precursors were not evaluated.\",\n    \"Groundwater composition is site-specific and only partially characterized in the available text.\"\n  ],\n  \"title\": \"Important properties of anion exchange resins for efficient removal of PFOS and PFOA from groundwater\",\n  \"year\": \"2023\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "285025d9b30f099ffccd876f4c30267e60653c4f5ffc72d412a6411682fbfaf8",
+  "response_metadata": {
+    "cached_input_tokens": 1024,
+    "estimated_cost_usd": 0.02801925,
+    "finish_reason": "stop",
+    "input_tokens": 3633,
+    "latency_seconds": 17.874687082949094,
+    "output_tokens": 2463,
+    "reasoning_tokens": 797,
+    "response_id": "chatcmpl-E9MxiIbTxdliydrYphsR28CFcllo9",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 6096,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "citation",
+        "reason": "Citation details (authors, title, journal, year) match the provided source metadata.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The DOI/URL exactly matches the source record (10.1016/j.chemosphere.2023.139983).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix.value",
+        "reason": "Locator WEB02-E01 states that batch tests used groundwater. The source-level limitations further note that groundwater composition is site-specific and only partially characterized, consistent with the description of natural groundwater with limited co-constituent detail.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "Locator WEB02-E01 states batch tests used 100 mg/L PFOA or PFOS in pure water and groundwater, supporting PFOS at 100 mg/L initial concentration.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "Locator WEB02-E01 specifies 100 mg/L PFOA or PFOS used in batch tests, matching the value 100 for initial PFOS concentration.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "Concentration is expressed in mg/L in WEB02-E01, matching the unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "WEB02-E01 identifies HPA25M as one of the strong-base anion exchange resins; WEB02-E04 describes HPA25M\u2019s higher porosity and substantial 1\u201310 nm pore fraction. Together they support the description of HPA25M as a strong-base AER with high porosity and 1\u201310 nm pores.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "This field is a descriptive adsorbent type and correctly has no unit (null).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "WEB02-E02 and WEB02-E03 state that pseudo-second-order kinetic modeling was used, supporting the kinetic_model value.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "Kinetic model type is dimensionless and appropriately has no unit (null).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The study evaluates adsorption/ion-exchange of PFOS on resins with reported adsorption capacities (q_e), which clearly corresponds to a sorption endpoint type.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "The source discusses adsorption capacities (q_e) and PFOS removal/selectivity (WEB02-E02, WEB02-E03), consistent with the reported term \"adsorption capacity (q_e) and selectivity for PFOS in groundwater.\"",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "WEB02-E02 and WEB02-E03 show PFOS q_e of 1007 mg/g in pure water and ~929 mg/g in groundwater, supporting the statement that groundwater capacity remains high and close to the pure-water value. WEB02-E05 attributes the mechanism to electrostatic anion exchange plus hydrophobic interactions, and no degradation is mentioned, aligning with the interpretation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "WEB02-E03 reports that PFOS capacities on HPA25M in groundwater remained high (~929 mg/g), matching the approximate value \"~929\" with value_form=approximate_numeric.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "WEB02-E03 expresses capacities as q_e in mg/g, matching the unit mg/g.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "WEB02-E02 reports PFOS q_e in pure water for HPA25M as 1007 mg/g, matching the recorded value 1007 with value_form=exact_numeric.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "WEB02-E02 gives q_e values in mg/g, matching the recorded unit.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "Within this study, PFOS adsorption on HPA25M is measured in pure water and groundwater using the same batch methods and kinetic modeling (WEB02-E01 to E03). This justifies classifying the data as comparable_with_conditions. The status is an analyst judgment consistent with the evidence.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The reason correctly notes comparability of PFOS q_e between pure water and groundwater based on consistent batch methods (WEB02-E01 to E03) and appropriately highlights that comparison to other study types (e.g., columns, multi-PFAS systems) must be cautious; this logically follows from the cited design and endpoints.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "WEB02-E01 states 100 mg/L PFAS in batch tests; these are high relative to environmental levels, and batch q_e do not directly represent continuous-flow performance. This limitation is correctly labeled design_inferred and follows directly from the described design.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[1]",
+        "reason": "WEB02-E01 indicates only PFOA and PFOS were tested. Thus, stating that only PFOS (a long-chain sulfonate) was evaluated for groundwater selectivity on HPA25M and that short-chain/mixed PFAS behavior is uncharacterized is a valid design-inferred limitation.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "WEB02-E05 reports CF2-related peaks from XPS/FTIR after adsorption and that PFOA/PFOS signals were strongest on HPA25M and PA312, supporting sorbed PFAS on the resin surface and a physical/ionic sorption mechanism. However, the statement that \"no transformation products were reported in the supplied text\" is not explicitly documented in the locators and is an inference about absence of evidence, so this part is only partially supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "WEB02-E01 describes batch tests, which are inherently bench-scale laboratory experiments, and they include groundwater as the matrix. The phrase \"Bench-scale batch adsorption tests in groundwater matrix\" accurately summarizes this.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "WEB02-E01 notes HPA25M as a strong-base AER tested in batch with PFOS-containing groundwater; WEB02-E04 describes its porosity and 1\u201310 nm pores. This supports the description of treatment as use of strong-base AER HPA25M in batch contact with PFOS-spiked groundwater and characterized pore structure.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT01-gpt51_web_search-WEB02-R03",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014source identity, matrix, PFAS identity, operating conditions, sorption endpoint, and quantitative equilibrium capacities with correct units\u2014are all supported by the cited evidence. The only partial issue concerns a nuanced inference about lack of transformation products, which does not affect adsorption data usability for synthesis.",
+    "task_id": "RT01"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

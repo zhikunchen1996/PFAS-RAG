@@ -1,0 +1,32 @@
+{
+  "protocol_id": "l3_gold_reference_test40_v1",
+  "status": "candidate_blind_reference_construction",
+  "question_set": "benchmark/frozen_v3/input/questions_test40.csv",
+  "gold_source": "benchmark/frozen_v3/gold/chunk_based_gold.jsonl",
+  "gold_record_count_expected": 189,
+  "question_count_expected": 40,
+  "corpus_collection": "rag_documents_bge_large_en_v1_5_sent256_overlap2_corpus434_repaired_v1",
+  "model_a": {
+    "request_model": "gpt-5.1",
+    "required_response_model": "gpt-5.1-2025-11-13",
+    "reasoning_effort": "low",
+    "temperature": "provider_default_not_sent",
+    "task_component_max_completion_tokens": 3000,
+    "reference_ledger_max_completion_tokens": 20000
+  },
+  "model_b": {
+    "provider": "Claude Pro CLI",
+    "model": "Claude Sonnet",
+    "role": "independent evidence verification"
+  },
+  "prohibited_inputs": [
+    "candidate Test40 answers",
+    "candidate Test40 retrieved contexts",
+    "system identities",
+    "Test40 evaluation metrics or outcomes",
+    "gold_minimal_answer",
+    "gold_full_answer",
+    "machine-written supported_claim summaries"
+  ],
+  "formal_test40_scoring_allowed": false
+}

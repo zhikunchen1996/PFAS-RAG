@@ -1,0 +1,254 @@
+{
+  "call_key": "RT01:bge_llm_local_rag:verify:RT01-bge_llm_local_rag-S10-R02",
+  "created_at": "2026-08-05T03:50:41.731568+00:00",
+  "raw_response_text": "{\"task_id\":\"RT01\",\"record_id\":\"RT01-bge_llm_local_rag-S10-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The DOI and URL match the citation information in the supplied source metadata (10.1016/j.seppur.2025.134308; https://doi.org/10.1016/j.seppur.2025.134308).\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The endpoint is PFAS rejection by nanofiltration, which is a phase separation process. The abstract states: \u201cRejection by NF ranged from 97.9 to 99.8 %...\u201d (S10-E04), clearly indicating a separation endpoint.\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S10-E04 reports that NF rejection ranged from 97.9\u201399.8%, was impacted by functional group (carboxylates > sulfonates; fluorotelomer sulfonates > sulfonamides) and increased with increasing chain length. S10-E05 adds that highest rejections were for long-chain PFAS and PFCAs and lowest for short-chain PFAS and FASAs. The interpretation text accurately reflects these points.\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reported term \u201cPFAS rejection by nanofiltration\u201d is a faithful description of the abstract statement \u201cRejection by NF ranged from 97.9 to 99.8 %...\u201d (S10-E04).\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"It is design-inferred. The supplied excerpts provide only overall NF rejection ranges and qualitative trends (S10-E04, S10-E05, S10-E07) without detailed compound-specific tables or operating parameters such as pressure or flux, so stating that these details are not in the supplied text is accurate and follows from the provided material.\"},{\"field_path\":\"matrix.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S10-E07 states the membranes were used \u201cfor the treatment of an AFFF-impacted groundwater\u201d and that both met the MCL for PFOA but not PFOS \u201cdue to the elevated feed PFOS concentration of ~5 \u00b5g/L.\u201d This supports that the matrix is AFFF-impacted groundwater with a PFAS mixture including regulatory-relevant PFOA and PFOS and elevated PFOS (~5 \u00b5g/L).\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S10-E07 describes performance of \u201ca brackish water RO (BW30) and a tight NF (NF90) membrane,\u201d supporting that the membrane type used is NF90, a tight nanofiltration membrane.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"No unit is appropriate for a membrane type descriptor, and none is given in the source; leaving the unit null is correct.\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S10-E07 states the system was operated at \u201cthree system recoveries (80, 85, and 90 %).\u201d The value field listing \u201c80, 85, and 90\u201d correctly captures these recovery setpoints.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"System recovery is reported in percent in the source (\u201c80, 85, and 90 %\u201d, S10-E07), so the unit \u201c%\u201d is correct.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S10-E07 specifies treatment of \u201can AFFF-impacted groundwater,\u201d and notes elevated feed PFOS concentration of ~5 \u00b5g/L. This supports the description of the water type as AFFF-impacted groundwater with high PFOS (~5 \u00b5g/L) and a PFAS mixture.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Water type is a descriptive category, so a null unit is appropriate and consistent with the source.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S10-E07 mentions regulatory-relevant PFOA and PFOS; S10-E04 and S10-E05 describe effects of PFAS functional group and chain length, explicitly referencing PFCAs and FASAs and fluorotelomer sulfonates vs sulfonamides. Specific species like PFOS and PFBS (a PFSA) are also mentioned elsewhere (S10-E01, S10-E06), supporting a targeted mixture including PFCAs, PFSAs (via PFOS/PFBS), FTSs, and FASAs.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S10-E04 states: \u201cRejection by NF ranged from 97.9 to 99.8 %...\u201d The recorded value \u201c97.9-99.8\u201d with value_form \u201crange\u201d matches the reported range.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The source reports the NF rejection in percent (\u201c97.9 to 99.8 %\u201d, S10-E04), so the unit \u201c%\u201d is correct.\"},{\"field_path\":\"quantitative_findings[0].qualifiers\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The qualifier text restates that these are NF90 membrane rejections for individual PFAS, ranging 97.9\u201399.8%, and notes dependence on functional group and chain length exactly as described in S10-E04 and the additional trend detail from S10-E05.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"This is a design-inferred statement: the supplied excerpts discuss PFAS rejection and sorption/accumulation on solid media but do not mention any PFAS degradation or byproduct formation (S10-E01, S10-E04, S10-E05, S10-E07). For pressure-driven membranes, interpreting performance as separation rather than destruction is consistent with the evidence.\"},{\"field_path\":\"study_scale.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The article title describes a \u201cpilot demonstration,\u201d and S10-E07 describes use of a closed-circuit membrane system with NF90 at recoveries of 80, 85, and 90%. This supports characterization as a pilot-scale closed-circuit membrane system at those recoveries.\"},{\"field_path\":\"treatment.value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S10-E07 states that performances of BW30 (RO) and tight NF (NF90) were investigated using a closed-circuit membrane system at three recoveries (80, 85, 90%) for AFFF-impacted groundwater. The treatment description as tight nanofiltration (NF90) in a closed-circuit configuration at those recoveries is accurate.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record labels the data as \u201cdescriptive_only,\u201d which is a conservative analyst judgment. The supplied text provides overall rejection ranges and qualitative trends but not detailed per-compound influent levels or full operating conditions within these excerpts, supporting treatment of the results as descriptive for cross-technology comparison.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reason notes that only qualitative rejection trends are clearly available and that detailed influent and operational data are lacking in the supplied text. This is consistent with the abstract and conclusion excerpts (S10-E04, S10-E05, S10-E07), which provide ranges and qualitative trends but no full parameter tables.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014source identity, matrix (AFFF-impacted groundwater with elevated PFOS), treatment (NF90 tight nanofiltration in a closed-circuit system at 80\u201390% recovery), endpoint type (separation), and quantitative NF rejection range (97.9\u201399.8%)\u2014are directly supported by the cited excerpts. No critical numeric, unit, or endpoint misclassifications are evident, so the record is suitable for synthesis, with limitations already noted as design-inferred.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused, data-grounded review explaining how an engineer should select an adsorption medium for a specified PFAS profile and water matrix.\",\"task_id\":\"RT01\",\"title\":\"Selecting an adsorption medium for a defined PFAS water-treatment application\"}\n\nTask-specific extraction objective:\nExtract adsorbent identity and properties, PFAS identity, water matrix, influent concentration, pH, co-constituents, dose or bed conditions, adsorption endpoint, quantitative result, and reported mechanism.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Masters, N.A.; Marron, B.A.; Lau, A.; Bailey, W.G.; Richardson, S.D.; Bellona, C.L. Investigation of PFAS rejection by closed-circuit reverse osmosis and nanofiltration and sorption to treatment materials during groundwater treatment: a pilot demonstration. Sep. Purif. Technol. 2025, 377, 134308.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S10-E04\",\n      \"S10-E05\",\n      \"S10-E07\"\n    ],\n    \"reason\": \"NF rejection data are reported for a mixed-PFAS groundwater in a pilot closed-circuit system; without explicit influent concentrations for each PFAS, flux, and membrane fouling state, the rejection values are best used qualitatively (e.g., relative trends by chain length and functional group) when comparing with adsorptive treatment media.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.seppur.2025.134308\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"separation\",\n      \"evidence_locator_ids\": [\n        \"S10-E04\",\n        \"S10-E05\"\n      ],\n      \"interpretation\": \"Specific PFAS rejections by NF ranged from 97.9 to 99.8%. Rejection varied with PFAS functional group and chain length: carboxylates were rejected more than sulfonates; fluorotelomer sulfonates more than fluorosulfonamides; and rejection increased with PFAS chain length. Long-chain PFAS and PFCAs exhibited the highest rejections, while short-chain PFAS and FASAs had the lowest rejections among those measured.\",\n      \"reported_term\": \"PFAS rejection by nanofiltration\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S10-E04\",\n        \"S10-E05\",\n        \"S10-E07\"\n      ],\n      \"statement\": \"PFAS rejection was reported as a range across PFAS with differing chemistry and at several system recoveries, but individual compound-specific rejection data and detailed operating parameters (e.g., pressure, flux) were not provided in the supplied text.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S10-E04\",\n      \"S10-E07\",\n      \"S10-E08\"\n    ],\n    \"value\": \"AFFF-impacted groundwater containing a mixture of PFAS, including regulatory-relevant PFOA and PFOS, with elevated PFOS concentration (~5 \\u00b5g/L).\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E04\"\n      ],\n      \"name\": \"Membrane type\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"NF90 tight nanofiltration membrane\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E04\",\n        \"S10-E07\"\n      ],\n      \"name\": \"System recovery levels\",\n      \"qualifiers\": \"PFAS rejection evaluated across three system recoveries in closed-circuit operation.\",\n      \"unit\": \"%\",\n      \"value\": \"80, 85, and 90\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E04\",\n        \"S10-E07\",\n        \"S10-E08\"\n      ],\n      \"name\": \"Water type\",\n      \"qualifiers\": \"\",\n      \"unit\": null,\n      \"value\": \"AFFF-impacted groundwater with high PFOS (~5 \\u00b5g/L) and mixture of PFAS.\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E04\",\n        \"S10-E05\",\n        \"S10-E07\"\n      ],\n      \"value\": \"Regulatory-relevant PFAS including PFOA and PFOS; additional targeted PFAS mixture including PFCAs, PFSAs, fluorotelomer sulfonates (FTSs), and fluorosulfonamides (FASAs).\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E04\"\n      ],\n      \"name\": \"PFAS-specific rejection by NF\",\n      \"qualifiers\": \"Rejection by the NF90 membrane for individual targeted PFAS ranged from 97.9 to 99.8%, with dependence on functional group and chain length (carboxylates > sulfonates; FTSs > FASAs; increasing with chain length).\",\n      \"unit\": \"%\",\n      \"value\": \"97.9-99.8\",\n      \"value_form\": \"range\"\n    }\n  ],\n  \"record_id\": \"RT01-bge_llm_local_rag-S10-R02\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S10-E04\",\n        \"S10-E05\"\n      ],\n      \"statement\": \"No PFAS degradation or byproduct formation was reported; NF90 performance is characterized by solute rejection (phase separation) rather than PFAS destruction.\"\n    }\n  ],\n  \"source_id\": \"S10\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S10-E04\",\n      \"S10-E05\",\n      \"S10-E07\"\n    ],\n    \"value\": \"Pilot-scale closed-circuit membrane system evaluating a tight nanofiltration membrane (NF90) for treatment of AFFF-impacted groundwater at system recoveries of 80\\u201390%.\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S10-E04\",\n      \"S10-E07\"\n    ],\n    \"value\": \"Tight nanofiltration (NF90) membrane operated in a closed-circuit configuration for PFAS rejection from groundwater at multiple system recoveries (80, 85, 90%).\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 15,\n  \"bge_score\": 0.3604268729686737,\n  \"citation\": \"Masters, N.A.; Marron, B.A.; Lau, A.; Bailey, W.G.; Richardson, S.D.; Bellona, C.L. Investigation of PFAS rejection by closed-circuit reverse osmosis and nanofiltration and sorption to treatment materials during groundwater treatment: a pilot demonstration. Separation and Purification Technology 2025 377 134308. DOI: 10.1016/j.seppur.2025.134308.\",\n  \"doi\": \"10.1016/j.seppur.2025.134308\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1016/j.seppur.2025.134308\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 33,\n      \"locator_id\": \"S10-E01\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.13019482791423798,\n        \"RT01-C2\": 0.003951204940676689,\n        \"RT01-C3\": 0.0001530979061499238,\n        \"umbrella\": 0.37617579102516174\n      },\n      \"section\": \"methods\",\n      \"text\": \"was positively correlated with steady state rejection. Determining the extent of PFAS sorption that occurred to the membrane during operation may elucidate mechanisms by which PFAS rejection increases with recovery. 3.3. PFAS extraction from solid phase media Methanol extractions were performed to estimate the accumulation of PFAS on treatment materials from both pretreatment and one RO (BW30) element. Extracted total PFAS masses and resulting solid phase concentrations (SI Section 4 ) for system components are presented in Table 6 . The highest solid phase PFAS concentrations were found in the 0.2 \\u00b5 m filter replicates compared to the other medias, and possibly due to particulate accumulation, including oxidized iron in the filter. Solid phase concentrations were significantly lower (~10 times) for mem - brane sections and IX softening resin, with the lowest concentrations found in the greensand filter media. The reduced sorption of PFAS to greensand is likely a result of greensand having a lower specific surface area. PFOS was the dominant PFAS adsorbed for all medias evaluated, contributing between 60 \\u2013 85 % of the total PFAS mass. PFOS was measured at the highest concentration in the groundwater (approxi - mately a third of the total quantified PFAS concentration), and has been reported to exhibit high adsorption potential compared to other PFAAs in a variety of systems including commercial adsorbents (e.g. activated\"\n    },\n    {\n      \"corpus_chunk\": 37,\n      \"locator_id\": \"S10-E02\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.9682581424713135,\n        \"RT01-C2\": 0.011231869459152222,\n        \"RT01-C3\": 0.0006663935491815209,\n        \"umbrella\": 0.21062256395816803\n      },\n      \"section\": \"results\",\n      \"text\": \"extractions (i.e 10:2 FTS, 10:2 fluorotelomer carboxylic acid, 10:2 un - saturated fluorotelomer carboxylic acid, perfluorododecanoic acid, perfluorotridecanoic acid, and perfluorodecane sulfonate) were all C10 or longer, except for chlorinated-PFOS (C8) and perfluorodecanoic acid (C9). The role of PFAS functional group and chain length on PFAS adsorption to solid phase media was evaluated by calculating the percent difference between their fraction in the CCMS feed and each replicate as described in SI Section 4 . Results from this analysis excluding PFOS are presented in Fig. 7 ( Fig. S5 includes PFOS). The IX softening resin resulted in a similar distribution of PFAS as the feed. For the 0.2 \\u00b5 m filters, and membrane, long-chain PFAS preferentially adsorbed with limited trends specific to functional group observed. Compared to the feed, greensand had reduced representation of PFSAs and FASAs, compared to increased FTSs and PFCAs, without major chain length impacts. The preferential sorption of long-chain PFAS to the 0.2 \\u00b5 m filter and membrane follows trends observed in other studies evaluating PFAS adsorption. Compared to long-chain PFAS, short-chain PFAS are easier to remove from AFFF storage and delivery systems [ 72 ], have less retardation in vadose zone transport [ 82 ], and have faster breakthrough\"\n    },\n    {\n      \"corpus_chunk\": 15,\n      \"locator_id\": \"S10-E03\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.011416519992053509,\n        \"RT01-C2\": 0.05867118388414383,\n        \"RT01-C3\": 0.00043899359297938645,\n        \"umbrella\": 0.026546822860836983\n      },\n      \"section\": \"methods\",\n      \"text\": \"General water quality analyses Water characterization included dissolved iron, hardness, conduc - tivity, pH, total organic carbon (TOC), major anions, and major cations. TOC was measured by carbon analysis (Shimadzu Ion TOC-L, Columbia, MD). Anions were analyzed via ion chromatography (IC; ICS-900, Dio - nex, Sunnyvale, CA). Cations were measured by inductively coupled plasma optical emission spectroscopy (ICP-OES, optima 5300 DV, Per - kinElmer, Fremont, CA). Onsite measurements of conductivity, pH, ORP, and temperature were taken with a ProQuatro Multiparameter Meter (YSI, Yellow Springs, OH). Regular field monitoring of the CCMS feed for dissolved iron and hardness was performed with Hach \\u00ae (Loveland, CO) TNT858 and TNT869 kits, respectively, measured using a Hach \\u00ae DR6000 Benchtop Spectrophotometer. 2.2.2. PFAS analysis Samples for PFAS analysis were collected into 50 mL polypropylene centrifuge tubes (Falcon \\u00ae Corning, Corning, NY). Samples were subse - quently analyzed for targeted PFAS using liquid chromatography quadrupole time-of-flight mass spectrometry (LC-QToF-MS) on a SCIEX x500R QToF-MS system (Framingham, MA) with direct injection. The LC-QToF-MS was run using electrospray ionization in negative mode\"\n    },\n    {\n      \"corpus_chunk\": 1,\n      \"locator_id\": \"S10-E04\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.8917426466941833,\n        \"RT01-C2\": 0.012807858176529408,\n        \"RT01-C3\": 8.006661664694548e-05,\n        \"umbrella\": 0.21286003291606903\n      },\n      \"section\": \"abstract\",\n      \"text\": \"RO required higher pressures and energy to reach recovery setpoints than NF, in exchange for PFAS specific rejections greater than 99 %. Rejection by NF ranged from 97.9 to 99.8 % and was impacted by functional group (carboxylates > sulfonates, fluorotelomer sulfonates > sulfonamides) and increased by increasing chain lengths. Overall PFAS rejection by RO decreased between 85 and 90 % recovery, with discrete sampling demonstrating a decrease in rejection after 87 % recovery, indicating that the tradeoff between reduced retentate volume and decreased permeate quality is an important operational consideration. To evaluate PFAS sorption to treatment materials, methanol extractions were performed on pretreatment materials and one BW30 element. Adsorbed total PFAS mass was dominated by PFOS, with long-chain PFAS exhibiting preferential adsorption. Per gram of material extracted, a 0.2 \\u00b5 m cartridge filter accumulated the most PFAS. The membrane and IX softening resin had similar accumulation of PFAS, while accumulation was the lowest on greensand. PFAS chain length had the greatest impact on adsorption to the filter, membrane, and IX softening resin, sorption to greensand was more impacted by functional group. 1. Introduction Per- and polyfluoroalkyl substances (PFAS) are a recalcitrant class of organic compounds containing multiple carbon \\u2013 fluorine bonds. Due to decades of production and use, as well as their resistance to degradation,\"\n    },\n    {\n      \"corpus_chunk\": 40,\n      \"locator_id\": \"S10-E05\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.6323543787002563,\n        \"RT01-C2\": 0.00184620323125273,\n        \"RT01-C3\": 6.322473200270906e-05,\n        \"umbrella\": 0.045399826020002365\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"respectively. N.A. Masters et al. Separation and Puri\\u03e7cation Technology 377 (2025) 134308 10 by PFAS chain length and functional group. The highest PFAS rejections measured for NF included long-chain PFAS and PFCAs while the lowest were short-chain PFAS and FASAs. AFFF-impacted groundwater has been demonstrated to contain a variety of additional PFAS not measured during the targeted analysis of this study, and implementation of non- target analysis to characterize the capacity of RO and NF to reject additional PFAS (e.g. ultrashort-chain, zwitterionic, cationic) is warranted. PFAS extractions performed on pretreatment materials and one BW30 element revealed accumulation of PFAS, with solid phase con - centrations dependent upon the material examined and PFAS properties. Among the materials extracted, the 0.2 \\u00b5m filter had approximately 10x greater solid phase concentration than any other material extracted, while the lowest solid phase concentrations resulted from greensand media extractions. Long-chain PFAS were preferentially sorbed to all extracted materials except for greensand, which is likely related to the hydrophobicity of each targeted PFAS. For example, PFOS represented 60\\u201385 % of the total solid phase concentration, depending on the examined treatment materials, while several long-chain PFAS present at low concentrations in the feed were found to preferentially adsorb to the investigated treatment materials.\"\n    },\n    {\n      \"corpus_chunk\": 36,\n      \"locator_id\": \"S10-E06\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.29485127329826355,\n        \"RT01-C2\": 0.004618180450052023,\n        \"RT01-C3\": 9.038832649821416e-05,\n        \"umbrella\": 0.020345570519566536\n      },\n      \"section\": \"methods\",\n      \"text\": \"The top panel represents the overall extractable PFAS while the bottom panel represents the fractions of each Minor PFAS presented in the top panel. N.A. Masters et al. Separation and Puri\\u03e7cation Technology 377 (2025) 134308 9 recirculation experiment. The fraction of each PFAS for the CCMS feed and replicates are presented in Fig. 6 . Due to its high concentration, PFOS was omitted to better elucidate the impact of chain length and functional groups on adsorption ( Table S4 and Fig. S4 include PFOS). Not all PFAS measured in the CCMS feed were quantified in each extract. For example, FBSA and FPeSA were only found in the IX softening resin. The shortest PFSA and PFCA studied were similar; perfluorobutane sulfonate (PFBS) was only found in the IX softening resin while perfluoropentanoic acid (PFPeA) was not detected in any membrane extractions. Minor PFAS, which were predominantly long-chain PFAS, were present in all media to a higher degree than the feed, except the IX softening resin which had a similar PFAS composition as the feed. PFAS that were not detected in the feed but in multiple replicates on the 0.2 \\u00b5 m filter and membrane extractions (i.e 10:2 FTS, 10:2 fluorotelomer carboxylic acid, 10:2 un - saturated fluorotelomer carboxylic acid, perfluorododecanoic acid,\"\n    },\n    {\n      \"corpus_chunk\": 38,\n      \"locator_id\": \"S10-E07\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.2755239009857178,\n        \"RT01-C2\": 0.004133547656238079,\n        \"RT01-C3\": 3.77390933863353e-05,\n        \"umbrella\": 0.04104497656226158\n      },\n      \"section\": \"conclusion\",\n      \"text\": \"to remove from AFFF storage and delivery systems [ 72 ], have less retardation in vadose zone transport [ 82 ], and have faster breakthrough in adsorption-based treatment systems (GAC, anion exchange resin) [ 26 ]. Sorption affinity to membrane treatment materials has been re - ported to be positively correlated with PFAS chain length [ 39 , 78 ] with Steinle-Darling and Reinhard [ 40 ] reporting that, except for per - fluorooctanesulfonamide (FOSA), the mass of PFAS sorbed to NF270 was linearly correlated to the molecular weight of each PFAS evaluated. While our understanding of PFAS sorption to treatment materials is still limited, hydrophobicity and operating pH likely play a major role in distribution and mass of sorption. 4. Conclusions The performances of a brackish water RO (BW30) and a tight NF (NF90) membrane for the treatment of an AFFF-impacted groundwater were investigated using a closed-circuit membrane system at three sys - tem recoveries (80, 85, and 90 %). Although decreases in permeability occurred during recirculation for both membranes, minimal overall permeability decline was observed throughout experiments, and NF exhibited lower pressure and energy requirements than RO. Both membranes met the upcoming US EPA NPDWR MCL for PFOA but not PFOS due to the elevated feed PFOS concentration of ~5 \\u00b5 g/L. Total\"\n    },\n    {\n      \"corpus_chunk\": 4,\n      \"locator_id\": \"S10-E08\",\n      \"query_scores\": {\n        \"RT01-C1\": 0.14188805222511292,\n        \"RT01-C2\": 0.014253325760364532,\n        \"RT01-C3\": 3.849330823868513e-05,\n        \"umbrella\": 0.07668111473321915\n      },\n      \"section\": \"abstract\",\n      \"text\": \"been reported to have some of the highest reported aqueous concen - trations of PFAS [ 21 , 22 ]. Options for ex-situ PFAS treatment have increased recently, including the development of multiple PFAS destruction technologies. The best available technologies recognized by US EPA for PFAS removal from water include adsorbents (e.g. activated carbon, anion exchange resin, surface modified clays) and high-pressure membrane filtration (i.e. reverse osmosis (RO), nanofiltration (NF)) [ 23 ]. Although adsorbents have been widely adopted, their performance depends on water quality (i.e. ionic composition and organic matter) [ 24 , 25 ] and PFAS properties (e.g. short-chain and PFCAs breakthrough more rapidly than long-chains and PFSAs) [ 25 \\u2013 27 ]. Due to high PFAS concentrations typically present at AFFF-impacted sites, the use of adsorbents would likely require frequent media replacements. Compared to adsorbents, PFAS treatment by RO and NF is less impacted by water quality [ 27 , 28 ], PFAS concentrations [ 29 ], and organic matter [ 30 ]. RO and NF can achieve high rejection of regulatory relevant PFAS due to the anionic nature and relatively large molecular weights ( > 400 g/mole) of these PFAS. NF has been shown to be an\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2025 - Masters - Investigation of PFAS rejection by closed-circuit reverse osmosis and nanofiltration and sorption to treatment materials during groundwater.pdf\",\n  \"source_id\": \"S10\",\n  \"title\": \"Investigation of PFAS rejection by closed-circuit reverse osmosis and nanofiltration and sorption to treatment materials during groundwater treatment: a pilot demonstration\",\n  \"year\": \"2025\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "3bd5546407508538a410493098fa7b31bcf4827b6d266fce9cd45d56a7b40a98",
+  "response_metadata": {
+    "cached_input_tokens": 0,
+    "estimated_cost_usd": 0.03744375,
+    "finish_reason": "stop",
+    "input_tokens": 6235,
+    "latency_seconds": 27.645224250038154,
+    "output_tokens": 2965,
+    "reasoning_tokens": 1127,
+    "response_id": "chatcmpl-E9MvuBr4QQik7A0QGFkof9CDk9D5m",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 9200,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The DOI and URL match the citation information in the supplied source metadata (10.1016/j.seppur.2025.134308; https://doi.org/10.1016/j.seppur.2025.134308).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "The endpoint is PFAS rejection by nanofiltration, which is a phase separation process. The abstract states: \u201cRejection by NF ranged from 97.9 to 99.8 %...\u201d (S10-E04), clearly indicating a separation endpoint.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "S10-E04 reports that NF rejection ranged from 97.9\u201399.8%, was impacted by functional group (carboxylates > sulfonates; fluorotelomer sulfonates > sulfonamides) and increased with increasing chain length. S10-E05 adds that highest rejections were for long-chain PFAS and PFCAs and lowest for short-chain PFAS and FASAs. The interpretation text accurately reflects these points.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "The reported term \u201cPFAS rejection by nanofiltration\u201d is a faithful description of the abstract statement \u201cRejection by NF ranged from 97.9 to 99.8 %...\u201d (S10-E04).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "It is design-inferred. The supplied excerpts provide only overall NF rejection ranges and qualitative trends (S10-E04, S10-E05, S10-E07) without detailed compound-specific tables or operating parameters such as pressure or flux, so stating that these details are not in the supplied text is accurate and follows from the provided material.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix.value",
+        "reason": "S10-E07 states the membranes were used \u201cfor the treatment of an AFFF-impacted groundwater\u201d and that both met the MCL for PFOA but not PFOS \u201cdue to the elevated feed PFOS concentration of ~5 \u00b5g/L.\u201d This supports that the matrix is AFFF-impacted groundwater with a PFAS mixture including regulatory-relevant PFOA and PFOS and elevated PFOS (~5 \u00b5g/L).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "S10-E07 describes performance of \u201ca brackish water RO (BW30) and a tight NF (NF90) membrane,\u201d supporting that the membrane type used is NF90, a tight nanofiltration membrane.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "No unit is appropriate for a membrane type descriptor, and none is given in the source; leaving the unit null is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "S10-E07 states the system was operated at \u201cthree system recoveries (80, 85, and 90 %).\u201d The value field listing \u201c80, 85, and 90\u201d correctly captures these recovery setpoints.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "System recovery is reported in percent in the source (\u201c80, 85, and 90 %\u201d, S10-E07), so the unit \u201c%\u201d is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "S10-E07 specifies treatment of \u201can AFFF-impacted groundwater,\u201d and notes elevated feed PFOS concentration of ~5 \u00b5g/L. This supports the description of the water type as AFFF-impacted groundwater with high PFOS (~5 \u00b5g/L) and a PFAS mixture.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "Water type is a descriptive category, so a null unit is appropriate and consistent with the source.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "S10-E07 mentions regulatory-relevant PFOA and PFOS; S10-E04 and S10-E05 describe effects of PFAS functional group and chain length, explicitly referencing PFCAs and FASAs and fluorotelomer sulfonates vs sulfonamides. Specific species like PFOS and PFBS (a PFSA) are also mentioned elsewhere (S10-E01, S10-E06), supporting a targeted mixture including PFCAs, PFSAs (via PFOS/PFBS), FTSs, and FASAs.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "S10-E04 states: \u201cRejection by NF ranged from 97.9 to 99.8 %...\u201d The recorded value \u201c97.9-99.8\u201d with value_form \u201crange\u201d matches the reported range.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The source reports the NF rejection in percent (\u201c97.9 to 99.8 %\u201d, S10-E04), so the unit \u201c%\u201d is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].qualifiers",
+        "reason": "The qualifier text restates that these are NF90 membrane rejections for individual PFAS, ranging 97.9\u201399.8%, and notes dependence on functional group and chain length exactly as described in S10-E04 and the additional trend detail from S10-E05.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "This is a design-inferred statement: the supplied excerpts discuss PFAS rejection and sorption/accumulation on solid media but do not mention any PFAS degradation or byproduct formation (S10-E01, S10-E04, S10-E05, S10-E07). For pressure-driven membranes, interpreting performance as separation rather than destruction is consistent with the evidence.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale.value",
+        "reason": "The article title describes a \u201cpilot demonstration,\u201d and S10-E07 describes use of a closed-circuit membrane system with NF90 at recoveries of 80, 85, and 90%. This supports characterization as a pilot-scale closed-circuit membrane system at those recoveries.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment.value",
+        "reason": "S10-E07 states that performances of BW30 (RO) and tight NF (NF90) were investigated using a closed-circuit membrane system at three recoveries (80, 85, 90%) for AFFF-impacted groundwater. The treatment description as tight nanofiltration (NF90) in a closed-circuit configuration at those recoveries is accurate.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "The record labels the data as \u201cdescriptive_only,\u201d which is a conservative analyst judgment. The supplied text provides overall rejection ranges and qualitative trends but not detailed per-compound influent levels or full operating conditions within these excerpts, supporting treatment of the results as descriptive for cross-technology comparison.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The reason notes that only qualitative rejection trends are clearly available and that detailed influent and operational data are lacking in the supplied text. This is consistent with the abstract and conclusion excerpts (S10-E04, S10-E05, S10-E07), which provide ranges and qualitative trends but no full parameter tables.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT01-bge_llm_local_rag-S10-R02",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014source identity, matrix (AFFF-impacted groundwater with elevated PFOS), treatment (NF90 tight nanofiltration in a closed-circuit system at 80\u201390% recovery), endpoint type (separation), and quantitative NF rejection range (97.9\u201399.8%)\u2014are directly supported by the cited excerpts. No critical numeric, unit, or endpoint misclassifications are evident, so the record is suitable for synthesis, with limitations already noted as design-inferred.",
+    "task_id": "RT01"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

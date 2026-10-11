@@ -1,0 +1,368 @@
+{
+  "call_key": "RT07:bge_llm_local_rag:verify:RT07-bge_llm_local_rag-S10-R02",
+  "created_at": "2026-08-05T04:26:19.629270+00:00",
+  "raw_response_text": "{\"task_id\":\"RT07\",\"record_id\":\"RT07-bge_llm_local_rag-S10-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"citation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The citation text matches the article information in the source, including authors, title, journal, year, pages, and DOI (chunk S10-E01).\"},{\"field_path\":\"doi_or_stable_url\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The DOI URL 10.1039/d5ew00440c matches the DOI reported in the source (chunks S10-E01, S10 main metadata).\"},{\"field_path\":\"matrix\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record states synthetic groundwater, which is explicitly described for these PFAS tests (\\\"tested in the synthetic groundwater\\\" and \\\"foam fractionation of synthetic ... groundwaters\\\" in S10-E02, S10-E05, S10-E08).\"},{\"field_path\":\"pfas_scope\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The four PFAS listed (PFOS, PFOA, PFBS, PFBA) are exactly those described as tested in synthetic groundwater (S10-E02, S10-E05).\"},{\"field_path\":\"study_scale\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The description of laboratory foam fractionation experiments with CTAB in synthetic groundwater is consistent with the methods and aims described in S10-E05 and S10-E08.\"},{\"field_path\":\"study_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The article reports original experimental work on PFAS removal by foam fractionation, fitting a primary experiment classification (multiple chunks including S10-E02, S10-E05).\"},{\"field_path\":\"treatment\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Foam fractionation with CTAB as a cationic co-surfactant is clearly described as the evaluated treatment (S10-E05, S10-E06, S10-E08).\"},{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Removal is measured as PFAS concentration decrease/removal efficiencies over time in the aqueous phase (e.g., \\\"near complete removal\\\" and \\\"99% removal\\\" in S10-E02, S10-E05), consistent with a removal endpoint.\"},{\"field_path\":\"endpoints[0]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The general interpretation (PFAS removal from synthetic groundwater by CTAB-enhanced foam fractionation, long-chain near-complete removal in ~5 min, short-chain requiring ~50 min with high removal) is supported by S10-E02 and S10-E05. However, the statement that PFBS and PFBA reached \\\"up to 99%\\\" removal specifically at ~50 min is inferred by combining separate mentions of 50 min (S10-E05) and 99% removal at the highest concentration (S10-E02); the time associated with the 99% value is not explicitly tied to 50 min in the cited text.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"VRF, EF, and mass recovery describe distribution of PFAS between bulk solution and foamate, which is properly classified as a separation endpoint (S10-E03, S10-E04, S10-E07).\"},{\"field_path\":\"endpoints[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record\u2019s explanation of VRF (volume solution/foam), EF (concentration foamate/initial), and their use with mass recovery matches the definitions and discussion in S10-E04 and mention of VRF and EF in Fig. 9 in S10-E07; noting that numerical values are not present in the provided text is accurate for these excerpts.\"},{\"field_path\":\"operating_conditions[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S10-E02 states that the PFAS were tested at individual concentrations ranging from 400 ng L\u22121 to 400 000 ng L\u22121, matching the recorded range 400\u2013400000.\"},{\"field_path\":\"operating_conditions[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The concentration range in S10-E02 is explicitly in ng L\u22121, matching the unit ng/L.\"},{\"field_path\":\"operating_conditions[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Name and qualifiers correctly describe that each PFAS (PFOS, PFOA, PFBS, PFBA) was tested individually in synthetic groundwater over the stated range (S10-E02).\"},{\"field_path\":\"operating_conditions[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S10-E02 reports that long-chain PFAS (PFOS and PFOA) exhibited near complete removal in as short as 5 minutes, matching the value 5.\"},{\"field_path\":\"operating_conditions[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The 5-minute operation time is expressed in minutes in S10-E02, matching unit min.\"},{\"field_path\":\"operating_conditions[1]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The description of operation time for near-complete removal of PFOS and PFOA (5 minutes, near complete but without an exact % value) is consistent with S10-E02.\"},{\"field_path\":\"operating_conditions[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S10-E05 states that the same level of removal for PFBS and PFBA was achieved after approximately 50 minutes of operation, supporting the value 50.\"},{\"field_path\":\"operating_conditions[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The time is clearly given in minutes (\\\"50 minutes\\\" in S10-E05), matching unit min.\"},{\"field_path\":\"operating_conditions[2]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S10-E05 supports that PFBS and PFBA required approximately 50 minutes to achieve the same level of removal as long-chain PFAS, but it does not explicitly state that this level is 99% or that 99% at the highest concentration specifically required ~50 minutes. That linkage is inferred from S10-E02 and is not directly stated.\"},{\"field_path\":\"quantitative_findings[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S10-E02 states \\\"The 99% removal achieved for the highest concentration values\\\" and refers to \\\"each PFAS\\\"; this includes PFBS, supporting the value 99 for PFBS at the highest concentration.\"},{\"field_path\":\"quantitative_findings[0].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The 99% figure refers to a removal efficiency (S10-E02), so \\\"% removal\\\" is an appropriate and consistent unit description.\"},{\"field_path\":\"quantitative_findings[0]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"The 99% removal at the highest concentration and the associated ~335 \u00b5g mass for each PFAS are supported by S10-E02, but the qualifier tying this specifically to occurring in approximately 50 minutes is not explicitly stated in the cited text and is inferred from a separate statement about 50 minutes (S10-E05).\"},{\"field_path\":\"quantitative_findings[1].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"As with PFBS, S10-E02\u2019s phrase \\\"The 99% removal achieved for the highest concentration values\\\" and \\\"each PFAS\\\" also includes PFBA, supporting 99% removal at the highest concentration.\"},{\"field_path\":\"quantitative_findings[1].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The 99% is clearly a removal efficiency; \\\"% removal\\\" is consistent with S10-E02.\"},{\"field_path\":\"quantitative_findings[1]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"99% removal and ~335 \u00b5g removed for each PFAS at the highest concentration are supported (S10-E02), but the qualifier asserting that this was achieved in approximately 50 minutes is inferred rather than explicitly tied to the 99% value in the text.\"},{\"field_path\":\"quantitative_findings[2].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S10-E02 states that the 99% removal at the highest concentration corresponds to approximately ~335 \u00b5g mass of each PFAS, matching the approximate value ~335.\"},{\"field_path\":\"quantitative_findings[2].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The mass is explicitly given in micrograms (\\\"335 \u00b5g\\\" in S10-E02), so unit \u00b5g is correct.\"},{\"field_path\":\"quantitative_findings[2]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The finding that ~335 \u00b5g of each PFAS is removed at the highest concentration is directly stated in S10-E02 and the approximate numeric form is correctly represented.\"},{\"field_path\":\"quantitative_findings[3].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S10-E02 reports that at the lowest concentration, approximately 335 ng of each PFAS was removed, matching the approximate value ~335.\"},{\"field_path\":\"quantitative_findings[3].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The unit in S10-E02 is explicitly nanograms (\\\"335 ng\\\"), matching unit ng.\"},{\"field_path\":\"quantitative_findings[3]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The description of ~335 ng removed at the lowest concentration for each PFAS, including PFBS, matches S10-E02; the approximation is clearly indicated in the record.\"},{\"field_path\":\"quantitative_findings[4].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"S10-E02 states that approximately 335 ng of each PFAS was removed at the lowest concentration, which includes PFBA and matches value ~335.\"},{\"field_path\":\"quantitative_findings[4].unit\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The value is given as 335 ng in S10-E02, so unit ng is correct.\"},{\"field_path\":\"quantitative_findings[4]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The record\u2019s description for PFBA at the lowest concentration is consistent with S10-E02, which states approximately 335 ng of each PFAS was removed.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Given that the cited excerpts describe a common synthetic groundwater matrix, CTAB-enhanced foam fractionation setup, and individual testing of the four PFAS across the same concentration range and removal endpoint (S10-E02, S10-E03, S10-E04, S10-E05), classifying comparisons as comparable_with_conditions is a reasonable inference.\"},{\"field_path\":\"comparability\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reasoning that experiments share matrix, treatment, endpoint, and concentration range, enabling comparison of long- vs short-chain behavior with some conditional caveats, follows from S10-E02, S10-E03, S10-E04, and S10-E05.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"It is a reasonable design-inferred limitation that results using only four PFAS in synthetic groundwater and focusing on CTAB may not generalize to other PFAS mixtures, co-contaminants, or co-surfactants; the experimental scope is supported by S10-E02, S10-E05, and S10-E08.\"},{\"field_path\":\"limitations[1]\",\"status\":\"unsupported\",\"error_type\":\"other\",\"reason\":\"S10-E03, S10-E04, and S10-E07 indicate that VRF, EF, and mass recovery are quantified and presented in Fig. 9; therefore it is incorrect to state as a study limitation that these quantities are only conceptually discussed and not reported numerically. The observed lack of numeric data is due to the excerpt selection, not to the study design.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"S10-E01 explicitly mentions \\\"minimizing residual water pollution with cationic surfactants used for treatment,\\\" supporting concern about residual co-surfactants. However, the specific implication that CTAB residuals in the treated water are a major concern and that no post-treatment strategies are discussed extends beyond the explicit text; CTAB is the relevant surfactant but is not named in that sentence, and the absence of strategies is not directly established in the provided excerpts.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core elements\u2014source identity, matrix (synthetic groundwater), treatment (CTAB-enhanced foam fractionation), PFAS tested, operating conditions, and key quantitative removal findings\u2014are directly supported by the cited text. Minor issues involve overinterpretation of the association between 99% removal and 50-minute operation and one misframed limitation about unavailable VRF/EF numerics, but these do not compromise the primary experimental information for synthesis.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of when foam fractionation is useful as a concentration step and how the resulting PFAS-rich foamate should be managed.\",\"task_id\":\"RT07\",\"title\":\"Placing foam fractionation within a PFAS treatment train\"}\n\nTask-specific extraction objective:\nExtract feed source, PFAS profile, scale, operating duration, feed and foamate volume, recovery, enrichment, short-chain performance, energy, operational stability, downstream foamate treatment, and residual endpoint.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.jhazmat.2023.133182\"],\"all_blocked_titles\":[\"a review of foam fractionation for the removal of per and polyfluoroalkyl substances pfas from aqueous matrices\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.jhazmat.2023.133182\"],\"anchor_id\":\"AR-WE-2024\",\"corpus_source\":\"2024 - We - A review of foam fractionation for the removal of per- and polyfluoroalkyl substances (PFAS) from aqueous matrices.pdf\",\"doi\":\"10.1016/j.jhazmat.2023.133182\",\"title\":\"A review of foam fractionation for the removal of per- and polyfluoroalkyl substances (PFAS) from aqueous matrices\",\"url\":\"https://doi.org/10.1016/j.jhazmat.2023.133182\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Klevan, C.; Van Allen, O.; Mukai, K.; Gomes, A.; Xia, S.; Caines, S.; Woodcock, M.J.; Pennell, K.D. Removal of long- and short-chain PFAS from groundwater by foam fractionation. Environ. Sci.: Water Res. Technol. 2025, 11, 2295\\u20132307. doi:10.1039/d5ew00440c.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"S10-E05\",\n      \"S10-E02\",\n      \"S10-E03\",\n      \"S10-E04\"\n    ],\n    \"reason\": \"Within this record, experiments use the same synthetic groundwater matrix, foam fractionation setup, cationic co-surfactant (CTAB), and a consistent removal endpoint (aqueous concentration decrease). PFAS are tested individually across a defined concentration range (400\\u2013400,000 ng/L), allowing conditional comparison of long- versus short-chain PFAS performance and concentration dependence, although VRF and EF are only qualitatively described.\",\n    \"status\": \"comparable_with_conditions\"\n  },\n  \"doi_or_stable_url\": \"https://doi.org/10.1039/d5ew00440c\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"removal\",\n      \"evidence_locator_ids\": [\n        \"S10-E05\",\n        \"S10-E02\"\n      ],\n      \"interpretation\": \"Parent PFAS removal from synthetic groundwater by CTAB-enhanced foam fractionation, measured as reduction in aqueous concentration (% removal) over time across a 400\\u2013400,000 ng/L concentration range. Long-chain PFOS and PFOA showed rapid, near-complete removal within 5 minutes; short-chain PFBS and PFBA required longer operation (~50 minutes) to reach high removal (up to 99%) at the highest concentrations tested.\",\n      \"reported_term\": \"removal efficiencies; performance over wide concentration range\"\n    },\n    {\n      \"endpoint_type\": \"separation\",\n      \"evidence_locator_ids\": [\n        \"S10-E04\",\n        \"S10-E03\",\n        \"S10-E07\"\n      ],\n      \"interpretation\": \"The study discusses volume reduction factor (VRF) as the ratio of feed solution volume to collapsed foam volume, and enrichment factor (EF) as the ratio of PFAS concentration in foamate to initial solution concentration. These metrics, along with PFAS mass recovery, are presented as key indicators of foam fractionation performance, although specific VRF and EF numerical results are not provided in the supplied excerpts.\",\n      \"reported_term\": \"PFAS mass removal and recovery; volume reduction factor (VRF) and enrichment factor (EF)\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S10-E05\",\n        \"S10-E02\",\n        \"S10-E08\"\n      ],\n      \"statement\": \"Results are limited to four PFAS (PFOS, PFOA, PFBS, PFBA) in synthetic groundwater and to CTAB as the selected cationic co-surfactant; performance may differ for other PFAS mixtures, co-contaminants, or alternative co-surfactants and system geometries.\"\n    },\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"S10-E04\",\n        \"S10-E03\",\n        \"S10-E07\"\n      ],\n      \"statement\": \"Quantitative values for foamate volume, volume reduction factor (VRF), enrichment factor (EF), and PFAS mass recovery are conceptually discussed but not reported numerically in the supplied excerpts, limiting assessment of concentration performance and foamate management from the available text.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"S10-E05\",\n      \"S10-E02\"\n    ],\n    \"value\": \"synthetic groundwater\"\n  },\n  \"operating_conditions\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E02\"\n      ],\n      \"name\": \"initial PFAS concentration range (individual PFAS tests)\",\n      \"qualifiers\": \"each PFAS (PFOS, PFOA, PFBS, PFBA) tested individually in synthetic groundwater at concentrations ranging from 400 ng/L to 400,000 ng/L (0.4\\u2013400 \\u00b5g/L)\",\n      \"unit\": \"ng/L\",\n      \"value\": \"400-400000\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E02\",\n        \"S10-E05\"\n      ],\n      \"name\": \"operation time to near-complete removal of long-chain PFAS\",\n      \"qualifiers\": \"PFOS and PFOA exhibited near complete removal in as short as 5 minutes in CTAB-enhanced foam fractionation; percentage not explicitly quantified for this time point\",\n      \"unit\": \"min\",\n      \"value\": \"5\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E05\",\n        \"S10-E02\"\n      ],\n      \"name\": \"operation time to achieve 99% removal of PFBS and PFBA\",\n      \"qualifiers\": \"\\\"the same level of removal was achieved for PFBS and PFBA after approximately 50 minutes of operation\\\"; 99% removal referenced for highest PFAS concentration, requiring ~50 minutes\",\n      \"unit\": \"min\",\n      \"value\": \"50\"\n    }\n  ],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E05\",\n        \"S10-E02\"\n      ],\n      \"value\": \"PFOS (long-chain PFAS)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E05\",\n        \"S10-E02\"\n      ],\n      \"value\": \"PFOA (long-chain PFAS)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E05\",\n        \"S10-E02\"\n      ],\n      \"value\": \"PFBS (short-chain PFAS)\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E05\",\n        \"S10-E02\"\n      ],\n      \"value\": \"PFBA (short-chain PFAS)\"\n    }\n  ],\n  \"quantitative_findings\": [\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E02\",\n        \"S10-E05\"\n      ],\n      \"name\": \"short-chain PFBS removal at highest concentration\",\n      \"qualifiers\": \"For PFBS at the highest initial concentration tested (400,000 ng/L), 99% removal was achieved in approximately 50 minutes of CTAB-enhanced foam fractionation, corresponding to removal of ~335 \\u00b5g PFBS mass; time and mass relationship described in text.\",\n      \"unit\": \"% removal\",\n      \"value\": \"99\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E02\",\n        \"S10-E05\"\n      ],\n      \"name\": \"short-chain PFBA removal at highest concentration\",\n      \"qualifiers\": \"For PFBA at the highest initial concentration tested (400,000 ng/L), 99% removal was achieved in approximately 50 minutes of CTAB-enhanced foam fractionation, corresponding to removal of ~335 \\u00b5g PFBA mass; time and mass relationship described in text.\",\n      \"unit\": \"% removal\",\n      \"value\": \"99\",\n      \"value_form\": \"exact_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E02\"\n      ],\n      \"name\": \"PFBS mass removed at highest concentration\",\n      \"qualifiers\": \"\\\"The 99% removal achieved for the highest concentration values corresponds to approximately ~335 \\u00b5g mass of each PFAS\\\"; applies to PFBS and PFBA at 400,000 ng/L initial concentration.\",\n      \"unit\": \"\\u00b5g\",\n      \"value\": \"~335\",\n      \"value_form\": \"approximate_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E02\"\n      ],\n      \"name\": \"PFBS mass removed at lowest concentration\",\n      \"qualifiers\": \"At the lowest PFAS concentration tested (400 ng/L), approximately 335 ng of each PFAS (including PFBS) was removed in the same operation time required for the highest concentration, illustrating consistent removal kinetics across three orders of magnitude in concentration.\",\n      \"unit\": \"ng\",\n      \"value\": \"~335\",\n      \"value_form\": \"approximate_numeric\"\n    },\n    {\n      \"evidence_locator_ids\": [\n        \"S10-E02\"\n      ],\n      \"name\": \"PFBA mass removed at lowest concentration\",\n      \"qualifiers\": \"At the lowest PFAS concentration tested (400 ng/L), approximately 335 ng of each PFAS (including PFBA) was removed in the same operation time required for the highest concentration, illustrating consistent removal kinetics across three orders of magnitude in concentration.\",\n      \"unit\": \"ng\",\n      \"value\": \"~335\",\n      \"value_form\": \"approximate_numeric\"\n    }\n  ],\n  \"record_id\": \"RT07-bge_llm_local_rag-S10-R02\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"S10-E01\",\n        \"S10-E08\"\n      ],\n      \"statement\": \"The study notes the importance of minimizing residual water pollution with cationic surfactants used for treatment, implying that CTAB residuals in treated water are a concern that must be managed, though specific post-treatment strategies are not detailed in the provided excerpts.\"\n    }\n  ],\n  \"source_id\": \"S10\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"S10-E05\",\n      \"S10-E02\",\n      \"S10-E03\"\n    ],\n    \"value\": \"laboratory foam fractionation experiments (synthetic groundwater) with cationic co-surfactant CTAB\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"S10-E05\",\n      \"S10-E03\",\n      \"S10-E08\"\n    ],\n    \"value\": \"foam fractionation with cationic co-surfactant cetyltrimethylammonium bromide (CTAB)\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"bge_document_rank\": 10,\n  \"bge_score\": 0.8234655261039734,\n  \"citation\": \"Klevan, C.; Van Allen, O.; Mukai, K.; Gomes, A.; Xia, S.; Caines, S.; Woodcock, M.J.; Pennell, K.D. Removal of long- and short-chain PFAS from groundwater by foam fractionation. Environmental Science: Water Research & Technology 2025 11 2295-2307. DOI: 10.1039/d5ew00440c.\",\n  \"doi\": \"10.1039/d5ew00440c\",\n  \"doi_or_stable_url\": \"https://doi.org/10.1039/d5ew00440c\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": 3,\n      \"locator_id\": \"S10-E01\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.005750355310738087,\n        \"RT07-C2\": 0.14604882895946503,\n        \"RT07-C3\": 0.0014022933319211006,\n        \"umbrella\": 0.8623073697090149\n      },\n      \"section\": \"unknown\",\n      \"text\": \"13,14 Due to the tendency for many PFAS to accumulate at the air\\u2013water interface, foam fractionation has emerged as a promising method to remove PFAS from contaminated water. Foam fractionation involves the injection of air into the bottom of a vessel containing contaminated water, where PFAS then accumulate at the air \\u2013water interface of the air bubbles as they rise through the water column, with a goal of creating a PFAS-enriched foam at the top of the water column. Removal efficiencies for long-chain PFAS typically approach >90%, whereas short-chain PFAS may only achieve Environ. Sci.: Water Res. Technol.,2 0 2 5 ,11, 2295\\u20132307 | 2295This journal is \\u00a9 The Royal Society of Chemistry 2025 Brown University, School of Engineering, Providence, RI, USA. E-mail: kurt_pennell@brown.edu Water impact Per- and polyfluoroalkyl substances (PFAS) concentrations in groundwater may span orders of magnitude. This work exhibits the versatility of catio nic surfactant-enhanced foam fractionation over a range of long-chain and short-chain PFAS concentrations in groundwater including water contaminat ed with aqueous film-forming foam (AFFF) and provides key insights into avoiding spreading contamination through aerosolization and minimizing residual water pollution with cationic surfactants used for treatment. Open Access Article.\"\n    },\n    {\n      \"corpus_chunk\": 24,\n      \"locator_id\": \"S10-E02\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.09652639180421829,\n        \"RT07-C2\": 0.058158062398433685,\n        \"RT07-C3\": 0.00041341656469739974,\n        \"umbrella\": 0.29760754108428955\n      },\n      \"section\": \"introduction\",\n      \"text\": \"tested in the synthetic groundwater at individual concentrations ranging from 400 ng L \\u22121 (0.4 \\u03bcgL \\u22121)t o 400 000 ng L \\u22121 (400 \\u03bcgL \\u22121). As shown in Fig. 5a, the long- chain PFAS (PFOS and PFOA) exhibited near complete removal in as short as 5 minutes. Fig. 6 shows that the removal profiles for these compounds obtained at different initial PFAS concentrations were nearly identical, indicating that the chosen operation parameters for the system will remove long-chain PFAS similarly over a three order of magnitude concentration range. The removal efficiencies for PFBS and PFBA are shown in Fig. 6a and b, respectively. The PFAS removal profiles for each concentration were similar, indicating that the mass flow rate of CTAB was sufficient for removal of PFAS in concentrations up to orders of magnitude far greater than the typically observed in contaminated surface water and groundwater. 60,61 The lowest PFAS concentration mixture resulted in the steepest initial removal of PFBS and PFBA. The 99% removal achieved for the highest concentration values corresponds to approximately \\u223c 335 \\u03bcg mass of each PFAS and required the same amount of time as the lowest concentration, where approximately 335 ng of each PFAS was removed. At the highest PFAS concentration tested, the total PFAS in the\"\n    },\n    {\n      \"corpus_chunk\": 32,\n      \"locator_id\": \"S10-E03\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.0022253713104873896,\n        \"RT07-C2\": 0.49048396944999695,\n        \"RT07-C3\": 0.0007974446634761989,\n        \"umbrella\": 0.5729255080223083\n      },\n      \"section\": \"results\",\n      \"text\": \"dosing rate leads to the greatest recovery. This is likely because the higher dosing rate creates a stable foam able to retain the PFAS the most rapidly as opposed to lower dosing rates where it would take longer for the CTAB to be able to coat the bubble surfaces efficiently enough to create a stable foam, and until this point the experiment, in the absence of stable foam, the behavior is more similar to the control experiment with no CTAB where there is removal of PFAS yet no recovery. Since the VRF is an order of magnitude higher than the recovery, the EF for the lower dosing rates is still far higher than for the higher dosing rates despite the lesser PFAS recovery. This may potentially be mitigated by premixing CTAB with the PFAS prior to initiating aeration allowing for rapid formation of stable foam even with a low CTAB dose rate. Therefore, when optimizing a foam fractionation system, the tradeoffs between removal, material costs, operation time, foam volume generated, and treatment costs should be considered. 4 Conclusions This work highlights methods to overcome low removal of short-chain PFAS during foam fractionation through addition of cationic co-surfactants. The initial control experiment demonstrated that while bubble flotation in the absence of Fig. 8 Removal of a) PFBS and b) PFBA from contaminated synthetic groundwater at four different mass flow rates of CTAB.\"\n    },\n    {\n      \"corpus_chunk\": 30,\n      \"locator_id\": \"S10-E04\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.003229302354156971,\n        \"RT07-C2\": 0.3270556330680847,\n        \"RT07-C3\": 0.0030175636056810617,\n        \"umbrella\": 0.5032705664634705\n      },\n      \"section\": \"methods\",\n      \"text\": \"\\u22121 to 0.1 mg min \\u22121. However, there are several other optimization parameters to be considered. Cost is always important to consider in a system such as the one used in this study would increase with increased CTAB dosing as the material used increases linearly with time (Fig. 9a). Along with PFAS removal, other metrics for foam fractionation success include volume reduction factors (VRFs), PFAS enrichment factors (EF), and mass recovery. VRF is the ratio of the volume of solution to be treated to the volume of collapsed foam at the termination of a foam fractionation run. For a compound of interest, the EF is the ratio of the concentration of that species in the foamate to the concentration of the compound in the initial solution and would be equal to the VRF if removal and recovery were both 100%. For instance, if a goal were to treat 1000 L of water containing to 4000 ng L \\u22121 of PFOA to a volume of 10 L and have a remaining concentration of 4 ng L \\u22121 to comply with EPA maximum concentration levels (MCL) the VRF would be 100 and the EF would be 99.9 assuming all removed PFAS mass ends in the foamate. However, if only 70% of the removed mass was detected in the foamate the\"\n    },\n    {\n      \"corpus_chunk\": 23,\n      \"locator_id\": \"S10-E05\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.003392366459593177,\n        \"RT07-C2\": 0.04062753543257713,\n        \"RT07-C3\": 0.00046392259537242353,\n        \"umbrella\": 0.6515721082687378\n      },\n      \"section\": \"introduction\",\n      \"text\": \"removal in as short as five minutes, while the same level of removal was achieved for PFBS and PFBA after approximately 50 minutes of operation. The enhanced removal of PFOA and PFOS was attributed to the mechanisms associated with the introduction of CTAB into the system. As inferred from Fig. 3, the introduction of CTAB reduces the interfacial tension of the solution, which is directly proportional to bubble size allowing for stabilization and longer lifetimes of smaller bubbles. 57 The smaller bubbles provide increased surface area for adsorption, which is further explored in Section III of the SI. As the CTAB adsorbs to the bubble surfaces, the positive charges are on the outside of the bubble allowing for electrostatic repulsions between bubbles preventing merging, which in turn allows for a greater quantity of small bubbles available for the PFAS to adsorb. 58 (Fig. S2). Similarly, removal of PFBS and PFBA was enhanced due to the greater interfacial area, coupled with interaction with CTAB, and subsequent migration to the air \\u2013water interface as an ion pair. 17,18,59 3.2.2 Effects of initial PFAS concentration on removal. To demonstrate that foam fractionation would be effective over a wide range of PFAS concentrations, the four PFAS were tested in the synthetic groundwater at individual concentrations ranging from 400 ng L\"\n    },\n    {\n      \"corpus_chunk\": 19,\n      \"locator_id\": \"S10-E06\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.009167486801743507,\n        \"RT07-C2\": 0.05309293791651726,\n        \"RT07-C3\": 0.0005661470349878073,\n        \"umbrella\": 0.5154232978820801\n      },\n      \"section\": \"methods\",\n      \"text\": \"of stable foams. 46 Foamability, the foam generation capacity, and foam stability, the lifetime of the foam, must be considered during foam fractionation. Likewise foam properties such as liquid content are important to consider as foam drainage may reintroduce PFAS back into the bulk liquid. 47\\u201349 Foam consistency is explored further in the SI section: SIII: Additional bubble and foam analysis. 3.2 Foam fractionation experiments 3.2.1 Control experiment. Based on the surface tension results shown in Fig. 3, CTAB was selected as the co-foaming agent for subsequent foam fractionation experiments. An initial foam fractionation experiment was performed to understand the removal of PFAS in synthetic groundwater with no co-surfactant present. Initial concentrations for each of the four PFAS compounds (PFOS, PFOA, PFBS, PFBA) were approximately 40 \\u03bcgL \\u22121. All initial concentrations were confirmed by LC-MS/MS and are listed in Table S2. The long- chain PFAS (PFOS and PFOA) exhibited rapid removal, which plateaued at approximately 90% and 60%, respectively. The greater removal of PFOS compared to PFOA is consistent with their relative their surface excesses (Fig. S7) from the accumulation at the air \\u2013water interface determined from surface tension measurements (Fig. 2). PFBS and PFBA\"\n    },\n    {\n      \"corpus_chunk\": 35,\n      \"locator_id\": \"S10-E07\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.0029401066713035107,\n        \"RT07-C2\": 0.08076249063014984,\n        \"RT07-C3\": 0.0009088986553251743,\n        \"umbrella\": 0.4886699616909027\n      },\n      \"section\": \"methods\",\n      \"text\": \"review & editing, visualization Kelly Mukai: methodology, investigation, writing \\u2013 review & editing, visualization Andre Gomes: methodology, investigation, writing \\u2013 review & editing, visualization Seth Caines: methodology, investigation, writing \\u2013 review & editing, visualization Matthew Woodcock: formal analysis, resources, writing \\u2013 review & editing Kurt Pennell: conceptualization, writing \\u2013 original draft, writing \\u2013 review & editing, supervision, project administration, funding acquisition. Conflicts of interest Kurt Pennell and Craig Klevan are listed as inventors on a pending patent application # 63/777,267 which involves additives to improve foam fractionation. Data availability The data supporting this article have been included as part of the SI. Fig. 9 Additional considerations to optimize the foam fractionation system for PFAS removal with CTAB as a co-surfactant a) CTAB material usage, b) collected foam over time c) volume reduction factor at end of experiment (120 min) and d) enrichment factors for each PFAS species. Error bars are due to the standard deviations in influent concentration ( n = 3 replicate measurements) and standard deviations in foamate concentration ( n = 3 replicate measurements) in calculation of the enrichment factor. Environmental Science: Water Research & Technology Paper Open Access Article. Published on 28 July 2025.\"\n    },\n    {\n      \"corpus_chunk\": 5,\n      \"locator_id\": \"S10-E08\",\n      \"query_scores\": {\n        \"RT07-C1\": 0.00892181321978569,\n        \"RT07-C2\": 0.02764320559799671,\n        \"RT07-C3\": 0.00029001038637943566,\n        \"umbrella\": 0.47511065006256104\n      },\n      \"section\": \"unknown\",\n      \"text\": \"to reduce the ability of cationic co-surfactants to enhance the removal of short-chain PFAS. 10,24\\u201326 Due to these issues, it is often necessary to pilot test foam fractionation systems and adjust parameters until removal targets have been achieved. F o re x a m p l e ,t h ep e r f o r m a n c eo fC T A Bw i t hP F A S - i m p a c t e d groundwater has not been extensively studied, nor has removal performance been demonstrated over a range of PFAS concentrations, in particular, dilute concentrations that are typically observed in groundwater plumes. 16 Thus, the overall goal of this work was to evaluate the ability of six cationic co-surfactants (3 poly(diallyldimethylammonium chloride) (polyDADMAC) and 3 trimethylammonium compounds) to enhance the removal of both long- and short-chain PFAS during foam fractionation of synthetic and natural PFAS-impacted groundwaters. Surface tension data were measured for each co-surfactant, and this information was used to guide co-surfactant selection for foam fractionation tests with synthetic groundwater containing long- and short-chain PFAS over four orders of magnitude concentration range. Based on these results, foam fractionation with CTAB was evaluated using PFAS-impacted groundwater from two military installations,\"\n    }\n  ],\n  \"publication_status\": \"peer_reviewed_or_formally_published\",\n  \"source\": \"2025 - Klevan - Removal of long- and short-chain PFAS from groundwater by foam fractionation.pdf\",\n  \"source_id\": \"S10\",\n  \"title\": \"Removal of long- and short-chain PFAS from groundwater by foam fractionation\",\n  \"year\": \"2025\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "ee0924a5434c7873aa91b925e632a432a3b85e05a017ba5cce955c6f355bd288",
+  "response_metadata": {
+    "cached_input_tokens": 1152,
+    "estimated_cost_usd": 0.05465275,
+    "finish_reason": "stop",
+    "input_tokens": 6983,
+    "latency_seconds": 37.448162458022125,
+    "output_tokens": 4722,
+    "reasoning_tokens": 1905,
+    "response_id": "chatcmpl-E9NUENvUOFgi67gkDA3BUJSqV43Ky",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 11705,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "none",
+        "field_path": "citation",
+        "reason": "The citation text matches the article information in the source, including authors, title, journal, year, pages, and DOI (chunk S10-E01).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "doi_or_stable_url",
+        "reason": "The DOI URL 10.1039/d5ew00440c matches the DOI reported in the source (chunks S10-E01, S10 main metadata).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "matrix",
+        "reason": "The record states synthetic groundwater, which is explicitly described for these PFAS tests (\"tested in the synthetic groundwater\" and \"foam fractionation of synthetic ... groundwaters\" in S10-E02, S10-E05, S10-E08).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope",
+        "reason": "The four PFAS listed (PFOS, PFOA, PFBS, PFBA) are exactly those described as tested in synthetic groundwater (S10-E02, S10-E05).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale",
+        "reason": "The description of laboratory foam fractionation experiments with CTAB in synthetic groundwater is consistent with the methods and aims described in S10-E05 and S10-E08.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_type",
+        "reason": "The article reports original experimental work on PFAS removal by foam fractionation, fitting a primary experiment classification (multiple chunks including S10-E02, S10-E05).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment",
+        "reason": "Foam fractionation with CTAB as a cationic co-surfactant is clearly described as the evaluated treatment (S10-E05, S10-E06, S10-E08).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "Removal is measured as PFAS concentration decrease/removal efficiencies over time in the aqueous phase (e.g., \"near complete removal\" and \"99% removal\" in S10-E02, S10-E05), consistent with a removal endpoint.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "endpoints[0]",
+        "reason": "The general interpretation (PFAS removal from synthetic groundwater by CTAB-enhanced foam fractionation, long-chain near-complete removal in ~5 min, short-chain requiring ~50 min with high removal) is supported by S10-E02 and S10-E05. However, the statement that PFBS and PFBA reached \"up to 99%\" removal specifically at ~50 min is inferred by combining separate mentions of 50 min (S10-E05) and 99% removal at the highest concentration (S10-E02); the time associated with the 99% value is not explicitly tied to 50 min in the cited text.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "VRF, EF, and mass recovery describe distribution of PFAS between bulk solution and foamate, which is properly classified as a separation endpoint (S10-E03, S10-E04, S10-E07).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1]",
+        "reason": "The record\u2019s explanation of VRF (volume solution/foam), EF (concentration foamate/initial), and their use with mass recovery matches the definitions and discussion in S10-E04 and mention of VRF and EF in Fig. 9 in S10-E07; noting that numerical values are not present in the provided text is accurate for these excerpts.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].value",
+        "reason": "S10-E02 states that the PFAS were tested at individual concentrations ranging from 400 ng L\u22121 to 400 000 ng L\u22121, matching the recorded range 400\u2013400000.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0].unit",
+        "reason": "The concentration range in S10-E02 is explicitly in ng L\u22121, matching the unit ng/L.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[0]",
+        "reason": "Name and qualifiers correctly describe that each PFAS (PFOS, PFOA, PFBS, PFBA) was tested individually in synthetic groundwater over the stated range (S10-E02).",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].value",
+        "reason": "S10-E02 reports that long-chain PFAS (PFOS and PFOA) exhibited near complete removal in as short as 5 minutes, matching the value 5.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1].unit",
+        "reason": "The 5-minute operation time is expressed in minutes in S10-E02, matching unit min.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[1]",
+        "reason": "The description of operation time for near-complete removal of PFOS and PFOA (5 minutes, near complete but without an exact % value) is consistent with S10-E02.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].value",
+        "reason": "S10-E05 states that the same level of removal for PFBS and PFBA was achieved after approximately 50 minutes of operation, supporting the value 50.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "operating_conditions[2].unit",
+        "reason": "The time is clearly given in minutes (\"50 minutes\" in S10-E05), matching unit min.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "operating_conditions[2]",
+        "reason": "S10-E05 supports that PFBS and PFBA required approximately 50 minutes to achieve the same level of removal as long-chain PFAS, but it does not explicitly state that this level is 99% or that 99% at the highest concentration specifically required ~50 minutes. That linkage is inferred from S10-E02 and is not directly stated.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].value",
+        "reason": "S10-E02 states \"The 99% removal achieved for the highest concentration values\" and refers to \"each PFAS\"; this includes PFBS, supporting the value 99 for PFBS at the highest concentration.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[0].unit",
+        "reason": "The 99% figure refers to a removal efficiency (S10-E02), so \"% removal\" is an appropriate and consistent unit description.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "quantitative_findings[0]",
+        "reason": "The 99% removal at the highest concentration and the associated ~335 \u00b5g mass for each PFAS are supported by S10-E02, but the qualifier tying this specifically to occurring in approximately 50 minutes is not explicitly stated in the cited text and is inferred from a separate statement about 50 minutes (S10-E05).",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].value",
+        "reason": "As with PFBS, S10-E02\u2019s phrase \"The 99% removal achieved for the highest concentration values\" and \"each PFAS\" also includes PFBA, supporting 99% removal at the highest concentration.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[1].unit",
+        "reason": "The 99% is clearly a removal efficiency; \"% removal\" is consistent with S10-E02.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "quantitative_findings[1]",
+        "reason": "99% removal and ~335 \u00b5g removed for each PFAS at the highest concentration are supported (S10-E02), but the qualifier asserting that this was achieved in approximately 50 minutes is inferred rather than explicitly tied to the 99% value in the text.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].value",
+        "reason": "S10-E02 states that the 99% removal at the highest concentration corresponds to approximately ~335 \u00b5g mass of each PFAS, matching the approximate value ~335.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2].unit",
+        "reason": "The mass is explicitly given in micrograms (\"335 \u00b5g\" in S10-E02), so unit \u00b5g is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[2]",
+        "reason": "The finding that ~335 \u00b5g of each PFAS is removed at the highest concentration is directly stated in S10-E02 and the approximate numeric form is correctly represented.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].value",
+        "reason": "S10-E02 reports that at the lowest concentration, approximately 335 ng of each PFAS was removed, matching the approximate value ~335.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3].unit",
+        "reason": "The unit in S10-E02 is explicitly nanograms (\"335 ng\"), matching unit ng.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[3]",
+        "reason": "The description of ~335 ng removed at the lowest concentration for each PFAS, including PFBS, matches S10-E02; the approximation is clearly indicated in the record.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].value",
+        "reason": "S10-E02 states that approximately 335 ng of each PFAS was removed at the lowest concentration, which includes PFBA and matches value ~335.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4].unit",
+        "reason": "The value is given as 335 ng in S10-E02, so unit ng is correct.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "quantitative_findings[4]",
+        "reason": "The record\u2019s description for PFBA at the lowest concentration is consistent with S10-E02, which states approximately 335 ng of each PFAS was removed.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "Given that the cited excerpts describe a common synthetic groundwater matrix, CTAB-enhanced foam fractionation setup, and individual testing of the four PFAS across the same concentration range and removal endpoint (S10-E02, S10-E03, S10-E04, S10-E05), classifying comparisons as comparable_with_conditions is a reasonable inference.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability",
+        "reason": "The reasoning that experiments share matrix, treatment, endpoint, and concentration range, enabling comparison of long- vs short-chain behavior with some conditional caveats, follows from S10-E02, S10-E03, S10-E04, and S10-E05.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "It is a reasonable design-inferred limitation that results using only four PFAS in synthetic groundwater and focusing on CTAB may not generalize to other PFAS mixtures, co-contaminants, or co-surfactants; the experimental scope is supported by S10-E02, S10-E05, and S10-E08.",
+        "status": "supported"
+      },
+      {
+        "error_type": "other",
+        "field_path": "limitations[1]",
+        "reason": "S10-E03, S10-E04, and S10-E07 indicate that VRF, EF, and mass recovery are quantified and presented in Fig. 9; therefore it is incorrect to state as a study limitation that these quantities are only conceptually discussed and not reported numerically. The observed lack of numeric data is due to the excerpt selection, not to the study design.",
+        "status": "unsupported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "S10-E01 explicitly mentions \"minimizing residual water pollution with cationic surfactants used for treatment,\" supporting concern about residual co-surfactants. However, the specific implication that CTAB residuals in the treated water are a major concern and that no post-treatment strategies are discussed extends beyond the explicit text; CTAB is the relevant surfactant but is not named in that sentence, and the absence of strategies is not directly established in the provided excerpts.",
+        "status": "partially_supported"
+      }
+    ],
+    "record_id": "RT07-bge_llm_local_rag-S10-R02",
+    "record_usable": true,
+    "record_usable_rationale": "Core elements\u2014source identity, matrix (synthetic groundwater), treatment (CTAB-enhanced foam fractionation), PFAS tested, operating conditions, and key quantitative removal findings\u2014are directly supported by the cited text. Minor issues involve overinterpretation of the association between 99% removal and 50-minute operation and one misframed limitation about unavailable VRF/EF numerics, but these do not compromise the primary experimental information for synthesis.",
+    "task_id": "RT07"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}

@@ -1,0 +1,212 @@
+{
+  "call_key": "RT03:gpt51_web_search:verify:RT03-gpt51_web_search-WEB04-R02",
+  "created_at": "2026-08-05T04:04:03.967944+00:00",
+  "raw_response_text": "{\"task_id\":\"RT03\",\"record_id\":\"RT03-gpt51_web_search-WEB04-R02\",\"anchor_exclusion_violation\":false,\"field_assessments\":[{\"field_path\":\"endpoints[0].endpoint_type\",\"status\":\"unsupported\",\"error_type\":\"endpoint_classification\",\"reason\":\"Locator WEB04-E02 states that the PFAS-rich regenerant is \\\"fully mineralized\\\" in a continuous-flow SCWO system, but provides no evidence of carbon fate (e.g., CO2 measurement or carbon balance). According to the review rules, mineralization requires direct carbon-fate evidence; here the text only supports PFAS destruction in SCWO, not mineralization as an endpoint type.\"},{\"field_path\":\"endpoints[1].endpoint_type\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E02 describes the PFAS-rich regenerant being treated in a continuous-flow SCWO system and WEB04-E03 refers to \\\"downstream PFAS destruction.\\\" These support classifying an endpoint of PFAS destruction (qualitative) for the regenerant stream.\"},{\"field_path\":\"matrix\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB04-E02 states only that \\\"The PFAS-rich regenerant is then fully mineralized...\\\" which supports that the matrix is a PFAS-rich regenerant. The added qualifier \\\"from ion exchange resin regeneration\\\" is not explicitly supported by WEB04-E02 alone (the IX resin context appears only in WEB04-E01, which is not cited for this field), so the origin of the regenerant is incompletely supported at the cited locator.\"},{\"field_path\":\"pfas_scope[0].value\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E02 refers to a \\\"PFAS-rich regenerant\\\" without further speciation. Recording the scope as generic PFAS, not further specified, matches the cited text.\"},{\"field_path\":\"treatment\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E02 states that the PFAS-rich regenerant is fully mineralized \\\"in a continuous-flow supercritical water oxidation (SCWO) system,\\\" directly supporting the treatment description as continuous-flow SCWO applied to the PFAS-rich regenerant.\"},{\"field_path\":\"endpoints[0].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E02 uses the phrase \\\"fully mineralized\\\" for the PFAS-rich regenerant. This matches the reported_term field exactly.\"},{\"field_path\":\"endpoints[1].reported_term\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E03 states that integrating rapid PFAS extraction and downstream PFAS destruction enables reuse, which aligns with the reported term \\\"PFAS destruction in regenerant.\\\"\"},{\"field_path\":\"endpoints[0].interpretation\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB04-E02 supports that the PFAS-rich regenerant is described as \\\"fully mineralized\\\" in SCWO, but it does not mention conversion of PFAS carbon specifically to CO2 or other inorganic carbon forms, nor does it provide numerical mineralization/defluorination metrics. The interpretation\u2019s implication about carbon fate goes beyond the cited text, though its note about the absence of quantitative values is consistent with the excerpt.\"},{\"field_path\":\"endpoints[1].interpretation\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E02 and WEB04-E03 describe SCWO treatment of the PFAS-rich regenerant and \\\"downstream PFAS destruction,\\\" with no quantitative metrics provided. The interpretation accurately characterizes this as conceptual/qualitative evidence of destruction within a treatment train without numerical performance data.\"},{\"field_path\":\"limitations[0]\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Given the provided excerpt (WEB04-E02) lacks any SCWO operating conditions, PFAS speciation, or quantitative destruction/mineralization efficiencies, the stated limitation is a reasonable design-inferred conclusion based on what is and is not reported in the extracted text.\"},{\"field_path\":\"residuals_byproducts[0]\",\"status\":\"partially_supported\",\"error_type\":\"qualifier\",\"reason\":\"WEB04-E02 states that the regenerant\u2019s chemical energy enables autogenic operation of the SCWO reactor and that this setup \\\"eliminat[es] secondary waste streams.\\\" This supports the claims of autogenic operation and elimination of secondary waste streams. However, the further implication that no additional persistent PFAS-containing residuals are generated is an inference not explicitly made in the text, so that portion of the statement is only partially supported.\"},{\"field_path\":\"study_scale\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"Within the supplied excerpt (WEB04-E02), no information is given about the experimental or system scale. Describing the study scale as \\\"not reported in extracted text\\\" is accurate for the cited locator.\"},{\"field_path\":\"comparability.status\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"WEB04-E02 and WEB04-E03 provide only qualitative descriptions of regenerant mineralization/destruction and autogenic SCWO operation, without operating conditions or quantitative destruction metrics. This justifies classifying the comparability status as \\\"descriptive_only\\\" for use in cross-study comparisons.\"},{\"field_path\":\"comparability.reason\",\"status\":\"supported\",\"error_type\":\"none\",\"reason\":\"The reason notes the absence of operating conditions and quantitative destruction metrics and the qualitative nature of the claims, which is consistent with the information (and omissions) in WEB04-E02 and WEB04-E03.\"}],\"record_usable\":true,\"record_usable_rationale\":\"Core aspects of the record\u2014including the treatment (continuous-flow SCWO of a PFAS-rich regenerant), destruction endpoint, and qualitative nature of the evidence\u2014are supported by the cited text. The main issue is misclassification of one endpoint as mineralization without carbon-fate evidence, which is flagged as an endpoint_classification error but does not invalidate the record\u2019s overall utility for qualitative assessment of PFAS destruction in SCWO.\"}",
+  "request": {
+    "max_completion_tokens": 12000,
+    "messages": [
+      {
+        "content": "You are verifying one structured PFAS study evidence record against the\ncomplete source evidence cited by that record.\n\nYou receive:\n1. the review task and task-specific extraction objective;\n2. the held-out anchor identifiers;\n3. one extracted evidence record; and\n4. the complete source chunks or inspected source-page text referenced by the\n   record.\n\nJudge only source support and transcription. Do not reward usefulness,\nverbosity, or agreement with general background knowledge.\n\nAssess every substantive populated source-dependent field against only its\nattached field-level locators. Do not create separate assessments for locator\narrays, record IDs, or formatting metadata:\n- supported: the cited evidence directly supports the field and its material\n  qualifiers;\n- partially_supported: the core statement is supported but a material\n  qualifier, condition, denominator, or scope is missing;\n- unsupported: the cited evidence does not establish the field;\n- contradicted: the cited evidence directly conflicts with the field.\n\nFor quantitative_findings, value must contain an actual number, censored or\napproximate number, range, or explicit ND/not-detected result. A unit-shaped\nstring such as \"nmol/L\" in value with an empty unit is a unit error even when\nthe source mentions that concentration scale. Do not silently reinterpret one\nschema field as another. Confirm that value matches value_form; explanatory\ntext and uncertainty belong in qualifiers.\n\nClassify endpoint_type from the measured basis, not the source's terminology.\nParent-compound loss alone is not destruction; phase transfer is not\ndegradation; inorganic fluoride release or fluorine-balance closure establishes\ndefluorination but not mineralization. Mineralization requires direct\ncarbon-fate evidence such as measured CO2/inorganic carbon or a carbon balance.\nIf an author calls defluorination mineralization without that evidence, retain\nthe author phrase only as reported_term and mark endpoint_type=mineralization\nunsupported with error_type=endpoint_classification.\n\nComparability is an analyst-derived judgment. Do not require the source to\nstate the comparability conclusion verbatim. Instead, judge whether its status\nand reason follow conservatively from supported cited fields for matrix, PFAS\nscope, scale, conditions, endpoint, unit, and denominator.\n\nAn author_reported limitation requires direct source support. A\ndesign_inferred limitation is supported when it follows necessarily from\ncited design facts; absence from the supplied packet is not a study\nlimitation.\n\nClassify errors as numeric_transcription, unit, qualifier,\nendpoint_classification, source_attribution, other, or none. A record is usable\nonly if its source identity, matrix, treatment, endpoints, and quantitative\nfindings are not unsupported or contradicted in a way that would mislead\n  synthesis. A usable record can still contain non-core fields that synthesis\nmust exclude according to their field assessments.\n\nFor metric consistency, always emit separate assessments with these exact\nfield-path forms when the corresponding item exists:\n- `quantitative_findings[i].value`;\n- `quantitative_findings[i].unit`;\n- `operating_conditions[i].value`;\n- `operating_conditions[i].unit`;\n- `endpoints[i].endpoint_type`; and\n- `comparability.status`.\n\nOther substantive fields may be assessed individually or as a whole object,\nbut do not omit these required assessment types and do not emit a required\nfield path more than once.\n\nReport anchor_exclusion_violation=true if the source resolves to any held-out\nanchor DOI, URL, exact title, or corpus source.\n\nReturn one JSON object that follows the supplied verification schema exactly.\n",
+        "role": "system"
+      },
+      {
+        "content": "Review task:\n{\"review_brief\":\"Prepare a focused review of the evidence needed to choose among regeneration, replacement, and end-of-life management for PFAS-loaded adsorption media.\",\"task_id\":\"RT03\",\"title\":\"Deciding whether to regenerate or replace PFAS adsorption media\"}\n\nTask-specific extraction objective:\nExtract adsorbent and PFAS identity, loading protocol, regeneration or disposal method, operating conditions, desorption or destruction endpoint, capacity recovery, cycle number, material change, residual streams, energy, chemicals, and cost.\n\nHeld-out anchor identifiers:\n{\"all_blocked_dois\":[\"10.1016/j.envpol.2023.121138\"],\"all_blocked_titles\":[\"a review of pfas adsorption from aqueous solutions current approaches engineering applications challenges and opportunities\"],\"all_blocked_urls\":[\"https://doi.org/10.1016/j.envpol.2023.121138\"],\"anchor_id\":\"AR-LEI-2023\",\"corpus_source\":\"2023 - Lei - A review of PFAS adsorption from aqueous solutions - Current approaches, engineering applications, challenges, and opportunities.pdf\",\"doi\":\"10.1016/j.envpol.2023.121138\",\"title\":\"A review of PFAS adsorption from aqueous solutions: Current approaches, engineering applications, challenges, and opportunities\",\"url\":\"https://doi.org/10.1016/j.envpol.2023.121138\"}\n\nExtracted evidence record:\n{\n  \"citation\": \"Authors not fully listed in inspected excerpt. Supercritical CO2 regeneration of spent ion exchange resins and regenerant destruction \\u2013 towards zero PFAS waste. ChemRxiv / Cambridge Open Engage preprint. 2024.\",\n  \"comparability\": {\n    \"evidence_locator_ids\": [\n      \"WEB04-E02\",\n      \"WEB04-E03\"\n    ],\n    \"reason\": \"Only qualitative claims of full mineralization and autogenic SCWO operation are reported in the extracted text, without operating conditions or quantitative destruction metrics, preventing robust comparison with other PFAS destruction technologies.\",\n    \"status\": \"descriptive_only\"\n  },\n  \"doi_or_stable_url\": \"https://www.cambridge.org/engage/api-gateway/coe/assets/orp/resource/item/6966aa8d5c91413e6ecb1020/original/supercritical-co2-regeneration-of-spent-ion-exchange-resins-and-regenerant-destruction-towards-zero-pfas-waste.pdf\",\n  \"endpoints\": [\n    {\n      \"endpoint_type\": \"mineralization\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E02\"\n      ],\n      \"interpretation\": \"The PFAS-rich regenerant is reported to be fully mineralized in a continuous-flow SCWO system, implying conversion of PFAS carbon to inorganic forms (e.g., CO2) rather than mere parent-compound loss; no numerical mineralization or defluorination percentages are provided in the extracted text.\",\n      \"reported_term\": \"fully mineralized\"\n    },\n    {\n      \"endpoint_type\": \"destruction\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E02\",\n        \"WEB04-E03\"\n      ],\n      \"interpretation\": \"Authors conceptually describe downstream PFAS destruction in SCWO as part of the treatment train, but only qualitative evidence of destruction/mineralization and elimination of secondary waste streams is provided in the extracted excerpts.\",\n      \"reported_term\": \"PFAS destruction in regenerant\"\n    }\n  ],\n  \"limitations\": [\n    {\n      \"basis\": \"design_inferred\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E02\"\n      ],\n      \"statement\": \"The extracted text does not report SCWO operating conditions (e.g., temperature, pressure, residence time), PFAS speciation in the regenerant, or quantitative PFAS destruction/mineralization efficiencies, limiting quantitative assessment of SCWO performance.\"\n    }\n  ],\n  \"matrix\": {\n    \"evidence_locator_ids\": [\n      \"WEB04-E02\"\n    ],\n    \"value\": \"PFAS-rich regenerant from ion exchange resin regeneration\"\n  },\n  \"operating_conditions\": [],\n  \"pfas_scope\": [\n    {\n      \"evidence_locator_ids\": [\n        \"WEB04-E02\"\n      ],\n      \"value\": \"PFAS (not further specified; described as PFAS-rich regenerant)\"\n    }\n  ],\n  \"quantitative_findings\": [],\n  \"record_id\": \"RT03-gpt51_web_search-WEB04-R02\",\n  \"residuals_byproducts\": [\n    {\n      \"basis\": \"author_reported\",\n      \"evidence_locator_ids\": [\n        \"WEB04-E02\"\n      ],\n      \"statement\": \"The SCWO system is described as autogenic, with the regenerant\\u2019s chemical energy enabling operation and eliminating secondary waste streams, implying no additional persistent PFAS-containing residuals are generated from the SCWO step in the described configuration.\"\n    }\n  ],\n  \"source_id\": \"WEB04\",\n  \"study_scale\": {\n    \"evidence_locator_ids\": [\n      \"WEB04-E02\"\n    ],\n    \"value\": \"not reported in extracted text\"\n  },\n  \"study_type\": \"primary_experiment\",\n  \"treatment\": {\n    \"evidence_locator_ids\": [\n      \"WEB04-E02\"\n    ],\n    \"value\": \"Continuous-flow supercritical water oxidation (SCWO) applied to PFAS-rich regenerant\"\n  }\n}\n\nComplete cited source evidence:\n{\n  \"access_scope\": \"full_text\",\n  \"capture_source_id\": \"WEB40\",\n  \"citation\": \"Authors not fully listed in inspected excerpt. Supercritical CO2 regeneration of spent ion exchange resins and regenerant destruction \\u2013 towards zero PFAS waste. ChemRxiv / Cambridge Open Engage preprint. 2024.\",\n  \"covered_component_ids\": [\n    \"RT03-C1\",\n    \"RT03-C2\",\n    \"RT03-C3\"\n  ],\n  \"doi\": \"\",\n  \"doi_or_stable_url\": \"https://www.cambridge.org/engage/api-gateway/coe/assets/orp/resource/item/6966aa8d5c91413e6ecb1020/original/supercritical-co2-regeneration-of-spent-ion-exchange-resins-and-regenerant-destruction-towards-zero-pfas-waste.pdf\",\n  \"evidence_chunks\": [\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB04-E01\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Page 2 (P1)\",\n      \"text\": \"The scCO2-amended with ethanol and HCl achieves rapid and near-complete regeneration of PFOA-loaded resins, RE% = 99.7 \\u00b1 0.1% at T = 75 \\u00b0C and a 60 min contact time, without compromising their structure or surface functional groups, thus enabling repeated adsorption-regeneration cycles.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB04-E02\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Page 2 (P1)\",\n      \"text\": \"The PFAS-rich regenerant is then fully mineralized in a continuous-flow supercritical water oxidation (SCWO) system, where the regenerant's chemical energy enables the reactor's autogenic operation, eliminating secondary waste streams.\"\n    },\n    {\n      \"corpus_chunk\": null,\n      \"locator_id\": \"WEB04-E03\",\n      \"passage_type\": \"verbatim\",\n      \"section\": \"Page 2 (P1)\",\n      \"text\": \"Integrating rapid PFAS extraction and downstream PFAS destruction enables the reuse of IXR sorbents and reduces treatment costs, material consumption, and long-term environmental liability in PFAS remediation.\"\n    }\n  ],\n  \"publication_status\": \"preprint\",\n  \"publication_type\": \"primary_experiment\",\n  \"source\": \"https://www.cambridge.org/engage/api-gateway/coe/assets/orp/resource/item/6966aa8d5c91413e6ecb1020/original/supercritical-co2-regeneration-of-spent-ion-exchange-resins-and-regenerant-destruction-towards-zero-pfas-waste.pdf\",\n  \"source_id\": \"WEB04\",\n  \"source_limitations\": [\n    \"Preprint status; peer-review outcome is unknown.\",\n    \"Although the PDF was accessible, detailed cycle-by-cycle adsorption capacity data, PFAS speciation in SCWO effluent, and explicit energy balances for scCO2 and SCWO systems were not fully extracted in this capture.\",\n    \"The study focuses on PFOA-loaded resins; generalization to broader PFAS mixtures and field matrices may be limited.\"\n  ],\n  \"title\": \"Supercritical CO2 regeneration of spent ion exchange resins and regenerant destruction \\u2013 towards zero PFAS waste\",\n  \"year\": \"2024\"\n}\n\nAssess every substantive populated source-dependent field at its own attached\nlocator grain. Enforce numeric value/unit shape, measured endpoint definitions,\nand grounded comparability inference. Return the schema-constrained\nverification object.\n",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-5.1",
+    "reasoning_effort": "low",
+    "response_format": {
+      "json_schema": {
+        "name": "pfas_extraction_verification",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "anchor_exclusion_violation": {
+              "type": "boolean"
+            },
+            "field_assessments": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "error_type": {
+                    "enum": [
+                      "none",
+                      "numeric_transcription",
+                      "unit",
+                      "qualifier",
+                      "endpoint_classification",
+                      "source_attribution",
+                      "other"
+                    ],
+                    "type": "string"
+                  },
+                  "field_path": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "supported",
+                      "partially_supported",
+                      "unsupported",
+                      "contradicted"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "field_path",
+                  "status",
+                  "error_type",
+                  "reason"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_usable": {
+              "type": "boolean"
+            },
+            "record_usable_rationale": {
+              "type": "string"
+            },
+            "task_id": {
+              "pattern": "^RT(0[1-9]|10)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "task_id",
+            "record_id",
+            "anchor_exclusion_violation",
+            "field_assessments",
+            "record_usable",
+            "record_usable_rationale"
+          ],
+          "title": "PFAS review evidence extraction verification",
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    }
+  },
+  "request_hash": "9389dfc58d94e98f2c3858a3df171bac1e821b7bfc40b8ec0714ff8e2749e42a",
+  "response_metadata": {
+    "cached_input_tokens": 1152,
+    "estimated_cost_usd": 0.02345525,
+    "finish_reason": "stop",
+    "input_tokens": 2817,
+    "latency_seconds": 20.923269791994244,
+    "output_tokens": 2123,
+    "reasoning_tokens": 868,
+    "response_id": "chatcmpl-E9N8xNuJsFXqzzkT3Btix4RNy2Zzo",
+    "response_model": "gpt-5.1-2025-11-13",
+    "system_fingerprint": "",
+    "total_tokens": 4940,
+    "web_search_calls": 0
+  },
+  "result": {
+    "anchor_exclusion_violation": false,
+    "field_assessments": [
+      {
+        "error_type": "endpoint_classification",
+        "field_path": "endpoints[0].endpoint_type",
+        "reason": "Locator WEB04-E02 states that the PFAS-rich regenerant is \"fully mineralized\" in a continuous-flow SCWO system, but provides no evidence of carbon fate (e.g., CO2 measurement or carbon balance). According to the review rules, mineralization requires direct carbon-fate evidence; here the text only supports PFAS destruction in SCWO, not mineralization as an endpoint type.",
+        "status": "unsupported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].endpoint_type",
+        "reason": "WEB04-E02 describes the PFAS-rich regenerant being treated in a continuous-flow SCWO system and WEB04-E03 refers to \"downstream PFAS destruction.\" These support classifying an endpoint of PFAS destruction (qualitative) for the regenerant stream.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "matrix",
+        "reason": "WEB04-E02 states only that \"The PFAS-rich regenerant is then fully mineralized...\" which supports that the matrix is a PFAS-rich regenerant. The added qualifier \"from ion exchange resin regeneration\" is not explicitly supported by WEB04-E02 alone (the IX resin context appears only in WEB04-E01, which is not cited for this field), so the origin of the regenerant is incompletely supported at the cited locator.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "pfas_scope[0].value",
+        "reason": "WEB04-E02 refers to a \"PFAS-rich regenerant\" without further speciation. Recording the scope as generic PFAS, not further specified, matches the cited text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "treatment",
+        "reason": "WEB04-E02 states that the PFAS-rich regenerant is fully mineralized \"in a continuous-flow supercritical water oxidation (SCWO) system,\" directly supporting the treatment description as continuous-flow SCWO applied to the PFAS-rich regenerant.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[0].reported_term",
+        "reason": "WEB04-E02 uses the phrase \"fully mineralized\" for the PFAS-rich regenerant. This matches the reported_term field exactly.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].reported_term",
+        "reason": "WEB04-E03 states that integrating rapid PFAS extraction and downstream PFAS destruction enables reuse, which aligns with the reported term \"PFAS destruction in regenerant.\"",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "endpoints[0].interpretation",
+        "reason": "WEB04-E02 supports that the PFAS-rich regenerant is described as \"fully mineralized\" in SCWO, but it does not mention conversion of PFAS carbon specifically to CO2 or other inorganic carbon forms, nor does it provide numerical mineralization/defluorination metrics. The interpretation\u2019s implication about carbon fate goes beyond the cited text, though its note about the absence of quantitative values is consistent with the excerpt.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "endpoints[1].interpretation",
+        "reason": "WEB04-E02 and WEB04-E03 describe SCWO treatment of the PFAS-rich regenerant and \"downstream PFAS destruction,\" with no quantitative metrics provided. The interpretation accurately characterizes this as conceptual/qualitative evidence of destruction within a treatment train without numerical performance data.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "limitations[0]",
+        "reason": "Given the provided excerpt (WEB04-E02) lacks any SCWO operating conditions, PFAS speciation, or quantitative destruction/mineralization efficiencies, the stated limitation is a reasonable design-inferred conclusion based on what is and is not reported in the extracted text.",
+        "status": "supported"
+      },
+      {
+        "error_type": "qualifier",
+        "field_path": "residuals_byproducts[0]",
+        "reason": "WEB04-E02 states that the regenerant\u2019s chemical energy enables autogenic operation of the SCWO reactor and that this setup \"eliminat[es] secondary waste streams.\" This supports the claims of autogenic operation and elimination of secondary waste streams. However, the further implication that no additional persistent PFAS-containing residuals are generated is an inference not explicitly made in the text, so that portion of the statement is only partially supported.",
+        "status": "partially_supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "study_scale",
+        "reason": "Within the supplied excerpt (WEB04-E02), no information is given about the experimental or system scale. Describing the study scale as \"not reported in extracted text\" is accurate for the cited locator.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.status",
+        "reason": "WEB04-E02 and WEB04-E03 provide only qualitative descriptions of regenerant mineralization/destruction and autogenic SCWO operation, without operating conditions or quantitative destruction metrics. This justifies classifying the comparability status as \"descriptive_only\" for use in cross-study comparisons.",
+        "status": "supported"
+      },
+      {
+        "error_type": "none",
+        "field_path": "comparability.reason",
+        "reason": "The reason notes the absence of operating conditions and quantitative destruction metrics and the qualitative nature of the claims, which is consistent with the information (and omissions) in WEB04-E02 and WEB04-E03.",
+        "status": "supported"
+      }
+    ],
+    "record_id": "RT03-gpt51_web_search-WEB04-R02",
+    "record_usable": true,
+    "record_usable_rationale": "Core aspects of the record\u2014including the treatment (continuous-flow SCWO of a PFAS-rich regenerant), destruction endpoint, and qualitative nature of the evidence\u2014are supported by the cited text. The main issue is misclassification of one endpoint as mineralization without carbon-fate evidence, which is flagged as an endpoint_classification error but does not invalidate the record\u2019s overall utility for qualitative assessment of PFAS destruction in SCWO.",
+    "task_id": "RT03"
+  },
+  "result_kind": "json",
+  "stage": "source_verification"
+}
