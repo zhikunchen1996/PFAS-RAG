@@ -26,10 +26,10 @@
             "claim_group_id": "WF10_009-G02",
             "verdict": "partially_supported",
             "issues": [
-              "The third exact_spans entry (evidence_id WF10_009_MMG002) duplicates the exact_evidence_span used for the pH claim ('elevating the pH from 3.2 to 9.5 ... 91.17% to 97.49%'), but its 'supports' text instead describes the Ca2+ claim ('97.10% to 99.40%'), which is a different sentence in the approved full chunk ('The concentration of Ca 2 + was increased from 0.1 mM to 2 mM, and the level of PFOS rejection was raised from 97.10 % to 99.40 %.'). The quoted span does not actually contain the Ca2+ statement it is attached to."
+              "The third exact_spans entry (evidence_id WF10_009_MMG002) duplicates the exact_evidence_span used for the pH claim ('elevating the pH from 3.2 to 9.5 ... 91.17% to 97.49%'), but its 'supports' text instead describes the Ca2+ claim ('97.10% to 99.40%'), which is a different sentence in the approved full chunk ('[SOURCE_TEXT_OMITTED sha256=9f9eac7ecdae105927406ac4578789ad11226ff5d0e8316ab1caf9937631d9bf] %.'). The quoted span does not actually contain the Ca2+ statement it is attached to."
             ],
             "required_repairs": [
-              "Replace the mis-copied exact_evidence_span for the Ca2+ sub-claim with the correct verbatim sentence from the approved WF10_009_MMG002 full chunk ('The concentration of Ca 2 + was increased from 0.1 mM to 2 mM, and the level of PFOS rejection was raised from 97.10 % to 99.40 %.'), and flag it for project-author audit since it was not in the originally listed exact/unit spans."
+              "Replace the mis-copied exact_evidence_span for the Ca2+ sub-claim with the correct verbatim sentence from the approved WF10_009_MMG002 full chunk ('[SOURCE_TEXT_OMITTED sha256=9f9eac7ecdae105927406ac4578789ad11226ff5d0e8316ab1caf9937631d9bf] %.'), and flag it for project-author audit since it was not in the originally listed exact/unit spans."
             ]
           },
           {
@@ -54,7 +54,7 @@
             "claim_group_id": "WF10_009-X01",
             "verdict": "partially_supported",
             "issues": [
-              "The second exact_spans entry (evidence_id WF10_009_MMG001) duplicates the exact_evidence_span used for the CCMF/98.3% claim, but its 'supports' text instead references the phrase 'could reach up to 99%,' which is a different sentence in the approved full chunk ('...exhibited a good PFAS rejection in water and wastewater with efficiencies that could reach up to 99 %.'). The quoted span does not contain that phrase."
+              "The second exact_spans entry (evidence_id WF10_009_MMG001) duplicates the exact_evidence_span used for the CCMF/98.3% claim, but its 'supports' text instead references the phrase 'could reach up to 99%,' which is a different sentence in the approved full chunk ('...[SOURCE_TEXT_OMITTED sha256=388d28058f2c4442c88453a9b3debd95ccea6fcef6cae27b11ad34922f37965a] quoted span does not contain that phrase."
             ],
             "required_repairs": [
               "Replace the mis-copied exact_evidence_span with the correct verbatim sentence from the approved WF10_009_MMG001 full chunk containing 'could reach up to 99 %,' and flag it for project-author audit as a full-chunk-only span."
@@ -135,7 +135,7 @@
         "question_id": "WF10_011",
         "verdict": "repair_required",
         "question_level_issues": [
-          "Task component WF10_011-T02 (regeneration of the adsorbing/electrode surface under applied potential) has zero claim groups covering it; only constraint groups (all mapped to T01) exist. The approved full_chunk_text for WF10_011_MMG003 contains a directly on-topic, verbatim regeneration statement ('the bound PFOA could be effectively desorbed due to the charge repulsion when a negative bias was applied (e.g., regeneration of > 80 % at –1.5 V)') that was not selected as evidence, even though the prompt's rule explicitly allows using verbatim spans from an approved full chunk that were not separately listed as exact/unit spans. The draft_ledger's 'unresolved_or_unsupported' note that 'the citable evidence span available here does not explicitly cover regeneration behavior' is therefore inaccurate given the approved full chunk already in the packet.",
+          "Task component WF10_011-T02 (regeneration of the adsorbing/electrode surface under applied potential) has zero claim groups covering it; only constraint groups (all mapped to T01) exist. The approved full_chunk_text for WF10_011_MMG003 contains a directly on-topic, verbatim regeneration statement ('[SOURCE_TEXT_OMITTED sha256=0d68aea94d3b2f40ab8886ec4851b1376802dc6c4a4047bc16c4063574bc010e])') that was not selected as evidence, even though the prompt's rule explicitly allows using verbatim spans from an approved full chunk that were not separately listed as exact/unit spans. The draft_ledger's 'unresolved_or_unsupported' note that 'the citable evidence span available here does not explicitly cover regeneration behavior' is therefore inaccurate given the approved full chunk already in the packet.",
           "The previously flagged and reportedly resolved WF10_011-G02 span-sufficiency issue (unvalidated '60-fold and 150-fold' continuation) is confirmed fixed: the current exact_evidence_span for WF10_011_MMG005 stops before that continuation and matches the reference_answer's more limited claim."
         ],
         "group_reviews": [

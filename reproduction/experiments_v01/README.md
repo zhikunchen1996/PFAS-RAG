@@ -13,6 +13,7 @@ From the repository root:
 
 ```bash
 .venv/bin/python scripts/verify_experiment_release.py
+.venv/bin/python scripts/verify_public_source_projection.py
 .venv/bin/python reproduction/experiments_v01/validate_results.py
 .venv/bin/python reproduction/experiments_v01/aggregate_expert_scores.py
 .venv/bin/python -m unittest discover -s reproduction/experiments_v01/tests -v
@@ -44,14 +45,18 @@ legacy `main` entry points against the frozen results.
 ## Model Re-execution
 
 The stage order, prompts, schemas, model snapshots, and request manifests are
-in each experiment package. Exact stored outputs can be checked without API
-credentials. Fresh generation or judging requires provider access and may
-vary with hosted model availability. Do not overwrite the supplied canonical
-results; run paid stages in a separate working copy.
+in each experiment package. The public inventory and stored numeric results can
+be checked without API credentials. Source passages and embedded quotations
+have been replaced by hashes in the public records; these are not complete
+inputs for another model run. Restore original evidence in a separate working
+copy before source-dependent generation or judging. Fresh execution requires
+provider access and may vary with hosted model availability.
 
 Rebuilding retrieval additionally requires the recorded Chroma collection and
 lawfully obtained source documents. The release does not supply publisher
 PDFs or a vector database. The original ingestion code uses historical
 source-path-derived chunk IDs; do not substitute a rebuilt corpus with new IDs
-for the frozen benchmark contexts. Stored contexts support exact metric
-recomputation even without rebuilding that index.
+for the frozen benchmark contexts. The retained document IDs, chunk IDs and
+ranks support retrieval-metric recomputation without the passage text. The
+source-projection manifest preserves original record hashes separately from
+the hashes of the distributed files.

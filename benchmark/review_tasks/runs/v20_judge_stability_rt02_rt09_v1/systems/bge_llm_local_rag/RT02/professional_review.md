@@ -94,7 +94,7 @@ Abulikemu et al. provide an explicit limitation statement for a comprehensive is
 Shapiro et al. evaluated PFAS and pharmaceuticals on a β‑cyclodextrin polymer (StyDex) in municipal wastewater using both batch and RSSCT columns [S08]:
 
 - **Batch tests showed rapid sorption kinetics**, and kinetic constants k_ads could be estimated.  
-- However, **“batch sorption kinetic constants did not match column breakthrough kinetics, due to an inability to describe complex flow‑through behaviors”** [S08-E02, S08-E08].
+- [SOURCE_TEXT_OMITTED sha256=3b5c4d293dd81800fd45e2d7fc651f21075637024851e4cabf507f8aa27c9ea0]”** [S08-E02, S08-E08].
 - Column data showed:
   - BV₅₀ for PFOA and PFHxS increased markedly with increasing contact time; at 10 min contact, BV₅₀ was not reached over ~78,000 BVs, but at 3 min contact, BV₅₀ for PFOA and PFHxS dropped to 21,000 and 27,000 BVs, respectively [S08-E06].  
   - Several trace organics had BV₅₀ of only 20,000–25,000 BVs even at longer contact times [S08-E06].

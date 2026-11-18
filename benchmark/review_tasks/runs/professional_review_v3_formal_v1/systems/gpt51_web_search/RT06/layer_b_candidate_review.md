@@ -219,7 +219,7 @@ These findings show that:
 
 Only the Fe(III) flotation study explicitly measures **recovery** from the concentrated phase:
 
-- By adjusting the **pH of the concentrate scum to 7.0**, approximately **84–91% of PFOS and PFOA could be recovered** [R03‑E03].
+- [SOURCE_TEXT_OMITTED sha256=4aed19104e8f1e765039db6f38e502960450c0ffec270024b26e81af993b03bc]** [R03‑E03].
 
 This is distinct from the >99% removal from the initial dilute solution [R03‑E01]:
 

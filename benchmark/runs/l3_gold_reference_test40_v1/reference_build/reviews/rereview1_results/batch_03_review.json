@@ -10,7 +10,7 @@
         "question_id": "NQ27",
         "verdict": "repair_required",
         "question_level_issues": [
-          "Both of the previously flagged repairs (expanding NQ27_MMG001/NQ27_MMG008 registration and correcting NQ27_MMG010 exact_spans in G01/G02) were resolved, but a materially identical unregistered-span-reliance problem persists for NQ27_MMG005: G01 cites NQ27_MMG005 with a 'supports' description ('Supports the importance of replacing or regenerating GAC in PFAS treatment systems') that draws on the chunk sentence 'These findings highlight the importance of carbon replacement and/or regeneration for ensuring the removal of PFAS by GAC,' which is present in full_chunk_text but is not included in the registered exact_evidence_span or unit_exact_spans for NQ27_MMG005.",
+          "Both of the previously flagged repairs (expanding NQ27_MMG001/NQ27_MMG008 registration and correcting NQ27_MMG010 exact_spans in G01/G02) were resolved, but a materially identical unregistered-span-reliance problem persists for NQ27_MMG005: G01 cites NQ27_MMG005 with a 'supports' description ('Supports the importance of replacing or regenerating GAC in PFAS treatment systems') that draws on the chunk sentence '[SOURCE_TEXT_OMITTED sha256=6da7c00665923344cf86d182ee31e2785e3f92694add3fe06687fb5b142ab5fe],' which is present in full_chunk_text but is not included in the registered exact_evidence_span or unit_exact_spans for NQ27_MMG005.",
           "The reference_answer directly quotes this same unregistered sentence ('for ensuring the removal of PFAS by GAC' [NQ27_MMG005]), so the exact-span validity issue also propagates into the prose, not just the ledger's exact_spans metadata."
         ],
         "group_reviews": [
@@ -21,7 +21,7 @@
               "The NQ27_MMG005 exact_spans entry's 'supports' text ('importance of replacing or regenerating GAC') describes content from an unregistered continuation sentence in the chunk, not the registered exact_evidence_span/unit span (which only covers the 'has not been replaced ... chemical leaching' clause)."
             ],
             "required_repairs": [
-              "Add the sentence 'These findings highlight the importance of carbon replacement and/or regeneration for ensuring the removal of PFAS by GAC' to NQ27_MMG005's registered exact_evidence_span/unit_exact_spans, or revise the G01 'supports' text to describe only the leaching-related content actually present in the registered span."
+              "Add the sentence '[SOURCE_TEXT_OMITTED sha256=6da7c00665923344cf86d182ee31e2785e3f92694add3fe06687fb5b142ab5fe]' to NQ27_MMG005's registered exact_evidence_span/unit_exact_spans, or revise the G01 'supports' text to describe only the leaching-related content actually present in the registered span."
             ]
           },
           {
@@ -60,7 +60,7 @@
         "verdict": "repair_required",
         "question_level_issues": [
           "The single previously flagged issue (NQ28_MMG003's title-based inference in G01) was resolved by dropping that citation, but a broader, previously-unflagged pattern of the same underlying defect (exact_spans 'supports' descriptions relying on unregistered sentences elsewhere in the full_chunk_text rather than the quoted/registered span) is pervasive across NQ28-G01, NQ28-G02, and partially NQ28-G03.",
-          "The reference_answer directly quotes several sentences that are not present in any registered exact_evidence_span/unit_exact_span, including 'hydrated electron-based advanced reduction processes are considered to be among the several most effective techniques for degrading PFAS' (attributed to NQ28_MMG001), 'eaq− (hydrated electron) is more effective in eliminating PFAS ... than hydroxyl radical ... or sulfate radical' and 'nonselectively convert long- and short-chain PFAS to nonfluorinated' (attributed to NQ28_MMG002), and 'performed better than Fenton-based processes ...' (attributed to NQ28_MMG003)."
+          "The reference_answer directly quotes several sentences that are not present in any registered exact_evidence_span/unit_exact_span, including '[SOURCE_TEXT_OMITTED sha256=55ba44ed690ba0164e90da74f319312e6ca6f798f71d1cf267e84f98f6c64e0b]' (attributed to NQ28_MMG001), 'eaq− (hydrated electron) is more effective in eliminating PFAS ... than hydroxyl radical ... or sulfate radical' and 'nonselectively convert long- and short-chain PFAS to nonfluorinated' (attributed to NQ28_MMG002), and 'performed better than Fenton-based processes ...' (attributed to NQ28_MMG003)."
         ],
         "group_reviews": [
           {
@@ -70,7 +70,7 @@
               "Both NQ28_MMG002 exact_spans entries quote the same registered span ('oxidation treatments are generally slow and inefficient ... against reduction processes'), but their 'supports' text describes two different, unregistered sentences elsewhere in the chunk ('AOPs and ARPs have shown promise ...' and 'eaq− is more effective ... than hydroxyl radical ... or sulfate radical')."
             ],
             "required_repairs": [
-              "Register a unit_exact_span for NQ28_MMG002 covering 'Advanced oxidation processes (AOPs) and advanced reduction processes (ARPs) have shown promise in degrading PFAS in the aqueous environment' and cite that span for the AOP/ARP-distinction claim.",
+              "Register a unit_exact_span for NQ28_MMG002 covering '[SOURCE_TEXT_OMITTED sha256=d7129dc01663d9d6c63c95a78e8122561693f5f8f9046aac501d4d33804ddc5f]' and cite that span for the AOP/ARP-distinction claim.",
               "Register a unit_exact_span for NQ28_MMG002 covering 'eaq− (hydrated electron) is more effective in eliminating PFAS chemicals in the water than hydroxyl radical (•OH) or sulfate radical (SO4•−)' and cite that span for the reactive-species contrast claim, rather than reusing the 'oxidation treatments are generally slow' span for both."
             ]
           },
@@ -78,11 +78,11 @@
             "claim_group_id": "NQ28-G02",
             "verdict": "partially_supported",
             "issues": [
-              "The NQ28_MMG001 exact_spans entry attributes 'hydrated electron-based advanced reduction processes are considered to be among the several most effective techniques for degrading PFAS' to the registered span beginning '47-51 Here, a systematic comparison ...', but that sentence is not part of the registered exact_evidence_span/unit_exact_spans for NQ28_MMG001.",
+              "The NQ28_MMG001 exact_spans entry attributes '[SOURCE_TEXT_OMITTED sha256=55ba44ed690ba0164e90da74f319312e6ca6f798f71d1cf267e84f98f6c64e0b]' to the registered span beginning '47-51 Here, a systematic comparison ...', but that sentence is not part of the registered exact_evidence_span/unit_exact_spans for NQ28_MMG001.",
               "All three NQ28_MMG002 exact_spans entries in this group reuse the single registered 'oxidation treatments are generally slow' span while their 'supports' text actually describes three distinct, unregistered sentences (hydrated-electron effectiveness, nonselective conversion to nonfluorinated products, and UV-ARP low-energy/sensitizer characterization)."
             ],
             "required_repairs": [
-              "Register a unit_exact_span for NQ28_MMG001 covering 'Hydrated electron-based advanced reduction processes are considered to be among the several most effective techniques for degrading PFAS' and cite that span for atomic claim NQ28-A03.",
+              "Register a unit_exact_span for NQ28_MMG001 covering '[SOURCE_TEXT_OMITTED sha256=601c0fd918a11c3cd6b5a9a92d1fbf9aefd85730a26cff88bac51a775dd03f67]' and cite that span for atomic claim NQ28-A03.",
               "Register separate unit_exact_spans in NQ28_MMG002 for the 'eaq− is more effective ...' sentence, the 'UV-ARPs generate reductive species that nonselectively convert ... to nonfluorinated' sentence, and the 'UV-ARPs ... hydrated electron sensitizers with UV lamps' sentence, and cite each for its corresponding claim instead of reusing the 'oxidation treatments are generally slow' span for all three."
             ]
           },
@@ -94,7 +94,7 @@
               "Both NQ28_MMG003 exact_spans entries (electrochemical oxidation outperforming other AOPs; successful elimination with industrial-scale restrictions) reuse the registered 'effectiveness of PFAS abatement ... differ across multiple reaction variables' span, but the supporting content is found in different, unregistered sentences later in the chunk."
             ],
             "required_repairs": [
-              "Register a unit_exact_span for NQ28_MMG002 covering 'AOPs can sometimes be ineffective in treating PFAS as their levels can rise above drinking water standards after treatment' and cite that span for the corresponding claim.",
+              "Register a unit_exact_span for NQ28_MMG002 covering '[SOURCE_TEXT_OMITTED sha256=a7acfca12bce92d28bfdf8b07aa13f4ba05e104b5c4a5a4daae70dd8a0626762]' and cite that span for the corresponding claim.",
               "Register unit_exact_spans for NQ28_MMG003 covering 'electrochemical oxidation performed better than Fenton-based processes ... for PFAS removal on the basis of initial PFAS concentration and reduction extent' and 'Experimental scale investigations have demonstrated that PFCA, PFAS, and polyfluorinated compounds can be successfully eliminated by electrochemical oxidation, even though ... restricted because of energy consumption, the expense of producing efficient electrodes, and harmful by-products,' and cite these spans instead of the 'effectiveness ... differ across multiple reaction variables' span."
             ]
           },

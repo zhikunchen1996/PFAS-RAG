@@ -210,7 +210,7 @@ McDonough et al. field-validated **SCWO on a concentrated waste stream containin
 
 Importantly, the discussion states:
 
-- “An appropriate treatment strategy for PFAS-impacted waste includes multiple technologies in series to concentrate PFAS into the smallest possible volume for energy-intensive destruction” [R10].
+- “[SOURCE_TEXT_OMITTED sha256=f2e7338511a3dcebf615709f1e0f10b646a0dbf2cee63d4f5e106b5aa6ea9c24]” [R10].
 
 This is conceptually aligned with using **membranes or IX/distillation upstream** of SCWO, even though the specific concentrate origin was not identified as membrane-derived [R10].
 

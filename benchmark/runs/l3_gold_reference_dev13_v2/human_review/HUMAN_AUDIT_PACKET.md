@@ -17,57 +17,57 @@ Model B `revise` or `reject` item requires non-empty resolution notes.
 
 ### Complete Gold Evidence
 
-**NQ10_MMG001** (required_gold; `2021 - Olomukoro - Ion exchange solid phase microextraction coupled to liquid chromatography - laminar flow tandem mass spectrometry for the determination of.pdf`, chunk `36`)  
+**NQ10_MMG001** (required_gold; `2021 - Olomukoro - [SOURCE_TEXT_OMITTED sha256=ee628acbd9c2af4edf45cbdbfe7ee9b8944cf2c7fbb577c31501368c694526d7].pdf`, chunk `36`)  
 Scope: PFAS; aqueous (river, lake, tap, bottled water); SPME; separation; 1-2 (unit truncated); ng/L (truncated in span)  
-> Conclusion An eﬃcient and convenient SPME method was developed for PFAS in aqueous matrices and applied to river, lake, tap and bottled water samples.  
-Supported claim metadata: An SPME method was developed for PFAS in aqueous matrices and applied to river, lake, tap, and bottled water samples; the selected span reports LOQs beginning with “1–2” but truncates the units/range.  
+> [SOURCE_TEXT_OMITTED sha256=469013d9469e2f088c33eba45896cb806c245ec2eb3f3e7be1c475ef589ac4ad].  
+Supported claim metadata: An [SOURCE_TEXT_OMITTED sha256=419f1980cb89d7fddef2454a16ce7c1df433321e8765c197db8056fc5cb4afd3]; the selected span reports LOQs beginning with “1–2” but truncates the units/range.  
 Does not support: Does not support the specific value '1-2.5 ng L−1' or '1.5 mL sample volume' as those numbers are not present in the selected spans.
 
-**NQ10_MMG002** (required_gold; `2021 - Olomukoro - Ion exchange solid phase microextraction coupled to liquid chromatography - laminar flow tandem mass spectrometry for the determination of.pdf`, chunk `34`)  
+**NQ10_MMG002** (required_gold; `2021 - Olomukoro - [SOURCE_TEXT_OMITTED sha256=ee628acbd9c2af4edf45cbdbfe7ee9b8944cf2c7fbb577c31501368c694526d7].pdf`, chunk `34`)  
 Scope: 24 PFAS compounds; drinking water; dilute-and-shoot (EPA method 8327); other (no preconcentration); 10-50 ng/L; ng/L  
-> 3 ng L − 1 ∗∗ 40 – 160 ng L − 1 ∗∗∗∗ [39] Drinking water (EPA method 8327) Dilute and Shoot N/A 24 PFAS compounds  
+> [SOURCE_TEXT_OMITTED sha256=c378a9b6ac19269490bb0291bfbb3dccb3131b3fd5063898f6b886c43b97d7c6]  
 Supported claim metadata: EPA Method 8327 uses dilute-and-shoot (no separate preconcentration step) for 24 PFAS compounds in drinking water.  
 Does not support: Does not support 'LOQs of 10-50 ng/L'; the span shows '3 ng L−1' and '40–160 ng L−1' for adjacent rows, not a clean 10-50 ng/L range for EPA 8327.
 
-**NQ10_MMG003** (required_gold; `2021 - Olomukoro - Ion exchange solid phase microextraction coupled to liquid chromatography - laminar flow tandem mass spectrometry for the determination of.pdf`, chunk `6`)  
+**NQ10_MMG003** (required_gold; `2021 - Olomukoro - [SOURCE_TEXT_OMITTED sha256=ee628acbd9c2af4edf45cbdbfe7ee9b8944cf2c7fbb577c31501368c694526d7].pdf`, chunk `6`)  
 Scope: PFAS; SPE, LLE; preconcentration  
-> So far, to detect parts-per-trillion level PFAS, pre-concentration has been accomplished by either solid phase extraction (SPE) or liquid-liquid extraction (LLE) [ 9 , 34 , 40 ].  
+> [SOURCE_TEXT_OMITTED sha256=03fa6037597d41bc4c6c5a8cea348634f2cae2ecfc43471a313752c65ceedc98] ].  
 Supported claim metadata: PFAS preconcentration to detect ppt-level analytes has been accomplished by either solid phase extraction (SPE) or liquid-liquid extraction (LLE).
 
 **NQ10_MMG004** (optional_gold; `2022 - Pellicer-Castell - Iron-Doped Bimodal Mesoporous Silica Nanomaterials as Sorbents for Solid-Phase Extraction of Perfluoroalkyl Substances in Environmental.pdf`, chunk `42`)  
 Scope: PFASs; water; SPE (150 mg cartridge); recovery (preconcentration); 150 mg, 10-100 mL; mg, mL  
-> Obtained results showed that, with 150 mg cartridges, recoveries clearly decreased when the sample volume was increased from 10 to 100 mL.  
+> [SOURCE_TEXT_OMITTED sha256=87c68bb46c27be15a4694fda8735b811754ab515a80f0e9570fcd2ac0933ea18].  
 Supported claim metadata: With 150 mg cartridges, recoveries decreased when sample volume was increased from 10 to 100 mL.
 
 **NQ10_MMG005** (optional_gold; `2022 - Pellicer-Castell - Iron-Doped Bimodal Mesoporous Silica Nanomaterials as Sorbents for Solid-Phase Extraction of Perfluoroalkyl Substances in Environmental.pdf`, chunk `43`)  
 Scope: PFOS, PFNA (C8-C14); SPE; recovery (preconcentration); >61%, ~100%, EF 121-212; %  
-> (C8–C14), with values above 61% for all of them and close to 100% in the case of PFOS or PFNA.  
+> ([SOURCE_TEXT_OMITTED sha256=4b0660a78efdf23a909ff5eb1ca11842ea6a8a985d897643c04897a0ad32694d].  
 Supported claim metadata: SPE/extraction recoveries for C8-C14 PFAS were above 61%, close to 100% for PFOS or PFNA, differed among PFAS analytes, and produced enrichment factors of 121-212.
 
-**NQ10_MMG006** (optional_gold; `2022 - Croll - Adaptation of selected models for describing competitive per- and polyfluoroalkyl substances breakthrough curves in groundwater treated by granular.pdf`, chunk `12`)  
+**NQ10_MMG006** (optional_gold; `2022 - Croll - [SOURCE_TEXT_OMITTED sha256=2da68f19fe53ac7102bced27c910f07f3248ff01d66b21468a8d59223b057783].pdf`, chunk `12`)  
 Scope: target PFAS; groundwater; weak anion exchange SPE with methanolic elution; preconcentration; 500-fold, 0.5 mL; fold, mL  
-> Eluted methanolic sample extracts of 0.5 mL resulted in an effective 500-fold concentration of target analytes from the initial sampling.  
-Supported claim metadata: Eluted methanolic sample extracts of 0.5 mL resulted in an effective 500-fold concentration of target analytes from the initial sampling.  
+> [SOURCE_TEXT_OMITTED sha256=32c6b524ae782f897b8c7ddfc2092da8ed5aaa55192906ba9a33d637b5e79a99].  
+Supported claim metadata: [SOURCE_TEXT_OMITTED sha256=32c6b524ae782f897b8c7ddfc2092da8ed5aaa55192906ba9a33d637b5e79a99].  
 Does not support: The selected span alone does not state weak anion exchange SPE; the preceding sentence in the full chunk supplies that context.
 
-**NQ10_MMG007** (optional_gold; `2024 - Habib - Green Analytical Method for Perfluorocarboxylic Acids (PFCAs) in Water of Stir Bar Sorptive Extraction Coupled with Thermal Desorption-Gas.pdf`, chunk `11`)  
+**NQ10_MMG007** (optional_gold; `2024 - Habib - [SOURCE_TEXT_OMITTED sha256=8c88db8a3af919c38e76bc825405f2148aacae0b1d14cb9ebfa199b5f94fc272].pdf`, chunk `11`)  
 Scope: PFCAs; water; SBSE + TD-GC-MS; preconcentration  
-> This study aimed to develop and validate a simple, sensitive, and efficient method by integrating green chemistry-based stir bar sorptive extraction (SBSE) with thermal desorption–gas chromatography–mass spectrometry (TD-GC-MS) specifically for the anal- ysis of perfluorocarboxylic acids (PFCAs), a significant subgroup of PFAS.  
+> [SOURCE_TEXT_OMITTED sha256=30d7b57ac11c9607efbcb46f1561d12d7de16c38c34ce20d4b88323ced603271].  
 Supported claim metadata: The study developed and validated a method integrating stir bar sorptive extraction (SBSE) with thermal desorption-GC-MS for analysis of perfluorocarboxylic acids (PFCAs), a subgroup of PFAS.
 
 **NQ10_MMG008** (optional_gold; `2023 - Hao - Hydrothermal Alkaline Treatment (HALT) of Foam Fractionation Concentrate Derived from PFAS-Contaminated Groundwater.pdf`, chunk `9`)  
 Scope: PFASs; foam concentrate; dilute and direct injection; other (no preconcentration)  
-> 23 Briefly, the diluted samples were mixed with aqueous ammonium hydroxide solution, isopropyl alcohol, trifluoroethanol, water, internal standards, and methanol before being injected into a SCIEX ExionLC high- pressure liquid chromatography (HPLC) system.  
+> [SOURCE_TEXT_OMITTED sha256=22dde9e759cfb91bc92ed1d4758c0cde151d84863914426a035f338b3d829c32].  
 Supported claim metadata: Diluted samples were mixed with ammonium hydroxide solution, isopropyl alcohol, trifluoroethanol, water, internal standards, and methanol before injection into an HPLC system; no solid-phase or liquid-liquid extraction was used in the sample preparation.
 
-**NQ10_MMG009** (optional_gold; `2021 - Olomukoro - Ion exchange solid phase microextraction coupled to liquid chromatography - laminar flow tandem mass spectrometry for the determination of.pdf`, chunk `32`)  
+**NQ10_MMG009** (optional_gold; `2021 - Olomukoro - [SOURCE_TEXT_OMITTED sha256=ee628acbd9c2af4edf45cbdbfe7ee9b8944cf2c7fbb577c31501368c694526d7].pdf`, chunk `32`)  
 Scope: SPME vs dilute-and-shoot; preconcentration  
-> to methods that require very fast sample processing such as dilute and shoot, our method provides higher preconcentration and limits occurrence of matrix effects.  
+> [SOURCE_TEXT_OMITTED sha256=20d98169239ded1034935506504d212e72fb369325e92d4d503c4861fdf864dd].  
 Supported claim metadata: Compared with very fast sample-processing methods such as dilute-and-shoot, the authors’ method provides higher preconcentration and limits occurrence of matrix effects.
 
-**NQ10_MMG010** (negative_gold; `2021 - Olomukoro - Ion exchange solid phase microextraction coupled to liquid chromatography - laminar flow tandem mass spectrometry for the determination of.pdf`, chunk `7`)  
+**NQ10_MMG010** (negative_gold; `2021 - Olomukoro - [SOURCE_TEXT_OMITTED sha256=ee628acbd9c2af4edf45cbdbfe7ee9b8944cf2c7fbb577c31501368c694526d7].pdf`, chunk `7`)  
 Scope: complex samples; not named in span; QAQC/limitation  
-> Furthermore, substantial matrix effects can occur from the samples during analysis, mak- ing the method not suitable and robust for such complex samples.  
+> [SOURCE_TEXT_OMITTED sha256=bf770acb02a6cde476a8c0a120becd99a5b99de54d2c809bc12dd35556192b5b].  
 Supported claim metadata: Substantial matrix effects can occur during analysis, making the method unsuitable and not robust for complex samples.  
 Does not support: The selected span does not explicitly name 'dilute-and-shoot' as the method with matrix effects; the attribution to dilute-and-shoot must be confirmed from surrounding context.
 
@@ -81,7 +81,7 @@ Another SPE study using 150 mg cartridges for water samples found that recoverie
 In that study, C8–C14 PFAS achieved recoveries above 61% for all analytes and close to 100% for PFOS and PFNA, with enrichment factors between 121 and 212, showing that even within a single SPE protocol, enrichment and recovery are analyte‑dependent.
 
 Alternative sorptive microextraction formats are also used and are strongly matrix‑linked.
-A solid‑phase microextraction (SPME) method was developed for PFAS in aqueous matrices and applied to river, lake, tap, and bottled water samples; in the same work, the SPME approach provided higher preconcentration and reduced matrix effects compared with very fast sample‑processing approaches such as dilute‑and‑shoot.
+A solid‑phase microextraction ([SOURCE_TEXT_OMITTED sha256=215fa32bd6b0d5a2e94405abaddfd952894bb801a8fc03de3770271411b1dc1e]; in the same work, the SPME approach provided higher preconcentration and reduced matrix effects compared with very fast sample‑processing approaches such as dilute‑and‑shoot.
 Nevertheless, substantial matrix effects were noted in some methods, to the extent that the method was judged unsuitable and not robust for complex samples, underscoring that matrix composition can limit the applicability of simpler preparations.
 For perfluorocarboxylic acids (PFCAs), a significant PFAS subgroup, a separate method integrated stir bar sorptive extraction (SBSE) with thermal desorption–gas chromatography–mass spectrometry (TD‑GC‑MS) for water samples; SBSE here serves as the preconcentration step tailored specifically to PFCAs and is compatible with solvent‑free thermal desorption into GC‑MS.
 
@@ -99,11 +99,11 @@ Claims:
 - `NQ10-C02` [core]: In a groundwater application, target PFAS were preconcentrated using weak anion exchange solid phase extraction, and elution to 0.5 mL of methanolic extract resulted in an effective 500-fold concentration of the analytes relative to the initial sampling. (evidence: NQ10_MMG006)
 - `NQ10-C03` [supporting]: When PFAS in water were extracted using 150 mg SPE cartridges, recoveries clearly decreased as the sample volume was increased from 10 mL to 100 mL. (evidence: NQ10_MMG004)
 - `NQ10-C04` [supporting]: In one SPE protocol, C8–C14 PFAS showed extraction recoveries above 61% for all analytes and close to 100% for PFOS and PFNA, with enrichment factors between 121 and 212. (evidence: NQ10_MMG005)
-- `NQ10-C05` [core]: A solid phase microextraction (SPME) method was developed for PFAS in aqueous matrices and applied to river, lake, tap, and bottled water samples. (evidence: NQ10_MMG001)
+- `NQ10-C05` [core]: A solid phase microextraction ([SOURCE_TEXT_OMITTED sha256=215fa32bd6b0d5a2e94405abaddfd952894bb801a8fc03de3770271411b1dc1e]. (evidence: NQ10_MMG001)
 - `NQ10-C06` [core]: Compared with very fast sample-processing methods such as dilute-and-shoot, the SPME method provided higher preconcentration of PFAS and limited the occurrence of matrix effects. (evidence: NQ10_MMG009)
 - `NQ10-C07` [limitation]: In some PFAS analytical methods, substantial matrix effects occurred during analysis, making the method not suitable and not robust for complex samples. (evidence: NQ10_MMG010)
 - `NQ10-C08` [core]: EPA Method 8327 for drinking water uses a dilute-and-shoot approach with no separate preconcentration step for 24 PFAS compounds. (evidence: NQ10_MMG002)
-- `NQ10-C09` [core]: In analysis of PFAS in foam fractionation concentrate, diluted samples were mixed with aqueous ammonium hydroxide solution, isopropyl alcohol, trifluoroethanol, water, internal standards, and methanol before HPLC injection, without employing solid-phase or liquid–liquid extraction for preconcentration. (evidence: NQ10_MMG008)
+- `NQ10-C09` [core]: In analysis of PFAS in foam fractionation concentrate, [SOURCE_TEXT_OMITTED sha256=5b1224194a9ac936fc0d600a4995c5e37b7066a0c6357677e715c9e54cd3b411] HPLC injection, without employing solid-phase or liquid–liquid extraction for preconcentration. (evidence: NQ10_MMG008)
 - `NQ10-C10` [core]: A method integrating stir bar sorptive extraction (SBSE) with thermal desorption–gas chromatography–mass spectrometry (TD-GC-MS) was developed and validated for analysis of perfluorocarboxylic acids (PFCAs) in water. (evidence: NQ10_MMG007)
 - `NQ10-C11` [core]: Across the reported examples, preconcentration and sample preparation strategies vary by matrix, with weak anion exchange SPE used for groundwater, SPME applied to river, lake, tap, and bottled waters, SBSE used for water samples containing PFCAs, and dilute-and-shoot or dilution-only approaches applied to drinking water and foam concentrate matrices. (evidence: NQ10_MMG006, NQ10_MMG001, NQ10_MMG007, NQ10_MMG002, NQ10_MMG008)
 - `NQ10-C12` [supporting]: Preconcentration performance and method suitability are analyte- and matrix-dependent, as shown by SPE recoveries above 61% and near 100% for some C8–C14 PFAS in one protocol, contrasted with reports that substantial matrix effects can render other methods unsuitable for complex samples. (evidence: NQ10_MMG005, NQ10_MMG010)
@@ -120,7 +120,7 @@ Overall verdict: **revise**
   Recommended text: In a groundwater application (reported to use weak anion exchange SPE per surrounding context), elution to 0.5 mL of methanolic extract resulted in an effective 500-fold concentration of target PFAS relative to the initial sampling.
 - `NQ10-C03`: **supported**. Matches span exactly: 150 mg cartridges, recovery decrease from 10 to 100 mL.
   Recommended text: No change needed.
-- `NQ10-C04`: **partially_supported**. The exact_evidence_span text ('(C8–C14), with values above 61% for all of them and close to 100% in the case of PFOS or PFNA') does not itself contain the enrichment factor figures 121-212; that number appears only in the gold record's supported_claim/numerical_value metadata fields, not the quoted span. The recovery portion of the claim is fully supported; the EF figure is not verifiable from the span text alone.
+- `NQ10-C04`: **partially_supported**. The exact_evidence_span text ('([SOURCE_TEXT_OMITTED sha256=4b0660a78efdf23a909ff5eb1ca11842ea6a8a985d897643c04897a0ad32694d]') does not itself contain the enrichment factor figures 121-212; that number appears only in the gold record's supported_claim/numerical_value metadata fields, not the quoted span. The recovery portion of the claim is fully supported; the EF figure is not verifiable from the span text alone.
   Recommended text: In one SPE protocol, C8–C14 PFAS showed extraction recoveries above 61% for all analytes and close to 100% for PFOS and PFNA (enrichment factors reported elsewhere in the source as 121–212, not directly quoted in the retrieved span).
 - `NQ10-C05`: **supported**. Directly matches span; correctly avoids the truncated LOQ numbers flagged as unsupported in the gold record.
   Recommended text: No change needed.
@@ -144,7 +144,7 @@ Overall verdict: **revise**
   Recommended text: No change needed.
 
 Reference-answer issues:
-- The gold packet itself contains an internal inconsistency for NQ10_MMG005: the exact_evidence_span text ('...with values above 61% for all of them and close to 100% in the case of PFOS or PFNA.') does not contain the enrichment-factor figures ('EF 121-212') that appear in the record's own supported_claim and numerical_value fields. Any claim reproducing the EF number is only verifiable against the metadata, not the literal quoted span, which weakens strict span-level verifiability.
+- The gold packet itself contains an internal inconsistency for NQ10_MMG005: the exact_evidence_span text ('...[SOURCE_TEXT_OMITTED sha256=c11af0fe044c1da524bbec09a628429d254564b64da7a2144dc88d718a5879ba].') does not contain the enrichment-factor figures ('EF 121-212') that appear in the record's own supported_claim and numerical_value fields. Any claim reproducing the EF number is only verifiable against the metadata, not the literal quoted span, which weakens strict span-level verifiability.
 - For NQ10_MMG006, the gold record's own does_not_support field flags that 'weak anion exchange SPE' is not stated in the selected span and requires context from a preceding sentence not included in exact_evidence_span; this creates a recurring risk that downstream claims (C02, C13) assert method chemistry not directly checkable from the supplied span text.
 
 ---
@@ -161,19 +161,18 @@ Reference-answer issues:
 
 **NQ12_MMG001** (required_gold; `2022 - Pellicer-Castell - Iron-Doped Bimodal Mesoporous Silica Nanomaterials as Sorbents for Solid-Phase Extraction of Perfluoroalkyl Substances in Environmental.pdf`, chunk `44`)  
 Scope: PFOA, PFNA, PFOS, PFDA, PFUnDA, PFDS, PFDoDA, PFTrDA, PFTeDA; water samples; developed SPE-UHPLC-MS/MS method; LOD/LOQ; LOD 3–8 ng/L; LOQ 9–25 ng/L; ng/L  
-> Compound Linearity a (µg L−1) Sensitivity (ng L−1) Extraction Efﬁciency (%) EF Repeatability RSD (%) LOD LOQ Intra-Day Inter-Day PFOA 2–50 4 12 66 ± 20 132 22 38 PFNA 4–50 7 22 110 ± 30 212 16 28 PFOS 2–50 3 9 110 ± 30 212 19 29 PFDA 5–50 8 24 77 ± 16 154 15 21 PFUnDA 4–50 7 21 73 ± 15 145 17 21 PFDS 2–50 3 11 67 ± 14 134 21 21 PFDoDA 4–50 6 18 75 ± 13 151 13 17 PFTrDA 5–50 8 25 68 ± 17 136 14 25 PFTeDA 2–50 3 11 61 ± 14 121 18 23 a Referred to the ﬁnal injection solution.  
+> [SOURCE_TEXT_OMITTED sha256=c9e327c778f731b6532a3deae84b57288d4614b08318dbbc0bf15c323f604e0f].  
 Supported claim metadata: For the developed SPE-UHPLC-MS/MS method for C8–C14 PFASs from water samples, reported sensitivity varied by compound: LOD/LOQ values were PFOA 4/12 ng/L, PFNA 7/22 ng/L, PFOS 3/9 ng/L, PFDA 8/24 ng/L, PFUnDA 7/21 ng/L, PFDS 3/11 ng/L, PFDoDA 6/18 ng/L, PFTrDA 8/25 ng/L, and PFTeDA 3/11 ng/L.  
 Does not support: The claim must not omit PFOS and PFDS, which are present in the table; and the column interpretation (LOD vs LOQ) must be read carefully since the header groups Sensitivity (LOD/LOQ) ambiguously.
 
-**NQ12_MMG002** (required_gold; `2024 - Habib - Green Analytical Method for Perfluorocarboxylic Acids (PFCAs) in Water of Stir Bar Sorptive Extraction Coupled with Thermal Desorption-Gas.pdf`, chunk `47`)  
+**NQ12_MMG002** (required_gold; `2024 - Habib - [SOURCE_TEXT_OMITTED sha256=8c88db8a3af919c38e76bc825405f2148aacae0b1d14cb9ebfa199b5f94fc272].pdf`, chunk `47`)  
 Scope: PFHpA, PFOA, PFNA, PFDA, PFUnA, PFDoA, PFTeDA; water; SBSE-TD-GC-MS; LOD/LOQ/MDL; LOD 21.17–73.96 ng/L; LOQ 90.80–192.01 ng/L; ng/L  
-> Analyte Retention Time (min) Parent Ion (m/z) Coefficient of Determination (R2) % Recovery (±SD) LOD (ng/L) LOQ (ng/L) MDL (ng/L) PFHpA 5.884 405 0.9984 97 ( ±11) 21.17 138.27 293.96 PFOA 6.640 455 0.9948 94 ( ±11) 21.20 103.13 495.37 PFNA 7.614 505 0.9956 86 ( ±5) 30.12 90.80 980.37 PFDA 8.448 555 0.9893 91 ( ±10) 54.29 169.85 888.30 PFUnA 9.416 605 0.9892 88 ( ±10) 34.39 132.90 1227.97 PFDoA 10.002 655 0.9925 85 ( ±8) 73.96 192.01 1458.84 PFTeDA 11.422 755 0.9906 85 ( ±3) 35.02 107.10 925.13  
+> [SOURCE_TEXT_OMITTED sha256=97e055ca053f6ab1f7c513ff7983ab62cf13f9edee1c0e0ff8660edcf6087d78]  
 Supported claim metadata: For PFCAs analyzed in water by SBSE-TD-GC-MS, sensitivity varied by compound/chain length: LODs were 21.17 ng/L for PFHpA, 21.20 ng/L for PFOA, 30.12 ng/L for PFNA, 54.29 ng/L for PFDA, 34.39 ng/L for PFUnA, 73.96 ng/L for PFDoA, and 35.02 ng/L for PFTeDA; corresponding LOQs were 138.27, 103.13, 90.80, 169.85, 132.90, 192.01, and 107.10 ng/L, respectively. The table also reports increasing retention time and parent ion m/z with longer-chain PFCAs under the SBSE-TD-GC-MS method.
 
-**NQ12_MMG003** (required_gold; `2025 - Tomei - Optimization and Testing of an SPE-LC - q-TOF Analytical Method for the Detection of PFAS Degradation Products in Water Treatment Processes.pdf`, chunk `14`)  
-Scope: short-chain PFAS (C < 5); water; SPE-LC-q-TOF; instrument signal (sensitivity); 60 V; V  
-> As expected, in-source fragmentation of the carboxylic acids was instead influenced by the voltage of the fragmentor: with 60 V, the signal of short-chain PFAS (C < 5) was almost lost, so 60 V was discarded;  
-Supported claim metadata: At a fragmentor voltage of 60 V, the signal of short-chain PFAS (C < 5) was almost lost, so 60 V was discarded; this demonstrates that fragmentor voltage (an instrument setting) strongly affects sensitivity for short-chain PFAS.  
+**NQ12_MMG003** (required_gold; `2025 - Tomei - [SOURCE_TEXT_OMITTED sha256=05336b6fc60565e4f0b1b9e0a861c5ad2d549d57f0d2d037e9e61c44be655f30].pdf`, chunk `14`)  
+Scope: short-chain PFAS (C < 5); water; SPE-LC-q-TOF; instrument signal (sensitivity); 60 V; [SOURCE_TEXT_OMITTED sha256=5c6ee0cdfb6c182af2b806b41ac9f8bbc0c78e2aad5539e2a707c9524d7d3f77];  
+Supported claim metadata: At a fragmentor voltage of [SOURCE_TEXT_OMITTED sha256=ac882bcfdf44ca19b70881247bb03a0b60b487bd2212abd1083392bd73d11cc7]; this demonstrates that fragmentor voltage (an instrument setting) strongly affects sensitivity for short-chain PFAS.  
 Does not support: Does not provide LOD/LOQ numerical values; addresses only the instrument-setting/sensitivity relationship.
 
 ### Model A Reference Draft
@@ -249,7 +248,7 @@ Reference-answer issues:
 
 **NQ15_MMG001** (required_gold; `2023 - Unknown - Recent advances in electrochemical decontamination of perfluorinated compounds from water - a review.pdf`, chunk `17`)  
 Scope: PFAS (general); water (electrochemical system); electrochemical oxidation; degradation  
-> If only relying on the initial pH for its effects on the degradation of PFAS, it is likely to lead to a false interpretation.  
+> [SOURCE_TEXT_OMITTED sha256=11d5e985b964819de392f3c37bce7cd0f8ac12b30557a4c868dc94b78dec96d6].  
 Supported claim metadata: Relying only on initial pH for assessing pH effects on PFAS degradation is likely to lead to a false interpretation.  
 Does not support: The selected span does not itself state that real-time monitoring of pH near the anode is necessary.
 
@@ -260,17 +259,17 @@ Supported claim metadata: There is no reported consensus on the effects of pH on
 
 **NQ15_MMG003** (optional_gold; `2023 - Unknown - Recent advances in electrochemical decontamination of perfluorinated compounds from water - a review.pdf`, chunk `18`)  
 Scope: 6:2 fluorotelomer sulfonic acid; water; Ti/SnO2-Sb2O5-Bi2O3 anode electro-oxidation; degradation; 20; mg/L  
-> (2014) compared the effects of three electrolytes on the degradation of 6:2 fluorotelomer sulfonic acid (20 mg/L) on a Ti/SnO2-Sb2O5-Bi2O3 anode.  
+> ([SOURCE_TEXT_OMITTED sha256=28678ae005411876404eca828cb1f12d32e93eaf29cc4600596cba4de9757f43].  
 Supported claim metadata: Degradation of 6:2 fluorotelomer sulfonic acid (20 mg/L) on a Ti/SnO2-Sb2O5-Bi2O3 anode declined with electrolyte in the order NaClO4 > NaCl > Na2SO4.
 
 **NQ15_MMG004** (optional_gold; `2023 - Unknown - Recent advances in electrochemical decontamination of perfluorinated compounds from water - a review.pdf`, chunk `46`)  
 Scope: PFOS; water; electro-coagulation with Fe anode; removal; 99.6, 93.7, 63.5, 45.4; %  
-> Electrochemical decontamination of perfluorinated compounds 11 4.2.3 Electrolyte type The chemical components in an electrolyte can also affect the removal of PFAS through different influencing mechanisms in an electro-coagulation process.  
+> [SOURCE_TEXT_OMITTED sha256=caf41aae6595cdd672b5f543c41bd708924c93499cc9ea9fd7ccd1c303d610b1].  
 Supported claim metadata: PFOS removal by a Fe anode in electro-coagulation varied with electrolyte type: NaCl (99.6%) > Na2SO4 (93.7%) > NaNO3 (63.5%) > NaH2PO4 (45.4%).
 
 **NQ15_MMG005** (optional_gold; `2023 - Alam - Experimental investigations of Per- and Poly-fluoroalkyl substances (PFAS) degradation by non-thermal plasma in aqueous solutions.pdf`, chunk `40`)  
 Scope: PFOS; surface water / electrolyte solution; non-thermal plasma; degradation; 300, 320; µS/cm  
-> As the conductivity of the electrolyte solution and the surface water were comparable (300 µ S/cm versus 320 µ S/cm), the composition of the cations and anions in the surface water was then considered a possible cause of the differing breakdown rates.  
+> [SOURCE_TEXT_OMITTED sha256=c5bb0683645357f76271c376a41e814c9de8e411db1089a8ee8b768043acb239].  
 Supported claim metadata: With matched conductivity (300 vs 320 µS/cm), differing ion composition (monovalent vs monovalent+divalent cations) was hypothesized to affect PFOS degradation rate in non-thermal plasma treatment.
 
 ### Model A Reference Draft
@@ -329,41 +328,41 @@ Reference-answer issues:
 
 ### Complete Gold Evidence
 
-**NQ23_MMG001** (required_gold; `2022 - Palma - State of the art and perspectives about non-thermal plasma applications for the removal of PFAS in water.pdf`, chunk `46`)  
+**NQ23_MMG001** (required_gold; `2022 - Palma - [SOURCE_TEXT_OMITTED sha256=17b063b9343d837a62510f6a0711cd14cd4978461c53f7c695aecada64be6d6c].pdf`, chunk `46`)  
 Scope: water; non-thermal plasma (NTP); removal; 1–100; kWh/m³  
-> The comparison between the NTP technologies and the other AOPs from the viewpoint of energy consumption (evaluated in term of elec - trical energy per order values - E EO ), classifies the NTP processes in a central zone with median energy consumptions in the 1 – 100 kWh/m 3 range, at the same level of photo-Fenton and pure electrolytic AOPs.  
+> [SOURCE_TEXT_OMITTED sha256=e56b37a858688639c55242276d7e94a3b67a8e5e83de58060e449ff423098610].  
 Supported claim metadata: Non-thermal plasma (NTP) processes have median energy consumptions in the 1–100 kWh/m³ range (as EEO), comparable to photo-Fenton and pure electrolytic AOPs.
 
-**NQ23_MMG002** (required_gold; `2021 - Nau-Hix - Field Demonstration of a Pilot-Scale Plasma Reactor for the Rapid Removal of Poly- and Perfluoroalkyl Substances in Groundwater.pdf`, chunk `28`)  
+**NQ23_MMG002** (required_gold; `2021 - Nau-Hix - [SOURCE_TEXT_OMITTED sha256=08b96669b712339edc5576317fb67415b737ce45decd34fcb2e66b658c632d83].pdf`, chunk `28`)  
 Scope: PFOA, PFOS; groundwater; pilot-scale plasma reactor; removal; 9.2–31; average 16 ± 5.8; kWh/m³  
-> where E (kWh) is the energy consumed by the high-voltage power supplies, gas and liquid pumps, and rotating spark gap, V (L) is the treatment volume for each experimental condition, and C i and Cf are the initial and ﬁnal concentrations (below the USEPA HAL), respectively, of PFOA and PFOS (ng/L).  
+> [SOURCE_TEXT_OMITTED sha256=c1567affb204244f5b483d7ecc78c1a161a91dbca626c8031125f9ffa459041f]).  
 Supported claim metadata: For pilot-scale plasma treatment of groundwater, EE/O for PFOA and PFOS removal ranged from 9.2 to 31 kWh/m³, with an average of 16 ± 5.8 kWh/m³.
 
 **NQ23_MMG003** (required_gold; `2023 - Smith - Electrochemical Oxidation for Treatment of PFAS in Contaminated Water and Fractionated Foam─A Pilot-Scale Study.pdf`, chunk `33`)  
 Scope: PFAS; contaminated water, fractionated foam; electrochemical oxidation (EO); degradation; 270 (50 L); 93 (150 L); kWh/m³  
-> The energy consumption of EO can be calculated as described previously 15 and as presented in eq S18.  
+> [SOURCE_TEXT_OMITTED sha256=41efa304c07178706d8f631de2ab3bce3b57c4bf72a90d4f106b21b846b55795].  
 Supported claim metadata: Electrochemical oxidation energy consumption after 9 h was approximately 270 kWh/m³ for 50 L experiments and 93 kWh/m³ for 150 L experiments.  
 Does not support: These are total energy consumption per volume, not EE/O (per-order) values, so they are not directly comparable to EE/O-reported studies.
 
 **NQ23_MMG004** (required_gold; `2026 - Kumar - Degradation and defluorination of perfluorooctane sulfonate (PFOS) forever chemical in water using hydrodynamic cavitation treatment.pdf`, chunk `46`)  
 Scope: PFOS; water; hydrodynamic cavitation (HC); defluorination; 7–598 (EEO); 17–286 (energy yield); kWh/m³/order; mg/kWh  
-> The EEO ranged from 7 to 598 kWh/m³/order, while the energy yield varied between 17 and 286 mg/kWh.  
+> [SOURCE_TEXT_OMITTED sha256=57f01e52432c3b441ce198b24ca4bf69f895fb4dc08b7ba6499580569d7611de].  
 Supported claim metadata: In the cited hydrodynamic cavitation PFOS study context, the selected span reports EEO values ranging from 7 to 598 kWh/m3/order and energy yield from 17 to 286 mg/kWh.
 
 **NQ23_MMG005** (required_gold; `2024 - Chen - Combining nonthermal N2 plasma with a denitrifying biofilm reactor for PFAS-contaminated wastewater remediation.pdf`, chunk `21`)  
 Scope: PFOA, PFDA; wastewater; N₂ nonthermal plasma; degradation; 370 (PFOA); 260 (PFDA); kWh/m³  
-> However, the primary challenge with N 2 plasma is its low PFAS degradation efficiency (45 % for PFOA and 60 % for PFDA) combined with high energy consumption (EEO values of 370 kWh/m 3 for PFOA and 260 kWh/m 3 for PFDA).  
+> [SOURCE_TEXT_OMITTED sha256=f5233e6140d201d28af2a506bd29ae511a8a352399d5d18fef771f04d1a2f071]).  
 Supported claim metadata: N₂ plasma treatment had EEO values of 370 kWh/m³ for PFOA and 260 kWh/m³ for PFDA, with degradation efficiencies of 45% (PFOA) and 60% (PFDA).
 
 **NQ23_MMG006** (negative_gold; `2025 - Capodaglio - Prospects of Novel Technologies for PFAS Destruction in Water and Wastewater.pdf`, chunk `11`)  
 Scope: water, wastewater; various PFAS destruction technologies; destruction  
-> It can be observed that the reported ranges show a high variability, reflecting the uncertainty and nonuniformity of experimental conditions in the respective studies (Table 1).  
+> [SOURCE_TEXT_OMITTED sha256=9c74702320cc7d38dbb958d4adf8984609e199f46c5274f2124052f82ffa8fb0]).  
 Supported claim metadata: The reported ranges in the referenced table show high variability, reflecting uncertainty and nonuniformity of experimental conditions across the respective studies.  
 Does not support: Direct, unqualified cross-study comparison of energy values without accounting for differing experimental conditions.
 
 **NQ23_MMG007** (optional_gold; `2026 - Chen - Ferrate-assisted nonthermal plasma for efficient PFOA degradation in landfill leachate - Mitigating bulk organic interference and enhancing.pdf`, chunk `35`)  
 Scope: various technologies; degradation  
-> Application potential A consolidated comparison of reported EE/O values, together with key experimental parameters such as water type, initial PFAS concen - tration, reactor scale, reaction time, and removal/defluorination effi - ciency, is provided in Table S1 to support a transparent and context- aware evaluation across technologies.  
+> [SOURCE_TEXT_OMITTED sha256=f6f48434e63810e6135f5782129b27b521b58706a8869e90c95a098df83e030c].  
 Supported claim metadata: A consolidated comparison of reported EE/O values together with experimental parameters (water type, initial concentration, reactor scale, reaction time, removal/defluorination efficiency) supports context-aware cross-technology evaluation.  
 Does not support: Provides no actual energy values itself; only points to a supplementary comparison table.
 
@@ -410,7 +409,7 @@ Overall verdict: **revise**
   Recommended text: A field pilot-scale plasma reactor treating PFOA/PFOS-contaminated groundwater defines EE/O as the electrical energy consumed by the high-voltage power supplies, gas and liquid pumps, and rotating spark gap, divided by treated volume and normalized to the reduction from initial to final concentration (driven below the USEPA HAL); reported EE/O magnitudes should be treated as unverified against the supplied excerpt pending confirmation from the source results section.
 - `NQ23-C03`: **unsupported**. The exact_evidence_span for NQ23_MMG003 reads only 'The energy consumption of EO can be calculated as described previously and as presented in eq S18,' a methods-section pointer with no numeric content whatsoever. The claim's figures (270 kWh/m3 for 50 L, 93 kWh/m3 for 150 L, 9 h duration, volume-dependence) all originate from the record's 'supported_claim' and 'protocol_detail' metadata fields, not from the quoted span itself. As supplied, this evidence span cannot verify any of the numeric or qualitative content in the claim.
   Recommended text: An electrochemical oxidation (EO) pilot study references an energy-consumption calculation method (eq S18) for treated PFAS water/foam; specific kWh/m3 values are asserted in accompanying annotation but are not present in the supplied excerpt and should be confirmed against the source before being cited as extracted values.
-- `NQ23-C04`: **supported**. The exact_evidence_span states verbatim 'The EEO ranged from 7 to 598 kWh/m3/order, while the energy yield varied between 17 and 286 mg/kWh,' matching the claim's values, units, and endpoint (PFOS degradation/defluorination via hydrodynamic cavitation) exactly.
+- `NQ23-C04`: **supported**. The exact_evidence_span states verbatim '[SOURCE_TEXT_OMITTED sha256=453f76d8bfc8ae3258b5477d84a9abd1886cdba49c8fa02a57c40e84e6717981],' matching the claim's values, units, and endpoint (PFOS degradation/defluorination via hydrodynamic cavitation) exactly.
   Recommended text: No change needed.
 - `NQ23-C05`: **supported**. The exact_evidence_span states EEO values of 370 kWh/m3 (PFOA) and 260 kWh/m3 (PFDA) with 45% and 60% degradation efficiencies respectively, matching the claim precisely, including correct compound-to-value attribution.
   Recommended text: No change needed.
@@ -440,9 +439,9 @@ Reference-answer issues:
 
 ### Complete Gold Evidence
 
-**NQ24_MMG001** (required_gold; `2023 - Shaikh - PFOA remediation from aqueous media using CTAB impregnated activated carbon - A closed-loop sustainable study with comprehensive selectivity analysis.pdf`, chunk `60`)  
+**NQ24_MMG001** (required_gold; `2023 - Shaikh - [SOURCE_TEXT_OMITTED sha256=2fdd9fc6551a585909adde8f813316c5decdcef71d2dce5450f882ef211a386b].pdf`, chunk `60`)  
 Scope: PFOA; aqueous media (column run with background water matrix); CTAB-impregnated activated carbon; adsorption; 5.71 (column, Thomas); 6.85 (batch, Langmuir); mg/g  
-> max ob - tained through the Thomas model was 5.71 mg/g, which was marginally lower as compared to the Q e obtained through Langmuir isotherm model (6.85 mg/g) mainly due to two reasons (a) the presence of the back - ground water matrix during the column run and (b) the size of the adsorbent was bigger (125 – 500 μ m) than used in the batch equilibrium and kinetic study (125 – 250 μ m).  
+> [SOURCE_TEXT_OMITTED sha256=8a2066fbeea08688bf57fa41b3f0688afb1b08ea133d3c4cf9e11bfd54f3a9c2]).  
 Supported claim metadata: In this study, the maximum column adsorption capacity obtained through the Thomas model was 5.71 mg/g, marginally lower than the batch Langmuir isotherm Qe of 6.85 mg/g; the difference was attributed to the background water matrix during the column run and the larger adsorbent size used in the column study.  
 Does not support: Does not provide a general rule for all activated carbons or other PFAS; single-study, single-compound comparison.
 
@@ -476,14 +475,14 @@ Overall verdict: **approve**
 
 ### Complete Gold Evidence
 
-**NQ26_MMG001** (required_gold; `2022 - Liang - Field demonstration of coupling ion-exchange resin with electrochemical oxidation for enhanced treatment of per- and polyfluoroalkyl substances.pdf`, chunk `35`)  
+**NQ26_MMG001** (required_gold; `2022 - Liang - [SOURCE_TEXT_OMITTED sha256=a239c312767f1bdb2975f7bea56396014ec3147356c1046b284baf9e9fa898e6].pdf`, chunk `35`)  
 Scope: PFAS; water; reverse osmosis, nanofiltration; separation  
-> Beside regenerable IX-R, other traditional separation technologies such as reverse osmosis and nanofiltration, which produce a concentrated PFAS waste stream, have also been demonstrated in tandem with a destruction technology for effective remediation of PFAS [ 23 , 25 ].  
+> [SOURCE_TEXT_OMITTED sha256=03339764a1bb7d62ce6bf604ab3e477cc1f3961390fa4d7ccaca7b6047668851] ].  
 Supported claim metadata: Reverse osmosis and nanofiltration are described as traditional separation technologies that produce a concentrated PFAS waste stream and have been demonstrated in tandem with destruction technologies.
 
-**NQ26_MMG002** (required_gold; `2025 - Liu - Filtration and electrical membrane-based treatment methods for PFAS-contaminated water and preparation methods for the membranes employed.pdf`, chunk `21`)  
+**NQ26_MMG002** (required_gold; `2025 - Liu - [SOURCE_TEXT_OMITTED sha256=fc3f889e749d4d397e10a1a334a5e99284e0565490997ebfaa4e09a9eec6fe32].pdf`, chunk `21`)  
 Scope: PFAS; water; membrane filtration, membrane distillation, adsorption; separation  
-> Membrane‑assisted chemical degradation Generally, the abovementioned treatment methods (filtra- tion, adsorption, and membrane distillation) can only con- centrate PFAS.  
+> [SOURCE_TEXT_OMITTED sha256=83cad68bd45d2078d6111dab03fa6fe6edf58ebe23a550abae1a931d9038d69b].  
 Supported claim metadata: The cited review states that filtration, adsorption, and membrane distillation can only concentrate PFAS, while degradation can subsequently be used to remove PFAS.
 
 **NQ26_MMG003** (required_gold; `2023 - Sivagami - Electrochemical-based approaches for the treatment of forever chemicals - Removal of perfluoroalkyl and polyfluoroalkyl substances (PFAS) from.pdf`, chunk `58`)  
@@ -491,30 +490,30 @@ Scope: PFAS; water; membrane-based processes; separation
 > Another severe limitation of membrane-based processes is that they do not degrade PFAS;  
 Supported claim metadata: Membrane-based processes do not degrade PFAS, which is described as a limitation.
 
-**NQ26_MMG004** (required_gold; `2024 - Pervez - Structure and mechanism of nanoengineered membranes toward per- and polyfluoroalkyl substances (PFAS) removal from water - A critical review.pdf`, chunk `4`)  
+**NQ26_MMG004** (required_gold; `2024 - Pervez - [SOURCE_TEXT_OMITTED sha256=22ad5d5418c6d7cd8200d696c2e21c61fd694f0587eb218eb87da22954f6100c].pdf`, chunk `4`)  
 Scope: PFAS (short- and long-chain); water; nanofiltration, reverse osmosis; separation; >90; % rejection  
-> Among different approaches, high-pressure membrane filtration pro - cesses that utilize nanoporous membranes like nanofiltration (NF) and reverse osmosis (RO) have proven to be highly effective in separating both short- and long-chain PFAS compounds with rejection efficiencies typically exceeding 90 % [ 24 , 25 ].  
+> [SOURCE_TEXT_OMITTED sha256=1c93c6bbc04d9e9b8e5fb4c698395a40b38ca869ce2ce319f451e9e4e5d0a23b] ].  
 Supported claim metadata: High-pressure membrane filtration (NF and RO) effectively separates both short- and long-chain PFAS with rejection efficiencies typically exceeding 90%.
 
-**NQ26_MMG005** (required_gold; `2025 - Liu - Filtration and electrical membrane-based treatment methods for PFAS-contaminated water and preparation methods for the membranes employed.pdf`, chunk `43`)  
+**NQ26_MMG005** (required_gold; `2025 - Liu - [SOURCE_TEXT_OMITTED sha256=fc3f889e749d4d397e10a1a334a5e99284e0565490997ebfaa4e09a9eec6fe32].pdf`, chunk `43`)  
 Scope: PFAS; water; filtration, membrane distillation, forward osmosis; separation  
-> To treat PFAS-contaminated water more effectively, research should be conducted on combining degradation (e.g., electrodegradation, biodegradation, etc.) and con- centration (e.g., filtration, membrane distillation, forward osmosis, etc.) treatments.  
+> [SOURCE_TEXT_OMITTED sha256=9f34e97314f422560b564640d3916e33d8a593d42ff92ca15f3ea9c5a242ec23].  
 Supported claim metadata: Filtration, membrane distillation, and forward osmosis are classified as concentration treatments, distinct from degradation treatments such as electrodegradation and biodegradation.
 
-**NQ26_MMG006** (optional_gold; `2025 - Liu - Filtration and electrical membrane-based treatment methods for PFAS-contaminated water and preparation methods for the membranes employed.pdf`, chunk `21`)  
+**NQ26_MMG006** (optional_gold; `2025 - Liu - [SOURCE_TEXT_OMITTED sha256=fc3f889e749d4d397e10a1a334a5e99284e0565490997ebfaa4e09a9eec6fe32].pdf`, chunk `21`)  
 Scope: PFAS; water; membrane-assisted chemical degradation; degradation  
-> Membrane-assisted degradation differs from simple deg- radation in that PFAS are first adsorbed onto a membrane (to which catalysts may be added) and then degraded under light or an electric field (Fig.  
+> [SOURCE_TEXT_OMITTED sha256=f0b14257912b476dc875c738a98322b9a4eb2b8a25724c454b691b321ced0646].  
 Supported claim metadata: Membrane-assisted degradation first adsorbs PFAS onto a membrane (optionally with catalysts) and then degrades them under light or an electric field, representing a destructive membrane route.
 
 **NQ26_MMG007** (negative_gold; `2021 - Ryan - Electrochemical technologies for per- and polyfluoroalkyl substances mitigation in.pdf`, chunk `51`)  
 Scope: PFAS; water; microfiltration, ultrafiltration; removal  
-> Of note, low-pressure membranes such as microfiltration and ultrafiltration poorly remove PFAS and are not discussed in this review (Glover et al., 2018;  
+> [SOURCE_TEXT_OMITTED sha256=efac268ac1e59907dde01bf057d08de85e3cf7451a581ce00c8ee059a00566a0];  
 Supported claim metadata: Low-pressure membranes such as microfiltration and ultrafiltration poorly remove PFAS.  
 Does not support: Does not support that these membranes effectively separate or concentrate PFAS.
 
 **NQ26_MMG008** (optional_gold; `2021 - Groele - An investigation of plasma-driven decomposition of per- and polyfluoroalkyl substances (PFAS) in raw contaminated groundwater.pdf`, chunk `7`)  
 Scope: PFAS; groundwater; membrane processes; separation  
-> carbon is incinerated, whereas in the membrane processes, the con- centrate is sent to an evaporation pool where the residue can be then collected and incinerated.  
+> [SOURCE_TEXT_OMITTED sha256=7dbda52a0949419af622b6a207b79e15153cbde0e9b684ab90530f14e23c146b].  
 Supported claim metadata: In the described membrane processes, a concentrate is sent to an evaporation pool and the resulting residue can be collected and incinerated.  
 Does not support: Does not by itself establish that membranes separate PFAS rather than transform them; the span concerns downstream residue handling, not separation efficacy.
 
@@ -537,7 +536,7 @@ Claims:
 - `NQ26-C01` [core]: High-pressure membrane filtration processes using nanoporous nanofiltration (NF) and reverse osmosis (RO) are described as traditional separation technologies that effectively separate short- and long-chain PFAS from water, with rejection efficiencies typically exceeding 90%, and they produce a concentrated PFAS waste stream rather than degrading the PFAS. (evidence: NQ26_MMG001, NQ26_MMG004, NQ26_MMG003)
 - `NQ26-C02` [core]: Filtration, membrane distillation, and forward osmosis are classified as concentration (separation) treatments for PFAS-contaminated water that can only concentrate PFAS and therefore need to be combined with separate degradation processes such as electrodegradation or biodegradation for PFAS destruction. (evidence: NQ26_MMG002, NQ26_MMG005)
 - `NQ26-C03` [core]: Membrane-based processes as a class are reported to have a severe limitation in that they do not degrade PFAS and instead function mainly to separate or concentrate PFAS. (evidence: NQ26_MMG003, NQ26_MMG002, NQ26_MMG005)
-- `NQ26-C04` [core]: A membrane-assisted degradation route is described in which PFAS are first adsorbed onto a membrane, to which catalysts may be added, and then degraded under light or an electric field, distinguishing this approach from purely separative membrane treatments. (evidence: NQ26_MMG006)
+- `NQ26-C04` [core]: A membrane-assisted degradation route is described in which [SOURCE_TEXT_OMITTED sha256=c6dccf2785b3b7ced7d6eaf4d253403bd464a74f2516d880fc8baced246561f6], distinguishing this approach from purely separative membrane treatments. (evidence: NQ26_MMG006)
 - `NQ26-C05` [core]: Membrane separation processes that concentrate PFAS, including NF and RO, are implemented in practice in tandem with separate destruction technologies, such as sending the PFAS-rich concentrate to an evaporation pool and then collecting and incinerating the residue. (evidence: NQ26_MMG001, NQ26_MMG008)
 - `NQ26-C06` [core]: Adsorption onto membranes, when used without a subsequent degradation step, is treated as a concentration or separation operation for PFAS rather than a destructive treatment. (evidence: NQ26_MMG002, NQ26_MMG006)
 - `NQ26-C07` [supporting]: Low-pressure membranes such as microfiltration and ultrafiltration are reported to poorly remove PFAS and are therefore not effective PFAS separation or concentration routes compared with high-pressure membranes. (evidence: NQ26_MMG007)
@@ -553,7 +552,7 @@ Overall verdict: **revise**
 - `NQ26-C03`: **supported**. Each cited span supports the general statement that membrane-based processes do not degrade PFAS and mainly separate/concentrate it. However, this claim substantially restates content already covered by C01 and C02, raising a question of whether it should be 'supporting' rather than a distinct 'core' claim; it does not introduce new evidence-backed content beyond a summary framing.
   Recommended text: Membrane-based processes as a class are reported to have a severe limitation in that they do not degrade PFAS and instead function mainly to separate or concentrate PFAS (supporting/summary claim rather than a new core finding).
 - `NQ26-C04`: **supported**. Directly paraphrases the exact span: PFAS adsorbed onto membrane (catalysts optional), then degraded under light or electric field. Correctly labeled as a destructive route distinct from separative membrane treatments, consistent with the evidence's supported_claim.
-  Recommended text: A membrane-assisted degradation route is described in which PFAS are first adsorbed onto a membrane, to which catalysts may be added, and then degraded under light or an electric field, distinguishing this approach from purely separative membrane treatments.
+  Recommended text: A membrane-assisted degradation route is described in which [SOURCE_TEXT_OMITTED sha256=c6dccf2785b3b7ced7d6eaf4d253403bd464a74f2516d880fc8baced246561f6], distinguishing this approach from purely separative membrane treatments.
 - `NQ26-C05`: **partially_supported**. MMG001 supports NF/RO being deployed in tandem with a destruction technology, but does not mention an evaporation pool or incineration mechanism. MMG008 comes from an unrelated paper (Groele, plasma-driven decomposition) discussing generic 'membrane processes' concentrate handling (evaporation pool, incineration) in a context contrasting with GAC/carbon incineration disposal — it is not shown to specifically describe NF/RO. The evidence record's own 'does_not_support' field warns the span concerns downstream residue handling, not separation efficacy, and by extension should not be read as establishing that NF/RO specifically use this evaporation/incineration pathway. The claim's phrase 'including NF and RO, are implemented in practice... such as sending the PFAS-rich concentrate to an evaporation pool' improperly fuses two distinct sources' technology scopes into one attribution.
   Recommended text: Membrane separation processes that concentrate PFAS, including NF and RO, are described as being implemented in tandem with separate destruction technologies (MMG001). Separately, one review of membrane processes in general notes that resulting concentrate can be sent to an evaporation pool with the residue then collected and incinerated (MMG008), though this span does not specifically identify NF/RO as the membrane process referenced.
 - `NQ26-C06`: **partially_supported**. MMG006 directly supports that adsorption onto a membrane, without the subsequent light/electric-field step, is a concentrating (non-destructive) stage. MMG002's 'adsorption,' however, is listed as one of several 'abovementioned treatment methods (filtration, adsorption, and membrane distillation)' in a review section — the evidence record does not establish that this adsorption is onto a membrane specifically, versus being a distinct standalone adsorption technology (e.g., GAC or ion exchange) grouped alongside membrane methods. Treating it as 'adsorption onto membranes' overextends the source.
@@ -578,15 +577,14 @@ Reference-answer issues:
 
 ### Complete Gold Evidence
 
-**WF10_002_MMG001** (required_gold; `2020 - Lewis - rsc.li - es-water Rapid degradation of PFAS in aqueous solutions by reverse vortex flow gliding arc plasma †.pdf`, chunk `18`)  
+**WF10_002_MMG001** (required_gold; `2020 - Lewis - [SOURCE_TEXT_OMITTED sha256=554163c7d2b072061858872c0b12860ea2a00a7012240bcdfef986aa2791bcf7] †.pdf`, chunk `18`)  
 Scope: PFOA; PFOS; PFNA; 8:2 FtS; water; gliding arc plasma (GAP); removal (target analyte disappearance); degradation (degradation product formation); defluorination; other (energy costs)  
-> Results and discussion To demonstrate that the engineered GAP system is an effec- tive treatment system for PFAS contaminated water the disap- pearance of the target analyte Ĳs), formation of degradation products, defluorination, and energy costs were measured and calculated.  
+> [SOURCE_TEXT_OMITTED sha256=8c6eeb4d26f0fa59429686e5c8a0bd616b5f15acf6f58113be34d3afe8d09f4f].  
 Supported claim metadata: For gliding arc plasma treatment of PFAS-contaminated water, four distinct endpoints—disappearance of target analyte, formation of degradation products, defluorination, and energy costs—must be measured and co-aligned, since examining only one or two is insufficient to determine whether PFAS are truly destroyed.  
 Does not support: Does not establish endpoints for membrane filtration or SCWO; does not provide numerical endpoint values.
 
-**WF10_002_MMG002** (optional_gold; `2024 - Shaji - Investigating the Effects of Gliding Arc Plasma Discharge’s Thermal Characteristic and Reactive Chemistry on Aqueous PFOS Mineralization.pdf`, chunk `8`)  
-Scope: water; supercritical water oxidation (SCWO); mineralization  
-> Non-plasma-based PFAS treatment technolo- gies where high temperature make an important contribution to PFAS degradation, such as sonolysis [23,27] and supercritical water oxidation (SCWO) [6], have shown excellent potential in mineralizing PFAS with minimal short-chain PFAS formation, and increased mineralization with a rise in reaction temperatures has been observed in SCWO [ 6,28].  
+**WF10_002_MMG002** (optional_gold; `2024 - Shaji - [SOURCE_TEXT_OMITTED sha256=ffe789f2dc149533ddda1da2c60b4ba55d4ca6d1efaa6d32ed2a8cada448c791].pdf`, chunk `8`)  
+Scope: water; supercritical water oxidation (SCWO); [SOURCE_TEXT_OMITTED sha256=88b02391e2884f778014f012127be5b391b0134372b9a93ba99cd62268bd1729]].  
 Supported claim metadata: The cited span reports that SCWO, along with sonolysis, has shown potential for PFAS mineralization with minimal short-chain PFAS formation, and that increased mineralization with rising reaction temperature has been observed in SCWO.  
 Does not support: Does not provide numerical mineralization values; does not address membrane filtration; does not entail that SCWO mineralization is distinct from defluorination beyond the term 'mineralizing' used in the span.
 
@@ -651,19 +649,19 @@ Reference-answer issues:
 
 ### Complete Gold Evidence
 
-**WF10_021_MMG001** (negative_gold; `2026 - Sadmani - A critical review of the application of biochar in removing perfluoroalkyl and polyfluoroalkyl substances (PFAS) from water matrices.pdf`, chunk `52`)  
+**WF10_021_MMG001** (negative_gold; `2026 - Sadmani - [SOURCE_TEXT_OMITTED sha256=e2dd4fda49f066575cf9c26093f2c0f0108101becaa30a85e582d06a6552c102].pdf`, chunk `52`)  
 Scope: diverse water matrices; biochar; adsorption  
-> How - ever, the extent of this impact varies depending on the type and concentration of OM, with some studies indicating min- imal interference at environmentally relevant OM concen - trations, while others report substantial reductions in PFAS sorption, highlighting the need for further research on opti - mizing biochar performance under diverse water matrices.  
+> [SOURCE_TEXT_OMITTED sha256=ba983058c894e8f13a17557676d7f69e4842abdad2c8fc0f706b17853b9d9445].  
 Supported claim metadata: Further research is needed to optimize biochar PFAS adsorption performance under diverse water matrices due to variable organic matter effects.
 
 **WF10_021_MMG002** (negative_gold; `2024 - Liang - A critical review of biochar for the remediation of PFAS-contaminated soil and water.pdf`, chunk `48`)  
 Scope: biochar; regeneration  
-> However, biochar regeneration faces sig- nificant challenges as this simply has not been attempted frequently enough in the past to draw definitive conclusions on efficacy.  
+> [SOURCE_TEXT_OMITTED sha256=2ef738b52bd23cfd7945e62f17b2178422684983ba7d690836ca9792573b7ab7].  
 Supported claim metadata: Biochar regeneration for PFAS has not been attempted frequently enough to draw definitive conclusions on efficacy.
 
-**WF10_021_MMG003** (negative_gold; `2026 - Sadmani - A critical review of the application of biochar in removing perfluoroalkyl and polyfluoroalkyl substances (PFAS) from water matrices.pdf`, chunk `68`)  
+**WF10_021_MMG003** (negative_gold; `2026 - Sadmani - [SOURCE_TEXT_OMITTED sha256=e2dd4fda49f066575cf9c26093f2c0f0108101becaa30a85e582d06a6552c102].pdf`, chunk `68`)  
 Scope: biochar; regeneration  
-> Sustainable regeneration and reusability of biochar Bio- char regeneration is crucial for reducing costs, but each regeneration cycle alters its characteristics, such as surface morphology, functionalities, and porosity, necessitating thorough investigation.  
+> [SOURCE_TEXT_OMITTED sha256=1ee9fa0dacb5bd30615e945797f1feedd8ba78cfa3d955b6a7c30a213d78d909].  
 Supported claim metadata: Thorough investigation is needed on how regeneration cycles alter biochar characteristics such as surface morphology, functionalities, and porosity.
 
 ### Model A Reference Draft
@@ -715,9 +713,9 @@ Reference-answer issues:
 
 ### Complete Gold Evidence
 
-**WF10_025_MMG001** (required_gold; `2020 - Son - The Adsorption Selectivity of Short and Long Per- and Polyfluoroalkyl Substances (PFASs) from Surface Water Using Powder-Activated Carbon.pdf`, chunk `1`)  
+**WF10_025_MMG001** (required_gold; `2020 - Son - [SOURCE_TEXT_OMITTED sha256=b51b9a102b7e0232cb5cd6d73a3a29f01a16687f3790d5e68f0fba51b1362e44].pdf`, chunk `1`)  
 Scope: short and long chain PFAS; surface water; powder activated carbon (PAC); adsorption; 80, 90, 85, 60, 120, 240; % (equilibrium), min  
-> Approximately 80% and 90% equilibria were accomplished within 60 and 120 min for the long chain carbon PFAS, respectively, while for the short chain PFAS, 240 min was required to reach 85% equilibrium.  
+> [SOURCE_TEXT_OMITTED sha256=a620a322b3818ef1084ca8848691920c6973fe06ba125ec2cc16357b68bc6622].  
 Supported claim metadata: Long-chain PFAS reached approximately 80% and 90% of equilibrium within 60 and 120 min, respectively, whereas short-chain PFAS required 240 min to reach approximately 85% equilibrium.  
 Does not support: Does not give specific PAC dose, individual compound rate constants, or guidance for matrices other than surface water.
 
@@ -765,13 +763,13 @@ Reference-answer issues:
 
 **WF10_030_MMG001** (required_gold; `2023 - Li - PFOS destruction in a continuous supercritical water oxidation reactor.pdf`, chunk `1`)  
 Scope: PFOS / TFA (intermediate); PFAS-impacted matrices; continuous-flow supercritical water oxidation reactor; transformation; 600; 32; 420-530; °C; s; °C  
-> Trifluoroacetic acid (TFA) was found to be the most recalcitrant intermediate product in the effluent, persisting at T = 600 ◦ C and residence time of ~ 32 s, emphasizing the need for TFA monitoring in SCWO treatment of PFAS-impacted matrices.  
+> [SOURCE_TEXT_OMITTED sha256=df18556a56815be6fbd9c5b8cd543f66672e0bcd9522c2dad92ab274948882c8].  
 Supported claim metadata: In a continuous-flow SCWO reactor, TFA persisted at T=600°C and residence time ~32 s; volatile organofluorine (1H-perfluoroalkane) was detected in gaseous products at T=420–530°C, and GS/MS spectra suggested other VOFs may be present, indicating uncertainty about fluorinated products at lower temperatures.  
 Does not support: Does not establish complete defluorination or mineralization; the VOF identity at lower temperatures is only suggestive.
 
 **WF10_030_MMG002** (required_gold; `2021 - Pinkard - Destruction of perfluorooctanesulfonate (PFOS) in a batch supercritical water oxidation reactor.pdf`, chunk `1`)  
 Scope: PFOS; batch supercritical water oxidation reactor; defluorination; 425; 450; °C  
-> However, a low fluorine mass balance at temperatures of 425 and 450 ◦ C may indicate the ex - istence of fluorinated species in the gaseous and/or liquid product which are not detected by targeted analysis.  
+> [SOURCE_TEXT_OMITTED sha256=7454baf423fad18cf260e97c56d02d9ae340bdcf5a0d679f5d482d4bf97a8285].  
 Supported claim metadata: At 425 and 450°C in a batch SCWO reactor, a low fluorine mass balance may indicate fluorinated species in the gaseous and/or liquid product not detected by targeted analysis.  
 Does not support: Does not confirm the identity or quantity of the undetected fluorinated species; it is an inference from an incomplete mass balance.
 
@@ -829,35 +827,35 @@ Reference-answer issues:
 
 ### Complete Gold Evidence
 
-**WF10_004a_MMG001** (required_gold; `2023 - Smaili - Adsorption as a remediation technology for short-chain per- and polyfluoroalkyl substances (PFAS) from water - a critical review.pdf`, chunk `18`)  
+**WF10_004a_MMG001** (required_gold; `2023 - Smaili - [SOURCE_TEXT_OMITTED sha256=3884ec13a07d30b0a4d88c53062028410a1ce2623d8e96cce084ea7ba1e13b06].pdf`, chunk `18`)  
 Scope: long-chain PFAS; short-chain PFAS; aqueous; different sorbents; removal  
-> The removal efficiency of long- chain PFAS is higher than that of short-chain PFAS across all sorbents (Fig.  
+> [SOURCE_TEXT_OMITTED sha256=b74e79a570d1149a404456da98719dd9a8a13619b8d733a9d0fbc9f3c80523e1].  
 Supported claim metadata: In the reviewed sorbent comparison, removal efficiency of long-chain PFAS is higher than that of short-chain PFAS across the sorbents considered.
 
-**WF10_004a_MMG002** (required_gold; `2025 - Kebede - Adsorptive Removal of PFAS from Aqueous Solutions Using GAC, PAC and Ball-Milled Colloidal Activated Carbon - Characterizing Efficiency, Kinetics,.pdf`, chunk `18`)  
+**WF10_004a_MMG002** (required_gold; `2025 - Kebede - [SOURCE_TEXT_OMITTED sha256=db9915a269e1f93613d318b5b43545d2669031cfe286904d5961450a3a9adecb],.pdf`, chunk `18`)  
 Scope: PFOA; PFOS; PFBA; PFBS; aqueous; GAC; PAC; ball-milled colloidal activated carbon; removal; 73; 24; 89; 35; 30; 11; 55; 18; %  
-> The removal efficiency of PFOA (73% ± 24%) and PFOS (89% ± 35%) is higher than that of PFBA (30% ± 11%) and PFBS (55% ± 18%) in all three adsorbents (Figure 3a), as long-chain PFAS are more adsorbed on carbonaceous-based adsorbents than short-chain PFAS.  
+> [SOURCE_TEXT_OMITTED sha256=23c92cd59d9fae3215bf0958e36d6ae28c1de0341ff2924d16551f212b88e948].  
 Supported claim metadata: For GAC, PAC, and ball-milled colloidal activated carbon, long-chain PFAS (PFOA: 73% ± 24%, PFOS: 89% ± 35%) showed higher removal efficiency than short-chain PFAS (PFBA: 30% ± 11%, PFBS: 55% ± 18%).
 
-**WF10_004a_MMG003** (optional_gold; `2023 - Smaili - Adsorption as a remediation technology for short-chain per- and polyfluoroalkyl substances (PFAS) from water - a critical review.pdf`, chunk `29`)  
+**WF10_004a_MMG003** (optional_gold; `2023 - Smaili - [SOURCE_TEXT_OMITTED sha256=3884ec13a07d30b0a4d88c53062028410a1ce2623d8e96cce084ea7ba1e13b06].pdf`, chunk `29`)  
 Scope: PFOS; PFOA; short-chain PFAS; aqueous; PEI-f-CMC; removal; 98.8; 87.6; %  
-> Compared to the removal of long-chain PFAS, e.g., 98.8% for PFOS and 87.6% for PFOA, the overall removal efficiency of short-chain PFAS is much lower than that of long-chain PFAS, highlighting once again the challenges of the removal of these short-chain substances from aqueous solutions because of their low hydrophobicity.  
+> [SOURCE_TEXT_OMITTED sha256=ee0fc9f7a3f6ef8dee3c8c277b23e9307230af5a77b74a00b9baaa1619d87e1d].  
 Supported claim metadata: Overall removal efficiency of short-chain PFAS is much lower than that of long-chain PFAS (e.g., PFOS 98.8%, PFOA 87.6%), attributed to short-chain PFAS' low hydrophobicity.  
 Does not support: Specific short-chain values (PFBA 2.1%, PFPeA 1.1%) and the sorbent identity PEI-f-CMC are not in the selected span.
 
-**WF10_004a_MMG004** (optional_gold; `2026 - Sadmani - A critical review of the application of biochar in removing perfluoroalkyl and polyfluoroalkyl substances (PFAS) from water matrices.pdf`, chunk `37`)  
+**WF10_004a_MMG004** (optional_gold; `2026 - Sadmani - [SOURCE_TEXT_OMITTED sha256=e2dd4fda49f066575cf9c26093f2c0f0108101becaa30a85e582d06a6552c102].pdf`, chunk `37`)  
 Scope: water; biochar/adsorbents (review); adsorption  
-> longer-chain PFAS are more hydrophobic and less water-soluble, leading to higher adsorption capacities onto adsorbents [ 67, 68, 82, 89, 90].  
+> [SOURCE_TEXT_OMITTED sha256=1044cd21c880dc0df68e663beb668672c8ff6a812913e5c7b851a5e7d07dd973]].  
 Supported claim metadata: In the reviewed adsorption literature, longer-chain PFAS are described as more hydrophobic and less water-soluble, leading to higher adsorption capacities onto adsorbents.
 
 **WF10_004a_MMG005** (optional_gold; `2025 - Hamza - Understanding PFAS Adsorption - How Molecular Structure Affects Sustainable Water Treatment.pdf`, chunk `21`)  
 Scope: long-chain PFASs; short-chain PFASs; adsorption  
-> Long-chain PFASs can interact via hydrophobic tails through hydrophobic interactions, and the chain length and orientation of PFAS molecules signif- icantly influence the adsorption process.  
+> [SOURCE_TEXT_OMITTED sha256=1dd3a790b53e312490f36e35b956affdcf0c5dbbebed7969dab1660eaf263d0b].  
 Supported claim metadata: In the discussed adsorption context, long-chain PFAS can interact through hydrophobic tails and hydrophobic interactions, while short-chain PFAS have fewer fluorine moieties and show less hydrophobic interaction, with electrostatic interaction becoming dominant in that type of adsorption.
 
 **WF10_004a_MMG006** (negative_gold; `2022 - Vu - Recent progress in adsorptive removal of per- and poly-fluoroalkyl substances (PFAS) from water-wastewater.pdf`, chunk `63`)  
 Scope: water; wastewater; various adsorbents; removal  
-> length, carboxylic/sulfonic groups, branched/linear structure and adsorb- ents’ ages on PFAS removal, although there are some agreement to certain extent (e.g., removal efficiencies are often better for long-chained, carbox- ylic, and linear PFAS), many other factors that can influence the large-scale removal efficiencies remain largely unknown (e.g., effects of water/waste- water organic and inorganic content) and contradictory results are often reported for different water/wastewater, adsorbents, and experimental con- ditions, which warrants further investigation.  
+> [SOURCE_TEXT_OMITTED sha256=a4e24844122d64243186fa2139524777c322ada9cb8d51793ac13f84e0e116e1].  
 Supported claim metadata: While removal efficiencies are often better for long-chained, carboxylic, and linear PFAS, contradictory results are frequently reported across different waters, adsorbents, and experimental conditions, and many influencing factors remain unknown.  
 Does not support: The universal claim that longer chain always yields higher removal without exceptions.
 
@@ -893,7 +891,7 @@ Overall verdict: **revise**
   Recommended text: No change needed.
 - `WF10_004a-C02`: **supported**. Compound, matrix, adsorbents, values, and units all match the exact evidence span exactly (PFOA 73%±24%, PFOS 89%±35% vs PFBA 30%±11%, PFBS 55%±18%, across GAC/PAC/ball-milled colloidal activated carbon). Attribution and scope are correct.
   Recommended text: No change needed.
-- `WF10_004a-C03`: **partially_supported**. The gold record's own 'does_not_support' field explicitly states that the sorbent identity PEI-f-CMC is NOT contained in the selected exact_evidence_span ('Compared to the removal of long-chain PFAS, e.g., 98.8% for PFOS and 87.6% for PFOA, the overall removal efficiency of short-chain PFAS is much lower...'). The span never names an adsorbent. Model A's claim (and the parallel prose in the reference_answer's third paragraph) asserts 'Using a PEI-f-CMC sorbent... PFOS and PFOA achieved high removal efficiencies of 98.8% and 87.6%', directly attributing these values to a sorbent that the gold packet flags as unsupported by this span. This is a method/material attribution error that should be removed.
+- `WF10_004a-C03`: **partially_supported**. The gold record's own 'does_not_support' field explicitly states that the sorbent identity PEI-f-CMC is NOT contained in the selected exact_evidence_span ('[SOURCE_TEXT_OMITTED sha256=694b21f07f85b407c8c5308eb02c1dcddc6b8677a2a7afb71cfa1c74f09c96f3]...'). The span never names an adsorbent. Model A's claim (and the parallel prose in the reference_answer's third paragraph) asserts 'Using a PEI-f-CMC sorbent... PFOS and PFOA achieved high removal efficiencies of 98.8% and 87.6%', directly attributing these values to a sorbent that the gold packet flags as unsupported by this span. This is a method/material attribution error that should be removed.
   Recommended text: In the Smaili et al. critical review, the overall removal efficiency of short-chain PFAS from aqueous solutions was much lower than that of long-chain PFAS (e.g., PFOS 98.8%, PFOA 87.6%), a difference attributed to the lower hydrophobicity of short-chain PFAS; the specific sorbent used to obtain these values is not identified in the cited span.
 - `WF10_004a-C04`: **supported**. Span directly supports the mechanistic claim that longer-chain PFAS are more hydrophobic/less water-soluble leading to higher adsorption capacities; claim correctly scopes this to the reviewed adsorption literature rather than universalizing.
   Recommended text: No change needed.
@@ -922,38 +920,38 @@ Reference-answer issues:
 
 **WF10_004b_MMG001** (required_gold; `2025 - Saha - Foam fractionation of PFAS from landfill leachate using a membrane electrochemical reactor.pdf`, chunk `1`)  
 Scope: perfluorosulfonic acids (PFSAs), perfluorocarboxylic acids (PFCAs); landfill leachate; membrane electrochemical reactor (MER) foam fractionation; removal/separation; 98.3, 85.5, 92.5-99.1, 80.8-90; %  
-> from landfill leachate within seven hours of operation, with 98.3 % of perfluorosulfonic acids (PFSA) and 85.5 % of perfluorocarboxylic acids (PFCA) removed from the leachate.  
+> [SOURCE_TEXT_OMITTED sha256=9267fd3f47c2241ef937a6540c6b77c49ce38a341deeba7e69a88142941cd948].  
 Supported claim metadata: In landfill leachate, PFSAs were removed more efficiently than PFCAs after seven hours of operation, with 98.3% PFSA removal versus 85.5% PFCA removal; short-chain PFSAs (C≤6, 92.5–99.1%) were removed more efficiently than short-chain PFCAs (C≤6, 80.8–90%), possibly due to stronger air-water interface affinity enhancing foam-based separation.
 
 **WF10_004b_MMG002** (negative_gold; `2025 - Meng - Complete Aqueous Defluorination of GenX Hexafluoropropylene Oxide Dimer Acid Anion by Pulsed.pdf`, chunk `14`)  
 Scope: GenX, PFOS; aqueous LiOH electrolyte; pulsed electrolysis on [Ni0.75Fe0.25]-(OH)2–hydrophilic carbon fiber paper anodes; adsorption  
-> [41] This indicates that the chemical identity of the PFAS headgroup did not govern the PFAS adsorption at laser-made [Ni 0.75 Fe 0.25 ]-(OH) 2 –hydrophilic carbon fiber paper anodes, but that anode characteristics, i.  
+> [[SOURCE_TEXT_OMITTED sha256=a6ff2602ad9393035900f90f368be80844cc1bc2f2fdc3ddfaea5d7d29d73d5a].  
 Supported claim metadata: The chemical identity of the PFAS headgroup did not govern PFAS adsorption on laser-made [Ni0.75Fe0.25]-(OH)2–hydrophilic carbon fiber paper anodes.  
 Does not support: Headgroup identity always affects PFAS adsorption.
 
-**WF10_004b_MMG003** (required_gold; `2021 - Liu - Pilot-scale field demonstration of a hybrid nanofiltration and UV-sulfite treatment train for groundwater contaminated by per- and polyfluoroalkyl.pdf`, chunk `17`)  
+**WF10_004b_MMG003** (required_gold; `2021 - Liu - [SOURCE_TEXT_OMITTED sha256=33e8319b0a45c042bb3ce8b369790255983cb1e48f0576b319c9ac9a8a727a44].pdf`, chunk `17`)  
 Scope: FHxSA, PFHxS; groundwater (pH 7.3); nanofiltration (NF); separation  
-> Because FHxSA is likely neutral at pH 7.3 ( Nguyen et al., 2020 ) due to the sulfonamide headgroup, rejection by NF was consistently lower than the anionic analogue, PFHxS, attributed to the lack of an electrostatic repulsion rejection mechanism for this compound ( Fig.  
-Supported claim metadata: FHxSA is likely neutral at pH 7.3 due to its sulfonamide headgroup, and its NF rejection was consistently lower than the anionic analogue PFHxS, attributed to the lack of an electrostatic repulsion rejection mechanism.
+> [SOURCE_TEXT_OMITTED sha256=ec94b010a0258744fed2e60dcacc0b8cdd2334eec3c889e9c3dc00f10639704f].  
+Supported claim metadata: FHxSA is likely neutral at pH 7.3 due to its sulfonamide headgroup, and its NF rejection [SOURCE_TEXT_OMITTED sha256=758ba2be39ee3364095f450595244f9ce3784f0d556272a7be756c3aeb8f6bd9].
 
-**WF10_004b_MMG004** (required_gold; `2023 - Lauwers - Adsorption of PFAS by All-Silica Zeolite β - Insights into the Effect of the Water Matrix, Regeneration of the Material, and Continuous PFAS.pdf`, chunk `34`)  
+**WF10_004b_MMG004** (required_gold; `2023 - Lauwers - [SOURCE_TEXT_OMITTED sha256=4ebf7a9d3ced69a7d519610182586e2f99c564ad70850837cfad3b95589bbb18].pdf`, chunk `34`)  
 Scope: perfluorosulfonic acids, perfluorocarboxylic acids; aqueous solution; all-silica zeolite β; adsorption  
-> The adsorption capacity and affinity of the zeolite β are lower for the sulfonic acids than for the carboxylic acids, which is due to the more polar nature of the sulfonic moiety and the unlikely formation of sulfonic acid dimers.  
+> [SOURCE_TEXT_OMITTED sha256=6f53559af02714793ca579e8ed55c11f0f4338764b7442de73c6271cc17faec6].  
 Supported claim metadata: All-silica zeolite β has lower adsorption capacity and affinity for sulfonic acids than for carboxylic acids, attributed to the more polar sulfonic moiety and lack of dimer formation.
 
 **WF10_004b_MMG005** (optional_gold; `2023 - Wang - Removing per- and polyfluoroalkyl substances (PFAS) in water by foam fractionation.pdf`, chunk `36`)  
 Scope: PFHeA, PFHeS; laboratory-spiked water; foam fractionation; removal/separation; 55, 96; %  
-> For example, the removal of PFHeA (55%, overall) was much less than that of PFHeS (96%, overall), and PFHxA was removed Y.  
+> [SOURCE_TEXT_OMITTED sha256=a415e691e3be498886bdc14a63ccc51ffbde0827bea3e72db77e1a7206c33f92].  
 Supported claim metadata: In the cited removal example, PFHeA removal was 55% overall, much less than PFHeS removal at 96% overall.
 
-**WF10_004b_MMG006** (optional_gold; `2026 - Sadmani - A critical review of the application of biochar in removing perfluoroalkyl and polyfluoroalkyl substances (PFAS) from water matrices.pdf`, chunk `31`)  
+**WF10_004b_MMG006** (optional_gold; `2026 - Sadmani - [SOURCE_TEXT_OMITTED sha256=e2dd4fda49f066575cf9c26093f2c0f0108101becaa30a85e582d06a6552c102].pdf`, chunk `31`)  
 Scope: PFSAs, PFCAs; water; ZVI or ZVI+BC; removal; 94, 60; %  
-> Batch tests revealed that perfluorosulfonic acids (PFSAs) were more efficiently removed, with up to 94% removal, compared to perfluorocarboxylic acids (PFCAs), which showed up to 60% removal when using either ZVI or ZVI + BC.  
+> [SOURCE_TEXT_OMITTED sha256=8b5f8307d7e34dc948917d638b816b76dae73dcb840522830a7d790fb556f893].  
 Supported claim metadata: With ZVI or ZVI+BC, PFSAs were removed up to 94% compared to PFCAs up to 60%.
 
 **WF10_004b_MMG007** (optional_gold; `2025 - Uwayezu - Efficient removal of PFAS in groundwater and landfill leachate using iron-modified peat residues and electrochemical oxidation.pdf`, chunk `19`)  
 Scope: PFOS, PFNA, PFHxS, PFHpA; groundwater/landfill leachate; column with iron-modified peat residues; removal/retention; 84, 72, 64, 44; %  
-> Similar to the behavior observed in batch mode, the column treatment demon - strated higher retention of sulfonate PFAS than carboxylate ones with equal perfluorocarbon chain lengths (e.g., 84 % PFOS versus 72 % PFNA removal, or 64 % PFHxS versus 44 % PFHpA), likely due to the greater effect of the sulfonate functional group.  
+> [SOURCE_TEXT_OMITTED sha256=eba319cd7e8f6a4fb168d4b099931888c13270cdb5de151cf88b6daa0715aa22].  
 Supported claim metadata: Column treatment retained sulfonate PFAS more than carboxylate PFAS with equal chain length, e.g., 84% PFOS vs 72% PFNA removal.
 
 ### Model A Reference Draft
@@ -1026,24 +1024,24 @@ Reference-answer issues:
 
 ### Complete Gold Evidence
 
-**WF10_036_MMG001** (required_gold; `2019 - Park - Adsorption of perfluoroalkyl substances (PFAS) in groundwater by granular activated carbons - Roles of hydrophobicity of PFAS and carbon.pdf`, chunk `29`)  
+**WF10_036_MMG001** (required_gold; `2019 - Park - [SOURCE_TEXT_OMITTED sha256=31fdda8304c0d0a7a0d65ea0a5d6fd070a8aa91a8294dc26eaa9d4ae352d286d].pdf`, chunk `29`)  
 Scope: groundwater; granular activated carbon; adsorption  
 > 5 B), which means that the apparent adsorption capacity did not change as EBCT increased.  
 Supported claim metadata: The apparent adsorption capacity did not change as EBCT increased.
 
 **WF10_036_MMG002** (required_gold; `2020 - Zeng - Removing per- and polyfluoroalkyl substances from groundwaters using activated carbon.pdf`, chunk `16`)  
 Scope: ΣPFAS; groundwater; activated carbon; adsorption; 1.07 ± 0.12; ratio (dimensionless)  
-> Table S8 shows that the ratios for the Lead + Lag to Lead column for q ΣPFAS were only slightly different from unity (1.07 ± 0.12), implying that adsorption mechanisms are inde- pendent of EBCT.  
+> [SOURCE_TEXT_OMITTED sha256=16759fcbe6cc6b6f11a3ab8a8c3e08bc7534bc1dac7cbfdfc4398184827547c0].  
 Supported claim metadata: Lead+Lag to Lead column ratios for qΣPFAS were near unity (1.07 ± 0.12), implying adsorption mechanisms are independent of EBCT.
 
 **WF10_036_MMG003** (optional_gold; `2020 - Zeng - Removing per- and polyfluoroalkyl substances from groundwaters using activated carbon.pdf`, chunk `15`)  
 Scope: groundwater; activated carbon (RSSCTs); adsorption; 2-5 min; min  
-> This indicates that longer EBCTs do not suffer from competing adsorbates (e.g., ionic species, DOC), and the similar breakthrough curve shapes suggest shorter EBCTs (i.e., ~2 –5 min) capture the mass transfer zone.  
+> [SOURCE_TEXT_OMITTED sha256=841e03841b4a8125efc76df319357f9459b66328b79d9fbd905cdc31d4a869e2].  
 Supported claim metadata: Longer EBCTs did not suffer from competing adsorbates, and similar breakthrough curve shapes suggest shorter EBCTs (~2–5 min) capture the mass transfer zone.
 
 **WF10_036_MMG004** (optional_gold; `2022 - Kempisty - Granular activated carbon adsorption of perfluoroalkyl acids from ground and surface.pdf`, chunk `37`)  
 Scope: PFAAs; ground and surface water; GAC adsorbers; adsorption  
-> Although break- through curves for individual PFAAs did not perfectly overlap at the two EBCTs, consistent trends suggesting that either shorter or longer EBCTs resulted in lower CURs were not observed.  
+> [SOURCE_TEXT_OMITTED sha256=b332058668356c17d30e3fcf544edf5a269d1a3c4d8864cfe0f83751380be28f].  
 Supported claim metadata: No consistent trend was observed whereby either shorter or longer EBCTs resulted in lower carbon usage rates (CURs) for PFAAs.
 
 ### Model A Reference Draft

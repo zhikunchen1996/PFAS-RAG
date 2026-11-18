@@ -24,7 +24,7 @@
               "In the exact_spans array, the second entry (evidence_id WF10_039_MMG005) is malformed: it embeds a third citation as an extra key-value pair (\"WF10_039_MMG006\": \"...\") inside the MMG005 object instead of listing it as its own well-formed exact_spans object with evidence_id/exact_evidence_span/supports fields. Evidence WF10_039_MMG006 is listed in evidence_ids and cited in the reference answer, so its span citation must be structurally correct."
             ],
             "required_repairs": [
-              "Split the malformed entry into two separate, properly structured exact_spans objects: keep the MMG005 object as-is (evidence_id, exact_evidence_span, supports), and add a new object for evidence_id WF10_039_MMG006 with exact_evidence_span 'The higher removal of PFOS can be attributed to higher afﬁnity of sulfo- nate groups of PFOS toward irons or alumina when compared to the that of the carboxylate groups of PFOA ( Wang and Shih, 2011 ).' and an appropriate supports description."
+              "Split the malformed entry into two separate, properly structured exact_spans objects: keep the MMG005 object as-is (evidence_id, exact_evidence_span, supports), and add a new object for evidence_id WF10_039_MMG006 with exact_evidence_span '[SOURCE_TEXT_OMITTED sha256=b30f86e0d089c65b6c756b82cc02f6a371b75053d4ebf45675618c4cba8579c4] ).' and an appropriate supports description."
             ]
           },
           {
@@ -67,11 +67,11 @@
             "claim_group_id": "NQ03a-G02",
             "verdict": "partially_supported",
             "issues": [
-              "The first exact_spans entry for evidence_id NQ03a_MMG006 quotes 'The stock solution was initially made with methanol, while Milli-Q water was used to formulate all subsequent working solutions.' but its 'supports' text describes GC-ECD external-calibration verification and ±5% agreement with nominal values -- content that is not contained in the quoted span at all (it is a different sentence later in the same full_chunk_text). The quoted span does not substantiate the stated central proposition about analytical verification of concentration.",
+              "The first exact_spans entry for evidence_id NQ03a_MMG006 quotes '[SOURCE_TEXT_OMITTED sha256=8a657658884e631a6899b0e4da531f03e8de4daebccd91a7bffc9b702c402bb3].' but its 'supports' text describes GC-ECD external-calibration verification and ±5% agreement with nominal values -- content that is not contained in the quoted span at all (it is a different sentence later in the same full_chunk_text). The quoted span does not substantiate the stated central proposition about analytical verification of concentration.",
               "This produces a duplicate-looking pair of entries for the same evidence_id with identical exact_evidence_span text but different supports narratives, one of which is mismatched to its quote."
             ],
             "required_repairs": [
-              "Replace the exact_evidence_span text in the first NQ03a_MMG006 entry with the actual verification sentence from the approved chunk: 'The concentrations of the prepared PFOA solutions were verified using Gas Chromatography–Electron Capture Detector (GC–ECD) ... analysis after derivatization based on external calibration with derivatized PFOA standards, and the measured concentrations were within ±5% of the nominal values.' so the quote matches the supports narrative."
+              "Replace the exact_evidence_span text in the first NQ03a_MMG006 entry with the actual verification sentence from the approved chunk: 'The concentrations of the prepared PFOA solutions were verified using Gas Chromatography–Electron Capture Detector (GC–ECD) ... analysis after derivatization [SOURCE_TEXT_OMITTED sha256=5986067789e33572b4094bc623d77940ed711e835b9aa906f5271f2fbb5c32b3].' so the quote matches the supports narrative."
             ]
           },
           {

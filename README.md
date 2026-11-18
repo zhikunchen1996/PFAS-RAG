@@ -4,6 +4,12 @@ This repository contains the experimental implementation, benchmark
 questions and gold records, prompts, corpus metadata, stored model outputs,
 evaluation code, and reported result tables for the PFAS RAG study.
 
+The current release replaces literature passages with source-text hashes and
+retains source identifiers and DOI metadata. Stored answers and audit notes
+are public projections where embedded source quotations have been omitted.
+Scores, retrieval ranks and question membership are unchanged. See
+[the source-data guide](reproduction/public_sources_v01/README.md).
+
 The release tree excludes manuscript and supplementary-information documents, submission
 files, figure-only scripts and images, original expert assessment packets,
 private writing records, credentials, and local databases. Development history
@@ -22,6 +28,7 @@ python3.12 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/python scripts/check_python_environment.py
 .venv/bin/python scripts/verify_experiment_release.py
+.venv/bin/python scripts/verify_public_source_projection.py
 .venv/bin/python reproduction/experiments_v01/validate_results.py
 .venv/bin/python reproduction/experiments_v01/aggregate_expert_scores.py
 .venv/bin/python -m unittest discover -s reproduction/experiments_v01/tests -v
@@ -64,12 +71,12 @@ overwriting the frozen results and compares the regenerated tables with the
 reported results. See [the reproduction guide](reproduction/experiments_v01/README.md)
 for the experiment/source mapping, expert-score schema, and re-execution steps.
 
-This reduced release preserves retained frozen files byte-for-byte, except
-that expired signed-access query parameters were removed from three literature
-URLs in stored web-search discovery records. The public release manifest records
-these changes; scientific content and results are unchanged. This is not a new
-experiment freeze. Original manifests and READMEs may reference omitted
-figure artifacts or private expert packets, so their complete-workspace
-inventory checks are not applicable. Use the scoped verifier and reproduction
-commands above. Fresh retrieval and provider calls require the original corpus
-and model access; no new paid experiment was run for this release.
+The current tree is a public projection, not a new experiment freeze.
+`release_manifest.json` verifies the distributed files; the source-projection
+manifest records the original and projected hashes of changed files. Historical
+freeze manifests describe the original experimental records, not the projected
+copies at those paths. Original prompts, executable experiment code, result
+tables and expert scores are retained. Use the scoped verification and analysis
+commands above. Re-running source-dependent generation or judging requires
+restoring the original evidence from lawfully obtained documents; omitted-text
+markers must not be used as model inputs. Earlier Git commits were not rewritten.

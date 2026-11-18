@@ -55,7 +55,7 @@
             ],
             "required_repairs": [
               "Replace exact_spans entry 1 with the actual regenerant sentence from MMG001's full_chunk_text: 'A combination of ammonium solution with methanol, i.e., 50% methanol with 1% NH4OH, exhibited a higher value for PFCA desorption among all the tested specs of regenerants... The optimized spec of the regenerant was employed for subsequent cycles of adsorption–desorption.'",
-              "Replace exact_spans entry 2 with the adsorbent-structure sentence from MMG001's full_chunk_text: 'Our synthesized adsorbent exhibited a type H-IV hysteresis loop in the nitrogen adsorption–desorption isotherm, indicating the presence of a mesoporous structure having an average pore size of 6.37 nm. However, the pore size distribution plot revealed a fraction of pores smaller than 1 nm.'"
+              "Replace exact_spans entry 2 with the adsorbent-structure sentence from MMG001's full_chunk_text: '[SOURCE_TEXT_OMITTED sha256=c6e8ad7ee6e098a9e90b51692303aaa90e66a1a4247f4538172e19165d7d6c21].'"
             ]
           },
           {
@@ -87,18 +87,18 @@
               "Second exact_spans entry reuses MMG004's exact_evidence_span (about methanol/ethanol/methanol-NaCl/NaOH achieving >90% desorption of short-chain PFASs) to support a claim specifically about NaOH and ammonia achieving >85% retention after 4-5 cycles; the quoted span does not mention NaOH, ammonia, or the 4-5 cycle/85% figure."
             ],
             "required_repairs": [
-              "Replace the second exact_spans entry with the actual sentence from MMG004's full_chunk_text: 'Alkaline regenerants such as NaOH and ammonia showed similar trends: high recovery for short-chain PFASs on anion-exchange resins and mesoporous polymers (>85% retention after 4–5 cycles)...'"
+              "Replace the second exact_spans entry with the actual sentence from MMG004's full_chunk_text: 'Alkaline regenerants such as NaOH and ammonia [SOURCE_TEXT_OMITTED sha256=e8b60fa290af2fe2b6f0b79425f77f344cbaf63f8111254767363e3c308f69de])...'"
             ]
           },
           {
             "claim_group_id": "WF10_032-X01",
             "verdict": "partially_supported",
             "issues": [
-              "First exact_spans entry cites WF10_032_MMG001's exact_evidence_span (cycle-2 adsorption efficiency numbers) to support the claim that 'incomplete desorption... resulted in preoccupied adsorption sites and reduced adsorption capacity in the second cycle'; the actual supporting sentence ('This incomplete desorption led to the preoccupation of adsorption sites, thereby reducing the adsorption capacity in the second cycle.') appears in MMG002's full_chunk_text (chunk 33), not in MMG001's cited span, and the evidence_id used is also the wrong one for this specific sentence.",
+              "First exact_spans entry cites WF10_032_MMG001's exact_evidence_span (cycle-2 adsorption efficiency numbers) to support the claim that 'incomplete desorption... resulted in preoccupied adsorption sites and reduced adsorption capacity in the second cycle'; the actual supporting sentence ('[SOURCE_TEXT_OMITTED sha256=07327d77c90bac287d8fd72405d123e020df29113f7241ff19966ac57485d6fd].') appears in MMG002's full_chunk_text (chunk 33), not in MMG001's cited span, and the evidence_id used is also the wrong one for this specific sentence.",
               "Third exact_spans entry reuses MMG004's exact_evidence_span (about the 60-80% PFOA/PFOS efficiency drop) to support the separate claim about 'persistent residuals of PFOA/PFOS,' which is a distinct sentence in the same full_chunk_text not covered by the quoted span."
             ],
             "required_repairs": [
-              "Correct the first exact_spans entry to cite MMG002 (not MMG001) with the sentence: 'This incomplete desorption led to the preoccupation of adsorption sites, thereby reducing the adsorption capacity in the second cycle.'",
+              "Correct the first exact_spans entry to cite MMG002 (not MMG001) with the sentence: '[SOURCE_TEXT_OMITTED sha256=07327d77c90bac287d8fd72405d123e020df29113f7241ff19966ac57485d6fd].'",
               "Replace the third exact_spans entry with the correct sentence from MMG004's full_chunk_text: '...persistent residuals of PFOA/PFOS even after extended contact times [61,128,133].'"
             ]
           }
